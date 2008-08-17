@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="shift-jis" ?>
+<monstars>
+  <game comment="&lt;br&gt;&lt;br&gt;&lt;br&gt;投手成績 &lt;br&gt;  伊藤 6回 勝ち 登板1 / 1勝0敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt; 3回ワイルドピッチで鈴木選手が生還&lt;br&gt; 5回平岡選手のピッチャーゴロは併殺&lt;br&gt;&lt;br&gt;" date="07/04/21" game="オーシャンリーグ" loc="荻中公園" result="1" season="2007" team="ドルフィンズ" time="11:00">
+    <batters>
+      <batter name="mizutani" order="1" position="6">
+        <batting raw="1-B*" />
+        <batting raw="2-1G-O" />
+        <batting raw="4-7O-H2-1*" />
+        <batting raw="5-B*" />
+        <batting raw="6-8O-H2-1" />
+      </batter>
+      <batter name="kawahara" order="2" position="2">
+        <batting raw="1-D*" />
+        <batting raw="3-7F-O" />
+        <batting raw="4-8F-O" />
+        <batting raw="5-7-H1-1*" />
+        <batting raw="6-6G-O" />
+      </batter>
+      <batter name="sakurai" order="3" position="4">
+        <batting raw="1-B" />
+        <batting raw="3-6F-O" />
+        <batting raw="4-6G-O" />
+        <batting raw="5-B*" />
+      </batter>
+      <batter name="oomi" order="4" position="8">
+        <batting raw="1-D--1" />
+        <batting raw="3-D*" />
+        <batting raw="4-9O-H2-1*" />
+        <batting raw="5-9O-H2-1*" />
+      </batter>
+      <batter name="suzuki" order="5" position="3">
+        <batting raw="1-1G-O-1" />
+        <batting raw="3-7O-H2-1*" />
+        <batting raw="4-9O-H1-1" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="takashi" order="6" position="5">
+        <batting raw="1-1F-O" />
+        <batting raw="3-7O-H1" />
+        <batting raw="4-6-H1" />
+        <batting raw="5-6-H1" />
+      </batter>
+      <batter name="dai" order="7" position="7">
+        <batting raw="1-1G-O" />
+        <batting raw="3-9F-O" />
+        <batting raw="4-1G-O" />
+        <batting raw="5-1G-O" />
+      </batter>
+      <batter name="machiyama" order="8" position="@">
+        <batting raw="2-1F-E--1*" />
+        <batting raw="4-B---1*" />
+        <batting raw="5-7O-H2*" />
+        <batting raw="6-7-H2*" />
+      </batter>
+      <batter name="sinozaki" order="9" position="@">
+        <batting raw="2-5F-O" />
+        <batting raw="4-5G-H1*" />
+        <batting raw="5-B*" />
+        <batting raw="6-1F-O" />
+      </batter>
+      <batter name="sophia" order="10" position="9">
+        <batting raw="2-8F-O" />
+        <batting raw="4-9O-H2-1*" />
+        <batting raw="5-6G-O" />
+        <batting raw="6-4F-O" />
+      </batter>
+      <batter name="itoh" order="11" position="1">
+        <batting raw="2-8G-H1-1" />
+        <batting raw="4-7O-H2-2*" />
+        <batting raw="5-7O-H2-1*" />
+        <batting raw="6-7O-H2-1*" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="2" fieldFirst="1" inning="1" />
+      <score batFirst="1" fieldFirst="0" inning="2" />
+      <score batFirst="2" fieldFirst="0" inning="3" />
+      <score batFirst="6" fieldFirst="0" inning="4" />
+      <score batFirst="7" fieldFirst="0" inning="5" />
+      <score batFirst="2" fieldFirst="3" inning="6" />
+      <score batFirst="20" fieldFirst="4" inning="total" />
+      <team batFirst="MonStars" fieldFirst="Dolphins" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;&lt;br&gt;投手成績 &lt;br&gt;  伊藤 5回 勝ち 登板1 / 2勝0敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt; 3回大海選手けん制飛び出しアウト&lt;br&gt; 4回篠崎選手ホーム突っ込むもアウト&lt;br&gt; 5回大海選手キャッチャーフライは守備妨害でアウト&lt;br&gt; はぜ選手試合開始を11時と思い遅刻&lt;br&gt; 倉知選手見学&lt;br&gt;&lt;br&gt;" date="07/05/12" game="オーシャンリーグ" loc="ガス橋" result="1" season="2007" team="スクラッチ" time="10:00">
+    <batters>
+      <batter name="machiyama" order="1" position="4">
+        <batting raw="1-K-O" />
+        <batting raw="2-B" />
+        <batting raw="4-7G-H1" />
+      </batter>
+      <batter name="sakurai" order="2" position="9">
+        <batting raw="1-K-O" />
+        <batting raw="2-K-O" />
+      </batter>
+      <batter name="hazedon" order="2" position="&gt;">
+        <batting raw="5-B*" />
+      </batter>
+      <batter name="kawahara" order="3" position="2">
+        <batting raw="1-9-H1*" />
+        <batting raw="2-9-H1" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="y-osa" order="4" position="7">
+        <batting raw="1-B*" />
+        <batting raw="2-6G-O-1" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="mizutani" order="5" position="6">
+        <batting raw="1-B*" />
+        <batting raw="2-1G-O" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="takashi" order="6" position="5">
+        <batting raw="1-B--1*" />
+        <batting raw="3-8F-O" />
+        <batting raw="5-5G-E" />
+      </batter>
+      <batter name="oomi" order="7" position="8">
+        <batting raw="1-8O-HR-4*" />
+        <batting raw="3-B" />
+        <batting raw="5-2F-O" />
+      </batter>
+      <batter name="itoh" order="8" position="1">
+        <batting raw="1-7G-H3*" />
+        <batting raw="3-1G-O" />
+        <batting raw="5-6G-O" />
+      </batter>
+      <batter name="ekimura" order="9" position="3">
+        <batting raw="1-7-HR-2*" />
+        <batting raw="4-6G-O" />
+      </batter>
+      <batter name="sinozaki" order="10" position="@">
+        <batting raw="1-4G-O" />
+        <batting raw="4-9-H2" />
+      </batter>
+      <batter name="dai" order="11" position="@">
+        <batting raw="2-7-H1*" />
+        <batting raw="4-K-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="7" fieldFirst="0" inning="1" />
+      <score batFirst="1" fieldFirst="1" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="4" inning="4" />
+      <score batFirst="1" fieldFirst="1" inning="5" />
+      <score batFirst="9" fieldFirst="6" inning="total" />
+      <team batFirst="MonStars" fieldFirst="Scratch" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;&lt;br&gt;投手成績 &lt;br&gt;  伊藤 3回 勝ち 登板1 / 3勝0敗0S&lt;br&gt;         中島 1回&lt;br&gt;         待山 2回&lt;br&gt;&lt;br&gt;&lt;br&gt; 1回 5点も打点は合計2点。残り3点はどのように？&lt;br&gt; 2回 2点も打点は合計1点。残り1点はどのように？&lt;br&gt; 3回 10点も打点は合計9点。残り1点はどのように？&lt;br&gt;" date="07/05/26" game="オーシャンリーグ" loc="砧公園" result="1" season="2007" team="999" time="13:00">
+    <batters>
+      <batter name="mizutani" order="1" position="6">
+        <batting raw="1-9O-H1--3*" />
+        <batting raw="2-9G-H1*" />
+        <batting raw="3-3F-O" />
+        <batting raw="5-3F-O" />
+      </batter>
+      <batter name="machiyama" order="2" position="@">
+        <batting raw="1-8G-H1--2*" />
+        <batting raw="2-8G-H1*" />
+        <batting raw="3-5F-O" />
+        <batting raw="5-D---2*" />
+      </batter>
+      <batter name="suzuki" order="3" position="3">
+        <batting raw="1-B*" />
+        <batting raw="2-8G-H1-1" />
+        <batting raw="3-8?-E*" />
+        <batting raw="5-9-H2-2" />
+      </batter>
+      <batter name="oomi" order="4" position="8">
+        <batting raw="1-2G-E" />
+        <batting raw="2-6G-O" />
+        <batting raw="3-9O-HR-3*" />
+        <batting raw="5-3G-E" />
+      </batter>
+      <batter name="kawahara" order="5" position="2">
+        <batting raw="1-5G-O" />
+        <batting raw="3-7-H2*" />
+        <batting raw="3-8-H2" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="itoh" order="6" position="1">
+        <batting raw="1-6G-H1-1*" />
+        <batting raw="3-7-H3-1*" />
+        <batting raw="3-5G-O" />
+        <batting raw="5-6G-O" />
+      </batter>
+      <batter name="y-osa" order="7" position="7">
+        <batting raw="1-5G-O*" />
+        <batting raw="3-7O-HR-2*" />
+        <batting raw="4-1F-O" />
+        <batting raw="6-B" />
+      </batter>
+      <batter name="sakurai" order="8" position="4">
+        <batting raw="1-6G-H1-1-2" />
+        <batting raw="3-B---2*" />
+        <batting raw="4-5G-E--2" />
+        <batting raw="6-5F-O" />
+      </batter>
+      <batter name="kurachi" order="9" position="5">
+        <batting raw="1-6G-E" />
+        <batting raw="3-9-H2-1*" />
+        <batting raw="4-K-O" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="sinozaki" order="10" position="@">
+        <batting raw="1-K-O" />
+        <batting raw="3-7-H1-1-2*" />
+        <batting raw="4-5L-O" />
+        <batting raw="6-6G-O" />
+      </batter>
+      <batter name="sophia" order="11" position="9">
+        <batting raw="2-6G-O" />
+        <batting raw="3-9-H2-1*" />
+        <batting raw="5-8F-O" />
+      </batter>
+      <batter name="nakajima" order="12" position="@">
+        <batting raw="2-K-O" />
+        <batting raw="3-B*" />
+        <batting raw="5-9-H1*" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="5" fieldFirst="0" inning="1" />
+      <score batFirst="2" fieldFirst="1" inning="2" />
+      <score batFirst="10" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="2" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="2" inning="6" />
+      <score batFirst="19" fieldFirst="3" inning="total" />
+      <team batFirst="MonStars" fieldFirst="999" />
+    </scoreboard>
+  </game>
+</monstars>

@@ -1,0 +1,11 @@
+Path: .
+URL: file:///var/svn/monstars/trunk
+Repository Root: file:///var/svn/monstars
+Repository UUID: 3342cd46-32f5-4c0c-91e0-209263a136a1
+Revision: 4
+Node Kind: directory
+Schedule: normal
+Last Changed Author: dai
+Last Changed Rev: 4
+Last Changed Date: 2008-06-15 15:04:08 +0900 (Sun, 15 Jun 2008)
+

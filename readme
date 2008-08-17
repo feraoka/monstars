@@ -1,0 +1,7 @@
+ToDo
+- adding Simple::XML into svn tree
+
+Reminder
+- How to add load path
+  export PERL5LIB=~/svn/monstars/tools
+
