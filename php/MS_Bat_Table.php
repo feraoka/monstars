@@ -73,7 +73,7 @@ class MS_Bat_Table extends MS_Table
                  * 1000 NOI
                 FROM bat_tbl
                 WHERE $filter";
-        $sqlIndividual = $sql . "GROUP BY memberId ORDER BY 打率 DESC;";
+        $sqlIndividual = $sql . " GROUP BY memberId ORDER BY 打率 DESC;";
         $ans = $db->query($sqlIndividual);
         if ($ans == "") {
             return $out . "No data";
