@@ -86,6 +86,7 @@ function lineChart($inst)
     // Create the linear plot
     foreach (array_keys($data['data']) as $name) {
         array_shift($data['data'][$name]);
+        array_unshift($data['data'][$name], 0);
         $result = $data['data'][$name];
         $lineplot = new LinePlot($result);
         $lineplot->SetColor(array_shift($colors));
@@ -105,6 +106,7 @@ function lineChart($inst)
     $graph->yaxis->HideTicks();
     //$graph->xaxis->title->Set("Games");
     $graph->xaxis->SetTitleMargin(25); 
+    array_unshift($data['date'], '');
     $graph->xaxis->SetTickLabels($data['date']);
     $graph->xaxis->SetLabelAngle(90);
 

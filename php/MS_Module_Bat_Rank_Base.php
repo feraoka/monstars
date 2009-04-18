@@ -60,10 +60,17 @@ abstract class MS_Module_Bat_Rank_Base extends MS_Module_Base
               </tr>";
         }
         $out .= "</table>";
-        $hoge = $this->lineChart();
-        //print_r($hoge); //XXX debug
+
+        //XXX debug
+        //$hoge = $this->lineChart();
+        //print_r($hoge);
+
         $encode = rawurlencode($this->name);
-        $out .= "<img class=chart src=\"php/MS_Bat_Line_Chart.php?module=$encode\">";
+        if (count($top) > 0) {
+            $out .= "<img class=chart src=\"php/MS_Bat_Line_Chart.php?module=$encode\">";
+        } else {
+            $out .= "該当なし";
+        }
         return $out;
     }
 
