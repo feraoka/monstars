@@ -38,3 +38,5 @@ tsuchie,土江,Tsuchie
 sugioka,杉岡,Sugioka
 kojiro,光次郎,Kojiro
 okiyama,沖山,Okiyama
+etoh,衛藤,Etoh
+saito,斉藤,Saito
