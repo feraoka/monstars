@@ -55,7 +55,7 @@ class MS_Game {
 			}
 			foreach (array_keys($b) as $i) {
 				if (!isset($bMax[$i]) or $b[$i] > $bMax[$i]) {
-					$bMax[$i] = $b[$i];
+					$bMax[$i] = $b[$i]; // 1イニングの最大打席数？
 				}
 			}
 		}
@@ -98,6 +98,9 @@ class MS_Game {
 						$n ++;
 					}
 				}
+                if (!isset($bMax[$i])) {
+                    $bMax[$i] = 1; // 助っ人だけで攻撃が終了してしまうと列がずれてしまう問題の対策
+                }
 				while ($n < $bMax[$i]) {
 					$n ++;
 					$batHtml .= "<td></td>";
