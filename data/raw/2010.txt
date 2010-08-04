@@ -13,7 +13,7 @@
  モンスターズ
  投手：木村 5回負け
 
-6saitoh    1-B*     2-9F-H1            4-7O-H2           6-K-O
+6saito     1-B*     2-9F-H1            4-7O-H2           6-K-O
 2machiyama 1-B*     2-7G-H1                     5-7F-O
 8oomi      1-K-O    2-1G-O                      5-8O-H3*
 4sakurai   1-3G-O             3-5G-E--1         5-6G-H1-1-1
@@ -45,7 +45,7 @@
  投手：中島 7回勝ち
 
 2machiyama 1-2F-O　　　　　3-K-O 4-7O-H2*　　　　 6-1G-O
-6saitoh　　1-1F-O　　　　　3-5G-E* 4-B*　　　　　　 6-5G-E--1*
+6saito 　　1-1F-O　　　　　3-5G-E* 4-B*　　　　　　 6-5G-E--1*
 8oomi　　　1-B---2 3-9L-H1-1 4-8L-H3-3　　　　6-8G-H1-1-2
 5sakurai 1-3F-O　　　　　3-B--1　　4-9F-O 6-B---1
 4y-osa 2-5G-E--1* 3-K-O　　　　　　　 5-K-O　6-6G-O
@@ -109,7 +109,7 @@
 4sakurai 1-8L-H2*　2-6F-O　　　　　　　4-K-O
 5suzuki　　1-7G-H2-1 2-K-O　　　　　　　　　　　5-5F-O
 8oomi　　　1-5F-O 3-9G-H1--1*　　　 5-2F-O
-8saitoh　　1-K-O　　　　　　　3-8G-H1--1*　　　 5-4G-O
+8saito 　　1-K-O　　　　　　　3-8G-H1--1*　　　 5-4G-O
 7y-osa 1-5G-E--1  3-K-O
 2machiyama 1-6F-O　　　　　　 3-5F-O
 3takemoto　　　　　　2-9G-H1* 3-8L-H1-2
@@ -140,7 +140,7 @@
  投手：中島 6回勝ち
 
 5suzuki　　1-4G-H1--2* 2-B*　　　　　　 4-3F-O　　　 5-B
-6saitoh　　1-B---1*　　　　2-5G-O*　　　　　4-5G-E--1*　 5-6F-O
+6saito 　　1-B---1*　　　　2-5G-O*　　　　　4-5G-E--1*　 5-6F-O
 8oomi　　　1-9F-E-2*　 2-9O-H2-1*　　　 4-4G-H1-1-1* 5-B
 4sakurai 1-7L-H2-1-1 2-9O-H2-2　　　　4-7L-H2-2-1* 5-K-O
 7ekimura　　1-K-O　　　 2-6F-O　　　　　 4-5G-O-1　　　　　　 6-1F-O
@@ -175,7 +175,7 @@
  投手：中島 6回勝ち
 
 5suzuki　　1-5G-O　　　　　　　　　4-5G-O　　　5-7L-H1-2
-6saitoh　　1-3G-O　　　　　　　　　4-7L-H3*　　5-5G-O
+6saito 　　1-3G-O　　　　　　　　　4-7L-H3*　　5-5G-O
 2oomi　　　1-9F-H1--1　　　　　　　4-9F-H1-1-1 6-9O-HR-1*
 8sakurai 1-9F-O  4-K-O　　　　　　　　 6-3F-E--1*
 7etoh　　　　　　　　2-6F-O　　　　4-K-O　　　　　　　　 6-3F-O
@@ -209,7 +209,7 @@
  投手：伊藤 7回勝ち(1勝)
 
 5suzuki　　1-8F-O　2-4F-O 4-8F-O　　　　　　6-5G-O--1*
-6saitoh　　1-B---1* 3-5G-E--1*　4-7L-H3-1*　　　　6-7O-H2-1
+6saito 　　1-B---1* 3-5G-E--1*　4-7L-H3-1*　　　　6-7O-H2-1
 2oomi　　　1-B---1* 3-9L-H1--1* 4-9O-HR-2*　　　　6-B--1
 3sakurai 1-7F-O 3-6G-G-1　　4-K-O 6-6G-G-1
 7y-osa 1-5G-H1　　　　3-7L-H2-1*　4-5G-O　　　　　　6-1F-O
@@ -222,3 +222,29 @@
 
  5回、待山さん、木村さんと入れ替わりでアウト
  6回、高須さん、鈴木さんと入れ替わりでアウト
+
+
+[10/07/31 vs 96ers]
+
+ 7月31日(土) 9:00-11:00 八潮北公園 オーシャンリーグ
+ [天気]　晴れ
+ [球審]　黒田
+ ---
+ 【スコア】
+モンスターズ　2 0 0 1 0 | 3
+96ers 　　　　2 0 9 1 x | 12
+ ---
+3sakurai　　1-7O-H2* 　　2-8L-O　　　　　　4-7L-H1
+6saito　　　1-1F-O 　　　　　　　　3-5G-O　4-7L-H1
+8oomi 　　　1-9G-H1-1-1* 　　　　　3-9F-H2 4-3G-H1-1
+9y-osa　　　1-7G-H1　　　　　　　　3-B 　　4-K-O
+2machiyama　1-7F-O 　　　　　　　　3-B 　　4-6G-O
+5suzuki　　　　　　　　　2-5G-O　　3-3F-O　　　　　　5-8F-O
+7etoh　　　　　　　　　　2-B---1 　3-K-O 　　　　　　5-9L-O
+ 4honda　　　　　　　　　2-B 　　　　　　　4-8F-H1 　5-8O-H1
+1takemoto　　　　　　　　2-6G-O--1 　　　　4-5G-O* 　5-3F-O
+ ---
+ 1回、山下さん、わざとけん制で挟まれアウト、大海さん生還
+ 2回、本田さん、竹本さんと入れ替わりで2塁アウト
+ 4回、本田さん、竹本さんと入れ替わりで2塁アウト
+
