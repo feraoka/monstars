@@ -1,11 +1,11 @@
-Path: .
-URL: file:///var/svn/monstars/trunk
-Repository Root: file:///var/svn/monstars
-Repository UUID: 3342cd46-32f5-4c0c-91e0-209263a136a1
-Revision: 4
-Node Kind: directory
-Schedule: normal
-Last Changed Author: dai
-Last Changed Rev: 4
-Last Changed Date: 2008-06-15 15:04:08 +0900 (Sun, 15 Jun 2008)
+パス: .
+URL: http://localhost/svn/monstars/trunk
+リポジトリのルート: http://localhost/svn/monstars
+リポジトリ UUID: 2972308f-5691-4749-b3f1-bdd43a3d2be6
+リビジョン: 4
+ノード種別: ディレクトリ
+準備中の処理: 特になし
+最終変更者: dai
+最終変更リビジョン: 4
+最終変更日時: 2009-04-18 16:04:34 +0900 (土, 18  4月 2009)
 

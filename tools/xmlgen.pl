@@ -148,8 +148,7 @@ sub xmlgen($) {
                     $game->{time} = $1 if defined $1;
                     $game->{loc} = $2 if defined $2;
                     $game->{game} = $4 if defined $4;
-#XXX                } elsif ($_ =~ /^\s*\S+(?:\s+[\|\(\)0-9xX-]+)+\s*$/) {
-                } elsif ($_ =~ /^\S+(?:\s+[\|\(\)0-9xX-]+)+\s*$/) {
+                } elsif ($_ =~ /^\s*\S+(?:\s+[\|\(\)0-9xX-]+)+\s*$/) {
                     # scoreboard
                     my $nextline = <IN>;
                     ($game->{result}, $game->{scoreboard}) = scoreboard($_, $nextline);
