@@ -1,0 +1,263 @@
+body {
+  background-color: #aaaaaa;
+  font-family: Verdana,sans-serif;
+}
+
+h2 {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+h3 {
+  margin: 0px, 0px, 10px, 0px;
+  border: 0px;
+  padding: 0px;
+  border-bottom: 2px solid #800080;
+  border-left: 8px solid #800080;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  color: #800080;
+}
+
+h4 {
+  margin: 7px, 0px, 7px, 0px;
+  border: 0px;
+  padding: 0px;
+  color: #800080;
+}
+
+#topBar {
+  height: 40px;
+  color: #ffffff;
+  background-color: #333333;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+#topBar h1 {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+#topBar h1 a {
+  color: #eeeeee;
+}
+#topBar h1 a:hover {
+  color: #800080;
+}
+
+/*
+ * Main View
+ */
+
+#mainView {
+  margin: 0px;
+  margin-left: 140px;
+  padding: 10px;
+  border: 0px;
+  background-color: #cccccc;
+}
+#content {
+  padding-top:20px;
+}
+#contentMenu {
+  position: absolute;
+  right: 20px;
+
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  border: 1px solid #555555;
+/*  float: right;*/
+  width: 160px;
+  text-align: center;
+}
+#contentMenu h4 a, #contentMenu h4 a:visited {
+  color: #cccccc;
+}
+#contentMenu ul a, #contentMenu ul a:visited {
+  color: #cccccc;
+  display: block;
+}
+#contentMenu a:hover, #contentMenu a:visited:hover {
+  color: #800000;
+}
+
+#contentMenu h4 {
+  border: 0px;
+  margin: 0px;
+  padding: 2px;
+  background-color: #555555;
+  color: #aaaaaa;
+  font-size: 12px;
+}
+#contentMenu ul {
+  text-align: center;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+#contentMenu ul li {
+  background-color: #aaaaaa;
+  border-top: 1px solid #888888;
+  border-bottom: 1px solid #888888;
+}
+#contentMenu ul li a, #contentMenu ul li a:visited {
+  color: #555555;
+  display: block;
+}
+#contentMenu ul li a:hover, #contentMenu ul li a:visited:hover {
+  color: #800000;
+}
+
+.clear {
+ clear: both;
+}
+
+DL#game DT {
+  margin-left: 30px;
+  border: 0px;
+  padding-right: 10px;
+  padding-top: 4px;
+  color: #888888;
+  font-size: 12px;
+}
+#game dd { font-weight: bold; }
+.hdr {
+  background-color: #ddddff
+}
+.row1 { background-color: #ffffff }
+.row2 { background-color: #eeeeff }
+.first {
+  background-color: #ffdd99;
+}
+table {
+  font-size: 12px;
+}
+tr.top {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+table.table1 {
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+img.chart {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+A { text-decoration: none; }
+A.next:visited { color: white; }
+A.next:link { color: white; }
+A.next:hover { color: red; }
+A.prev:visited { color: white; }
+A.prev:link { color: white; }
+A.prev:hover { color: red; }
+.navi {
+  float: right;
+}
+
+td.sout { color: red; }
+td.hit { color: blue; }
+td.fball { color: green; }
+td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#memberList {
+  float: right;
+  background-color: #ffffcc;
+  padding: 20px;
+  font-size: 12px;
+}
+#ID {
+  width: 300px;
+  position: relative;
+  left: 460px;
+  margin: 5px;
+  padding: 5px;
+  padding-bottom: 20px;
+  border: outset 2px #7777aa;
+  background-color: #eeeeee;
+}
+
+#mainMenu {
+  width: 140px;
+  float: left;
+}
+#mainMenu h4 {
+  text-align: left;
+  font-size: 12px;
+  margin: 0px;
+  padding: 2px;
+  border: 0px;
+  border-bottom: 1px solid #888888;
+  color: #cccccc;
+  background-color: #555555;
+}
+#mainMenu li {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 10px;
+  border: 0px;
+  border-left: 2px solid #888888;
+  border-right: 2px solid #888888;
+  border-bottom: 1px solid #888888;
+  color: #555555;
+  background-color: #aaaaaa;
+}
+#mainMenu ul {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  list-style: none;
+}
+
+#mainMenu a {
+  text-align: left;
+  color: #cccccc;
+  display: block;
+}
+#mainMenu a:visited {
+  color: #cccccc;
+}
+#mainMenu a:hover {
+  color: #800000;
+}
+
+#mainMenu ul li a, #mainMenu ul li a:visited {
+  color: #555555;
+  display: block;
+}
+#mainMenu ul li a:hover, #mainMenu ul li a:visited:hover {
+  color: #800000;
+}
+#mainMenu ul li a#selected {
+  color: #800000;
+}
+a, a:visited {
+  color: #0000ff;
+}
+a:hover, a:visited:hover {
+  color: #800000;
+}
+  
+#version {
+  float: right;
+  background-color: #333333;
+  color: #aaaaaa;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+#version p {
+  font-size: 0.5em;
+  text-align: right;
+  margin: 0;
+}
+

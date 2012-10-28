@@ -1,0 +1,42 @@
+# record name, japanese name, alphabet, title
+machiyama,待山,Kazusige Machiyama
+sinozaki,篠崎,Ikuo Shinozaki,会計
+takashi,タカシ,Takashi
+sakurai,桜井,Atsushi Sakurai,マネージャ
+suzuki,鈴木,Kouichi Suzuki
+hiro,林(弘),Hiroyuki Hayashi,サブマネ
+dai,平岡,Daisuke Hiraoka
+sophia,篠原,Akihito Shinohara
+y-osa,山下,Osafumi Yamashita
+kurachi,倉知,Hideaki Kurachi
+takemoto,竹本,Makoto Takemoto,監督
+mizutani,水谷,Takehiko Mizutani
+ekimura,木村,Eiji Kimura,主将
+fujinaga,藤永,Takayuki Fujinaga
+takasu,高須,Mitsuru Takasu
+kawahara,川原,Kawahara
+itoh,伊藤,Itoh
+oomi,大海,Ohmi
+ehara,江原,Tadashi Ehara
+tamotsu,池田,Ikeda
+mine,峯山,Toru Mineyama
+sueyoshi,末吉,Sueyoshi
+ogata,小方,Kiyoshi Ogata
+haya,林(カ),Kaoru Hayashi
+tshimizu,清水,Shimizu
+arai,アライ,Arai
+fuchida,淵田,Fuchida
+saitoh,サイトウ,Saitoh
+hazedon,はぜ,Haze
+siozawa,塩澤,Hiroyuki Shiozawa
+juzu,数珠,Jyuzu
+tanaka,田中,Tanaka
+nakajima,中島,Nakajima
+ohta,大田,Ohta
+ohnishi,オオニシ,Ohnishi
+tsuchie,土江,Tsuchie
+sugioka,杉岡,Sugioka
+kojiro,光次郎,Kojiro
+okiyama,沖山,Okiyama
+etoh,衛藤,Etoh
+saito,斉藤,Saito

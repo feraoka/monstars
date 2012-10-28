@@ -1,0 +1,31 @@
+現時点ではデータの神様はdata/rawのテキストファイル
+
+xmlgen.pl: これをxmlフォーマットに変換する
+refreshxml.sh: 一括処理してxmlを作成する
+
+data/raw/* はshift-jisであること
+data/xml/* もshift-jisが生成される
+xmlgen.plスクリプト内では日本語をeucで処理する
+phpはutf-8で書く
+
+データ処理は段階的に変化する予定
+
+Phase 1.
+ データの神様はdata/rawのテキストファイル
+ refreshxml.sh でxml化する
+ xmlをメモリに取り込み処理する
+
+Phase 2.
+ データの神様はdata/rawのテキストファイル
+ refreshxml.sh でxml化する
+ xmlをデータベースに取り込む
+ webアプリケーションはdbのデータを参照する
+
+Phase 3.
+ データ編集を可能にする
+ dbに直接反映させる
+ xml化してバックアップする手段を用意する
+ xmlとrawデータでデータ欠落が無いことを確認する
+
+Phase 4.
+ 携帯からのデータ追加・編集を可能にする

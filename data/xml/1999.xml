@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="shift-jis" ?>
+<monstars>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績       江原6回 (負け)&lt;br&gt;	        竹本1回&lt;br&gt;&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990508&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/04/18" game="オーシャンリーグ予選" loc="六郷4面" result="-1" season="1999" team="バミューダズ" time="12:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="4">
+        <batting raw="1-5G-O" />
+        <batting raw="2-5F-O" />
+        <batting raw="5-9G-H1" />
+        <batting raw="7-B" />
+      </batter>
+      <batter name="dai" order="2" position="7">
+        <batting raw="1-7G-H1" />
+        <batting raw="3-1G-O" />
+        <batting raw="5-4G-O" />
+        <batting raw="7-6G-O" />
+      </batter>
+      <batter name="suzuki" order="3" position="2">
+        <batting raw="1-2F-O" />
+        <batting raw="3-1G-O" />
+        <batting raw="5-5F-O" />
+      </batter>
+      <batter name="y-osa" order="4" position="1">
+        <batting raw="1-5G-O" />
+        <batting raw="3-8O-H2" />
+        <batting raw="6-6G-O" />
+      </batter>
+      <batter name="nakajima" order="5" position="5">
+        <batting raw="2-8G-H1--1*" />
+        <batting raw="3-3F-O" />
+        <batting raw="6-7G-H2" />
+      </batter>
+      <batter name="kurachi" order="6" position="6">
+        <batting raw="2-8O-H3-1*" />
+        <batting raw="4-6F-O" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="takasu" order="7" position="8">
+        <batting raw="2-7F-G-1" />
+        <batting raw="4-1G-O" />
+        <batting raw="6-6F-O" />
+      </batter>
+      <batter name="takemoto" order="8" position="3">
+        <batting raw="2-8G-H3*" />
+        <batting raw="4-K-O" />
+        <batting raw="7-6F-O" />
+      </batter>
+      <batter name="ehara" order="9" position="1">
+        <batting raw="2-5G-O" />
+        <batting raw="5-6G-O" />
+        <batting raw="7-6G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="3" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="3" inning="2" />
+      <score batFirst="1" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="4" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="1" fieldFirst="0" inning="7" />
+      <score batFirst="9" fieldFirst="3" inning="total" />
+      <team batFirst="Bermudas" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績      江原 5回 失点6&lt;br&gt;       木村 2回 失点2 （負け）&lt;br&gt; 6回、江原選手,２塁で牽制アウト&lt;br&gt; 痛恨のロスタイム中のさよなら負け。くやしい。守備に反省点多数。&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990509&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/05/08" game="オーシャン公式戦" loc="ふたこ" result="-1" season="1999" team="ドルフィンズ" time="10:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="6">
+        <batting raw="1-B---1*" />
+        <batting raw="1-1G-O" />
+        <batting raw="4-5G-O" />
+        <batting raw="6-3F-O" />
+      </batter>
+      <batter name="dai" order="2" position="7">
+        <batting raw="1-B*" />
+        <batting raw="2-2G-O" />
+        <batting raw="4-K-O" />
+        <batting raw="7-7G-H1" />
+      </batter>
+      <batter name="y-osa" order="3" position="5">
+        <batting raw="1-4G-H1-1-1*" />
+        <batting raw="2-4G-E" />
+        <batting raw="4-1F-O" />
+        <batting raw="7-K-O" />
+      </batter>
+      <batter name="suzuki" order="4" position="2">
+        <batting raw="1-B*" />
+        <batting raw="2-8F-O" />
+        <batting raw="5-5G-O" />
+        <batting raw="7-K-O" />
+      </batter>
+      <batter name="ekimura" order="5" position="8">
+        <batting raw="1-B*" />
+        <batting raw="2-5G-O" />
+        <batting raw="5-1F-O" />
+        <batting raw="7-K-O" />
+      </batter>
+      <batter name="takemoto" order="6" position="3">
+        <batting raw="1-4G-E*" />
+        <batting raw="3-1G-O" />
+        <batting raw="5-4G-O" />
+      </batter>
+      <batter name="hazedon" order="7" position="9">
+        <batting raw="1-9O-H2-1*" />
+        <batting raw="3-5G-O" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="ehara" order="8" position="1">
+        <batting raw="1-3G-O-1" />
+        <batting raw="3-8G-H1" />
+        <batting raw="6-9G-H1" />
+      </batter>
+      <batter name="hiro" order="9" position="4">
+        <batting raw="1-K-O" />
+        <batting raw="3-6G-O" />
+        <batting raw="6-9G-H1" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="7" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="3" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="3" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="0" fieldFirst="2x" inning="7" />
+      <score batFirst="7" fieldFirst="8" inning="total" />
+      <team batFirst="MonStars" fieldFirst="Doplphins" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績       竹本 4回 失点2&lt;br&gt;	木村 2回 失点2 (負け)&lt;br&gt;      &lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990515.1&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/05/09" game="春季品川区民１回戦" loc="?" result="-1" season="1999" team="ボラーチョ" time="9:30">
+    <batters>
+      <batter name="sinozaki" order="1" position="6">
+        <batting raw="1-4G-E" />
+        <batting raw="3-K-O" />
+        <batting raw="5-2F-O" />
+      </batter>
+      <batter name="dai" order="2" position="7">
+        <batting raw="1-1G-O" />
+        <batting raw="3-8F-O" />
+        <batting raw="5-1G-O" />
+      </batter>
+      <batter name="suzuki" order="3" position="5">
+        <batting raw="1-5G-O" />
+        <batting raw="4-K-O" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="y-osa" order="4" position="3">
+        <batting raw="1-4F-O" />
+        <batting raw="4-9G-H1--1*" />
+        <batting raw="6-B" />
+      </batter>
+      <batter name="ekimura" order="5" position="8">
+        <batting raw="2-1F-O" />
+        <batting raw="4-7O-H2-1*" />
+        <batting raw="6-6F-O" />
+      </batter>
+      <batter name="tanaka" order="6" position="4">
+        <batting raw="2-K-O" />
+        <batting raw="4-9G-H1-1" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="ehara" order="7" position="9">
+        <batting raw="2-6G-O" />
+        <batting raw="4-K-O" />
+      </batter>
+      <batter name="nakajima" order="8" position="2">
+        <batting raw="3-5G-O" />
+        <batting raw="4-5L-O" />
+      </batter>
+      <batter name="takemoto" order="9" position="1">
+        <batting raw="3-5G-E" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="hiro" order="10" position="@">
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="2" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="2" inning="4" />
+      <score batFirst="2" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="4" fieldFirst="2" inning="total" />
+      <team batFirst="ボラーチョ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; 投手成績       江原 5回 失点2(勝ち)&lt;br&gt;      &lt;br&gt; 1回，パスボールで3塁から篠崎選手生還&lt;br&gt; 6回表，時間切れ終了&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990515.2&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/05/15" game="オーシャン予選" loc="芝公園" result="-1" season="1999" team="大映ピューピューズ" time="11:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="4">
+        <batting raw="1-4G-H1--1*" />
+        <batting raw="2-B*" />
+        <batting raw="3-7G-H1-2" />
+        <batting raw="5-B---1" />
+      </batter>
+      <batter name="dai" order="2" position="7">
+        <batting raw="1-B*" />
+        <batting raw="2-3G-O" />
+        <batting raw="3-3G-O" />
+        <batting raw="5-1F-O" />
+      </batter>
+      <batter name="nakajima" order="3" position="2">
+        <batting raw="1-3G-E*" />
+        <batting raw="2-B" />
+        <batting raw="3-5G-O" />
+        <batting raw="6-3F-O" />
+      </batter>
+      <batter name="y-osa" order="4" position="@">
+        <batting raw="1-1G-E*" />
+        <batting raw="2-6G-O-1" />
+        <batting raw="4-8F-O" />
+        <batting raw="6-8G-H2*" />
+      </batter>
+      <batter name="kurachi" order="5" position="6">
+        <batting raw="1-6G-E*" />
+        <batting raw="2-1L-O" />
+        <batting raw="4-4G-O" />
+        <batting raw="6-6G-E" />
+      </batter>
+      <batter name="takemoto" order="6" position="3">
+        <batting raw="1-9G-H2-2" />
+        <batting raw="3-7G-H2*" />
+        <batting raw="4-D" />
+        <batting raw="6-B" />
+      </batter>
+      <batter name="suzuki" order="7" position="7">
+        <batting raw="1-7F-O" />
+        <batting raw="3-B*" />
+        <batting raw="4-K-O" />
+      </batter>
+      <batter name="hazedon" order="8" position="9">
+        <batting raw="1-6F-O" />
+        <batting raw="3-B*" />
+      </batter>
+      <batter name="mizutani" order="8" position="&gt;">
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="takasu" order="9" position="8">
+        <batting raw="1-7G-H1" />
+        <batting raw="3-5F-O" />
+        <batting raw="5-4G-H1--1" />
+      </batter>
+      <batter name="ehara" order="10" position="1">
+        <batting raw="1-5G-O" />
+        <batting raw="3-B--1" />
+        <batting raw="5-5F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="5" fieldFirst="0" inning="1" />
+      <score batFirst="1" fieldFirst="0" inning="2" />
+      <score batFirst="3" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="2" inning="5" />
+      <score batFirst="9" fieldFirst="2" inning="total" />
+      <team batFirst="PuPues" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;&lt;br&gt; 投手成績       平岡 4回 失点4(勝ち)&lt;br&gt;         水谷 2回 失点4&lt;br&gt;      &lt;br&gt;8takenaka 1-6F-O	2-5G-E			4-8O-H1-1*&lt;br&gt; 9版は，大映ピュピューズから借りたスケット竹中さん&lt;br&gt; 4回, 山下選手のサードライナーで2塁の篠崎選手2度も飛び出して get two&lt;br&gt; 5回, 水谷選手の3塁フライ)で, ランナー盗塁を試みたところだったため get two&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990522&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/05/15" game="練習試合" loc="芝公園" result="1" season="1999" team="テックメイツ" time="13:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="4">
+        <batting raw="1-5F-O" />
+        <batting raw="2-B*" />
+        <batting raw="2-4F-O" />
+        <batting raw="4-7G-H1-1-1" />
+      </batter>
+      <batter name="y-osa" order="2" position="4">
+        <batting raw="1-D*" />
+        <batting raw="2-6G-E--1*" />
+        <batting raw="3-6G-E" />
+        <batting raw="4-6L-O" />
+      </batter>
+      <batter name="hazedon" order="3" position="9">
+        <batting raw="1-7O-HR-2*" />
+        <batting raw="2-8O-H2-1*" />
+        <batting raw="3-8O-H2" />
+        <batting raw="5-6F-O" />
+      </batter>
+      <batter name="nakajima" order="4" position="2">
+        <batting raw="1-6F-O" />
+        <batting raw="2-5G-E*" />
+        <batting raw="3-B" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="mizutani" order="5" position="6">
+        <batting raw="1-7O-HR-1*" />
+        <batting raw="2-5F-O" />
+        <batting raw="4-7F-O" />
+        <batting raw="5-5F-O" />
+      </batter>
+      <batter name="dai" order="6" position="7">
+        <batting raw="1-9G-H1--1*" />
+        <batting raw="2-5G-O" />
+        <batting raw="4-3G-O" />
+        <batting raw="6-6F-O" />
+      </batter>
+      <batter name="suzuki" order="7" position="7">
+        <batting raw="1-B---1*" />
+        <batting raw="2-9G-H1" />
+        <batting raw="4-B---1*" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="ehara" order="8" position="9">
+        <batting raw="1-8G-H2-2" />
+        <batting raw="2-7G-H1" />
+        <batting raw="4-K-O" />
+        <batting raw="6-1F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="1" fieldFirst="5" inning="1" />
+      <score batFirst="0" fieldFirst="4" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="3" fieldFirst="2" inning="4" />
+      <score batFirst="1" fieldFirst="0" inning="5" />
+      <score batFirst="3" fieldFirst="0" inning="6" />
+      <score batFirst="8" fieldFirst="11" inning="total" />
+      <team batFirst="TechMates" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;&lt;br&gt; 投手成績       竹本 4回 失点4(負け)&lt;br&gt;         倉知 2回 失点2&lt;br&gt;      &lt;br&gt; 2回, はぜ選手の内野フラエラーが，in field fry にならず get two&lt;br&gt; 4回, 山下選手の内野ゴロエラー時に倉知選手サードアウト&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990605&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/05/22" game="オーシャン予選" loc="芝公園" result="-1" season="1999" team="パワーズ" time="9:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="6">
+        <batting raw="1-8F-O" />
+        <batting raw="3-5G-O" />
+        <batting raw="5-4F-O" />
+      </batter>
+      <batter name="dai" order="2" position="7">
+        <batting raw="1-4G-O" />
+        <batting raw="3-1G-O" />
+        <batting raw="6-1G-O" />
+      </batter>
+      <batter name="kurachi" order="3" position="2">
+        <batting raw="1-8F-O" />
+        <batting raw="4-6G-H1" />
+        <batting raw="6-8F-O" />
+      </batter>
+      <batter name="y-osa" order="4" position="5">
+        <batting raw="2-5G-O" />
+        <batting raw="4-5G-E--1" />
+        <batting raw="6-7O-HR-1*" />
+      </batter>
+      <batter name="takasu" order="5" position="8">
+        <batting raw="2-B" />
+        <batting raw="4-K-O" />
+        <batting raw="6-5G-E--1" />
+      </batter>
+      <batter name="hazedon" order="6" position="7">
+        <batting raw="2-1F-O" />
+        <batting raw="4-K-O" />
+        <batting raw="6-9G-H2-1" />
+      </batter>
+      <batter name="tanaka" order="7" position="4">
+        <batting raw="3-5G-E*" />
+        <batting raw="5-7G-H1--1" />
+        <batting raw="6-6G-O" />
+      </batter>
+      <batter name="hiro" order="8" position="9">
+        <batting raw="3-9F-E" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="takemoto" order="9" position="1">
+        <batting raw="3-8G-O-1" />
+        <batting raw="5-5F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="2" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="2" fieldFirst="1" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="2" fieldFirst="2" inning="6" />
+      <score batFirst="6" fieldFirst="3" inning="total" />
+      <team batFirst="Powers" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; 投手成績       江原 6回 失点11(負け)&lt;br&gt;      &lt;br&gt; 4回, 高須選手2盗アウト&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990717&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/06/05" game="オーシャン予選" loc="青空B面" result="-1" season="1999" team="テックメイツ" time="11:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="4">
+        <batting raw="1-1G-O" />
+        <batting raw="2-K-O" />
+        <batting raw="5-7F-O" />
+      </batter>
+      <batter name="dai" order="2" position="7">
+        <batting raw="1-8G-H1--1" />
+        <batting raw="3-8F-O" />
+        <batting raw="5-8F-O" />
+      </batter>
+      <batter name="nakajima" order="3" position="2">
+        <batting raw="1-K-O" />
+        <batting raw="3-6G-E--1" />
+        <batting raw="6-6F-O" />
+      </batter>
+      <batter name="y-osa" order="4" position="6">
+        <batting raw="1-5G-E--1" />
+        <batting raw="3-3F-O" />
+        <batting raw="6-4G-O" />
+      </batter>
+      <batter name="hazedon" order="5" position="9">
+        <batting raw="1-K-O" />
+        <batting raw="3-8F-O" />
+        <batting raw="6-1G-O" />
+      </batter>
+      <batter name="takemoto" order="6" position="1">
+        <batting raw="2-8G-H1*" />
+        <batting raw="4-2F-O" />
+        <batting raw="7-1G-O" />
+      </batter>
+      <batter name="takasu" order="7" position="8">
+        <batting raw="2-8O-H2-1*" />
+        <batting raw="4-9G-H1" />
+        <batting raw="7-K-O" />
+      </batter>
+      <batter name="suzuki" order="8" position="5">
+        <batting raw="2-4F-O" />
+        <batting raw="4-B---1" />
+        <batting raw="7-9G-H1" />
+      </batter>
+      <batter name="sophia" order="9" position="@">
+        <batting raw="2-B" />
+        <batting raw="4-K-O" />
+        <batting raw="7-9G-H1" />
+      </batter>
+      <batter name="ehara" order="10" position="1">
+        <batting raw="2-B-E" />
+        <batting raw="5-4G-O" />
+        <batting raw="7-4G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="1" inning="1" />
+      <score batFirst="2" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="1" inning="3" />
+      <score batFirst="0" fieldFirst="2" inning="4" />
+      <score batFirst="0" fieldFirst="3" inning="5" />
+      <score batFirst="0" fieldFirst="4" inning="6" />
+      <score batFirst="0" fieldFirst="x" inning="7" />
+      <score batFirst="2" fieldFirst="11" inning="total" />
+      <team batFirst="MonStars" fieldFirst="TechMates" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; 投手成績       江原 5回 失点6(勝ち)&lt;br&gt;      &lt;br&gt;4kuroiwa		2-K-O	3-K-O	4-K-O&lt;br&gt;9yusuke		2-B*		4-B*	4-1G-O&lt;br&gt; すけっと：平岡の弟ゆうすけと，その友達黒岩君(高校時代サッカー長野選抜)&lt;br&gt; 4回，投手への返球がそれる間に3塁ランナー山下選手ホームイン&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990724&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/07/17" game="オーシャン予選" loc="芝公園" result="1" season="1999" team="グリターズ" time="9:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="6">
+        <batting raw="1-K-O" />
+        <batting raw="2-9G-H2-2" />
+        <batting raw="4-K-O" />
+      </batter>
+      <batter name="dai" order="2" position="7">
+        <batting raw="1-8G-H1--1*" />
+        <batting raw="2-4F-O" />
+        <batting raw="4-9G-H2-1*" />
+      </batter>
+      <batter name="nakajima" order="3" position="2">
+        <batting raw="1-6G-O" />
+        <batting raw="3-7O-H2" />
+        <batting raw="4-5G-H1*" />
+      </batter>
+      <batter name="y-osa" order="4" position="6">
+        <batting raw="1-8O-H2-1" />
+        <batting raw="3-3F-O" />
+        <batting raw="4-5G-H1*" />
+      </batter>
+      <batter name="suzuki" order="5" position="5">
+        <batting raw="1-7F-O" />
+        <batting raw="3-B---1" />
+        <batting raw="4-8O-H2-2*" />
+      </batter>
+      <batter name="hazedon" order="6" position="9">
+        <batting raw="2-5G-O" />
+        <batting raw="3-1G-O" />
+        <batting raw="4-6G-E" />
+      </batter>
+      <batter name="ehara" order="7" position="1">
+        <batting raw="2-8G-H1--1*" />
+        <batting raw="4-8G-H2-1*" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="0" fieldFirst="1" inning="1" />
+      <score batFirst="0" fieldFirst="2" inning="2" />
+      <score batFirst="2" fieldFirst="0" inning="3" />
+      <score batFirst="1" fieldFirst="6" inning="4" />
+      <score batFirst="3" fieldFirst="x" inning="5" />
+      <score batFirst="6" fieldFirst="9" inning="total" />
+      <team batFirst="グリターズ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; 天気 晴れ，猛暑&lt;br&gt; 投手成績       江原 5回 失点3(勝ち)&lt;br&gt; 	         木村 1回 失点0&lt;br&gt;      &lt;br&gt; 山下選手，1試合2ホームラン!!!&lt;br&gt; 2回，平岡選手の1Gで get two&lt;br&gt; 4回，牽制悪送球で高須選手ホームイン&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#990731&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/07/24" game="オーシャン予選" loc="芝公園" result="1" season="1999" team="ベガーズ" time="9:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="6">
+        <batting raw="1-B---1*" />
+        <batting raw="2-B" />
+        <batting raw="3-7G-H1*" />
+        <batting raw="4-4F-O" />
+      </batter>
+      <batter name="dai" order="2" position="7">
+        <batting raw="1-9F-O" />
+        <batting raw="2-1G-O" />
+        <batting raw="3-B" />
+        <batting raw="5-4G-O" />
+      </batter>
+      <batter name="suzuki" order="3" position="5">
+        <batting raw="1-B---1*" />
+        <batting raw="2-B*" />
+        <batting raw="3-8G-H1-2" />
+        <batting raw="5-9G-H1--1*" />
+      </batter>
+      <batter name="y-osa" order="4" position="6">
+        <batting raw="1-7O-HR-3*" />
+        <batting raw="2-7G-H1-1" />
+        <batting raw="4-9O-HR-1*" />
+        <batting raw="5-2F-E*" />
+      </batter>
+      <batter name="ekimura" order="5" position="8">
+        <batting raw="1-B---1" />
+        <batting raw="2-B" />
+        <batting raw="4-K-O" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="takasu" order="6" position="7">
+        <batting raw="1-8G-H1--1" />
+        <batting raw="2-5G-O" />
+        <batting raw="4-8G-H1*" />
+        <batting raw="5-8F-H2-1" />
+      </batter>
+      <batter name="sophia" order="7" position="@">
+        <batting raw="1-B" />
+        <batting raw="3-B---2*" />
+        <batting raw="4-B*" />
+        <batting raw="5-9F-O" />
+      </batter>
+      <batter name="hazedon" order="8" position="9">
+        <batting raw="1-6L-O" />
+        <batting raw="3-6F-O" />
+        <batting raw="4-8G-H1-1*" />
+      </batter>
+      <batter name="nakajima" order="9" position="2">
+        <batting raw="1-K-O" />
+        <batting raw="3-K-O" />
+        <batting raw="4-8F-H3-2" />
+      </batter>
+      <batter name="ehara" order="10" position="1">
+        <batting raw="2-D*" />
+        <batting raw="3-7G-H1-1*" />
+        <batting raw="4-1G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="1" fieldFirst="3" inning="1" />
+      <score batFirst="0" fieldFirst="2" inning="2" />
+      <score batFirst="2" fieldFirst="3" inning="3" />
+      <score batFirst="0" fieldFirst="4" inning="4" />
+      <score batFirst="0" fieldFirst="2" inning="5" />
+      <score batFirst="0" fieldFirst="x" inning="6" />
+      <score batFirst="3" fieldFirst="14" inning="total" />
+      <team batFirst="Begers" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 江原投手 4回5失点&lt;br&gt;         木村投手 2回0失点(勝ち)&lt;br&gt; 祝! 鈴木選手1試合2ホームラン．&lt;br&gt; 6回、山下選手はパスボールでホームイン&lt;br&gt; 6回、!!!篠原選手のさよならヒット!!!&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#990807&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/07/31" game="オーシャンリーグ公式戦" loc="砧公園" result="1" season="1999" team="ベアーズ" time="9:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="3">
+        <batting raw="1-7F-E" />
+        <batting raw="2-5G-O" />
+        <batting raw="5-4G-O" />
+      </batter>
+      <batter name="dai" order="2" position="@">
+        <batting raw="1-8G-H1*" />
+        <batting raw="3-K-O" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="suzuki" order="3" position="2">
+        <batting raw="1-7O-HR-2*" />
+        <batting raw="3-7O-HR-1*" />
+        <batting raw="6-8G-H1" />
+      </batter>
+      <batter name="y-osa" order="4" position="5">
+        <batting raw="1-5G-E--1*" />
+        <batting raw="3-4G-O" />
+        <batting raw="6-8G-H1*" />
+      </batter>
+      <batter name="ekimura" order="5" position="8">
+        <batting raw="1-B---1" />
+        <batting raw="3-7G-H1" />
+        <batting raw="6-6G-H1*" />
+      </batter>
+      <batter name="siozawa" order="6" position="7">
+        <batting raw="1-K-O" />
+        <batting raw="3-5G-O" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="sophia" order="7" position="4">
+        <batting raw="1-B" />
+        <batting raw="4-5G-O" />
+        <batting raw="6-9O-H1-1" />
+      </batter>
+      <batter name="hazedon" order="8" position="9">
+        <batting raw="2-3G-O" />
+        <batting raw="4-K-O" />
+      </batter>
+      <batter name="mizutani" order="9" position="6">
+        <batting raw="2-D---1" />
+        <batting raw="4-K-O" />
+      </batter>
+      <batter name="ehara" order="10" position="1">
+        <batting raw="2-4F-O" />
+        <batting raw="5-8F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="2" fieldFirst="3" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="1" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="3" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="0" fieldFirst="2x" inning="7" />
+      <score batFirst="5" fieldFirst="6" inning="total" />
+      <team batFirst="Bears" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 平岡投手 3回    0失点(勝ち)&lt;br&gt;		  竹本投手 1回2/3 1失点&lt;br&gt;		  江原投手 1回1/3 0失点&lt;br&gt;         木村投手 1回    0失点&lt;br&gt; 豪華！？投手リレーで4連勝&lt;br&gt; 2回、倉知選手の内野ゴロ,木村選手ホームフォースアウト、1塁送球エラーで、&lt;br&gt;      高須選手ホームイン&lt;br&gt; 2回、はぜ選手の9フライエラーで江原、倉知選手ホームイン&lt;br&gt; 3回から倉知選手がキャッチャー&lt;br&gt; 5回、篠崎選手の安打時にはぜ選手3塁タッチアウト&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990821&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/08/07" game="オーシャンリーグ公式戦" loc="ふたこ" result="1" season="1999" team="レコーズ" time="10:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="3">
+        <batting raw="1-1G-O" />
+        <batting raw="2-4G-O" />
+        <batting raw="5-9G-H1" />
+      </batter>
+      <batter name="dai" order="2" position="@">
+        <batting raw="1-8F-O" />
+        <batting raw="3-K-O" />
+        <batting raw="5-8F-O" />
+      </batter>
+      <batter name="suzuki" order="3" position="2">
+        <batting raw="1-5G-O" />
+        <batting raw="3-8F-O" />
+        <batting raw="6-8O-H2--1" />
+      </batter>
+      <batter name="y-osa" order="4" position="5">
+        <batting raw="2-4G-O" />
+        <batting raw="3-K-O" />
+        <batting raw="6-4F-O" />
+      </batter>
+      <batter name="ekimura" order="5" position="8">
+        <batting raw="2-5G-E--2*" />
+        <batting raw="4-B---2*" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="takasu" order="6" position="5">
+        <batting raw="2-B---1*" />
+        <batting raw="4-2F-O" />
+        <batting raw="6-3F-O" />
+      </batter>
+      <batter name="ehara" order="7" position="4">
+        <batting raw="2-B" />
+        <batting raw="4-B*" />
+      </batter>
+      <batter name="kurachi" order="8" position="@">
+        <batting raw="2-4G-O*" />
+        <batting raw="4-8G-H1-1" />
+      </batter>
+      <batter name="sophia" order="9" position="4">
+        <batting raw="2-D" />
+        <batting raw="4-5G-O" />
+      </batter>
+      <batter name="hazedon" order="10" position="9">
+        <batting raw="2-9F-E--1" />
+        <batting raw="5-9G-H1" />
+      </batter>
+      <batter name="takemoto" order="11" position="@">
+        <batting raw="5-7F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="3" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="2" inning="4" />
+      <score batFirst="1" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="0" fieldFirst="x" inning="7" />
+      <score batFirst="1" fieldFirst="5" inning="total" />
+      <team batFirst="Records" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績   江原７回(負け）&lt;br&gt;&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990828&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/08/21" game="オーシャン予選リーグ" loc="大井埠頭" result="-1" season="1999" team="エレファンツ" time="11:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="6">
+        <batting raw="1-1G-O" />
+        <batting raw="3-6G-O" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="nakajima" order="2" position="2">
+        <batting raw="1-B*" />
+        <batting raw="3-5F-O" />
+        <batting raw="6-5G-H1" />
+      </batter>
+      <batter name="kurachi" order="3" position="6">
+        <batting raw="1-3G-O" />
+        <batting raw="3-6G-O" />
+        <batting raw="6-6G-O" />
+      </batter>
+      <batter name="y-osa" order="4" position="3">
+        <batting raw="1-8G-H1*" />
+        <batting raw="4-5F-O" />
+        <batting raw="6-1G-O" />
+      </batter>
+      <batter name="suzuki" order="5" position="5">
+        <batting raw="1-3G-H1-1-1" />
+        <batting raw="4-7G-H1--1" />
+        <batting raw="7-K-O" />
+      </batter>
+      <batter name="dai" order="6" position="7">
+        <batting raw="1-B" />
+        <batting raw="4-K-O" />
+        <batting raw="7-3G-E" />
+      </batter>
+      <batter name="ekimura" order="7" position="8">
+        <batting raw="1-5G-E" />
+        <batting raw="4-K-O" />
+        <batting raw="7-3F-O" />
+      </batter>
+      <batter name="hazedon" order="8" position="9">
+        <batting raw="1-K-O" />
+        <batting raw="5-K-O" />
+        <batting raw="7-5G-O" />
+      </batter>
+      <batter name="ehara" order="9" position="8">
+        <batting raw="2-7F-O" />
+        <batting raw="5-4G-E" />
+      </batter>
+      <batter name="sophia" order="10" position="@">
+        <batting raw="2-8F-O" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="takemoto" order="11" position="@">
+        <batting raw="2-1G-O" />
+        <batting raw="5-4G-O" />
+      </batter>
+      <batter name="hiro" order="12" position="@">
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="1" fieldFirst="2" inning="1" />
+      <score batFirst="2" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="0" fieldFirst="0" inning="7" />
+      <score batFirst="3" fieldFirst="2" inning="total" />
+      <team batFirst="Elephants" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績   江原3回 失点0 (勝ち）&lt;br&gt;	    平岡2回 失点3&lt;br&gt;&lt;br&gt; 5回，篠崎選手は2盗アウト!&lt;br&gt; 高須選手は途中1時間で用事で帰宅．&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990905&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/08/28" game="オーシャン予選リーグ" loc="芝公園" result="1" season="1999" team="マグネッツ" time="9:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="6">
+        <batting raw="1-B---1*" />
+        <batting raw="2-K-O" />
+        <batting raw="3-8O-H2-2*" />
+        <batting raw="5-7G-H1" />
+      </batter>
+      <batter name="kurachi" order="2" position="6">
+        <batting raw="1-7G-H2*" />
+        <batting raw="2-8O-H2-1*" />
+        <batting raw="3-7F-O" />
+        <batting raw="5-8O-H2*" />
+      </batter>
+      <batter name="y-osa" order="3" position="3">
+        <batting raw="1-9F-E--1*" />
+        <batting raw="2-9F-H2-1-1" />
+        <batting raw="3-9F-G-1" />
+        <batting raw="5-7F-H2*" />
+      </batter>
+      <batter name="takasu" order="4" position="8">
+        <batting raw="1-B*" />
+        <batting raw="2-K-O" />
+        <batting raw="3-5G-E" />
+      </batter>
+      <batter name="dai" order="5" position="7">
+        <batting raw="1-K-O" />
+        <batting raw="2-8F-O" />
+        <batting raw="3-B" />
+        <batting raw="5-8F-H1-1*" />
+      </batter>
+      <batter name="nakajima" order="6" position="2">
+        <batting raw="1-6F-O" />
+        <batting raw="3-B---1*" />
+        <batting raw="3-K-O" />
+        <batting raw="5-7F-O" />
+      </batter>
+      <batter name="suzuki" order="7" position="5">
+        <batting raw="1-B*" />
+        <batting raw="3-B*" />
+        <batting raw="4-2F-O" />
+        <batting raw="5-8O-H2-1-1*" />
+      </batter>
+      <batter name="sophia" order="8" position="9">
+        <batting raw="1-9F-H2-3" />
+        <batting raw="3-B*" />
+        <batting raw="4-7G-H1" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="ehara" order="9" position="1">
+        <batting raw="1-6G-O" />
+        <batting raw="3-B*" />
+        <batting raw="4-1F-O" />
+      </batter>
+      <batter name="ekimura" order="10" position="8">
+        <batting raw="2-B---1*" />
+        <batting raw="3-B--1*" />
+        <batting raw="4-5F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="5" fieldFirst="0" inning="1" />
+      <score batFirst="2" fieldFirst="0" inning="2" />
+      <score batFirst="6" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="1" inning="4" />
+      <score batFirst="4" fieldFirst="2" inning="5" />
+      <score batFirst="17" fieldFirst="3" inning="total" />
+      <team batFirst="MonStars" fieldFirst="Magnets" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;（注：1,2回戦は不 戦勝)&lt;br&gt;投手成績   江原4回&lt;br&gt;           木村1回&lt;br&gt;&lt;br&gt;2sugioka		2-9F-O		4-3G-O-1&lt;br&gt; 8番杉岡さんは助っ人。公式審判員！ &lt;br&gt; ビッグサーカスカップ的には、ポジション別じゃんけん勝負で5-3で&lt;br&gt; モンスターズの勝ち！&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#991002&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/09/05" game="ビッグサーカスカップ野球大会3回戦" loc="富士通厚木総合グラウンド" result="0" season="1999" team="FIP" time="10:30">
+    <batters>
+      <batter name="sinozaki" order="1" position="4">
+        <batting raw="1-1G-O" />
+        <batting raw="2-4G-O" />
+        <batting raw="4-1G-O" />
+      </batter>
+      <batter name="kurachi" order="2" position="6">
+        <batting raw="1-B" />
+        <batting raw="3-4G-O" />
+        <batting raw="5-D" />
+      </batter>
+      <batter name="y-osa" order="3" position="3">
+        <batting raw="1-7G-H1" />
+        <batting raw="3-3F-O" />
+        <batting raw="5-4L-O" />
+      </batter>
+      <batter name="suzuki" order="4" position="5">
+        <batting raw="1-9G-H1" />
+        <batting raw="3-5F-O" />
+        <batting raw="5-4G-O" />
+      </batter>
+      <batter name="dai" order="5" position="7">
+        <batting raw="1-4G-O" />
+        <batting raw="4-3G-H1*" />
+      </batter>
+      <batter name="takasu" order="6" position="9">
+        <batting raw="1-8F-O" />
+        <batting raw="4-B*" />
+      </batter>
+      <batter name="ekimura" order="7" position="8">
+        <batting raw="2-D---2" />
+        <batting raw="4-K-O" />
+      </batter>
+      <batter name="ehara" order="8" position="1">
+        <batting raw="2-1G-O" />
+        <batting raw="4-7O-H2-1" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="1" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="2" fieldFirst="1" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="2" fieldFirst="2" inning="total" />
+      <team batFirst="MonStars" fieldFirst="FIP" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 江原4回2/3 （勝ち）&lt;br&gt;         竹本1/3回&lt;br&gt; 杉岡さんが審判にきてくれた&lt;br&gt; 1回、中島選手左飛時、鈴木選手がタッチアップでホームイン&lt;br&gt; 2回、鈴木選手の安打時に倉知選手本塁アウト&lt;br&gt; 4回、平岡選手の内野ゴロ時に高須選手3塁タッチアウト&lt;br&gt; &lt;br&gt; スコア表の篠崎選手の字に「汚い字」と書くのはやめよう！&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#991113&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/10/02" game="オーシャンリーグ決勝トーナメント１回戦" loc="青空球場B面" result="1" season="1999" team="エーコンズ" time="9:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="4">
+        <batting raw="1-B*" />
+        <batting raw="2-B*" />
+        <batting raw="4-B---1*" />
+      </batter>
+      <batter name="kurachi" order="2" position="6">
+        <batting raw="1-7O-H2*" />
+        <batting raw="2-8G-H1-1" />
+        <batting raw="4-2G-H1*" />
+      </batter>
+      <batter name="y-osa" order="3" position="3">
+        <batting raw="1-B*" />
+        <batting raw="2-B---1" />
+        <batting raw="4-B---1*" />
+      </batter>
+      <batter name="suzuki" order="4" position="5">
+        <batting raw="1-6G-H1-1*" />
+        <batting raw="2-7G-H1-1-1" />
+        <batting raw="4-3G-O-1" />
+      </batter>
+      <batter name="takasu" order="5" position="8">
+        <batting raw="1-B---1" />
+        <batting raw="2-K-O" />
+        <batting raw="4-B" />
+      </batter>
+      <batter name="dai" order="6" position="3">
+        <batting raw="1-7F-H1-1" />
+        <batting raw="2-6F-O" />
+        <batting raw="4-4G-E--1" />
+      </batter>
+      <batter name="nakajima" order="7" position="2">
+        <batting raw="1-7F-G-1" />
+        <batting raw="3-B" />
+        <batting raw="4-7F-O" />
+      </batter>
+      <batter name="sophia" order="8" position="9">
+        <batting raw="1-K-O" />
+        <batting raw="3-K-O" />
+      </batter>
+      <batter name="takemoto" order="9" position="@">
+        <batting raw="2-B*" />
+        <batting raw="3-6G-O" />
+      </batter>
+      <batter name="ehara" order="10" position="1">
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="1" fieldFirst="4" inning="1" />
+      <score batFirst="0" fieldFirst="2" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="3" inning="4" />
+      <score batFirst="3" fieldFirst="x" inning="5" />
+      <score batFirst="4" fieldFirst="9" inning="total" />
+      <team batFirst="Acons" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 江原投手 5回 (勝ち)&lt;br&gt;  木村投手 2回&lt;br&gt; 4回，高須選手の儀打時，鈴木選手が2塁を飛び出してアウト．山下選手に&lt;br&gt;      くどくどと叱られる&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#991123&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/11/13" game="オーシャンリーグ準決勝" loc="天王州A面" result="1" season="1999" team="レコーズ" time="13:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="4">
+        <batting raw="1-K-O" />
+        <batting raw="3-K-O" />
+        <batting raw="5-6G-E*" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="kurachi" order="2" position="6">
+        <batting raw="1-1F-O" />
+        <batting raw="3-4G-O" />
+        <batting raw="5-5G-O" />
+        <batting raw="7-8O-H2--1*" />
+      </batter>
+      <batter name="y-osa" order="3" position="3">
+        <batting raw="1-6G-O" />
+        <batting raw="4-8G-H1--1*" />
+        <batting raw="5-5G-E--1*" />
+        <batting raw="7-8F-O" />
+      </batter>
+      <batter name="suzuki" order="4" position="5">
+        <batting raw="2-5G-E--1" />
+        <batting raw="4-B" />
+        <batting raw="5-8G-H1-1-1*" />
+        <batting raw="7-2F-O" />
+      </batter>
+      <batter name="takasu" order="5" position="7">
+        <batting raw="2-K-O" />
+        <batting raw="4-7F-G-1" />
+        <batting raw="5-5G-E*" />
+        <batting raw="7-8O-H2--1" />
+      </batter>
+      <batter name="ekimura" order="6" position="8">
+        <batting raw="2-5G-O" />
+        <batting raw="4-8O-HR-1*" />
+        <batting raw="5-7O-H3" />
+        <batting raw="7-B" />
+      </batter>
+      <batter name="sophia" order="7" position="9">
+        <batting raw="2-8F-O" />
+        <batting raw="4-1G-O" />
+        <batting raw="5-1G-O//" />
+        <batting raw="7-B" />
+      </batter>
+      <batter name="takemoto" order="8" position="2">
+        <batting raw="3-9L-O" />
+        <batting raw="5-B*" />
+        <batting raw="6-K-O" />
+        <batting raw="7-1F-O" />
+      </batter>
+      <batter name="ehara" order="9" position="1">
+        <batting raw="3-4F-E" />
+        <batting raw="5-K-O" />
+        <batting raw="6-4G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="2" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="2" fieldFirst="0" inning="4" />
+      <score batFirst="5" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="1" fieldFirst="0" inning="7" />
+      <score batFirst="8" fieldFirst="2" inning="total" />
+      <team batFirst="MonStars" fieldFirst="Records" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;&lt;br&gt;投手成績	竹本2回 失点0（勝ち）&lt;br&gt;			平岡1回 失点0&lt;br&gt;		江原1回 失点1&lt;br&gt; 1回、山下選手ヒットで2塁を狙いタッチアウト&lt;br&gt; 2回、平岡選手振り逃げで出塁。その後、パスボールで3塁を狙いアウト&lt;br&gt; 3回、倉知選手2塁打時に篠崎選手ホームタッチアウト&lt;br&gt; 5回、鈴木選手はパスボールでホームイン（？）&lt;br&gt; 相手チームの分析：&lt;br&gt; 相手の一人目のピッチャーはめちゃくちゃ良かった。ストレートが速く、 &lt;br&gt; カーブもストレートと同じぐらい速く、しかも鋭く曲がる。3回からは&lt;br&gt; 練習試合のためだと思うが2番手ピッチャーになった。スピードはあるが&lt;br&gt; 全部高めのボールになるため四球多発。3番手からは速度もない。&lt;br&gt; 守備は、内野の肩があまりよくない。&lt;br&gt; 打撃のほうは、そこそこ打つが何故かタイムリーがでなかった。&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;&lt;a name=&quot;#991127&quot;&gt;&lt;/a&gt;&lt;br&gt;" date="99/11/23" game="練習試合" loc="砧公園" result="1" season="1999" team="ブルーインフィニティ" time="11:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="4">
+        <batting raw="1-K-O" />
+        <batting raw="3-B*" />
+        <batting raw="3-7G-H1-1" />
+        <batting raw="4-6G-O" />
+      </batter>
+      <batter name="kurachi" order="2" position="6">
+        <batting raw="1-K-O" />
+        <batting raw="3-B*" />
+        <batting raw="3-9G-H2-2-1" />
+        <batting raw="5-1F-O" />
+      </batter>
+      <batter name="y-osa" order="3" position="3">
+        <batting raw="1-9G-H1" />
+        <batting raw="3-8G-H1-2-1*" />
+        <batting raw="4-7G-H1--2*" />
+        <batting raw="5-B*" />
+      </batter>
+      <batter name="suzuki" order="4" position="5">
+        <batting raw="2-4G-O" />
+        <batting raw="3-8F-E*" />
+        <batting raw="4-1G-H1-1-1*" />
+        <batting raw="5-9G-H1--1*" />
+      </batter>
+      <batter name="dai" order="5" position="7">
+        <batting raw="2-K-E" />
+        <batting raw="3-5G-E*" />
+        <batting raw="4-3G-O" />
+        <batting raw="5-1F-O" />
+      </batter>
+      <batter name="takasu" order="6" position="5">
+        <batting raw="2-5G-O" />
+        <batting raw="3-B*" />
+        <batting raw="4-6F-O" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="ehara" order="7" position="8">
+        <batting raw="3-9F-O" />
+        <batting raw="3-9F-H1-1*" />
+        <batting raw="4-6G-E*" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="hazedon" order="8" position="9">
+        <batting raw="3-9G-H1*" />
+        <batting raw="3-K-O" />
+        <batting raw="4-B" />
+      </batter>
+      <batter name="sophia" order="9" position="@">
+        <batting raw="3-B*" />
+        <batting raw="3-B*" />
+        <batting raw="4-5G-E" />
+      </batter>
+      <batter name="takemoto" order="10" position="1">
+        <batting raw="3-B*" />
+        <batting raw="3-7G-H1-1*" />
+        <batting raw="4-K-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="12" fieldFirst="0" inning="3" />
+      <score batFirst="3" fieldFirst="0" inning="4" />
+      <score batFirst="2" fieldFirst="1" inning="5" />
+      <score batFirst="17" fieldFirst="1" inning="total" />
+      <team batFirst="MonStars" fieldFirst="BlueInfinity" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;6回は時間切れのためノーカウント&lt;br&gt;投手成績 江原4回失点１(勝ち)&lt;br&gt;         木村1回 (セーブ)&lt;br&gt; !!!!! オーシャンリーグ初優勝 !!!!! &lt;br&gt; 1回、倉知選手はパスボールでホームイン&lt;br&gt; 1回、平岡選手2塁打時に竹本選手ホームタッチアウト.足がもつれていた。&lt;br&gt; 3回、高須選手,四球で1塁進塁時に相手のすきをつきそのまま2塁へ。&lt;br&gt; 6回、鈴木のランニングホームラン後に時間切れ終了&lt;br&gt; 杉岡さんが審判にきてくれた&lt;br&gt; &lt;br&gt; 相手チームの分析：&lt;br&gt; 相手の一人目のピッチャーはストレートはまずまず速かったが、コントロールが&lt;br&gt; 乱れていた。また、カーブは遅すぎるのでストレートとはっきり区別できて恐くない&lt;br&gt; 2番手はカーブを連投する投手。&lt;br&gt; 守備は、右方面がやや弱かった。&lt;br&gt; 打撃のほうは、あまり振れていなかった。決勝の緊張のため？&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#991211&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/11/27" game="オーシャンリーグ決勝" loc="太田スタジアム" result="1" season="1999" team="ピーナッツ" time="13:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="4">
+        <batting raw="1-B---1*" />
+        <batting raw="2-B*" />
+        <batting raw="4-9F-O" />
+        <batting raw="6-6G-H1--1*" />
+      </batter>
+      <batter name="kurachi" order="2" position="6">
+        <batting raw="1-B*" />
+        <batting raw="2-8O-HR-3*" />
+        <batting raw="4-7G-H1" />
+        <batting raw="6-7G-H2-2*" />
+      </batter>
+      <batter name="y-osa" order="3" position="3">
+        <batting raw="1-5G-O" />
+        <batting raw="2-K-O" />
+        <batting raw="4-5F-O" />
+        <batting raw="6-5G-H1--1*" />
+      </batter>
+      <batter name="suzuki" order="4" position="5">
+        <batting raw="1-5G-E--1*" />
+        <batting raw="2-1F-O" />
+        <batting raw="4-5G-O" />
+        <batting raw="6-9G-HR-3*" />
+      </batter>
+      <batter name="takemoto" order="5" position="@">
+        <batting raw="1-B" />
+        <batting raw="3-1G-O" />
+        <batting raw="5-5F-O" />
+      </batter>
+      <batter name="dai" order="6" position="3">
+        <batting raw="1-7O-H2-1" />
+        <batting raw="3-5G-O" />
+        <batting raw="5-4F-O" />
+      </batter>
+      <batter name="takasu" order="7" position="8">
+        <batting raw="1-6G-E--1" />
+        <batting raw="3-B---1" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="sophia" order="8" position="8">
+        <batting raw="1-5G-O" />
+        <batting raw="3-9O-H3-1" />
+        <batting raw="6-7F-O" />
+      </batter>
+      <batter name="nakajima" order="9" position="2">
+        <batting raw="2-8G-H1*" />
+        <batting raw="3-7F-O" />
+        <batting raw="6-5F-O" />
+      </batter>
+      <batter name="ehara" order="10" position="1">
+        <batting raw="2-5G-O" />
+        <batting raw="4-7G-H1" />
+      </batter>
+      <batter name="ekimura" order="10" position="&gt;">
+        <batting raw="6-B*" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="3" fieldFirst="0" inning="1" />
+      <score batFirst="3" fieldFirst="0" inning="2" />
+      <score batFirst="1" fieldFirst="1" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="7" fieldFirst="1" inning="total" />
+      <team batFirst="MonStars" fieldFirst="Peanuts" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績	平岡3回 失点2&lt;br&gt;		江原3回 失点3&lt;br&gt; 2回、平岡選手、パスボールで3塁を狙いアウト&lt;br&gt; 3回の守備、篠崎選手の連続エラーで失点。。。&lt;br&gt; 6回、竹本選手は振り逃げで出塁&lt;br&gt; 6回、はぜ選手の内野ゴロはホームフォースアウトでランナー入れ替わり&lt;br&gt; 6回、林監督の打席時に、江原選手はパスボールでホームイン（？）&lt;br&gt; 相手チームの分析：&lt;br&gt; 塩澤の会社のチーム&lt;br&gt; 相手のピッチャー(Matsushitaユニフォームの背番号１)は完投。&lt;br&gt; ストレートはそこそこ速いが、前半コントロースが乱れ気味。&lt;br&gt; 特にカーブがほとんどボール。うちの打線は、好調なこともあり好球をヒットに。&lt;br&gt; 後半、カーブが入るようになると打ちにくい。&lt;br&gt; 守備は、特にエラーはなかった。内野はかたい。&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;/BODY&gt;&lt;br&gt;&lt;/HTML&gt;&lt;br&gt;" date="99/12/11" game="練習試合" loc="大井埠頭海浜" result="0" season="1999" team="Do-Kids" time="11:00">
+    <batters>
+      <batter name="sinozaki" order="1" position="5">
+        <batting raw="1-B---1*" />
+        <batting raw="2-B*" />
+        <batting raw="3-6G-O" />
+        <batting raw="5-7F-H1--1*" />
+      </batter>
+      <batter name="takasu" order="2" position="6">
+        <batting raw="1-6G-O" />
+        <batting raw="2-8G-H1-1-1*" />
+        <batting raw="4-6F-O" />
+        <batting raw="5-8O-H2-1-1" />
+      </batter>
+      <batter name="y-osa" order="3" position="3">
+        <batting raw="1-3F-O" />
+        <batting raw="2-9O-H3-2" />
+        <batting raw="4-6G-O" />
+        <batting raw="6-6G-H1--1" />
+      </batter>
+      <batter name="ehara" order="4" position="3">
+        <batting raw="1-D" />
+        <batting raw="2-1F-O" />
+        <batting raw="4-7G-H1" />
+        <batting raw="6-8G-H1*" />
+      </batter>
+      <batter name="takemoto" order="5" position="2">
+        <batting raw="1-7G-H1-1" />
+        <batting raw="2-1G-O" />
+        <batting raw="4-5G-E" />
+        <batting raw="6-K-E" />
+      </batter>
+      <batter name="hazedon" order="6" position="7">
+        <batting raw="1-K-O" />
+        <batting raw="3-K-O" />
+        <batting raw="4-5G-O" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="dai" order="7" position="1">
+        <batting raw="2-3G-E" />
+        <batting raw="3-8G-H1" />
+        <batting raw="5-1G-O" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="hiro" order="8" position="4">
+        <batting raw="2-8G-H1*" />
+        <batting raw="3-8F-O" />
+        <batting raw="5-5G-O" />
+        <batting raw="6-4G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="1" fieldFirst="0" inning="1" />
+      <score batFirst="3" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="2" inning="3" />
+      <score batFirst="0" fieldFirst="1" inning="4" />
+      <score batFirst="1" fieldFirst="1" inning="5" />
+      <score batFirst="1" fieldFirst="2" inning="6" />
+      <score batFirst="6" fieldFirst="6" inning="total" />
+      <team batFirst="MonStars" fieldFirst="DoKids" />
+    </scoreboard>
+  </game>
+</monstars>

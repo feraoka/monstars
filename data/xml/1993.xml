@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="shift-jis" ?>
+<monstars>
+  <game comment="&lt;br&gt;" date="93/8/14" game="練習試合" loc="千葉市稲毛海浜公園Ｂグラウンド" result="1" season="1993" team="芝浦TECのチーム" time="13:00">
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="1" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="3" inning="2" />
+      <score batFirst="0" fieldFirst="3" inning="3" />
+      <score batFirst="1" fieldFirst="1" inning="4" />
+      <score batFirst="6" fieldFirst="4" inning="5" />
+      <score batFirst="0" fieldFirst="2" inning="6" />
+      <score batFirst="1" fieldFirst="x" inning="7" />
+      <score batFirst="9" fieldFirst="13" inning="total" />
+      <team batFirst="S-TEC" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;" date="93/8/22" game="練習試合" loc="大井埠頭中央海浜公園" result="-1" season="1993" team="Amami竜's" time="9:00">
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="5" inning="1" />
+      <score batFirst="0" fieldFirst="1" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="1" fieldFirst="x" inning="5" />
+      <score batFirst="1" fieldFirst="6" inning="total" />
+      <team batFirst="MonStars" fieldFirst="Amami" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;" date="93/9/5" game="品川区民大会1回戦" loc="青空球技場" result="-1" season="1993" team="Fellows" time="13:30">
+    <scoreboard monstars="batFirst">
+      <score batFirst="1" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="3" inning="2" />
+      <score batFirst="0" fieldFirst="2" inning="3" />
+      <score batFirst="0" fieldFirst="3" inning="4" />
+      <score batFirst="0" fieldFirst="x" inning="5" />
+      <score batFirst="1" fieldFirst="8" inning="total" />
+      <team batFirst="MonStars" fieldFirst="Fellows" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;" date="93/9/15" game="練習試合" loc="大井埠頭中央海浜公園" result="-1" season="1993" team="ラガー(木原研)" time="19:00">
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="3" inning="3" />
+      <score batFirst="0" fieldFirst="8" inning="4" />
+      <score batFirst="0" fieldFirst="1" inning="5" />
+      <score batFirst="2" fieldFirst="x" inning="6" />
+      <score batFirst="2" fieldFirst="12" inning="total" />
+      <team batFirst="MonStars" fieldFirst="R" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;" date="93/9/25" game="練習試合" loc="Ebina" result="0" season="1993" team="小方の友達寄せ集め" time="9:00">
+    <scoreboard monstars="batFirst">
+      <score batFirst="1" fieldFirst="0" inning="1" />
+      <score batFirst="1" fieldFirst="0" inning="2" />
+      <score batFirst="1" fieldFirst="1" inning="3" />
+      <score batFirst="0" fieldFirst="4" inning="4" />
+      <score batFirst="0" fieldFirst="1" inning="5" />
+      <score batFirst="3" fieldFirst="0" inning="6" />
+      <score batFirst="6" fieldFirst="6" inning="total" />
+      <team batFirst="MonStars" fieldFirst="Ogata's" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;" date="93/10/10" result="-1" season="1993" team="ジョーカーズ">
+    <batters>
+      <batter name="kurachi" order="1" position="1">
+        <batting raw="1-7F-O" />
+        <batting raw="2-3G-O-1" />
+        <batting raw="4-4F-O" />
+      </batter>
+      <batter name="sinozaki" order="2" position="2">
+        <batting raw="1-5G-H1" />
+        <batting raw="2-K-O" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="dai" order="3" position="3">
+        <batting raw="1-K-O" />
+        <batting raw="3-K-O" />
+      </batter>
+      <batter name="tamotsu" order="3" position="&gt;">
+        <batting raw="5-9G-H1" />
+      </batter>
+      <batter name="hiro" order="4" position="4">
+        <batting raw="2-9O-H3" />
+        <batting raw="3-5G-O" />
+      </batter>
+      <batter name="mine" order="4" position="&gt;">
+        <batting raw="5-3L-O" />
+      </batter>
+      <batter name="sueyoshi" order="5" position="5">
+        <batting raw="2-K-O" />
+        <batting raw="3-5G-E" />
+      </batter>
+      <batter name="y-osa" order="6" position="6">
+        <batting raw="2-8O-H2-1" />
+        <batting raw="3-8O-H2-1" />
+      </batter>
+      <batter name="ehara" order="7" position="7">
+        <batting raw="2-2F-E" />
+        <batting raw="3-K-O" />
+      </batter>
+      <batter name="ogata" order="8" position="8">
+        <batting raw="2-9G-H1-1" />
+        <batting raw="5-8F-O" />
+      </batter>
+      <batter name="sophia" order="9" position="9">
+        <batting raw="2-7G-H1-1" />
+        <batting raw="4-K-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="1" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="4" inning="2" />
+      <score batFirst="1" fieldFirst="1" inning="3" />
+      <score batFirst="4" fieldFirst="0" inning="4" />
+      <score batFirst="2" fieldFirst="0" inning="5" />
+      <score batFirst="1" fieldFirst="0" inning="6" />
+      <score batFirst="9" fieldFirst="5" inning="total" />
+      <team batFirst="Jokers" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="GAMEINFO 10/16 ? 板橋?&lt;br&gt;&lt;br&gt;" date="93/10/16" season="1993" team="さんわ">
+    <batters>
+      <batter name="kurachi" order="1" position="1">
+        <batting raw="1-B" />
+        <batting raw="2-6G-E-2" />
+        <batting raw="4-8G-H1" />
+        <batting raw="5-9G-H1-1" />
+        <batting raw="6-3G-O" />
+      </batter>
+      <batter name="tamotsu" order="2" position="2">
+        <batting raw="1-6G-O" />
+        <batting raw="2-9F-O" />
+        <batting raw="4-B" />
+        <batting raw="5-1G-E" />
+        <batting raw="6-B" />
+      </batter>
+      <batter name="y-osa" order="3" position="3">
+        <batting raw="1-5G-O" />
+        <batting raw="2-7F-O" />
+        <batting raw="4-B--1" />
+        <batting raw="5-3G-H1-1" />
+        <batting raw="6-9G-H1" />
+      </batter>
+      <batter name="hiro" order="4" position="4">
+        <batting raw="1-B" />
+        <batting raw="3-D" />
+        <batting raw="4-B--1" />
+        <batting raw="5-5G-O" />
+        <batting raw="6-B" />
+      </batter>
+      <batter name="dai" order="5" position="5">
+        <batting raw="1-9O-HR-3" />
+        <batting raw="3-K-O" />
+        <batting raw="4-B--1" />
+        <batting raw="5-5G-O" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="ogata" order="6" position="6">
+        <batting raw="1-7G-H1" />
+        <batting raw="3-8G-H1-1" />
+        <batting raw="4-6G-O" />
+        <batting raw="5-7F-O" />
+      </batter>
+      <batter name="sinozaki" order="7" position="7">
+        <batting raw="1-1G-O" />
+        <batting raw="3-6F-O" />
+        <batting raw="5-B" />
+        <batting raw="6-6G-O" />
+      </batter>
+      <batter name="mine" order="8" position="8">
+        <batting raw="2-6G-E" />
+        <batting raw="3-6F-O" />
+        <batting raw="5-B" />
+        <batting raw="6-B" />
+      </batter>
+      <batter name="sophia" order="9" position="9">
+        <batting raw="2-7G-H1" />
+        <batting raw="4-K-O" />
+        <batting raw="5-7O-H2-1" />
+        <batting raw="6-5G-E" />
+      </batter>
+      <batter name="haya" order="10" position="10">
+        <batting raw="2-6F-O" />
+        <batting raw="4-B" />
+        <batting raw="5-K-O" />
+        <batting raw="6-D" />
+      </batter>
+    </batters>
+  </game>
+  <game comment="&lt;br&gt;" date="93/12/5" result="-1" season="1993" team="プレイキッズ">
+    <batters>
+      <batter name="ogata" order="1" position="1">
+        <batting raw="1-6G-O" />
+        <batting raw="3-1F-O" />
+        <batting raw="5-1G-O" />
+        <batting raw="6-7O-H2-2" />
+      </batter>
+      <batter name="sinozaki" order="2" position="2">
+        <batting raw="1-4G-H1" />
+        <batting raw="3-6F-O" />
+        <batting raw="5-6G-H1" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="hiro" order="3" position="3">
+        <batting raw="1-B" />
+        <batting raw="3-6F-O" />
+        <batting raw="5-5G-H1-1" />
+        <batting raw="6-B" />
+      </batter>
+      <batter name="y-osa" order="4" position="4">
+        <batting raw="1-K-O" />
+        <batting raw="3-5G-H1-1" />
+        <batting raw="5-1G-E" />
+        <batting raw="6-1F-O" />
+      </batter>
+      <batter name="dai" order="5" position="5">
+        <batting raw="1-K-O" />
+        <batting raw="3-3G-O" />
+        <batting raw="5-2F-O" />
+      </batter>
+      <batter name="ehara" order="6" position="6">
+        <batting raw="2-K-O" />
+        <batting raw="4-K-O" />
+        <batting raw="6-4G-E" />
+      </batter>
+      <batter name="tamotsu" order="7" position="7">
+        <batting raw="2-K-O" />
+        <batting raw="4-6G-O" />
+        <batting raw="6-3F-O" />
+      </batter>
+      <batter name="haya" order="8" position="8">
+        <batting raw="2-6G-O" />
+        <batting raw="4-K-O" />
+        <batting raw="6-7G-H1" />
+      </batter>
+      <batter name="mine" order="9" position="9">
+        <batting raw="2-K-O" />
+        <batting raw="5-7F-O" />
+        <batting raw="6-B" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="2" inning="1" />
+      <score batFirst="0" fieldFirst="2" inning="2" />
+      <score batFirst="1" fieldFirst="2" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="1" fieldFirst="0" inning="5" />
+      <score batFirst="3" fieldFirst="x" inning="6" />
+      <score batFirst="5" fieldFirst="6" inning="total" />
+      <team batFirst="MonStars" fieldFirst="PlayKids" />
+    </scoreboard>
+  </game>
+  <game comment="5suzu	2-8O-H1	3-D	4-5F-O	5-7O-HR-1	6-B&lt;br&gt;8itooka 2-K-O	4-6G-O	4-1G-H1	5-K-O&lt;br&gt;" date="93/12/11" season="1993" team="MGハマー">
+    <batters>
+      <batter name="ogata" order="1" position="1">
+        <batting raw="1-K-O" />
+        <batting raw="2-6F-O" />
+        <batting raw="4-B" />
+        <batting raw="4-7O-HR-4" />
+        <batting raw="5-6F-O" />
+      </batter>
+      <batter name="sinozaki" order="2" position="2">
+        <batting raw="1-7F-H1" />
+        <batting raw="3-6G-O" />
+        <batting raw="4-5G-E-1" />
+        <batting raw="4-5G-O" />
+        <batting raw="6-8G-H1" />
+      </batter>
+      <batter name="dai" order="3" position="3">
+        <batting raw="1-K-O" />
+        <batting raw="3-K-O" />
+        <batting raw="4-8G-H1-2" />
+        <batting raw="4-8O-H1-1" />
+        <batting raw="6-2F-O" />
+      </batter>
+      <batter name="y-osa" order="4" position="4">
+        <batting raw="1-1G-O" />
+        <batting raw="3-8O-H2" />
+        <batting raw="4-B" />
+        <batting raw="4-5F-O" />
+        <batting raw="6-8F-G-1" />
+      </batter>
+      <batter name="ehara" order="5" position="6">
+        <batting raw="2-F-O" />
+        <batting raw="3-1G-O" />
+        <batting raw="4-7O-H1-2" />
+        <batting raw="5-4G-O" />
+        <batting raw="6-8F-O" />
+      </batter>
+      <batter name="mine" order="6" position="7">
+        <batting raw="2-8G-H1" />
+        <batting raw="4-7G-H1" />
+        <batting raw="4-B" />
+        <batting raw="5-7G-H1" />
+      </batter>
+    </batters>
+  </game>
+</monstars>

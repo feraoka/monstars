@@ -1,0 +1,78 @@
+ [93/8/14 vs é≈âYTECÇÃÉ`Å[ÉÄ ]
+ 8/14 13:00-15:00 êÁótésàÓñ—äCïlåˆâÄÇaÉOÉâÉEÉìÉh ó˚èKééçá
+ S-TEC    |1 0 0 1 6 0 1  | 9
+ MonStars |0 3 3 1 4 2 x  |13
+
+ [ 93/8/22 vs Amamió≥'s ]
+ 8/22 9:00-11:00 ëÂà‰ïuì™íÜâõäCïlåˆâÄ ó˚èKééçá
+ MonStars  0 0 0 0 1
+ Amami     5 1 0 0 X
+
+ [ 93/9/5 vs Fellows]
+ 9/5 13:30-15:00 ê¬ãÛãÖãZèÍ ïiêÏãÊñØëÂâÔ1âÒêÌ
+ MonStars 1 0 0 0 0 | 1
+ Fellows  0 3 2 3 x | 8
+
+
+ [ 93/9/15 vs ÉâÉKÅ[(ñÿå¥å§)]
+ 9/15 19:00-21:00 ëÂà‰ïuì™íÜâõäCïlåˆâÄ ó˚èKééçá
+ MonStars | 0 0 0 0 0 2 | 2
+ R        | 0 0 3 8 1 X | 12
+
+ [ 93/9/25 vs è¨ï˚ÇÃóFíBäÒÇπèWÇﬂ]
+ 9/25 9:00-13:00 Ebina ó˚èKééçá
+ MonStars 1 1 1 0 0 3 | 6
+ Ogata's  0 0 1 4 1 0 | 6
+
+
+[93/10/10 vs ÉWÉáÅ[ÉJÅ[ÉY]
+ Jokers   | 1 0 1 4 2 1 | 9
+ MonStars | 0 4 1 0 0 0 | 5
+
+1kurachi	1-7F-O	2-3G-O-1	4-4F-O
+2sinozaki	1-5G-H1	2-K-O	5-K-O
+3dai	1-K-O	3-K-O
+>tamotsu	5-9G-H1
+4hiro	2-9O-H3	3-5G-O
+>mine	5-3L-O
+5sueyoshi	2-K-O	3-5G-E
+6y-osa	2-8O-H2-1	3-8O-H2-1
+7ehara	2-2F-E	3-K-O
+8ogata	2-9G-H1-1	5-8F-O
+9sophia	2-7G-H1-1	4-K-O
+
+[93/10/16 vs Ç≥ÇÒÇÌ]
+ GAMEINFO 10/16 ? î¬ã¥?
+1kurachi	1-B	2-6G-E-2	4-8G-H1	5-9G-H1-1	6-3G-O
+2tamotsu	1-6G-O	2-9F-O	4-B	5-1G-E	6-B
+3y-osa	1-5G-O	2-7F-O	4-B--1	5-3G-H1-1	6-9G-H1
+4hiro	1-B	3-D	4-B--1	5-5G-O	6-B
+5dai	1-9O-HR-3	3-K-O	4-B--1	5-5G-O	6-K-O
+6ogata	1-7G-H1	3-8G-H1-1	4-6G-O	5-7F-O
+7sinozaki	1-1G-O	3-6F-O	5-B	6-6G-O
+8mine	2-6G-E	3-6F-O	5-B	6-B
+9sophia	2-7G-H1	4-K-O	5-7O-H2-1	6-5G-E
+10haya	2-6F-O	4-B	5-K-O	6-D
+
+[93/12/5 vs ÉvÉåÉCÉLÉbÉY]
+ MonStars 0 0 1 0 1 3  | 5
+ PlayKids 2 2 2 0 0 X  | 6
+1ogata	1-6G-O		3-1F-O		5-1G-O	6-7O-H2-2
+2sinozaki	1-4G-H1		3-6F-O		5-6G-H1	6-K-O
+3hiro	1-B		3-6F-O		5-5G-H1-1	6-B
+4y-osa	1-K-O		3-5G-H1-1	5-1G-E	6-1F-O
+5dai	1-K-O		3-3G-O		5-2F-O
+6ehara		2-K-O		4-K-O		6-4G-E
+7tamotsu		2-K-O		4-6G-O		6-3F-O
+8haya		2-6G-O		4-K-O		6-7G-H1
+9mine		2-K-O			5-7F-O	6-B
+
+[93/12/11 vs MGÉnÉ}Å[]
+1ogata	1-K-O	2-6F-O	4-B	4-7O-HR-4	5-6F-O
+2sinozaki	1-7F-H1	3-6G-O	4-5G-E-1	4-5G-O	6-8G-H1
+3dai	1-K-O	3-K-O	4-8G-H1-2	4-8O-H1-1	6-2F-O
+4y-osa	1-1G-O	3-8O-H2	4-B	4-5F-O	6-8F-G-1
+#5suzu	2-8O-H1	3-D	4-5F-O	5-7O-HR-1	6-B
+6ehara	2-F-O	3-1G-O	4-7O-H1-2	5-4G-O	6-8F-O
+7mine	2-8G-H1	4-7G-H1	4-B	5-7G-H1
+ 8itooka 2-K-O	4-6G-O	4-1G-H1	5-K-O
