@@ -1,4 +1,6 @@
 #!/bin/sh
+
+\rm -f data/monstars.db
 git log HEAD^..HEAD | grep Date > lastupdate.txt
 
 cd tools
