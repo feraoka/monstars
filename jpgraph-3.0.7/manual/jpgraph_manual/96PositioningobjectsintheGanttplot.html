@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="95CreatingaGanttChart.html">
+<LINK REL="Next" HREF="97Ganttbars.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="95CreatingaGanttChart.html">前へ</A> <A HREF="97Ganttbars.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_6">9.6 ガント チャート内のオブジェクトの位置を調整する</A></H2>
+<P> バーやマイルストーンには鉛直位置と水平位置の両方が必要となります。水平方向のスタート位置は &quot;2001-06-23&quot; のように日付で指定し、鉛直方向の位置は[0,1,2,3,...]のような数値で指定します。この縦方向の数値は、オブジェクトが位置すべき場所の上端からの位置を示しています。このことを理解するために、ある高さを持った多くの「目に見えない」水平のバンドを想像してください。鉛直方向の位置を0と指定すると、バーは1つ目のバンド内に配置され、また3と指定すると4番目のバンド内に配置されるでしょう。</P>
+<P> 関連するアクティビティをグループ化するためにバンドを配置する際に「ギャップ」を残すことはある程度仕方なく、おそらくは推奨される方法でもあります。例えば、1、2、3の位置に3つのアクティビティまたはバーを持ち、さらにバンド0,4,5を空けたままで6,7の位置に別の2つのバーを置くことができます。</P>
+<P> これらの「見えないバンド」のすべては、同じ高さを（等間隔で）もっています。各バンドの高さは自動的に決定され、レイアウトのメソッド（GanttChart::SetLayout()で指定されます）と、バーおよびタイトルの個々の高さとの両方に依存します。その仕組みはとてもシンプルです。</P>
+<UL>
+<LI> layout=GANTT_FROMTOP を使用する場合（これがデフォルトで最も一般的です）、その高さは最も高いガントバーの高さ（+ 余白）で設定されるでしょう。それぞれのバーの高さの計算は、存在している実際のバーやタイトル、および左右のマークのすべてを考慮します（これについては後述します）。&rdquo;FROMTOP&rdquo; の意味するところは、高さを明示的に指定した場合、バーはバンド0から順に加えられる、つまりは上端から加えられる、ということです。（グラフの高さが明示的に指定された場合、プロットエリアの下端が空白のまま残る可能性があります。）</LI>
+<LI> layout=GANTT_EVEN を使用する場合、バーはガントチャート内で可能な高さにわたって均等に広がり、個々のバーの高さは考慮されません。自動サイズ調整を使用した場合は EVEN layouｔ も使用できないということに注意してください。それは何の意味もなしません。EVEN レイアウトは、故意に非常に大きな画像を指定する場合や、バーを最大の高さで均等に配置したい場合などに使われます。</LI>
+</UL>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="95CreatingaGanttChart.html">前へ</A> <A HREF="97Ganttbars.html">次へ</A>
+</BODY>
+</HTML>

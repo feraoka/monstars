@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="710Handlingdatetimescales.html">
+<LINK REL="Next" HREF="7102Specifyingadatetimescalewithamanualcallback.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="710Handlingdatetimescales.html">前へ</A> <A HREF="7102Specifyingadatetimescalewithamanualcallback.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_10_1">7.10.1 自動日付・時間スケールを使用する</A></H3>
+<P> X 軸の日付・時間スケールを取得する一番簡単な方法は、あらかじめ定義された &quot;dat&quot; スケールを使用することです。その使用を可能にするには、初め、モジュール<I> &quot;jpgraph_date.php&quot;</I> を含みスケールを指定する必要があります。たとえば、以下のコードの断片が示すように、<I> SetScale()</I> を呼び出す &quot;datlin&quot; 。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> </FONT><FONT color="#007700">require_once(</FONT><FONT
+color="#DD0000">&quot;../jpgraph.php&quot;</FONT><FONT color="#007700">); <BR>require_once(</FONT><FONT color="#DD0000">&quot;../jpgraph_line.php&quot;</FONT><FONT
+color="#007700">); <BR>require_once(</FONT><FONT color="#DD0000">&quot;../jpgraph_date.php&quot;</FONT><FONT
+color="#007700">); <BR>... <BR></FONT><FONT color="#0000BB">$graph </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">Graph</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">540</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">300</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetScale</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'datlin'</FONT><FONT color="#007700">); <BR>...</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 上記のコードはグラフに日付・線スケールを作成します。最初、日付スケールの基本的な使用を説明して、次に日付軸の正確なフォーマットの調整がどのように可能かということを例証します。</P>
+<P> すべての自動フォーマットを使用する場合、ライブラリは日付・時間を特定するできるだけ短い文字列を使用します。たとえば、同じ日に全間隔である場合、時間値だけが表示され、間隔が複数日以上の場合も、日付がラベルに追加されます。</P>
+<P> 通常では、以下に例証されているように、使用されるラベルを手動にフォーマットさせることも可能です。</P>
+<H4>7.10.1.1 入力データを指定する</H4>
+<P> 以下の最初の基本例は、毎 S 秒にサンプルの割り足を匹敵し、2 日間の合計周期を超えるデータ セットを作成します。X 軸の入力データがタイムスタンプのデータフォームであるべきということは重要です、たとえば、システムからの秒数。PHP で、現在のタイムスタンプ値は関数 <I>time()</I> によって返されます。</P>
+<P> これは、プロットの2 つの入力ベクタの指定が常に必須であるということを意味しています。たとえば、線 プロットを指定するため<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $line </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">LinePlot</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$xdata</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 以下の例は実践用です<DIV class="example">
+<BR> <A href="exframes/frame_dateaxisex2.html" target="blank"><IMG border="0"
+HEIGHT="300" src="dateaxisex2.png" WIDTH="540"></A> <BR><B>図 80:</B>すべてがデフォルト値である特別何データ X 軸を使用します <A href="exframes/frame_dateaxisex2.html" target="blank">[ソース]</A> 
+ 
+<P></P>
+</DIV></P>
+<P> こらからの例は、上記の例をベースにしていくので、続ける前にこのグラフを作成するスクリプト（[ソース] リンクにそって）を復習してください。</P>
+<H4>7.10.1.2 最初と最後の直線を調整する</H4>
+<P> 上記の例のように、スケールは最初のデータ ポイントの前にわずかに起動します。それは、なぜでしょうか？これは、当然一時間の場合に&ldquo;偶数&rdquo;値で起動する最初の時間ラベルを作るためです。グラフの全感覚によって、起動値は常に最大意の&ldquo;偶数&rdquo;の時間値のために選択されます。これは、たとえば、偶数の1 分、30 分、1 時間、1 日、1 週間などということになります。</P>
+<P> 最初（および最後）の時間線の直線は2 つのメッソドの使用によって手動で調整することもできます。</P>
+<UL>
+<LI><I> SetTimeAlign($aStartAlign,$aEndAlign)</I></LI>
+<LI><I> SetDateAlign($aStartAlign,$aEndAlign)</I></LI>
+</UL>
+<P> これらのメソッドは以下のコンスタントのうち1 つを指定することによって作られる直線を許可します。</P>
+<P> SetTimeAlign() では、以下のシンボルのコンスタントを使用することができます。</P>
+<OL>
+<LI> 秒単位の直線
+<UL>
+<LI> MINADJ_1、1 秒の直線（これは最低のレゾルーションです）</LI>
+<LI> MINADJ_5、5 秒に最も近い直線</LI>
+<LI> MINADJ_10、10 秒に最も近い直線</LI>
+<LI> MINADJ_15、15 秒に最も近い直線</LI>
+<LI> MINADJ_30、30 秒に最も近い直線</LI>
+</UL>
+</LI>
+<LI> 分単位の直線
+<UL>
+<LI> MINADJ_1、1 分に最も近い直線</LI>
+<LI> MINADJ_5、5 分に最も近い直線</LI>
+<LI> MINADJ_10、10 分に最も近い直線</LI>
+<LI> MINADJ_15、15 分に最も近い直線</LI>
+<LI> MINADJ_30、30 分に最も近い直線</LI>
+</UL>
+</LI>
+<LI> 時間単位の直線
+<UL>
+<LI> HOURADJ_1、1 時間に最も近い直線</LI>
+<LI> HOURADJ_2、2 時間に最も近い直線</LI>
+<LI> HOURADJ_3、3 時間に最も近い直線</LI>
+<LI> HOURADJ_4、4 時間に最も近い直線</LI>
+<LI> HOURADJ_6、6 時間に最も近い直線</LI>
+<LI> HOURADJ_12、12 時間に最も近い直線</LI>
+</UL>
+</LI>
+</OL>
+<P> <I>SetDateAlign()</I> では、以下のシンボルのコンスタントを使用することができます。</P>
+<OL>
+<LI> 日単位の直線
+<UL>
+<LI> DAYADJ_1、1 日のスタートの直線</LI>
+<LI> DAYADJ_7、1 週のスタートの直線</LI>
+<LI> DAYADJ_WEEK、DAYADJ_7 の類義語</LI>
+</UL>
+</LI>
+<LI> 月単位の直線
+<UL>
+<LI> MONTHADJ_1、月スタートの直線</LI>
+<LI> MONTHADJ_6、半年のスタートの直線</LI>
+</UL>
+</LI>
+<LI> 年単位の直線
+<UL>
+<LI> YEARADJ_1、1 年の直線</LI>
+<LI> YEARADJ_2、2 年に1 度の直線</LI>
+<LI> YEARADJ_5、5 年の直線</LI>
+</UL>
+</LI>
+</OL>
+<P> いくつかの例はこれらのメソッドの使用を明確にします。</P>
+<P><B> 例 1.</B> 1 時間の偶数の4 分の1 のスタートを調整した時間が欲しい場合、例、偶数の15 分間周期<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">xaxis</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetTimeAlign</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">MINADJ_15</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P><B> 例 2.</B> 偶数の2 時間で時間をスタートさせたい場合<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">xaxis</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetTimeAlign</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">HOURADJ_2</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P><B> 例 3.</B> 偶数の1 日で時間をスタートさせたい場合<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">xaxis</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetDateAlign</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">DAYADJ_1</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<H4>7.10.1.3 ラベル フォーマットを調整する</H4>
+<P> デフォルトのラベル フォーマットは常にできるだけ短いユニークな文字列を使用しようとします。手動スケールを手動で設定するには、以下の例のメソッド <I>SetDateFormat()</I> を使用します<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">xaxis</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetDateFormat</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'H:i'</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>上記の例はラベルに時間（24 時間）と分を表示させます。<DIV class="example">
+<BR> <A href="exframes/frame_dateaxisex4.html" target="blank"><IMG border="0"
+HEIGHT="300" src="dateaxisex4.png" WIDTH="540"></A> <BR><B>図 81:</B>偶数の10 踏んで最初と最後の特定のラベル フォーマットと直線の時間軸を使用します <A href="exframes/frame_dateaxisex4.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<H4>7.10.1.4 密集したデータ スケールを調整する</H4>
+<P> ライナー スケールで、どの濃度なスケール チックが必要か示すことができます。<I>Graph::SetTickDensity()</I> の呼び出して通常指定されます。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetTickDensity</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">TICKD_DENSE</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="710Handlingdatetimescales.html">前へ</A> <A HREF="7102Specifyingadatetimescalewithamanualcallback.html">次へ</A>
+</BODY>
+</HTML>

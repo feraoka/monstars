@@ -71,10 +71,10 @@ class bat {
         $this->atBat = 1;
 
         // removing //
-        $raw = ereg_replace("//$", "", $raw);
+        $raw = preg_replace("/\/\/$/", "", $raw);
 
         // Checking data format
-        $rawNoRrun = ereg_replace("\*$", "", $raw);
+        $rawNoRrun = preg_replace("/\\*$/", "", $raw);
         if ($rawNoRrun != $raw) {
             $this->rrun = 1;
         }
@@ -84,22 +84,22 @@ class bat {
             return false;
         }
 
-        if (!ereg("^[1-9][0-9]?$", $array[0])) {
+        if (!preg_match("/^[1-9][0-9]?$/", $array[0])) {
             return false;
         }
 
         $this->inning = $array[0];
     
         // K:三振, B:四球, D:死球, I:打撃妨害, R:代走
-        if (!ereg("^([KBDIR]|[1-9\?]?[GFLO\?]|[1-9][GFLO\?]?)$", $array[1])) {
+        if (!preg_match("/^([KBDIR]|[1-9\?]?[GFLO\?]|[1-9][GFLO\?]?)$/", $array[1])) {
             return false;
         }
 
-        if (ereg("^([1-9\?])[GFLO\?]?$", $array[1], $a)) {
+        if (preg_match("/^([1-9\?])[GFLO\?]?$/", $array[1], $a)) {
             $this->direction = $a[1];
         }
 
-        if (ereg("^[1-9\?]?([GFLO\?])$", $array[1], $a)) {
+        if (preg_match("/^[1-9\?]?([GFLO\?])$/", $array[1], $a)) {
             $this->ball = $a[1];
         }
 
@@ -107,12 +107,12 @@ class bat {
             $this->sout = 1;
         }
 
-        if (ereg("^[BD]$", $array[1])) {
+        if (preg_match("/^[BD]$/", $array[1])) {
             $this->fball = 1;
             $this->run = 1;
             $this->atBat = 0;
         }
-        if (ereg("^D$", $array[1])) {
+        if (preg_match("/^D$/", $array[1])) {
             $this->dball = 1;
         }
 
@@ -123,7 +123,7 @@ class bat {
                 $this->run = 1;
             } else if ($array[2] == "O") {
                 // do nothing
-            } else if (ereg("^H([1-3R])$", $array[2], $a)) {
+            } else if (preg_match("/^H([1-3R])$/", $array[2], $a)) {
                 if ($array[2] == "HR") {
                     $this->hit = 4;
                 } else {
@@ -140,7 +140,7 @@ class bat {
         }
     
         if (isset($array[3]) && $array[3] != NULL) {
-            if (ereg("^[0-4]$", $array[3])) {
+            if (preg_match("/^[0-4]$/", $array[3])) {
                 $this->rbi = $array[3];
             } else {
                 return false;
@@ -148,7 +148,7 @@ class bat {
         }
 
         if (isset($array[4]) && $array[4] != NULL) {
-            if (ereg("^[0-3]$", $array[4])) {
+            if (preg_match("/^[0-3]$/", $array[4])) {
                 $this->steal = $array[4];
             } else {
                 return false;
@@ -167,8 +167,6 @@ class bat {
 /*
  * Local variables:
  * tab-width: 4
- * c-basic-offset: 4
- * c-hanging-comment-ender-p: nil
  * End:
  */
 

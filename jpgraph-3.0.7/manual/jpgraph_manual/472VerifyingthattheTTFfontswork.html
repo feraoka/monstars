@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="471InstallingTrueTypefonts.html">
+<LINK REL="Next" HREF="473Specifyingfonts.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="471InstallingTrueTypefonts.html">前へ</A> <A HREF="473Specifyingfonts.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="4_7_2">4.7.2 TrueType フォントが動作していることを確認する</A></H3>
+<P> TrueType フォントが JpGraph で動作していることを確認するには、以下の GD スクリプトの動作を確認します。ただし、スクリプト中のフォントのパスは、環境に応じて変更してください。<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> DEFINE</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;TTF_DIR&quot;</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">&quot;/usr/X11R6/lib/X11/fonts/truetype/&quot;</FONT><FONT color="#007700">);  <BR> <BR></FONT><FONT color="#0000BB">$im </FONT><FONT color="#007700">= </FONT><FONT
+color="#0000BB">imagecreatetruecolor </FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">400</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">100</FONT><FONT color="#007700">);  <BR></FONT><FONT color="#0000BB">$black </FONT><FONT color="#007700">= </FONT><FONT
+color="#0000BB">imagecolorallocate </FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$im</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">0</FONT><FONT
+color="#007700">, </FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">);  <BR></FONT><FONT color="#0000BB">$white </FONT><FONT color="#007700">= </FONT><FONT
+color="#0000BB">imagecolorallocate </FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$im</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">255</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">255</FONT><FONT
+color="#007700">, </FONT><FONT color="#0000BB">255</FONT><FONT color="#007700">);  <BR> <BR></FONT><FONT color="#0000BB">imagerectangle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$im</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">399</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">99</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$black</FONT><FONT color="#007700">);  <BR></FONT><FONT color="#0000BB">imagefilledrectangle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$im</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">399</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">99</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$white</FONT><FONT color="#007700">);  <BR> <BR></FONT><FONT color="#0000BB">imagettftext </FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$im</FONT><FONT color="#007700">, </FONT><FONT
+color="#0000BB">30</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">10</FONT><FONT
+color="#007700">, </FONT><FONT color="#0000BB">40</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">$black</FONT><FONT color="#007700">, </FONT><FONT
+color="#0000BB">TTF_DIR</FONT><FONT color="#007700">.</FONT><FONT color="#DD0000">&quot;arial.ttf&quot;</FONT><FONT color="#007700">, </FONT><FONT color="#DD0000">&quot;Hello World!&quot;</FONT><FONT color="#007700">);  <BR> <BR></FONT><FONT color="#0000BB">header </FONT><FONT color="#007700">(</FONT><FONT
+color="#DD0000">&quot;Content-type: image/png&quot;</FONT><FONT color="#007700">);  <BR></FONT><FONT color="#0000BB">imagepng </FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$im</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 上記のスクリプトを動作させるには、GD2 ライブラリが必要です。また、スクリプトは PHP のコンパイル状況に応じて、UTF-8、EUC-JP、Shift_JIS のいずれかで動作することを確認する必要があります。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="471InstallingTrueTypefonts.html">前へ</A> <A HREF="473Specifyingfonts.html">次へ</A>
+</BODY>
+</HTML>

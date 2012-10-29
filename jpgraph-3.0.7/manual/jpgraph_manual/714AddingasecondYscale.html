@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="713Addingseveralplotstothesamegraph.html">
+<LINK REL="Next" HREF="715Addingalegendtothegraph.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="713Addingseveralplotstothesamegraph.html">前へ</A> <A HREF="715Addingalegendtothegraph.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_1_4">7.1.4 2 個目の Y 軸を追加する</A></H3>
+<P> 先ほどのサンプルの通り、複数のプロットを 1 つのグラフの Y 軸に追加できます。しかし、複数の範囲を持つグラフをプロットする場合はどうすれば良いでしょう。たとえば、1 つは上記のような Y の値を持っているかもしれませんが、ほかは100:sで Y の値を持っている場合があります。たとえ、上記のような追加が完全に可能でも、スケールは2 個目のプロットのより大きなダイナミックの位置を遂行しなければならないので、最小値を持つグラフは非常に低いダイナミック位置となります。</P>
+<P> この解決策は、異なるスケールで2 つ目の Y 軸を使い、変わりに Y 軸に2 つ目のプロットを追加します。どのように遂行されたか見てみましょう。 </P>
+<P> 2 番目の Y 軸では、異なったスケールを指定できます。たとえば、以下の通りにして大幅に値が異なった新しいデータを用意し、2 番目の Y 軸を作成します。コードは以下のようになります。<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$y2data </FONT><FONT color="#007700">= array(</FONT><FONT color="#0000BB">354</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">200</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">265</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">99</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">111</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">91</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">198</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">225</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">293</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">251</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetY2Scale</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;lin&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>  そして、ついに新しいライン プロットを作成し、それを2 つめの Y 軸に追加します。新しい Y 軸を追加するには、 AddY2() メソッドを使用します。JpGraph は最大で 2 個の Y 軸をサポートします。同じグラフに 3 つ以上のスケールを使用すると、グラフが非常に見づらくなります。そのため、JpGraph では最大で 2 つの実装になっています。</P>
+<P> グラフをより分かりやすくするため、2 番目の Y 軸とプロットの色を指定しました。</P>
+<P> 詳細はソースコードを参照してください。<DIV class="example">
+<BR> <A href="exframes/frame_example5.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example5.png" WIDTH="300"></A> <BR><B>図 11:</B>1 個のグラフに 2 番目の Y 軸を追加する <A href="exframes/frame_example5.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="713Addingseveralplotstothesamegraph.html">前へ</A> <A HREF="715Addingalegendtothegraph.html">次へ</A>
+</BODY>
+</HTML>

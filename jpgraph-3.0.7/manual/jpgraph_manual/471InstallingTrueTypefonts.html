@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="47WorkingwithfontsinJpGraph.html">
+<LINK REL="Next" HREF="472VerifyingthattheTTFfontswork.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="47WorkingwithfontsinJpGraph.html">前へ</A> <A HREF="472VerifyingthattheTTFfontswork.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="4_7_1">4.7.1 TrueType フォントをインストールする</A></H3>
+<P> 内部的には、TrueType フォントを描画する場合、TrueType フォントを対象ディレクトリにインストールしておく必要があります。JpGraph では、TrueType フォントがあるパスを FONT_PATH 定数 (jpgraph.php内にあります) で指定する必要があります。なお、ここは絶対パスを指定する必要があります。デフォルトでは、以下のパスを使用します。   <DIV
+class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">DEFINE</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;TTF_DIR&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;/usr/local/fonts/ttf/&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> JpGraph では、同じフォント ファミリーの斜体字と太字を判断するために、特定の規則でファイル名を命名する必要があります。また、それらのフォントは DEFINE 部分で宣言しておく必要があるので、単に TrueType フォントをディレクトリにコピーするだけでは正しく動作しません。現状では、簡単にフォントを追加することはできません。 しかし、将来のバージョンの JpGraph では変更される予定です。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="47WorkingwithfontsinJpGraph.html">前へ</A> <A HREF="472VerifyingthattheTTFfontswork.html">次へ</A>
+</BODY>
+</HTML>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="96PositioningobjectsintheGanttplot.html">
+<LINK REL="Next" HREF="971Specifyingverticalposition.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="96PositioningobjectsintheGanttplot.html">前へ</A> <A HREF="971Specifyingverticalposition.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_7">9.7 ガント バー</A></H2>
+<P> ガントチャートのオブジェクトのうち最もよく使用するのは、もちろんアクティビティバー(GanttBar())です。 このオブジェクトは表示フォーマットにおいて非常に高い柔軟性を持っています。ガントバーの完全なコンストラクタは以下のようになります。<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> </FONT><FONT color="#007700">function </FONT><FONT color="#0000BB">GanttBar</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$aVPos</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$aTitle</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">$aStart</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$aEnd</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$aCaption</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$aHeight</FONT><FONT color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P></P>
+<TABLE border="0">
+<TR><TD valign="top">
+<!--span style=&quot;font-family:times;font-size:85%;font-weight:bold;&quot;--> <CODE><FONT color="#000000"> <FONT color="#0000BB"> $aVPos </FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>バーの鉛直位置　[0..n]</TD></TR>
+<TR><TD valign="top">
+<!--span style=&quot;font-family:times;font-size:85%;font-weight:bold;&quot;--> <CODE><FONT color="#000000"> <FONT color="#0000BB"> $aTitle </FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>アクティビティのタイトル</TD></TR>
+<TR><TD valign="top">
+<!--span style=&quot;font-family:times;font-size:85%;font-weight:bold;&quot;--> <CODE><FONT color="#000000"> <FONT color="#0000BB"> $aStart </FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>&quot;2001-09-22&quot;といった文字列として与えられるアクティビティのスタートの日付</TD></TR>
+<TR><TD valign="top">
+<!--span style=&quot;font-family:times;font-size:85%;font-weight:bold;&quot;--> <CODE><FONT color="#000000"> <FONT color="#0000BB"> $aEnd </FONT></FONT></CODE>
+</TD><TD valign="top">&nbsp;</TD><TD>日付（文字列）<B></B>あるいは継続時間（日数）として与えらるアクティビティの最後の日付。例えば、&rdquo;2001-10-15&rdquo;も 20.5 のどちらも有効な入力値です。</TD></TR>
+<TR><TD valign="top">
+<!--span style=&quot;font-family:times;font-size:85%;font-weight:bold;&quot;--> <CODE><FONT color="#000000"> <FONT color="#0000BB"> $aCaption </FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>バーの終端（右側）に表示される文字列（キャプション）</TD></TR>
+<TR><TD valign="top">
+<!--span style=&quot;font-family:times;font-size:85%;font-weight:bold;&quot;--> <CODE><FONT color="#000000"> <FONT color="#0000BB"> $aHeight </FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD><B></B> 0 から 1 の範囲の値で与えられるバーの高さ。この場合、バーが鉛直方向の位置のどのくらいの割合を占めているかということを意味します。また、高さは 1 から 200 の範囲のピクセルの絶対値で与えることも可能です。</TD></TR>
+</TABLE>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="96PositioningobjectsintheGanttplot.html">前へ</A> <A HREF="971Specifyingverticalposition.html">次へ</A>
+</BODY>
+</HTML>

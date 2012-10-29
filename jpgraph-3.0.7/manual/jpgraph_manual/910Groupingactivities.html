@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="992Addingprogressindicatorstobars.html">
+<LINK REL="Next" HREF="911Usingmultiplecolumnsastitles.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="992Addingprogressindicatorstobars.html">前へ</A> <A HREF="911Usingmultiplecolumnsastitles.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_10">9.10 アクティビティのグループ化</A></H2>
+<P> アクティビティをグループ化することは一般的なことです。私たちは、制限の例のところでこの機能を使用しました。グループ化の例をあげるために表示するアクティビティバーには、特別なタイプはありません。（先に使用したように）グループ化していることを示す一般的な方法は、バーの両端に &quot;half&quot; の三角マーカーを加えるというものです。JpGraphがグループ化の表示に関して行う特別な処理は、あなたが MARK_LEFTTRIANGLE や MARK_RIGHTTRIANGLE といったタイプのマーカーを加える場合、上の例で示されたような効果をもたらすために、バーの下にそれらの三角形が描かれるということです。また、上の例の中で、端の三角形が視覚的にバーを長くしてしまうので、私たちはグループ化したバーをやや低くしました。</P>
+<P> そのため、グループバーの効果を得るためには、以下の2行を使用する必要があります。<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $groupbar</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">leftMark</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetType</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;MARK_LEFTTRIANGLE&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$groupbar</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">rightMark</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetType</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;MARK_RIGHTTRIANGLE&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> タイトルに字下げを施す機能はついていないため、これを行うためにはタイトルの文字列の先頭にスペースを加えてください。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="992Addingprogressindicatorstobars.html">前へ</A> <A HREF="911Usingmultiplecolumnsastitles.html">次へ</A>
+</BODY>
+</HTML>

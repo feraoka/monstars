@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="1234Creatingbarcodes.html">
+<LINK REL="Next" HREF="1236Generatingbarcodesoncml.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="1234Creatingbarcodes.html">前へ</A> <A HREF="1236Generatingbarcodesoncml.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="12_3_5">3.5 エラー・ハンドリング</A></H3>
+<P>バーコード・モジュールはライブラリの標準エラー・ハンドリングを使用します。エラーが発生した場合（多くはデータ検証が失敗した場合）に備えて例外処理を設けます。エラーは次の２つの方法で処理されます。</P>
+
+<ul type="1">
+<li><strong>try { ... } catch { ... }</strong>ステートメントでスクリプトを囲む方法。</li>
+<li>通常の初期設定によるエラー・ハンドラー、<strong>set_exception_handler()</strong>をインストールする方法。ライブラリがエラーに反応したら、JpGraphExceptionクラスのインスタンスで指定されたエラー・ハンドラーが呼び出されます。</li>
+</ul>
+
+<P>次のコードはtry-catchステートメントの使用例です。</P>
+
+<div class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB">&lt;?php<br /> </span><span style="color: #007700">try&nbsp;{<br /> &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$encoder&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">BarcodeFactory</span><span style="color: #007700">::</span><span style="color: #0000BB">Create</span><span style="color: #007700">(</span><span style="color: #0000BB">ENCODING_CODE39</span><span style="color: #007700">);<br /> &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$e&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">BackendFactory</span><span style="color: #007700">::</span><span style="color: #0000BB">Create</span><span style="color: #007700">(</span><span style="color: #0000BB">BACKEND_IMAGE</span><span style="color: #007700">,</span><span style="color: #0000BB">$encoder</span><span style="color: #007700">);<br /> &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$e</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Stroke</span><span style="color: #007700">(</span><span style="color: #DD0000">'abc123'</span><span style="color: #007700">);<br /> }&nbsp;catch(&nbsp;</span><span style="color: #0000BB">JpGraphException&nbsp;$e&nbsp;</span><span style="color: #007700">)&nbsp;{<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span style="color: #DD0000">'Error:&nbsp;'&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">$e</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getMessage</span><span style="color: #007700">().</span><span style="color: #DD0000">"\n"</span><span style="color: #007700">;<br /> }<br /> </span><span style="color: #0000BB">?&gt;</span> </span> </code></div>
+
+<P>コードを走らせると次のようなデータ検証エラーの内容を返します。</P>
+
+<div class="phpscript">
+<code><span style="color: #000000">
+Error:&nbsp;Data&nbsp;validation&nbsp;failed.&nbsp;Can't&nbsp;encode&nbsp;[abc123]&nbsp;using&nbsp;encoding&nbsp;"CODE&nbsp;39"&nbsp;</span>
+</code>
+</div>
+
+<P>ここで入力データ文字列上、問題になるのは、「Code 39」シンボロジーはアルファベットの小文字の暗号化をサポートしていないことです。エラー・ハンドラーを必要として、且つ画像エラーを表示したいときには、次のように元の例外処理を再度記述します。</P>
+
+<p>
+<div class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB">&lt;?php<br /> </span><span style="color: #007700">try&nbsp;{<br /> &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$encoder&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">BarcodeFactory</span><span style="color: #007700">::</span><span style="color: #0000BB">Create</span><span style="color: #007700">(</span><span style="color: #0000BB">ENCODING_CODE39</span><span style="color: #007700">);<br /> &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$e&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">BackendFactory</span><span style="color: #007700">::</span><span style="color: #0000BB">Create</span><span style="color: #007700">(</span><span style="color: #0000BB">BACKEND_IMAGE</span><span style="color: #007700">,</span><span style="color: #0000BB">$encoder</span><span style="color: #007700">);<br /> &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$e</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Stroke</span><span style="color: #007700">(</span><span style="color: #DD0000">'abc123'</span><span style="color: #007700">);<br /> }&nbsp;catch(&nbsp;</span><span style="color: #0000BB">JpGraphException&nbsp;$e&nbsp;</span><span style="color: #007700">)&nbsp;{<br /> &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">JpGraphError</span><span style="color: #007700">::</span><span style="color: #0000BB">Raise</span><span style="color: #007700">(</span><span style="color: #0000BB">$e</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getMessage</span><span style="color: #007700">());<br /> }<br /> </span><span style="color: #0000BB">?&gt;</span> </span> </code></div>
+</p>
+
+<p>
+<div class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB">JpGraphError</span><span style="color: #007700">::</span><span style="color: #0000BB">Raise</span><span style="color: #007700">(</span><span style="color: #0000BB">$e</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getMessage</span><span style="color: #007700">());</span><span style="color: #0000BB"></span> </span> </code></div>
+</p>
+
+<P>このコードは次のような画像エラーを表示します。</P>
+
+<P><DIV class="example">
+<img src="barcode_data_validation_failed.png" alt="" /><BR>
+<B>図3.5</B> 画像エラー： バーコードのデータ検証に失敗した例
+</DIV></P>
+
+<P>次に、コマンド・ライン・バーコード・ユーティリティで、他の初期設定エラー・ハンドラーをインストールする別の方法を紹介します。</P>
+
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="1234Creatingbarcodes.html">前へ</A> <a href="1236Generatingbarcodesoncml.html">次へ</a>
+</BODY>
+</HTML>

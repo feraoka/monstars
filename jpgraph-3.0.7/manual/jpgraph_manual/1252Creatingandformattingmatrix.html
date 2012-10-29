@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="81Radarplots.html">
+<LINK REL="Next" HREF="812Specifyingtitlesfortheaxisandlegendsfortheplots.html">
+<STYLE TYPE="text/css">
+<!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+-->
+</STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 12px
+}
+-->
+</style>
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="1251Featuresmatrix.html">前へ</A> <A HREF="1253Meshinterpolatingofinputdata.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="12_2_1">5.2 基本マトリックス・グラフの作成とフォーマット</A></H3>
+<P> 
+マトリックス・プロットのを作成するときは、拡張モジュール「jpgraph_matrix.php」をコア・モジュールである「jpgraph.php」と共にスクリプトに含める必要があります。
+<P> それ以外はマトリックス・グラフの作成は、１つ以上のマトリックス・プロットのキャンバスとなるマトリックス・グラフ・エリアを作成するときの、ライブラリの通常の手順に従います。原則的な手順は次の通りです。
+<p></p>
+<ol>
+<li>MatrixGraphクラスのインスタントとして基本マトリックス・グラフ・エリアを作成する。（JpGraphのすべての例で、このインスタンスを使う場合、$graph変数を使用しています。）</li><li>P align="left" class="style1">2.	１つ以上のマトリックス・プロットをMatrixPlotクラスのインスタンスとして作成し、カラー・マップや体裁に必要な変更を加え、マトリックス・グラフ・キャンバスに追加する。</li>
+<li>MatrixGraph::Stroke()メソッドで、グラフをブラウザに送る。他のグラフ同様、このメソッドは、ブラウザ（クライアント）に返すことも、ファイル名を第1引数として指定してファイルにグラフを書き込むことも可能。</li>
+</ol>
+<P></P><P></P>  
+<P>図5.2はすべてのパラメタに初期設定値を使用したマトリックス・プロットを表示したものです。
+<P>
+<DIV class="phpscript">(File:matrix_ex0.php)<br /><code><span style="color: #000000"><span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #FF8000">//&nbsp;content="text/plain;&nbsp;charset=utf-8"<br /> 
+</span><span style="color: #007700">require_once(</span><span style="color: #DD0000">'jpgraph/jpgraph.php'</span><span style="color: #007700">);<br /> require_once(</span><span style="color: #DD0000">'jpgraph/jpgraph_matrix.php'</span><span style="color: #007700">);<br /> &nbsp;<br /> </span><span style="color: #FF8000">//&nbsp;ランダムなマトリックス<br /> </span><span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">=&nbsp;array(<br /> &nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #0000BB">0</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">,</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">6</span><span style="color: #007700">,</span><span style="color: #0000BB">7</span><span style="color: #007700">,</span><span style="color: #0000BB">8</span><span style="color: #007700">,</span><span style="color: #0000BB">9</span><span style="color: #007700">,</span><span style="color: #0000BB">10</span><span style="color: #007700">),<br /> &nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #0000BB">10</span><span style="color: #007700">,</span><span style="color: #0000BB">9</span><span style="color: #007700">,</span><span style="color: #0000BB">8</span><span style="color: #007700">,</span><span style="color: #0000BB">7</span><span style="color: #007700">,</span><span style="color: #0000BB">6</span><span style="color: #007700">,</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">0</span><span style="color: #007700">),<br /> &nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #0000BB">0</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">,</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">6</span><span style="color: #007700">,</span><span style="color: #0000BB">7</span><span style="color: #007700">,</span><span style="color: #0000BB">8</span><span style="color: #007700">,</span><span style="color: #0000BB">9</span><span style="color: #007700">,</span><span style="color: #0000BB">10</span><span style="color: #007700">),<br /> &nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #0000BB">10</span><span style="color: #007700">,</span><span style="color: #0000BB">9</span><span style="color: #007700">,</span><span style="color: #0000BB">8</span><span style="color: #007700">,</span><span style="color: #0000BB">17</span><span style="color: #007700">,</span><span style="color: #0000BB">6</span><span style="color: #007700">,</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">0</span><span style="color: #007700">),<br /> &nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #0000BB">0</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">,</span><span style="color: #0000BB">9</span><span style="color: #007700">,</span><span style="color: #0000BB">7</span><span style="color: #007700">,</span><span style="color: #0000BB">8</span><span style="color: #007700">,</span><span style="color: #0000BB">9</span><span style="color: #007700">,</span><span style="color: #0000BB">10</span><span style="color: #007700">),<br /> &nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #0000BB">8</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">,</span><span style="color: #0000BB">8</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">7</span><span style="color: #007700">,</span><span style="color: #0000BB">8</span><span style="color: #007700">,</span><span style="color: #0000BB">9</span><span style="color: #007700">,</span><span style="color: #0000BB">10</span><span style="color: #007700">),<br /> &nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #0000BB">10</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">7</span><span style="color: #007700">,</span><span style="color: #0000BB">6</span><span style="color: #007700">,</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">12</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">0</span><span style="color: #007700">),<br /> &nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #0000BB">10</span><span style="color: #007700">,</span><span style="color: #0000BB">9</span><span style="color: #007700">,</span><span style="color: #0000BB">8</span><span style="color: #007700">,</span><span style="color: #0000BB">7</span><span style="color: #007700">,</span><span style="color: #0000BB">6</span><span style="color: #007700">,</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">0</span><span style="color: #007700">),<br /> );<br /> &nbsp;<br /> </span><span style="color: #FF8000">//&nbsp;基本マトリックスグラフ・エリアを作成し、タイトルを設定。<br /> </span><span style="color: #0000BB">$graph&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">MatrixGraph</span><span style="color: #007700">(</span><span style="color: #0000BB">400</span><span style="color: #007700">,</span><span style="color: #0000BB">300</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #DD0000">'Basic&nbsp;matrix&nbsp;example'</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetFont</span><span style="color: #007700">(</span><span style="color: #0000BB">FF_ARIAL</span><span style="color: #007700">,</span><span style="color: #0000BB">FS_BOLD</span><span style="color: #007700">,</span><span style="color: #0000BB">14</span><span style="color: #007700">);<br /> &nbsp;<br /> </span><span style="color: #FF8000">//&nbsp;初期設定値のみを使用したマトリックス・プロットを作成。<br /> </span><span style="color: #0000BB">$mp&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">MatrixPlot</span><span style="color: #007700">(</span><span style="color: #0000BB">$data</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Add</span><span style="color: #007700">(</span><span style="color: #0000BB">$mp</span><span style="color: #007700">);<br /> &nbsp;<br /> </span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Stroke</span><span style="color: #007700">();<br /> &nbsp;<br /> </span><span style="color: #0000BB">?&gt;<br /> </span> </span> </code></DIV></P>
+
+<p>
+<div class="example">
+<A href="example_src/frame_matrix_ex0.html" target="_blank"><img src="matrix_ex0.png" alt="" /></A>
+<br /><B>図5.2</B> 初期設定値の基本マトリックス・グラフ<A href="example_src/frame_matrix_ex0.html" target="_blank">[ソース]</A>
+</div></p>
+<p>&nbsp;</p>
+<p> 他のタイプのグラフ同様、マトリックス・プロットも単一でも複数でも同じマトリックス・グラフ・エリアに自由に配置できます。位置設定は座標の絶対値でも、グラフ・エリアの幅・高さに対する比率でもどちらでも指定ができます。</p>
+<p><DIV class="note"><B>Tips:</B><br/>
+マトリックス・プロットを簡単に位置設定するにはレイアウト・クラスを使います。</div></p>
+<p><DIV class="note"><B>Tips:</B><br/>
+マトリックスのデータがファイルに存在するなら、ユーティリティクラスのReadFileDataを使い、次のメソッドでファイル内のデータを取り込むのが便利でしょう。</div></p>
+<ul>
+<li>ReadFileData::FromMatrix($aFile,$aSeparator=' ')  </li>
+</ul>
+<p>これは、ファイルからマトリックスを読み込みます。マトリックスの各行は個別のラインで、各セルは第2引数として指定された文字で区別されます。初期設定によりスペースはセパレータとして認識されます。読み返される値はすべて浮動小数点（倍精度）に変換されます。次の例はこの手法の使い方が非常に簡単であることを示しています。  </p>
+
+<p><DIV class="phpscript"><code><span style="color: #000000"> <span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">ReadFileData</span><span style="color: #007700">::</span><span style="color: #0000BB">FromMatrix</span><span style="color: #007700">(</span><span style="color: #DD0000">'matrixdata.txt'</span><span style="color: #007700">);</span><span style="color: #0000BB"></span> </span> </code></DIV></p>
+<p>タイトルやフッタの追加などのグラフ・フォーマットの標準オプションについては、他のグラフと同じですので他の章をご参照ください。 </p>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="1251Featuresmatrix.html">前へ</A> <A HREF="1253Meshinterpolatingofinputdata.html">次へ</A>
+</BODY>
+</HTML>

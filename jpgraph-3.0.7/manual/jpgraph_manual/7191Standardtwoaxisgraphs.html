@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="719Formattingtheaxis.html">
+<LINK REL="Next" HREF="7192Scientificstyleaxis.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="719Formattingtheaxis.html">前へ</A> <A HREF="7192Scientificstyleaxis.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_19_1">7.19.1 一般的な 2 軸グラフ</A></H3>
+<P> X 軸と Y 軸が 1 つずつの一般的な 2 軸グラフの例から始めましょう。各軸の位置は、<A href="../ref/Axis.html#_AXIS_SETPOS">Axis::SetPos($aPosition)</A> メソッドを呼び出すことで指定できます。軸を指定する際には、別軸での位置を指定する必要があることに注意してください。デフォルトでは、軸は別軸の 0 点に配置されています。そのため、軸は 0,0 点で交わります。</P>
+<P> また、軸の指定には min および max という特殊な 2 点を指定することもできます。これらを指定すると、軸はもう一方の軸の最小値、あるいは最大値に配置されます。</P>
+<P> たとえば、常に X 軸をグラフの最下部に表示したい場合は、以下のようにします。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">xaxis</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">SetPos</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;min&quot;</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> 軸のカラーと線の幅を指定するには、<A href="../ref/Axis.html#_AXIS_SETCOLOR">Axis::SetColor()</A> メソッドと <A href="../ref/Axis.html#_AXIS_SETWEIGHT">Axis::SetWeight()</A> メソッドを使用します。</P>
+<HR> <SMALL><STRONG> ヒント: </STRONG> JpGraph では、ラベルが描画されたまま軸のみを非表示にすることを直接サポートしていませんが、この効果は軸のカラーを背景色と同じにすることで簡単に実現できます。詳細は Example ディレクトリにある、barintex2.php を参照してください。完全に軸を非表示にするには、<A href="../ref/Axis.html#_AXIS_HIDE">Hide()</A> メソッドを使用します。</SMALL>
+<HR>
+<P> また、軸にタイトルを設定することも可能です。これは、<A href="../ref/Axis.html#_AXIS_SETTITLE">Axis::SetTitle()</A> メソッドを使用します。これは実際はタイトルプロパティに直接接続するための、ただのショートカットです。また、Axis::title::Set() メソッドを使用すると、行揃えを行えます。</P>
+<P> デフォルトでは、X 軸のタイトルは右揃えで、Y 軸のタイトルは中央揃え (90 度回転します) に設定されています。</P>
+<P> また、タイトルの位置は <A href="../ref/Axis.html#_AXIS_SETTITLE">Axis::SetTitle()</A> メソッドの 2 番目の引数で調節できます。</P>
+<P> 引数には、high、middle、そして low のいずれかを指定できます。</P>
+<P> また、軸とタイトルの間の余白を調節することもできます。特にラベルが長い場合は、Y 軸のタイトルの余白を増加することが必要になってきます。軸とタイトルの距離は、<A href="../ref/Axis.html#_AXIS_SETTITLEMARGIN">Axis::SetTitleMargin()</A> メソッドでピクセル単位で指定できます。 </P>
+<P> 例として、Y 軸の余白を増やす場合は、以下のように記述します。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">yaxis</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">SetTitleMargin</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">40</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P>    </P>
+<P> 次に、軸の上に目盛りやラベルを配置する場合の説明を行います。軸、目盛り、およびラベルをどの位置に配置するかを設定できます。X 軸は、グラフの上部 (プロット エリアの内側)、あるいはグラフの下部 (プロット エリアの外側) のいずれかに配置できます。同様に、Y 軸もグラフの左側、あるいは右側に配置できます。</P>
+<P> ラベルの配置を修正するには、<A href="../ref/Axis.html#_AXIS_SETTITLESIDE">Axis::SetTitleSide()</A> メソッドを使用します。また、目盛りの位置を修正するには、<A href="../ref/Axis.html#_AXIS_SETTICKSIDE">SetTickSide()</A>メソッドを使用します。<DIV class="note"><B>注意:</B>メソッドには、以前のバージョンとの互換性のため、同様の SetTickDirection() メソッドがありますが、現在ではこのメソッドの使用は推奨されておりません。 </DIV> これらのメソッドには、以下の引数を指定できます。 </P>
+<UL>
+<LI> SIDE_UP</LI>
+<LI> SIDE_DOWN</LI>
+<LI> SIDE_LEFT</LI>
+<LI> SIDE_RIGHT</LI>
+</UL>
+<P> たとえば、下記の通りに記述することで、X 軸のラベルと目盛りの場所を変更できます。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">xaxis</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">SetLabelPos</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">SIDE_UP</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">xaxis</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetTickSide</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">SIDE_DOWN</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> この方法を用いると、以下のようにグラフの上部に X 軸を配置できます。<DIV class="example">
+<BR> <A href="exframes/frame_topxaxisex1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="topxaxisex1.png" WIDTH="400"></A> <BR><B>図 97:</B>X 軸の位置を調節する例 <A href="exframes/frame_topxaxisex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="719Formattingtheaxis.html">前へ</A> <A HREF="7192Scientificstyleaxis.html">次へ</A>
+</BODY>
+</HTML>

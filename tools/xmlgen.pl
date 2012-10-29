@@ -22,8 +22,8 @@ use XML::Simple;
 use Data::Dumper;
 use Encode;
 
-binmode STDOUT, ":encoding(shiftjis)";
-binmode STDERR, ":encoding(shiftjis)";
+binmode STDOUT, ":encoding(utf8)";
+binmode STDERR, ":encoding(utf8)";
 
 my $debug = 0;
 
@@ -31,7 +31,7 @@ sub outputxml($) {
     my $data = shift;
     my $x = new XML::Simple;
     my $xml = $x->XMLout($data, RootName=>"monstars");
-    print "<?xml version=\"1.0\" encoding=\"shift-jis\" ?>\n";
+    print "<?xml version=\"1.0\" encoding=\"utf8\" ?>\n";
     print $xml;
 }
 

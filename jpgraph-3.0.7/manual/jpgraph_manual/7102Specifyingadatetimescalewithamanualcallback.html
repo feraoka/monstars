@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="7101Usingtheautomaticdatetimescale.html">
+<LINK REL="Next" HREF="711Adjustinglabelsonatextscale.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="7101Usingtheautomaticdatetimescale.html">前へ</A> <A HREF="711Adjustinglabelsonatextscale.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_10_2">7.10.2 手動コールバックで日付・時間スケールを指定する</A></H3>
+<P> 以下では、PHP の time() 関数と同様の形式でタイムスタンプ値が表現されていることを前提としています。</P>
+<P> コールバック関数を用いて、スケールに表示するラベルの書式を整形する方法を述べます。</P>
+<P> X スケールは一般的な整数スケールで指定します (タイムスタンプ値は整数値として表されています)。 次に、カスタムなラベル用のコールバック関数を作成し、<A href="../ref/Axis.html#_AXIS_SETLABELFORMATCALLBACK">SetLabelFormatCallback()</A>メソッドで指定します。このコールバック関数では、タイムスタンプ値を一定の書式に変換するものです。 今回の例では、PHPの Date() 関数を使用しています。</P>
+<P> コールバック関数の例は以下のようになります。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> </FONT><FONT color="#FF8000">// タイムスタンプを分、秒に変換するコールバック <BR></FONT><FONT color="#007700">function </FONT><FONT color="#0000BB">TimeCallback</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$aVal</FONT><FONT color="#007700">) { <BR>    return </FONT><FONT color="#0000BB">Date</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'H:i:s'</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$aVal</FONT><FONT color="#007700">); <BR>}</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> これにより、以下のようなグラフを得られます。<DIV class="example">
+<BR> <A href="exframes/frame_dateaxisex1.html" target="blank"><IMG border="0"
+HEIGHT="250" src="dateaxisex1.png" WIDTH="324"></A> <BR><B>図 82:</B>整数スケールとコールバック関数を使用して日付の書式の整形を行う例 <A href="exframes/frame_dateaxisex1.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> 上記の例では、手動で X スケールを指定しています。そうすることで、X 軸の最小値と最大値がデータの最小値と最大値と合わさっています。</P>
+<P> それぞれ表示されるラベルで SetLabelFormatCallback() が呼ばれ、関数で渡される引数はライブラリがその特定のラベルを割り当てているデフォルトのラベルです。</P>
+<P> これは、データが、たとえば数秒で与えられたタイムスタンプを基準に表示された場合、表示された値は時間・日付の値の通常の表示方法を調整しない場合があるということです。</P>
+<P> 整数のスケールの使用では、ライブラリはデータは整数でタイムスタンプの値ではないと仮定するため、自動のスケールにあった偶数の位置になるようにラベルのポジションを決めるので、これは作動しません。</P>
+<P> 解決のための一番良い方法は手動の特定スケールでコールバックの関数と一緒に整数の Xスケールを使用することです。 スケールを設定するには、少し手動の作業が必要です。 データによって、1 つを表示させるため適切な時間でスケールが始まり終わることと、選択されたチックの間隔が偶数の数分、数時間、数日、または表示するための最適な時間範囲と一致することを確認する必要があります。</P>
+<P> 以下に、その例を掲載します。 データを基準にした時間をサンプルにすると仮定した&ldquo;偽&rdquo;のデータを作り、いくつかの適切なスケールとチックの間隔を設定します。 このスクリプトは、タイム データの扱いをもっと促進するため基準として使用される場合があります。<DIV class="phpscript">
+(File: timestampex01.php) <BR><CODE><FONT color="#000000"> <FONT color="#0000BB">&lt;?php <BR></FONT><FONT color="#FF8000">// 人間が読めるラベルのタイムスタンプの使い方と形成の仕方の例 <BR></FONT><FONT color="#007700">require_once(</FONT><FONT color="#DD0000">&quot;../jpgraph.php&quot;</FONT><FONT color="#007700">); <BR>require_once(</FONT><FONT color="#DD0000">&quot;../jpgraph_line.php&quot;</FONT><FONT
+color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// &quot;fake&quot; データ ポイントの番号 <BR></FONT><FONT color="#0000BB">DEFINE</FONT><FONT color="#007700">(</FONT><FONT
+color="#DD0000">'NDATAPOINTS'</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">500</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// データ ポイントが毎10 秒のサンプルと仮定する <BR></FONT><FONT color="#0000BB">DEFINE</FONT><FONT color="#007700">(</FONT><FONT
+color="#DD0000">'SAMPLERATE'</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">10</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// タイムスタンプを時間と分に変換する X スケールの <BR>// フォーマット関数をコールバックする。 <BR></FONT><FONT color="#007700">function </FONT><FONT color="#0000BB">TimeCallback</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$aVal</FONT><FONT color="#007700">) { <BR>    return </FONT><FONT color="#0000BB">Date</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'H:i'</FONT><FONT color="#007700">, </FONT><FONT
+color="#0000BB">$aVal</FONT><FONT color="#007700">); <BR>} <BR> <BR></FONT><FONT color="#FF8000">// スタート時間を取得する <BR></FONT><FONT color="#0000BB">$start </FONT><FONT color="#007700">= </FONT><FONT
+color="#0000BB">time</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#FF8000">// &ldquo;スタート&rdquo; 時間ちょうど前に、一番近い分のスタート時間を設定する <BR></FONT><FONT color="#0000BB">$adjstart </FONT><FONT color="#007700">= </FONT><FONT color="#0000BB">floor</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$start </FONT><FONT color="#007700">/ </FONT><FONT color="#0000BB">60</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// 範囲 (20,100) と X 位置のデータセットを作成 <BR> // ランダムをより少なくし、少ないスムーザーを作るため、 <BR>// データのシンプルな低パスを適用します <BR></FONT><FONT color="#0000BB">$data </FONT><FONT color="#007700">= array(); <BR></FONT><FONT color="#0000BB">$xdata </FONT><FONT color="#007700">= array(); <BR></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">0</FONT><FONT color="#007700">] = </FONT><FONT color="#0000BB">rand</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">20</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">100</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$xdata</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">0</FONT><FONT color="#007700">] = </FONT><FONT color="#0000BB">$adjstart</FONT><FONT color="#007700">; <BR>for( </FONT><FONT color="#0000BB">$i</FONT><FONT color="#007700">=</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">; </FONT><FONT color="#0000BB">$i </FONT><FONT color="#007700">&lt; </FONT><FONT color="#0000BB">NDATAPOINTS</FONT><FONT color="#007700">; ++</FONT><FONT color="#0000BB">$i </FONT><FONT color="#007700">) { <BR>    </FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">$i</FONT><FONT color="#007700">] = </FONT><FONT color="#0000BB">rand</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">20</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">100</FONT><FONT color="#007700">)*</FONT><FONT color="#0000BB">0.2 </FONT><FONT color="#007700">+ </FONT><FONT
+color="#0000BB">$data</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">$i</FONT><FONT color="#007700">-</FONT><FONT color="#0000BB">1</FONT><FONT
+color="#007700">]*</FONT><FONT color="#0000BB">0.8</FONT><FONT color="#007700">; <BR>    </FONT><FONT color="#0000BB">$xdata</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">$i</FONT><FONT color="#007700">] = </FONT><FONT
+color="#0000BB">$adjstart </FONT><FONT color="#007700">+ </FONT><FONT color="#0000BB">$i </FONT><FONT color="#007700">* </FONT><FONT color="#0000BB">SAMPLERATE</FONT><FONT color="#007700">; <BR>} <BR> <BR></FONT><FONT color="#FF8000">// スケールのエンド値を判断する場合、 <BR>// データ ポイントが毎10 秒でサンプル化されてデータを表記すると仮定する。  <BR>// また、偶数のラベル チックの終わりに長さを追加する。 <BR></FONT><FONT color="#0000BB">$adjend </FONT><FONT color="#007700">= </FONT><FONT
+color="#0000BB">$adjstart  </FONT><FONT color="#007700">+ (</FONT><FONT color="#0000BB">NDATAPOINTS</FONT><FONT color="#007700">+</FONT><FONT color="#0000BB">10</FONT><FONT
+color="#007700">)*</FONT><FONT color="#0000BB">10</FONT><FONT color="#007700">; <BR> <BR></FONT><FONT color="#0000BB">$graph </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">Graph</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">500</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">250</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetMargin</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">40</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">20</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">30</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">50</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// そして、X スケールを明確に指定するが、自動的にY スケールを測るようにする  <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetScale</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;intlin&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$adjstart</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$adjend</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;Example on TimeStamp Callback&quot;</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// コールバックを設定し、ラベルの角を調整する <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">xaxis</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetLabelFormatCallback</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'TimeCallback'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">xaxis</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetLabelAngle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">90</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// ラベルを5 分ごと（例、300 秒）に設定し、マイナー チックを1 分後とに設定する <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">xaxis</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ticks</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">300</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">60</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#0000BB">$line </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">LinePlot</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$xdata</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$line</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'lightblue'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$line</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB">?&gt; <BR></FONT></FONT></CODE></DIV></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="7101Usingtheautomaticdatetimescale.html">前へ</A> <A HREF="711Adjustinglabelsonatextscale.html">次へ</A>
+</BODY>
+</HTML>

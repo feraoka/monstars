@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="104Usingacanvasscale.html">
+<LINK REL="Next" HREF="11AntiSpamChallenges.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css"><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="104Usingacanvasscale.html">前へ</A> <A HREF="11AntiSpamChallenges.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="10_5">10.5 サンプル アプリケーション:DB schemaを描画する</A></H2>
+<P> 最後の例として、キャンバス タイプのグラフを DDDA 構造の DB Schema 生成でどう使用するかについて簡単に述べます。</P>
+<P> &quot;utils/misc/imgdbschema.php&quot; ライブラリの PHP ファイルは、より簡単にテーブル スキーマを描画するユーティリティ クラスを含む配置にあります。2 つの基本クラス、ImgDBTable クラスとImgDBSchema クラスがあります。最初のクラスは、1 つのテーブルを描くイメージの描き方を理解します。2 つ目のクラスは、完全な DB スキーマを描画する DB から、全ての関連情報を自動的に抽出するのに信頼性があります。</P>
+<P> 先に進む前に、この例に似ているものを説明します。<DIV class="example">
+<BR> <A href="exframes/frame_dbschemaex1.html" target="blank"><IMG border="0"
+HEIGHT="750" src="dbschemaex1.png" WIDTH="600"></A> <BR><B>図 194:</B> DB スキーマを半自動的に生成する imgdbschema.php ライブラリと一緒にキャンバス グラフ スタイルを使用する例<A href="exframes/frame_dbschemaex1.html" target="blank"> [ソース]</A>
+ 
+<P></P>
+</DIV></P>
+<P></P>
+<P> 先に進む前に、DDDA 構造の 'jpdb.php' ファイルで利用可能なアブストラクション レイヤーの後に、DB アブストラクション レイヤー モデルを通して、アクセス可能な DB を仮定する ImgDBSchema に注意するべきです。このアブストラクション レイヤーは、下部で MySQL データベースを仮定します。特別なアブストラクション レイヤーの依存状態は、一般的なキャンバス ツール ファイルにこれらのクラスがインクルードされていない理由を意味しています。</P>
+<P> 第二に注意すべきことは、ライブラリーは完璧な自動的なレイアウトエンジンを含んでいるのではなく、むしろ他に何も指定されていないのなら、ただ長方形のマス目にテーブルを入れるとても簡単な自動的なシステムを含んでいます。完全なグラフ レイアウト エンジンは、この状況での書き込みを非常に簡単にします。これはとても難しい最適化の問題でもあり、今までのところ、この問題に挑んだどんなプログラムも手動の調停無しで満足できるレイアウトを達成できていません。</P>
+<P> 以上のグラフをもたらすためのコードでの重要なラインです。 <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $tblposadj</FONT><FONT
+color="#007700">=array(</FONT><FONT color="#0000BB">$tlo</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$tblwidth</FONT><FONT color="#007700">+</FONT><FONT color="#0000BB">$tlo</FONT><FONT color="#007700">+</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">*</FONT><FONT
+color="#0000BB">$tblwidth</FONT><FONT color="#007700">+</FONT><FONT color="#0000BB">$tlo</FONT><FONT color="#007700">+</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,-</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">16</FONT><FONT color="#007700">,-</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">16</FONT><FONT
+color="#007700">); <BR></FONT><FONT color="#0000BB">$dbschema </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">ImgDBSchema</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;jpgraph_doc&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;FormatTblName&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;FormatFldName&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$dbschema</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetMargin</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$leftm</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$topm</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$dbschema</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetTableWidth</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$tblwidth</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$dbschema</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">img</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$this</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">iscale</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$tblposadj</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> ファイルの中でのコードの休止は、ただキャンバスをセットアップするためで、いくつかのテーブルに分類するためのデコボコの長方形を加えて、このイメージがもたらした日時のあるフッターに作ります。</P>
+<P> 第一に、ラインが'jpgraph_doc'というデータベースのためのイメージを描くように、それに要求する新しいImgDBSChemeレイアウトエンジンを例示します。 下記の2 つの引数は、ヘッダーやテーブルのそれぞれのフィールドのテキストをフォーマットするため2 つのコールバック ファンクションを指定します。</P>
+<P> 第二に、ラインがテーブルの描画がスタートされるべき左上余白を指示します。</P>
+<P> 第三に、ラインが一つのテーブルの幅を指示します。最後に、ラインはエンジンをはじめ、ジャンバスのデータベースでの全てのテーブルに描写します。この最後の引数は、いくつかの前の意味で要求します。これは、各々のテーブルが配置されるべきである左上端からの(x,y)の補正です。もし値があるのならば、－１はデフォルト値が使用されるべきであることを示します。もしこの配列が指定されたら、テーブルはラインによって簡単に配置されるでしょう。</P>
+<P> このDB schemaの例を描くための 完全なソースコードは、以下に示されます。</P>
+<P><DIV class="phpscript">(File: dbschemaex1.php) <BR><CODE><FONT color="#000000"> <FONT color="#0000BB">&lt;?php <BR></FONT><FONT color="#FF8000">/*======================================================================= <BR>// ファイル：     DBSCHEMAEX1.PHP <BR>// 説明：     DDA 構造の DB スキーマを描画する <BR>// 作成日：     2002-08-25 <BR>// 著者：    Johan Persson (johanp@aditus.nu) <BR> // バージョン：        $Id: dbschemaex1.php,v 1.1 2002/08/27 20:08:57 aditus Exp $ <BR>// <BR>// ライセンス：     // このコードは QPL のもとリリースされました <BR>//              Copyright (C) 2001,2002 Johan Persson <BR> // 注意：        実際のテーブルの描画は半自動的ですが、簡単にそれぞれのテーブルの <BR> // 位置を調整できます    <BR>// <BR> //======================================================================== <BR>*/ <BR></FONT><FONT color="#007700">include </FONT><FONT color="#DD0000">&quot;../jpgraph.php&quot;</FONT><FONT color="#007700">; <BR>include </FONT><FONT color="#DD0000">&quot;../jpgraph_canvas.php&quot;</FONT><FONT
+color="#007700">; <BR>include </FONT><FONT color="#DD0000">&quot;../jpgraph_canvtools.php&quot;</FONT><FONT
+color="#007700">; <BR>include </FONT><FONT color="#DD0000">&quot;../utils/misc/imgdbschema.inc&quot;</FONT><FONT
+color="#007700">; <BR>include </FONT><FONT color="#DD0000">&quot;../utils/jpdocgen/jpdb.php&quot;</FONT><FONT
+color="#007700">; <BR> <BR> <BR></FONT><FONT color="#FF8000">// テーブルのヘッダ名をフォーマットするグローバルコールバック <BR></FONT><FONT color="#007700">function </FONT><FONT color="#0000BB">FormatTblName</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$aName</FONT><FONT color="#007700">) { <BR>    </FONT><FONT color="#FF8000">// 特定のリファレンスを一般の '&lt;project&gt;' を含む 'JpGraph' プロジェクト <BR>    // に置き換えたい場合 <BR>    </FONT><FONT color="#007700">return </FONT><FONT color="#0000BB">str_replace</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'JpGraph'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">'&lt;project&gt;'</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">$aName</FONT><FONT color="#007700">); <BR>} <BR> <BR></FONT><FONT color="#FF8000">// テーブルの各フィールド名をフォーマットするグローバルコールバック <BR></FONT><FONT color="#007700">function </FONT><FONT color="#0000BB">FormatFldName</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$aName</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$aTable</FONT><FONT
+color="#007700">) { <BR>    return </FONT><FONT color="#0000BB">$aName</FONT><FONT color="#007700">; <BR>} <BR> <BR> <BR>class </FONT><FONT color="#0000BB">Driver </FONT><FONT color="#007700">{ <BR> <BR>    var </FONT><FONT color="#0000BB">$ig</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">$img</FONT><FONT color="#007700">, </FONT><FONT
+color="#0000BB">$iscale</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">$ishape</FONT><FONT color="#007700">; <BR>    var </FONT><FONT color="#0000BB">$iymax</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$ixmax</FONT><FONT color="#007700">; <BR>    var </FONT><FONT color="#0000BB">$iwidth</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$iheight</FONT><FONT color="#007700">; <BR> <BR>    function </FONT><FONT color="#0000BB">Driver</FONT><FONT color="#007700">() { <BR> <BR>    </FONT><FONT color="#FF8000">// イメージサイズと座標のグリッドスペースを定義します <BR>    </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">iwidth </FONT><FONT color="#007700">= </FONT><FONT
+color="#0000BB">600</FONT><FONT color="#007700">; <BR>    </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">iheight</FONT><FONT color="#007700">= </FONT><FONT
+color="#0000BB">750</FONT><FONT color="#007700">; <BR>    </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">iymax  </FONT><FONT color="#007700">= </FONT><FONT
+color="#0000BB">50</FONT><FONT color="#007700">; <BR>    </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ixmax  </FONT><FONT color="#007700">= </FONT><FONT
+color="#0000BB">55</FONT><FONT color="#007700">; <BR> <BR>    </FONT><FONT color="#FF8000">// 基本キャンバスを設定する <BR>    </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ig </FONT><FONT color="#007700">= new </FONT><FONT
+color="#0000BB">CanvasGraph</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">iwidth</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">iheight</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">'auto'</FONT><FONT color="#007700">); <BR>    </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">img </FONT><FONT color="#007700">= </FONT><FONT
+color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ig</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">img</FONT><FONT
+color="#007700">; <BR> <BR>    </FONT><FONT color="#FF8000">// 使用するスケールを定義する <BR>    </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">iscale </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">CanvasScale</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">ig</FONT><FONT color="#007700">); <BR>    </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">iscale</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$this</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">ixmax</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">iymax</FONT><FONT color="#007700">); <BR>    </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ishape </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">Shape</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ig</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$this</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">iscale</FONT><FONT color="#007700">); <BR> <BR>    </FONT><FONT color="#FF8000">// A small frame around the canvas <BR>    </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ig</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetMargin</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">); <BR>    </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ig</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetMarginColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;teal&quot;</FONT><FONT color="#007700">); <BR>    </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ig</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">InitFrame</FONT><FONT color="#007700">(); <BR> <BR>    } <BR> <BR>    function </FONT><FONT color="#0000BB">Run</FONT><FONT color="#007700">() { <BR> <BR>    </FONT><FONT color="#0000BB">$leftm</FONT><FONT color="#007700">=</FONT><FONT color="#0000BB">1.5</FONT><FONT color="#007700">;    </FONT><FONT
+color="#FF8000">// 左の余白（テーブル キーマ用） <BR>    </FONT><FONT color="#0000BB">$topm</FONT><FONT color="#007700">=</FONT><FONT
+color="#0000BB">5</FONT><FONT color="#007700">;    </FONT><FONT color="#FF8000">// トップの余白（テーブル キーマ用） <BR>    </FONT><FONT color="#0000BB">$tblwidth</FONT><FONT color="#007700">=</FONT><FONT color="#0000BB">15</FONT><FONT color="#007700">;    </FONT><FONT
+color="#FF8000">// 個々のテーブル幅 <BR>    </FONT><FONT color="#0000BB">$tlo</FONT><FONT color="#007700">=</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">;        </FONT><FONT color="#FF8000">// トップ ラインをオフセットする <BR> <BR>    // プロジェクト指定のテーブルに背景カラーを追加する <BR>    </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ishape</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">IndentedRectangle</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$leftm</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$topm</FONT><FONT color="#007700">-</FONT><FONT color="#0000BB">1</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">*</FONT><FONT color="#0000BB">$tblwidth</FONT><FONT color="#007700">+</FONT><FONT
+color="#0000BB">$tlo</FONT><FONT color="#007700">+</FONT><FONT color="#0000BB">6</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">45</FONT><FONT
+color="#007700">, <BR>                     </FONT><FONT color="#0000BB">$tlo</FONT><FONT color="#007700">+</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">*</FONT><FONT
+color="#0000BB">$tblwidth</FONT><FONT color="#007700">+</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">30</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">CORNER_BOTTOMLEFT</FONT><FONT
+color="#007700">, <BR>                     </FONT><FONT color="#DD0000">'lightblue'</FONT><FONT
+color="#007700">); <BR> <BR>    </FONT><FONT color="#FF8000">// テーブルをストロークする（x、y、オフセット、=-1 の場合、自動配置を使用する） <BR>    </FONT><FONT color="#0000BB">$tblposadj</FONT><FONT color="#007700">=array(</FONT><FONT color="#0000BB">$tlo</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$tblwidth</FONT><FONT color="#007700">+</FONT><FONT color="#0000BB">$tlo</FONT><FONT
+color="#007700">+</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">2</FONT><FONT color="#007700">*</FONT><FONT color="#0000BB">$tblwidth</FONT><FONT color="#007700">+</FONT><FONT color="#0000BB">$tlo</FONT><FONT
+color="#007700">+</FONT><FONT color="#0000BB">4</FONT><FONT color="#007700">, <BR>             </FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,-</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">16</FONT><FONT color="#007700">,-</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">16</FONT><FONT
+color="#007700">); <BR>    </FONT><FONT color="#0000BB">$dbschema </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">ImgDBSchema</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'jpgraph_doc'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">'FormatTblName'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">'FormatFldName'</FONT><FONT color="#007700">); <BR>    </FONT><FONT color="#0000BB">$dbschema</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetMargin</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$leftm</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$topm</FONT><FONT color="#007700">); <BR>    </FONT><FONT color="#0000BB">$dbschema</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetTableWidth</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$tblwidth</FONT><FONT color="#007700">); <BR>    </FONT><FONT color="#0000BB">$dbschema</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">img</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$this</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">iscale</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$tblposadj</FONT><FONT color="#007700">); <BR> <BR>    </FONT><FONT color="#0000BB">$tt </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">CanvasRectangleText</FONT><FONT color="#007700">(); <BR>    </FONT><FONT color="#0000BB">$tt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFillColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">''</FONT><FONT color="#007700">); <BR>    </FONT><FONT color="#0000BB">$tt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">''</FONT><FONT color="#007700">); <BR>    </FONT><FONT color="#0000BB">$tt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFontColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'navy'</FONT><FONT color="#007700">); <BR> <BR>    </FONT><FONT color="#FF8000">// 説明の追加 <BR>    </FONT><FONT color="#0000BB">$tt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">12</FONT><FONT
+color="#007700">); <BR>    </FONT><FONT color="#0000BB">$tt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'Project specific tables'</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$tblwidth</FONT><FONT color="#007700">+</FONT><FONT color="#0000BB">$leftm</FONT><FONT color="#007700">+</FONT><FONT color="#0000BB">3</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">16</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">15</FONT><FONT color="#007700">); <BR>    </FONT><FONT color="#0000BB">$tt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">img</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">iscale</FONT><FONT color="#007700">); <BR> <BR>    </FONT><FONT color="#FF8000">// タイトルの追加 <BR>    </FONT><FONT color="#0000BB">$tt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">''</FONT><FONT color="#007700">); <BR>    </FONT><FONT color="#0000BB">$tt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_VERDANA</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FS_BOLD</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">26</FONT><FONT
+color="#007700">); <BR>    </FONT><FONT color="#0000BB">$tt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'DDDA - DB Schema'</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">9</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0.5</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">30</FONT><FONT color="#007700">); <BR>    </FONT><FONT color="#0000BB">$tt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">img</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">iscale</FONT><FONT color="#007700">); <BR> <BR>    </FONT><FONT color="#FF8000">// バージョンと日付の追加 <BR>    </FONT><FONT color="#0000BB">$tt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFillColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'yellow'</FONT><FONT color="#007700">); <BR>    </FONT><FONT color="#0000BB">$tt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_FONT1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">10</FONT><FONT
+color="#007700">); <BR>    </FONT><FONT color="#0000BB">$tt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;Generated: &quot;</FONT><FONT color="#007700">.</FONT><FONT color="#0000BB">date</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;ymd H:i&quot;</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">time</FONT><FONT color="#007700">()),</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">iymax</FONT><FONT color="#007700">*</FONT><FONT color="#0000BB">0.96</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">15</FONT><FONT color="#007700">); <BR>    </FONT><FONT color="#0000BB">$tt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">img</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">iscale</FONT><FONT color="#007700">); <BR> <BR>    </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ig</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(); <BR>    } <BR>} <BR> <BR></FONT><FONT color="#0000BB">$driver </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">Driver</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB">$driver</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Run</FONT><FONT color="#007700">(); <BR> <BR></FONT><FONT color="#0000BB">?&gt; <BR></FONT> <BR></FONT></CODE></DIV></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="104Usingacanvasscale.html">前へ</A> <A HREF="11AntiSpamChallenges.html">次へ</A>
+</BODY>
+</HTML>

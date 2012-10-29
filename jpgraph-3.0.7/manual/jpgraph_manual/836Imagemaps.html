@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="835Adjustingthelabels.html">
+<LINK REL="Next" HREF="837Afinalexample.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="835Adjustingthelabels.html">前へ</A> <A HREF="837Afinalexample.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="8_3_6">8.3.6 イメージ マップを使用する</A></H3>
+<P> 極プロットの場合は、各マーカーがイメージ マップのホット スポット（クリック可能な箇所）になります。対象の URL は、SetCSIMTargets() メソッドを使って指定できます。<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"></FONT><FONT color="#FF8000">// イメージマップに使用されるURLを指定する<BR></FONT><FONT color="#0000BB">$targets </FONT><FONT color="#007700">= array(</FONT><FONT color="#DD0000">&quot;#1&quot;</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">&quot;#2&quot;</FONT><FONT color="#007700">,.......); <BR></FONT><FONT color="#0000BB">$polarplot</FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">PoalrPlot</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$polarplot</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">mark</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetType</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">MARK_SQUARE</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$polarplot</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetCSIMTargets</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">targets</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$polarplot</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">StrokeCSIM</FONT><FONT color="#007700">();</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="835Adjustingthelabels.html">前へ</A> <A HREF="837Afinalexample.html">次へ</A>
+</BODY>
+</HTML>

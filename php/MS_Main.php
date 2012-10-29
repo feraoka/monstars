@@ -124,12 +124,10 @@ class MS_Main
 
     private function lastUpdateHtml()
     {
-        $revision = getLastRevision();
         $date = getLastDate();
-        $out = "<div id=version><p>
-                Rev: $revision<br>
+        $out = "<div id=version>
                 LastUpdate: $date
-                </p></div>";
+                </div>";
         return $out;
     }
 }
@@ -137,8 +135,6 @@ class MS_Main
 /*
  * Local variables:
  * tab-width: 4
- * c-basic-offset: 4
- * c-hanging-comment-ender-p: nil
  * End:
  */
 

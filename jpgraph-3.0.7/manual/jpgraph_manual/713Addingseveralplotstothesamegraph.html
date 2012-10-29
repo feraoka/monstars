@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="712Displayingthevaluesforeachdatapoint.html">
+<LINK REL="Next" HREF="714AddingasecondYscale.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="712Displayingthevaluesforeachdatapoint.html">前へ</A> <A HREF="714AddingasecondYscale.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_1_3">7.1.3 同じグラフに複数のプロットを追加する </A></H3>
+<P> 2 個目のプロットをグラフに追加してみたい場合どうですか？これはとても簡単で、2 つの単純な方法を必要とします。</P>
+<OL>
+<LI>2 番目のプロットを追加する。 </LI>
+<LI>グラフに追加する。 </LI>
+</OL>
+<P> 2 番目のプロットを作成するために、新しいデータを用意します。</P>
+<P> 以下の通り、そのデータを用いて新しいプロットを作成し、グラフに追加します。 
+<DIV class="phpscript"> <CODE><FONT color="#000000"> <FONT color="#0000BB">$ydata2 </FONT><FONT color="#007700">= array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">19</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">15</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">7</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">22</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">14</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB"> 9</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">21</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">13</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$lineplot2</FONT><FONT color="#007700">=new </FONT><FONT color="#0000BB">LinePlot</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$ydata2</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$lineplot2</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT
+color="#DD0000">&quot;orange&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$lineplot2</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetWeight</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">2</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$lineplot2</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 先ほどのサンプル スクリプトに上記の変更点を追加すると、下記のようなグラフが生成されます。  <DIV class="example">
+<BR> <A href="exframes/frame_example4.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example4.png" WIDTH="300"></A> <BR><B>図 10:</B>2 番目のプロットをグラフに追加する <A href="exframes/frame_example4.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> 以下の点を確認します。</P>
+<UL>
+<LI>2 番目のグラフに対応させるため、Y 軸の範囲は大きくなりました。 </LI>
+<LI>1 つのグラフに複数のプロットを追加する場合、同じ数のデータ ポイントを持つことが望まれます。これは必須ではありません (自動的に最大のポイント数に対応します) が、プロットの 1 つがグラフの途中で切れてしまうので、見栄えは良くありません。 </LI>
+</UL>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="712Displayingthevaluesforeachdatapoint.html">前へ</A> <A HREF="714AddingasecondYscale.html">次へ</A>
+</BODY>
+</HTML>

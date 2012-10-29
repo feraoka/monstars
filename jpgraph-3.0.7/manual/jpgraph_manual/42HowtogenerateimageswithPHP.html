@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="412WhatyouwillNOTlearninthischapter.html">
+<LINK REL="Next" HREF="421UsingtheJpGraphlibrarytosendbackimages.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="412WhatyouwillNOTlearninthischapter.html">前へ</A> <A HREF="421UsingtheJpGraphlibrarytosendbackimages.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="4_2">4.2 画像を出力するには</A></H2>
+<P> 画像を生成する PHP スクリプトは、通常 HTML の &lt;IMG&gt; タグで指定する必要があります。　たとえば、以下の HTML では PHP スクリプト fig1.php が生成する画像を取り込んでいます。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"></FONT><FONT color="#007700">&lt;</FONT><FONT color="#0000BB">img src</FONT><FONT
+color="#007700">=</FONT><FONT color="#DD0000">&quot;fig1.php&quot; </FONT><FONT color="#0000BB">border</FONT><FONT color="#007700">=</FONT><FONT color="#0000BB">0 align</FONT><FONT
+color="#007700">=</FONT><FONT color="#0000BB">center width</FONT><FONT color="#007700">=</FONT><FONT color="#0000BB">300 height</FONT><FONT color="#007700">=</FONT><FONT
+color="#0000BB">200</FONT><FONT color="#007700">&gt;</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> &quot;align&quot;、 &quot;width&quot;、&quot;height&quot;は明示する必要はありませんが、指定すると画像が完全にブラウザに送られる前に、画像を正確な位置に配置するようになります。</P>
+<P> JpGraph ライブラリは、PNG、GIF、JPEG などの画像形式を正確に判別できるように、必要なヘッダー情報と画像データを自動的に生成し、ブラウザに送信します。その後ブラウザは画像をデコードします。</P>
+<P> ただし、画像出力用のスクリプトでは、画像以外の形式を返すことが<STRONG>できない</STRONG>ことに注意してください。 HTML ページ（正確に言えば HTTP ストリーム）は、特定のストリームのヘッダ情報によって定義される１つのマイム タイプだけで成り立ちます。</P>
+<P> よくある間違いとして、画像生成用スクリプトの先頭行に空白文字が入っていることがあります。 この場合明確なヘッダを受け取っていないので、ブラウザはスクリプトから出力されているデータをテキストデータと認識してしまいます。 こうして画像のヘッダ部分がブラウザに送られると、ブラウザはすでに送られてきているデータ ストリームがテキスト ストリームだと認識し、警告を出します。 これがあの忌まわしい &quot;Headers already sent error&quot; の原因です。</P>
+<P> HTML内で画像を複数個表示したい場合は、その数だけの &lt;IMG&gt; タグを用意し、それぞれ画像生成のスクリプトをGETやPOSTデータなどと共に指定する必要があります。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="412WhatyouwillNOTlearninthischapter.html">前へ</A> <A HREF="421UsingtheJpGraphlibrarytosendbackimages.html">次へ</A>
+</BODY>
+</HTML>

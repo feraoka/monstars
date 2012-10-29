@@ -1354,7 +1354,6 @@ final class monstars {
         $ans = query($sql)->fetch();
         $lastYear = explode("/", $ans['date']);
         $lastYear = $lastYear[0];
-        $revision = getLastRevision();
         $date = getLastDate();
         $newMenu = "";
         $newMenu = $this->mMainMenu->menu();
@@ -1364,7 +1363,6 @@ final class monstars {
 
   <div id=version>
     <p>
-    Rev: $revision<br>
     LastUpdate: $date
     </p>
   </div>
@@ -1453,8 +1451,6 @@ final class monstars {
 /*
  * Local variables:
  * tab-width: 4
- * c-basic-offset: 4
- * c-hanging-comment-ender-p: nil
  * End:
  */
 

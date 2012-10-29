@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="062EnabeContourLines.html">
+<LINK REL="Next" HREF="13CodedefinesinJpGraph.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css"><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="062EnabeContourLines.html">前へ</A> <A HREF="13CodedefinesinJpGraph.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME=6_3">6.3 塗りつぶす色を指定する</A></H2>
+
+<P>塗りつぶし等高線グラフを描画するためには、以下のメソッドを呼び出します。</P>
+<UL><LI>ContourPlot::SetFilled($aFlg)</LI></UL>
+<P>ｎ本の等高線が存在する場合、グラフを塗りつぶすには「ｎ＋１」色が必要となります。
+塗りつぶし方には2つの方法がありますが（等高線と比べて高い方、低い方のどちらの面を等高線の色で塗りつぶすかということ）、JpGraphでは等高線（n）と次の等高線（n+1）までの面を、等高線の色で塗りつぶします。
+</P>
+<P>色を手動で指定する場合は、等高線の数よりも、一つ多く色を指定する必要があります。</P>
+<P>色配列で指定された最初の色は、等高線で囲まれた一番低い面を塗りつぶします。</P>
+<P>これを確認するために、以下の例を見てみましょう。</P>
+<P>この例では、説明を簡単にするために等圧線を3本だけ表示させます。つまり、塗りつぶすためには、４色、色を指定する必要があります。</P>
+
+<DIV class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB">&lt;?php<br /> $data&nbsp;</span><span style="color: #007700">=&nbsp;array(&nbsp;...&nbsp;);<br /> &nbsp;<br /> </span><span style="color: #0000BB">$isobar_colors&nbsp;</span><span style="color: #007700">=&nbsp;array(</span><span style="color: #DD0000">'lightgray'</span><span style="color: #007700">,</span><span style="color: #DD0000">'teal:1.3'</span><span style="color: #007700">,</span><span style="color: #DD0000">'orange'</span><span style="color: #007700">,</span><span style="color: #DD0000">'red'</span><span style="color: #007700">);<br /> &nbsp;<br /> </span><span style="color: #FF8000">//&nbsp;３本の等高線で、等高線グラフを作る<br /> </span><span style="color: #0000BB">$cp&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">ContourPlot</span><span style="color: #007700">(</span><span style="color: #0000BB">$data</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">);<br /> &nbsp;<br /> </span><span style="color: #FF8000">//&nbsp;手入力で色を指定する<br /> </span><span style="color: #0000BB">$cp</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetIsobarColors</span><span style="color: #007700">(</span><span style="color: #0000BB">$isobar_colors</span><span style="color: #007700">);<br /> &nbsp;<br /> </span><span style="color: #0000BB">?&gt;<br /> </span> </span> </code>
+</DIV>
+<P></P>
+<DIV class="example">
+  <A href="example_src/frame_contour2ex3.html" target="_blank"><img src="contour2ex3.png" alt="" /></A><BR>
+  <B>図6.3 手動で塗りつぶす色を設定する</B> <A href="example_src/frame_contour2ex3.html" target="_blank">[ソース]</A>
+</DIV>
+
+<P>グラフ中にアルゴリズムによって算出された3つの等高線（6.2, 10.5, 14.8）がラベルと共に表示されています。</P>
+<P>一つ目の色「lightgray（灰色）」は最も低い等高線 (6.2)以下の面を塗りつぶすのに使用されます。</P>
+<P>また、SetFilled(false)と指定することで、塗りつぶしなしの等高線グラフを作成できます。</P>
+<P>しかし、FilledContourPlotクラスを用い、先述の指定で作成した塗りつぶしなしの等高線グラフと、ContourPlotクラスで作成した等高線グラフとは、見た目が若干異なります。</P>
+<P>その理由は、FilledContourPlotクラス（塗りつぶし等高線プロットクラス）と、ContourPlot クラス（等高線プロットクラス） とで、使用しているアルゴリズムが異なるからです。</P>
+<P>ContourPlotクラスのデータ格子補間３～４のレベルに対応するアルゴリズムを使用して、FilledContourPlotクラスの等高線は作成されます。</P>
+
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="062EnabeContourLines.html">前へ</A> <A HREF="13CodedefinesinJpGraph.html">次へ</A>
+</BODY>
+</HTML>

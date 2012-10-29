@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="711AddingplotmarkstolineplotsXXX.html">
+<LINK REL="Next" HREF="713Addingseveralplotstothesamegraph.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="711AddingplotmarkstolineplotsXXX.html">前へ</A> <A HREF="713Addingseveralplotstothesamegraph.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_1_2">7.1.2 各データ ポイントに値を表示する</A></H3>
+<P> 各データ ポイントの上にデータ値を表示することができます。値は、プロットの value プロパティを通じて指定できます。（詳細については、クラス リファレンスの <A href="../ref/DisplayValue.html#_C_DISPLAYVALUE">値を表示する</A> を参照してください。 ）</P>
+<P> データ値の表示を有効にするには Show() メソッドを使用します。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $lineplot</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">value</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Show</FONT><FONT color="#007700">()</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> このコードを先ほどのサンプルに追加すると、下記のような外見になります。<DIV class="example">
+<BR> <A href="exframes/frame_example3.3.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example3.3.png" WIDTH="300"></A> <BR><B>図 8:</B>各ポイントのデータ値を表示する <A href="exframes/frame_example3.3.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> もちろん、データ値のカラー、フォント、書式を変更できます。たとえば、赤褐色の太字に設定し、先頭に $ 記号をつける場合は以下の通りになります。  <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $lineplot</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">value</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT
+color="#DD0000">&quot;darkred&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$lineplot</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">value</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_FONT1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FS_BOLD</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$lineplot</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">value</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFormat</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;$ %0.1f&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> この結果、下記のような外見になります。<DIV class="example">
+<BR> <A href="exframes/frame_example3.4.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example3.4.png" WIDTH="300"></A> <BR><B>図 9:</B>データ値に修飾を加える <A href="exframes/frame_example3.4.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="note"><B>注意:</B>書式のコールバック関数を使用することで、printf() 形式の書式よりも高度な書式設定が行えますそうすることで、数字を 3 桁ずつに区切るといった表現が行えます。 </DIV></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="711AddingplotmarkstolineplotsXXX.html">前へ</A> <A HREF="713Addingseveralplotstothesamegraph.html">次へ</A>
+</BODY>
+</HTML>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="51Enablingthecachesystem.html">
+<LINK REL="Next" HREF="53UsingthecachewithClientSideImageMaps.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="51Enablingthecachesystem.html">前へ</A> <A HREF="53UsingthecachewithClientSideImageMaps.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="5_2">5.2 スクリプトでキャッシュを使用する</A></H2>
+<P> キャッシュ スクリプトを使用する場合、画像を保存するキャッシュ ファイル名を指定する必要があります。また、キャッシュの存続期間を設定するタイムアウト値を指定することもできます。 </P>
+<P> これらの引数は、最初に呼び出す Graph() メソッドにて手渡します。手動で使用するファイル名を指定するのではなく、auto と指定するとスクリプト名を使用できます。auto が指定された場合、キャッシュ ファイル名はスクリプト名と同じ名前を持ち、適切な拡張子が付加されます。</P>
+<P> ファイル名を指定しない場合、USE_CACHE 定数を true にしている、いないに関係なく、キャッシュ機能は働きません。</P>
+<P> 以下に、キャッシュを有効にするサンプルを掲載します。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">Graph</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">300</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">200</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;auto&quot;</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">60</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> 上記のコードでは、自動でキャッシュ ファイル名を設定し、60 分間のタイムアウト値を設定しています。</P>
+<P> そこで、これらすべてはどう作動するのでしょうか。  </P>
+<P> スクリプトが最初に呼び出された際には、スクリプト全体が実行され、生成された画像がブラウザに転送されます。そして、キャッシュ機能が有効な場合は、画像がキャッシュ ディレクトリに転送されます。</P>
+<P> 次にスクリプトを呼び出した際には、キャッシュ ディレクトリにキャッシュ ファイルが既に存在するかどうかを確認します。その場合、画像が古すぎないかどうか、指定されたタイムアウト値で確認されます。タイムアウト値よりも新しい場合は、スクリプトを実行するのではなく、画像ファイルからブラウザへと直接転送されます。</P>
+<P> そのため、キャッシュ ディレクトリ内に画像が見つかった場合、<STRONG>最初の Graph() メソッドの呼び出し以後スクリプトは実行されません。</STRONG></P>
+<P> この設計は、キャッシュを使用する場合、それ以外の動作を行わないようにするために必要です。これらはすべて自動的に行われます。.</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="51Enablingthecachesystem.html">前へ</A> <A HREF="53UsingthecachewithClientSideImageMaps.html">次へ</A>
+</BODY>
+</HTML>

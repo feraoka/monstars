@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="914AddingCSIMClientsideImageMapstoGanttcharts.html">
+<LINK REL="Next" HREF="916Advancedformatting.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="914AddingCSIMClientsideImageMapstoGanttcharts.html">前へ</A> <A HREF="916Advancedformatting.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_15">9.15 アクティビティ間に制限を追加する</A></H2>
+<P> ガント チャートを使用する際に、１つのアクティビティやいくつかのアクティビティ間の制限を示すことがしばしば必要となります。最もよく用いられる制限の１つは、アクティビティは別のアクティビティが終了していないと開始できないというものです。</P>
+<P> JpGraph は、以下のような制限のタイプの視覚化をサポートしています。</P>
+<UL>
+<LI> Start to End</LI>
+<LI> Start to Start</LI>
+<LI> End to Start</LI>
+<LI> End to End</LI>
+</UL>
+<P> ２つのアクティビティ間の制限を指定する例を説明していきます。</P>
+<P> ガント スキーマを以下のように開始することを前提としています。<DIV class="example">
+<BR> <A href="exframes/frame_ganttconstrainex0.html" target="blank"><IMG border="0"
+HEIGHT="231" src="ganttconstrainex0.png" WIDTH="523"></A> <BR><B>図 171:</B> 制限を加えたいオリジナルのガントスキーマ <A href="exframes/frame_ganttconstrainex0.html" target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P> ここで、アクティビティ&quot;Label 3&quot;はアクティビティ&quot;Label 2&quot;を終了させないと開始することができず、さらに&quot;Phase 1 done&quot;というマイルストーンはアクティビティ&quot;Label 3&quot;が行われた期日に依存するという制限を加えようとしています。</P>
+<P> 制限を加える際の決まりとしては、制限を与えたいアクティビティのそれぞれに対して、この制限が加えられるべき他のアクティビティが何かということを教えてあげなければならないということです。その他のアクテビティは、アクテビティがどの列で存在しているかを教えることで指定されます。たとえば、Start-to-End というような制限のタイプに応じて、矢印は正しい方法で2つのアクティビティを接続するでしょう。</P>
+<P> 制限を加えるには、アクティビティ上で<A href="../ref/GanttPlotObject.html#_GANTTPLOTOBJECT_SETCONSTRAIN">SetConstrain() </A>メソッドを呼びだします。この方法では、制限のタイプを指定することに加え、この制限が加えられるべき他のアクティビティが何かということを指定します。クラスリファレンスを読むと、使用した矢印のタイプやサイズを指定することができることも分かるでしょう。ここでは、デフォルトのサイズやタイプのみを使用しています。</P>
+<P> 例えば、 &quot;Label 2&quot; と&quot;Label 3&quot;の間に End-To-Start 制限を加えるためには、以下のように記述します。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $bar2</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetConstrain</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">CONSTRAIN_ENDSTART</FONT><FONT
+color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+</P>
+<P> 上記の呼び出しの際の最初のパラメータ &quot;2&quot; は、ターゲットアクティビティの行番号です。（&quot;Label 3&quot;アクティビティの行）以下の例は、制限を加えた結果を示したものです。<DIV class="example">
+<BR> <A href="exframes/frame_ganttconstrainex1.html" target="blank"><IMG border="0"
+HEIGHT="253" src="ganttconstrainex1.png" WIDTH="523"></A> <BR><B>図 172:</B>ガント チャートに制限を追加 <A href="exframes/frame_ganttconstrainex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> 注意：矢印によって示される実際のパスは、どんな制限であるかを明確にするためにいくつかのヒューリスティックスにより調節されています。APIをシンプルにするために、示された実際のパスをユーザーがさらに詳細に制御しないということが、当初の設計でした。しかし、今後のバージョンではそのヒューリスティックスが拡張され、ユーザー定義のパラメータが使用可能となるかもしれません。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="914AddingCSIMClientsideImageMapstoGanttcharts.html">前へ</A> <A HREF="916Advancedformatting.html">次へ</A>
+</BODY>
+</HTML>

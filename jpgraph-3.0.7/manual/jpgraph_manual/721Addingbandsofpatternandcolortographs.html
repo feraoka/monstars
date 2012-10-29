@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="720Adjustingtheautoscalinglimitsgracevalue.html">
+<LINK REL="Next" HREF="7211Customizingthepatterns.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="720Adjustingtheautoscalinglimitsgracevalue.html">前へ</A> <A HREF="7211Customizingthepatterns.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="7_21">7.21 バンド パターンとグラフのカラーを追加する</A></H2>
+<P> グラフをより分かりやすくするため、JpGraph では X-Y 座標系のすべてのグラフに対して、バンドを縦方向、あるいは横方向に追加できます。バンドとは、横あるいは縦方向に伸びた長方形のエリアのことです。 これは、バンドを X 座標 3 と 5 で定義した場合、バンドのエリアは X 軸の 2 つの値の間とすべての Y 軸の値で構成される範囲になる、ということです。</P>
+<P> この機能を使用するには、あらかじめ <I>jpgraph_plotband.php</I> ファイルをインクルードしておく必要があります。</P>
+<P> 現状では、以下の 8 種類のバンドを使用できます。また、バンドは独自にカスタマイズもできます。分かりやすくするため、各図には 1 種類のパターンしか用いていません。</P>
+<P></P>
+<TABLE style="margin-left:-4em;">
+<TR><TD><DIV class="example">
+<BR> <A href="exframes/frame_smallstaticbandsex1.html" target="blank"><IMG
+border="0" HEIGHT="150" src="smallstaticbandsex1.png" WIDTH="200"></A> <BR><B>図 103:</B> <A href="exframes/frame_smallstaticbandsex1.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV>
+<P></P>
+</TD><TD><DIV class="example">
+<BR> <A href="exframes/frame_smallstaticbandsex2.html" target="blank"><IMG
+border="0" HEIGHT="150" src="smallstaticbandsex2.png" WIDTH="200"></A> <BR><B>図 104:</B> <A href="exframes/frame_smallstaticbandsex2.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV>
+<P></P>
+</TD></TR>
+<TR><TD><DIV class="example">
+<BR> <A href="exframes/frame_smallstaticbandsex7.html" target="blank"><IMG
+border="0" HEIGHT="150" src="smallstaticbandsex7.png" WIDTH="200"></A> <BR><B>図 105:</B> <A href="exframes/frame_smallstaticbandsex7.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV>
+<P></P>
+</TD><TD><DIV class="example">
+<BR> <A href="exframes/frame_smallstaticbandsex6.html" target="blank"><IMG
+border="0" HEIGHT="150" src="smallstaticbandsex6.png" WIDTH="200"></A> <BR><B>図 106:</B> <A href="exframes/frame_smallstaticbandsex6.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV>
+<P></P>
+</TD></TR>
+<TR><TD><DIV class="example">
+<BR> <A href="exframes/frame_smallstaticbandsex9.html" target="blank"><IMG
+border="0" HEIGHT="150" src="smallstaticbandsex9.png" WIDTH="200"></A> <BR><B>図 107:</B> <A href="exframes/frame_smallstaticbandsex9.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV>
+<P></P>
+</TD><TD><DIV class="example">
+<BR> <A href="exframes/frame_smallstaticbandsex10.html" target="blank"><IMG
+border="0" HEIGHT="150" src="smallstaticbandsex10.png" WIDTH="200"></A> <BR><B>図 108:</B> <A href="exframes/frame_smallstaticbandsex10.html"
+target="blank"> [ソース]</A> 
+<P></P>
+</DIV>
+<P></P>
+</TD></TR>
+<TR><TD><DIV class="example">
+<BR> <A href="exframes/frame_smallstaticbandsex3.html" target="blank"><IMG
+border="0" HEIGHT="150" src="smallstaticbandsex3.png" WIDTH="200"></A> <BR><B>図 109:</B> <A href="exframes/frame_smallstaticbandsex3.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV>
+<P></P>
+</TD><TD><DIV class="example">
+<BR> <A href="exframes/frame_smallstaticbandsex8.html" target="blank"><IMG
+border="0" HEIGHT="150" src="smallstaticbandsex8.png" WIDTH="200"></A> <BR><B>図 110:</B> <A href="exframes/frame_smallstaticbandsex8.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV>
+<P></P>
+</TD></TR>
+</TABLE>
+<P> これらのパターンをグラフに追加するには、<A href="../ref/PlotBand.html#_PLOTBAND_PLOTBAND">PlotBand::PlotBand()</A> メソッドを使用します。使用したいパターンは定数を指定することで選択できます。上記の図で正確な定数を確認してください。バンドの座標の最小値と最大値だけではなく、バンドを垂直方向や水平方向に伸ばすかどうかも指定する必要があります。最小値、最大値が自動的に設定される min と max という特別な値も使用することができます。この特別な値はプロット エリアに収まるように自動的に修正されます。</P>
+<P> ここではこれ以上他の引数については説明しません。クラス リファレンスを参照してください。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="720Adjustingtheautoscalinglimitsgracevalue.html">前へ</A> <A HREF="7211Customizingthepatterns.html">次へ</A>
+</BODY>
+</HTML>

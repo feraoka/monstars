@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="472VerifyingthattheTTFfontswork.html">
+<LINK REL="Next" HREF="474AddingadditionalfontstoJpGraph.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="472VerifyingthattheTTFfontswork.html">前へ</A> <A HREF="474AddingadditionalfontstoJpGraph.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="4_7_3">4.7.3 フォントを指定する</A></H3>
+<P> すべてのグラフ オブジェクトに対して、SetFont() メソッドを呼び出すことでフォントを指定することができます。その際、以下の 3 個の引数を指定できます。</P>
+<OL>
+<LI> フォント ファミリー、FF_ 形式で定義されます。 </LI>
+<LI> フォント スタイル、FS_ 形式で定義されます。 </LI>
+<LI> フォント サイズ、TTF フォントのみ有効です。数値を指定します。 </LI>
+</OL>
+<P> 内蔵フォントに関しては、3 番目のフォント サイズは無視されます。これは、JpGraph で使用できる全 3 種類のフォントでは、文字サイズが固定されているからです。JpGraph では、以下のフォント ファミリーを指定できます。</P>
+<P></P>
+<TABLE border="1">
+<TR><TD>フォント ファミリー  </TD><TD>形式</TD><TD>概要</TD></TR>
+<TR><TD>FF_FONT0</TD><TD>内蔵フォント</TD><TD>非常に小さなフォント</TD></TR>
+<TR><TD>FF_FONT1</TD><TD>内蔵フォント</TD><TD>中ぐらいのサイズのフォント</TD></TR>
+<TR><TD>FF_FONT2</TD><TD>内蔵フォント</TD><TD>大きなサイズのフォント</TD></TR>
+<TR><TD>FF_ARIAL</TD><TD>TTF フォント</TD><TD>Arial フォント</TD></TR>
+<TR><TD>FF_VERDANA</TD><TD>TTF フォント</TD><TD>Verdana フォント</TD></TR>
+<TR><TD>FF_COURIER</TD><TD>TTF フォント</TD><TD>固定幅の Courier フォント</TD></TR>
+<TR><TD>FF_BOOK</TD><TD>TTF フォント</TD><TD>Bookman</TD></TR>
+<TR><TD>FF_COMIC</TD><TD>TTF フォント</TD><TD>Comic sans</TD></TR>
+<TR><TD>FF_TIMES</TD><TD>TTF フォント</TD><TD>Times New Roman</TD></TR>
+<TR><TD>FF_GEORGIA</TD><TD>TTF フォント</TD><TD>Georgia</TD></TR>
+<TR><TD>FF_TREBUCHE</TD><TD>TTF フォント</TD><TD>Trebuche</TD></TR>
+<TR><TD>FF_VERA</TD><TD>TTF フォント</TD><TD>Gnome Vera フォント。http://www.gnome.org/fonts/ からダウンロードできます。</TD></TR>
+<TR><TD>FF_VERAMONO</TD><TD>TTF フォント</TD><TD>Gnome Vera Mono フォント。http://www.gnome.org/fonts/ からダウンロードできます。</TD></TR>
+<TD>FF_VERASERIF</TD><TD>TTF フォント</TD><TD>Gnome Vera Serif フォント。http://www.gnome.org/fonts/ からダウンロードできます。</TD>
+<TR><TD>FF_CHINESE</TD><TD>TTF フォント</TD><TD>中国語用のフォント。</TD></TR>
+<TR><TD>FF_SIMSUN</TD><TD>TTF フォント</TD><TD>中国語用のフォント。</TD></TR>
+<TR><TD>FF_BIG5</TD><TD>TTF フォント</TD><TD>中国語 BIG5 用のフォント (iconv() 関数が必要です)</TD></TR>
+</TABLE>
+<P> 上記のフォント ファミリーが、すべてのスタイルをサポートしているわけではありません。以下に、それぞれのフォント ファミリーで利用できるフォント スタイルを紹介します。<DIV class="example">
+<BR> <A href="exframes/frame_listfontsex1.html" target="blank"><IMG border="0"
+HEIGHT="450" src="listfontsex1.png" WIDTH="550"></A> <BR><B>図 1:</B>JpGraph で使用できるフォント一覧 <A href="exframes/frame_listfontsex1.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> 以下に、使用例を紹介します。  <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_FONT2</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_FONT2</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FS_BOLD</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_ARIAL</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FS_BOLD</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">24</FONT><FONT
+color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+</P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="472VerifyingthattheTTFfontswork.html">前へ</A> <A HREF="474AddingadditionalfontstoJpGraph.html">次へ</A>
+</BODY>
+</HTML>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="920Adjustingbrightnessandcontrastforimagesandbackgrounds.html">
+<LINK REL="Next" HREF="922Usingcountryflagsinvariouscontext.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="920Adjustingbrightnessandcontrastforimagesandbackgrounds.html">前へ</A> <A HREF="922Usingcountryflagsinvariouscontext.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_21">9.21 グラフ生成の時間を計る</A></H2>
+<P> 開発と最適化の間、フットノートとしてイメージを生成するにかかる実際の時間をとても手軽にします。 以下の例はこの特徴の使用を表しています<DIV class="example">
+<BR> <A href="exframes/frame_example11.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example11.png" WIDTH="300"></A> <BR><B>図 182:</B>グラフのタイミング <A href="exframes/frame_example11.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> この特徴を有効にするため、2 つの方法で処理することができます。</P>
+<OL>
+<LI> グローバルの定義 BRAND_TIMING （jpgraph.php で） をトゥルーに設定する。 これは生成されたすべてのグラフに時間の文字を追加します。</LI>
+<LI> .. または、グローバル変数 $gJpgBrandTiming を以下のように設定することで特定のグラフを有効にすることができます。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB">&nbsp;$gJpgBrandTiming</FONT><FONT color="#007700">=</FONT><FONT
+color="#0000BB">true</FONT><FONT color="#007700">;</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P>スクリプトの最初に書きます。</P>
+</LI>
+</OL>
+<P> 方法を変更したい場合、BRAND_TIMING_FORMAT (jpgraph.php の) で定義された文字を設定することでタイミングはフォーマットされます。 このストリングは標準の printf() フォーマット ストリングを表わします。 <DIV class="note">
+<B>注意:</B> JpGraph にはコードのタイミング部分で必要な JpgTimer と呼ばれるユーティリティ クラスがあります。 API は本当にシンプルです。 クラスは複数回起動するタイマーをサポートし、Push() メソッドを呼ぶことでタイマーを起動します。 新しいタイマーを起動し、積み重なったタイマーの上に置きます。 タイマーを止めるには、積み重なったものからそれを動かし、タイミング値を返し Pop() を呼びます。</DIV></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="920Adjustingbrightnessandcontrastforimagesandbackgrounds.html">前へ</A> <A HREF="922Usingcountryflagsinvariouscontext.html">次へ</A>
+</BODY>
+</HTML>

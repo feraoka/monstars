@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="312VerifyingthatyouhaveGD2installed.html">
+<LINK REL="Next" HREF="314UsingjapanesefontswithJpGraph.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="312VerifyingthatyouhaveGD2installed.html">前へ</A> <A HREF="314UsingjapanesefontswithJpGraph.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="3_1_3">3.1.3 True Type フォントのファイルを用意する</A></H3>
+<P> JpGraph は、標準のASCII 7 ビットの文字セットをサポートするだけのデフォルトの標準的なビットマップのフォントを含んでいます。 アクセントのある文字、UTF-8、中国語、日本語を使用するには、TTF フォントをダウンロードする必要があります。 様々なライセンス上の問題により、TTF フォントはJpGraph パッケージでは提供されていません。 TTF フォントを有効にするには、3 の代案があります：</P>
+<OL>
+<LI>Windows プラットフォームの場合、標準のフォント ディレクトリで JpGraph のTTF ディレクトリをポイントします。 </LI>
+<LI>Unix プラットフォームの場合、<A href="http://corefonts.sourceforge.net/">http://corefonts.sourceforge.net/</A> からコアな MS WEB-initiative フォントをダウンロードしてインストールすることができます。 </LI>
+<LI>また、<A href="http://www.gnome.org/fonts/">http://www.gnome.org/fonts/</A> のヴェラ・ビットストリーム TTF フォントを使用することも可能です。
+</LI>
+</OL>
+<P> PHPインストールTTF をサポートするということを確認する必要があります（FreeType 1、またはFreeType 2 ライブラリのどちらか）。  また、複数の適した TTF フォント ファイルを使用可能にする必要があります。 ライブラリでフォントファイルを使用可能にするには、フォント ファイルの場所にデイレクトリ パスを構成ファイル、jpg-config.inc.php で指定する必要があります。</P>
+<P> GD ライブラリが動作しているかどうかを確かめるには、以下のスクリプトを実行します。 このネーミング規則は、利用可能なフォント・ファイルの標準のネーミングに従います。 </P>
+<P> ライブラリのインストールが MS Windows を起動しているコンピューターで行われた場合、Windows ですでに使用可能なフォント ファイルの使用を推奨します（たいてい C:\WINDOWS\FONTS にあります）。</P>
+<P> X11 を派生的に起動している UNIX で行う場合、フォントの場所はバージョンと UNIX ブランドでは異なります。 共通で使われるパスは、&quot;/usr/X11R6/lib/X11/fonts/truetype/&quot; です。</P>
+<P> 最後に、ライブラリで本来サポートされていない追加のフォントをインストールすることができます。 これはライブラリ ファイルを増やすことを要求し高度な使用とみなされるので、イントロダクションでは詳細については解説しません。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="312VerifyingthatyouhaveGD2installed.html">前へ</A> <A HREF="314UsingjapanesefontswithJpGraph.html">次へ</A>
+</BODY>
+</HTML>

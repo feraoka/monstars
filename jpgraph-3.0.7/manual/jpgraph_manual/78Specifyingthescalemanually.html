@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="77Combiningdifferentgraphtypes.html">
+<LINK REL="Next" HREF="79Adjustingtheautomatictickmarks.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="77Combiningdifferentgraphtypes.html">前へ</A> <A HREF="79Adjustingtheautomatictickmarks.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="7_8">7.8 スケールを手動で指定する</A></H2>
+<P> JpGraph の自動スケール機能は、ほとんどの場合において有効に働きます。しかし、手動でスケールを設定することが必要な場合もあります。たとえば、複数のグラフの比較を簡単にするために、スケールを合わせる場合などです。</P>
+<P> 手動でスケールを設定するには、<A
+href="../ref/Graph.html#_GRAPH_SETSCALE">Graph::SetScale()</A>メソッドに引数を追加で指定します。たとえば、Y スケールを 0 から 100 までの間で指定する場合は、以下の通りになります。  <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetScale</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;textlin&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">100</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>手動でスケールを設定した場合、チック記号の配置の仕方も指示する必要があります。チェック マークを配置するには、以下の 3 通りを選択できます。</P>
+<OL>
+<LI> 指定したスケールに基づいて、最適な目盛りが決定されます。他に何もしない場合、<B>これがデフォルトの動作です。</B></LI>
+<LI> 指定した最小値、最大値がわずかに調整されます。デフォルトの動作では最小値や最大値を基準に目盛りが設置されますが、目盛りを下端と上端に重ねたいという場合があります。視覚的な理由から、最初と最後の目盛りをスケールの端に表示したいと思うかもしれません。そういう場合は、<A href="../ref/LinearScale.html#_LINEARSCALE_SETAUTOTICKS">LinearScale::SetAutoTicks()</A> メソッドを呼び出すことで、スケールの最小値と最大値の調節を行います。 </LI>
+<LI> <A href="../ref/LinearTicks.html#_LINEARTICKS_SET">LinearTicks::Set()</A> メソッドを呼び出すことで、目盛りを指定できます。  <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetScale</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;textlin&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">100</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">yscale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ticks</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">10</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">5</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV>
+<P>上記の設定では、目盛りを 10 ごとに表示しています。そして補助目盛りは5ごとに描画してあります。</P>
+</LI>
+</OL>
+<P> これら 3 種類の違いを下に掲載します。 <DIV class="example">
+<BR> <A href="exframes/frame_manscaleex1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="manscaleex1.png" WIDTH="220"></A> <BR><B>図 76:</B>手動でスケールと目盛りを設定した場合 <A href="exframes/frame_manscaleex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_manscaleex4.html" target="blank"><IMG border="0"
+HEIGHT="200" src="manscaleex4.png" WIDTH="220"></A> <BR><B>図 77:</B>手動でスケールを設定し、自動で目盛りを調節した場合 <A href="exframes/frame_manscaleex4.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_manscaleex2.html" target="blank"><IMG border="0"
+HEIGHT="200" src="manscaleex2.png" WIDTH="220"></A> <BR><B>図 78:</B>手動でスケールを設定し、自動で目盛りを調節した場合。ただし、最小値・最大値の調節を許可した <A href="exframes/frame_manscaleex2.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="77Combiningdifferentgraphtypes.html">前へ</A> <A HREF="79Adjustingtheautomatictickmarks.html">次へ</A>
+</BODY>
+</HTML>

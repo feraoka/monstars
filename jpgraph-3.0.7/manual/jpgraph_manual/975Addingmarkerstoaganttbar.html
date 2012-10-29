@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="974Verticalline.html">
+<LINK REL="Next" HREF="976Adjustingtheminimumdistancebetweenbars.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="974Verticalline.html">前へ</A> <A HREF="976Adjustingtheminimumdistancebetweenbars.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="9_7_5">9.7.5 ガント バーにマーカーを追加する</A></H3>
+<P> ガントバーの始点と終点の両方に様々なマーカーを簡単に追加できます。例えば、重要なマイルストーンなどを図示するための代わりの方法として、マーカーが使用されます。</P>
+<P> 左付き、右付きののマーカーは、'leftMark' プロパティと'rightMark'プロパティから指定します。それらは両方とも、マイルストーン（そしてラインプロットでも）に対しても使用されるPlotMarkクラスのインスタンスです。PlotMarkクラスは、例えばダイヤモンド（マイルストーンではデフォルト）、円、もしくは塗りつぶしの円、四角、星印などのようないくつかの異なるスタイルをサポートします。完全なリストはリファレンスセクションを参照してください。</P>
+<P> マーカーを説明するために、右付きのマーカーをこれまでの例に付け加えてみましょう。&rdquo;M5&rdquo;という白地のタイトルを持つ、赤色の塗りつぶしの円のスタイルを使用しましょう。これを実現させるために、次の行をこれまでの例に付け加えます。<DIV class="phpscript"><CODE><FONT
+color="#000000"> <FONT color="#0000BB"> $activity</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">rightMark</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Show</FONT><FONT color="#007700">();     <BR></FONT><FONT color="#0000BB">$activity</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">rightMark</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;M5&quot;</FONT><FONT
+color="#007700">); <BR></FONT><FONT color="#0000BB">$activity</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">rightMark</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetType</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">MARK_FILLEDCIRCLE</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$activity</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">rightMark</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetWidth</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">10</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$activity</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">rightMark</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;red&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$activity</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">rightMark</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFillColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;red&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$activity</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">rightMark</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FS_BOLD</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">12</FONT><FONT
+color="#007700">); <BR></FONT><FONT color="#0000BB">$activity</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">rightMark</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;white&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> これはかなり長いコードに思えるかもしれませんが、これ以上複雑になることはありません。 以下のイラストの例では、変更可能なものはデフォルトのフォント、フォント カラー、塗りつぶしカラー、フレーム カラー、マーカーの幅に変わります。実際に必要なのはマークを表示しタイトルを設定する最初の2行のみです。 残りのプロパティはデフォルト値を使用すれば正常に表示されます。</P>
+<P> 結果の画像は、下図155に示されたとおりです。<DIV class="example">
+<BR> <A href="exframes/frame_ganttex08.html" target="blank"><IMG border="0"
+HEIGHT="243" src="ganttex08.png" WIDTH="502"></A> <BR><B>図 155:</B>バーへ右つきマーカーを加える<A href="exframes/frame_ganttex08.html"
+target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P> ここで、ある不思議な現象を解説したいと思います。 これまでの２つの例を比較した場合、最後の例はその前の例よりも大きいことに気づかれるでしょう。それは、なぜでしょうか？</P>
+<P> バーの高さが水平方向の間隔に比例して決められることを覚えているならば、その説明は簡単です。水平方向の間隔は、タイトルサイズや、ここで説明するマーカーサイズを含めた最も高いバーを基準としています。最小の高さがいま10ポイント(=マークの高さ)に基づいているので、水平方向の間隔が延長されました。バーの高さは同じ割合で設定されるので、最後の例が大きくなったのです。</P>
+<P> この動作が好ましくない場合、次の関数を用いて、バーの高さを絶対サイズ（ここでは8ピクセル）に指定することが可能です。 <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $activity</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">SetHeight</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">8</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> これにより下図156のような結果が得られます。<DIV class="example">
+<BR> <A href="exframes/frame_ganttex09.html" target="blank"><IMG border="0"
+HEIGHT="243" src="ganttex09.png" WIDTH="502"></A> <BR><B>図 156:</B>バーの高さの絶対サイズを指定する<A href="exframes/frame_ganttex09.html" target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P>  </P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="974Verticalline.html">前へ</A> <A HREF="976Adjustingtheminimumdistancebetweenbars.html">次へ</A>
+</BODY>
+</HTML>

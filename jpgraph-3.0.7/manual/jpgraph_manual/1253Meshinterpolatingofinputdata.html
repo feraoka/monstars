@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="1252Creatingandformattingmatrix.html">
+<LINK REL="Next" HREF="1254Changingmoduletype.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="1252Creatingandformattingmatrix.html">前へ</A> <A HREF="1254Changingmoduletype.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="12_5_3">5.3 入力データのメッシュ補間</A></H3>
+
+<p>メッシュ補間を利用するとマトリックス・プロットの体裁がスムーズに見えるようにできます。これは元のマトリックスの入力データ間にリニア補間した中間値を生成するためです。</p>
+
+<p>補間ファクターでは、補間再現の頻度を指定する必要があります。通常は２から６の範囲になります。６より大きい値を指定することは可能ですが、補間ファクター上で補間回数が激増することになります。また、この補間はマトリックスにすでに存在する情報以上のものを生成することはないことにご留意ください。このようなデータのリニア補間ではマトリックスの基礎データが完全に有効であることを検証することが必要です。</p>
+<p>次の図は元データ（補間頻度=1）を１～５回補間した場合の効果を表した例です。ここで選択しているグラフ・サイズでは、5回の補間によってグラフ・エリアの制約によりモジュールが1x1ピクセルになってしまったので、これ以上の補間は意味がありません。（8x11の元データを5回補間すると113x161のマトリックスになっています。）</p>
+
+<!--
+<p>
+<div class="example">
+<A href="example_src/frame_matrix_ex0.html" target="_blank"><img src="matrix_ex0.png" alt="" /></A>
+<br /><B>図12.5.1</B> 初期設定値の基本マトリックス・グラフ<A href="example_src/frame_matrix_ex0.html" target="_blank">[ソース]</A>
+</div></p>
+-->
+
+<div class="informaltable" style="margin-left: 1.5em;"><table border="0"><colgroup><col><col><col></colgroup><tbody><tr><td><span class="inlinemediaobject"><img src="matrix_mesh1.png"></span></td><td><span class="inlinemediaobject"><img src="matrix_mesh2.png"></span></td><td><span class="inlinemediaobject"><img src="matrix_mesh3.png"></span></td></tr><tr><td><span class="inlinemediaobject"><img src="matrix_mesh4.png"></span></td><td><span class="inlinemediaobject"><img src="matrix_mesh5.png"></span></td><td></td></tr></tbody></table></div>
+
+<p>プロットのサイズが異なるのは、マトリックスの各セルに整数のピクセル数を格納する必要があるためです。上のグラフでは最大のモジュール・サイズを使いましたが画像内に収まってています。つまり、見栄えが異なるわけです。</p>
+<p>この補間を行うには2通りの方法があります。</p>
+<ol>
+<li>補間ファクターをプロット関数の第2引数として指定してマトリックス・プロットを作成する場合は次のように記述します。</li>
+</ul>
+<p><div class="phpscript" style="margin-left: 2em !important;">
+<code><span style="color: #000000"> <span style="color: #0000BB">$matrixplot&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">MatrixPlot</span><span style="color: #007700">(</span><span style="color: #0000BB">$data</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">);&nbsp;</span><span style="color: #FF8000">//&nbsp;補間4回</span><span style="color: #0000BB"></span> </span> </code></div></p>
+</ul>
+<li>
+複数のプロットで同じデータを共有する場合には、新規マトリックス・プロット・オブジェクトを作成するたびに毎回設定するより、最初に補間の設定を一度行うほうが効率的です。これはユーティリティ関数を使って次のように記述します。<br />
+<ul>
+<li>doMeshInterpolate(&$aData, $aFactor)</li>
+</ul>
+</li>
+</ol>
+<p>宣言からわかるように、これは元のデータが指定された回数補間された新規データに置換されるリファレンス・メソッドです。この方法により、大きいマトリックスを複数コピーして不要なデータを作ることが防げます。</p>
+
+<p><div class="note"><b>注意:</b>MATRAB&trade;関数に慣れているユーザはinterp2()によく似たメッシュ補間があることに気付かれるでしょう。</div></p>
+
+
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="1252Creatingandformattingmatrix.html">前へ</A> <A HREF="1254Changingmoduletype.html">次へ</A>
+</BODY>
+</HTML>

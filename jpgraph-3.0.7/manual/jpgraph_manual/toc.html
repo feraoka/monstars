@@ -1,0 +1,436 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+
+#toc_list {
+	background-color:white;
+	border:1px solid black;
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:10px;
+	width:800px;
+	padding: 5px;
+	}
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+</HEAD>
+<BODY>
+<div id="toc_list">
+<H1><A NAME="CONTENTS"><img src="../JpGraph_logo.gif"></A></H1>
+<H1><A NAME="CONTENTS">JpGraph マニュアル</A></H1>
+<H3><A NAME="CONTENTS">JpGraph</A></H3>
+<B><A HREF="1Aboutthismanual.html#1">1 マニュアルについて</A></B>
+<UL>
+<LI><A HREF="11AboutProduct.html#1_1">1.1 製品について</A></LI>
+</UL>
+<B><A HREF="2Introduction.html#2">2 イントロダクション</A></B>
+<UL>
+<LI><A HREF="21Version.html#2_1">2.1 バージョン</A></LI>
+<LI><A HREF="22SoftwareLicense.html#2_2">2.2 ソフトウェアのライセンス</A></LI>
+<LI><A HREF="23JpGraphFeatures.html#2_3">2.3 JpGraph の機能</A></LI>
+<LI><A HREF="24Contact.html#2_4">2.4  JpGraph に関するお問い合わせ</A></LI>
+</UL>
+<B><A HREF="3Installation.html#3">3 インストール</A></B>
+<UL>
+<LI><A HREF="31Preparation.html#3_1">3.1 インストールの前に</A>
+<UL>
+<LI><A HREF="311VerifyingthatyouhavetheGDlibraryinstalled.html#3_1_1">3.1.1 GD ライブラリのインストールを確認する</A></LI>
+<LI><A HREF="312VerifyingthatyouhaveGD2installed.html#3_1_2">3.1.2  GD2 のインストールを確認する</A></LI>
+<LI><A HREF="313PreparingTrueTypeFontFiles.html#3_1_3">3.1.3 True Type フォントのファイルを用意する</A></LI>
+<LI><A HREF="314UsingjapanesefontswithJpGraph.html#3_1_4">3.1.4 日本語フォントを使用する</A></LI>
+</UL>
+</LI>
+<LI><A HREF="32Customizingtheinstallation.html#3_2">3.2 インストールをカスタマイズする</A></LI>
+<LI><A HREF="33Requiredfiles.html#3_3">3.3 動作に必要なファイル</A>
+<UL>
+<LI><A HREF="331Plotextensionmodules.html#3_3_1">3.3.1 プロット拡張モジュール</A></LI>
+</UL>
+</LI>
+<LI><A HREF="34Imageformatsandexternalimagelibraries.html#3_4">3.4 イメージ フォーマットと外部イメージのライブラリ</A></LI>
+<LI><A HREF="35DetailedstepstoinstallJpGraph.html#3_5">3.5 JpGraph の詳細なインストール</A></LI>
+<LI><A HREF="36Troubleshootingyourinstallation.html#3_6">3.6 インストールのトラブルシューティング</A></LI>
+<LI><A HREF="37CompilingPHP4.html#3_7">3.7 PHP 4をコンパイルする</A></LI>
+</UL>
+<B><A HREF="4QuickStartDynamicImageGeneration.html#4">4 はじめに： ダイナミック イメージの生成</A></B>
+<UL>
+<LI><A HREF="41Scopeofthischapter.html#4_1">4.1 この章の概要</A>
+<UL>
+<LI><A HREF="411Whatyouwilllearninthischapter.html#4_1_1">4.1.1 この章について</A></LI>
+<LI><A HREF="412WhatyouwillNOTlearninthischapter.html#4_1_2">4.1.2 この章で取り扱わない項目</A></LI>
+</UL>
+</LI>
+<LI><A HREF="42HowtogenerateimageswithPHP.html#4_2">4.2 画像を出力するには</A>
+<UL>
+<LI><A HREF="421UsingtheJpGraphlibrarytosendbackimages.html#4_2_1">4.2.1 JｐGraph ライブラリを使用する</A></LI>
+</UL>
+</LI>
+<LI><A HREF="43UsingPHPdirectly.html#4_3">4.3 コマンドライン版の PHP を使用する</A></LI>
+<LI><A HREF="44ThebasicprincipleofJpGraphandthecreationofimages.html#4_4">4.4 JpGraph の基本概念と画像の生成</A></LI>
+<LI><A HREF="45ChoosingtheimageformatforJpGraph.html#4_5">4.5 JpGraph の画像形式を選択する</A></LI>
+<LI><A HREF="46Alternativestostreamingbacktheimage.html#4_6">4.6 画像をブラウザに送る以外の処理方法</A></LI>
+<LI><A HREF="47WorkingwithfontsinJpGraph.html#4_7">4.7 JpGraph でフォントを使用する</A>
+<UL>
+<LI><A HREF="471InstallingTrueTypefonts.html#4_7_1">4.7.1 TrueType フォントをインストールする</A></LI>
+<LI><A HREF="472VerifyingthattheTTFfontswork.html#4_7_2">4.7.2 TTF フォントが動作していることを確認する</A></LI>
+<LI><A HREF="473Specifyingfonts.html#4_7_3">4.7.3 フォントを指定する</A></LI>
+<LI><A HREF="474AddingadditionalfontstoJpGraph.html#4_7_4">4.7.4 JpGraph にフォントを追加する</A></LI>
+<LI><A HREF="475UnderstandingtextalignmentinJpGraph.html#4_7_5">4.7.5 JpGraph で文字列の文字揃えを行う</A></LI>
+</UL>
+</LI>
+<LI><A HREF="48SpecifyingcolorsinJpGraph.html#4_8">4.8 JpGraph でカラーを指定する</A>
+<UL>
+<LI><A HREF="481Adjustingthetransparency.html#4_8_1">4.8.1 透明度を調節する</A></LI>
+<LI><A HREF="482Availablenamedcolors.html#4_8_2">4.8.2 定義済みのカラー</A></LI>
+<LI><A HREF="483Themecolorsforpies.html#4_8_3">4.8.3 円プロット用のテーマ カラー</A></LI>
+</UL>
+</LI>
+</UL>
+<B><A HREF="5UnderstandingtheJpGraphcachingsystem.html#5">5 キャッシュ システムを使用する</A></B>
+<UL>
+<LI><A HREF="51Enablingthecachesystem.html#5_1">5.1 キャッシュ システムを有効にする</A></LI>
+<LI><A HREF="52Usingthecacheinyourscript.html#5_2">5.2 スクリプトでキャッシュを使用する</A></LI>
+<LI><A HREF="53UsingthecachewithClientSideImageMaps.html#5_3">5.3 クライアントサイド イメージマップを使用する</A></LI>
+<LI><A HREF="54Somefinalcomments.html#5_4">5.4 最後に</A></LI>
+<LI><A HREF="55Commonfeatureforallgraphs.html#5_5">5.5 すべてのグラフで共通の機能</A>
+<UL>
+<LI><A HREF="551Clipping.html#5_5_1">5.5.1 クリッピング</A></LI>
+<LI><A HREF="552Commonlyusedproperties.html#5_5_2">5.5.2 共通のプロパティ</A></LI>
+<LI><A HREF="553Commonlyusedmethods.html#5_5_3">5.5.3 共通のメソッド</A></LI>
+</UL>
+</LI>
+</UL>
+<B><A HREF="6UsingimagemapswithJpGraph.html#6">6 イメージ マップを使用する</A></B>
+<UL>
+<LI><A HREF="61Thebasicstructureofanimagemapscript.html#6_1">6.1 イメージ マップ スクリプトの基本構造</A></LI>
+<LI><A HREF="62Specifyingtargetsforimagemapplots.html#6_2">6.2 イメージ マップ プロットにターゲットを指定する</A></LI>
+<LI><A HREF="63UsingStrokeCSIM.html#6_3">6.3 StrokeCSIM() を使用する</A></LI>
+<LI><A HREF="64ExamplesofImagemaps.html#6_4">6.4 イメージ マップの例</A>
+</LI>
+<LI><A HREF="65HowdoesStrokeCSIMwork.html#6_5">6.5 StrokeCSIM() の動き</A></LI>
+<LI><A HREF="66Gettingholdoftheimagemap.html#6_6">6.6 イメージ マップの取得</A></LI>
+<LI><A HREF="67Imagemapsandthecachesystem.html#6_7">6.7 イメージ マップとキャッシュ システム</A></LI>
+</UL>
+<B><A HREF="7WorkingwithorthogonalXYplots.html#7">7 直角のXY プロットを使用する</A></B>
+<UL>
+<LI><A HREF="71Lineplots.html#7_1">7.1 ライン プロット</A>
+<UL>
+<LI><A HREF="711AddingplotmarkstolineplotsXXX.html#7_1_1">7.1.1 ライン プロット XXX にプロット記号を追加する</A></LI>
+<LI><A HREF="712Displayingthevaluesforeachdatapoint.html#7_1_2">7.1.2 各データ ポイントに値を表示する</A></LI>
+<LI><A HREF="713Addingseveralplotstothesamegraph.html#7_1_3">7.1.3 同じグラフに複数のプロットを追加する</A></LI>
+<LI><A HREF="714AddingasecondYscale.html#7_1_4">7.1.4 2 個目の Y 軸を追加する</A></LI>
+<LI><A HREF="715Addingalegendtothegraph.html#7_1_5">7.1.5 グラフに凡例を追加する</A></LI>
+<LI><A HREF="716Handlingnullvaluesinlineplots.html#7_1_6">7.1.6 ライン プロットで空白値を使用する</A></LI>
+<LI><A HREF="717Usingthestepstyletorenderlineplots.html#7_1_7">7.1.7 ステップ形式のライン プロットを描画する</A></LI>
+<LI><A HREF="718Usinglogarithmicscale.html#7_1_8">7.1.8 対数グラフを使用する</A></LI>
+<LI><A HREF="719Moreonscales.html#7_1_9">7.1.9 スケールの詳細</A></LI>
+<LI><A HREF="7110Adjustingthegridlinesintheplot.html#7_1_10">7.1.10 プロットでグリッド (目盛り)ライン を調整する</A></LI>
+<LI><A HREF="7111Usingfilledgridlines.html#7_1_11">7.1.11 塗りつぶされたグリッド線を使用する</A></LI>
+<LI><A HREF="7112SpecifyingtextlabelsfortheXaxis.html#7_1_12">7.1.12 X 軸にテキスト ラベルを指定する</A></LI>
+<LI><A HREF="7113Adjustingtheticksonatextscale.html#7_1_13">7.1.13 テキスト スケールのチックを調整する</A></LI>
+<LI><A HREF="7114Usingfilledlinegraphs.html#7_1_14">7.1.14 塗りつぶされたラインプロットを使用する</A></LI>
+<LI><A HREF="7115Usingaccumulatedlinegraphs.html#7_1_15">7.1.15 積み上げラインプロットを使用する</A></LI>
+<LI><A HREF="7116ConstructingsmoothlineplotswithCubicSplines.html#7_1_16">7.1.16 三次スプラインで滑らかなライン プロットを作成する</A></LI>
+<LI><A HREF="7117Addingplotmarkstoalineplot.html#7_1_17">7.1.17 プロット記号をライン プロットに追加する</A></LI>
+</UL>
+</LI>
+<LI><A HREF="72Bargraphs.html#7_2">7.2 バー プロット</A>
+<UL>
+<LI><A HREF="721Adjustingthewidthofthebars.html#7_2_1">7.2.1 バーの幅を調整する</A></LI>
+<LI><A HREF="722Displayingthevalueofeachbar.html#7_2_2">7.2.2 各バーの値を表示する</A></LI>
+<LI><A HREF="723Addingadropshadowtothebar.html#7_2_3">7.2.3 バーにドロップ シャドウを追加する</A></LI>
+<LI><A HREF="724Adjustingthealignmentofbarsonatextscale.html#7_2_4">7.2.4 テキスト スケールのバーの配置を調整する</A></LI>
+<LI><A HREF="725Usinggroupedbarplots.html#7_2_5">7.2.5 グループ化されたバー プロットを使用する</A></LI>
+<LI><A HREF="726Usingaccumulatedbarplots.html#7_2_6">7.2.6 積み上げバー プロットを使用する</A></LI>
+<LI><A HREF="727Usinggroupedaccumulatedbargraphs.html#7_2_7">7.2.7 グループ化された積み上げバー グラフを使用する</A></LI>
+<LI><A HREF="728Horizontalbargraphs.html#7_2_8">7.2.8 水平のバー プロット</A></LI>
+<LI><A HREF="729Usinggradientfillforbargraphs.html#7_2_9">7.2.9 バー プロットにグラデーション カラーを使用する</A></LI>
+<LI><A HREF="7210Creatingsemifilledbargraphs.html#7_2_10">7.2.10 一部を塗りつぶしたバー プロットの作成</A></LI>
+</UL>
+</LI>
+<LI><A HREF="73Errorplots.html#7_3">7.3 エラー プロット</A>
+<UL>
+<LI><A HREF="731Usinglineerrorplots.html#7_3_1">7.3.1 ライン エラー プロットを使用する</A></LI>
+</UL>
+</LI>
+<LI><A HREF="74Scatterplots.html#7_4">7.4 散布プロット</A></LI>
+<LI><A HREF="75Fieldplots.html#7_5">7.5 フィールド プロット</A></LI>
+<LI><A HREF="76BoxandStockcharts.html#7_6">7.6 ボックスとストック チャート</A>
+<UL>
+<LI><A HREF="761StockCharts.html#7_6_1">7.6.1 ストック チャート</A></LI>
+<LI><A HREF="762BoxPLotsStockchartswithamedianline.html#7_6_2">7.6.2 ボックスプロット：中央線の入ったストック チャート</A></LI>
+<LI><A HREF="763ImagemapsforBoxandStockcharts.html#7_6_3">7.6.3 ボックスとストック チャートのイメージ マップ</A></LI>
+</UL>
+</LI>
+<LI><A HREF="77Combiningdifferentgraphtypes.html#7_7">7.7 複数のプロット形式を組み合わせる</A></LI>
+<LI><A HREF="78Specifyingthescalemanually.html#7_8">7.8 スケールを手動で指定する</A></LI>
+<LI><A HREF="79Adjustingtheautomatictickmarks.html#7_9">7.9 目盛りの間隔を自動で調整する</A></LI>
+<LI><A HREF="710Handlingdatetimescales.html#7_10">7.10 日付・時間スケールを使用する</A>
+<UL>
+<LI><A HREF="7101Usingtheautomaticdatetimescale.html#7_10_1">7.10.1 自動日付・時間スケールを使用する</A></LI>
+<LI><A HREF="7102Specifyingadatetimescalewithamanualcallback.html#7_10_2">7.10.2 手動コールバックで日付・時間スケールを指定する</A></LI>
+</UL>
+</LI>
+<LI><A HREF="711Adjustinglabelsonatextscale.html#7_11">7.11 テキスト スケールのラベルを調整する</A></LI>
+<LI><A HREF="712Addingarbitrarytextstringstothegraph.html#7_12">7.12 グラフにテキスト文字列を追加する</A></LI>
+<LI><A HREF="713AddingtitlesandfooterstotheGraph.html#7_13">7.13 グラフにタイトルとフッターを追加する</A></LI>
+<LI><A HREF="714Addingatabtitle.html#7_14">7.14 タブ形式のタイトルを追加する</A></LI>
+<LI><A HREF="715Usingbackgroundimages.html#7_15">7.15 背景イメージを使用する</A></LI>
+<LI><A HREF="716Usingabackgroundgradient.html#7_16">7.16 背景グラデーション カラーを使用する</A></LI>
+<LI><A HREF="717UsingcallbacksforPlotmarks.html#7_17">7.17 プロット マークにコールバック関数を使用する</A></LI>
+<LI><A HREF="718Rotatinggraphs90degrees.html#7_18">7.18 グラフを 90 度回転する</A></LI>
+<LI><A HREF="719Formattingtheaxis.html#7_19">7.19 軸をフォーマットする</A>
+<UL>
+<LI><A HREF="7191Standardtwoaxisgraphs.html#7_19_1">7.19.1 一般的な 2 軸グラフ</A></LI>
+<LI><A HREF="7192Scientificstyleaxis.html#7_19_2">7.19.2 関数形式の軸</A></LI>
+<LI><A HREF="7193Adjustingthepositionofthescalelabels.html#7_19_3">7.19.3 スケール ラベルの位置を調整する</A></LI>
+<LI><A HREF="7194Formattingthescalelabels.html#7_19_4">7.19.4 スケール ラベルをフォーマットする</A></LI>
+<LI><A HREF="7195InvertingtheYaxis.html#7_19_5">7.19.5 Y 軸を反転する</A></LI>
+</UL>
+</LI>
+<LI><A HREF="720Adjustingtheautoscalinglimitsgracevalue.html#7_20">7.20 自動スケールの上限を設定する</A></LI>
+<LI><A HREF="721Addingbandsofpatternandcolortographs.html#7_21">7.21 バンド パターンとグラフのカラーを追加する</A>
+<UL>
+<LI><A HREF="7211Customizingthepatterns.html#7_21_1">7.21.1 パターンをカスタマイズする</A></LI>
+</UL>
+</LI>
+<LI><A HREF="722Addingstaticlinestotheplot.html#7_22">7.22 静止ラインをプロットに追加する</A></LI>
+</UL>
+<B><A HREF="8WorkingwithnonXYplots.html#8">8 X、Y プロット以外を使用する</A></B>
+<UL>
+<LI><A HREF="81Radarplots.html#8_1">8.1 レーダー プロット</A>
+<UL>
+<LI><A HREF="811Simpleradarplots.html#8_1_1">8.1.1 簡単なレーダー プロットを作成する</A>
+</LI>
+<LI><A HREF="812Specifyingtitlesfortheaxisandlegendsfortheplots.html#8_1_2">8.1.2 プロットの軸と凡例にタイトルを指定する</A></LI>
+<LI><A HREF="813Addinggridlinetotheradarplot.html#8_1_3">8.1.3 レーダー プロットにグリッド ラインを描画する</A></LI>
+<LI><A HREF="814Addingseveralplotstothesameradargraph.html#8_1_4">8.1.4 1つのグラフ内に複数のレーダー プロットを追加する</A></LI>
+<LI><A HREF="815Addingplotmarksiradargraphs.html#8_1_5">8.1.5 レーダープロットにプロットマークを表示する</A></LI>
+</UL>
+</LI>
+<LI><A HREF="82Pieplots.html#8_2">8.2 円プロット</A>
+<UL>
+<LI><A HREF="821AddingguidelinestoPiePlots.html#8_2_1">8.2.1 円プロットにガイド ラインを追加する</A></LI>
+<LI><A HREF="822Creating3Dpieplots.html#8_2_2">8.2.2 3D 円プロットを作成する</A></LI>
+<LI><A HREF="823Explodingpieslices.html#8_2_3">8.2.3 円スライスを抜き出す</A></LI>
+<LI><A HREF="824Specifyingandadjustinglabelsonpieplots.html#8_2_4">8.2.4 円プロットのラベルを指定して調整する</A></LI>
+<LI><A HREF="825Specifyingslicecolorsandusingthemes.html#8_2_5">8.2.5 円プロットのスライスに色とテーマを指定する</A></LI>
+<LI><A HREF="826Addingdropshadowstotheslices.html#8_2_6">8.2.6 スライスに影を表示させる</A></LI>
+<LI><A HREF="827Anothervariantof2DPieplots.html#8_2_7">8.2.7 2D 円プロットに中心円を表示させる</A></LI>
+</UL>
+</LI>
+<LI><A HREF="83Polarplots.html#8_3">8.3 極プロット</A>
+<UL>
+<LI><A HREF="831Overview.html#8_3_1">8.3.1 概要</A></LI>
+<LI><A HREF="832Adjustingtheradiusscale.html#8_3_2">8.3.2 半径スケールを調整する</A></LI>
+<LI><A HREF="833Adjustingthegridlines.html#8_3_3">8.3.3 グリッド ラインを調整する</A></LI>
+<LI><A HREF="834Adjustingthelabelfonts.html#8_3_4">8.3.4 ラベルのフォントを設定する</A></LI>
+<LI><A HREF="835Adjustingthelabels.html#8_3_5">8.3.5 ラベルを調整する</A></LI>
+<LI><A HREF="836Imagemaps.html#8_3_6">8.3.6 イメージ マップを使用する</A></LI>
+<LI><A HREF="837Afinalexample.html#8_3_7">8.3.7 詳細に設定した極プロットの例</A></LI>
+</UL>
+</LI>
+</UL>
+<B><A HREF="9Ganttcharts.html#9">9 ガント チャート</A></B>
+<UL>
+<LI><A HREF="91WhyuseGanttcharts.html#9_1">9.1 ガント チャートの使用目的</A></LI>
+<LI><A HREF="92CapabilitiesinJpGraphGanttmodule.html#9_2">9.2 JpGraph ガント モジュールの機能</A></LI>
+<LI><A HREF="93AsimpleGanttchart.html#9_3">9.3 シンプルなガント チャート</A></LI>
+<LI><A HREF="94ThestructureofaGanttchart.html#9_4">9.4  ガントチャートの構造</A></LI>
+<LI><A HREF="95CreatingaGanttChart.html#9_5">9.5 ガント チャートを作成する</A>
+</LI>
+<LI><A HREF="96PositioningobjectsintheGanttplot.html#9_6">9.6 ガント チャート内のオブジェクトの位置を調整する</A></LI>
+<LI><A HREF="97Ganttbars.html#9_7">9.7 ガント バー</A>
+<UL>
+<LI><A HREF="971Specifyingverticalposition.html#9_7_1">9.7.1 鉛直位置を指定する</A></LI>
+<LI><A HREF="972Specifyingstartandendpositionforabar.html#9_7_2">9.7.2 バーの始点と終点を指定する</A></LI>
+<LI><A HREF="973Milestones.html#9_7_3">9.7.3 マイルストーン</A></LI>
+<LI><A HREF="974Verticalline.html#9_7_4">9.7.4 バーティカル ライン</A></LI>
+<LI><A HREF="975Addingmarkerstoaganttbar.html#9_7_5">9.7.5 ガント バーにマーカーを追加する</A></LI>
+<LI><A HREF="976Adjustingtheminimumdistancebetweenbars.html#9_7_6">9.7.6 バーの間の最小距離を調整する</A></LI>
+</UL>
+</LI>
+<LI><A HREF="98Formattingthescaleheaders.html#9_8">9.8 スケール ヘッダをフォーマットする</A>
+<UL>
+<LI><A HREF="981Minutescale.html#9_8_1">9.8.1 分スケール</A></LI>
+<LI><A HREF="982Hourscale.html#9_8_2">9.8.2 時スケール</A></LI>
+<LI><A HREF="983Dayscale.html#9_8_3">9.8.3 日スケール</A></LI>
+<LI><A HREF="984Weekscale.html#9_8_4">9.8.4 週スケール</A></LI>
+<LI><A HREF="985Monthscale.html#9_8_5">9.8.5 月スケール</A></LI>
+<LI><A HREF="986Yearscale.html#9_8_6">9.8.6 年スケール</A></LI>
+</UL>
+</LI>
+<LI><A HREF="99Moreformattingforbars.html#9_9">9.9 バーをより詳細にフォーマットする</A>
+<UL>
+<LI><A HREF="991Addingcaptiontobars.html#9_9_1">9.9.1 バーに見出しを追加する</A></LI>
+<LI><A HREF="992Addingprogressindicatorstobars.html#9_9_2">9.9.2 バーに進行指標(progress indicators)を追加する</A></LI>
+</UL>
+</LI>
+<LI><A HREF="910Groupingactivities.html#9_10">9.10 アクティビティのグループ化</A>
+</LI>
+<LI><A HREF="911Usingmultiplecolumnsastitles.html#9_11">9.11 タイトルとして複数行を設定する</A>
+<UL>
+<LI><A HREF="9111Addingatitleforthecolumns.html#9_11_1">9.11.1 列にタイトルを加える</A></LI>
+<LI><A HREF="9112SpecifyingCSIMentriesforcolumntitles.html#9_11_2">9.11.2 列タイトルに対して ＣＳＩＭ エントリーを指定する</A></LI>
+</UL>
+</LI>
+<LI><A HREF="912MoregeneralGanttformatting.html#9_12">9.12 より全体的なガント チャートのフォーマット</A>
+<UL>
+<LI><A HREF="9121Addingatabletitle.html#9_12_1">9.12.1 テーブル タイトルを追加する</A></LI>
+<LI><A HREF="9122Modifyingthedividerlines.html#9_12_2">9.12.2 仕切り線を修正する</A></LI>
+<LI><A HREF="9123Modifyingtheboxaroundtheplot.html#9_12_3">9.12.3 プロット周辺のボックスを修正する</A></LI>
+<LI><A HREF="9124Horizontalgridsandalternatinglinecolors.html#9_12_4">9.12.4 水平なグリッドとラインカラーの交互切り替え</A></LI>
+<LI><A HREF="9125AddingiconstoGanttgraphs.html#9_12_5">9.12.5 ガント チャートにアイコンを追加する</A></LI>
+<LI><A HREF="9126Adjustingthemarginswithautosizing.html#9_12_6">9.12.6 自動サイズ調整でで余白を調整する</A></LI>
+</UL>
+</LI>
+<LI><A HREF="913SimplifyingthedrawingofGanttgraphs.html#9_13">9.13 ガント チャート作成の簡略化</A></LI>
+<LI><A HREF="914AddingCSIMClientsideImageMapstoGanttcharts.html#9_14">9.14 ガント チャートに ＣＳＩＭ （クライアントサイド イメージ マップ）を追加する</A></LI>
+<LI><A HREF="915Addingconstrainsbetweenyouractivities.html#9_15">9.15 アクティビティ間に制限を追加する</A></LI>
+<LI><A HREF="916Advancedformatting.html#9_16">9.16 より高度なフォーマット</A>
+<UL>
+<LI><A HREF="9161Showingonlypartofthegraph.html#9_16_1">9.16.1 ガント チャートの一部分のみを表示する</A></LI>
+<LI><A HREF="9162Specifyingstartdayofweek.html#9_16_2">9.16.2 週の開始曜日を指定する</A></LI>
+</UL>
+</LI>
+<LI><A HREF="917Localizing.html#9_17">9.17 ローカライズ</A></LI>
+<LI><A HREF="918AntialiasinginJpGraph.html#9_18">9.18 JpGraph のアンチエイリアス</A>
+<UL>
+<LI><A HREF="9181Enablingantialiasedlines.html#9_18_1">9.18.1 アンチエイリアスを有効にする</A></LI>
+</UL>
+</LI>
+<LI><A HREF="919Rotatingthegraphs.html#9_19">9.19 グラフを回転させる</A>
+</LI>
+<LI><A HREF="920Adjustingbrightnessandcontrastforimagesandbackgrounds.html#9_20">9.20 イメージと背景用の明るさおよびコントラストを調整する</A></LI>
+<LI><A HREF="921Timingthegenerationofgraphs.html#9_21">9.21 グラフ生成の時間を計る</A></LI>
+<LI><A HREF="922Usingcountryflagsinvariouscontext.html#9_22">9.22 様々なコンテキストで国旗を使用する</A></LI>
+<LI><A HREF="923Addingiconsontothegraph.html#9_23">9.23 グラフ上のアイコンを追加する</A></LI>
+</UL>
+<B><A HREF="10Workingwithcanvasgraphs.html#10">10 キャンバス グラフを使用する</A></B>
+<UL>
+<LI><A HREF="101Introduction.html#10_1">10.1 キャンバス グラフの使用方法</A></LI>
+<LI><A HREF="102Creatingasimplecanvas.html#10_2">10.2 簡単なキャンバスの作成</A></LI>
+<LI><A HREF="103Addinglinesandrectanglestoacanvas.html#10_3">10.3 キャンバスに線と長方形を追加する</A></LI>
+<LI><A HREF="104Usingacanvasscale.html#10_4">10.4 キャンバススケールを使用する</A>
+</LI>
+<LI><A HREF="105SampleapplicationDrawingDBschema.html#10_5">10.5 サンプル アプリケーション:DBSchema を描画する</A></LI>
+</UL>
+<B><A HREF="11AntiSpamChallenges.html#11">11 アンチ・スパム</A></B>
+<UL>
+<LI><A HREF="111GeneratingAntiSpamchallenge.html#11_1">11.1 アンチスパム画像を作成する</A></LI>
+</UL>
+<B><A HREF="12NonfilledContourgraph.html#12">12 等高線グラフ</A></B>
+<UL>
+  <LI><A HREF="121NonfilledContourData.html#12_1">12.1 等高線グラフの入力データ</A></LI>
+  <LI><A HREF="122CreateNonfilledContour.html#12_2">12.2 等高線グラフを作成する</A></LI>
+</UL>
+
+<H3><A NAME="CONTENTS">エンタープライズ版スタンダードで作成できるグラフ</A></H3>
+ <B><A HREF="12Additionalgraphtype.html#12">エンタープライズ版スタンダードで作成できるグラフ一覧</A></B>
+ <UL></UL>
+<!--
+<B><A HREF="7WorkingwithorthogonalXYplots.html#7">7 直角のXY プロットを使用する</A></B>
+<UL>
+  <LI><A HREF="71Lineplots.html#7_1">7.1 ライン プロット</A>
+  <UL>
+    <LI><A HREF="711AddingplotmarkstolineplotsXXX.html#7_1_1">7.1.1 ライン プロット XXX にプロット記号を追加する</A></LI>
+    -->
+
+
+<B><A HREF="121Odometer.html#0_1">1 オドメータ（走行距離積算計）</A></B>
+<UL>
+  <LI><A HREF="1211Featuresodometer.html#0_1_1">1.1 オドメータ・モジュールの機能</A></LI>
+  <LI><A HREF="1212Creatingandformattingodomater.html#0_1_2">1.2 基本ドメータ・グラフの作成とフォーマット</A></LI>
+	<UL>
+		<LI><A HREF="12121Creatingodomater.html#0_1_2_1">1.2.1 基本オドメータを作成する</A></LI>
+	</UL>
+  <LI><A HREF="1213Samplesodometer.html#0_1_3">1.3 サンプル集</A></LI>
+</UL>
+
+<B><A HREF="122Windrose.html#0_2">2 風配図</A></B>
+<UL>
+	<LI><A HREF="1221Featureswindrose.html#0_2_1">2.1 風配図モジュールの機能</A></LI>
+	<LI><A HREF="1222Differenttypeofwindrose.html#0_2_2">2.2 風配図の種類</A></LI>
+  <LI><A HREF="1223Creatingandformattingwindrose.html#0_2_3">2.3 基本風配図の作成とフォーマット</A></LI>
+	<UL>
+		<LI><A HREF="12231Specifyingwindrosescale.html#0_2_3_1">2.3.1 風配図の目盛を指定する</A></LI>
+		<LI><A HREF="12232Specifyingdirectionlabels.html#0_2_3_2">2.3.2 方位ラベルを指定する</A></LI>
+  </UL>   
+    <!--		<LI><A HREF="1224Formattingplot.html#12_2_4">12.2.4 プロットのフォーマットを設定する</A>
+		<UL>
+			<LI><A HREF="12241Positioningplot.html#12_2_4_1">12.2.4.1 プロットの位置設定を行う</A></LI>
+			<LI><A HREF="12242Specifyingsizeofplot.html#12_2_4_2">12.2.4.2 プロットのサイズを指定する</A></LI>
+			<LI><A HREF="12243Specifyingsizeofzerocircle.html#12_2_4_3">12.2.4.3 中心円のサイズを指定する</A></LI>
+			<LI><A HREF="12244Formattingplotlegend.html#12_2_4_4">12.2.4.4 プロットの凡例をフォーマットする</A></LI>
+			<LI><A HREF="12245Adjustinggridcolors.html#12_2_4_5">12.2.4.5 カラーグリッドを調整する</A></LI>
+			<LI><A HREF="12246Adjustingweightofgridcircles.html#12_2_4_6">12.2.4.6 目盛円の幅を調整する</A></LI>
+			<LI><A HREF="12247Addingbokaroundplot.html#12_2_4_7">12.2.4.7 プロットの周りにボックスを追加する</A></LI>
+			<LI><A HREF="12248Adjustingsizeofcenterzerocircle.html#12_2_4_8">12.2.4.8 中心円のサイズを調整する</A></LI>
+			<LI><A HREF="12249Localizingdefaultnamesforcompassdirections.html#12_2_4_9">12.2.4.9 コンパス方位の初期設定値をローカライズする</A></LI>
+			<LI><A HREF="122410Adjustingformattingofwindrose.html#12_2_4_10">12.2.4.10 風配図のバケットをフォーマットする</A></LI>
+		</UL>
+		</LI>
+-->
+		<LI><A HREF="1224Sampleswindrose.html#0_2_4">2.4 サンプル集</A></LI>
+</UL>
+
+<B><A HREF="123Barcode.html#0_3">3 バーコード</A></B>
+<UL>
+	<LI><A HREF="1231Howdoeslinearbarcodework.html#0_3_1">3.1 バーコードの仕組み</A></LI>
+  <LI><A HREF="1232Barcodesymbologies.html#0_3_2">3.2 バーコードの種類(シンボロジー)</A></LI>
+	<UL>
+  <LI><A HREF="12321Numericalbarcodesymbologies.html#0_3_2_1">3.2.1 数字のみのシンボロジー</A></LI>
+  <LI><A HREF="12322Alphanumericalbarcodesymbologies.html#0_3_2_2">3.2.2 アルファベットと数値のシンボロジー</A></LI>
+  <LI><A HREF="12323Selectingsymbology.html#0_3_2_3">3.2.3 使用するシンボロジーの選択</A></LI>
+</UL>
+<LI><A HREF="1233Features.html#0_3_3">3.3 バーコード・モジュールで使える機能</A></LI>
+  <!--	<UL>
+  <LI><A HREF="12331Sampleapplication.html#12_3_3_1">12.3.3.1 サンプルアプリケーション</A></LI>
+</UL> -->
+<LI><A HREF="1234Creatingbarcodes.html#0_3_4">3.4 バーコードを作成する ? クイック・スタート</A></LI>
+<LI><A HREF="1235Errorhandling.html#0_3_5">3.5 エラー・ハンドリング</A></LI>
+<LI><A HREF="1236Generatingbarcodesoncml.html#0_3_6">3.6 コマンドラインを使用してバーコードを作成する</A></LI>
+</UL>
+
+<B><A HREF="124Tables.html#0_4">4 テーブル</A></B>
+<UL>
+<LI><A HREF="1241Construtingtables.html#0_4_1">4.1 テーブルの構成</A></LI>
+<UL>
+  <LI><A HREF="12411Basictables.html#0_4_1_1">4.1.1 テーブルを作成する</A></LI>
+</UL>	
+<LI><A HREF="1242Samplestable.html#0_4_2">4.2 サンプル集</A></LI>
+</UL>
+
+<B><A HREF="125Matrix.html#0_5">5 マトリックス・グラフ</A></B>
+<UL>
+<LI><A HREF="1251Featuresmatrix.html#0_5_1">5.1 マトリックス・プロットの機能</A></LI>
+<LI><A HREF="1252Creatingandformattingmatrix.html#0_5_2">5.2 基本的なマトリックス・グラフの作成とフォーマット</A></LI>
+<LI><A HREF="1253Meshinterpolatingofinputdata.html#0_5_3">5.3 入力データのメッシュ補間</A></LI>
+<LI><A HREF="1254Changingmoduletype.html#0_5_4">5.4 モジュール・タイプを変更する</A></LI>
+<LI><A HREF="1255Adjustingalphablending.html#0_5_5">5.5 プロットのアルファ・ブレンディング</A></LI>
+</UL>
+
+<B><A HREF="06FilledContourgraph.html#0_6">6 塗りつぶし等高線グラフ</A></B>
+<UL>
+<LI><A HREF="061CreateFilledContour.html#0_6_1">6.1 塗りつぶし等高線グラフを作成する</A></LI>
+<LI><A HREF="062EnabeContourLines.html#0_6_2">6.2 等高線の表示・非表示</A></LI>
+<LI><A HREF="063SpecifyFilledContour.html#0_6_3">6.3 塗りつぶす色を指定する</A></LI>
+</UL>
+
+<H3><A NAME="CONTENTS">その他</A></H3>
+<B><A HREF="13CodedefinesinJpGraph.html#13">JpGraphの設定を変更する</A></B>
+</div>
+</BODY>
+</HTML>

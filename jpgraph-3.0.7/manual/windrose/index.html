@@ -1,0 +1,3061 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>JpGraph Windrose Manual 1.0</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL=STYLESHEET TYPE="text/css" HREF="../jpgdoc.css">
+</HEAD>
+<BODY>
+<DIV class="page">
+<H1 align="center">
+JpGraph Windrose Manual
+</H1>
+<div align=center>
+1 Apr, 2005
+</div>
+
+<hr>
+
+<H2>Table of Contents</H2>
+<BR>
+<BR><B><A HREF="#1">1 Windrose plots with JpGraph</A></B>
+<UL>
+<LI><A HREF="#1_1">1.1 Introduction</A></LI>
+<LI><A HREF="#1_2">1.2 Features</A></LI>
+<LI><A HREF="#1_3">1.3 A first introductory windrose graph</A></LI>
+</UL>
+<B><A HREF="#2">2 Basic formatting of Windrose graphs</A></B>
+<UL>
+<LI><A HREF="#2_1">2.1 Basic types of windrose plots</A></LI>
+<LI><A HREF="#2_2">2.2 Specifying input data</A></LI>
+<UL>
+<LI><A HREF="#2_2_1">2.2.1 Examples of input data for compass
+ (regular) Windrose plots</A></LI>
+<LI><A HREF="#2_2_2">2.2.2 Examples of input data for free
+ Windrose plots</A></LI>
+</UL>
+<LI><A HREF="#2_3">2.3 Specifying the windrose scale</A></LI>
+<UL>
+<LI><A HREF="#2_3_1">2.3.1 Specifying fonts and font colors</A>
+</LI>
+<LI><A HREF="#2_3_2">2.3.2 Manually specifying the scale</A></LI>
+<LI><A HREF="#2_3_3">2.3.3 Specifying the label angle</A></LI>
+<LI><A HREF="#2_3_4">2.3.4 Specifying number formats for scale
+ labels</A></LI>
+</UL>
+<LI><A HREF="#2_4">2.4 Specifying direction labels</A></LI>
+<UL>
+<LI><A HREF="#2_4_1">2.4.1 Specifying fonts and font colors</A>
+</LI>
+<LI><A HREF="#2_4_2">2.4.2 Setting arbitrary text for data
+ directions</A></LI>
+<LI><A HREF="#2_4_3">2.4.3 Adjusting the alignment and margin</A>
+</LI>
+</UL>
+<LI><A HREF="#2_5">2.5 Adjusting the size and position of the
+ graph</A></LI>
+<UL>
+<LI><A HREF="#2_5_1">2.5.1 Positioning the plot</A></LI>
+<LI><A HREF="#2_5_2">2.5.2 Specifying the size of the plot</A></LI>
+<LI><A HREF="#2_5_3">2.5.3 Specifying the size of the
+ Zero-circle (middle circle)</A></LI>
+</UL>
+<LI><A HREF="#2_6">2.6 Adding multiple plots to the same graph</A>
+</LI>
+<LI><A HREF="#2_7">2.7 Formatting the legend</A></LI>
+<UL>
+<LI><A HREF="#2_7_1">2.7.1 Specifying legend fonts</A></LI>
+<LI><A HREF="#2_7_2">2.7.2 Setting text and colors for the
+ Zero-circle</A></LI>
+<LI><A HREF="#2_7_3">2.7.3 Specifying number formats for
+ ranges</A></LI>
+<LI><A HREF="#2_7_4">2.7.4 Specifying legend bottom text</A></LI>
+<LI><A HREF="#2_7_5">2.7.5 Specifying the numeric values
+ displayed for the ranges</A></LI>
+</UL>
+<LI><A HREF="#2_8">2.8 Adjusting the formatting of the
+ windrose plot legs</A></LI>
+<UL>
+<LI><A HREF="#2_8_1">2.8.1 Specifying range colors</A></LI>
+<LI><A HREF="#2_8_2">2.8.2 Specifying the width of the plot
+ &quot;legs&quot;</A></LI>
+</UL>
+<LI><A HREF="#2_9">2.9 Adding arbitrary text on the graph</A></LI>
+<LI><A HREF="#2_10">2.10 Writing the windrose plot to a file</A>
+</LI>
+</UL>
+<B><A HREF="#3">3 Less used formatting</A></B>
+<UL>
+<LI><A HREF="#3_1">3.1 Turning off Anti-aliasing</A></LI>
+<LI><A HREF="#3_2">3.2 More on formatting scale-labels</A></LI>
+<UL>
+<LI><A HREF="#3_2_1">3.2.1 Adding background colors</A></LI>
+<LI><A HREF="#3_2_2">3.2.2 Adjusting the alignment of the
+ scale labels</A></LI>
+<LI><A HREF="#3_2_3">3.2.3 Specifying number formats</A></LI>
+<LI><A HREF="#3_2_4">3.2.4 Specifying a manual scale</A></LI>
+<LI><A HREF="#3_2_5">3.2.5 Hiding the labels</A></LI>
+<LI><A HREF="#3_2_6">3.2.6 Specifying the Zero-circle label</A>
+</LI>
+</UL>
+<LI><A HREF="#3_3">3.3 Formatting the legend</A></LI>
+<UL>
+<LI><A HREF="#3_3_1">3.3.1 Turning off the legend</A></LI>
+<LI><A HREF="#3_3_2">3.3.2 Adjusting the legend position</A></LI>
+<LI><A HREF="#3_3_3">3.3.3 Adjusting the length of each legend
+ window leg</A></LI>
+</UL>
+<LI><A HREF="#3_4">3.4 Formatting the windrose plot</A></LI>
+<UL>
+<LI><A HREF="#3_4_1">3.4.1 Adjusting the grid colors</A></LI>
+<LI><A HREF="#3_4_2">3.4.2 Adjusting the weight of the grid
+ circles</A></LI>
+<LI><A HREF="#3_4_3">3.4.3 Adding a box around the plot</A></LI>
+</UL>
+<LI><A HREF="#3_5">3.5 Including a graph in a PDF</A></LI>
+<LI><A HREF="#3_6">3.6 Highlighting specific compass
+ directions</A></LI>
+<LI><A HREF="#3_7">3.7 Miscellaneous formatting</A></LI>
+<UL>
+<LI><A HREF="#3_7_1">3.7.1 Adjusting the shape of the windrose
+ leg</A></LI>
+<LI><A HREF="#3_7_2">3.7.2 Adjusting the size of the center
+ zero circle</A></LI>
+</UL>
+<LI><A HREF="#3_8">3.8 Adding a background image</A></LI>
+<LI><A HREF="#3_9">3.9 Adjusting the interpretation for
+ ordinal keys in data</A></LI>
+<LI><A HREF="#3_10">3.10 Localizing the default names for the
+ compass directions</A></LI>
+<LI><A HREF="#3_11">3.11  Adding a rectangle around an
+ individual plot</A></LI>
+</UL>
+<B><A HREF="#4">4 Appendix: Commented examples of windrose
+ scripts</A></B>
+<UL>
+<LI><A HREF="#4_1">4.1 Example 1</A></LI>
+<UL>
+<LI><A HREF="#4_1_1">4.1.1 Objectives:</A></LI>
+<LI><A HREF="#4_1_2">4.1.2 Script</A></LI>
+<LI><A HREF="#4_1_3">4.1.3 Resulting image</A></LI>
+</UL>
+<LI><A HREF="#4_2">4.2 Example 2</A></LI>
+<UL>
+<LI><A HREF="#4_2_1">4.2.1 Objectives:</A></LI>
+<LI><A HREF="#4_2_2">4.2.2 Script</A></LI>
+<LI><A HREF="#4_2_3">4.2.3 Resulting image</A></LI>
+</UL>
+<LI><A HREF="#4_3">4.3 Example 3</A></LI>
+<UL>
+<LI><A HREF="#4_3_1">4.3.1 Objectives:</A></LI>
+<LI><A HREF="#4_3_2">4.3.2 Script</A></LI>
+<LI><A HREF="#4_3_3">4.3.3 Resulting image</A></LI>
+</UL>
+<LI><A HREF="#4_4">4.4 Example 4</A></LI>
+<UL>
+<LI><A HREF="#4_4_1">4.4.1 Objectives:</A></LI>
+<LI><A HREF="#4_4_2">4.4.2 Script</A></LI>
+<LI><A HREF="#4_4_3">4.4.3 Resulting image</A></LI>
+</UL>
+<LI><A HREF="#4_5">4.5 Example 5</A></LI>
+<UL>
+<LI><A HREF="#4_5_1">4.5.1 Objectives:</A></LI>
+<LI><A HREF="#4_5_2">4.5.2 Script</A></LI>
+<LI><A HREF="#4_5_3">4.5.3 Resulting image</A></LI>
+</UL>
+<LI><A HREF="#4_6">4.6 Example 6</A></LI>
+<UL>
+<LI><A HREF="#4_6_1">4.6.1 Objectives</A></LI>
+<LI><A HREF="#4_6_2">4.6.2 Script</A></LI>
+<LI><A HREF="#4_6_3">4.6.3 Resulting image</A></LI>
+</UL>
+<LI><A HREF="#4_7">4.7 Example 7</A></LI>
+<UL>
+<LI><A HREF="#4_7_1">4.7.1 Objectives:</A></LI>
+<LI><A HREF="#4_7_2">4.7.2 Script</A></LI>
+<LI><A HREF="#4_7_3">4.7.3 Resulting image</A></LI>
+</UL>
+<LI><A HREF="#4_8">4.8 Example 8</A></LI>
+<UL>
+<LI><A HREF="#4_8_1">4.8.1 Objectives:</A></LI>
+<LI><A HREF="#4_8_2">4.8.2 Script</A></LI>
+<LI><A HREF="#4_8_3">4.8.3 Resulting image</A></LI>
+</UL>
+<LI><A HREF="#4_9">4.9 Example 9</A></LI>
+<UL>
+<LI><A HREF="#4_9_1">4.9.1 Objectives:</A></LI>
+<LI><A HREF="#4_9_2">4.9.2 Script</A></LI>
+<LI><A HREF="#4_9_3">4.9.3 Resulting image</A></LI>
+</UL>
+</UL>
+
+
+<H1><A NAME="1">1 Windrose plots with JpGraph</A></H1>
+<H2><A NAME="1_1">1.1 Introduction</A></H2><P>
+ Windrose plots are usually used to display values which are related to
+ compass directions. For example it could be used to illustrate measured
+ wind strengths over a time period in different directions. Figure 1.
+ Illustrates a simple example of a windrose plot which should give a
+ good idea on what windrose plots are all about.
+<P> <IMG HEIGHT="400" src="windrose.png" WIDTH="400">
+<BR> <SMALL><B>Figure 1</B>.<I> A basic windrose plot</I></SMALL></P>
+<P> As you can see the use of windrose plots puts data in a number of
+ ranges, for example the number of measurements in range 0-1, range 1-2
+ and so on. By default the available ranges are:</P>
+<P> 0-1, 1-2, 2-3, 3-5, 5-6, 6-10, 10-13.5, 13-99</P>
+<P> This series can of course be modified to suit the particular
+ applications. The default ranges is often used to show wind strengths
+ in different directions. <SMALL></SMALL></P>
+<HR><P><B> Note:</B> The default fonts for Windrose graphs are TTF fonts.
+ This means that to run the examples exactly as shown in this tutorial
+ you must have TTF fonts installed in your setup. If TTF fonts are not
+ available you need to adjust the fonts used to one of the builtin
+ fonts, for example &quot;SetFont(FF_FONT2)&quot;, on all places where fonts are
+ used.
+<BR> In order to use the enhanced Anti-alias features in Windrose graphs
+ you<B> must</B> have TTF fonts installed.
+<HR><P>
+<H2><A NAME="1_2">1.2 Features</A></H2><P>
+ The Windrose extension module for JpGraph has all the usual JpGraph
+ capabilities like frames, shadows and full use of all available colors
+ and alpha-blending supported by the core JpGraph library. Some of he
+ additional Windrose graphs capabilities are:
+<UL>
+<LI> Enhanced anti-alias capability for smooth looking graphs</LI>
+<LI> Manual or automatic scale</LI>
+<LI> Supports customizable compass types which allow you to choose
+ between 16,8 and 4 compass directions to be shown.</LI>
+<LI> Supports two types of basic graphs; Free direction graphs and
+ compass bound graphs.</LI>
+<LI> Allows data to be specified with both compass direction and angles</LI>
+<LI> Fully customizable fonts everywhere in the plot</LI>
+<LI> Fully automatic adaptive positioning of the labels for the scale to
+ avoid collision with data. This can also be turned off to allow manual
+ positioning of the labels.</LI>
+<LI> Labels have extensive formatting capabilities and supports
+ background colors, rounded boxes and arbitrary fonts.</LI>
+<LI> Supports multiple Windrose graphs on the same image</LI>
+<LI> Fully customizable size and positioning of each individual windrose
+ graph.</LI>
+<LI> Size of windrose plots can be specified both as absolute pixels or
+ as fraction of the graph size.</LI>
+<LI> Both manual and automatic color specifications</LI>
+<LI> Both automatic and manual scaling</LI>
+<LI> Intelligent positioning of angle labels with possibility for client
+ specification of alignment type.</LI>
+<LI> Windrose graphs may have arbitrary texts blocks added to the graph</LI>
+</UL>
+<H2><A NAME="1_3">1.3 A first introductory windrose graph</A></H2><P>
+ To get a quick start we now show the creation of the simplest of all
+ Windrose graphs. Creation of windrose graphs follows the generic graph
+ creation schema in JpGraph, i.e.
+<OL>
+<LI> Include the necessary extension module jpgraph_windrose.php</LI>
+<LI> Create a Windrose Graph</LI>
+<LI> Add any number of Windrose plots to the graph</LI>
+<LI> Send the graph to the browser or to a file.</LI>
+</OL><P>
+ The following code example show the simplest of all windrose graphs
+ using just the default values for all parameters.
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"> require_once ('../jpgraph.php');
+<BR />require_once ('../jpgraph_windrose.php');
+<BR />
+<BR />//---------------------------------------------------------
+<BR />// Data can be specified using both ordinal index of the axis
+<BR /> // as well as the direction label
+<BR />//---------------------------------------------------------
+<BR />$data = array(
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;0 =&gt; array(1,1,2.5,4),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;1 =&gt; array(3,4,1,4),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;'WSW' =&gt; array(1,5,5,3),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;'N' =&gt; array(2,3,8,1,1),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;15 =&gt; array(2,3,5));
+<BR />
+<BR />// First create a new windrose graph with a title
+<BR />$graph = new WindroseGraph(400,400);
+<BR />$graph-&gt;title-&gt;Set('Windrose example 0');
+<BR />
+<BR />// Create the windrose plot.
+<BR /> $wp = new WindrosePlot($data);
+<BR />$graph-&gt;Add($wp);
+<BR />
+<BR />// Send the graph to the browser
+<BR />$graph-&gt;Stroke();</FONT></CODE></B></DIV>
+<P> Worth noting in the code above is:</P>
+<UL>
+<LI> All the usual features of JpGraph is available, for example 'title'
+ property.</LI>
+<LI> Direction for data can be specified as both Compass directions and
+ as angles.<B> Note:</B> If you need to specify fractions of an angle,
+ e.g. 52.5, this must be specified as a string, e.g. '52.5' =&gt;
+ array(1,2,3,4).</LI>
+</UL><P>
+ The result of running the script above can be seen below in figure 1.
+<P> <IMG HEIGHT="400" src="windrosf.png" WIDTH="400">
+<BR> <SMALL><B>Figure 1</B>.<I> A basic windrose graph</I></SMALL></P>
+<P><I><B> Note:</B> The data in all the following examples (including
+ the example just presented) are entirely fictitious. For real data the
+ sum of all the values should always sum up to 100%. However, the plot
+ library does not put any restrictions on the data. It is entirely the
+ responsibility of the client to the library to ensure that the data
+ presented makes sense.</I></P>
+<H1><A NAME="2">2 Basic formatting of Windrose graphs</A></H1>
+<H2><A NAME="2_1">2.1 Basic types of windrose plots</A></H2><P>
+ There are two basic types of Windrose plots:
+<UL>
+<LI> Compass type with either 4,8 or 16 compass direction axis.
+ Directions in input data is limited to one of the compass directions in
+ the plot. The directions can be specified as ordinal number of the axis
+ counted. The labels on the axis is by default short forms of the
+ compass directions, for example, &quot;E&quot;, &quot;N&quot;, &quot;W&quot;, &quot;S&quot;. (In the advanced
+ section we show how you can alter the default names of the
+ directions.). The ordinal number are counted anti-clockwise from East.</LI>
+<LI> Free type with no pre-defined direction axis. Directions in input
+ data can be arbitrary angles (or specified as compass directions e.g.
+ &quot;NW&quot;). The 0-angle corresponds to the East direction.</LI>
+</UL><P>
+ To specify the type of plot to create the method<I>
+ WindrosePlot::SetType()</I> is used. The argument is one of the 4
+ predefined constants which are listed below with an explanation.
+<UL>
+<LI><B> WINDROSE_TYPE4</B>, Compass type with the four core compass
+ directions</LI>
+<LI><B> WINDROSE_TYPE8</B>, Compass type with eight directions</LI>
+<LI><B> WINDROSE_TYPE16</B>, Compass type with sixteen directions</LI>
+<LI><B> WINDROSE_TYPEFREE</B>, Free type. Data directions can be
+ arbitrary angles and there are no predefined labels nor any pre-defined
+ axis.</LI>
+</UL><P>
+ The figures below illustrates the basic principle of the different
+ types.
+<TABLE>
+<TR><TD><IMG HEIGHT="200" src="windrosg.png" WIDTH="200">
+<BR> <SMALL><B>Figure 2a</B>. WINDROSE_TYPE4</SMALL></TD><TD><IMG HEIGHT="200"
+src="windrosh.png" WIDTH="200">
+<BR> <SMALL><B>Figure 2b</B>. WINDROSE_TYPE8</SMALL></TD></TR>
+<TR><TD><IMG HEIGHT="200" src="windrosi.png" WIDTH="200">
+<BR> <SMALL><B>Figure 2c</B>. WINDROSE_TYPE16</SMALL></TD><TD><IMG HEIGHT="200"
+src="windrosj.png" WIDTH="200">
+<BR> <SMALL><B>Figure 2d</B>. WINDROSE_TYPEFREE</SMALL></TD></TR>
+</TABLE>
+<P> So, for example to use a Windrose plot with all 16 compass angles
+ you have to code along the lines of
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$wp = new WindrosePlot($data);
+<BR />$wp-&gt;SetType(WINDROSE_TYPE16);
+<BR />...</FONT></CODE></B></DIV></P>
+<P> <SMALL></SMALL></P>
+<HR><P><B> Note:</B> If no type is specified the plot type will default to a
+ compass type with 16 directions/axis.
+<HR><P>
+<H2><A NAME="2_2">2.2 Specifying input data</A></H2><P>
+ Input data is in the form of a data array. Each entry in the array is
+ itself an array which gives the data for one direction. The direction
+ is specified as the key for that element. The direction can be
+ specified as either
+<UL>
+<LI> A string specifying any of the displayed compass directions, e.g.
+ &quot;N&quot;, &quot;SW&quot; and so on.</LI>
+<LI> An ordinal number in the range 0-15 for regular plots which
+ indicates the axis counting anti-clockwise from East. Please note that
+ only displayed axis count so of you are displaying 4 axis then a
+ position of 1 indicates north while if you are displaying 16 axis then
+ a position of 1 indicates &quot;ENE&quot; (East North East)</LI>
+<LI> A string indicating a number, e.g. '34.5' , please note that if the
+ angle is a fraction you must specify such a direction as a string. The
+ library will then automatically recognize that as a valid angle and
+ treat it as expected. The reason for this is of course that floating
+ point numbers can't be used as keys in an associative array.</LI>
+</UL><P>
+ If you specify a direction in the data for a compass directions that is
+ not displayed when using a regular Windrose plot you will get an error
+ message to that affect.
+<P> As previously said each array element is itself an array which
+ normally specifies the percentage for each used range in that direction
+ starting with the percentage of 0-readings.</P>
+<P> By default the available ranges are:</P>
+<P> 0-1, 1-2, 2-3, 3-5, 5-6, 6-10, 10-13.5, 13-99</P>
+<P> This means that the first element specify the percentage of 0-1
+ reading the sum of these reading will be placed in the center of the
+ windrose plot. The second element specifies the percentage of 1-2
+ readings, the third element the percentage of 2-3 readings and so on.</P>
+<P> Below are some examples of how to specify the data which should
+ clarify how this works.</P>
+<H3><A NAME="2_2_1">2.2.1 Examples of input data for compass (regular)
+ Windrose plots</A></H3><P>
+ (<I>Assuming we have all 16 axis displayed</I>)
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> $data = array( &quot;N&quot; =&gt; array(2,5,6) );</FONT>
+</CODE></B></DIV>
+<P> This data array specifies reading in only one direction, &quot;North&quot;,
+ the number of 0-readings are 2 percent, number of 0-1 readings are 5
+ percent and the number of 1-2 readings are 6 percent.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> $data = array( 1 =&gt; array(2,5,6), 3 =&gt;
+ array(6,3), &quot;NW&quot; =&gt; array(3,2,2,2) )</FONT></CODE></B></DIV></P>
+<P> This data array specifies readings in three directions. As shown it
+ is possible to mix both ordinal number for the axis as well as the
+ symbolic direction name.</P>
+<H3><A NAME="2_2_2">2.2.2 Examples of input data for free Windrose plots</A>
+</H3><P>
+ What is special with the free type is that angles are no longer
+ restricted to only the 16 compass directions but arbitrary directions
+ as well.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> $data = array( 10 =&gt; array(2,5,6), 24 =&gt;
+ array(6,3), 137 =&gt; array(3,2,2,2) )</FONT></CODE></B></DIV>
+<P> This data array specifies readings in three directions, 10 degrees,
+ 24 degrees and 137 degrees.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> $data = array( &quot;21.6&quot; =&gt; array(2,5,6),
+ &quot;N&quot; =&gt; array(6,3), 137 =&gt; array(3,2,2,2) )</FONT></CODE></B></DIV></P>
+<P> This data array specifies readings in three directions, 21.5
+ degrees, &quot;North&quot; (or 90 degrees) and finally 137 degrees. Please note
+ that in order to specify a fraction for an angle we must specify the
+ direction as a string value, i.e. '21.6'. This will then be handled
+ automatically be the library.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"></FONT></CODE></B></DIV></P>
+<P></P>
+<H2><A NAME="2_3">2.3 Specifying the windrose scale</A></H2><P>
+ The scale consists of the epi-centric circles that radiates from the
+ center of the Windrose plot. The step between each circle can be either
+ set manually (with a call<I> SetStepSize()</I>) or it can be
+ automatically determined. By default the library tries multiple of 5:s
+ and 2:s for a visually esthetic grid spacing.
+<P> All properties of the scale is accessed through the &quot;scale&quot; property
+ of the Windrose plot, for example as in<I>
+ $windplot-&gt;scale-&gt;SetFont(...)</I></P>
+<H3><A NAME="2_3_1">2.3.1 Specifying fonts and font colors</A></H3><P>
+ Fonts can be specified for both the labels on the scale as well as
+ separately for the label in the middle of the plot. The following code
+ snippet shows how to do this (we assume we have already created a
+ windrose plot called<I> windplot</I>)
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> // Font and color for scale labels
+<BR />$windplot-&gt;scale-&gt;SetFont(FF_VERDANA,FS_NORMAL,10);
+<BR /> $windplot-&gt;scale-&gt;SetFontColor('navy');
+<BR />
+<BR />// Font and color for the center (Zero circle) label
+<BR />$windplot-&gt;scale-&gt;SetZFont(FF_VERDANA,FS_NORMAL,10);
+<BR /> $windplot-&gt;scale-&gt;SetZFontColor('navy');
+<BR /></FONT></CODE></B></DIV>
+<P></P>
+<H3><A NAME="2_3_2">2.3.2 Manually specifying the scale</A></H3><P>
+ By default the library automatically determines a scale range and step
+ size taking into account the maximum value of data, size of the plot
+ and the font size specified for the scale labels.
+<P> However you can force a manual scale and step size with a call to<I>
+ Set($aMaxValue,$aStepSize)</I>. This call sets the maximum scale value
+ as well as the step size. The step size is optional. If the stepsize is
+ not specified it will be automatically determined.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> // Specify both maximum value and a step
+ size
+<BR />$windplot-&gt;scale-&gt;Set(40,8);
+<BR />...
+<BR />// Specify just the maximum value
+<BR />$windplot-&gt;scale-&gt;Set(40);</FONT></CODE></B></DIV></P>
+<P> This feature is also illustrated in Example 7 in the Appendix of
+ this manual.</P>
+<HR><P> <SMALL><B> Note 1:</B> The automatic scaling tries to first use step
+ sizes as multiples of 5 and then multiples of 2 to achieve a suitable
+ spacing of the scale lines.<br>
+<B> Note 2:</B> You might be surprised to see that the scale steps may
+ change as you change the font for the scale labels. This is by design.
+ The reason for this is of course that there is only a certain amount of
+ space available for the labels between each step. In order for large
+ fonts to fit the space between the grids must be large enough.</P>
+</SMALL>
+<HR><P>
+<H3><A NAME="2_3_3">2.3.3 Specifying the label angle</A></H3><P>
+ The labels for the scale is placed along a line radiating from the
+ center of the windrose plots. The angle for the labels can be either
+ manually or automatically determined.
+<P> The labels for the scale is placed along one of the sixteen compass
+ directions if you choose automatic positioning of the labels. By
+ default the library tries to choose a direction with as little data
+ around it as possible.</P>
+<P> To manually specify the angle a call to<I> SetAngle($aAngle)</I>
+ with the angle (in degrees) as argument and to let the library try to
+ automatically determine the angle the argument should be 'auto' which
+ also is the default.</P>
+<P> The code snippet below shows how to do this
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> // Show the labels at 45 degrees angle
+<BR />$windplot-&gt;scale-&gt;SetAngle(45);</FONT></CODE></B></DIV></P>
+<P> Figure 3 below shows examples of specifying different angles for the
+ scale labels</P>
+<TABLE>
+<TR><TD><IMG HEIGHT="200" src="windrosk.png" WIDTH="200">
+<BR><SMALL><B>Figure 3a</B>. Labels at angle=20 degrees</SMALL></TD><TD>
+&nbsp;</TD><TD><IMG HEIGHT="200" src="windrosl.png" WIDTH="200">
+<BR><SMALL><B>Figure 3a</B>. Labels at angle=150 degrees</SMALL></TD></TR>
+</TABLE>
+<H3><A NAME="2_3_4">2.3.4 Specifying number formats for scale labels</A></H3><P>
+<H2><A NAME="2_4">2.4 Specifying direction labels</A></H2><P>
+ With direction labels we mean the names of the compass directions
+ surrounding the windrose plot. By default they are given the English
+ short form for the 16 compass named directions. This can also be
+ localized as described in the &quot;Advanced formatting section&quot;.
+<H3><A NAME="2_4_1">2.4.1 Specifying fonts and font colors</A></H3><P>
+ Fonts are specified, as usual, with a call to<I>
+ WindrosePlot::SetFont()</I> and the color is specified with a call to<I>
+ WindrosePlot::SetFontColor()</I> as the following example shows
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> $windplot-&gt;SetFont(FF_TIMES,FS_BOLD,12);
+<BR />$windplot-&gt;SetFontColor(&quot;darkgreen&quot;);</FONT></CODE></B></DIV>
+<P> Which for example could give a Windrose plot as shown in Figure 4.</P>
+<P> <IMG HEIGHT="210" src="windrosm.png" WIDTH="210">
+<BR> <SMALL><B>Figure 4</B>.<I> Using dark green Times TTF fonts for
+ Compass directions</I></SMALL></P>
+<P></P>
+<H3><A NAME="2_4_2">2.4.2 Setting arbitrary text for data directions</A></H3><P>
+ Wen using the free direction windrose plots the default label is the
+ direction for the data in degrees. This is fully customizable by using
+ the<I> Windrose::SetLabels()</I> method. The input data to this method
+ is an associative array where the keys are the direction and the
+ content is the text to be displayed.
+<P> Please note that for regular Windrose plots, i.e. with only compass
+ direction the label can not be changed. This is only available if the
+ type of the windrose plot is WINDROSE_TYPEFREE.</P>
+<P> The following example specifies a data point at 50 degrees and a
+ text &quot;Point\n#7315&quot; as the label. Note that labels can contain &quot;\n&quot;
+ which will be interpreted as a line break.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> $data = array( 50 =&gt; array(12,12,2) );
+<BR />$labels = array( 50 =&gt; &quot;Point #7315&quot; );
+<BR />...
+<BR />$windplot = new WindrosePlot();
+<BR />$windplot-&gt;SetLabels($labels);
+<BR />...</FONT></CODE></B></DIV></P>
+<P> Which would then give the result in figure 5.</P>
+<P> <IMG HEIGHT="210" src="windrosn.png" WIDTH="210">
+<BR> <SMALL><B>Figure 5</B>.<I> Specifying a custom compass direction
+ label</I></SMALL></P>
+<P></P>
+<H3><A NAME="2_4_3">2.4.3 Adjusting the alignment and margin</A></H3><P>
+ There are two basic ways of adjusting the position of the compass
+ labels around the plot:
+<UL>
+<LI> Adjusting the margin between the label and the outer plot circle</LI>
+<LI> Adjusting the anchor point of the labels.</LI>
+</UL><P>
+ The easiest way to explain this is to first imagine an invisible circle
+ around the plot. The margins specifies how far from the outer scale
+ circle this imaginative circle is placed.
+<P> In order to position the labels on that circle around the plot there
+ are several possible ways to select what point of the text should be
+ positioned on the circle. The easiest way is to select the center (both
+ in X and Y directions) of the text. This works well if all labels are
+ roughly the same size. If there are big difference between the smallest
+ and largest label it might be necessary to have a very large margin to
+ avoid the text to &quot;collide&quot; with the plot.</P>
+<P> A better way is to determine the closest point of the text to the
+ plot and then make that point lay on the circle. The closets point
+ depends on what compass direction the label is on, for example for the
+ &quot;East&quot; label the closes point is the middle of the left side of the
+ text and for the &quot;West&quot; the closes point is the middle of the right
+ side.</P>
+<P> JpGraph supports both way of positioning through the method<I>
+ WindrosePlot::SetLabelPosition($aPosition)</I> Valid values for<I>
+ $aPosiion</I> are<I> LBLPOSIITON_CENTER</I> and<I> LBLPOSITION_EDGE</I>
+. The following code snippet shows how to specify both margin and
+ position do this:
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$windplot-&gt;SetLabelMargin(30);
+<BR />$windplot-&gt;SetLabelPosition(LBLPOSITION_EDGE);
+<BR />...</FONT></CODE></B></DIV></P>
+<P></P>
+<P> The red circle in figure 6a and b illustrates the &quot;imaginative&quot;
+ circle on which the labels are placed. The distance from the outmost
+ plot circle to the label anchor point is the margin.</P>
+<TABLE>
+<TR><TD valign="top"><IMG HEIGHT="300" src="windroso.png" WIDTH="300">
+<BR> <SMALL><B>Figure 6a</B>.<I> Positioning of the labels using<B>
+ LBLPOSITION_CENTER</B> (The anchor position for the text is the center
+ of gravity of the text)</I></SMALL></TD><TD>&nbsp;&nbsp;</TD><TD valign="top"><IMG
+HEIGHT="300" src="windrosp.png" WIDTH="300">
+<BR> <SMALL><B>Figure 6b</B>.<I> Positioning of the labels using<B>
+ LBLPOSITION_EDGE</B> (The anchor position for the text is the
+ intersection between the text bounding box and the line between the
+ center of the plot and the center of gravity of the text</I></SMALL></TD>
+</TR>
+</TABLE>
+<H2><A NAME="2_5">2.5 Adjusting the size and position of the graph</A></H2><P>
+<H3><A NAME="2_5_1">2.5.1 Positioning the plot</A></H3><P>
+ The position of the graph can be controlled with the<I>
+ WindrosePlot::SetPos($aXPos,$aYPos)</I>. The position can be specified
+ as either absolute position (in pixels) or as a fraction of width and
+ height. The anchor for the position is the center of the windrose plot.
+ For example, the following line centers the plot in the graph
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$windplot-&gt;SetPos(0.5,0.5);
+<BR />...</FONT></CODE></B></DIV>
+<P></P>
+<H3><A NAME="2_5_2">2.5.2 Specifying the size of the plot</A></H3><P>
+ In the same way as for the position the size of the windrose plot can
+ be specified as either an absolute value or as a fraction of the
+ minimum of width and height. The size specified refers to the diameter
+ of the plot.
+<P> The size is controlled with the<I> WindrosePlot::SetSize($aDiameter)</I>
+ method as in
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$windplot-&gt;SetSize(200);
+<BR />...</FONT></CODE></B></DIV></P>
+<P> The code above sets the diameter of the plot to 200 pixels, setting
+ the value to 0.7 would set the diameter to<I> 0.7 * min(WIDTH,HEIGHT)</I>
+ where width and height are the size of the graph.</P>
+<H3><A NAME="2_5_3">2.5.3 Specifying the size of the Zero-circle (middle
+ circle)</A></H3><P>
+ The size of the middle circle (the zero-range circle) can be adjusted
+ with the method<I> WindrosePlot::SetZCircleSize($aDiameter);</I> The
+ diameter can be specified as either an absolute integer value or as a
+ fraction of the windrose plot diameter. For example the following line
+ sets the size to 1/3 of the windrose plot.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$windplot-&gt;SetZCircleSize(1/3);
+<BR />...</FONT></CODE></B></DIV>
+<P> In figure 7 below we illustrate the effect of changing the zero
+ circle size</P>
+<TABLE>
+<TR><TD valign="top"><IMG HEIGHT="270" src="windrosq.png" WIDTH="270">
+<BR> <SMALL><B>Figure 7a</B>.<I> Setting the Zero-circle size to 0.3</I></SMALL>
+</TD><TD>&nbsp;&nbsp;</TD><TD valign="top"><IMG HEIGHT="270" src="windrosr.png" WIDTH="270">
+<BR> <SMALL><B>Figure 7b</B>.<I> Setting the Zero-circle size to 0.5</I></SMALL>
+</TD></TR>
+</TABLE>
+<H2><A NAME="2_6">2.6 Adding multiple plots to the same graph</A></H2><P>
+ Adding several windrose plots to the same graph is as simple as adding
+ one. You just need to create your chosen number of plots and then add
+ them with a call to<I> WindroseGraph::Add()</I>.
+<P> To avoid all the plots to collide in the middle just use the
+ positioning and sizing methods as shown in the previous section. The
+ following script snippet shows how to add two plots to the same graph.
+ In order not to cloud the example we have omitted the lines that set
+ the font sizes.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$graph = new WindroseGraph(500,300);
+<BR />$graph-&gt;title-&gt;Set('Example of two plots in the same graph');
+<BR />
+<BR />// Cerate first plot
+<BR />$wp = new WindrosePlot($data);
+<BR />$wp-&gt;SetType(WINDROSE_TYPEFREE);
+<BR />$wp-&gt;SetSize(0.5);
+<BR />$wp-&gt;SetPos(0.25,0.5);
+<BR />...
+<BR />// Set font sizes and label positions etc
+<BR />...
+<BR />$graph-&gt;Add($wp);
+<BR />
+<BR />// create 2:nd plot
+<BR />$wp2 = new WindrosePlot($data2);
+<BR />$wp2-&gt;SetType(WINDROSE_TYPEFREE);
+<BR />$wp2-&gt;SetSize(0.5);
+<BR />$wp2-&gt;SetPos(0.75,0.5);
+<BR />...
+<BR />// Set font sizes and label positions etc
+<BR />...
+<BR />$graph-&gt;Add($wp2);
+<BR />
+<BR />$graph-&gt;Stroke();</FONT></CODE></B></DIV></P>
+<P> The result can be seen in figure 8 below</P>
+<TABLE>
+<TR><TD valign="top"><IMG HEIGHT="300" src="windross.png" WIDTH="500">
+<BR> <SMALL><B>Figure 8</B>.<I> Multiple plots in the same graph</I></SMALL>
+</TD></TR>
+</TABLE>
+<H2><A NAME="2_7">2.7 Formatting the legend</A></H2><P>
+ The legend is displayed just below in a fixed position just below the
+ windrose plot and you can see an example of the legend in Figure 8.
+<P> All legend methods is accessed through the<I> legend</I> property of
+ the windrose plot as in
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> $windroseplot-&gt;legend-&gt;SetFont(...);</FONT>
+</CODE></B></DIV></P>
+<P> There are four basic attributes that you can customize for the
+ legend as described in the following paragraphs. (There are also some
+ additional less used formatting which are described in the &quot;Advanced
+ formatting section&quot;)</P>
+<H3><A NAME="2_7_1">2.7.1 Specifying legend fonts</A></H3><P>
+ To allow for maximum flexibility font can be specified for both the
+ numerical ranges as well as for the text under the legend. In order to
+ avoid making the legend to wide it is often desirable to use a smaller
+ font for the ranges and a slightly larger font for the actual text
+ under the legend (as well as inside the &quot;calm&quot; circle).
+<P> The fonts for the bottom text on the legend is specified through the<I>
+ SetTFont()</I> The font for the ranges is specified with<I> SetLFont()</I>
+. Finally, the font to be used in the &quot;calm&quot; circle is specified with<I>
+ SetCFont()</I>.</P>
+<P> For maximum convenience there is a also a<I> SetFont()</I> method
+ which sets all the fonts in one call. Note that if you call this method
+ after one of the individual settings previous specified (e.g.
+ SetCFont()) they will be overwritten.</P>
+<P> The colors for the fonts are specified in an anlogue way by using
+ the methods<I> SetTFontColor()</I>,<I> SetLFontColor</I> ,<I>
+ SetCFontColor()</I>and<I> SetFontColor</I></P>
+<P> The figure below illustrates how two fonts were used for the legend.
+ A Chinese BIG-5 font (converted to UTF-8 before displayed with iconv())
+ for the text the and default Arial font for the ranges.</P>
+<P>
+<TABLE>
+<TR><TD valign="top"><IMG HEIGHT="72" src="windrost.png" WIDTH="288">
+<BR> <SMALL><B>Figure 9</B>.<I> Multiple fonts in the legend. In order
+ to display the Chinese font the Chinese BIG-5 encoded text was first
+ converted to UTF-8 with a call to iconv()</I></SMALL></TD></TR>
+</TABLE>
+<H3><A NAME="2_7_2">2.7.2 Setting text and colors for the Zero-circle</A>
+</H3><P>
+ The &quot;Calm&quot; circle can have it's size, line weight and color adjusted.
+ In addition you can specify any text within the circle. By default the
+ text &quot;Calm&quot; is printed inside the circle. The following methods are
+ used to adjust these properties.
+<UL>
+<LI><I> SetCircleWeight($aWeight)</I></LI>
+<LI><I> SetCircleRadius($aRadius)</I></LI>
+<LI><I> SetCircleColor($aColor)</I></LI>
+<LI><I> SetCircleText($aTxt)</I></LI>
+</UL><P>
+<H3><A NAME="2_7_3">2.7.3 Specifying number formats for ranges</A></H3><P>
+ For the ranges you can adjust the exact specification of the numbers,
+ with a general format string. This would allow you, for example, to
+ choose the number of decimal values to show in the legend. The format
+ string is specified with a call to<I> SetFormat($aFmt)</I>. The format
+ will be applied to both the lower and upper range value. This means
+ that the actual legend range text in the legend will be printed as
+ [number format]-[number format].
+<H3><A NAME="2_7_4">2.7.4 Specifying legend bottom text</A></H3><P>
+ Finally you can specify a text at the bottom of the legend with a call
+ to<I> SetText($aTxt)</I>. The text will be displayed just underneath
+ the legend as figure 9 below shows an example of (to save space we just
+ show the legend part of a total image).
+<TABLE>
+<TR><TD valign="top"><IMG HEIGHT="60" src="windrosu.png" WIDTH="225">
+<BR> <SMALL><B>Figure 10</B>.<I> Adding a legend text to the legend</I></SMALL>
+</TD></TR>
+</TABLE>
+<H3><A NAME="2_7_5">2.7.5 Specifying the numeric values displayed for
+ the ranges</A></H3><P>
+ The values displayed in the legend for the ranges can be adjusted with
+ a call to<I> WindRosePlot::SetRanges($aRanges)</I>. By default the
+ ranges are set to<I> 0,1,2,3,5,6,10,13.5,99.0</I>, this means that the
+ ranges printed will be<I> 1-2, 2-3, 3-5, ...</I>.
+<BR> The following example shows how to change this to the ranges<I>
+ 0.000-0.001, 0.001-0.003, 0.003-0.005</I>
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$windplot-&gt;SetRanges(array(0.001,0.003,0.005));
+<BR />$windplot-&gt;SetFormat('%.3f');
+<BR />...</FONT></CODE></B></DIV>
+<P></P>
+<P> As you can se the first range is not really directly promted. It is
+ by default indicated by the circle to the left in the legend.</P>
+<P> You can see that in addition to setting the range we also change the
+ format to display the decimals. Without this the default is only to
+ show one decimal and that would show all ranges as 0.0. An example of
+ how this might look can be seen in figure 10 below.
+<P>
+<TABLE>
+<TR><TD valign="top"><IMG HEIGHT="72" src="windrosv.png" WIDTH="350">
+<BR> <SMALL><B>Figure 11</B>.<I> Adjusting the value displayed for the
+ ranges, as you can see the length of the &quot;legs&quot; in the legend
+ automatically adjusts to become wide enough to fit the value in the
+ ranges.</I></SMALL></TD></TR>
+</TABLE>
+<H2><A NAME="2_8">2.8 Adjusting the formatting of the windrose plot legs</A>
+</H2><P>
+<H3><A NAME="2_8_1">2.8.1 Specifying range colors</A></H3><P>
+ To adjust the colors used for each range in the plot the method<I>
+ WindrosePlot::SetRangeColors($aRangeColors)</I> as the the following
+ example shows
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />
+$windplot-&gt;SetRangeColors(array('red','navy','darkgreen','yellow'));
+<BR />...</FONT></CODE></B></DIV>
+<P> If fewer colors than data ranges are specified then the colors will
+ wrap-around.</P>
+<H3><A NAME="2_8_2">2.8.2 Specifying the width of the plot &quot;legs&quot;</A></H3><P>
+ The weight (width) of the legs used for each range in the plot is by
+ default set to the range<I> 2,4,6,8,10,12,14,16,18,20</I> pixels. You
+ can adjust that with a call to the method<I>
+ WindrosePlot::SetRangeWeights($aWeights)</I> If fewer weights than
+ ranges used are supplied the ranges will wrap-around. The following
+ example shows how to do set a larger difference in size for the legs
+ between the ranges.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$windplot-&gt;SetRangeWeights(array(2,6,10,14,18));
+<BR />...</FONT></CODE></B></DIV>
+<P></P>
+<H2><A NAME="2_9">2.9 Adding arbitrary text on the graph</A></H2><P>
+ Windrose plots support the ordinary way of adding arbitrary texts to
+ the graph by creating an instance of Class Text for each text you want
+ to add and then add it to the graph as normal with a call to
+ WindroseGraph::Add().
+<P> The following code snippet shows an example of this. It will create
+ a boxed text in the upper right corner of the graph.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />// Add a boxed text
+<BR />$txt = new Text();
+<BR />$txt-&gt;SetFont(FF_ARIAL,FS_NORMAL,10);
+<BR />$txt-&gt;Set(&quot;Arbitrary text\non a\nWidrose Plot&quot;);
+<BR />$txt-&gt;SetParagraphAlign('center');
+<BR />$txt-&gt;SetPos(0.95,0.15,'right');
+<BR />$txt-&gt;SetBox('lightyellow');
+<BR />$txt-&gt;SetShadow();
+<BR />$graph-&gt;Add($txt);
+<BR />...</FONT></CODE></B></DIV></P>
+<P> Figure 12 below shows an example on how this might look.</P>
+<P>
+<TABLE>
+<TR><TD valign="top"><IMG HEIGHT="270" src="windrosw.png" WIDTH="250">
+<BR> <SMALL><B>Figure 12</B>.<I> Adding an arbitrary text paragraph to
+ the windrose plot</I></SMALL></TD></TR>
+</TABLE>
+ The example above is probably as complicated as you can make it. Adding
+ just a single text string could be done with as little code as
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$txt = new Text('Simple string',20,20);
+<BR />$graph-&gt;Add($txt);
+<BR />...</FONT></CODE></B></DIV>
+<P> The snippet above adds a text at coordinates X=20, Y=20 using the
+ default lower left corner as the text anchor point.</P>
+<P></P>
+<HR><P><B> Note 1:</B> To add a newline you must remember to use
+ double-quotes to enclose the text otherwise the &quot;\n&quot; will only be
+ interpretated literally.
+<BR><B> Note 2:</B> Remember that the &quot;text align&quot;, as adjusted with
+ SetAlign(), specifies the anchor point for the text, i.e. what part of
+ the text is aligned with the specified position.
+<HR><P>
+<H2><A NAME="2_10">2.10 Writing the windrose plot to a file</A></H2><P>
+ You can easily write the image to a file by specifying a file name in
+ the final call to<I> WindroseGraph::stroke()</I>. For example as in
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> $graph-&gt;Stroke('windimage.png')</FONT></CODE>
+</B></DIV>
+<P> Remember that the file will be saved exactly under the name you
+ specify.</P>
+<H1><A NAME="3">3 Less used formatting</A></H1>
+<p> This section shows some of the more esoteric and (probably) less used
+ formatting available in the library.
+<H2><A NAME="3_1">3.1 Turning off Anti-aliasing</A></H2><P>
+ By default anti-aliasing is enabled. This has a speed penalty together
+ with restrictions that no background images can be used in this version
+ of the library.
+<P> If you want to use background images or improve performance
+ anti-aliasing can be turned off with a call to the method<I>
+ WindrosePlot::SetAntiAlias($aFlag)</I></P>
+<H2><A NAME="3_2">3.2 More on formatting scale-labels</A></H2><P>
+ Since scale labels are normal text element all normal text formatting
+ can be used to enhance the look &amp;feel of the scale labels.
+<H3><A NAME="3_2_1">3.2.1 Adding background colors</A></H3><P>
+ A simple enhancement to make the labels more visible is to add a box
+ and a background color for the label. This is done with a call to the
+ method<I> WindrosePlotScale::SetLabelFillColor()</I>. The following
+ code snippet shows how this could be done
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$windplot-&gt;scale-&gt;SetLabelFillColor('lightblue','black');
+<BR />...</FONT></CODE></B></DIV>
+<P> Figure 13 below shows an example on how this might look</P>
+<P>
+<TABLE>
+<TR><TD valign="top"><IMG HEIGHT="300" src="windrosx.png" WIDTH="300">
+<BR> <SMALL><B>Figure 13</B>.<I> Adjusting the background color of the
+ scale labels</I></SMALL></TD></TR>
+</TABLE>
+<H3><A NAME="3_2_2">3.2.2 Adjusting the alignment of the scale labels</A>
+</H3><P>
+ By default the scale labels are centered on the intersection between
+ the radial line and the grid circle. You can also choose to have the
+ label positioned slightly outside the circular grid. This is all
+ controlled by the method<I> WindrosePlotScale::SetLabelAlign($aAlign)</I>
+. Possible values for the argument is
+<UL>
+<LI>LBLALIGN_CENTER, The default. Center the label</LI>
+<LI>LBLALIGN_TOP, Optional. Position the label slightly outside the
+ circular grid line.</LI>
+</UL><P>
+<H3><A NAME="3_2_3">3.2.3 Specifying number formats</A></H3><P>
+ The final formatting option is to specify the number format of the
+ label. This is specified as a ordinary &quot;printf()&quot; format string. The
+ format is specified with a call to<I>
+ WindrosePlotScale::SetLabelFormat($aFmt)</I>. For example the code
+ snippet below makes the label display 1 decimal and adding a '%' sign.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$windroseplot-&gt;scale-&gt;SetLabelFormat('%.1f%%');
+<BR />...</FONT></CODE></B></DIV>
+<P></P>
+<H3><A NAME="3_2_4">3.2.4 Specifying a manual scale</A></H3><P>
+ By default the scale is automatically determined based on the size of
+ the plot and the values to be displayed. The automatic scaling favors
+ multiple of 5:s and if the plot is big enough it the scaling algorithm
+ might on rare occasions decide that multiples of 2:s are more
+ appropriate. The automatic scaling will only choose between these
+ values.
+<P> It is also possible to manually set the step size for the scale.
+ This is all done with a call to the method<I>
+ WindrosePlotScale::SetStepSize($aStep)</I>. The maximum value will be
+ the first multiple of the scale value that is large enough to cover the
+ largest leg in the plot.</P>
+<H3><A NAME="3_2_5">3.2.5 Hiding the labels</A></H3><P>
+ Finally it is possible to completely hide the scale labels with a call
+ to<I> WindrosePlotScale::Hide($aFlg=true)</I>
+<H3><A NAME="3_2_6">3.2.6 Specifying the Zero-circle label</A></H3><P>
+ By default the Zero circle in the middle gets assigned the value of the
+ sum of the '0'-values specified in the input data. You can manually
+ change either the label value/text and/or the font and font color used.
+ The methods use to control this are:
+<UL>
+<LI><I> WindrosePlotScale::SetZeroLabel($aTxt)</I>, Specify arbitrary
+ text as the label</LI>
+<LI><I> WindrosePlotScale::SetZFontColor($aColor)</I>, Specifies the
+ font color</LI>
+<LI><I>
+WindrosePlotScale::SetZFont($aFontFamily,$aFontStyle=FS_NORMAL,$aFontSize=10)
+</I> , Specify the font</LI>
+</UL><P>
+<H2><A NAME="3_3">3.3 Formatting the legend</A></H2><P>
+ All the property for the legend is access through the<I> legend</I>
+ property of the windrose plot as shown in the examples below.
+<H3><A NAME="3_3_1">3.3.1 Turning off the legend</A></H3><P>
+ By default the legend is shown for each plot. You can turn it off with
+ a call to<I> LegendStyle::Hide();</I> as the following code snippet
+ shows.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$windroseplot-&gt;legend-&gt;Hide();
+<BR />...</FONT></CODE></B></DIV>
+<P></P>
+<H3><A NAME="3_3_2">3.3.2 Adjusting the legend position</A></H3><P>
+ In version 1.0 of Windrose plot it is not possible to fully adjust the
+ position of the plot legend.
+<P> However, you can manually adjust the margin between</P>
+<UL>
+<LI> ... the Windrose plot and the legend</LI>
+<LI> ... the bottom of the box around a single plot and the legend</LI>
+</UL><P>
+ Both these margins are adjusted with a call to<I>
+ LegendStyle::SetMargin($aMargin)</I>. For example by adding the
+ following lines to your script
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$windroseplot-&gt;legend-&gt;SetMargin(25);
+<BR />...</FONT></CODE></B></DIV>
+<P> By default this margin to the Windrose plot is 10 pixels and to the
+ bottom of the plot box is 5 pixels. Note that the legend positioning
+ will automatically adjust for any increase in the font size for the
+ compass directions to ensure that the legend will never collide with
+ the labels when large fonts are used.</P>
+<H3><A NAME="3_3_3">3.3.3 Adjusting the length of each legend window leg</A>
+</H3><P>
+ By default the length of each legend leg is just long enough (with a
+ little bit to spare) to cover the range labels just on top of the
+ legend legs. It can never be set to smaller than that but it can be
+ made larger with a call to<I> LegendStyle::SetLength($aLength)</I>
+<H2><A NAME="3_4">3.4 Formatting the windrose plot</A></H2><P>
+<H3><A NAME="3_4_1">3.4.1 Adjusting the grid colors</A></H3><P>
+ You can set the colors of both the radial grid and the circular grid.
+ This is done with the method<I>
+ WindrosePlot::SetGridColor($aColor1,$aColor2)</I>. The first argument
+ specifies the grid circle color and the second argument specifies the
+ radial grid colors.
+<H3><A NAME="3_4_2">3.4.2 Adjusting the weight of the grid circles</A></H3><P>
+ To adjust the weight (thickness) of the grid lines (both circle and
+ radial lines) the method<I>
+ WindrosePlot::SetGridWeight($aWeight1,$aWeight2)</I> is used. The first
+ argument specifies the weight of the circle and the second the weight
+ of the radial lines.
+<HR><P> <SMALL><B> Note 1:</B> You can also have individual colors of
+ radial grid lines (and line style &amp;weight) by using any of the
+ SetRadialColors(), SetRadialWeight(),SetRadialStyles() methods. As
+ described further on in this manual and in Example 8 and 9.
+<BR><B> Note 2:</B> Due to technical and performance limitations circle
+ weight can only be specified in the range [1,3] (inclusively).</SMALL>
+<HR><P>
+<H3><A NAME="3_4_3">3.4.3 Adding a box around the plot</A></H3><P>
+ You can add a rectangular box around the plot by using the method<I>
+ WindrosePlot::SetBox($aColor,$aWeight,$aShow)</I>
+<H2><A NAME="3_5">3.5 Including a graph in a PDF</A></H2><P>
+ <SMALL><I>This information assumes that the PDFlib in installed and
+ available in the PHP setup being used. This very short paragraph is in
+ no way a replacement for reading the full PDFlib documentation. It is
+ just intended to give some ideas on how this can be done.</I></SMALL>
+<P> Instead of stroking the image to a file or back to the browser you
+ can get hold of the internal GD handle that represents the graph. This
+ is done by specifying the constant<I> _IMG_HANDLER</I> as the file name
+ in the call to<I> Stroke()</I>. This will tell the<I> Stroke()</I>
+ method to return the GD handle.</P>
+<P> In order to use the GD handle together with the PDFlib the image
+ must be loaded into memory by a call to<I> pdf_open_memory_image($pdf,
+ $im)</I> The following snippet shows how you can produce and send back
+ a PDF page to the browser. Please note that this is<B> not</B>
+ production quality code!
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$graph = new WindroseGraph(...);
+<BR />
+<BR /> // Code to create the graph
+<BR /> // .........................
+<BR /> // .........................
+<BR />
+<BR /> // Put the image in a PDF page by first getting the GD handle
+<BR />$im = $graph-&gt;Stroke(_IMG_HANDLER);
+<BR />
+<BR /> $pdf = pdf_new();
+<BR /> pdf_open_file($pdf, &quot;&quot;);
+<BR />
+<BR /> // Convert the GD image to somehing the
+<BR /> // PDFlibrary knows how to handle
+<BR /> $pimg = pdf_open_memory_image($pdf, $im);
+<BR />
+<BR /> // Setup a basic PDF page
+<BR />pdf_begin_page($pdf, 595, 842);
+<BR /> pdf_add_outline($pdf, &quot;Page 1&quot;);
+<BR /> pdf_place_image($pdf, $pimg, 0, 500, 1);
+<BR /> pdf_close_image($pdf, $pimg);
+<BR /> pdf_end_page($pdf);
+<BR /> pdf_close($pdf);
+<BR />
+<BR /> // Prepare to output the PDF page
+<BR />$buf = pdf_get_buffer($pdf);
+<BR /> $len = strlen($buf);
+<BR />
+<BR /> header(&quot;Content-type: application/pdf&quot;);
+<BR /> header(&quot;Content-Length: $len&quot;);
+<BR /> header(&quot;Content-Disposition: inline; filename=foo.pdf&quot;);
+<BR />
+<BR /> echo $buf;
+<BR />
+<BR /> pdf_delete($pdf);
+<BR />...</FONT></CODE></B></DIV></P>
+<P></P>
+<H2><A NAME="3_6">3.6 Highlighting specific compass directions</A></H2><P>
+ In order to emphasize certain directions it is possible to individually
+ adjust the radial lines look &amp;feel. For example in a free plot if
+ directions 134 degrees is especially important we might want to make
+ the radial grid line supporting that direction wider, solid and red
+ while maintaining a low profile on the other directions.
+<P> This is easily accomplished by the use of one or more of the three
+ plot methods<I> SetRadialColors($aColors)</I>,<I>
+ SetRadialWeights($aWeights)</I> and<I> SetRadialStyles($aStyles)</I>
+ These method all take arrays as argument. The arrays specifies what
+ direction and what style to use. So, for example to make the
+ &quot;Southwest&quot; grid red one would add the lines
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> colors = array('sw' =&gt; 'red');
+<BR />$windplot-&gt;SetRadialColors($colors);</FONT></CODE></B></DIV></P>
+<P> As direction you can either specify the (localized) name of the
+ direction or the index/direction depending on if it is a free or
+ regular type of plot. Any direction which hasn't been explicitely
+ specified in the array will use the default colors (As Specified by<I>
+ SetGridColor()</I>) and the default weight (as specified by<I>
+ SetGridWeight()</I>).</P>
+<P> In appendix A there are two full examples (8 and 9) that
+ demonstrates how to use this feature.</P>
+<H2><A NAME="3_7">3.7 Miscellaneous formatting</A></H2><P>
+<H3><A NAME="3_7_1">3.7.1 Adjusting the shape of the windrose leg</A></H3><P>
+ In version 1.0 the windrose plots only supports rectangular shape of
+ the windrose legs. For version 1.1 there will also be support for legs
+ where the width increases the further out from the center the leg
+ extends.
+<H3><A NAME="3_7_2">3.7.2 Adjusting the size of the center zero circle</A>
+</H3><P>
+ The size of the center circle can be manually adjusted as either
+ specified in absolute number of pixels or as fractions of the windrose
+ plot (not the entire windrose graph). This is done with the method<I>
+ WindrosePlot::SetZCircleSize($aSize)</I>
+<H2><A NAME="3_8">3.8 Adding a background image</A></H2><P>
+ In the same way as with the other types of plots in JpGraph there is a
+ possibility to add a background image in the graph. However, due to
+ limitations with the way the extended AntiAlias in WindrosePlots is
+ implemented it is not possible to use background images when this
+ (default) behavior is enabled.
+<P> (It is technically possible to correct this limitations but the
+ performance hit of doing this is completely unacceptable since that
+ would require pixel-level manipulation directly in PHP).</P>
+<P></P>
+<HR><P> To use background images the extended anti alias feature in
+ windrose plots must be disabled with a call to<I>
+ Windrosegraph::SetAntiAlias(false)</I>
+<HR><P>
+<P> In order to add a background image the normal method<I>
+ SetBackgroundImage()</I> is used. The following code snippet shows how
+ this is done.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$graph-&gt;SetBackgroundImage('mybackground.jpg',BGIMG_FILLFRAME);
+<BR />...</FONT></CODE></B></DIV></P>
+<P> The above example puts the image covering the entire graph area.
+ Remember that you can also adjust the mixing level of the background
+ image with a call to<I> SetBackgroundImageMix($aMixLevel)</I> This
+ determines how much of the image is blended with the background color.
+ An argument of 100 takes 100 percent of the image and a value of 0 is
+ the same as not displaying the background image at all.</P>
+<H2><A NAME="3_9">3.9 Adjusting the interpretation for ordinal keys in
+ data</A></H2><P>
+ As previously stated the position for data values in the plot, (when
+ the ' key is specified as an integer), is the index of the displayed
+ axis counted counter-clockwise from &quot;East&quot;.
+<P> Another possibility which seems to be standard in some application
+ of Windrose plots is to start counting clockwise from the first axis<B>
+ after</B> the &quot;North&quot; axis. Depending on if the plots displays 16 , 8
+ or 3 axis this first axis (with ordinal number 0) would then be either
+ &quot;NNE&quot;, &quot;NE&quot; or &quot;E&quot;.</P>
+<P> To adjust the interpretation the method<I>
+ WindrosePlot::SetDataKeyEncoding($aEncoding)</I> is used. Possible
+ values for the parameter are</P>
+<UL>
+<LI> KEYENCODING_CLOCKWISE, This setting will force the plot to
+ interpret the key in the data as counted clockwise. The axis with
+ 0-index is taken to be the first existing axis just to the right of
+ &quot;North&quot; counted clockwise.</LI>
+<LI> KEYENCODING_ANTICLOCKWISE, This setting will force the plot to
+ interpret the key in the data as counted counter-clockwise. The axis
+ with the 0-index is the &quot;East&quot; axis.</LI>
+</UL><P>
+ By default the setting is KEYENCODING_ANTICLOCKWISE. Figure 14
+ illustrates how the same data can be interpretated in two different way
+ depending on this setting. The data in both figure a) and b) was given
+ by the array
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> $data=array( 1 =&gt; array(3,4,1,4,2), 5 =&gt;
+ array(1,5,5,3);</FONT></CODE></B></DIV>
+<P></P>
+<P></P>
+<TABLE>
+<TR><TD valign="top"><IMG HEIGHT="310" src="windrosy.png" WIDTH="310">
+<BR> <SMALL><B>Figure 14a</B>.<I> Using the default counter clockwise
+ numbering schema.</I></SMALL></TD><TD>&nbsp;</TD><TD valign="top"><IMG HEIGHT="310"
+src="windrosz.png" WIDTH="310">
+<BR> <SMALL><B>Figure 14b</B>.<I> Using the clockwise counting schema.</I>
+</SMALL></TD></TR>
+<TR><TD colspan="3">
+<BR></TD></TR>
+</TABLE>
+<H2><A NAME="3_10">3.10 Localizing the default names for the compass
+ directions</A></H2><P>
+ By default the compass directions are presented in &quot;English&quot; using the
+ standard English denominations for the 16 compass directions. If you
+ want to localize the name this is done with a call to the method<I>
+ WindrosePlot::SetCompassLabels()</I>. The order of the names for the
+ directions should start with the corresponding name for &quot;East&quot; and then
+ continue counter-clockwise all the way to &quot;East North East&quot;. Adjusting
+ the names for the compass directions means two things:
+<UL>
+<LI> If there is named direction in the data (as key) that key must now
+ also be in localized form.</LI>
+<LI> The displayed names for the compass direction will be shown in
+ localized form.</LI>
+</UL><P>
+ For example, the code snippet below shows how to localize the compass
+ directions into Swedish.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$data = array(
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;'sso' =&gt; array(12,8,2,3),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;6 =&gt; array(5,4,4,5,4),
+<BR />);
+<BR />$se_CompassLbl =
+<BR />
+array('O','ONO','NO','NNO','N','NNV','NV','VNV','V','VSV','SV','SSV','S','SSO','SO','OSO');
+<BR />....
+<BR />$windroseplot-&gt;SetCompassLabels($se_CompassLbl);
+<BR />...
+<BR /></FONT></CODE></B></DIV>
+<P> and might look something like what is shown in Figure 15 below.</P>
+<P>
+<TABLE>
+<TR><TD valign="top"><IMG HEIGHT="400" src="windrot0.png" WIDTH="400">
+<BR> <SMALL><B>Figure 15</B>.<I> Adjusting the locale for Compass
+ directions. In the figure above we have changed the locale to represent
+ the Swedish names for the directions.</I></SMALL></TD></TR>
+</TABLE>
+<H2><A NAME="3_11">3.11  Adding a rectangle around an individual plot</A>
+</H2><P>
+ Each plot on a graph can have a rectangle around it. This is controlled
+ with a call to<I> WindrosePlot::SetBox()</I>. For example the following
+ code snippet adds a navy blue box around the plot.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"> ...
+<BR />$windroseplot-&gt;SetBox('navy');
+<BR />...</FONT></CODE></B></DIV>
+<P></P>
+<P></P>
+<H1><A NAME="4">4 Appendix: Commented examples of windrose scripts</A></H1>
+<H2><A NAME="4_1">4.1 Example 1</A></H2><P>
+ This example is available in the example directory as
+ &quot;windrose_ex1.php&quot;.
+<H3><A NAME="4_1_1">4.1.1 Objectives:</A></H3><P>
+<OL>
+<LI>Showing a complete but elementary windrose plot using mostly default
+ values.</LI>
+<LI>Adding and formatting a title</LI>
+<LI>Adding a legend text in order to show the units.</LI>
+<LI>Showing how to specify data using both ordinal and textual
+ representation of compass directions.</LI>
+</OL>
+<H3><A NAME="4_1_2">4.1.2 Script</A></H3><P>
+<TABLE cellpadding="0" style="border:solid black 1pt;">
+<TR><TD><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+File: windrose_ex1.php
+<BR><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php
+<BR /></FONT><FONT color="#000000">
+/*=======================================================================
+<BR />// File:&nbsp;&nbsp;&nbsp;&nbsp;WINDROSE_EX1.PHP
+<BR />// Description:&nbsp;&nbsp;&nbsp;&nbsp;Example 1 of how to use windrose plots
+<BR />// Created: &nbsp;&nbsp;&nbsp;&nbsp;2003-09-26
+<BR />
+//=======================================================================
+<BR />*/
+<BR /></FONT><FONT color="#007700">require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph.php'</FONT><FONT color="#007700">);
+<BR />require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph_windrose.php'</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Data can be specified using both ordinal index of the axis
+<BR /> // as well as the direction label
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =
+ array(
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+2.5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">'wsw'</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">'N'</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">7</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">
+),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">15</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">7</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+12</FONT><FONT color="#007700">));
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// First create a new windrose graph with a title
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindroseGraph</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">400</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">400</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Setup title
+<BR /> //---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'Windrose
+ example 1'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_VERDANA</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_BOLD</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">12</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'navy'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Create the windrose plot. (Each graph may have multiple plots)
+<BR />// The default plot will have 16 compass axis.
+<BR />//----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindrosePlot</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetRadialGridStyle</FONT><FONT color="#007700">(</FONT><FONT
+color="#DD0000">'solid'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$wp</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Send the graph to the browser
+<BR />//----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR /></FONT><FONT color="#0000BB">?&gt;
+<BR /></FONT>
+<BR /></FONT></CODE></DIV></TD></TR>
+</TABLE>
+<H3><A NAME="4_1_3">4.1.3 Resulting image</A></H3><P>
+ <IMG HEIGHT="400" src="windrot1.png" WIDTH="400">
+<BR> <SMALL><B>Figure A.1</B>.<I> Example 1.</I></SMALL>
+<H2><A NAME="4_2">4.2 Example 2</A></H2><P>
+ This example is available in the example directory as
+ &quot;windrose_ex2.php&quot;.
+<H3><A NAME="4_2_1">4.2.1 Objectives:</A></H3><P>
+<OL>
+<LI> Showing how to customize the width of the windrose legs</LI>
+<LI> Showing how to only display 8 compass axis</LI>
+<LI> Showing how to set a specific size in pixels for the plot</LI>
+<LI> Showing how to adjust the size of the center circle</LI>
+<LI> Showing how to adjust scale label font &amp;colors</LI>
+<LI> Showing how to adjust the font for the compass directions</LI>
+</OL>
+<H3><A NAME="4_2_2">4.2.2 Script</A></H3><P>
+<TABLE cellpadding="0" style="border:solid black 1pt;">
+<TR><TD><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+File: windrose_ex2.php
+<BR><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php
+<BR /></FONT><FONT color="#000000">
+/*=======================================================================
+<BR />// File:&nbsp;&nbsp;&nbsp;&nbsp;WINDROSE_EX2.PHP
+<BR />// Description:&nbsp;&nbsp;&nbsp;&nbsp;Example 2 of how to use windrose plots
+<BR />// Created: &nbsp;&nbsp;&nbsp;&nbsp;2003-10-12
+<BR />
+//=======================================================================
+<BR />*/
+<BR /></FONT><FONT color="#007700">require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph.php'</FONT><FONT color="#007700">);
+<BR />require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph_windrose.php'</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Data can be specified using both ordinal index of the axis
+<BR /> // as well as the direction label
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =
+ array(
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+2.5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">7</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">
+),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">5</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">7</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">));
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// First create a new windrose graph with a title
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindroseGraph</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">400</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">400</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Setup title
+<BR /> //---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'Windrose
+ example 2'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_VERDANA</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_BOLD</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">12</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'navy'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Create the windrose plot. (Each graph may have multiple plots)
+<BR />//----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindrosePlot</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Make it have 8 compass direction
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetType</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+WINDROSE_TYPE8</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Setup the weight of the laegs for
+ the different ranges
+<BR /></FONT><FONT color="#0000BB">$weights</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> array_fill</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+8</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">10</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetRangeWeights</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$weights</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Adjust the font and font color for
+ scale labels
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_TIMES</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">11</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFontColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'navy'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Set the diametr for the plot to
+ 160 pixels
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetSize</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+160</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000"> // Set the size of the innermost
+ center circle to 30% of the plot size
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetZCircleSize</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+0.2</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Adjust the font and font color for
+ compass directions
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">12</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFontColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'darkgreen'</FONT><FONT color="#007700">);
+<BR />
+<BR />
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$wp</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Send the graph to the browser
+<BR />//----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR /></FONT><FONT color="#0000BB">?&gt;
+<BR /></FONT>
+<BR /></FONT></CODE></DIV></TD></TR>
+</TABLE>
+<P> <SMALL><I><B> Note:</B> You can see the effect of the auto-scaling
+ algorithm by adjusting the size of the center (zero) circle. If this
+ circle is made larger it might become too little space for the scale
+ and the auto-scaling might decide to go with a larger step size. Try
+ change the center size to 0.4 and see what happens.</I></SMALL></P>
+<H3><A NAME="4_2_3">4.2.3 Resulting image</A></H3><P>
+ <IMG HEIGHT="400" src="windrot2.png" WIDTH="400">
+<BR> <SMALL><B>Figure A.2</B>.<I> Example 2.</I></SMALL>
+<H2><A NAME="4_3">4.3 Example 3</A></H2><P>
+ This example is available in the example directory as
+ &quot;windrose_ex3.php&quot;.
+<H3><A NAME="4_3_1">4.3.1 Objectives:</A></H3><P>
+<OL>
+<LI> Showing how to add multiple plots to the same graph</LI>
+<LI> Showing how to add a subtitle and a drop shadow to the graph</LI>
+<LI> Showing how to change size and position for plots</LI>
+<LI> Showing how to add legend text</LI>
+</OL>
+<H3><A NAME="4_3_2">4.3.2 Script</A></H3><P>
+<TABLE cellpadding="0" style="border:solid black 1pt;">
+<TR><TD><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+File: windrose_ex3.php
+<BR><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php
+<BR /></FONT><FONT color="#000000">
+/*=======================================================================
+<BR />// File:&nbsp;&nbsp;&nbsp;&nbsp;WINDROSE_EX3.PHP
+<BR />// Description:&nbsp;&nbsp;&nbsp;&nbsp;Example 3 of how to use windrose plots
+<BR />// Created: &nbsp;&nbsp;&nbsp;&nbsp;2003-10-12
+<BR />
+//=======================================================================
+<BR />*/
+<BR /></FONT><FONT color="#007700">require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph.php'</FONT><FONT color="#007700">);
+<BR />require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph_windrose.php'</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Data can be specified using both ordinal index of the axis
+<BR /> // as well as the direction label
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">0</FONT><FONT color="#007700">] = array(
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+2.5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">7</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">
+),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">5</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">7</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">));
+<BR />
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">] = array(
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">&quot;n&quot;</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+2.5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">&quot;ssw&quot;</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">&quot;se&quot;</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">7</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">
+));
+<BR />
+<BR /></FONT><FONT color="#000000">
+//--------------------------------------------------------
+<BR />// Store the position and size data for each plot in an
+<BR /> // array to make it easier to create multiple plots.
+<BR />// The format choosen for the layout data is
+<BR />// (type,x-pos,y-pos,size, z-circle size)
+<BR />//--------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$layout</FONT><FONT color="#007700">
+ = array(
+<BR /> &nbsp;&nbsp;&nbsp;&nbsp;array(</FONT><FONT color="#0000BB">WINDROSE_TYPE8</FONT><FONT color="#007700">
+,</FONT><FONT color="#0000BB">0.25</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">0.55</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+0.4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0.25</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;array(</FONT><FONT color="#0000BB">WINDROSE_TYPE16</FONT><FONT color="#007700">
+,</FONT><FONT color="#0000BB">0.75</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">0.55</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+0.4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0.25</FONT><FONT
+color="#007700">));
+<BR />
+<BR /></FONT><FONT color="#0000BB">$legendtxt</FONT><FONT color="#007700">
+ = array(</FONT><FONT color="#DD0000">'(m/s) Station 7'</FONT><FONT color="#007700">
+,</FONT><FONT color="#DD0000">'(m/s) Station 12'</FONT><FONT color="#007700">
+);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// First create a new windrose graph with a dropshadow
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindroseGraph</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">600</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">350</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetShadow</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'darkgray'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Setup title
+<BR /> //---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'Windrose
+ example 3'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_VERDANA</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_BOLD</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">12</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'navy'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Setup subtitle
+<BR /> //---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">subtitle</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'(Multiple
+ plots in the same graph)'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">subtitle</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_VERDANA</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">9</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">subtitle</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'navy'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Create the two windrose plots.
+<BR />
+ //----------------------------------------------------------------
+<BR /></FONT><FONT color="#007700">for(</FONT><FONT color="#0000BB"> $i</FONT><FONT
+color="#007700">=</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">
+;</FONT><FONT color="#0000BB"> $i</FONT><FONT color="#007700"> &lt;</FONT><FONT
+color="#0000BB"> count</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$data</FONT><FONT color="#007700">); ++</FONT><FONT color="#0000BB">$i</FONT><FONT
+color="#007700"> ) {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">$i</FONT><FONT color="#007700">] = new</FONT><FONT color="#0000BB">
+ WindrosePlot</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$data</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">$i</FONT><FONT
+color="#007700">]);
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#000000">// Make it have 8 compass
+ direction
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">$i</FONT><FONT color="#007700">]-&gt;</FONT><FONT color="#0000BB">
+SetType</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$layout</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">$i</FONT><FONT
+color="#007700">][</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">
+]);
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#000000">// Adjust the font and font color
+ for scale labels
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">$i</FONT><FONT color="#007700">]-&gt;</FONT><FONT color="#0000BB">
+scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">FF_TIMES</FONT><FONT color="#007700">
+,</FONT><FONT color="#0000BB">FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">10</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">$i</FONT><FONT color="#007700">]-&gt;</FONT><FONT color="#0000BB">
+scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFontColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'navy'</FONT><FONT color="#007700">);
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#000000">// Set the position of the plot
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">$i</FONT><FONT color="#007700">]-&gt;</FONT><FONT color="#0000BB">
+SetPos</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$layout</FONT><FONT
+color="#007700">[</FONT><FONT color="#0000BB">$i</FONT><FONT color="#007700">
+][</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">],</FONT><FONT
+color="#0000BB">$layout</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">
+$i</FONT><FONT color="#007700">][</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">]);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#000000">// Set the diameter for the plot
+ to 30% of the width of the graph pixels
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">$i</FONT><FONT color="#007700">]-&gt;</FONT><FONT color="#0000BB">
+SetSize</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$layout</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">$i</FONT><FONT
+color="#007700">][</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">
+]);
+<BR />
+<BR /> &nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#000000">// Set the size of the innermost
+ center circle to 30% of the plot size
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">$i</FONT><FONT color="#007700">]-&gt;</FONT><FONT color="#0000BB">
+SetZCircleSize</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$layout</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">$i</FONT><FONT
+color="#007700">][</FONT><FONT color="#0000BB">4</FONT><FONT color="#007700">
+]);
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#000000">// Adjust the font and font color
+ for compass directions
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">$i</FONT><FONT color="#007700">]-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">10</FONT><FONT
+color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">$i</FONT><FONT color="#007700">]-&gt;</FONT><FONT color="#0000BB">
+SetFontColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'darkgreen'</FONT><FONT color="#007700">);
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#000000">// Add legend text
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">$i</FONT><FONT color="#007700">]-&gt;</FONT><FONT color="#0000BB">
+legend</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetText</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$legendtxt</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">$i</FONT><FONT
+color="#007700">]);
+<BR />
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$wp</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">
+$i</FONT><FONT color="#007700">]);
+<BR />}
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Send the graph to the browser
+<BR />//----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR /></FONT><FONT color="#0000BB">?&gt;
+<BR /></FONT>
+<BR /></FONT></CODE></DIV></TD></TR>
+</TABLE>
+<H3><A NAME="4_3_3">4.3.3 Resulting image</A></H3><P>
+ <IMG HEIGHT="350" src="windrot3.png" WIDTH="600">
+<BR> <SMALL><B>Figure A.3</B>.<I> Example 3.</I></SMALL>
+<H2><A NAME="4_4">4.4 Example 4</A></H2><P>
+ This example is available in the example directory as
+ &quot;windrose_ex4.php&quot;.
+<H3><A NAME="4_4_1">4.4.1 Objectives:</A></H3><P>
+<OL>
+<LI> Showing how to add arbitrary paragraphs of text to a graph</LI>
+<LI> Showing how to manually set the grid distance</LI>
+<LI> Showing how to adjust the grid colors</LI>
+<LI> Showing how to customize the format for the displayed ranges</LI>
+<LI> Showing how to add arbitrary text to the center circle</LI>
+<LI> Showing how to adjust the margin for the legend</LI>
+<LI> Showing how to increase the margin to the compass directions</LI>
+</OL>
+<H3><A NAME="4_4_2">4.4.2 Script</A></H3><P>
+<TABLE cellpadding="0" style="border:solid black 1pt;">
+<TR><TD><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+File: windrose_ex4.php
+<BR><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php
+<BR /></FONT><FONT color="#000000">
+/*=======================================================================
+<BR />// File:&nbsp;&nbsp;&nbsp;&nbsp;WINDROSE_EX4.PHP
+<BR />// Description:&nbsp;&nbsp;&nbsp;&nbsp;Example 4 of how to use windrose plots
+<BR />// Created: &nbsp;&nbsp;&nbsp;&nbsp;2003-10-12
+<BR />
+//=======================================================================
+<BR />*/
+<BR /></FONT><FONT color="#007700">require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph.php'</FONT><FONT color="#007700">);
+<BR />require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph_windrose.php'</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Data can be specified using both ordinal index of the axis
+<BR /> // as well as the direction label
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =
+ array(
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+2.5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">7</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">
+),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">5</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">7</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">));
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// First create a new windrose graph with a title
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindroseGraph</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">400</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">400</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Setup title
+<BR /> //---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'Windrose
+ example 4'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_VERDANA</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_BOLD</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">12</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'navy'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Create the windrose plot.
+<BR />
+ //----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindrosePlot</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Adjust the font and font color for
+ scale labels
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_TIMES</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">11</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFontColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'navy'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Set the diameter and position for
+ plot
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetSize</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+190</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000"> // Set the size of the innermost
+ center circle to 40% of the plot size
+<BR />// Note that we can have the automatic &quot;Zero&quot; sum appear in our
+ custom text
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetZCircleSize</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+0.38</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetZeroLabel</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+&quot;Station 12\n(Calm %d%%)&quot;</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Adjust color and font for center
+ circle text
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetZFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">9</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetZFontColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'darkgreen'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Adjust the font and font color for
+ compass directions
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">10</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFontColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'darkgreen'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Adjust the margin to the compass
+ directions
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetLabelMargin</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+50</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Adjust grid colors
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetGridColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'silver'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'blue'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Add (m/s) text to legend
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">legend</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetText</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'(m/s)'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">legend</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetMargin</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">20</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">5</FONT><FONT color="#007700">
+);
+<BR />
+<BR /></FONT><FONT color="#000000">// Add plot to graph
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$wp</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Send the graph to the browser
+<BR />//----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR /></FONT><FONT color="#0000BB">?&gt;
+<BR /></FONT>
+<BR /></FONT></CODE></DIV></TD></TR>
+</TABLE>
+<H3><A NAME="4_4_3">4.4.3 Resulting image</A></H3><P>
+ <IMG HEIGHT="400" src="windrot4.png" WIDTH="400">
+<BR> <SMALL><B>Figure A.4</B>.<I> Example 4.</I></SMALL>
+<H2><A NAME="4_5">4.5 Example 5</A></H2><P>
+ This example is available in the example directory as
+ &quot;windrose_ex5.php&quot;.
+<H3><A NAME="4_5_1">4.5.1 Objectives:</A></H3><P>
+<OL>
+<LI> Showing how to specify graph and plot background colors</LI>
+<LI> Showing how to change the plot type to a free direction type plot</LI>
+<LI> Showing how to localize the compass directions</LI>
+<LI> Showing how to add a box/frame around the individual plot</LI>
+<LI> Showing how to add a text box to the graph</LI>
+<LI> Showing how to set customized colors for the ranges</LI>
+</OL>
+<H3><A NAME="4_5_2">4.5.2 Script</A></H3><P>
+<TABLE cellpadding="0" style="border:solid black 1pt;">
+<TR><TD><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+File: windrose_ex5.php
+<BR><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php
+<BR /></FONT><FONT color="#000000">
+/*=======================================================================
+<BR />// File:&nbsp;&nbsp;&nbsp;&nbsp;WINDROSE_EX4.PHP
+<BR />// Description:&nbsp;&nbsp;&nbsp;&nbsp;Example 4 of how to use windrose plots
+<BR />// Created: &nbsp;&nbsp;&nbsp;&nbsp;2003-10-12
+<BR />
+//=======================================================================
+<BR />*/
+<BR /></FONT><FONT color="#007700">require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph.php'</FONT><FONT color="#007700">);
+<BR />require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph_windrose.php'</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Data can be specified using both ordinal index of the axis
+<BR /> // as well as the direction label
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =
+ array(
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+2.5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">7</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">
+),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">5</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">7</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">));
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Text to be added.
+<BR /> //---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$txt</FONT><FONT color="#007700">
+=array();
+<BR /></FONT><FONT color="#0000BB">$txt</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">0</FONT><FONT color="#007700">] =</FONT><FONT color="#DD0000">
+ &quot;It is possible to add arbitrary,multi line, text to a graph. &quot;</FONT><FONT
+color="#007700">;
+<BR /></FONT><FONT color="#0000BB">$txt</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">0</FONT><FONT color="#007700">] .=</FONT><FONT color="#DD0000">
+ &quot;Such a paragraph can have it's text be left, right or center &quot;</FONT><FONT
+color="#007700">;
+<BR /></FONT><FONT color="#0000BB">$txt</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">0</FONT><FONT color="#007700">] .=</FONT><FONT color="#DD0000">
+ &quot;aligned.&quot;</FONT><FONT color="#007700">;
+<BR /></FONT><FONT color="#0000BB">$txt</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">] =</FONT><FONT color="#DD0000">
+ &quot;This is an example of a right aligned paragraph.&quot;</FONT><FONT color="#007700">
+;
+<BR /></FONT><FONT color="#0000BB">$txt</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">2</FONT><FONT color="#007700">] =</FONT><FONT color="#DD0000">
+ &quot;Finally we can show a center aligned paragraph without box.&quot;</FONT><FONT
+color="#007700">;
+<BR />
+<BR /></FONT><FONT color="#000000">// We store the layout for each of
+ the text boxes in an array
+<BR />// to keep the code clean
+<BR /></FONT><FONT color="#0000BB">$txtlayout</FONT><FONT color="#007700">
+ = array(
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;array(</FONT><FONT color="#0000BB">0.97</FONT><FONT color="#007700">
+,</FONT><FONT color="#0000BB">0.15</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">25</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'left'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">'black'</FONT><FONT
+color="#007700">,</FONT><FONT color="#DD0000">'lightblue'</FONT><FONT color="#007700">
+),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;array(</FONT><FONT color="#0000BB">0.97</FONT><FONT color="#007700">
+,</FONT><FONT color="#0000BB">0.4</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">20</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'right'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'black'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'lightblue'</FONT><FONT color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;array(</FONT><FONT color="#0000BB">0.97</FONT><FONT color="#007700">
+,</FONT><FONT color="#0000BB">0.7</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">20</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'center'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'darkred'</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+false</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FF_COMIC</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">FS_NORMAL</FONT><FONT color="#007700">
+,</FONT><FONT color="#0000BB">12</FONT><FONT color="#007700">),
+<BR />);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Range colors to be used
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$rangeColors</FONT><FONT color="#007700">
+ = array(</FONT><FONT color="#DD0000">'silver'</FONT><FONT color="#007700">
+,</FONT><FONT color="#DD0000">'khaki'</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">'orange'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'brown'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">'blue'</FONT><FONT
+color="#007700">,</FONT><FONT color="#DD0000">'navy'</FONT><FONT color="#007700">
+,</FONT><FONT color="#DD0000">'maroon'</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">'red'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// First create a new windrose graph with a title
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindroseGraph</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">570</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">430</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Setup title
+<BR /> //---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'Windrose
+ example 5'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_VERDANA</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_BOLD</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">12</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'navy'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Setup graph background color
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'darkgreen@0.7'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Setup all the defined text boxes
+<BR />//----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$n</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> count</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$txt</FONT><FONT color="#007700">);
+<BR />for(</FONT><FONT color="#0000BB"> $i</FONT><FONT color="#007700">=</FONT><FONT
+color="#0000BB">0</FONT><FONT color="#007700">;</FONT><FONT color="#0000BB">
+ $i</FONT><FONT color="#007700"> &lt;</FONT><FONT color="#0000BB"> $n</FONT><FONT
+color="#007700">; ++</FONT><FONT color="#0000BB">$i</FONT><FONT color="#007700">
+ ) {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$txtbox</FONT><FONT color="#007700">
+[</FONT><FONT color="#0000BB">$i</FONT><FONT color="#007700">] = new</FONT><FONT
+color="#0000BB"> Text</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$txt</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">$i</FONT><FONT
+color="#007700">]);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$txtbox</FONT><FONT color="#007700">
+[</FONT><FONT color="#0000BB">$i</FONT><FONT color="#007700">]-&gt;</FONT><FONT
+color="#0000BB">SetPos</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$txtlayout</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">$i</FONT><FONT
+color="#007700">][</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">
+],</FONT><FONT color="#0000BB">$txtlayout</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">$i</FONT><FONT color="#007700">][</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">],</FONT><FONT color="#DD0000">'right'</FONT><FONT
+color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$txtbox</FONT><FONT color="#007700">
+[</FONT><FONT color="#0000BB">$i</FONT><FONT color="#007700">]-&gt;</FONT><FONT
+color="#0000BB">SetWordwrap</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$txtlayout</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">$i</FONT><FONT
+color="#007700">][</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">
+]);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$txtbox</FONT><FONT color="#007700">
+[</FONT><FONT color="#0000BB">$i</FONT><FONT color="#007700">]-&gt;</FONT><FONT
+color="#0000BB">SetParagraphAlign</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$txtlayout</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">
+$i</FONT><FONT color="#007700">][</FONT><FONT color="#0000BB">3</FONT><FONT
+color="#007700">]);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$txtbox</FONT><FONT color="#007700">
+[</FONT><FONT color="#0000BB">$i</FONT><FONT color="#007700">]-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$txtlayout</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">$i</FONT><FONT
+color="#007700">][</FONT><FONT color="#0000BB">4</FONT><FONT color="#007700">
+]);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$txtbox</FONT><FONT color="#007700">
+[</FONT><FONT color="#0000BB">$i</FONT><FONT color="#007700">]-&gt;</FONT><FONT
+color="#0000BB">SetBox</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$txtlayout</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">$i</FONT><FONT
+color="#007700">][</FONT><FONT color="#0000BB">5</FONT><FONT color="#007700">
+]);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;if(</FONT><FONT color="#0000BB"> count</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$txtlayout</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">$i</FONT><FONT color="#007700">]) &gt;</FONT><FONT color="#0000BB">
+ 6</FONT><FONT color="#007700"> )
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$txtbox</FONT><FONT color="#007700">
+[</FONT><FONT color="#0000BB">$i</FONT><FONT color="#007700">]-&gt;</FONT><FONT
+color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$txtlayout</FONT><FONT color="#007700">[</FONT><FONT color="#0000BB">$i</FONT><FONT
+color="#007700">][</FONT><FONT color="#0000BB">6</FONT><FONT color="#007700">
+],</FONT><FONT color="#0000BB">$txtlayout</FONT><FONT color="#007700">[</FONT><FONT
+color="#0000BB">$i</FONT><FONT color="#007700">][</FONT><FONT color="#0000BB">
+7</FONT><FONT color="#007700">],</FONT><FONT color="#0000BB">$txtlayout</FONT><FONT
+color="#007700">[</FONT><FONT color="#0000BB">$i</FONT><FONT color="#007700">
+][</FONT><FONT color="#0000BB">8</FONT><FONT color="#007700">]);
+<BR />}
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$txtbox</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Create the windrose plot.
+<BR />
+ //----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindrosePlot</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Set background color for plot area
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'lightyellow'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Add a box around the plot
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetBox</FONT><FONT color="#007700">();
+<BR />
+<BR /></FONT><FONT color="#000000">// Setup the colors for the ranges
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetRangeColors</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$rangeColors</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Adjust the font and font color for
+ scale labels
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">9</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFontColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'navy'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Set the diameter and position for
+ plot
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetSize</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+190</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB"> $wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetPos</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+0.35</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0.53</FONT><FONT
+color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#0000BB"> $wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetZCircleSize</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+0.2</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Adjust the font and font color for
+ compass directions
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">10</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFontColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'darkgreen'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Adjust the margin to the compass
+ directions
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetLabelMargin</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+50</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Adjust grid colors
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetGridColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'silver'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'blue'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Add (m/s) text to legend
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">legend</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetText</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'(m/s)'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">legend</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetMargin</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">20</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">5</FONT><FONT color="#007700">
+);
+<BR />
+<BR /></FONT><FONT color="#000000">// Add plot to graph
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$wp</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Send the graph to the browser
+<BR />//----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR /></FONT><FONT color="#0000BB">?&gt;
+<BR /></FONT>
+<BR /></FONT></CODE></DIV></TD></TR>
+</TABLE>
+<H3><A NAME="4_5_3">4.5.3 Resulting image</A></H3><P>
+ <IMG HEIGHT="430" src="windrot5.png" WIDTH="570">
+<BR> <SMALL><B>Figure A.5</B>.<I> Example 5.</I></SMALL>
+<H2><A NAME="4_6">4.6 Example 6</A></H2><P>
+ This example is available in the example directory as
+ &quot;windrose_ex6.php&quot;.
+<H3><A NAME="4_6_1">4.6.1 Objectives</A></H3><P>
+<OL>
+<LI> Showing how to create a &quot;free&quot; type plot (without fixed compass
+ directions)</LI>
+<LI> Showing a more &quot;harmonized&quot; range color scheme</LI>
+<LI> Showing how to set manual texts at specific directions</LI>
+<LI> Showing how to adjust the label margin</LI>
+<LI> Showing how to change the alignment of the label texts</LI>
+<LI> Showing how to change the format for displayed legend values</LI>
+</OL>
+<H3><A NAME="4_6_2">4.6.2 Script</A></H3><P>
+<TABLE cellpadding="0" style="border:solid black 1pt;">
+<TR><TD><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+File: windrose_ex6.php
+<BR><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php
+<BR /></FONT><FONT color="#000000">
+/*=======================================================================
+<BR />// File:&nbsp;&nbsp;&nbsp;&nbsp;WINDROSE_EX6.PHP
+<BR />// Description:&nbsp;&nbsp;&nbsp;&nbsp;Example 6 of how to use windrose plots
+<BR />// Created: &nbsp;&nbsp;&nbsp;&nbsp;2003-10-12
+<BR />
+//=======================================================================
+<BR />*/
+<BR /></FONT><FONT color="#007700">require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph.php'</FONT><FONT color="#007700">);
+<BR />require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph_windrose.php'</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Data can be specified using both ordinal index of the axis
+<BR /> // as well as the direction label
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =
+ array(
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">'10'&nbsp;&nbsp;</FONT><FONT color="#007700">
+=&gt; array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+2.5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">'32.0'</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">'120.5'</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">
+,</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">'223.2'</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">4</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">
+),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">'285.7'</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">4</FONT><FONT color="#007700">
+,</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">)
+<BR />);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Specify text for direction labels
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$labels</FONT><FONT color="#007700">
+ = array(</FONT><FONT color="#DD0000"> '120.5'</FONT><FONT color="#007700">
+ =&gt;</FONT><FONT color="#DD0000"> &quot;Plant\n#1275&quot;</FONT><FONT color="#007700">
+,
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000"> '285.7'</FONT><FONT color="#007700">
+ =&gt;</FONT><FONT color="#DD0000"> &quot;Reference\n#13 Ver:2&quot;</FONT><FONT color="#007700">
+);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Range colors to be used
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$rangeColors</FONT><FONT color="#007700">
+ = array(</FONT><FONT color="#DD0000">'khaki'</FONT><FONT color="#007700">
+,</FONT><FONT color="#DD0000">'yellow'</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">'orange'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'orange:0.7'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'brown'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'darkred'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'black'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// First create a new windrose graph with a title
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindroseGraph</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">400</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">450</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Setup title
+<BR /> //---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'Windrose
+ example 6'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_VERDANA</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_BOLD</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">12</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'navy'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Setup sub title
+<BR /> //---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">subtitle</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'(Free
+ type plot)'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">subtitle</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_VERDANA</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_ITALIC</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">10</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">subtitle</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'navy'</FONT><FONT color="#007700">);
+<BR />
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Create the windrose plot.
+<BR />
+ //----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindrosePlot</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Setup a free plot
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetType</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+WINDROSE_TYPEFREE</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Setup labels
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetLabels</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$labels</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetLabelPosition</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">LBLPOSITION_CENTER</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetLabelMargin</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+30</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Setup the colors for the ranges
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetRangeColors</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$rangeColors</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Adjust the font and font color for
+ scale labels
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">9</FONT><FONT
+color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Set the diameter and position for
+ plot
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetSize</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+230</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB"> $wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetZCircleSize</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+30</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Adjust the font and font color for
+ compass directions
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">10</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFontColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'darkgreen'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Adjust grid colors
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetGridColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'darkgreen@0.7'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'blue'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Add (m/s) text to legend
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">legend</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetText</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'(m/s)'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Display legend values with no
+ decimals
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">legend</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFormat</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'%d'</FONT><FONT
+color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Add plot to graph
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$wp</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Send the graph to the browser
+<BR />//----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR /></FONT><FONT color="#0000BB">?&gt;
+<BR /></FONT>
+<BR /></FONT></CODE></DIV></TD></TR>
+</TABLE>
+<H3><A NAME="4_6_3">4.6.3 Resulting image</A></H3><P>
+ <IMG HEIGHT="450" src="windrot6.png" WIDTH="400">
+<BR> <SMALL><B>Figure A.6</B>.<I> Example 6.</I></SMALL>
+<H2><A NAME="4_7">4.7 Example 7</A></H2><P>
+ This example is available in the example directory as
+ &quot;windrose_ex7.php&quot;.
+<H3><A NAME="4_7_1">4.7.1 Objectives:</A></H3><P>
+<OL>
+<LI> Showing how to change the compass direction labels</LI>
+<LI> Showing how to change the text in the &quot;Calm&quot; circle</LI>
+<LI> Showing how to change the ranges in the legend</LI>
+<LI> Manually setting the scale range and scale step size</LI>
+</OL>
+<H3><A NAME="4_7_2">4.7.2 Script</A></H3><P>
+<TABLE cellpadding="0" style="border:solid black 1pt;">
+<TR><TD><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+File: windrose_ex7.php
+<BR><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php
+<BR /></FONT><FONT color="#000000">
+/*=======================================================================
+<BR />// File:&nbsp;&nbsp;&nbsp;&nbsp;WINDROSE_EX7.PHP
+<BR />// Description:&nbsp;&nbsp;&nbsp;&nbsp;Example 7 of how to use windrose plots
+<BR />// Created: &nbsp;&nbsp;&nbsp;&nbsp;2003-11-08
+<BR />
+//========================================================================
+<BR />*/
+<BR /></FONT><FONT color="#007700">require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph.php'</FONT><FONT color="#007700">);
+<BR />require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph_windrose.php'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Data can be specified using both ordinal index of the axis
+<BR /> // as well as the direction label.
+<BR />// (Note: The Swedish spelling of &quot;SSW&quot; since we further
+<BR />// down changes the label for the compass directions)
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =
+ array(
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">15</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+7.5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">5</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1.5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">7</FONT><FONT color="#007700"> =&gt;
+ array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+10</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">
+),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">'SSV'</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">
+,</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// First create a new windrose graph with a title
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindroseGraph</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">400</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">450</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'Windrose
+ example 7'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_VERDANA</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_BOLD</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">14</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'navy'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Create the free windrose plot.
+<BR />
+ //----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindrosePlot</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetType</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+WINDROSE_TYPE16</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Add some &quot;arbitrary&quot; text to the
+ center
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetZeroLabel</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+&quot;SOx\n8%%&quot;</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Localize the compass direction labels into Swedish
+<BR />// Note: The labels for data must now also match the exact
+<BR /> // string for the compass directions.
+<BR />//----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$se_CompassLbl</FONT><FONT color="#007700">
+ = array(</FONT><FONT color="#DD0000">'O'</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">'ONO'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'NO'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">'NNO'</FONT><FONT
+color="#007700">,</FONT><FONT color="#DD0000">'N'</FONT><FONT color="#007700">
+,</FONT><FONT color="#DD0000">'NNV'</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">'NV'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'VNV'</FONT><FONT color="#007700">,
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">'V'</FONT><FONT color="#007700">
+,</FONT><FONT color="#DD0000">'VSV'</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">'SV'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'SSV'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">'S'</FONT><FONT
+color="#007700">,</FONT><FONT color="#DD0000">'SSO'</FONT><FONT color="#007700">
+,</FONT><FONT color="#DD0000">'SO'</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">'OSO'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetCompassLabels</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$se_CompassLbl</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Localize the &quot;Calm&quot; text into Swedish and make the circle
+<BR /> // slightly bigger than default
+<BR />//----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$se_calmtext</FONT><FONT color="#007700">
+ =</FONT><FONT color="#DD0000"> 'Lugnt'</FONT><FONT color="#007700">;
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">legend</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetCircleText</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$se_calmtext</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">legend</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetCircleRadius</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+20</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Adjust the displayed ranges
+<BR />//----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$ranges</FONT><FONT color="#007700">
+ = array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">8</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">12</FONT><FONT color="#007700">
+,</FONT><FONT color="#0000BB">19</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">29</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetRanges</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$ranges</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Set the scale to always have max value of '30' with a step
+<BR />// size of 12.
+<BR />
+ //----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Set</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">30</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">12</FONT><FONT color="#007700">
+);
+<BR />
+<BR /></FONT><FONT color="#000000">// Finally add it to the graph
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$wp</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Send the graph to the browser
+<BR />//----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR /></FONT><FONT color="#0000BB">?&gt;
+<BR /></FONT>
+<BR /></FONT></CODE></DIV></TD></TR>
+</TABLE>
+<H3><A NAME="4_7_3">4.7.3 Resulting image</A></H3><P>
+ <IMG HEIGHT="450" src="windrot7.png" WIDTH="400">
+<BR> <SMALL><B>Figure A.7</B>.<I> Example 7.</I></SMALL>
+<H2><A NAME="4_8">4.8 Example 8</A></H2><P>
+ This example is available in the example directory as
+ &quot;windrose_ex8.php&quot;.
+<H3><A NAME="4_8_1">4.8.1 Objectives:</A></H3><P>
+<OL>
+<LI> Specifically highlight certain compass directions in a free plot by
+ adjusting the look of the radial compass lines.</LI>
+<LI>Note: Radial lines can be adjusted for color, weight and line style</LI>
+</OL>
+<H3><A NAME="4_8_2">4.8.2 Script</A></H3><P>
+<TABLE cellpadding="0" style="border:solid black 1pt;">
+<TR><TD><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+File: windrose_ex8.php
+<BR><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php
+<BR /></FONT><FONT color="#000000">
+/*=======================================================================
+<BR />// File:&nbsp;&nbsp;&nbsp;&nbsp;WINDROSE_EX8.PHP
+<BR />// Description:&nbsp;&nbsp;&nbsp;&nbsp;Example 2 of how to use windrose plots
+<BR />// Created: &nbsp;&nbsp;&nbsp;&nbsp;2003-11-15
+<BR />// Author:&nbsp;&nbsp;&nbsp;&nbsp;Johan Persson (johanp@aditus.nu)
+<BR />// Ver:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$Id$
+<BR />// Description:
+<BR />// Show how to set different styles for individual
+<BR />// radial grid lines.
+<BR />
+//========================================================================
+<BR />*/
+<BR /></FONT><FONT color="#007700">require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph.php'</FONT><FONT color="#007700">);
+<BR />require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph_windrose.php'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Data can be specified using both ordinal index of the axis
+<BR /> // as well as the direction label.
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =
+ array(
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">'45.9'</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">
+),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">355</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1.5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">180</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1.5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">150</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">'S'</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">1</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;);
+<BR />
+<BR /></FONT><FONT color="#000000">// Add some labels for&nbsp;&nbsp;afew of the
+ directions
+<BR /></FONT><FONT color="#0000BB">$labels</FONT><FONT color="#007700">
+ = array(</FONT><FONT color="#0000BB">355</FONT><FONT color="#007700">=&gt;</FONT><FONT
+color="#DD0000">&quot;At\nHome base&quot;</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">180</FONT><FONT color="#007700">=&gt;</FONT><FONT color="#DD0000">
+&quot;Probe\n123&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+150</FONT><FONT color="#007700">=&gt;</FONT><FONT color="#DD0000">
+&quot;Power\nplant&quot;</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Define the color,weight and style
+ of some individual radial
+<BR />// grid lines.
+<BR /></FONT><FONT color="#0000BB">$axiscolors</FONT><FONT color="#007700">
+ = array(</FONT><FONT color="#0000BB">355</FONT><FONT color="#007700">=&gt;</FONT><FONT
+color="#DD0000">&quot;red&quot;</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$axisweights</FONT><FONT color="#007700">
+ = array(</FONT><FONT color="#0000BB">355</FONT><FONT color="#007700">=&gt;</FONT><FONT
+color="#0000BB">8</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$axisstyles</FONT><FONT color="#007700">
+ = array(</FONT><FONT color="#0000BB">355</FONT><FONT color="#007700">=&gt;</FONT><FONT
+color="#DD0000">'solid'</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+150</FONT><FONT color="#007700">=&gt;</FONT><FONT color="#DD0000">'solid'</FONT><FONT
+color="#007700">);
+<BR />
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// First create a new windrose graph with a title
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindroseGraph</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">400</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">500</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'Windrose
+ example 8'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_VERDANA</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_BOLD</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">14</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'navy'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Create the free windrose plot.
+<BR />
+ //----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindrosePlot</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetType</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+WINDROSE_TYPEFREE</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Specify colors weights and style
+ for the radial gridlines
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetRadialColors</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$axiscolors</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetRadialWeights</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$axisweights</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetRadialStyles</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$axisstyles</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Add a few labels
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetLabels</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$labels</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Add some &quot;arbitrary&quot; text to the
+ center
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetZeroLabel</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+&quot;SOx\n8%%&quot;</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Finally add it to the graph
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$wp</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Send the graph to the browser
+<BR />//----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR />
+<BR /></FONT><FONT color="#0000BB">?&gt;
+<BR /></FONT>
+<BR /></FONT></CODE></DIV></TD></TR>
+</TABLE>
+<H3><A NAME="4_8_3">4.8.3 Resulting image</A></H3><P>
+ <IMG HEIGHT="500" src="windrot8.png" WIDTH="400">
+<BR> <SMALL><B>Figure A.8</B>.<I> Example 8.</I></SMALL>
+<H2><A NAME="4_9">4.9 Example 9</A></H2><P>
+ This example is available in the example directory as
+ &quot;windrose_ex9.php&quot;.
+<H3><A NAME="4_9_1">4.9.1 Objectives:</A></H3><P>
+<OL>
+<LI> Specifically highlight certain compass directions in a regular plot
+ by adjusting the look of the radial compass lines.</LI>
+<LI>Note: Radial lines can be adjusted for color, weight and line style</LI>
+</OL>
+<H3><A NAME="4_9_2">4.9.2 Script</A></H3><P>
+<TABLE cellpadding="0" style="border:solid black 1pt;">
+<TR><TD><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+File: windrose_ex9.php
+<BR><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php
+<BR /></FONT><FONT color="#000000">
+/*=======================================================================
+<BR />// File:&nbsp;&nbsp;&nbsp;&nbsp;WINDROSE_EX8.PHP
+<BR />// Description:&nbsp;&nbsp;&nbsp;&nbsp;Example 2 of how to use windrose plots
+<BR />// Created: &nbsp;&nbsp;&nbsp;&nbsp;2003-11-15
+<BR />// Author:&nbsp;&nbsp;&nbsp;&nbsp;Johan Persson (johanp@aditus.nu)
+<BR />// Ver:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$Id$
+<BR />// Description:
+<BR />// Show how to set different styles for individual
+<BR />// radial grid lines in a fixed plot
+<BR />
+//========================================================================
+<BR />*/
+<BR /></FONT><FONT color="#007700">require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph.php'</FONT><FONT color="#007700">);
+<BR />require_once (</FONT><FONT color="#DD0000">
+'../../jpgraph_windrose.php'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// Data can be specified using both ordinal index of the axis
+<BR /> // as well as the direction label.
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =
+ array(
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">'E'</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">
+),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">'N'</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1.5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">'nw'</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+1.5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#DD0000">'S'</FONT><FONT color="#007700">
+ =&gt; array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">1</FONT><FONT
+color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;);
+<BR />
+<BR /></FONT><FONT color="#000000">// Define the color,weight and style
+ of some individual radial
+<BR />// grid lines. Axis can be specified either by their (localized)
+<BR />// label or by their index.
+<BR /> // Note; Depending on how many axis you have in the plot the
+<BR />// index will vary between 0..n where n is the number of
+<BR />// compass directions.
+<BR /></FONT><FONT color="#0000BB">$axiscolors</FONT><FONT color="#007700">
+ = array(</FONT><FONT color="#DD0000">'nw'</FONT><FONT color="#007700">
+=&gt;</FONT><FONT color="#DD0000">'brown'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$axisweights</FONT><FONT color="#007700">
+ = array(</FONT><FONT color="#DD0000">'nw'</FONT><FONT color="#007700">
+=&gt;</FONT><FONT color="#0000BB">8</FONT><FONT color="#007700">);&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Could also be specified as 6 =&gt; 8
+<BR /></FONT><FONT color="#0000BB">$axisstyles</FONT><FONT color="#007700">
+ = array(</FONT><FONT color="#DD0000">'nw'</FONT><FONT color="#007700">
+=&gt;</FONT><FONT color="#DD0000">'solid'</FONT><FONT color="#007700">);
+<BR />
+<BR />
+<BR /></FONT><FONT color="#000000">
+//---------------------------------------------------------
+<BR />// First create a new windrose graph with a title
+<BR />//---------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindroseGraph</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">400</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">500</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'Windrose
+ example 9'</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_VERDANA</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_BOLD</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">14</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'navy'</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Create the free windrose plot.
+<BR />
+ //----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700"> =
+ new</FONT><FONT color="#0000BB"> WindrosePlot</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetType</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+WINDROSE_TYPE16</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Specify colors weights and style
+ for the radial gridlines
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetRadialColors</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$axiscolors</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetRadialWeights</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$axisweights</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetRadialStyles</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$axisstyles</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Add some &quot;arbitrary&quot; text to the
+ center
+<BR /></FONT><FONT color="#0000BB">$wp</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+SetZeroLabel</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+&quot;SOx\n8%%&quot;</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Finally add it to the graph
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$wp</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">
+//----------------------------------------------------------------
+<BR />// Send the graph to the browser
+<BR />//----------------------------------------------------------------
+<BR /></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR />
+<BR /></FONT><FONT color="#0000BB">?&gt;
+<BR /></FONT>
+<BR /></FONT></CODE></DIV></TD></TR>
+</TABLE>
+<H3><A NAME="4_9_3">4.9.3 Resulting image</A></H3><P>
+ <IMG HEIGHT="500" src="windrot9.png" WIDTH="400">
+<BR> <SMALL><B>Figure A.9</B>.<I> Example 9.</I></SMALL>
+</DIV>
+</BODY>
+</HTML>

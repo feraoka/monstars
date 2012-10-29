@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="991Addingcaptiontobars.html">
+<LINK REL="Next" HREF="910Groupingactivities.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="991Addingcaptiontobars.html">前へ</A> <A HREF="910Groupingactivities.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="9_9_2">9.9.2 バーに進行指標（progress indicators）を追加する</A></H3>
+<P> 特定なアクティビティの進捗状況を示すために、進行指標をそれぞれのバーに加えることも可能です。この経過指標は、バーの中にある、より小さいバーから構成されます。デフォルトでは、この経過バーは黒色で、その高さはバーの70%の高さをもっています。これらのパラメータはすべて変更することが出来ます。</P>
+<P> 進行指標のプロパティは 'progress' プロパティとその関数を通じてアクセスすることができます。</P>
+<P> 特定のアクティビティに対してその進捗状況を設定するためには、以下のように割合を指定するだけです。   <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $activity</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">progress</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0.4</FONT><FONT
+color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+</P>
+<P> 図162では、デフォルトの進行指標を用いてそれぞれのアクティビティの進捗状況を示すように先ほどの例を修正してあります。 ソリッドバーを分かりやすくするために、表示された進捗状況を反映させるキャプションの修正も行いました。 （同時に、フォーマットのオプションの例をあげるためだけにスケール ヘッダーを変更しました）。<DIV class="example">
+<BR> <A href="exframes/frame_ganttex14.html" target="blank"><IMG border="0"
+HEIGHT="191" src="ganttex14.png" WIDTH="409"></A> <BR><B>図 162:</B>進行指標を加える。<A href="exframes/frame_ganttex14.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> 進行指標に違ったフォーマットを指定するには、次のように SetPattern() メソッドを使用します。 <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $activity</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">progress</FONT><FONT color="#007700">-&gt;</FONT> <FONT color="#0000BB">SetPattern</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">BAND_RDIAG</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;blue&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 適切なパラメータや使用できるすべてのメソッドについては、リファレンスの章を参照下さい。<DIV class="example">
+<BR> <A href="exframes/frame_ganttex15.html" target="blank"><IMG border="0"
+HEIGHT="191" src="ganttex15.png" WIDTH="409"></A> <BR><B>図 163:</B> 進行指標のスタイルを変更する<A href="exframes/frame_ganttex15.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="991Addingcaptiontobars.html">前へ</A> <A HREF="910Groupingactivities.html">次へ</A>
+</BODY>
+</HTML>

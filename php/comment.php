@@ -89,8 +89,6 @@ class MS_Comment extends MS_DB_Base {
 /*
  * Local variables:
  * tab-width: 4
- * c-basic-offset: 4
- * c-hanging-comment-ender-p: nil
  * End:
  */
 

@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="42HowtogenerateimageswithPHP.html">
+<LINK REL="Next" HREF="43UsingPHPdirectly.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="42HowtogenerateimageswithPHP.html">前へ</A> <A HREF="43UsingPHPdirectly.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="4_2_1">4.2.1 JｐGraph ライブラリを使用する</A>
+</H3>
+<P> JpGraph ライブラリを利用する場合、最低でも 2 種類のファイルをインクルードする必要があります。1 つは基本ライブラリで、もう 1つはプロット拡張ライブラリです。 例として、次のスクリプトは基本的なライン プロットを生成する場合に PHP ファイルの先頭に必ず記述しなければならない行です。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php <BR /> <BR /></FONT><FONT color="#007700">include (</FONT><FONT color="#DD0000">'jpgraph.php'</FONT><FONT color="#007700">); <BR />include (</FONT><FONT color="#DD0000">'jpgraph_line.php'</FONT><FONT color="#007700">); <BR />...<BR> </FONT><FONT color="#FF8000">// JpGraph ライブラリを使用するコード <BR></FONT><FONT color="#007700">...</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P><DIV class="note"><B>注意:</B> includeの代わりに<I>require</I>を使用する場合もあります。これらの違いはほとんどありません。include() 関数は、実際にインクルードされた文が実行されるときにだけ、ファイルをインクルードします。require() 関数は、指定されたファイルが必ず置き換えられます。詳細は PHP ドキュメントを参照してください。ほとんどの場合、これらは同義です。</DIV></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="42HowtogenerateimageswithPHP.html">前へ</A> <A HREF="43UsingPHPdirectly.html">次へ</A>
+</BODY>
+</HTML>

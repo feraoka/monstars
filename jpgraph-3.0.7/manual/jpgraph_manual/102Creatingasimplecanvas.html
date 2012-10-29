@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="101Introduction.html">
+<LINK REL="Next" HREF="103Addinglinesandrectanglestoacanvas.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css"><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="101Introduction.html">前へ</A> <A HREF="103Addinglinesandrectanglestoacanvas.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="10_2">10.2 簡単なキャンバスの作成</A></H2>
+<P> キャンバス グラフを作成するためには、標準の &quot;jpgraph.php&quot; ファイルに加えて &quot;jpgraph_canvas.php&quot; ファイルをインクルードする必要があります。また、便利なサポート クラスにアクセスするために &quot;jpgraph_canvtools.php&quot; をインクルードすることもあるかもしれません。</P>
+<P> キャンバスの作成で、&quot;白い&quot;紙に好きな形を自由に描画することができます。最初に、テキスト ボックスを描くだけの簡単な例を紹介しましょう。最初にこれから説明するコードを紹介します。<DIV class="phpscript">(File: canvasex01.php) <BR><CODE><FONT color="#000000"> <FONT color="#0000BB">&lt;?php <BR></FONT><FONT color="#FF8000">// $Id: canvasex01.php,v 1.3 2002/10/23 08:17:23 aditus Exp $ <BR></FONT><FONT color="#007700">include </FONT><FONT color="#DD0000">&quot;../jpgraph.php&quot;</FONT><FONT color="#007700">; <BR>include </FONT><FONT color="#DD0000">&quot;../jpgraph_canvas.php&quot;</FONT><FONT
+color="#007700">; <BR> <BR></FONT><FONT color="#FF8000">// 基本キャンバスの設定 <BR></FONT><FONT color="#0000BB">$g </FONT><FONT color="#007700">= new </FONT><FONT
+color="#0000BB">CanvasGraph</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">400</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">300</FONT><FONT
+color="#007700">,</FONT><FONT color="#DD0000">'auto'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetMargin</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">11</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">6</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">11</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetShadow</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetMarginColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;teal&quot;</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// テキストが上書きされてしまうため、テキストを追加する前に <BR>// プロットエリアとマージンを出力する必要がある<BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">InitFrame</FONT><FONT color="#007700">(); <BR> <BR></FONT><FONT color="#FF8000">// 中央にテキスト ボックスを描く <BR></FONT><FONT color="#0000BB">$txt</FONT><FONT color="#007700">=</FONT><FONT
+color="#DD0000">&quot;This\nis\na TEXT!!!&quot;</FONT><FONT color="#007700">; <BR></FONT><FONT color="#0000BB">$t </FONT><FONT color="#007700">= new </FONT><FONT
+color="#0000BB">Text</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$txt</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">200</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">100</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$t</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FS_BOLD</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">40</FONT><FONT
+color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// テキストボックスが座標をどのように解釈するか<BR></FONT><FONT color="#0000BB">$t</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Align</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'center'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">'top'</FONT><FONT
+color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// パラグラフをどのように位置揃えするか<BR></FONT><FONT color="#0000BB">$t</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">ParagraphAlign</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'center'</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// テキストの周りに、白い塗りつぶし、黒い縁取り、灰色の影のボックスを追加する <BR></FONT><FONT color="#0000BB">$t</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetBox</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;white&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;black&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;gray&quot;</FONT><FONT
+color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// テキストを出力する <BR></FONT><FONT color="#0000BB">$t</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">img</FONT><FONT
+color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// グラフを出力する <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(); <BR> <BR></FONT><FONT color="#0000BB">?&gt; <BR></FONT> <BR></FONT></CODE></DIV></P>
+<P> 上の例は 400 x 300 のサイズのイメージを作成する部分から始まります。その後イメージの周りの余白を設定します。キャンバスでは、座標を入力する方法に余白の影響はありません。左上は(0,0)で、右下（余白と影を含む）が最大値です。この場合、X座標は0～399 Y座標は0～199 となります。 </P>
+<P> その後、余白とプロットエリアをグラフに出力する <A href="../ref/CanvasGraph.html#_CANVASGRAPH_INITFRAME">InitFrame()</A> メソッドを呼び出します。全てのグラフィカル オブジェクトはコマンドが呼び出される順番に出力されるので、最も手前に表示したいオブジェクトは最後に出力するように気を付けてください。JpGraph の通常の動作とは異なり、オブジェクトを追加すると全てその順番で反映されるので、正しい順番で出力されているか確認するようにしてください。</P>
+<P> 次に、<A href="../ref/Text.html#_C_TEXT">Text</A> オブジェクトを作成し、テキストを表示させたい場所をスクリーンの絶対位置で指定し、それを出力します。名前が非常に紛らわしい関数 <A href="../ref/Text.html#_TEXT_ALIGN">Text::Align() </A> の詳細な説明が必要になるかと思います。このメソッドは、<STRONG>テキストの座標をどのように解釈させるか</STRONG>  を決定します。例えば、テキストパラグラフの座標として (200, 10) を指定された場合、これが左上の角を意味するのか、左下を意味するのか、それともそれ以外で、ボックスの範囲を示す値なのか、といったことを判断させます。上記のコードでは、X座標がボックスの中心を意味し、Y座標がトップを意味するように解釈させました。したがって、パラグラフを囲むボックスのトップラインの中央が (200, 100) に設定されます。</P>
+<P> <A href="../ref/Text.html#_TEXT_PARAGRAPHALIGN">Text::ParagraphAlign()</A> を使用して中央に寄せられているパラグラフの中にもラインを指定することができます。テキストの周りにボックスを表示させる場合は、ボックスの塗りつぶす色、ボーダーカラー、シャドウカラーを設定することができる<A href="../ref/Text.html#_TEXT_SETBOX">Text::SetBox()</A> が役に立ちます。</P>
+<P> ここで、キャンバス上でテキストを出力する準備をします。そのためには、使用したい基本イメージの描画クラスを指定しなければなりません。これについてはこれ以上の解説はせず、Graph クラスの<STRONG>img</STRONG> プロパティとして存在する image クラスについてのみ記述します。</P>
+<P> これでようやくブラウザにキャンバスを出力する準備ができました。以下の画像でこのコード結果を全て見ることができます。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_canvasex01.html" target="blank"><IMG border="0"
+HEIGHT="300" src="canvasex01.png" WIDTH="400"></A> <BR><B>図 188:</B>中央にテキストボックスを置いた簡単なキャンバスの例 <A href="exframes/frame_canvasex01.html" target="blank">[ソース]</A>
+ 
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="101Introduction.html">前へ</A> <A HREF="103Addinglinesandrectanglestoacanvas.html">次へ</A>
+</BODY>
+</HTML>

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="98Formattingthescaleheaders.html">
+<LINK REL="Next" HREF="982Hourscale.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="98Formattingthescaleheaders.html">前へ</A> <A HREF="982Hourscale.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="9_8_1">9.8.1 分スケール</A></H3>
+<P> 分スケールは、使用することのできるスケールの中で最も小さなスケールです。デフォルトでは、分スケールは1分きざみなので、分スケールを GanttScale::SetIntervall() と一緒に使用すると便利なことがしばしばあります。分スケールのスタイルは、次のうちの1つの<I> style </I>パラメータを使用して、さらに調節することができます。</P>
+<OL>
+<LI> &quot;MINUTESTYLE_MM&quot; これは10の位にもゼロを使用し、必ず2桁の数字で分を表示します。</LI>
+<LI> &quot;MINUTESTYLE_CUSTOM&quot;。これを使用すると、<I>HeaderProperty:: SetFormatString()</I> を呼び出すことで、独自の分スタイルを指定できます。  
+</LI>
+</OL>
+<P> 分スケールは、GanttGraph::ShowHeaders() を呼び出す際に、GANTT_HMINを与えることで使用できます。例えば次のようになります。<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ShowHeaders</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">GANTT_HDAY </FONT><FONT color="#007700">| </FONT><FONT color="#0000BB">GANTT_HHOUR </FONT><FONT color="#007700">| </FONT><FONT color="#0000BB">GANTT_HMIN</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 以下のコードは、分スケールを30分間隔とし、いくつかのカスタムカラーを設定する方法を示したものです。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">minute</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetIntervall</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">30</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">minute</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetBackgroundColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'lightyellow:1.5'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">minute</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_FONT0</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">minute</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetStyle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">MINUTESTYLE_MM</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">minute</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">grid</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'lightgray'</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="98Formattingthescaleheaders.html">前へ</A> <A HREF="982Hourscale.html">次へ</A>
+</BODY>
+</HTML>

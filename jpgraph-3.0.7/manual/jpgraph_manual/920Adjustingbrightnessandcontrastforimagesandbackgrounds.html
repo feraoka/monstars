@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="919Rotatingthegraphs.html">
+<LINK REL="Next" HREF="921Timingthegenerationofgraphs.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="919Rotatingthegraphs.html">前へ</A> <A HREF="921Timingthegenerationofgraphs.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_20">9.20 イメージと背景用の明るさおよびコントラストを調整する</A></H2>
+<P><STRONG>以下のセクションはパレット イメージにのみ適応します。 これは trueカラーのイメージでは作動しないということです。</STRONG></P>
+<P> 背景イメージが少し&ldquo;色あせて&rdquo;見えるようにしてグラフから注意をそらさないようにすることが、多くの場合は望ましいです。  これを行うには 2 通りの方法があります。</P>
+<OL>
+<LI> 明るさのレベルとコントラストの強さを好ましいレベルに調整する外部のイメージ エディタのあるイメージを準備して</LI>
+<LI> コントラスト、明るさ、カラー彩度を調整する JpGraph:s を使用してください。</LI>
+</OL>
+<P> 背景イメージの呼び出しを調整するため、明るさとコントラストの両方が範囲 [-1、1] での実際の数字です。たとえば、背景イメージだけ、または全体のイメージを調整するのに選ぶことができます。 背景イメージ変更するには、適した値を指定するためメソッド <A href="../ref/Graph.html#_GRAPH_ADJBACKGROUNDIMAGE">Graph::AdjBackgroundImage()</A> を使用してください。 このメソッドで何ができるかいくつかの例を見てみましょう。 以下の例は、&ldquo;utils/&rdquo; ディレクトリにある小さいユーティリティ &ldquo;adjimg.php&rdquo; で生成されています。</P>
+<P> <IMG alt="" border="0" HEIGHT="244" src="imgadj_orig.jpg" WIDTH="246"> <BR> Brightness=0, contrast=0, saturation = -1 (オリジナル イメージ)</P>
+<P> <IMG alt="" border="0" HEIGHT="244" src="imgadj_b00c00sat-1.jpg" WIDTH="246"> <BR> Brightness=0, contrast=0, saturation = -1 (黒と白のイメージ)</P>
+<P> <IMG alt="" border="0" HEIGHT="244" src="imgadj_b03c-03sat0.jpg" WIDTH="246"> <BR> Brightness=0.3, contrast=-0.3, saturation=0</P>
+<P> <IMG alt="" border="0" HEIGHT="244" src="imgadj_b04c-07sat0.jpg" WIDTH="246"> <BR> Brightness=0.4, contrast=-0.7, saturation=0</P>
+<P> <IMG alt="" border="0" HEIGHT="244" src="imgadj_b04c-07sat-1.jpg" WIDTH="246"> <BR> Brightness=0.4, contrast=-0.7, saturation=-1</P>
+<P> <IMG alt="" border="0" HEIGHT="244" src="imgadj_b0c0sat1.jpg" WIDTH="246"> <BR> Brightness=0, contrast=0, saturation=1</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="919Rotatingthegraphs.html">前へ</A> <A HREF="921Timingthegenerationofgraphs.html">次へ</A>
+</BODY>
+</HTML>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="71Lineplots.html">
+<LINK REL="Next" HREF="712Displayingthevaluesforeachdatapoint.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="71Lineplots.html">前へ</A> <A HREF="712Displayingthevaluesforeachdatapoint.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_1_1">7.1.1 ライン プロット XXX にプロット記号を追加する</A></H3>
+<P> データ ポイントをハイライトする方法を説明します。その場合、線グラフの mark プロパティで、プロットのマーカー種類を指定します。マーカーの種類は <A href="../ref/PlotMark.html#_PLOTMARK_SETTYPE">PlotMarks</A> クラス リファレンスを参照してください。 </P>
+<P> 今回は、先ほどのグラフに三角形の形状 (▲) をしたマーカーを付け加えてみましょう。   <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT
+color="#0000BB"> $lineplot</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">mark</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetType</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">MARK_UTRIANGLE</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> これで、以下のようなグラフが表示されます。<DIV class="example">
+<BR> <A href="exframes/frame_example3.1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example3.1.png" WIDTH="300"></A> <BR><B>図 7:</B>マーカーを追加する <A href="exframes/frame_example3.1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> もちろん、マーカーのサイズやカラー、フレーム カラーなどの変更も可能です。</P>
+<P> マーカーのカラーは明示的に指定されない限り、ライン カラーに従います。マーカーとラインに異なったカラーを指定したい場合は、ライン カラーを設定した後にマーカーの SetColor() メソッドを呼び出してください。ライン カラーを指定すると、自動的にマーカー カラーはリセットされます。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="71Lineplots.html">前へ</A> <A HREF="712Displayingthevaluesforeachdatapoint.html">次へ</A>
+</BODY>
+</HTML>

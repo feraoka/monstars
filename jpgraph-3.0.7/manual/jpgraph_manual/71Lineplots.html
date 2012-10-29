@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="7WorkingwithorthogonalXYplots.html">
+<LINK REL="Next" HREF="711AddingplotmarkstolineplotsXXX.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="7WorkingwithorthogonalXYplots.html">前へ</A> <A HREF="711AddingplotmarkstolineplotsXXX.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="7_1">7.1 ライン プロット</A></H2>
+<P> 最初の例は、10 個の Y 値でライン グラフにしたものです。この最初の例で、すべてのコードを掲載しています。以下の例では、コードの一部のみを掲載します <DIV class="phpscript">
+(File:example0.php) <BR><CODE><FONT color="#000000"> <FONT color="#0000BB">&lt;?php <BR></FONT><FONT color="#007700">include (</FONT><FONT color="#DD0000">&quot;../jpgraph.php&quot;</FONT><FONT color="#007700">); <BR>include (</FONT><FONT color="#DD0000">&quot;../jpgraph_line.php&quot;</FONT><FONT
+color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// データの用意 <BR></FONT><FONT color="#0000BB">$ydata </FONT><FONT color="#007700">= array(</FONT><FONT color="#0000BB">11</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">8</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">12</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">9</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">13</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">5</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">7</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// グラフを作成。以下の 2 種類の呼び出しが必ず必要です <BR></FONT><FONT color="#0000BB">$graph </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">Graph</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">350</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">250</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;auto&quot;</FONT><FONT
+color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetScale</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;textlin&quot;</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// リニア プロットを作成 <BR></FONT><FONT color="#0000BB">$lineplot</FONT><FONT color="#007700">=new </FONT><FONT color="#0000BB">LinePlot</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$ydata</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$lineplot</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT
+color="#DD0000">&quot;blue&quot;</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// プロットをグラフに追加 <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$lineplot</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// グラフを表示 <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB">?&gt; <BR></FONT></FONT></CODE></DIV><DIV class="example">
+<BR> <A href="exframes/frame_example0.html" target="blank"><IMG border="0"
+HEIGHT="250" src="example0.png" WIDTH="350"></A> <BR><B>図 4:</B>簡単なライン プロット <A href="exframes/frame_example0.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> いくつかのことに注意します。</P>
+<UL>
+<LI>X 軸と Y 軸のスケールは自動的に設定されます。後ほど、表示されるいくつものチックを決定する自動スケールの詳細を学習します。 </LI>
+<LI>デフォルトでは、Y 軸は薄いカラーで描画されます。 </LI>
+<LI>デフォルトでは、画像に枠線がつき、余白は灰色になります。 </LI>
+<LI>デフォルトでは、Y 軸の 0 ラベルは表示されません。 </LI>
+</UL>
+<P> このグラフの見栄えを良くしてみましょう。JpGraph では、たとえば以下のようなものを追加できます。 </P>
+<UL>
+<LI>グラフのタイトル </LI>
+<LI> 軸のタイトル </LI>
+<LI>タイトルや軸に対応して余白を広げる </LI>
+</UL>
+<P> 先ほどのサンプルの通り、JpGraph ではすべてのオブジェクトはプロパティを通じて指定できます。オブジェクトには、Graph() や LineProt() などがあります。一般的に、グラフに表示されているすべてのオブジェクトはインスタンス名を通じてアクセスできます。 </P>
+<P> たとえば、グラフのタイトルは Graph::title プロパティを通じて指定できます。グラフのタイトルを指定するには、title プロパティの Set() メソッドを使用します。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">title</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'Example 2'</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 以下のグラフを表示するには、先ほどのコードに数行を追記します。<DIV class="example">
+<BR> <A href="exframes/frame_example2.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example2.png" WIDTH="300"></A> <BR><B>図 5:</B>グラフと軸にタイトルを付加する<A href="exframes/frame_example2.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV></P>
+<P>これを完成させるには、数行を追加します。（下は変更した例 1 の一部です。完全なソースコードを見るには見出しにある[ソース]リンクを押してください。 )<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> </FONT><FONT color="#FF8000">// 余白とタイトルを設定 <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">img</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetMargin</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">40</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">20</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">20</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">40</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;Example 2&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">xaxis</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT
+color="#007700">(</FONT><FONT color="#DD0000">&quot;X-title&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">yaxis</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT
+color="#007700">(</FONT><FONT color="#DD0000">&quot;Y-title&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> タイトルには以下の特徴があります。 </P>
+<UL>
+<LI>文字列には、デフォルトのフォントとサイズが適用されます。 </LI>
+<LI>デフォルトでグラフのタイトルは上部に配置されます。 </LI>
+<LI>X 軸のタイトルのデフォルト位置は右側で、Y 軸のタイトルのデフォルト位置は中心です。また、Y 軸のタイトルは 90 度回転されます。 </LI>
+</UL>
+<P></P>
+<P> タイトル文字列を太字にして、ライン プロットを太く、青色に設定してみましょう。これには、以下のコードを記述します。   <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT
+color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">FF_FONT1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FS_BOLD</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">yaxis</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">FF_FONT1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FS_BOLD</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">xaxis</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">FF_FONT1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FS_BOLD</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$lineplot</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT
+color="#DD0000">&quot;blue&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$lineplot</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetWeight</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">2</FONT><FONT color="#007700">);  </FONT><FONT color="#FF8000">// 2 ピクセルの幅</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+</P>
+<P> 再度、 矛盾のないインターフェースに注意してください。フォントの指定には、オブジェクトの SetFont() メソッドを使用します。この方法は、これから学ぶほとんどの関数で使用可能です。JpGraph では同様の手順でオブジェクトの外見を変更できます。たとえば、Y 軸のカラーを赤色にしたい場合は以下のようにします。<DIV
+class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">yaxis</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;red&quot;</FONT><FONT color="#007700">)</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> さらに、Y 軸を太くしたい場合は以下のようにします。 <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">yaxis</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetWidth</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 最後に、ドロップシャドウを画像に適用します。これはデフォルトでは無効になっています。これは以下のコードで作動します。<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetShadow</FONT><FONT color="#007700">()</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> これで、以下のような画像が生成されました。<DIV class="example">
+<BR> <A href="exframes/frame_example3.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example3.png" WIDTH="300"></A> <BR><B>図 6:</B>カラーを追加してフォントを変更する <A href="exframes/frame_example3.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="7WorkingwithorthogonalXYplots.html">前へ</A> <A HREF="711AddingplotmarkstolineplotsXXX.html">次へ</A>
+</BODY>
+</HTML>

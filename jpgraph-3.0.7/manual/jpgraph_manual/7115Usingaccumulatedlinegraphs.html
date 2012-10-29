@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="7114Usingfilledlinegraphs.html">
+<LINK REL="Next" HREF="7116ConstructingsmoothlineplotswithCubicSplines.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="7114Usingfilledlinegraphs.html">前へ</A> <A HREF="7116ConstructingsmoothlineplotswithCubicSplines.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_1_15">7.1.15 積み上げラインプロットを使用する</A></H3>
+<P> 積み上げグラフは、それぞれの線グラフが積み重なったグラフです。要するに、Y 軸の値は絶対値ではなく、すべてのグラフを積み重ねた値です。たとえば、[3, 7, 5] と [6, 9, 7] という値を持つ 2 種類のグラフがある場合。1 番目のグラフの Y 軸は [3, 7, 5] になり、2 番目のグラフの Y 値は [3+6, 7+9, 5+7] になります。</P>
+<P> 線グラフは任意の数だけ積算できます。3 個の線グラフを使用して積み上げ線グラフを作成したい場合、以下のコードを記述します。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"></FONT><FONT color="#FF8000">// 最初、個別にプロットを作成 <BR></FONT><FONT color="#0000BB">$p1 </FONT><FONT color="#007700">= new </FONT><FONT
+color="#0000BB">LinePlot</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$datay_1</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$p2 </FONT><FONT color="#007700">= new </FONT><FONT
+color="#0000BB">LinePlot</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$datay_2</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$p3 </FONT><FONT color="#007700">= new </FONT><FONT
+color="#0000BB">LinePlot</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$datay_3</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// 次に、蓄積されてプロットを形成するためそれらを一緒に加える <BR></FONT><FONT color="#0000BB">$ap </FONT><FONT color="#007700">= new </FONT><FONT
+color="#0000BB">AccLinePlot</FONT><FONT color="#007700">(array(</FONT><FONT
+color="#0000BB">$p1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$p2</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$p3</FONT><FONT
+color="#007700">)); <BR> <BR></FONT><FONT color="#FF8000">// 蓄積されたライン プロットをグラフに追加 <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$ap</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> また、それぞれのライン プロットを塗り重ねることができます。  <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $p1</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFillColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;red&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$p2</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFillColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;blue&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$p3</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFillColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;green&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> これにより、以下のようなグラフが作成されます。<DIV class="example">
+<BR> <A href="exframes/frame_example17.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example17.png" WIDTH="300"></A> <BR><B>図 27:</B>積み上げ線グラフを作成する <A href="exframes/frame_example17.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="7114Usingfilledlinegraphs.html">前へ</A> <A HREF="7116ConstructingsmoothlineplotswithCubicSplines.html">次へ</A>
+</BODY>
+</HTML>

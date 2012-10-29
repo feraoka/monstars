@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="918AntialiasinginJpGraph.html">
+<LINK REL="Next" HREF="919Rotatingthegraphs.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">内容</A> <A HREF="918AntialiasinginJpGraph.html">前へ</A> <A HREF="919Rotatingthegraphs.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="9_18_1">9.18.1 アンチエイリアスを有効にする</A></H3>
+<P> アンチエイリアスを使用したいスクリプトで <A href="../ref/Image.html#_C_IMAGE">Image</A> クラスの <A href="../ref/Image.html#_IMAGE_SETANTIALIASING">SetAntiAliasing()</A> メソッドを呼ぶことでアンチエイリアスを有効にします。</P>
+<P> 背景カラーとライン カラーの間の色を段階的に補完していくことで、アンチエイリアスはより滑らかに線の縁を描くことができます。</P>
+<P><DIV class="note"><B>注意:</B> アンチエイリアスに使用されるアルゴリズムはとてもシンプルです。 実際の 2D のシグナルを処理することで、さらに良い結果を得ることができます。 しかし、HTTP サーバー上で実際の 2D のシグナルを処理するのはばかばかしいので、デザインはわざとシンプルに設計してあります。 最良のビジュアルを得るためには、明るい背景上で暗いライン カラーを使用するようにしてください。</DIV></P>
+<P> 以下の例は、このとてもシンプルなアルゴリズムが正確に動作することを示しています。 ここではアンチエイリアスを有効にしたレーダー プロットと無効にしたレーダー プロットを表示します。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_radarex8.html" target="blank"><IMG border="0"
+HEIGHT="200" src="radarex8.png" WIDTH="300"></A> <BR><B>図 174:</B> アンチエイリアスを無効にしたレーダープロット <A href="exframes/frame_radarex8.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_radarex8.1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="radarex8.1.png" WIDTH="300"></A> <BR><B>図 175:</B> アンチエイリアスを有効にしたレーダープロット <A href="exframes/frame_radarex8.1.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> アンチエイリアスを使用すると画像の生成に膨大な時間を費やしてしまう可能性があることを覚えておいてください。 アンチエイリアスで線を描く場合、通常よりも約8倍ほど遅くなるので、この機能は慎重に使用してください。</P>
+<P> さらに、アンチエイリアスの使用上の注意について、いくつか説明したいと思います。</P>
+<OL>
+<LI> アンチエイリアスは使用可能なカラー パレット以上の色数を消費します。 使用される色の正確な数は線の角度に応じて変わり、水平に近い角度の線と垂直に近い角度の線の場合はかなり多くの色数を使用します（異なる角度を持つ線の数が多くなると、さらに多くなります）。 カラーグラデーションと一緒にアンチエイリアスを使用する場合、使用可能なパレットの数が足りなくなり、アンチエイリアスを使用できなくなる可能性があります。 通常のパレットは256前後の色をキープすることができます。 これは、アンチエイリアスを使用する場合は、trueカラーイメージを使用したほうがよいということです。</LI>
+<LI> アンチエイリアスはそれぞれの線の端を同じ色で塗りつぶすので、背景イメージを同時に表示させる場合はうまく動作しません。 より高度なアンチエイリアスの処理を行うと、単純にプロセッサのパワーが必要となります。</LI>
+<LI>アンチエイリアス処理を行うと線の幅を指定しても無視されます。 線の幅は常におおよそ1で表示されます。</LI>
+</OL>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="918AntialiasinginJpGraph.html">前へ</A> <A HREF="919Rotatingthegraphs.html">次へ</A>
+</BODY>
+</HTML>

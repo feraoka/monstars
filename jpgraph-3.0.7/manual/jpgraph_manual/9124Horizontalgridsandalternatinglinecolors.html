@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="9123Modifyingtheboxaroundtheplot.html">
+<LINK REL="Next" HREF="9125AddingiconstoGanttgraphs.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="9123Modifyingtheboxaroundtheplot.html">前へ</A> <A HREF="9125AddingiconstoGanttgraphs.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="9_12_4">9.12.4 水平なグリッドとラインカラーの交互切り替え</A>
+</H3>
+<P> 水平なグリッドとガント チャートの背景のオプションのライン カラーを指定することで、より読みやすいチャートを作ることができます。 水平なグリッドは<I> Graph::hgrid</I> プロパティを通ってアクセスし、ライン（グリッドで使用される）は <I> Graph::hgrid::line</I> のサブプロパティを通ってアクセスします。</P>
+<P> ライン カラーを指定するには、<I>SetRowFillColor()</I> メソッドを使用します。 例えば、青いグリッド ラインの青い背景が交互に表示されるようにするためには、以下のコードをグラフ スクリプトに追加します。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> </FONT><FONT color="#FF8000">// 水平グリッドの設定<BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">hgrid</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Show</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">hgrid</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">line</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT
+color="#007700">(</FONT><FONT color="#DD0000">'lightblue'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">hgrid</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetRowFillColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'darkblue@0.9'</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 以下は、このフォーマットを設定したガントチャートの例です<DIV class="example">
+<BR> <A href="exframes/frame_gantthgridex1.html" target="blank"><IMG border="0"
+HEIGHT="253" src="gantthgridex1.png" WIDTH="500"></A> <BR><B>図 169:</B>ガントチャートに水平グリッドを追加する <A href="exframes/frame_gantthgridex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="9123Modifyingtheboxaroundtheplot.html">前へ</A> <A HREF="9125AddingiconstoGanttgraphs.html">次へ</A>
+</BODY>
+</HTML>

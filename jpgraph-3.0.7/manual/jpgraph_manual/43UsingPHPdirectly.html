@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="421UsingtheJpGraphlibrarytosendbackimages.html">
+<LINK REL="Next" HREF="44ThebasicprincipleofJpGraphandthecreationofimages.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="421UsingtheJpGraphlibrarytosendbackimages.html">前へ</A> <A HREF="44ThebasicprincipleofJpGraphandthecreationofimages.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="4_3">4.3 コマンドライン版の PHP を使用する</A></H2>
+<P> コマンドライン版の PHP から、画像を直接生成することもできます。ブラウザを使用した方法とまったく同じように画像が生成されますが、例外としてHTTP ヘッダーが生成されません。 バイナリのイメージ データのみが出力されます。</P>
+<P> 使用しているコマンドライン版の PHP (CLI版) のバージョンを確認してください。CGI 版の SAPI を使った場合は、HTTP ヘッダーが生成されます。注意: CGI版を使用した場合、'-q' オプションがヘッダの生成を禁止する場合があります。</P>
+<P> インストールされたバージョンを確認するには、以下のコマンドを実行します。</P>
+<PRE>php --version</PRE>
+<P> そうすると以下のような結果が得られます。</P>
+<PRE>
+PHP 4.3.8 (cli) (built:Aug 29 2004 22:48:10)
+Copyright (c) 1997-2004 The PHP Group
+Zend Engine v1.3.0, Copyright (c) 1998-2004 Zend Technologies
+</PRE>
+<P> ここで重要なのは、</P>
+<PRE>(cli)</PRE>
+<P> と書かれた部分です。JpGraph のライブラリは、どの SAPI API を使っているかを確認し、そのバージョンによってヘッダーの生成方法を調整します。</P>
+<P> 上記の条件が揃っている場合には、コマンドラインから直接画像を生成できます。その場合は、以下の通り実行します。</P>
+<PRE>
+$&gt; php myimage.php &gt; image.png
+</PRE>
+<P> イメージ ファイルの拡張子を、生成されるイメージのフォーマットと同じにしてください。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="421UsingtheJpGraphlibrarytosendbackimages.html">前へ</A> <A HREF="44ThebasicprincipleofJpGraphandthecreationofimages.html">次へ</A>
+</BODY>
+</HTML>

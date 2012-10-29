@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="982Hourscale.html">
+<LINK REL="Next" HREF="984Weekscale.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="982Hourscale.html">前へ</A> <A HREF="984Weekscale.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="9_8_3">9.8.3 日スケール</A></H3>
+<P> デフォルトでは、日スケールは曜日のアルファベット表記の最初の１文字を表示します。しかし、日スケールを違う方法でフォーマットすることも可能です。 日にちは以下のスケール フォーマットのうちの1つを使用することができます。</P>
+<UL>
+<LI>DAYSTYLE_ONELETTER   曜日のアルファベット表記の最初の1文字 例 ,&ldquo;M&rdquo;</LI>
+<LI>DAYSTYLE_LONG   曜日のアルファベット表記 例,&ldquo;Monday&rdquo;</LI>
+<LI>DAYSTYLE_LONGDAYDATE1   日付と曜日の同時表記 例,&ldquo;Monday 23 Jun&rdquo;</LI>
+<LI>DAYSTYLE_LONGDAYDATE2   西暦と日付と曜日を同時表記 例,&ldquo;Monday 23 Jun 2003&rdquo;</LI>
+<LI>DAYSTYLE_SHORT   曜日を短く表記 例,&ldquo;Mon&rdquo;</LI>
+<LI>DAYSTYLE_SHORTDAYDATE1   日付と曜日を短く表記 例,&ldquo;Mon 23/6&rdquo;</LI>
+<LI>DAYSTYLE_SHORTDAYDATE2   月は英語で表記し、日付と曜日を短く表示 例,&ldquo;Mon 23 Jun&rdquo;</LI>
+<LI>DAYSTYLE_SHORTDAYDATE3   曜日を短く表記し、日にちのみを加えて表示 例,&ldquo;Mon 23&rdquo;</LI>
+<LI>DAYSTYLE_SHORTDATE1   日付を短く表示 例,&ldquo;23/6&rdquo;</LI>
+<LI>DAYSTYLE_SHORTDATE2  月を英語で表記し、日付を短く表示 例,&ldquo;23 Jun&rdquo;</LI>
+<LI>DAYSTYLE_SHORTDATE3   日付を短く表示 例,&ldquo;Mon 23&rdquo;</LI>
+<LI>DAYSTYLE_SHORTDATE4   日にちのみを表示 例,&ldquo;23&rdquo;</LI>
+<LI>DAYSTYLE_CUSTOM   指定されたフォーマットで表示 例,&ldquo;M&rdquo;</LI>
+</UL>
+<P> SetStyle()関数を使用することで以下のようにフォーマットを指定できます。<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">day</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetStyle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">DAYSTYLE_LONG</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 日スケールに対して用意されている特別なフォーマット方法を使用すると、週末や日曜日の背景色を異なった色に指定することもできます。</P>
+<UL>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> SetWeekendColor</FONT><FONT color="#007700">()</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P>週末の背景色を設定します。（デフォルトでは薄いグレーに設定）</P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> SetSundayFontColor</FONT><FONT color="#007700">()</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P>日曜のフォントの色を設定します。（デフォルトでは赤色に設定）</P>
+</LI>
+</UL>
+<P> これに加え、週末の背景をプロットエリアの下方向に延ばすか延ばさないかを選択することも可能です。 （デフォルト） これはプロット全体の大部分に対するプロパティでなので、この動作を変更するには、スケールのUseWeekendBackground()を呼び出します。<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"></FONT><FONT
+color="#007700"></FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+</P>
+<P>例<BR> <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">scale</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">UseWeekendBackground</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">false</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="982Hourscale.html">前へ</A> <A HREF="984Weekscale.html">次へ</A>
+</BODY>
+</HTML>

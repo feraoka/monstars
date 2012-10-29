@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="52Usingthecacheinyourscript.html">
+<LINK REL="Next" HREF="54Somefinalcomments.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="52Usingthecacheinyourscript.html">前へ</A> <A HREF="54Somefinalcomments.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="5_3">5.3 クライアントサイド イメージマップを使用する</A></H2>
+<P> JpGraph は、クライアント サイド イメージマップ (CSIM) 機能を備えています。この場合、先述のキャッシュ機能とは少し異なり、画像とイメージマップの<STRONG>両方</STRONG>をキャッシュしておく必要があります。また、HTML 側の加工も行う必要があります。 CSIM HTML パラダイム方法で変更の必要があります。標準のキャッシュ機能との2つの大きな違いは、以下の 2 つです。</P>
+<OL>
+<LI> 過去にキャッシュされた画像が設定したキャッシュディレクトリに<STRONG>保存されません</STRONG>。詳しくは以下の記述を参考にしてください。</LI>
+<LI> キャッシュを確認するには、CheckCSIMCache（） メソッドを使用する必要があります。</LI>
+</OL>
+<P></P>
+<P> 単純な CSIM 画像の場合、パフォーマンス効率は約50%程度です。しかし、データベースの呼び出しや他の複雑な処理を回避できるため、キャッシュが使用可能できる場合には 1000% ほどの速度向上につながります。</P>
+<P> CSIM の詳細については、クライアント サイド イメージマップを使う を参照してください。</P>
+<P> CSIM を使用する場合、スクリプトは通常使用する <A href="../ref/Graph.html#_GRAPH_STROKE">Graph::Stroke() </A>メソッドの代わりに、<A href="../ref/Graph.html#_GRAPH_STROKECSIM">Graph::StrokeCSIM()</A> メソッドを使用します。</P>
+<P> CSIM でキャッシュ機能を使用する場合、<A href="../ref/Graph.html#_GRAPH_CHECKCSIMCACHE">Graph::CheckCSIMCache() </A>メソッドを呼び出す必要があります。.通常のキャッシュの使用方法と同様に、任意の タイムアウト値とキャッシュ画像の名前を指定します。タイムアウトの標準値は、他で指定されていなければ 60 分となります。</P>
+<P> キャッシュ画像の名前には.もう少し説明が必要です。ここには、関係のある名前を指定します。例えば、myimage や firstpage/image3 などです。JpGraph のインストール状態にもよりますが、これは最終的に CSIMCACHE_DIR で定義されたディレクトリで終了します。これは通常のウェブサーバーがアクセス可能なディレクトリでなくてはなりません。標準設定では、csimcache ディレクトリが画像生成のスクリプトと同じディレクトリに作成されます。</P>
+<P> スクリプトが実行されるディレクトリは、 PHPが書き込み可能である必要があります。これを解決する最善の方法は、PHPが書き込み可能なディレクトリの数を最小に抑え、標準のキャッシュディレクトリを再利用することです。しかしこの方法の場合、HTTP サーバーがドキュメント ルートにアクセス可できるよう、アドミニストレーターがキャッシュディレクトリを設定する必要があります。</P>
+<P> CheckCSIMCache() メソッドは、存在するキャッシュのバージョンを確認し、もし見つかればそれを返してスクリプトの実行を停止します。キャッシュが見つかった場合は、スクリプトの実行をできるだけ抑えて画像を作成します。そのため、この関数は Graph() オブジェクトの作成の直後、そして処理の重い作業の前に呼び出します。</P>
+<P> CSIM とキャッシュを使用する一般的なスクリプトの構造は、以下のようになります。 <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">Graph</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">400</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">300</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// キャッシュをチェックする、10分間のタイムアウト <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">CheckCSIMCache</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;image1&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">10</FONT><FONT
+color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// !! キャッシュが存在する場合は、ここで終了 !!<BR> <BR>// <BR>// ... データベースの呼び出しなどで、画像を生成 <BR>// <BR> <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">StrokeCSIM</FONT><FONT color="#007700">();</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> キャッシュを使用しない場合は、StrokeCSIM() 関数の引数には何も指定する必要が<STRONG>ない</STRONG>ことに注意してください。<DIV class="note"><B>注意:</B> CSIM キャッシュ機能では、キャッシュ ディレクトリに 2 種類のファイルを保存します。それぞれ、画像と HTML ファイルのイメージ マップに相当するファイルです。</DIV></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="52Usingthecacheinyourscript.html">前へ</A> <A HREF="54Somefinalcomments.html">次へ</A>
+</BODY>
+</HTML>

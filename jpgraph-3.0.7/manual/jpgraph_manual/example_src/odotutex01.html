@@ -1,0 +1,25 @@
+<code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #FF8000">//&nbsp;content="text/plain;&nbsp;charset=utf-8"<br />
+</span><span style="color: #007700">require_once&nbsp;(</span><span style="color: #DD0000">"jpgraph/jpgraph.php"</span><span style="color: #007700">);<br />
+require_once&nbsp;(</span><span style="color: #DD0000">"jpgraph/jpgraph_odo.php"</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;新規オドメータ・グラフ・エリアを作成（幅250、高さ200ピクセル）<br />
+</span><span style="color: #0000BB">$graph&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">OdoGraph</span><span style="color: #007700">(</span><span style="color: #0000BB">250</span><span style="color: #007700">,</span><span style="color: #0000BB">140</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;オドメータ・グラフ・エリアに入れるためのオドメータを作成する。<br />
+//&nbsp;初期設定により目盛り(Scale)は0から100。<br />
+</span><span style="color: #0000BB">$odo&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Odometer</span><span style="color: #007700">(</span><span style="color: #0000BB">ODO_FULL</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;指針がオドメータ上で指す値を設定。<br />
+</span><span style="color: #0000BB">$odo</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">needle</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #0000BB">30</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;オドメータをグラフ・エリアに追加。<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Add</span><span style="color: #007700">(</span><span style="color: #0000BB">$odo</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;...&nbsp;最後に、完成した画像をブラウザに返す。<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Stroke</span><span style="color: #007700">();<br />
+&nbsp;<br />
+</span><span style="color: #0000BB">?&gt;<br />
+</span>
+</span>
+</code>

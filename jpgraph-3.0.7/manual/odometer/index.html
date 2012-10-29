@@ -1,0 +1,2183 @@
+
+<html>
+<head>
+<title>JpGraph Odometer Manual</title>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="../jpgdoc.css">
+</head>
+
+<body> 
+<DIV class="page">
+<h1 align=center>JpGraph Odometer Manual</h1>
+
+<div align=center>
+1 Apr, 2005
+</div>
+
+<hr>
+
+
+<h2>Table of contents</h2><p>
+
+<b><a href="index.html#sec1">1  Introduction to odometer graphs</a><br></b>
+<a href="index.html#sec1.1">1.1  What are odometer graphs</a><br>
+<a href="index.html#sec1.2">1.2  Overview of Odometer capabilities</a><br>
+<a href="index.html#sec1.3">1.3  System requirements</a><br>
+<a href="index.html#sec1.3.1">1.3.1  Hardware requirements</a><br>
+<a href="index.html#sec1.3.2">1.3.2  Software requirements</a><br>
+<a href="index.html#sec1.4">1.4  Installation</a><br>
+<a href="index.html#sec1.4.1">1.4.1  Distribution forms</a><br>
+<a href="index.html#sec1.4.2">1.4.2  Installation Directories</a><br>
+<a href="index.html#sec1.4.3">1.4.3  Setting up paths</a><br>
+<br><b><a href="index.html#sec2">2  Creating an odometer graph</a><br></b>
+<a href="index.html#sec2.1">2.1  Creating a new graph and odometer</a><br>
+<a href="index.html#sec2.2">2.2  Creating your first Odometer</a><br>
+<a href="index.html#sec2.3">2.3  Working with the image cache</a><br>
+<a href="index.html#sec2.3.1">2.3.1  Specifying a cache file name</a><br>
+<a href="index.html#sec2.3.2">2.3.2  Specifying a timeout policy</a><br>
+<br><b><a href="index.html#sec3">3  Basic odometer formatting</a><br></b>
+<a href="index.html#sec3.1">3.1  Half and full odometers</a><br>
+<a href="index.html#sec3.2">3.2  Adding titles and captions to the graph</a><br>
+<a href="index.html#sec3.3">3.3  Changing colors</a><br>
+<a href="index.html#sec3.4">3.4  Changing indicator needle style</a><br>
+<a href="index.html#sec3.4.1">3.4.1  Adjusting needle length and weight</a><br>
+<a href="index.html#sec3.4.1">3.4.1  Adjusting arrow head for NEEDLE_STYLE_ENDARROW style</a><br>
+<a href="index.html#sec3.5">3.5  Adding shadows</a><br>
+<a href="index.html#sec3.6">3.6  Changing size and margins</a><br>
+<a href="index.html#sec3.7">3.7  Adding color indications</a><br>
+<a href="index.html#sec3.1">3.1 0 Using multiple indicator needles in one odometer</a><br>
+<br><b><a href="index.html#sec4">4  Working with scales</a><br></b>
+<a href="index.html#sec4.1">4.1  Specifying a scale</a><br>
+<a href="index.html#sec4.1.1">4.1.1  Min and max values</a><br>
+<a href="index.html#sec4.1.2">4.1.2  Tick and label positioning</a><br>
+<a href="index.html#sec4.1.3">4.1.3  Example using a different scale</a><br>
+<a href="index.html#sec4.2">4.2  Formatting scales</a><br>
+<a href="index.html#sec4.2.1">4.2.1  Fonts and colors</a><br>
+<a href="index.html#sec4.2.2">4.2.2  Formatting strings</a><br>
+<a href="index.html#sec4.2.3">4.2.3  Positioning labels</a><br>
+<a href="index.html#sec4.2.4">4.2.4  Tick size and color</a><br>
+<a href="index.html#sec4.2.5">4.2.5  A formatting example</a><br>
+<br><b><a href="index.html#sec5">5  Adding multiple odometers to the same image</a><br></b>
+<a href="index.html#sec5.1">5.1  Adding individual captions</a><br>
+<a href="index.html#sec5.2">5.2  Manually specifying positions for odometers</a><br>
+<br><b><a href="index.html#sec6">6  Advanced odometer formatting</a><br></b>
+<a href="index.html#sec7.2">7.2  TTF fonts</a><br>
+<br><b><a href="index.html#sec8">8  Reference section</a><br></b>
+<a href="index.html#sec8.1">8.1  Purpose</a><br>
+<a href="index.html#sec8.2">8.2  Class OdoGraph</a><br>
+<a href="index.html#sec8.3">8.3  Class OdoScale</a><br>
+<a href="index.html#sec8.4">8.4  Class Odometer</a><br>
+<a href="index.html#sec8.5">8.5  Class OdoNeedle</a><br>
+<a href="index.html#sec8.6">8.6  Class Text</a><br>
+<a href="index.html#sec8.7">8.7  Class OdometerLabel</a><br>
+<a href="index.html#sec8.8">8.8  Class LayoutVert</a><br>
+<a href="index.html#sec8.9">8.9  Class LayoutHor</a><br>
+
+
+
+<h1>Odometer graphs</h1><p>
+
+<h2><a name="sec1">1</a>  Introduction to odometer graphs</h2><p>
+
+<h3><a name="sec1.1">1.1</a>  What are odometer graphs</h3>
+<p>
+Odometer graphs uses the methapore of an old fashioned speedmeter for
+cars. It is normally used to give a quick overview of one specific 
+parameter. Experience have shown that this type of methapore is
+easily and quickly understood by most people. By adding color
+indications to the odoemeter it is very quick to see whether or not a
+specific value is within a allowed range or outside.
+<p>
+Before we go into details let's just for illustrative purpose show a
+typical medium advanced Odometer graph and see what it looks like.
+
+<br><img src="img/odo_tutex00.png" border=0><br><b>Figure 1:</b> A medium complex example of a odometer. <a href="show-example.php?target=img/odo_tutex00.php">[src]</a><p>
+<h3><a name="sec1.2">1.2</a>  Overview of Odometer capabilities</h3><p>
+
+Odometers produced with this package have a wide range of
+functionality and as you would expect almost every bit of visual
+layout is in one way or the other customable. For simple use there are
+suitable default values for most parameters which will make creation
+of simple Odometer just a matter of a few lines of code.
+<p>
+Among other things Odometers support the following features:
+<ul>
+<li> Completely customazible color schemes. 
+<li> Both half (semi-circle) and full (circle) odometers are supported
+<li> Fully customizable scales
+<li> Configurable sizes
+<li> Pixel independent relative sizing of odometer details
+<li> Five different types of basic indicator needle which each basic
+type fully customizible
+<li> Supports a "3D" look by the possibility to add shadows
+<li> Supports multiple odometers in the same graph
+<li> SUpports both absolute manually positioning of individual
+odometers as well as advanced automatic layout (with a builtin layout
+engine) which minimizes manual hassle for a user.
+<li> Fully configurable fonts (comes with five builtin and 14 TTF fonts)
+<li> An odometer graph may have titles, subtitles, caption and
+individual odometer captions
+<li> Odometers may have unlimited number of coloured indicator section
+to imitate typical "red area" markings in odometers.
+<li> Advanced caching scheme to minimize load on an application server
+<li> Supports off-line batch generation of Odometers
+<li> Can generate both jpeg and png images
+<li> Fully OO interface
+<li> ... and more
+</ul>
+
+<h3><a name="sec1.3">1.3</a>  System requirements</h3><p>
+
+<h4><a name="sec1.3.1">1.3.1</a>  Hardware requirements</h4><p>
+No specific hardware requirements exist.
+
+<h4><a name="sec1.3.2">1.3.2</a>  Software requirements</h4><p>
+In order for JpOdoemeter to work you need the following additional
+software which is <b>not</b> included in the normal distribution of
+JpOdometer. 
+<ol>
+<li> A working installation of a Webserver which has PHP 4.0.6 or
+above installed. (Preferrable PHP 4.1.1 or above)
+<li> PHP installtion must be configured to use the GD 2.0.x library
+<li  PHP installation must support TTF fonts (It is possible to use
+JpOdometer without support for TTF fonts but you will of course not be
+able to use any TTF fonts then.)
+<li> Generation of jpeg images requires that PHP and GD have been 
+configured with jpeg support
+</ol>
+
+<h3><a name="sec1.4">1.4</a>  Installation</h3><p>
+
+<h4><a name="sec1.4.1">1.4.1</a>  Distribution forms</h4><p>
+JpOdoemeter is distributed as a gun zipped tar file. The normal
+distribution includes 
+<ol>
+<li> The source for the library
+<li> TTF fonts for use with JpOdometer
+<li> Documentation
+<li> Examples
+</ol>
+
+<h4><a name="sec1.4.2">1.4.2</a>  Installation Directories</h4><p>
+JpOdometer has no specific requirements to which directory it should
+be installed. This will be site dependent. In order to use JpOdometer
+the library should be installed in the search path for PHP
+scripts. This will ensure that user can access the library by using
+standard PHP include directive.
+<p>
+To unpack the distribution copy the zipped tar file to the directory where
+you want the library installed and type:
+<p>
+<code>
+$> tar xfz jpodometer.tar.gz
+</code>
+<p>
+<b>Note:</b><br>
+If you want to install all TTF fonts in a separate directory then you
+should move all *.ttf files to that directory. See also below about
+setting up the correct TTF font path.
+<p>
+In the directory you should now have a minimum of three *.php files
+(may be more depending on if you choose to install just JpOdometer or
+the full JpGraph package).
+<p>
+Also verify that the directories <code>./examples, ./doc, ./src</code> have been
+created and that the files
+<p>
+<code>
+jpgraph_odo.php <br>
+jpgraph.php <br>
+</code>
+<p>
+
+exists in the ./src directory.
+
+<h4><a name="sec1.4.3">1.4.3</a>  Setting up paths</h4><p>
+
+Before using JpOdoemeter you must setup the required paths in
+<code>jpgraph.php</code> this is necessary in order for JpOdometer
+to know where to find TTF fonts and what cache directory to use.
+<p>
+<table cellspacing=10 cellpadding=2 border=0>
+<tr><td><b>Name</b></td><td><b>Default</b></td><td><b>Description</b></td></tr>
+<tr><td>CACHE_DIR</td><td>/tmp/jpgraph_cache/</td>
+<td>The directory which the cached images will be stored. Note that
+the Webserver/PHP must have write permission to this directory.
+</td>
+</tr>
+<tr><td>TTF_DIR</td><td>/usr/local/fonts/ttf/</td>
+<td>
+The path to where you installed the TTF fonts that accompanied JpOdometer.
+</td>
+</tr>
+<tr><td>APACHE_CACHE_DIR</td><td>/jpgraph_cache/</td>
+<td>
+At this point there is no need to setup this path. It is only
+documented here for completeness. This path is only used together with
+image maps which JpOdometer does not yet support. As of this writing
+only bar and pie graphs support image maps.
+</td>
+</tr>
+</table>
+
+<h4>1.4.4 Manifest constants in jpgraph.php</h4><p>
+
+<i>This section has now been moved to the general JpGraph Manual.</i>
+
+<h2><a name="sec2">2</a>  Creating an odometer graph</h2><p>
+
+This section assumes that you are familiar with basic style PHP
+scripting. 
+
+<h3><a name="sec2.1">2.1</a>  Creating a new graph and odometer</h3><p>
+
+In order to use JpOdometer your script must include the relevant
+libraries, i.e. the top of your PHP file should have the following two
+lines 
+
+<div class="exscript"><b><code><font color="#000000">
+<font color="#0000CC"></font><font color="#006600">include(&nbsp;</font><font color="#CC0000">"jpgraph.php"&nbsp;</font><font color="#006600">);<br />include(&nbsp;</font><font color="#CC0000">"jpgraph_odo.php"&nbsp;</font><font color="#006600">);<br /></font><font color="#0000CC"></font>
+</font>
+</code></b></div>
+<p>
+The general process for creating an odometer graph is to first create
+a canvas where the odometer (or odometers) can be placed. This is done
+by creating an instance of the class OdoGraph() when creating this
+canvas you have number of options like the size of image and how the cache
+should be used. 
+<p>
+After the canvas has been created you must create one of more
+odometers which are then added to the canvas. You can add as many
+odometers as you like to the canvas. In later chapter a complete
+descritpion on different ways on how to  position odometers will be
+given. 
+<p>
+After all the wanted odometers have been created and added to the
+canvas you then call the method Stroke() on the canvas which, when the
+script is run, will send the image back to the browser.
+<p>
+So, in general terms all your programs will have a the following
+layout:
+ 
+<div class="exscript"><pre>
+...
+// Create a new canvas 300x200 pixels
+$canvas = new OdoGraph(300,200);
+
+// Adjust any parameters you like to change for the canvas
+// (Don't worry about if you don't understand the methods below, 
+// they are just added as illustration)=
+$canvas->title->Set(.......)
+$canvas->caption->Set(...)
+
+// Create one of more Odometer
+$odo1 = new Odometer();
+$odo2 = new Odometer();
+...
+
+// Adjust odometer parameters, colors etc
+$odo1->needle->Set(21);
+$odo2->needle->Set(47);
+...
+
+// Specify the layout if you use multiple odometers
+$l = new LayoutVert( array($odo1, $odo2, ...) );
+
+// Add the odometers with the proper layout to the canvas
+$canvas->Add( $l );
+
+// If you only have a single odometer you may also write
+// $canvas->Add( $odo1 );
+
+// Don't forget this call otherwise you wont see anything!
+$canvas->Stroke();  // Send back the image to the browser
+<pre>
+</div>
+
+<h3><a name="sec2.2">2.2</a>  Creating your first Odometer</h3><p>
+
+To quickly get started lets create a very simply (but working) script
+that generates a very "bare-bone" odometer.
+
+<div class="exscript" >(File: odo_tutex01.php)<br><code><font color="#000000">
+<font color="#0000CC">&lt;?php<br /></font><font color="#FF9900">//=============================================================================<br />// File:&nbsp;&nbsp;&nbsp;&nbsp;ODO_TUTEX01.PHP<br />// Description: Example 0 for odometer graphs<br />// Created:&nbsp;&nbsp;&nbsp;&nbsp;2002-02-22<br />// Author:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Johan Persson (johanp@aditus.nu)<br />// Version:&nbsp;&nbsp;&nbsp;&nbsp;$Id$<br />// <br />// Comment:<br />// Example file for odometer graph. This examples demonstrates the simplest<br />// possible graph using all default values for colors, sizes etc.<br />//<br />// Copyright (C) 2002 Johan Persson. All rights reserved.<br />//=============================================================================<br /></font><font color="#006600">include&nbsp;(</font><font color="#CC0000">"../../src/jpgraph.php"</font><font color="#006600">);<br />include&nbsp;(</font><font color="#CC0000">"../../src/jpgraph_odo.php"</font><font color="#006600">);<br /><br /></font><font color="#FF9900">//---------------------------------------------------------------------<br />// Create a new odometer graph (width=250, height=200 pixels)<br />//---------------------------------------------------------------------<br /></font><font color="#0000CC">$graph&nbsp;</font><font color="#006600">=&nbsp;new&nbsp;</font><font color="#0000CC">OdoGraph</font><font color="#006600">(</font><font color="#0000CC">250</font><font color="#006600">,</font><font color="#0000CC">140</font><font color="#006600">);<br /><br /></font><font color="#FF9900">//---------------------------------------------------------------------<br />// Now we need to create an odometer to add to the graph.<br />// By default the scale will be 0 to 100<br />//---------------------------------------------------------------------<br /></font><font color="#0000CC">$odo&nbsp;</font><font color="#006600">=&nbsp;new&nbsp;</font><font color="#0000CC">Odometer</font><font color="#006600">();&nbsp;<br /><br /></font><font color="#FF9900">//---------------------------------------------------------------------<br />// Set display value for the odometer<br />//---------------------------------------------------------------------<br /></font><font color="#0000CC">$odo</font><font color="#006600">-&gt;</font><font color="#0000CC">needle</font><font color="#006600">-&gt;</font><font color="#0000CC">Set</font><font color="#006600">(</font><font color="#0000CC">30</font><font color="#006600">);<br /><br /></font><font color="#FF9900">//---------------------------------------------------------------------<br />// Add the odometer to the graph<br />//---------------------------------------------------------------------<br /></font><font color="#0000CC">$graph</font><font color="#006600">-&gt;</font><font color="#0000CC">Add</font><font color="#006600">(</font><font color="#0000CC">$odo</font><font color="#006600">);<br /><br /></font><font color="#FF9900">//---------------------------------------------------------------------<br />// ... and finally stroke and stream the image back to the browser<br />//---------------------------------------------------------------------<br /></font><font color="#0000CC">$graph</font><font color="#006600">-&gt;</font><font color="#0000CC">Stroke</font><font color="#006600">();<br /><br /></font><font color="#FF9900">// EOF<br /></font><font color="#0000CC">?&gt;</font>
+</font>
+</code></div>
+<p>
+As you can see it only requires 5 lines of actual code to create a
+simple but working script. The resulting image is shown 
+in Figure 2 below.
+<br><img src="img/odo_tutex01.png" border=0><br><b>Figure 2:</b> The simplest odometer using all default values <a href="show-example.php?target=img/odo_tutex01.php">[src]</a><p>
+The size of the Odometer is determined automtically to fit the given
+image size as good as possible. Since the size of the odometer
+automatically adjust itself to allow for any odometer caption, graph
+titels or graph captions there is rarely need to manually override
+this automation.
+<P>
+However it is still possible to manually specify the absolut size (of the
+radius) in pixels or as a a fraction of the image size.
+<p>
+If you need your odometer to have a specific radius given in pixels
+you just have to call the <code>SetSize()</code> method in the
+odometer specifying the desired size as the argument.
+<p>
+In the following chapters we will go through all the options you have
+to modify the size, shape and apperance of the graph.
+
+<h3><a name="sec2.3">2.3</a>  Working with the image cache</h3><p>
+
+Since generating images with PHP is a non-trivial exercise this will
+take some CPU time. A normal image can take between 0.1 and 0.3 s to
+create and also requires disk accesses. For a heavily loaded sites this
+can be a bottleneck. 
+<p>
+To help with this situation
+JpOdometer uses a system which can cache recently generated images and
+instead of re-generate an image a search of the cache is first made
+and if the image is found in the cache then that image is used.
+<p>
+To use the cache feature you must
+<ul>
+<li> Have created a cache directory (which is writeable for your
+webserver) and specified the correct paths in jpgraph_dir.php
+<li> Specify a cache file name in the creation of the canvas which is
+the name the cached image will be given in the cache
+<li> Decide on a timeout policy for the cache
+</ul>
+
+<h4><a name="sec2.3.1">2.3.1</a>  Specifying a cache file name</h4><p>
+<p>
+The cache file name is specified in the call that creates the graph
+canvas, For Odometers that is OdoGraph().
+<p>
+For example the following code sets the name to "mygraph"
+
+<div class="exscript">
+$odograph = new OdoGraph(300,200,"mygraph");
+</div>
+<p>
+You can also use the special value "auto" in which case the base
+filename of the script (with an added extension that indicates the
+image type, i.e. *.png, *.jpg). So again
+
+<div class="exscript">
+<pre>
+$odograph = new OdoGraph(300,200,"auto");
+</pre>
+</div><p>
+
+Assuming the script is called "myscript01.php" and we a are using the
+PNG format the cache file name will be named "myscript01.png".
+
+
+<h4><a name="sec2.3.2">2.3.2</a>  Specifying a timeout policy</h4><p>
+In the two calls in the previous section we were using the default
+value for the timeout policy wich happens to be never to timeout. This
+means that as long as the image file is in the cache this file will
+always be returned when the corresponding script are run.
+<p>
+To have a more usefull policy you may decide that it will be enough
+to make sure that the image returned to the browser is no longer than
+an hour old. You do this by specifying a 60min timout policy. This is 
+accomplished by
+
+<div class="exscript">
+<pre>
+$odograph = new Odograph(300,200,"auto",60);
+</pre>
+</div><p>
+
+Voila! Any call to the script within the next 60 min will not re-run
+the script but simply return the existing image in the cache. This
+will significantly reduce the load on the web-server.
+<p>
+The minimum timeout you can specify is 1 min and there is no upper
+limit.
+
+
+<h2><a name="sec3">3</a>  Basic odometer formatting</h2><p>
+
+In general odometer formatting is accomplished by either changing
+properties in the odometer, like the scale and title or by directly
+calling methods on the odometer.
+
+<h3><a name="sec3.1">3.1</a>  Half and full odometers</h3><p>
+
+Odometers comes in two fundamental shapes, full and half circle. The
+default if nothing else is specifed is to create a half circle. The
+type of odometer is specified in the createion of the odometer.
+<p>
+The type is controlled by the two constants
+<ul>
+<li> <code>ODO_FULL</code> Create a full circle odometer
+<li> <code>ODO_HALF</code> Create a half circle odometer
+</ul>
+<p>
+So to set the full style odometer you call
+
+<div class="exscript">
+<pre>
+$odo = new Odometer(ODO_FULL);
+</pre>
+</div><p>
+
+and to set the half style you call
+
+<div class="exscript">
+<pre>
+$odo = new Odometer(ODO_HALF);
+</pre>
+</div><p>
+
+or as this is the deafult just <code> New Odometer()</code>
+<p>
+The images below shows the full circle version of the simple odometer
+in section 2.2
+<p>
+<br><img src="img/odo_tutex02.png" border=0><br><b>Figure 3:</b> A full circle version of the odometer in
+section 2.2 <a href="show-example.php?target=img/odo_tutex02.php">[src]</a><p>
+<h3><a name="sec3.2">3.2</a>  Adding titles and captions to the graph</h3><p>
+
+Each graph can have a title, a subtitle and a caption. They are all
+properties of the graph. To specify a text striong for any of the
+properties you invoke the Set() method as in
+
+<div class="exscript">
+<pre>
+$graph->title->Set("Result for 2002");
+$graph->subtitle->Set("New York Office");
+$graph->caption->Set("Figure 1.")
+</pre></div><p>
+
+You can of course also modify font, color and size for these text
+strings by using the methods SetColor() and SetFont(). Lets change the
+title to be a little bit bigger and have white color.
+
+<div class="exscript">
+<pre>
+$graph->title->SetColor("white");
+$graph->title->SetFont(FF_FONT2,FS_BOLD);
+</pre>
+</div><p>
+
+adding these particular lines to the previous example would result in
+an odometer image as
+
+<br><img src="img/odo_tutex03.png" border=0><br><b>Figure 4:</b> Adding titles and captions <a href="show-example.php?target=img/odo_tutex03.php">[src]</a><p>
+As you can see from the figure the margins will automtically adjust to
+hold the specified titles and captions.
+<p>
+It should be noted that the text strings specified can have multiple
+lines. You specify this by adding a '\n' in the text string where you
+want the line break (or splitting the line in the script). 
+As an example, lets add a very long caption that
+we need to split up in three lines to fit. This is done by changing
+the caption line to
+
+<div class="exscript">
+<pre>
+$graph->caption->Set(
+"Figure 1. This is a very, very  long
+caption that we must split up 
+in several lines to fit."
+);
+</pre>
+</div><p>
+
+<br><img src="img/odo_tutex04.png" border=0><br><b>Figure 5:</b> Adding long  captions <a href="show-example.php?target=img/odo_tutex04.php">[src]</a><p>
+
+<h3><a name="sec3.3">3.3</a>  Changing colors</h3><p>
+
+The first thing to note is that all the colors you see you can
+adjust. For the canvas you can specify
+<ul>
+<li> Margin color
+<li> Plot area color (where the odometer/odometers are drawn)
+<li> Border line color
+<li> Shadow color
+</ul>
+
+To change the margin color you use the <code>SetMarginColor()</code>
+method for the graph and to specify the plot area color you use the
+SetColor() method as in
+<div class="exscript">
+<pre>
+...
+// Make the border 40% darker than normal "khaki"
+$graph->SetMarginColor("khaki:0.6"); 
+$graph->SetColor("khaki");
+</pre></div><p>
+
+Please see the reference section for how to adjust border line and
+shadow color.
+
+For the odometer itself you can adjust
+<ul>
+<li> Fascia color
+<li> Scale label color (and font and size)
+<li> Frame color (and width)
+<li> Needle color (both fill and perimeter)
+<li> Needle "base"
+<li> The additions of colored indicator segments to highlight critical
+or normal ranges.
+</ul>
+
+To change the fascia color you use <code>SetColor()</code> method on
+the odometer. For example we could add the lines
+<div class="exscript">
+<pre>
+...
+$odo->SetColor("lightyellow");
+$odo->scale->label->SetColor("blue");
+$odo->needle->SetFillColor("yellow");
+</pre></div><p>
+
+which adjusts, in turn, the fascia color, scale labels and the needle
+fill color.
+<p>
+As an example figure 6 belows shows a version of the previous odometer but in a 
+"mustard" color scheme.
+
+<br><img src="img/odo_tutex05.png" border=0><br><b>Figure 6:</b> Changing colors <a href="show-example.php?target=img/odo_tutex05.php">[src]</a><p> 
+<h3><a name="sec3.4">3.4</a>  Changing indicator needle style</h3><p>
+
+The indicator needle for the odometer can have six basic shapes which
+is illustrated in the image below
+
+<br><img src="img/odo_tutex06.png" border=0><br><b>Figure 7:</b> Different style of indicator needle. The name
+of the different styles are given under each odometer. <a href="show-example.php?target=img/odo_tutex06.php">[src]</a><p>
+To change the style you use the <code>SetStyle()</code> specifying the
+desired needle style as the argument as in
+
+<div class="exscript">
+<pre>
+$odo1->needle->SetStyle(NEEDLE_STYLE_SIMPLE);
+</pre></div><p>
+
+<h4><a name="sec3.4.1">3.4.1</a>  Adjusting needle length and weight</h4><p>
+
+The basic length of the needle is specified with the
+<code>SetLength()</code> method of the needle. The needle size is
+specified as fractions of the radius. So for example to have the
+needle go halfway in the odometer you would add the code
+<div class="exscript">
+<pre>
+$odo->needle->SetLength(0.5);
+</pre></div><p>  
+
+The default size for needles is 60% of the radius.
+<p>
+The other basic parameter for the needle is its weight. This is in a
+similair manner specified with the method <code>SetWeight()</code>
+Please note that the weight is always given in pixels.
+
+<h4><a name="sec3.4.1">3.4.1</a>  Adjusting arrow head for NEEDLE_STYLE_ENDARROW style</h4><p>
+
+For the needle style "NEEDLE_STYLE_ENDARROW" you can fine tune the
+shape and form of the ending arrow. This is done by specifying the
+particular end arrow size as the second parameter to SetStyle().
+<p>
+To simplify the arrow style setting you use a number of predefined
+sizes. When choosing an arrowhead you specify it's width and length
+each in three diffrent steps, small , medium and large. 
+<p>
+The available end arrow styles are listed in the table below.
+
+<table border=0 cellspacing=5 cellpadding=5>
+<tr><td> <b>Arrow name</b> </td><td> <b>Description</b> </td></tr>
+<tr><td>NEEDLE_ARROW_SS</td><td>Small width, small length</td>
+<tr><td>NEEDLE_ARROW_SM</td><td>Small width, medium length</td>
+<tr><td>NEEDLE_ARROW_SL</td><td>Small width, large length</td>
+<tr><td>NEEDLE_ARROW_MS</td><td>Medium width, small length</td>
+<tr><td>NEEDLE_ARROW_MM</td><td>Medium width, medium length</td>
+<tr><td>NEEDLE_ARROW_ML</td><td>Medium width, large length</td>
+<tr><td>NEEDLE_ARROW_LS</td><td>Large width, small length</td>
+<tr><td>NEEDLE_ARROW_LM</td><td>Large width, medium length</td>
+<tr><td>NEEDLE_ARROW_LL</td><td>Large width, large length</td>
+</tr>
+</table>
+<p>
+So for example if you have a large odometer and woul like to use the
+largest arrowhead you would specify this as
+
+<div class="exscript">
+<pre>
+...
+$odo->needle->SetStyle(NEEDLE_STYLE_ARROWHEAD, NEEDLE_ARROW_LL);
+</pre>
+</div><p>
+
+In the figure below you can see the usage of all the different
+arrowheads
+
+<br><img src="img/odo_tutex07.png" border=0><br><b>Figure 8:</b> Changing size of the arrowheads <a href="show-example.php?target=img/odo_tutex07.php">[src]</a><p>
+
+<h3><a name="sec3.5">3.5</a>  Adding shadows</h3><p>
+
+You can add a drop-shadow to either the entire image or to the
+needle. In both cases you use the method <code>SetShadow()</code> This
+method also allows you to optionally specify the color of the shadow
+as well of far it drops alogn the vertical and horiszontal axes.
+<p>
+To add a shadow to the graph you can use the code
+
+<div class="exscript">
+<pre>
+...
+$graoh->SetShadow();
+</pre>
+</div><p>
+
+This will use the default color and default drop distance. To do the
+same thing for the needle you simply need to call
+
+<div class="exscript">
+<pre>
+...
+$odo->needle->SetShadow();
+</pre></div><p>
+
+Adding both types of shadow to our old favourite, the simple odometer,
+gives the result shown in figure 9
+<br><img src="img/odo_tutex08.png" border=0><br><b>Figure 9:</b> Adding drop shadow to needle and graph. <a href="show-example.php?target=img/odo_tutex08.php">[src]</a><p>
+
+<h3><a name="sec3.6">3.6</a>  Changing size and margins</h3><p>
+
+The size of the odometyer is automtically adjusted to fit the
+available space in the image after margins for titles and captions
+have been taken into account. This means that normally you should
+never have to manually specify a size. 
+<p>
+If the need nevertheless should arrise you just need to make use of
+the odometer method <code>SetSize()</code> as in
+
+<div class="exscript">
+<pre>
+...
+$odo->SetSize(80);
+</pre></div><p>
+
+The size should be specified in absolute pixels. 
+<p>
+Each odometer also have a margin sorrounding it. This is the amount of
+"space" around each individual odometer. The amount of space is
+adjusted by the method <code>SetMargin()</code>. So for example if we
+take the previous example that demonstrated the different types of
+arrowheads and set the margins to, say 15 pixels, this would then
+result in a modified image as shown below.
+
+<br><img src="img/odo_tutex09.png" border=0><br><b>Figure 10:</b> Increasing the margin around individual odometers. <a href="show-example.php?target=img/odo_tutex09.php">[src]</a><p>
+<h3><a name="sec3.7">3.7</a>  Adding color indications</h3><p>
+
+An odometer usually have some colored markings to indicate safe and
+dangerous values. JpOdometer allows you to add as many different
+ranges of the color of your choose as you like by using method
+<code>AddIndication()</code>
+<p>
+To specify that
+you, for example, wants the area between 80 and 100 to be marked red
+you would call
+
+<div class="exscript">
+<pre>
+...
+$odo->AddIndication(80,100,"red");
+</pre></div><p>
+
+By using the <code>AddIndication()</code> multiple times you can add
+several colored ranges. In figure 11 we have added two
+colored band just as an illustration.
+
+<br><img src="img/odo_tutex10.png" border=0><br><b>Figure 11:</b> Using colors to indicate different ranges <a href="show-example.php?target=img/odo_tutex10.php">[src]</a><p>
+
+<h3>3.8 Changing size of the non-colored center area</h3><p>
+
+In the figure in section 3.7 you will notice that the colored band
+covers the whole fascia down to the bas eof the indicator needle. It
+is possible to specify that a circular area at the center of the
+odometer should not e colored by the indicator ranges. The size of
+this are is specified as fractions of the radius and the default size
+of this area is 0.
+<p>
+An example will make this clear. Specifyin a center area 
+is done by a call to <code>SetCenterAreaWidth()</code>. So, for
+example to specify a center area which is 40% of the radius you would
+call 
+
+<div class="exscript">
+<pre>
+...
+$odo->SetCenterAreaWidth(0.4);
+</pre></div><p>
+
+This is illustrated in figure 12 below
+
+<br><img src="img/odo_tutex11.png" border=0><br><b>Figure 12:</b> Using a center area (compare this with figure 11) <a href="show-example.php?target=img/odo_tutex11.php">[src]</a><p>
+
+<h3><a name="sec3.1">3.1</a> 0 Using multiple indicator needles in one odometer</h3><p>
+
+You can easily use multiple indicator needles in a single odometer,
+This could be usefull to show both a current value and, say, a
+six-month sliding average. You can use up to four indicator needles
+in a single odometer (which is probbaly more than you ever should
+use).
+<p>
+The extra needles are accessed by the properties <code>needle2,
+needle3, needle4</code> in hte odometer and work exactly as the normal
+needle with one exception. You have to manually make them visible by a
+call to <code>Show()</code>. It is only the promary needle
+(<code>needle</code>) which is visible by default.
+<p> 
+An example will make this clear. Let's take our old favourite the
+simple odometer and enable the second needle by adding the lines
+
+<div class="exscript">
+<pre>
+...
+$odo->needle2->Show();
+$odo->needle2->Set(44);
+...
+</pre></div><p>
+
+This will then give the image shown in figure 13below. (In this example we also changed the apperance of the second
+needle to make it easier to tell them apart)
+
+<br><img src="img/odo_tutex12.png" border=0><br><b>Figure 13:</b> Enabling a second indicator needle <a href="show-example.php?target=img/odo_tutex12.php">[src]</a><p>
+
+<h3>3.11 Adding a odometer legend (label)</h3><p>
+
+Most types of odometers have a legend in the middle of the meter
+usually indicating waht the scale shows. You can very easy add some
+text to the middle of the odometer by setting the <code>label</code>
+property of the odometer. As in
+
+
+<div class="exscript">
+<pre>
+...
+$odo->label->Set("% Pass");
+</pre></div>
+<p>
+Again, an example makes this clear
+
+<br><img src="img/odo_tutex13.png" border=0><br><b>Figure 14:</b> Adding a legend to the odometer. As you can
+expect this legend text can be partially obscured by the needle
+depending on the value the odometer shows. <a href="show-example.php?target=img/odo_tutex13.php">[src]</a><p>
+<h2><a name="sec4">4</a>  Working with scales</h2><p>
+
+In the previous chapter you might have begun to get worried since we
+silently ignored the scale values which always seemd to be between 0
+and 100 %. Don't worry. You may modify the scale to your hearts
+desire. We just used the default scale in all the previous examples to
+keep things as simple as possible (but not simpler...).
+<p>
+There are a number of properties for the scale you can change.
+<ol>
+<li> The min and max values
+<li> The fonts and for the scale
+<li> The formatting of the scale values
+<li> The start and end angles for the min and max values
+<li> The tick intervall 
+<li> The intervall of the scale labels
+</ol>
+<p>
+All these properties will be described in the following section. You
+access the scale through the odometer property <code>scale</code>.
+
+<h3><a name="sec4.1">4.1</a>  Specifying a scale</h3><p>
+
+By default the scale runs between 0 (inclusivly) and 100
+(inclusivly). If you try to set the needle to a value outside the
+scale you will receive an error message.
+
+<h4><a name="sec4.1.1">4.1.1</a>  Min and max values</h4><p>
+
+Min and max values are specified with the <code>Set()</code> 
+method as in
+
+<div class="exscript">
+<pre>
+...
+$odo->scale->Set(0,240)
+</pre></div><p>
+
+
+<h4><a name="sec4.1.2">4.1.2</a>  Tick and label positioning</h4><p>
+
+To specify the interval for the tick marks on the scale and which tick
+marks should have it's scale value printed you use the 
+<code>SetTicks()</code> method.
+<p>
+The first argument specifies the tick interval, i.e. the interval tick
+marks will be drawn in the odometer. The second argument specifies
+that every n:th tick should have a label. So for example if you call
+teh methid with
+
+<div class="exscript">
+<pre>
+...
+$odo->scale->SetTicks(20,2)
+</pre></div><p>
+
+You would get tick marks on positions 0,20,40,60,.. up to the maximum
+value of the scale. Furtermore every second of these tick marks would
+have it's value printed so in the odometer the labels would be at
+0,40,80, .. up to the maxiumum value of the scale.
+<p>
+To make sure that the maximum value gets a tick mark (if that is what
+you want) you should make sure that the tick interval you choose 
+evenly divides the scale max value.
+
+<h4><a name="sec4.1.3">4.1.3</a>  Example using a different scale</h4><p>
+
+Let's say wee need a scale from 100 to 600 where we have tickmarks
+every 50 scale step and labels on the even hundreds (every second tick
+mark) we would then have to call
+
+<div class="exscript">
+<pre>
+...
+$odo->scale->Set(100,600);
+$odo->scale->SetTicks(50,2);
+</pre></div><p>
+
+This would then give an image as shown in 15 below.
+
+<br><img src="img/odo_tutex14.png" border=0><br><b>Figure 15:</b> Using a custom scale <a href="show-example.php?target=img/odo_tutex14.php">[src]</a><p>
+<h3><a name="sec4.2">4.2</a>  Formatting scales</h3><p>
+
+You can easily customize the apperance of the scale ticks and labels
+as described below.
+
+<h4><a name="sec4.2.1">4.2.1</a>  Fonts and colors</h4><p>
+
+To adjust the font and color of the text labels you access property
+<code>label</code> in the scale and apply the standard
+<code>SetFont(), SetColor()</code> methods. For example
+
+<div class="exscript">
+<pre>
+...
+$odo->scale->label->SetFont(FF_FONT1,FS_BOLD);
+$odo->scale->label->SetColor("brown");
+</pre></div><p>
+
+<h4><a name="sec4.2.2">4.2.2</a>  Formatting strings</h4><p>
+
+The way the labels are formatted are controlled by a format string
+with the standard "printf" syntax, e.g "%d" (as default) displays an
+integer and "%02f.1" displays a label zero padded to two positions and
+with one decimal place. 
+<p>
+You can also easily add arbitrary character in the format string, just
+keep in mind that there is limited space available. For example to add
+a trailing "%" sign to the standard integer display you would specify
+a format string as "%d%%". 
+<p>
+The format string is applied by using the
+<code>SetLabelFormat()</code> method of the scale class as in
+
+<div class="exscript">
+<pre>
+...
+$odo->scale->SetLabelFormat("%d%%");
+</pre></div><p>
+
+<h4><a name="sec4.2.3">4.2.3</a>  Positioning labels</h4><p>
+
+The center of the labels are positioned on an imaginary inner
+circle. The size of this inner circle is by default 80% av the
+radius. You can easily adjust this to better suit a bigger font by
+calling the method <code>SetLabelPos()</code> as in
+
+<div class="exscript">
+<pre>
+...
+$odo->scale->SetLabelPos(0.7);
+</pre></div><p>
+
+<h4><a name="sec4.2.4">4.2.4</a>  Tick size and color</h4><p>
+
+You can adjust the tick marks weight, length and color by the
+corresponding methods <code>SetTickWeight(), SetTickLength(),
+SetTickColor()</code> in the scale. Pleas note that the tick length is
+specified as a fraction of the radius while weight is specified in
+pixels. 
+<p>
+The following code excerpt illustrates how to do this
+<div class="exscript">
+<pre>
+$odo->scale->SetTickLength(0.1);  // Make tick 10% of radius
+$odo->scale->SetTickWeight(2);  
+$odo->scale->SetTIckColor("brown");  
+</pre></div><p>
+
+You will note that tick that mark label positions (majot tick) are set
+to 1.5 times the length of the nominal tick length.
+
+<h4><a name="sec4.2.5">4.2.5</a>  A formatting example</h4><p>
+
+In the example in figure 16 below we have applied a
+number of the modifications possible for scales as an illustration. We
+wont discuss the changes in any more detail. The example code should
+be fairly obvious.
+
+<br><img src="img/odo_tutex15.png" border=0><br><b>Figure 16:</b> Changing some  scale properties <a href="show-example.php?target=img/odo_tutex15.php">[src]</a><p>
+
+<h3>4.3 Specifying start- and end angle for scale</h3><p>
+
+This feature probably belong in the advanced section but is documented
+here for completeness.
+<p>
+For half odometers the scale goes from left to right and the first
+scale position is at 180 degrees (PI) and the end position is at 0
+degrees.
+<P>
+If you dont like the scale going all the way to the bottom of the
+odometer you can have, say 20 degrees, space. Before going into a
+detailed discussion on how to do this let's just have a quick look at
+the result to avoid any confusions on what er are discussing.
+
+<br><img src="img/odo_tutex16.png" border=0><br><b>Figure 17:</b> Adjusting the start and end angle. The left
+odometer uses the default setting while in the right odometer we 'have
+moved up' the start and end scale value by 20 degrees. <a href="show-example.php?target=img/odo_tutex16.php">[src]</a><p>
+The angles are specified by a call to <code>SetAngle()</code>. It is
+important to note that the angle are counted clockwise from the 6'a
+clock position. This means that the normal half odometer has a start
+angle of 90 degrees and a finsh angle of 270 degrees. 
+<p>
+In the example above ( Figure 17.) we modified the start angle to 110 
+and the end angle to 250 degrees to achieve the odometer on the right.
+<p>
+For full circle odometers the standard start angle is 40 degrees and
+the end angle is 320. This leaves a sector of 80 degrees free at the
+bottom of the odometer.
+
+
+<h2><a name="sec5">5</a>  Adding multiple odometers to the same image</h2><p>
+
+JpOdometer supports unlimited number of odometers in a single
+image. You can either position the odometers manually within the image
+by specifying absolute coordinates for the centers of the odometers or
+you can use the (preferred) automatic way.
+
+<h3><a name="sec5.1">5.1</a>  Adding individual captions</h3><p>
+
+When having multiple odometers in the same image you normally like to
+have some kind of individual caption to describe each odometer. This
+is easily accomplished by using the <code>caption</code> property of
+the odometer. So to set the caption you could for example use
+
+<div class="exscript">
+<pre>
+...
+$odo->caption->Set("Average for July");
+</pre></div><p>
+
+In the follwoing two sub section you cane see more examples of the
+usage of captions.
+
+<h3><a name="sec5.2">5.2</a>  Manually specifying positions for odometers</h3><p>
+
+To manually set the position you have to use the <code>SetPos()</code>
+method in the odometer class. You are free to specify any position you
+like in the image. The (0,0) position is counted from the top left
+corner. 
+<p>
+As an example lets have two odometers, one upper right corner and one
+in the lower left corner in an image that is 300 by 300 pixels big. We
+also specify a slightly smaller size so they do not cover the entire
+image width which otherwise would be the case.
+
+<br><img src="img/odo_tutex17.png" border=0><br><b>Figure 18:</b> Manually specifying size and position for
+odometers. In additon we have also set a caption for each odometer
+specifyin it x and y coordinates and it's size. <a href="show-example.php?target=img/odo_tutex17.php">[src]</a><p>
+Using absolute coordinates is not the only way. You may also specify
+the x position as fractions of the image width and the y coordinate as
+fraction of the image height. So for example specifying
+
+<div class="exscript">
+<pre>
+$odo->SetPos(0.5, 200);
+</pre></div><p>
+
+Will center the odometer horizontally while locking the y-coordinate
+to an absolute position at 200. 
+<p>
+There is a small difference when using odometer captions and
+specifying the y coordinate using fractions in that the y-coordinate
+and the radius will automatically adjust to the height of the caption
+size. This gurantees that the total image (odometer+caption) will
+always occypy the same total height in the image regardless of the
+size of the caption.
+
+<h3><a name="s53">5.3</a> Using layout classes</h3><p>
+
+What you normally want to do is not having to calculate the absolute
+x and y coordinates when positioning odometers. Instead most of the
+time you have an idea like "-I want to odometers side by side" or "I
+want three odometers above one another". Or maybe something more
+complex like "-I want two rows of odometers where the top row has two
+odometers side by side, and the bottom row has three odometyers side by
+side". 
+<p>
+This is the user perspective and you normally want to do this without
+all the hassle of manually determine the coordinates. Luckily there is
+an easy way to accomplish this by using layout classes.
+<p>
+There are two types of layout horizontal and vertical. To specify that
+two odometers should be layed out side by side (horizontal) you creta
+a new layout object and add that layout object to the graph instead
+oif the individual odometers. So, two make a layout of three odometers
+side by side you would say somthing like
+
+<div class="exscript">
+<pre>
+...
+$row1 = new LayoutHor( array($odo1, $odo2, $odo3) );
+$graph->Add( $row1 );
+</pre> </div><p>
+
+If you instead wanted the three odometers stacked on top of eachother
+you would use a vertical layout class and write
+
+<div class="exscript">
+<pre>
+...
+$col1 = new LayoutVert( array($odo1, $odo2, $odo3) );
+$graph->Add( $col1 );
+</pre></div><p>
+
+You can use as many odometers in the above array as you like. Each
+individual odometer will have its size and position automatically
+adjusted.
+<p>
+If you only could add odometers in the creation of layout classes it
+would be of limited use. The real power of layout classes is that the
+can be combined. So for exmaple if you wante two odometers in the top
+row and three in the bottom row you would write
+
+<div class="exscript">
+<pre>
+...
+$row1 = new LayoutHor( array($odo1, $odo2) );
+$row2 = new LayoutHor( array($odo3, $odo4, $odo5) );
+
+// Combine the two rows in a column
+$col1 = new LayoutVert( array($row1, $row2) );
+
+// The image will now have 5 odometers!
+$graph->Add( $col1 );
+</pre></div><p>
+
+Using the above scheme will let you create arbitrary complex layouts
+with as many columns and rows as you like. All this without ever
+having to think of a single coordinate!
+
+<br><img src="img/odo_tutex18.png" border=0><br><b>Figure 19:</b> Using layout classes to position 5 odometers <a href="show-example.php?target=img/odo_tutex18.php">[src]</a><p>
+In the following image we have extended the previous example by adding
+captions to each odoemeter and as you might have suspected the size
+and position of each odometer has adjusted itself to compensate for
+the caption line.
+
+<br><img src="img/odo_tutex19.png" border=0><br><b>Figure 20:</b> Using layout classes to position 5 odometers <a href="show-example.php?target=img/odo_tutex19.php">[src]</a><p>
+As a further example we can add both an image title and an image
+caption as the following example shows (we have also made the image
+slightly higher to avoid having the odometers becomming two small).
+
+<br><img src="img/odo_tutex20.png" border=0><br><b>Figure 21:</b> Adding an image title and caption <a href="show-example.php?target=img/odo_tutex20.php">[src]</a><p>
+
+<h2><a name="sec6">6</a>  Advanced odometer formatting</h2><p>
+
+The features described in the followinf section is probably not so
+much advanced as "rarley-needed-to-adjust".
+
+<h3>6.1 Adjusting the width and color of the odometer frame (border)</h3><p>
+
+The border with can be adjusted with a call to
+<code>SetBorder()</code>. So for example to set a 5 pixels dark red
+border you woudl write
+<div class="exscript">
+<pre>
+$odo->SetBorder("darkred",5);
+</pre></div><p>
+
+Using our old favourite this would then result in
+
+<br><img src="img/odo_tutex21.png" border=0><br><b>Figure 22:</b> Adjusting the width and color of the border <a href="show-example.php?target=img/odo_tutex21.php">[src]</a><p>
+
+<h2><a name="s7">7</a> Available fonts and styles</h2><p>
+
+Fonts for the various text strings used are always specified with a
+call to <code>SetFont()</code>.
+<p>
+The syntax for this call is
+<p>
+<code>SetFont(<font-family>[,<font-style>[,font-size]])</code>.
+<p>
+For the builtin fonts the <font-size> argument (if supplied) is
+ignored. If no style is specified the normal font style is
+assumed. The available font styles are
+
+<ul>
+<li>FS_NORMAL,
+<li> FS_BOLD, 
+<li> FS_ITALIC,
+<li> FS_BOLDIT,
+</ul>
+<p>
+Note that not all fonts support all styles. Refer to the tables below.
+
+<h3>7.1 Built-in fonts</h3><p>
+
+The size of builtin font can not be changed and the parameter is
+ignored if supplied in the call to <code>SetFont()</code>. 
+FF_FONT0 is the smallest
+font and FF_FONT2 is the largest of the builtin fonts.
+
+<table border=1>
+<tr>
+<td><b>Font family</b></td>
+<td><b>Normal</b></td>
+<td><b>Italic</b></td>
+<td><b>Bold</b></td>
+<td><b>Bold italic</b></td>
+</tr>
+<tr><td> FF_FONT0 </td><td>X</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td> FF_FONT1 </td><td>X</td><td>&nbsp;</td><td>X</td><td>&nbsp;</td></tr>
+<tr><td> FF_FONT2 </td><td>X</td><td>&nbsp;</td><td>X</td><td>&nbsp;</td></tr>
+</table>
+
+<h3><a name="sec7.2">7.2</a>  TTF fonts</h3><p>
+
+The available fonts depends on what fonts you have installed the
+following list assumed you have installed both the standard and extra
+fonts that comes with JpOdoemeter.
+
+
+<td>
+<table border=1>
+<tr><td><b>Font
+family</b></td><td><b>Normal</b></td><td><b>Italic</b></td><td><b>Bold</b></td>
+<td><b>Bold italic</b></td></tr>
+<tr><td> FF_ARIAL </td><td>X</td><td>X</td><td>X</td><td>&nbsp;</td></tr>
+
+<tr><td> FF_BOOKANT </td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td> FF_COMIC </td><td>X</td><td>&nbsp;</td><td>X</td><td>&nbsp;</td></tr>
+<tr><td> FF_COURIER </td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td> FF_TAHOMA </td><td>X</td><td>&nbsp;</td><td>X</td><td>&nbsp;</td></tr>
+<tr><td> FF_TIMES </td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+<tr><td> FF_VERDANA </td><td>X</td><td>X</td><td>X</td><td>&nbsp;</td></tr>
+<tr><td> FF_HANDWRITING </td><td>X</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+
+
+<h2><a name="sec8">8</a>  Reference section</h2><p>
+
+<h3><a name="sec8.1">8.1</a>  Purpose</h3><p>
+The following section contains a reference of all public classes, methods and
+properties which can be used to modify the apperance of Odometers.
+
+<h3 style="background-color:yellow;"><a name="sec8.2">8.2</a> Class OdoGraph</h3><p>
+
+<h4>Predefined Instances</h4><p>
+None.
+
+<h4>Description</h4><p>
+
+<h4>Properties</h4><p>
+<code>
+Class Image OdoGraph::img <br>
+Class Text OdoGraph::title <br>
+Class Text OdoGraph::subtitle <br>
+Class Text OdoGraph::caption <br>
+</code>
+
+<h4>Methods</h4><p>
+
+<h4 class="methodsignature">OdoGraph($aWidth=-1,$aHeight=-1,$aCacheFileName="",$aCacheTimeout=0)</h4><p>
+<code>
+<table>
+<tr><td><code>$aWidth</code></td><td>Width of image in pixels</td></tr>
+<tr><td><code>$aHeight</code></td><td>Height of image in pixels</td></tr>
+<tr><td><code>$aCacheFileName</code></td><td>Filename used for image in cache</td></tr>
+<tr><td><code>$aCacheTimeout</code></td><td>Timeout for cache in minutes</td></tr>
+</table>
+<p>
+Creates a new canvas where odometer can be added.
+<h4>Examples</h4><p>
+<div class="exscript">
+<pre>
+// Create a graph with default width and height, no caching
+$graph = new OdoGraph();
+
+// Create a 300x400 image, no cache
+$graph = new OdoGraph(300,400);
+
+// Create a 300x400 image, use the script name as name of the cached
+// version, no timeout (cached image lives forever)
+$graph = new OdoGraph(300,400,"auto");
+
+// Create a 300x400 image, use the script name as name of the cached
+// version, 5 minutes timeout
+$graph = new OdoGraph(300,400,"auto",5);
+
+// Create a 300x400 image, use "image1" as the cache file name,
+// 5 minutes timeout
+$graph = new OdoGraph(300,400,"image1",5);
+
+</pre>
+</div><p>
+<h4 class="methodsignature">Add($aObject)</h4><p>
+
+<table>
+<tr><td><code>$aObject</code></td><td>Object to add to the canvas</td></tr>
+</table>
+
+<p>
+Add a new drawing object to the canvas. A drawing object is an instance
+of either
+
+<ul>
+<li> Class Odometer
+<li> Class LayoutHor
+<li> Class LayoutVert
+</ul>
+<p>
+An added object can either be an array of object or a single
+object. You may call <code>Add()</code> several time for the same
+graph. 
+
+<h4>Examples</h4><p>
+<div class="exscript">
+<pre>
+// Adding a single odometer
+$graph->Add($odometer1);
+
+// Adding multiple odometers
+$graph->Add( array($odometer1, $odometer2) );
+
+// ... or
+$graph->Add($odometer1);
+$graph->Add($odometer2);
+
+// Adding a layout object
+$row = new LayoutHor( array($odometer1, $odometer2)  )
+$graph->Add($row);
+</pre>
+</div><p>
+<h4 class="methodsignature">Stroke($aStrokeFileName="")</h4><p>
+<code></code>
+<table>
+<tr><td><code>$aStrokeFileName</code></td><td>Optional filename</td></tr>
+</table>
+<p>
+This method should normally be the last method called in your
+script. If no filename is specified then the generated image will just
+be sent back to the browser. If, however a filename is supplied then
+the generated image will be written to that file. The filename is
+relative to the directory where the script executes. 
+<p>
+As a special case the filename may be specified as "auto" in which
+case the image will be stored to a file withe the same basename as the
+script. 
+<p>
+Using a filename makes it possible to run JpOdometer in batchmode off
+line to generate images directly to a directory.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+
+// Just send the image back to the browser
+$graph->Stroke();
+
+// Save the image to file "newimage001.png"
+$graph->Stroke("newimage001.png");
+
+</pre>
+</div><p>
+
+<h4 class="methodsignature">SetShadow($aShow=true,$aWidth=5,$aColor=array(102,102,102))</h4><p>
+
+<table>
+<tr><td><code>$aShow</code></td><td>Should the image have a drop shadow?</td></tr>
+<tr><td><code>$aWidth</code></td><td>Width in pixels of shadow</td></tr>
+<tr><td><code>$aColor</code></td><td>Color of shadow</td></tr>
+</table>
+<p>
+Use this method to add a dropshadow to the image.
+
+<h4>Examples</h4><p>
+<div class="exscript">
+<pre>
+// Enable the default shadow
+$graph->SetShadow();
+
+// Make the shadow 10 points in size
+$graph->SetShadow(true,10);
+
+</pre>
+</div><p>
+
+<h4 class="methodsignature">SetColor($aColor)</h4><p>
+
+<table>
+<tr><td><code>$aColor</code></td><td>Plotarea color</td></tr>
+</table>
+<p>
+Sets the background color for the area where all the odometers are
+plotted. 
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$graph->SetMargin("snow1");
+
+</pre>
+</div><p>
+
+<h4 class="methodsignature">SetMarginColor($aColor)</h4><p>
+
+<table>
+<tr><td><code>$aColor</code></td><td>Margin color</td></tr>
+</table>
+<p>
+Sets the color of the margin of the image.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$graph->SetMargin("snow2");
+</pre></div><p>
+
+
+<h3 style="background-color:yellow;"><a name="sec8.3">8.3</a> Class OdoScale</h3><p> 
+<h4>Predefined Instances</h4><p>
+<code>Odometer::scale</code>
+
+<h4>Descriptions</h4><p>
+
+<h4>Properties</h4><p>
+<code>
+Class Text OdoScale::label <br>
+</code>
+
+<h4>Methods</h4><p>
+
+<h4 class="methodsignature">SetAngle($aStart,$aEnd)</h4><p>
+
+<table>
+<tr><td><code>$aStart</code></td><td>Start angle in degrees</td></tr>
+<tr><td><code>$aEnd</code></td><td>End angle in degrees</td></tr>
+</table>
+<p>
+Specifies the angle for the minimum and maximum scale values. For
+semi-circle odometer the minimum is by default at 90 degree (9'a
+clock) and the end position at 270 degrees (3'a clock).
+<p>
+For a full circle odometer the defaults are 40 and 320 degrees
+respectively. 
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+// 10 degrees "space" at both minimum and maximum scale
+// value.
+$odo->scale->SetAngle(100,260);
+</pre>
+</div><p>
+
+
+<h4 class="methodsignature">SetLabelFormat($aFormat)</h4><p>
+
+<table>
+<tr><td><code>$aFormat</code></td><td>The "printf" format sttring for
+scale labels. </td></tr>
+</table>
+<p>
+The format string control how scale values are formatted when they are
+printed on the odometer. The scale string should be formatted as a
+standard "printf" format string.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+// Format labels as decimal numbers padded with 0 to two positions and 
+// one decimal position.
+$odo->scale->SetLabelFormat("%02.1f");
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetTickWeight($aWeight)</h4><p>
+
+<table>
+<tr><td><code>$aHeight</code></td><td>Tick weight in pixels</td></tr>
+</table>
+<p>
+Specifies the thickness of of each tick mark.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$odo->scale->SetTickWeight(2);
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetTickLength($aLength)</h4><p>
+
+<table>
+<tr><td><code>$aLength</code></td><td>Tick lengths as fraction of the radius</td></tr>
+</table>
+<p>
+Specify the length of each tick mark as a fraction of the
+radius. Major tickmarks (tick marks which have a label) is always 1.5
+times as longer than the above specified length.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$odo->scale->SetTickLength($aLength)
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetTickColor($aColor)</h4><p>
+
+<table>
+<tr><td><code>$aColor</code></td><td>Color for ticks</td></tr>
+</table>
+<p>
+Specify the color of the tick marks
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$odo->scale->SetTickColor("brown");
+</pre></div><p>
+
+
+<h4 class="methodsignature">Set($aMin,$aMax)</h4><p>
+
+<table>
+<tr><td><code>$aMin</code></td><td>Minimum scale value</td></tr>
+<tr><td><code>$aMax</code></td><td>Maximum scale value</td></tr>
+</table>
+<p>
+Specify the range for the scale. Any attempt to set the indicator
+needle outside the sclae will result in an error.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+// Use scale values between 100 and 600 inclusivly
+$odo->scale->Set(100,600);
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetLabelPos($aPos)</h4><p>
+
+<table>
+<tr><td><code>$aPos</code></td><td>The radius of the inner circle
+along which all labels are positioned as a fraction of the odometers
+radius. </td></tr>
+</table>
+<p>
+Each labela center is positioned along a thought inner circle. The
+method is used to spoecify the radius of this thought circle as a
+fraction of the odometers radius. By default the "label radius" is at
+80% of the odometer radius.
+<p>
+Depending on the font you use you may have to reduce the circle in
+order to avoid the label from crossing the odometer border.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+// Give some more space to labels than default.
+$odo->scale->SetLabelPos(0.7);
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetTicks($aTickInt,$aLabelInt=1)</h4><p>
+
+<table>
+<tr><td><code>$aTickInt</code></td><td>Basic scale interval to
+positioning tick marks.</td></tr>
+<tr><td><code>$aLabelInt</code></td><td>Specify the intervall that
+ticks should be labeled</td></tr>
+</table>
+<p>
+Tick marks will occur at every <code>aTickInt</code> scale
+intervall. Of these tick marks every <code>aLabelInt</code>:nth tick
+mark will be given a label.
+<p>
+The specified tick interval should be an even divider to (max scale
+value) - (min scale value) if you want to make sure that both the
+start and end scale value will receive a tick mark.
+
+
+<h4>Examples</h4><p>
+The examples below assumes a scale between 0 and 100
+<div class="exscript">
+<pre>
+// Tick mark every 10:th scale step
+// Labels every 20:th scale step
+$odo->scale->SetTicks(10,2);
+
+// Tick mark every 25:th scale step
+// Labels every 25:th scale step
+$odo->scale->SetTicks(25,1);
+
+// Tick mark every 25:th scale step
+// Labels every 50:th scale step
+$odo->scale->SetTicks(25,2);
+</pre>
+</div><p>
+
+<h4 class="methodsignature">Show($aShow=true)</h4><p>
+
+<table>
+<tr><td><code>$aShow</code></td><td>Flag if scale should be visible or
+not</td></tr>
+</table>
+<p>
+By default the scale is displayed. By setting the falg to false no
+tick marks and no labels will be displayed.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+// Turn off scale
+$odo->scale->Show(false);
+</pre></div><p>
+
+<h3 style="background-color:yellow;"><a name="sec8.4">8.4</a> Class Odometer</h3><p> 
+
+<h4>Predefined Instances</h4><p>
+None.
+
+<h4>Descriptions</h4><p>
+
+This is the main class to create odometers. Each created odometer must
+be added to a graph canvas (via a call to OdoGraph::Add()) in order to
+be displayed. Odometers can be of two basic types; full circle or half
+circle. 
+
+<h4>Properties</h4><p>
+<code>
+Class OdoScale Odometer::scale <br>
+Class OdoNeedle Odometer::needle <br>
+Class OdoNeedle Odometer::needle2 <br>
+Class OdoNeedle Odometer::needle3 <br>
+Class OdoNeedle Odometer::needle4 <br>
+Class Text Odometer::label <br>
+</code>
+
+<h4>Methods</h4><p>
+<h4 class="methodsignature">Odometer($aStyle=ODO_HALF)</h4><p>
+
+<table>
+<tr><td><code>$aStyle</code></td><td>Can be ODO_HALF or ODO_FULL</td></tr>
+</table>
+<p>
+Create a new odometer. The default is to create a half circle odometer.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+// Create a new half circle odometer
+$odo1 = new Odometer();
+
+// Create a new full circle odometer
+$odo2 = new Odometer(ODO_FULL);
+</pre></div><p>
+
+<h4 class="methodsignature">SetMargin($aMargin)</h4><p>
+
+<table>
+<tr><td><code>$aMargin</code></td><td>Margin in pixel around the odometer</td></tr>
+</table>
+<p>
+Specifies the margin around an odometer. The default margin is 5
+pixels. The margin feature is of most use when you haev multiple
+odometers on the same image and don't wont them to be to close to
+eachother. 
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+// Specify 10 pixels margin
+$odo->SetMargin(10);
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetBase($aShowBase,$aWidth=0.1,$aColor1="navy",<br>$aColor2="steelblue",$aColor3="white")</h4><p>
+
+<table>
+<tr><td><code>$aShowBase</code></td><td>Flag to enable/disable the
+needle base</td></tr>
+<tr><td><code>$aWidth</code></td><td>Width (as fraction of radius) of
+needle base</td></tr>
+<tr><td><code>$aColor1</code></td><td>Border color of base</td></tr>
+<tr><td><code>$aColor2</code></td><td>Fill color of base</td></tr>
+<tr><td><code>$aColor3</code></td><td>Center color of base</td></tr>
+</table>
+<p>
+This is probably the method you will use least. It is used to modify
+the apperance of the "needle base", the small colored circle area at
+the center of the odometer from which the indicator needle extends.
+<p>
+The default width is 12% of odometer radius.
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+// Make the base bigger and some new funky colors
+$odo->SetBase(true,0.2,"brown","khaki","yellow");
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetCenterAreaWidth($aWidth)</h4><p>
+
+<table>
+<tr><td><code>$aWidth</code></td><td>Width of center area as fraction
+of the radius</td></tr>
+</table>
+<p>
+This function comes in handy when using colored indicators to show
+various scale ranges. Normall these colored ranges extends as
+pie-slices all the way from the center to the edge of the odometer. If
+you don't want the colored bands to reach all the way to the center of
+the odometer you can use this method. 
+<p>
+This comes in handy for example if you have an odometer legend in the
+middle of the odometer.
+<p>
+The color of the center area is the same as the fascia color of the
+odometer. 
+<p>
+The default width is 0, i.e no center area.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$odo->SetCenterAreaWIdth(0.4);
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetPos($aX,$aY)</h4><p>
+
+<table>
+<tr><td><code>$aX</code></td><td>X-position for center of odometer</td></tr>
+<tr><td><code>$aY</code></td><td>Y-position for center of odometer</td></tr>
+</table>
+<p>
+Specifies the position of the center for the odometer on the graph
+canvas. If the coordinate given is >= 0 and <1 then the position given
+will be interpretaed as fraction of the image width/height. If the
+position is given as a value >1 then the position is assumed to be
+given in absoilute pixels.
+<p>
+For full circle odometer the default is to place the center of the
+odometer in the center of the image. For half circle odometers the
+default is to place the center at the bottom of the image to make full
+use of the available size.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+// Center the odometer in the image
+$odo->SetPos(0.5,0.5);
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetSize($aRadius)</h4><p>
+
+<table>
+<tr><td><code>$aRadius</code></td><td>Size of radius in pixels</td></tr>
+</table>
+<p>
+Specify the basic size of the odometer.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+// Set size 70 pixels
+$odo->SetSize(70);
+</pre></div><p>
+
+
+<h4 class="methodsignature">AddIndication($aStart,$aEnd,$aColor)</h4><p>
+
+<table>
+<tr><td><code>$aStart</code></td><td>Start value </td></tr>
+<tr><td><code>$aEnd</code></td><td>End value</td></tr>
+<tr><td><code>$aColor</code></td><td>Colro for indication</td></tr>
+</table>
+<p>
+Us ethis method to add one or several colored band to the
+odometer. This is usually to indicate "safe" or "dangerous"
+values. The areas is specified with two scale values and the color
+that indication should have.
+
+<h4>Examples</h4><p>
+Assume we have a scale between 0 and 100. We wont to mark the scale
+between 0 and 50 as "green" and the value between 80 and 100 as "red".
+
+<div class="exscript">
+<pre>
+$odo->AddIndication(0,50,"green");
+$odo->AddIndication(80,100,"red");
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetColor($aColor)</h4><p>
+
+<table>
+<tr><td><code>$aColor</code></td><td>Fascia color for odometer</td></tr>
+</table>
+<p>
+Set the (fill) fascia color for the odometer.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$odo->SetColor("lightyellow");
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetBorder($aColor,$aWidth=1)</h4><p>
+
+<table>
+<tr><td><code>$aColor</code></td><td>Color for border around odometer</td></tr>
+<tr><td><code>$aWidth</code></td><td>Width of border around odometer</td></tr>
+</table>
+<p>
+Use this method to specify width and color od the border around the
+odometer. 
+<p>
+The default is a 1 pixel black border.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$odo->SetBorder("blue",3);
+</pre></div><p>
+
+
+<h3 style="background-color:yellow;"><a name="sec8.5">8.5</a> Class OdoNeedle</h3><p> 
+
+<h4>Predefined Instances</h4><p>
+<code>
+Odometer::needle <br>
+Odometer::needle2 <br>
+Odometer::needle3 <br>
+Odometer::needle4 <br>
+</code>
+
+<h4>Descriptions</h4><p>
+
+This is controllinf class fo the apperance of the indicator needle in
+each odometer. This is accessed through the properties in the
+odometer. 
+<p>
+A needle can have one of seven basic different shapes. The shape used is
+controlled by constants. The constants are
+
+<table>
+<tr><td><code>NEEDLE_STYLE_SIMPLE</code></td><td></td></tr>
+<tr><td><code>NEEDLE_STYLE_STRAIGHT</code></td><td></td></tr>
+<tr><td><code>NEEDLE_STYLE_ENDARROW</code></td><td></td></tr>
+<tr><td><code>NEEDLE_STYLE_SMALL_TRIANGLE</code></td><td></td></tr>
+<tr><td><code>NEEDLE_STYLE_MEDIUM_TIANGLE</code></td><td></td></tr>
+<tr><td><code>NEEDLE_STYLE_LARGE_TRIANGLE</code></td><td></td></tr>
+<tr><td><code>NEEDLE_STYLE_HUGE_TRIANGLE</code></td><td></td></tr>
+</table>
+
+The image below gives a visual explanation to what these styles mean
+
+<br><img src="img/odo_tutex06.png" border=0><br><b>Figure 23:</b> Different style of indicator needle. The name
+of the different styles are given under each odometer. <a href="show-example.php?target=img/odo_tutex06.php">[src]</a><p>
+When using the arrow style you can further adjust the shape of the end
+arrow as the following tabel shows
+
+
+<table border=0 cellspacing=5 cellpadding=5>
+<tr><td> <b>Arrow name</b> </td><td> <b>Description</b> </td></tr>
+<tr><td>NEEDLE_ARROW_SS</td><td>Small width, small length</td>
+<tr><td>NEEDLE_ARROW_SM</td><td>Small width, medium length</td>
+<tr><td>NEEDLE_ARROW_SL</td><td>Small width, large length</td>
+<tr><td>NEEDLE_ARROW_MS</td><td>Medium width, small length</td>
+<tr><td>NEEDLE_ARROW_MM</td><td>Medium width, medium length</td>
+<tr><td>NEEDLE_ARROW_ML</td><td>Medium width, large length</td>
+<tr><td>NEEDLE_ARROW_LS</td><td>Large width, small length</td>
+<tr><td>NEEDLE_ARROW_LM</td><td>Large width, medium length</td>
+<tr><td>NEEDLE_ARROW_LL</td><td>Large width, large length</td>
+</tr>
+</table>
+
+A visual explanation of the different arrow shapes are given below
+
+<br><img src="img/odo_tutex07.png" border=0><br><b>Figure 24:</b> Different shape of arrowheads <a href="show-example.php?target=img/odo_tutex07.php">[src]</a><p>
+<h4>Properties</h4><p>
+None.
+
+<h4>Methods</h4><p>
+<h4 class="methodsignature">Set($aVal)</h4><p>
+
+<table>
+<tr><td><code>$aVal</code></td><td>Specify the value for the indicator
+needle in the odometer</td></tr>
+</table>
+<p>
+Use this method to speciy what scale position the needle sould point to.
+<p>
+A value outside the current scale will give an error.
+<p>
+By default only the primary needle is shown in the odometer.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+...
+// Show to needle in the odometer
+$odo->needle->Set(34);
+$odo->needle2->Set(18);
+$odo->needle2->Show();
+</pre></div><p>
+
+<h4 class="methodsignature">SetWeight($aWeight)</h4><p>
+
+<table>
+<tr><td><code>$aWeight</code></td><td>Basic width ofd needle</td></tr>
+</table>
+<p>
+Specify the basic width (in pixels) of the needle. The default width
+is 4 pixels.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$odo->needle->SetWeight(10);
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetLineWeight($aWeight)</h4><p>
+
+<table>
+<tr><td><code>$aWeight</code></td><td>Line weight for the border of
+the needle</td></tr>
+</table>
+<p>
+Specify the width of the border around the needle. The default is 1
+pixel
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$odo->needle->SetWeight(3);
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetColor($aColor)</h4><p>
+
+
+<table>
+<tr><td><code>$aColor</code></td><td></td>Color for needle fram</tr>
+</table>
+<p>
+Specify the color for the line border around the needle. The default
+color is black.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$odo->needle->SetColor("navy");
+</pre></div><p>
+
+
+
+<h4 class="methodsignature">SetFillColor($aColor)</h4><p>
+
+
+<table>
+<tr><td><code>$aColor</code></td><td>The fill color fo the needle</td></tr>
+</table>
+<p>
+Specify the fill color for the needle. The default fill color is light
+blue.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$odo->needle->SetFillColor("red");
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetLength($aLength)</h4><p>
+
+<table>
+<tr><td><code>$aLenght</code></td><td>Lenth of needle as fraction of
+the odometer radius</td></tr>
+</table>
+<p>
+Specify the length of the indicator needle as fraction of odfometer
+radius. 
+<p>
+The default length is 60%
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$odo->needle->SetLength(0.7);
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetStyle($aStyle, $aStyleParameter1=-1, $aStyleParameter2=-1)</h4><p>
+
+<table>
+<tr><td><code>$aStyle</code></td><td>Needle style</td></tr>
+<tr><td><code>$aStyleParameter1</code></td><td>Style specific
+parameter 1</td></tr>
+<tr><td><code>$aStyleParameter2</code></td><td>Style specific
+parameter 2</td></tr>
+</table>
+<p>
+As described in the beginning of this class a needle can have seven
+basic shapes. This method controls the shape of the needle.
+<p>
+The style specifi paramneters is currently only used for the arrow
+style where the first style parameter specifies the type of arrow to
+be used.
+<p>
+The <code>$aStyleParameter2</code> is currently unused and reserved
+for future use.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$odo->needle->SetStyle(NEEDLE_STYLE_STRAIGHT);
+
+// Arrow with default arrow size
+$odo->needle->SetStyle(NEEDLE_STYLE_ENDARROW);
+
+// Arrow with a longer arrow
+$odo->needle->SetStyle(NEEDLE_STYLE_ENDARROW,NEEDLE_ARROW_ML);
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetShadow($aShadow=true,$aColor="gray:0.7",$aDx=4,$aDy=4)</h4><p>
+
+
+<table>
+<tr><td><code>$aShadow</code></td><td>Flag to enable/disable drop shadow</td></tr>
+<tr><td><code>$aColor</code></td><td>Color of drop shadow</td></tr>
+<tr><td><code>$aDx</code></td><td>Shadow width</td></tr>
+<tr><td><code>$aDy</code></td><td>Shadow height</td></tr>
+</table>
+<p>
+
+Adds a drop shadow to the needle.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+// Add a default drop shadow
+$odo->needle->SetShadow();
+
+// Add a default drop shadow with "larger" drop
+$odo->needle->SetShadow(true,"lightblue:0.6",8,8);
+</pre></div><p>
+
+
+<h3 style="background-color:yellow;"><a name="sec8.6">8.6</a> Class Text</h3><p> 
+<h4>Predefined Instances</h4><p>
+<code>
+OdoGraph::title <br>
+OdoGraph::subtitle <br>
+OdoGraph::caption <br>
+Odometer::caption <br>
+Odometer::label <br>
+OdoScale::label <br>
+</code>
+
+<h4>Descriptions</h4><p>
+
+This is the general text fromatting class used for all texts like
+titles, captions, legends, scale labels etc.
+<p>
+You wil access these methods through the various instances in the
+other classes.
+
+<h4>Properties</h4><p>
+None.
+
+<h4>Methods</h4><p>
+<h4 class="methodsignature">Set($aTxt)</h4><p>
+
+<table>
+<tr><td><code>$aTxt</code></td><td>Specify a text string</td></tr>
+</table>
+<p>
+Sets the text string
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$odo->title->Set("Result for year 2002");
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetFont($aFontFamily,$aFontStyle=FS_NORMAL,$aFontSize=11)</h4><p>
+
+<table>
+<tr><td><code>$aFontFamily</code></td><td>Font family</td></tr>
+<tr><td><code>$aFontStyle</code></td><td>Font style</td></tr>
+<tr><td><code>$aFontSize</code></td><td>Font size</td></tr>
+</table>
+<p>
+
+See <a href="index.html#s7">Section "7. Available fonts and styles"</a>
+for a full description on how to use fonts and available fonts.
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+// Set the scale label font
+$odo->scale->label->SetFont(FF_FONT1, FS_BOLD);
+</pre></div><p>
+
+
+<h4 class="methodsignature">SetColor($aColor)</h4><p>
+
+<table>
+<tr><td><code>$aColor</code></td><td>Text color</td></tr>
+</table>
+<p>
+Specifies text color for string
+<h4>Examples</h4><p>
+
+
+<h4 class="methodsignature">ParagraphAlign($aAlign)</h4><p>
+
+<table>
+<tr><td><code>$aAlign</code></td><td>Paragraph alignment for multi
+line text string</td></tr>
+</table>
+<p>
+Specifies the paragraph alignemtn if the texte string consists of
+several individual text rows. You make a text multi rowed by inserting
+'\n' wher you want to make a line break.
+<p>
+By default text rows are centered under each other.
+<p>
+Available alignment options are
+<ul>
+<li> "left"
+<li> "center"
+<li> "right"
+</ul>
+
+<h4>Examples</h4><p>
+
+<div class="exscript">
+<pre>
+$graph->caption->Set("Figure 1. Explaining the multi-line\nconcept in detail");
+$graph->caption->PargraphAlign("left");
+</pre></div><p>
+
+
+<h3 style="background-color:yellow;"><a name="sec8.7">8.7</a> Class OdometerLabel EXTENDS Text</h3><p> 
+<h4>Predefined Instances</h4><p>
+<code>
+Odometer::label
+</code>
+
+<h4>Descriptions</h4><p>
+
+
+<h4>Properties</h4><p>
+None.
+
+<h4>Methods</h4><p>
+<h4 class="methodsignature">SetVPos($aPos)</h4><p>
+
+<table>
+<tr><td><code></code></td><td></td></tr>
+</table>
+<p>
+
+<h4>Examples</h4><p>
+
+
+<h3 style="background-color:yellow;"><a name="sec8.8">8.8</a> Class LayoutVert</h3><p> 
+
+<h4>Predefined Instances</h4><p>
+None.
+
+<h4>Descriptions</h4><p>
+
+Defines a vertical layout of multiple odometers or Horizontal layout. 
+See <a href="http:index.html#s53">"5.3 Using layout classes"</a> for a
+detailed description and examples.
+
+<h4>Properties</h4><p>
+None.
+
+<h4>Methods</h4><p>
+<h4 class="methodsignature"></h4><p>
+
+<h3 style="background-color:yellow;"><a name="sec8.9">8.9</a> Class LayoutHor</h3><p> 
+
+<h4>Predefined Instances</h4><p>
+None.
+
+<h4>Descriptions</h4><p>
+
+Defines a horizontal layout of multiple odometers or Vertical layout. 
+See <a href="http:index.html#s53">"5.3 Using layout classes"</a> for a
+detailed description and examples.
+
+
+<h4>Properties</h4><p>
+None.
+
+<h4>Methods</h4><p>
+<h4 class="methodsignature"></h4><p>
+
+
+
+
+
+
+
+</DIV>
+</BODY>
+</HTML>
+

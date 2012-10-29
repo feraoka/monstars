@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="65HowdoesStrokeCSIMwork.html">
+<LINK REL="Next" HREF="67Imagemapsandthecachesystem.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="65HowdoesStrokeCSIMwork.html">前へ</A> <A HREF="67Imagemapsandthecachesystem.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="6_6">6.6 イメージ マップの取得</A></H2>
+<P> ディスクにイメージを保存し、それをイメージ・タグで使用したい場合、イメージ タグを取得する必要があります。このため、関数 <A href="../ref/Graph.html#_GRAPH_GETHTMLIMAGEMAP">Graph::GetHTMLImageMap()</A> を使用する必要があります。</P>
+<P> この使用例は以下のとおりです。これらのラインはイメージをファイルに書き込みます。そこで、スクリプトはクライアント側のイメージ	 マップを含む HTML ページを以前保存されたファイルを訂正するイメージ・タグを返します。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;/usr/local/httpd/htdocs/img/image001.png&quot;</FONT><FONT color="#007700">); <BR>echo </FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">GetHTMLImageMap</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;myimagemap001&quot;</FONT><FONT color="#007700">); <BR>echo </FONT><FONT color="#DD0000">&quot;&lt;img src=\&quot;img/image001.png\&quot; ISMAP USEMAP=\&quot;#myimagemap001\&quot; border=0&gt;&quot;</FONT><FONT color="#007700">;</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="65HowdoesStrokeCSIMwork.html">前へ</A> <A HREF="67Imagemapsandthecachesystem.html">次へ</A>
+</BODY>
+</HTML>

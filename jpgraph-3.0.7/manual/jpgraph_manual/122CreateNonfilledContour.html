@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="121NonfilledContourData.html">
+<LINK REL="Next" HREF="12Additionalgraphtype.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css"><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="121NonfilledContourData.html">前へ</A> <A HREF="12Additionalgraphtype.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="12_2">12.2 等高線グラフを作成する</A></H2>
+
+<P>図12は、最も基本的な等高線プロットとなります。</P>
+<P>等高線プロットでは、最初にグラフのインスタンスを作成し、その後、ContourPlotクラスのインスタンスを作成します。</P>
+<P>ContourPlotクラスのコンストラクタ(オブジェクトが生成されるとき呼び出されるメソッド)には次のパラメータがあります</P>
+<UL>
+<LI>ContourPlot::__construct($aDataMatrix, $aIsobar=10, $aFactor=1, $aInvert=false, $aIsobarColors=array())
+<ul>
+<li>$aDataMatrix：「入力データ」</li>
+<li>$aIsobar：整数または配列を指定<br > 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;変数が整数の場合：「等高線の数」<br >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;変数が配列の場合：「各等高線の正確な位置を指定する配列」</li>
+<li>$aFactor：「格子補間因子」</li>
+<li>$aInvert：行列データを反転し、行列エントリ(0,0)を左上角に対応させる</li>
+<li>$aIsobarColors：等高線の色の任意に指定</li>
+</ul>
+</LI>
+</UL>
+
+<P>基本的な等高線プロットを作成するためには、以下のように記述します。</P>
+
+<DIV class="phpscript"><code><span style="color: #000000"> <span style="color: #0000BB">&lt;?php<br /> $data&nbsp;</span><span style="color: #007700">=&nbsp;array&nbsp;(&nbsp;array&nbsp;(&nbsp;...&nbsp;)&nbsp;);<br /> &nbsp;<br /> </span><span style="color: #FF8000">//&nbsp;Basic&nbsp;contour&nbsp;graph<br /> </span><span style="color: #0000BB">$graph&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Graph</span><span style="color: #007700">(</span><span style="color: #0000BB">$width</span><span style="color: #007700">,</span><span style="color: #0000BB">$height</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetScale</span><span style="color: #007700">(</span><span style="color: #DD0000">'intint'</span><span style="color: #007700">);<br /> &nbsp;<br /> </span><span style="color: #FF8000">//&nbsp;Adjust&nbsp;the&nbsp;margins&nbsp;to&nbsp;fit&nbsp;the&nbsp;margin<br /> </span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetMargin</span><span style="color: #007700">(</span><span style="color: #0000BB">30</span><span style="color: #007700">,</span><span style="color: #0000BB">100</span><span style="color: #007700">,</span><span style="color: #0000BB">40</span><span style="color: #007700">,</span><span style="color: #0000BB">30</span><span style="color: #007700">);<br /> &nbsp;<br /> </span><span style="color: #FF8000">//&nbsp;Setup<br /> </span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #DD0000">'Basic&nbsp;contour&nbsp;plot'</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetFont</span><span style="color: #007700">(</span><span style="color: #0000BB">FF_ARIAL</span><span style="color: #007700">,</span><span style="color: #0000BB">FS_BOLD</span><span style="color: #007700">,</span><span style="color: #0000BB">12</span><span style="color: #007700">);<br /> &nbsp;<br /> </span><span style="color: #FF8000">//&nbsp;A&nbsp;simple&nbsp;contour&nbsp;plot&nbsp;with&nbsp;default&nbsp;arguments&nbsp;(e.g.&nbsp;10&nbsp;isobar&nbsp;lines)<br /> </span><span style="color: #0000BB">$cp&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">ContourPlot</span><span style="color: #007700">(</span><span style="color: #0000BB">$data</span><span style="color: #007700">);<br /> &nbsp;<br /> </span><span style="color: #FF8000">//&nbsp;Display&nbsp;the&nbsp;legend<br /> </span><span style="color: #0000BB">$cp</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">ShowLegend</span><span style="color: #007700">();<br /> &nbsp;<br /> </span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Add</span><span style="color: #007700">(</span><span style="color: #0000BB">$cp</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">?&gt;</span> </span> </code></DIV>
+
+
+<br />
+
+<P>等高線グラフは、一般的に、ラベルと目盛が外側にある4軸の関数形式のグラフとして描画するので、そのように軸を指
+定するために、以下の行を追加で記載します。</P> 
+
+<DIV class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetAxisStyle</span><span style="color: #007700">(</span><span style="color: #0000BB">AXSTYLE_BOXOUT</span><span style="color: #007700">);</span><span style="color: #0000BB"></span> </span> </code></DIV>
+
+<P>これらの結果を、図12.2_1に示します。</P>
+<P>行列データを反転させるには、以下の行を加えます。</P>
+
+<DIV class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB">$cp</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetInvert</span><span style="color: #007700">();</span><span style="color: #0000BB"></span> </span> </code></DIV>
+
+<P>この結果を図12.2_2に示します。</P>
+
+
+<P><DIV class="example">
+  <A href="example_src/frame_basic_contourex02.html" target="_blank"><img src="basic_contourex02.png" alt="" /></A><BR>
+  <B>図12.2_1 ４軸のグラフとして描画する</B> <A href="example_src/frame_basic_contourex02.html" target="_blank">[ソース]</A></DIV></P>
+
+
+<P><DIV class="example">
+  <A href="example_src/frame_basic_contourex05.html" target="_blank"><img src="basic_contourex05.png" alt="" /></A><BR>
+  <B>図12.2_2 行列データを反転させる</B> <A href="example_src/frame_basic_contourex02.html" target="_blank">[ソース]</A></DIV></P>
+
+
+
+
+
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="121NonfilledContourData.html">前へ</A> <A HREF="12Additionalgraphtype.html">次へ</A>
+</BODY>
+</HTML>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="717UsingcallbacksforPlotmarks.html">
+<LINK REL="Next" HREF="719Formattingtheaxis.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="717UsingcallbacksforPlotmarks.html">前へ</A> <A HREF="719Formattingtheaxis.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="7_18">7.18 グラフを 90 度回転する</A></H2>
+<P> セクション <A href="./919Rotatingthegraphs.html">9.19</A> で、任意の角度でグラフを回転させる方法を説明していますが、実用的には 90 度の回転がよく用いられます。この機能を使うことで、水平バー  プロットを作成することができます。 </P>
+<P> グラフを回転させた場合、余白も回転が行われます。また、デフォルトでは回転の中心はプロット エリアの中心で、画像全体の中心ではありません。そのため、設定した余白により、回転の中心が移動してしまいます。回転の中心を手動で設定する方法は、セクション <A
+href="./919Rotatingthegraphs.html">9.19</A> に記述されています。</P>
+<P> <A href="../ref/Graph.html#_GRAPH_SETMARGIN">Graph::SetMargin()</A> メソッドを使用して明確な余白を設定する必要があります。</P>
+<P> しかし、グラフを 90 度回転して、適切な余白を設定する場合は、<A href="../ref/Graph.html#_GRAPH_SET90ANDMARGIN">Graph::Set90AndMargin()</A> メソッドを使用できます。このメソッドを使うことで、回転した後のグラフの余白を手動で調整する必要がなくなります。</P>
+<P> このメソッドを呼び出すだけで、グラフが 90 度回転されます。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="717UsingcallbacksforPlotmarks.html">前へ</A> <A HREF="719Formattingtheaxis.html">次へ</A>
+</BODY>
+</HTML>

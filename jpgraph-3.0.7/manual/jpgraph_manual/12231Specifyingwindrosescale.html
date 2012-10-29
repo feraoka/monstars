@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="1223Creatingandformattingwindrose.html">
+<LINK REL="Next" HREF="12232Specifyingdirectionlabels.html">
+<STYLE TYPE="text/css">
+<!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+-->
+</STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="1223Creatingandformattingwindrose.html">前へ</A> <A HREF="12232Specifyingdirectionlabels.html">次へ</A>
+<HR NOSHADE>
+<h4><A NAME="12_2_3_1">2.3.1 風配図の目盛りを指定する</a></h4>
+<p>目盛りは各プロットのプロパティでインスタンス変数「WindrosePlot::scale」によって操作できます。目盛りは同心円として風配図プロット上で放射状に広がっています。円と円の間の幅は手動で自動でもデータの値によりライブラリから操作できます。 <br>
+
+<p>（説明文を継続するため、このセクションでは例を全部表示せずに「<A HREF="1224Sampleswindrose.html" target="_blank">サンプル集</A>」に回します。）</p>
+<p>円の目盛りを手動で設定するには次の方法を使います。</p>
+<ul type="disc">
+  <li>WindrosePlotScale::SetStepSize($aMax,$aStepSize=null)</li>
+  <p>$aMax, The maximum scale value</p>
+     <p> $aStepSize, The step between each scale circle</p>
+</ul>
+<p>ライブラリの初期設定により５と２の倍数が綺麗な目盛間隔になるよう表示されます。</p>
+<p>目盛りを調整するための他の手法は次の通りです。</p>
+<ul type="disc">
+  <li>WindrosePlotScale::SetFont($aFontFamily,$aFontStyle=FS_NORMAL,$aFontSize=10)</li>
+<p>  中心の0値ラベル以外の全ての目盛りのフォントを指定します。</p></ul>
+<ul type="disc">
+  <li>WindrosePlotScale::SetZFont($aFontFamily,$aFontStyle=FS_NORMAL,$aFontSize=10)</li>
+<p>  中心の0値ラベルのフォントを指定します。</p></ul>
+<ul type="disc">
+  <li>WindrosePlotScale::SetFontColor($aColor)</li>
+<p>中心の0値ラベル以外の全ての目盛りのフォントカラーを指定します。</p></ul>
+<ul type="disc">
+  <li>WindrosePlotScale::SetZFontColor($aColor)</li>
+<p>  中心の0値ラベルのフォントカラーを指定します。</p></ul>
+<ul type="disc">
+  <li>WindrosePlotScale::SetLabelFillColor($aBkgColor,$aBorderColor=false)</li>
+<p>  全てのラベルの背景色を指定します。</p></ul>
+<ul type="disc">
+  <li>WindrosePlotScale::SetLabelAlign($aAlign)</li>
+<p>  ラベルの文字の配置を指定します。</p></ul>
+<ul type="disc">
+  <li>WindrosePlotScale::SetLabelFormat($aFmt)</li>
+<p>  ラベルのフォーマットを指定します。フォーマットString変数「printf()」を使います。</p></ul>
+<ul type="disc">
+  <li>WindrosePlotScale::Hide($aFlg)</li>
+<p>目盛りラベルを非表示にします。<br></ul>
+これらの方法を使用した例は次のセクションに記載しています。</p>
+<p><strong>フォントとフォントカラーを指定する</strong></p>
+<p>フォントは目盛り上のラベル全てに対して指定することも、プロットの中心のラベルを別に指定することもできます。それをどのように行うかは次のコードの抜粋でご覧いただけます。（ここでは「windplot」という名前の風配図プロットが既に作成してあると仮定します。） </p>
+<DIV class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB"></span><span style="color: #FF8000">//&nbsp;目盛りラベルのフォントとフォントカラー<br /> </span><span style="color: #0000BB">$windplot</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">scale</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetFont</span><span style="color: #007700">(</span><span style="color: #0000BB">FF_VERDANA</span><span style="color: #007700">,</span><span style="color: #0000BB">FS_NORMAL</span><span style="color: #007700">,</span><span style="color: #0000BB">10</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">$windplot</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">scale</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetFontColor</span><span style="color: #007700">(</span><span style="color: #DD0000">'navy'</span><span style="color: #007700">);<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> </span><span style="color: #FF8000">//&nbsp;中心の0値ラベルの目盛りラベルのフォントとフォントカラー<br /> </span><span style="color: #0000BB">$windplot</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">scale</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetZFont</span><span style="color: #007700">(</span><span style="color: #0000BB">FF_VERDANA</span><span style="color: #007700">,</span><span style="color: #0000BB">FS_NORMAL</span><span style="color: #007700">,</span><span style="color: #0000BB">10</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">$windplot</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">scale</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetZFontColor</span><span style="color: #007700">(</span><span style="color: #DD0000">'navy'</span><span style="color: #007700">);</span><span style="color: #0000BB"></span> </span> </code></DIV>
+
+<p><strong>目盛りを任意で指定する</strong></p>
+<p>ライブラリの初期設定により、目盛りの範囲と間隔はデータの最大値、プロットの大きさ、目盛りラベルのフォントの大きさを考慮して自動的に決まります。 </p>
+<p>しかし、Set($aMaxValue,$aStepSize)を呼び出すことで強制的に手動で行うことができます。ここでは目盛りの最大値と間隔を指定します。目盛り間隔は任意です。目盛り間隔が指定されていない場合は自動で指定されます。 </p>
+<DIV class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB"></span><span style="color: #FF8000">//&nbsp;目盛り最大値と間隔を指定。<br /> </span><span style="color: #0000BB">$windplot</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">scale</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #0000BB">40</span><span style="color: #007700">,</span><span style="color: #0000BB">8</span><span style="color: #007700">);<br /> &nbsp;&nbsp;...<br /> </span><span style="color: #FF8000">//&nbsp;目盛りの最大値のみを指定。<br /> </span><span style="color: #0000BB">$windplot</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">scale</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #0000BB">40</span><span style="color: #007700">);</span><span style="color: #0000BB"></span> </span> </code></DIV>
+
+<p>この特徴については、この章の「サンプル集」の<a href="1224Sampleswindrose.html#ex12247">図2.4_7</a>にも紹介しています。</p>
+<p><div class="note"><b>注意:</b>自動的に生成される目盛りは目盛りのラインに適した５か２の倍数の刻み幅を使っています。</div></p>
+<p><div class="note"><b>注意:</b>目盛りラベルのフォントが変更されるときに目盛りの間隔が変化する場合は驚かれるかもしれません。しかしそういう設計になっています。各刻み幅に適用するラベルには限られたスペースしかありません。大きいフォントがマス目のスペース内に収まるように、それぞれの目盛りに当たる円の大きさが調整されます。</div></p>
+<p><strong>目盛りラベルの角度の指定</strong></p>
+<p>目盛りラベルは風配図プロットの中心から放射状に伸びる方位軸線に沿って置かれます。ラベルの角度は任意でも自動でも設定できます。 </p>
+<p>ラベルの自動位置設定を選択した場合、目盛りラベルは16本のコンパス方位のどれかに沿って置かれます。ライブラリの初期設定ではデータが一番少ない方位を選ぶようになっています。</p>
+<p>角度の手動設定の場合は、SetAngle($aAngle)を呼び出し、度数を引数に入れます。 </p>
+<p>次のように記述します。</p>
+<DIV class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB"></span><span style="color: #FF8000">//&nbsp;ラベルを45度の角度で表示する<br /> </span><span style="color: #0000BB">$windplot</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">scale</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetAngle</span><span style="color: #007700">(</span><span style="color: #0000BB">45</span><span style="color: #007700">);</span><span style="color: #0000BB"></span> </span> </code></DIV>
+<p>初期設定によりライブラリが角度の自動設定を行いますが、これを明示するには次のように「'auto'」という文字列を使います。</p>
+<DIV class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB"></span><span style="color: #FF8000">//&nbsp;ライブラリの適切な角度を設定させる&nbsp;<br /> </span><span style="color: #0000BB">$windplot</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">scale</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetAngle</span><span style="color: #007700">(</span><span style="color: #DD0000">'auto'</span><span style="color: #007700">);</span><span style="color: #0000BB"></span> </span> </code></DIV>
+<p><strong>目盛りラベルの数字フォーマットを指定する</strong></p>
+<p>他のライブラリの目盛り同様、「printf()」フォーマット文字列を指定してラベルの表示を調整することができます。初期設定では次のようになっています。</p>
+<DIV class="phpscript"><code><span style="color: #000000"> <span style="color: #0000BB">$windplot</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">scale</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetLabelFormat</span><span style="color: #007700">(</span><span style="color: #DD0000">'%d%%'</span><span style="color: #007700">);</span><span style="color: #0000BB"></span> </span> </code>
+</DIV>
+<hr noshade>
+<A HREF="toc.html">目次</A> <a href="1223Creatingandformattingwindrose.html">前へ </a><a href="12232Specifyingdirectionlabels.html">次へ</a>
+</BODY>
+</HTML>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="716Usingabackgroundgradient.html">
+<LINK REL="Next" HREF="718Rotatinggraphs90degrees.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="716Usingabackgroundgradient.html">前へ</A> <A HREF="718Rotatinggraphs90degrees.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="7_17">7.17 プロット マークにコールバック関数を使用する</A></H2>
+<P> JpGraph では、プロット マークの描画にコールバック関数を用いることができます。そうすることで、各プロット マークの大きさとカラーを制御できます。</P>
+<P> コールバック関数では、現在の Y 座標を引数として受け取ります。コールバック関数は、以下の 3 種類の値を格納した配列を戻り値として返却する必要があります。戻り値は以下の値でなければなりません。</P>
+<OL>
+<LI> プロット マークの大きさ </LI>
+<LI> プロット マークのカラー </LI>
+<LI> プロット マークの塗りつぶしカラー </LI>
+</OL>
+<P> これらの意味は、使用するプロット マークによって異なります。</P>
+<P> コールバック関数はグローバル関数で、<A href="../ref/PlotMark.html#_PLOTMARK_SETCALLBACK">PlotMark::SetCallback()</A>メソッドを通じて使用します。</P>
+<P> たとえば、Y 値が 90 より上の場合のプロット マークにのみカラーを上塗りしたい場合は、以下のようなコードになります。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"></FONT><FONT color="#007700">function </FONT><FONT color="#0000BB">MarkCallback</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$aVal</FONT><FONT color="#007700">) { <BR>    if( </FONT><FONT color="#0000BB">$aVal </FONT><FONT color="#007700">&gt; </FONT><FONT color="#0000BB">90</FONT><FONT color="#007700">) <BR>        </FONT><FONT color="#0000BB">$fcolor</FONT><FONT color="#007700">=</FONT><FONT color="#DD0000">&quot;red&quot; <BR>    </FONT><FONT color="#007700">else <BR>        </FONT><FONT color="#0000BB">$fcolor</FONT><FONT color="#007700">=</FONT><FONT color="#DD0000">&quot;&quot;</FONT><FONT color="#007700">; <BR>    return array(</FONT><FONT color="#DD0000">&quot;&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;&quot;</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$fcolor</FONT><FONT color="#007700">); <BR>} <BR>... <BR></FONT><FONT color="#0000BB">$plot</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">mark</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetCallback</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;MarkCallback&quot;</FONT><FONT color="#007700">); <BR>...</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> 上記のサンプルでは、値を返却しているものもあります。こうすることで、それらに関しては変更が反映されず、プロット マークのデフォルト設定が使用されます。</P>
+<P> また、プロット マークの大きさを Y 値に対応したものにすることで、バルーン プロット形式のプロットを作成できます。以下にその例を掲載します。format コールバックは、それぞれのプロットのY値に応じて色とサイズを変更するために使用されます。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_balloonex1.html" target="blank"><IMG border="0"
+HEIGHT="300" src="balloonex1.png" WIDTH="400"></A> <BR><B>図 96:</B>コールバック関数を使ってバルーン プロットを作成する <A href="exframes/frame_balloonex1.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="716Usingabackgroundgradient.html">前へ</A> <A HREF="718Rotatinggraphs90degrees.html">次へ</A>
+</BODY>
+</HTML>

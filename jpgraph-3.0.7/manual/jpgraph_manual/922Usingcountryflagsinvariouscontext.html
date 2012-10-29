@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="921Timingthegenerationofgraphs.html">
+<LINK REL="Next" HREF="923Addingiconsontothegraph.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="921Timingthegenerationofgraphs.html">前へ</A> <A HREF="923Addingiconsontothegraph.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_22">9.22 様々なコンテキストで国旗を使用する</A></H2>
+<P> JpGraph は200 国の旗をサポートしています、たとえば、外部のイメージ定義なしでグラフで使用することができます。</P>
+<P> 国旗は主に2 つの設定で使用できます。</P>
+<OL>
+<LI> ラインのイメージ記号と少量のグラフ</LI>
+<LI> グラフの背景イメージとして</LI>
+<LI> 任意の位置のグラフに追加できる特別なタイプのアイコン（IconPlot() を使用する）として 次のセクションを見てください</LI>
+</OL>
+<P> 適切な国旗を容易に見つけるためには、名前のすべてまたは部分、または数字のインデックスのどちらかで指定することができます。 JpGraph の手順は、特別な旗を指定する方法を見つけるのに十分&ldquo;スマート&rdquo;です。</P>
+<P> マーカーとして国旗を指定するのに、MARK_FLAG1、MARK_FLAG2,MARK_FLAG3、またはMARK_FLAG4 のうちどれか1 つの特別な記号タイプを指定する必要があります。</P>
+<P> 旗は、マーク タイプの数によって示される4 の異なるサイズに内部に格納されます。 旗は、表示するとき勝手にスケールされる場合もあります。 これは部分的に機能性をオーバーラップさせているので、なぜ旗が4つの異なる基準寸法に格納されるか非常によく尋ねるかもしれません。  理由は当然パフォーマンスです。 小さい旗が欲しいだけの場合、大きいイメージを小さく、小さいアイコン サイズにするのに処理時間がかかります。 同時に、背景として使用される大きい旗では、小さいオリジナルのイメージを大きなサイズにする十分な詳細がありません。 これが、4 つの異なるサイズに格納する理由です。</P>
+<P> 以下の例はマーカーとしての国旗の使用法を表しています。<DIV class="example">
+<BR> <A href="exframes/frame_markflagex1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="markflagex1.png" WIDTH="300"></A> <BR><B>図 183:</B>ライン プロット マーカーとして国旗を使用する <A href="exframes/frame_markflagex1.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> 背景として国旗を使うには、1 つはメソッド Graph::SetBackgroundCountryFlag() を使用する必要があります。 このメッソドで、どれくらいのイメージが詰まれ、どれくらいの旗が背景と組み合わされるかの両方を指定できます。</P>
+<P> すべてのサポートされた国旗のリストを見るには、Example ディレクトリの &ldquo;listallcountryflags.php&rdquo; スクリプトを起動します。 これはすべてのフラッグのテーブルを示しています。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="921Timingthegenerationofgraphs.html">前へ</A> <A HREF="923Addingiconsontothegraph.html">次へ</A>
+</BODY>
+</HTML>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="311VerifyingthatyouhavetheGDlibraryinstalled.html">
+<LINK REL="Next" HREF="313PreparingTrueTypeFontFiles.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="311VerifyingthatyouhavetheGDlibraryinstalled.html">前へ</A> <A HREF="313PreparingTrueTypeFontFiles.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="3_1_2">3.1.2  GD2 のインストールを確認する</A></H3>
+<P> より高度な機能を使うには、GD2 ライブラリをインストールする必要があります。 GD2 ライブラリでは、アルファベット混じり（alpha-blending ）、およびトゥルー・カラー イメージのような機能が使用できます。<BR />
+※最新のJpGraphでは、GD1に対応していないためGD2をご利用ください。</P>
+<P> GD2 ライブラリは、4.2.x 以上の PHP バージョンに対応しています。GD2 ライブラリがインストールされているか確認するには、以下のスクリプトが動かなければなりません。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $im </FONT><FONT color="#007700">= </FONT><FONT color="#0000BB">imagecreatetruecolor </FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">300</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">200</FONT><FONT
+color="#007700">); <BR></FONT><FONT color="#0000BB">$black </FONT><FONT color="#007700">= </FONT><FONT
+color="#0000BB">imagecolorallocate </FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$im</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">0</FONT><FONT
+color="#007700">, </FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$white </FONT><FONT color="#007700">= </FONT><FONT
+color="#0000BB">imagecolorallocate </FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$im</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">255</FONT><FONT color="#007700">, </FONT><FONT color="#0000BB">255</FONT><FONT
+color="#007700">, </FONT><FONT color="#0000BB">255</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#0000BB">imagefilledrectangle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$im</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">399</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">99</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$white</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">imagerectangle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$im</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">20</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">20</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">250</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">190</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$black</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#0000BB">header </FONT><FONT color="#007700">(</FONT><FONT
+color="#DD0000">&quot;Content-type:image/png&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">imagepng </FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$im</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 上記のスクリプトを実行することで、ブラウザ上に黒い長方形が表示されます。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="311VerifyingthatyouhavetheGDlibraryinstalled.html">前へ</A> <A HREF="313PreparingTrueTypeFontFiles.html">次へ</A>
+</BODY>
+</HTML>

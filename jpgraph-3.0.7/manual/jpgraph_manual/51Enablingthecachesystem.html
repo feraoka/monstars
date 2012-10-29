@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="5UnderstandingtheJpGraphcachingsystem.html">
+<LINK REL="Next" HREF="52Usingthecacheinyourscript.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="5UnderstandingtheJpGraphcachingsystem.html">前へ</A> <A HREF="52Usingthecacheinyourscript.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="5_1">5.1 キャッシュ システムを有効にする</A></H2>
+<P> キャッシュ システムを有効にするには、jpgraph.php の 2 個の定義を使用します。 </P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">DEFINE</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;USE_CACHE&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">true</FONT><FONT color="#007700">);<BR></FONT><FONT color="#0000BB">DEFINE</FONT><FONT color="#007700">(</FONT><FONT
+color="#DD0000">&quot;READ_CACHE&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">true</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> USE_CACHE 定数は、キャッシュ システムを使用する際は必ず true に設定する必要があります。また、READ_CACHE 定数は一般的には変更する必要がないでしょう。</P>
+<P> READ_CACHE 定数は、JpGraph がキャッシュを確認するかどうかを設定します。READ_CACHE 定数を false にして、USE_CACHE 定数を true に設定した場合、画像を必ず生成するようになります。この設定は、主に新しい画像が常にキャッシュディレクトリに保存されるために必要です。</P>
+<P> キャッシュを有効にする場合、適切なキャッシュ ディレクトリを設定する必要があります。キャッシュ ディレクトリは以下の通りに指定できます。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">DEFINE</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;CACHE_DIR&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;/tmp/jpgraph_cache/&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> もちろん、ディレクトリ設定は変更できます。ただし、キャッシュ ディレクトリは Apache が必ず書き込み可能でなければいけません。<STRONG>ただし、キャッシュ ディレクトリは Apache が必ず書き込み可能でなければいけません</STRONG>。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="5UnderstandingtheJpGraphcachingsystem.html">前へ</A> <A HREF="52Usingthecacheinyourscript.html">次へ</A>
+</BODY>
+</HTML>

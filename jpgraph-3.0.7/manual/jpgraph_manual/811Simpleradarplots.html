@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="81Radarplots.html">
+<LINK REL="Next" HREF="812Specifyingtitlesfortheaxisandlegendsfortheplots.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="81Radarplots.html">前へ</A> <A HREF="812Specifyingtitlesfortheaxisandlegendsfortheplots.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="8_1_1">8.1.1 簡単なレーダー プロットを作成する</A></H3>
+<P> 5 個のデータ ポイントを持つシンプルなレーダー プロットを作成してみましょう。</P>
+<P> まず初めに、レーダー プロットを含む拡張モジュールををインクルードしておく必要があります。&quot;jpgraph_radar.php&quot;.</P>
+<P> 非常に簡単なレーダー プロットは以下のようにして作成できます。<DIV class="phpscript">
+(File:radarex1.php) <BR><CODE><FONT color="#000000"> <FONT color="#0000BB">&lt;?php <BR></FONT><FONT color="#007700">include (</FONT><FONT color="#DD0000">&quot;../jpgraph.php&quot;</FONT><FONT color="#007700">); <BR>include (</FONT><FONT color="#DD0000">&quot;../jpgraph_radar.php&quot;</FONT><FONT
+color="#007700">); <BR>     <BR></FONT><FONT color="#FF8000">// プロットを行うデータ <BR></FONT><FONT color="#0000BB">$data </FONT><FONT color="#007700">= array(</FONT><FONT color="#0000BB">55</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">80</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">46</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">71</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">95</FONT><FONT color="#007700">); <BR>     <BR></FONT><FONT color="#FF8000">// グラフとプロットを作成する <BR></FONT><FONT color="#0000BB">$graph </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">RadarGraph</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">250</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">200</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;auto&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$plot </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">RadarPlot</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// プロットをグラフに追加 <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$plot</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB">?&gt;</FONT></FONT></CODE></DIV></P>
+<P> これにより、以下の結果が出力されます。 <DIV class="example">
+<BR> <A href="exframes/frame_radarex1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="radarex1.png" WIDTH="250"></A> <BR><B>図 115：</B> デフォルトの設定で作成した簡単なレーダー プロット <A href="exframes/frame_radarex1.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> レーダー プロットの位置やサイズを変更するには、<A href="../ref/RadarGraph.html#_RADARGRAPH_SETSIZE">SetSize()</A> メソッドや<A href="../ref/RadarGraph.html#_RADARGRAPH_SETCENTER">SetCenter()</A>メソッドを使用します。</P>
+<P> また、レーダー プロットの内側を塗りつぶしたい場合は、<A href="../ref/RadarPlot.html#_RADARPLOT_SETFILLCOLOR">SetFillColor()</A> メソッドを使用します。このメソッドの使用方法は次のようになります。<DIV
+class="example">
+<BR> <A href="exframes/frame_radarex2.html" target="blank"><IMG border="0"
+HEIGHT="200" src="radarex2.png" WIDTH="300"></A> <BR><B>図 116：</B>レーダー プロットのサイズ、位置を変更して、内側を塗りつぶす例 <A href="exframes/frame_radarex2.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="81Radarplots.html">前へ</A> <A HREF="812Specifyingtitlesfortheaxisandlegendsfortheplots.html">次へ</A>
+</BODY>
+</HTML>

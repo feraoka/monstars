@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="12121Creatingodomater.html">
+<LINK REL="Next" HREF="122Windrose.html">
+<STYLE TYPE="text/css">
+<!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+-->
+</STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="12121Creatingodomater.html">前へ</A><a href="122Windrose.html"> 次へ</a>
+<HR NOSHADE>
+<h4><A NAME="12_1_3">1.3 サンプル集</A></h4>
+<P>オドメータは円か半円で作成します。特に指定されていない場合は初期設定により半円で作成されます。</P>
+<P></P>
+<p align="left">円か半円のどちらのタイプにするかは次の２つの定数でコントロールします。 </p>
+<P></P>
+<ul type="disc">
+  <li>ODO_FULL&nbsp;　円形のオドメータを作成 </li>
+  <li>ODO_HALF&nbsp;　半円のオドメータを作成（初期設定値） </li>
+</ul>
+<p align="left">円形のオドメータ・プロット作成は次のように記述します。 </p>
+<DIV class="phpscript"><code><span style="color: #000000"> <span style="color: #0000BB">$odo&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Odometer</span><span style="color: #007700">(</span><span style="color: #0000BB">ODO_FULL</span><span style="color: #007700">);</span><span style="color: #0000BB"></span> </span> </code>
+</DIV>
+</P>
+</P>
+<p><span EN-US;mso-fareast-language:JA;mso-bidi-language:AR-SA'>半円のオドメータ・プロット作成は次のように記述します。</span>
+</p>
+<DIV class="phpscript"><code><span style="color: #000000"> <span style="color: #0000BB">$odo&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Odometer</span><span style="color: #007700">(</span><span style="color: #0000BB">ODO_HALF</span><span style="color: #007700">);</span><span style="color: #0000BB"></span> </span> </code>
+</DIV>
+<P></P>
+<P></P>
+<p align="left"><strong>例1.3_1 円形オドメータの作成　</strong></p>
+<DIV class="phpscript"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #FF8000">//&nbsp;content="text/plain;&nbsp;charset=utf-8"<br />
+</span><span style="color: #007700">require_once&nbsp;(</span><span style="color: #DD0000">"jpgraph/jpgraph.php"</span><span style="color: #007700">);<br />
+require_once&nbsp;(</span><span style="color: #DD0000">"jpgraph/jpgraph_odo.php"</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;新規オドメータ・グラフ・エリアを作成（幅250、高さ200ピクセル）<br />
+</span><span style="color: #0000BB">$graph&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">OdoGraph</span><span style="color: #007700">(</span><span style="color: #0000BB">250</span><span style="color: #007700">,</span><span style="color: #0000BB">140</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;オドメータ・グラフ・エリアに入れるためのオドメータを作成する。<br />
+//&nbsp;初期設定により目盛り(Scale)は0から100。<br />
+</span><span style="color: #0000BB">$odo&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Odometer</span><span style="color: #007700">(</span><span style="color: #0000BB">ODO_FULL</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;指針がオドメータ上で指す値を設定。<br />
+</span><span style="color: #0000BB">$odo</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">needle</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #0000BB">30</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;オドメータをグラフ・エリアに追加。<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Add</span><span style="color: #007700">(</span><span style="color: #0000BB">$odo</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;...&nbsp;最後に、完成した画像をブラウザに返す。<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Stroke</span><span style="color: #007700">();<br />
+&nbsp;<br />
+</span><span style="color: #0000BB">?&gt;<br />
+</span>
+</span>
+</code>
+</DIV>
+<P>次のように表示されます。</P>
+
+<P><DIV class="example">
+<A href="example_src/frame_odotutex01.html" target="_blank"><img src="odotutex01.png" alt="" /></A><BR>
+<B>図1.3_1</B> 円形基本オドメータ<A href="example_src/frame_odotutex01.html" target="_blank">[ソース]</A>
+</DIV></P>
+
+<P></P>
+<P>タイトルやサブタイトル、キャプションを上のサンプルに追加するには下記のように記述します。</P>
+<P><strong>例1.3_2&nbsp;タイトルとキャプションの追加 </strong></P>
+<DIV class="phpscript"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #FF8000">//&nbsp;content="text/plain;&nbsp;charset=utf-8"<br />
+</span><span style="color: #007700">require_once&nbsp;(</span><span style="color: #DD0000">"jpgraph/jpgraph.php"</span><span style="color: #007700">);<br />
+require_once&nbsp;(</span><span style="color: #DD0000">"jpgraph/jpgraph_odo.php"</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;新規オドメータ・グラフ・エリアを作成（幅250、高さ200ピクセル）<br />
+</span><span style="color: #0000BB">$graph&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">OdoGraph</span><span style="color: #007700">(</span><span style="color: #0000BB">250</span><span style="color: #007700">,</span><span style="color: #0000BB">180</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;タイトル、サブタイトル、キャプションを設定<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #DD0000">"Result&nbsp;for&nbsp;2002"</span><span style="color: #007700">);<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetColor</span><span style="color: #007700">(</span><span style="color: #DD0000">"white"</span><span style="color: #007700">);<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetFont</span><span style="color: #007700">(</span><span style="color: #0000BB">FF_ARIAL</span><span style="color: #007700">,</span><span style="color: #0000BB">FS_BOLD</span><span style="color: #007700">,</span><span style="color: #0000BB">14</span><span style="color: #007700">);<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">subtitle</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #DD0000">"New&nbsp;York&nbsp;Office"</span><span style="color: #007700">);<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">subtitle</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetColor</span><span style="color: #007700">(</span><span style="color: #DD0000">"white"</span><span style="color: #007700">);<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">caption</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #DD0000">"Figure&nbsp;1.&nbsp;Branch&nbsp;results."</span><span style="color: #007700">);<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">caption</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetColor</span><span style="color: #007700">(</span><span style="color: #DD0000">"white"</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;オドメータ・グラフ・エリアに入れるためのオドメータを作成する。<br />
+//&nbsp;初期設定により目盛り(Scale)は0から100。<br />
+</span><span style="color: #0000BB">$odo&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Odometer</span><span style="color: #007700">();<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;指針がオドメータ上で指す値を設定。<br />
+</span><span style="color: #0000BB">$odo</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">needle</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #0000BB">30</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;オドメータをグラフ・エリアに追加。<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Add</span><span style="color: #007700">(</span><span style="color: #0000BB">$odo</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;...&nbsp;最後に、完成した画像をブラウザに返す。<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Stroke</span><span style="color: #007700">();<br />
+&nbsp;<br />
+</span><span style="color: #0000BB">?&gt;<br />
+</span>
+</span>
+</code></DIV>
+
+<P><DIV class="example">
+<A href="example_src/frame_odotutex02.html" target="_blank"><img src="odotutex02.png" alt="" /></A><BR>
+<B>図1.3_2</B> タイトルとキャプションの追加<A href="example_src/frame_odotutex02.html" target="_blank">[ソース]</A>
+</DIV></P>
+
+<p></p>
+<p><strong>例1.3_3 複数行のキャプションを追加する</strong></p>
+<DIV class="phpscript"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #FF8000">//&nbsp;content="text/plain;&nbsp;charset=utf-8"<br />
+</span><span style="color: #007700">require_once&nbsp;(</span><span style="color: #DD0000">"jpgraph/jpgraph.php"</span><span style="color: #007700">);<br />
+require_once&nbsp;(</span><span style="color: #DD0000">"jpgraph/jpgraph_odo.php"</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//新規オドメータ・グラフ・エリアを作成（幅250、高さ200ピクセル）<br />
+</span><span style="color: #0000BB">$graph&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">OdoGraph</span><span style="color: #007700">(</span><span style="color: #0000BB">250</span><span style="color: #007700">,</span><span style="color: #0000BB">200</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//タイトル、サブタイトル、キャプションを設定<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #DD0000">"Result&nbsp;for&nbsp;2002"</span><span style="color: #007700">);<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetColor</span><span style="color: #007700">(</span><span style="color: #DD0000">"white"</span><span style="color: #007700">);<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetFont</span><span style="color: #007700">(</span><span style="color: #0000BB">FF_ARIAL</span><span style="color: #007700">,</span><span style="color: #0000BB">FS_BOLD</span><span style="color: #007700">,</span><span style="color: #0000BB">14</span><span style="color: #007700">);<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">subtitle</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #DD0000">"New&nbsp;York&nbsp;Office"</span><span style="color: #007700">);<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">subtitle</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetColor</span><span style="color: #007700">(</span><span style="color: #DD0000">"white"</span><span style="color: #007700">);<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">caption</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #DD0000">"Figure&nbsp;1.This&nbsp;is&nbsp;a&nbsp;very,&nbsp;very\nlong&nbsp;text&nbsp;with&nbsp;multiples&nbsp;<br />lines\nthat&nbsp;are&nbsp;added&nbsp;as&nbsp;a&nbsp;caption."</span><span style="color: #007700">);<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">caption</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetColor</span><span style="color: #007700">(</span><span style="color: #DD0000">"white"</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;オドメータ・グラフ・エリアに入れるためのオドメータを作成する。<br />
+//&nbsp;初期設定により目盛り(Scale)は0から100。<br />
+</span><span style="color: #0000BB">$odo&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Odometer</span><span style="color: #007700">();<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;指針がオドメータ上で指す値を設定。<br />
+</span><span style="color: #0000BB">$odo</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">needle</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #0000BB">30</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;オドメータをグラフ・エリアに追加。<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Add</span><span style="color: #007700">(</span><span style="color: #0000BB">$odo</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;...&nbsp;最後に、完成した画像をブラウザに返す。<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Stroke</span><span style="color: #007700">();<br />
+&nbsp;<br />
+</span><span style="color: #0000BB">?&gt;<br />
+</span>
+</span>
+</code></DIV></p>
+
+<P><DIV class="example">
+<A href="example_src/frame_odotutex03.html" target="_blank"><img src="odotutex03.png" alt="" /></A><BR>
+<B>図1.3_3</B> 複数行のキャプションを追加<A href="example_src/frame_odotutex03.html" target="_blank">[ソース]</A>
+</DIV></P>
+
+<p></p>
+<p></p>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="12121Creatingodomater.html">前へ</A> <a href="122Windrose.html">次へ
+</a>
+</BODY>
+</HTML>

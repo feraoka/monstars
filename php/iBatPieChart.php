@@ -1,4 +1,5 @@
 <?php
+set_include_path(get_include_path() . PATH_SEPARATOR . "../jpgraph/src");
 include ("jpgraph.php");
 include ("jpgraph_pie.php");
 include ("jpgraph_pie3d.php");

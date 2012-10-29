@@ -1,0 +1,766 @@
+<HTML>
+<HEAD>
+<TITLE>JpGraph Barcode Manual</TITLE>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="../jpgdoc.css">
+</HEAD>
+<BODY>
+<DIV class="page">
+<H1> JpGraph Barcode Manual</H1>
+<div align=center>
+<BR> <IMG HEIGHT="73" src="img/code128-jpgraphbarcode.png" WIDTH="230">
+<BR><FONT style="font-size:14;"> 1 Apr, 2005</FONT>
+<hr>
+<H2>Table of Contents</h2><p>
+</div>
+
+<BR><B><A HREF="#1">1  Bar codes with JpGraph</A></B>
+<UL>
+<LI><A HREF="#1_1">1.1  Introduction</A></LI>
+<UL>
+<LI><A HREF="#1_1_1">1.1.1  Verification</A></LI>
+</UL>
+<LI><A HREF="#1_2">1.2  Features</A></LI>
+<UL>
+<LI><A HREF="#1_2_1">1.2.1  Sample application</A></LI>
+</UL>
+<LI><A HREF="#1_3">1.3  Creating bar codes - Quick start</A></LI>
+<LI><A HREF="#1_4">1.4  Adjusting the bar codes</A></LI>
+<UL>
+<LI><A HREF="#1_4_1">1.4.1  Adjusting the encoding</A></LI>
+<LI><A HREF="#1_4_2">1.4.2  Adjusting the output</A></LI>
+<LI><A HREF="#1_4_3">1.4.3  Examples of adjusting the output</A></LI>
+</UL>
+<LI><A HREF="#1_5">1.5  Using the different symbologies</A></LI>
+<UL>
+<LI><A HREF="#1_5_1">1.5.1 UPC A</A></LI>
+<LI><A HREF="#1_5_2">1.5.2 UPC E</A></LI>
+<LI><A HREF="#1_5_3">1.5.3 EAN 8</A></LI>
+<LI><A HREF="#1_5_4">1.5.4 EAN 13</A></LI>
+<LI><A HREF="#1_5_5">1.5.5 EAN 128</A></LI>
+<LI><A HREF="#1_5_6">1.5.6 Industrial 2 of 5</A></LI>
+<LI><A HREF="#1_5_7">1.5.7 Interleaved 2 of 5</A></LI>
+<LI><A HREF="#1_5_8">1.5.8 CODE 11 (USD 8)</A></LI>
+<LI><A HREF="#1_5_9">1.5.9 CODE 39</A></LI>
+<LI><A HREF="#1_5_10">1.5.10 CODE 39 Extended</A></LI>
+<LI><A HREF="#1_5_11">1.5.11 CODE 128</A></LI>
+<LI><A HREF="#1_5_12">1.5.12 CODABAR</A></LI>
+<LI><A HREF="#1_5_13">1.5.13 Bookland (ISBN)</A></LI>
+</UL>
+</UL>
+<HR>
+<P></P>
+<P></P>
+<P></P>
+<H1><A NAME="1">1  Bar codes with JpGraph</A></H1>
+<H2><A NAME="1_1">1.1  Introduction</A></h2><p>
+ With the bar code extension to JpGraph you can now easily create bar
+ codes using all the commonly accepted symbologies. You can choose to
+ have the resulting bar code being created as an image (in either PNG or
+ JPEG format) or as a Postscript file ready for printing on high
+ resolution printers. The bar code extension provides extensive data
+ verification which makes sure you can't create an invalid bar codes.
+<H3><A NAME="1_1_1">1.1.1  Verification</A></h3><p>
+ All generated bar codes (except CODE 11 which have little support in
+ Europe) have been extensively verified using Metrologic CCD-47 handheld
+ scanner.
+<H2><A NAME="1_2">1.2  Features</A></h2><p>
+ This is a summary of the features available in the JpGraph bar code
+ extension.
+<UL>
+<LI> Supports the following symbologies:
+<OL>
+<LI> UPC A</LI>
+<LI> UPC E</LI>
+<LI> EAN 128</LI>
+<LI> EAN 13</LI>
+<LI> EAN 8</LI>
+<LI> CODE 11 (USD-8)</LI>
+<LI> CODE 39</LI>
+<LI> CODE 128</LI>
+<LI> Industrial 2 of 5</LI>
+<LI> Interleaved 2 of 5</LI>
+<LI> Codabar</LI>
+<LI> Bookland (ISBN)</LI>
+</OL>
+</LI>
+<LI> Input data is verified against the official specification of each
+ symbologies and makes it impossible to create invalid bar codes.</LI>
+<LI> Output format
+<OL>
+<LI> Image format, either JPEG or PNG</LI>
+<LI> Postscript</LI>
+<LI> Encapsulated postscript</LI>
+</OL>
+</LI>
+<LI> Formatting options
+<OL>
+<LI> User specified module width</LI>
+<LI> Automatic calculation of optional checksum for symbologies where
+ the checksum is optional</LI>
+<LI> User specified scaling of resulting bar code</LI>
+<LI> Horizontal or vertical bar code layout</LI>
+<LI> Suppression of human readable text on barcodes</LI>
+<LI></LI>
+</OL>
+</LI>
+</UL>
+<H3><A NAME="1_2_1">1.2.1  Sample application</A></h3><p>
+ Even though primarily the JpGraph bar code extension is meant, and
+ designed, to be used as a library within a larger system there is a
+ small demo bar code creation application included in the distribution.
+ This application can be used to easily create bar code through it's WEB
+ interface.
+<P> This application is primarily included as a demo on the features
+ available and not as a finalized product.</P>
+<P> You can find the application in the &quot;barcode/&quot; subdirectory in the
+ distribution.</P>
+<P> The image below shows a screen shot of this demo application</P>
+<P> <IMG HEIGHT="373" src="img/barapp.png" WIDTH="548">
+<BR> <SMALL><B>Figure 1.</B><I> Screenshot of the barcode creation demo
+ application included in the distribution. The application can be run by
+ pointing your browser to the &quot;barapp/&quot; directory. Depending on you
+ installation you might have to change the include path in
+ &quot;barcode_image.php&quot; so that the standard JpGraph files may be found.</I>
+</SMALL></P>
+<H2><A NAME="1_3">1.3  Creating bar codes - Quick start</A></h2><p>
+ All barcode creation follows the following simple steps :
+<OL>
+<LI> Create an encoder for you choose of symbology</LI>
+<LI> Create a backend for your chosen output format</LI>
+<LI> Encode your data</LI>
+</OL><P>
+ So for example to create an image bar code representing the data string
+ &quot;ABC123&quot; using symbology &quot;CODE 39&quot; you would have to write
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php $symbology</FONT><FONT
+color="#006600"> =</FONT><FONT color="#0000CC"> BarcodeFactory</FONT><FONT
+color="#006600">::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">ENCODING_CODE39</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+ =</FONT><FONT color="#0000CC"> BackendFactory</FONT><FONT color="#006600">
+::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">'IMAGE'</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$symbology</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Stroke</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">'ABC123'</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV>
+<P> which would then produce the following image</P>
+<P> <IMG HEIGHT="75" src="img/code39-ABC123.png" WIDTH="264">
+<BR> <SMALL><B>Figure 1</B>.<I> Encoding &quot;ABC123&quot; with CODE 39.</I></SMALL>
+</P>
+<P> As you can see from the code above the basic interface to the
+ library makes use of two abstract factories which creates the
+ appropriate encoder and output backend. This design makes the addition
+ of new output formats and new symbologies transparent for the end user
+ of the library.</P>
+<P> If you instead wanted to encode the data string using symbology
+ &quot;CODE 128&quot; instead, you would only have to modify the first line in the
+ above code snippet to
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php $symbology</FONT><FONT
+color="#006600"> =</FONT><FONT color="#0000CC"> BarcodeFactory</FONT><FONT
+color="#006600">::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">ENCODING_CODE128</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#FF9900">// ... same as above ...</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P> <IMG HEIGHT="75" src="img/code128-ABC123.png" WIDTH="262">
+<BR> <SMALL><B>Figure 2</B>.<I> Encoding &quot;ABC123&quot; with CODE 39.</I></SMALL>
+</P>
+<P> As you have seen in the examples above you specify what encoding to
+ use by means of a symbolic constant. The following list shows the
+ symbolic constants available to specify encoding. The symbology the
+ constant is referring to is obvious from the name.</P>
+<UL>
+<LI> ENCODING_EAN128</LI>
+<LI> ENCODING_EAN13</LI>
+<LI> ENCODING_EAN8</LI>
+<LI> ENCODING_UPCA</LI>
+<LI> ENCODING_UPCE</LI>
+<LI> ENCODING_CODE39</LI>
+<LI> ENCODING_CODE93</LI>
+<LI> ENCODING_CODE128</LI>
+<LI> ENCODING_CODE25</LI>
+<LI> ENCODING_CODEI25</LI>
+<LI> ENCODING_CODABAR</LI>
+<LI> ENCODING_CODE11</LI>
+<LI> ENCODING_POSTNET</LI>
+<LI> ENCODING_BOOKLAND</LI>
+</UL>
+<H2><A NAME="1_4">1.4  Adjusting the bar codes</A></h2><p>
+ As mentioned in the introduction you have some flexibility in how the
+ generated bar codes is formatted and encoded.
+<P> For example, two common modifications is to either change the module
+ width used (=the width of a unit line in the bar) or suppress the
+ printing of the human readable version of the data string.</P>
+<P> To adjust the module width you make use of the &quot;SetModuleWidth()&quot;
+ method of the backend. So for example to augment the previous example
+ and change the module width to 2 and hide the human readable text we
+ would change the code to
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php $symbology</FONT><FONT
+color="#006600"> =</FONT><FONT color="#0000CC"> BarcodeFactory</FONT><FONT
+color="#006600">::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">ENCODING_CODE39</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+ =</FONT><FONT color="#0000CC"> BackendFactory</FONT><FONT color="#006600">
+::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">'IMAGE'</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$symbology</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetModuleWidth</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">2</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">HideText</FONT><FONT color="#006600">();
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Stroke</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">'ABC123'</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<P> Which would give the result</P>
+<P> <IMG HEIGHT="60" src="img/code39ntxt-ABC123.png" WIDTH="264">
+<BR> <SMALL><B>Figure 3</B>.<I> Encoding &quot;ABC123&quot; with CODE 39, hiding
+ the text.</I></SMALL></P>
+<P> A note on the module width might be in order here. For image type
+ backends this specifies the number of pixels used for a module and for
+ Postscript (and Encapsulated PS) this specifies the width in points
+ (i.e. 1/72 inch). This also means that for image type backends only
+ integer values makes sense.</P>
+<P> You should keep in mind that depending on the quality of the printer
+ (and paper) very small module width might not be readable with all bar
+ code readers. For images it is therefore recommended to use &quot;2&quot; pixels
+ as the minimum module width and for postscript output the minimum
+ recommended width is &quot;0.8&quot; pt.</P>
+<P> In the following two section we will describe the options available
+ to you.</P>
+<H3><A NAME="1_4_1">1.4.1  Adjusting the encoding</A></h3><p>
+ For the encoding there is basically only one modification you can do.
+ For those symbologies that include an optional checksum you may choose
+ to enable this calculation. By default checksum calculation is off
+ since they make the code longer.
+<P> The following symbologies may have optional checksum character(s)</P>
+<OL>
+<LI> Industrial 2 of 5</LI>
+<LI> Interleaved 2 of 5</LI>
+<LI> Code 39</LI>
+<LI> Code 39 Extended</LI>
+<LI> Code 11</LI>
+</OL><P>
+ Turning on/off checksum calculation for other symbologies will have no
+ affect. You enable the checksum calculation with a call to
+ &quot;AddChecksum()&quot; on the chosen backend. For example to augment the
+ previous &quot;CODE 39&quot; example to include the checksum we would change the
+ code to
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php $symbology</FONT><FONT
+color="#006600"> =</FONT><FONT color="#0000CC"> BarcodeFactory</FONT><FONT
+color="#006600">::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">ENCODING_CODE39</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+ =</FONT><FONT color="#0000CC"> BackendFactory</FONT><FONT color="#006600">
+::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">'IMAGE'</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$symbology</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">AddChecksum</FONT><FONT color="#006600">
+();
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Stroke</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">'ABC123'</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV>
+<P></P>
+<P> Which would give the result</P>
+<P> <IMG HEIGHT="75" src="img/code39chk-ABC123.png" WIDTH="290">
+<BR> <SMALL><B>Figure 4</B>.<I> Encoding &quot;ABC123&quot; with CODE 39 adding
+ checksum (checksum=4).</I></SMALL></P>
+<P></P>
+<H3><A NAME="1_4_2">1.4.2  Adjusting the output</A></h3><p>
+ You can adjust the output format by specifying/creating the appropriate
+ backend. As of version 1.0 an image and postscript (and encapsulated
+ postscript) backends are provided as standard.
+<P> You create the backend of your choice by calling the backend factory
+ method &quot;BackendFactory::Create()&quot; as in
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php $barcode</FONT><FONT
+color="#006600"> =</FONT><FONT color="#0000CC"> BackendFactory</FONT><FONT
+color="#006600">::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">BACKEND_IMAGE</FONT><FONT color="#006600">
+,</FONT><FONT color="#0000CC">$symbology</FONT><FONT color="#006600">);</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P> Where &quot;$symbology&quot; is the chosen symbology as created by the
+ &quot;BarcodeFactory::Create()&quot; . Please note that both factory functions
+ are called as static methods.</P>
+<P> As of version 1.0 the following output formats are available:</P>
+<OL>
+<LI> 'IMAGE' Creates a standard JPEG or PNG (default) image</LI>
+<LI> 'PS' Creates a standard postscript file as output. You can get an
+ EPS (Encapsulated postscript) back by calling the &quot;SetEPS()&quot; methods as
+ in
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php $barcode</FONT><FONT
+color="#006600"> =</FONT><FONT color="#0000CC"> BackendFactory</FONT><FONT
+color="#006600">::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">BACKEND_PS</FONT><FONT color="#006600">,</FONT><FONT
+color="#0000CC">$symbology</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetEPS</FONT><FONT color="#006600">()</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV></LI>
+<P> Plase note that for the postscript backend the postscript code is
+ returned as a string from the &quot;Stroke()&quot; method. You can also have the
+ Stroke() method write the postscript file directly to a file. See more
+ about writing to a file below.</P>
+</OL><P>
+ To send the created stream (either image or postscript) back to the
+ browser or to a file you use the &quot;Stroke()&quot; method. An example will
+ make this clear.
+<P> Continuing the previous code and assuming we want to create an image
+ that is send back to the browser. We could then write something like:
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php $symbology</FONT><FONT
+color="#006600"> =</FONT><FONT color="#0000CC"> BarcodeFactory</FONT><FONT
+color="#006600">::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">ENCODING_CODE128</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+ =</FONT><FONT color="#0000CC"> BackendFactory</FONT><FONT color="#006600">
+::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">BACKEND_IMAGE</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$symbology</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Stroke</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">'ABC123'</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P> If the code above was stored in a file &quot;barcode123.php&quot; we could
+ then call that script from within another HTML file as
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php</FONT><FONT color="#006600">
+ &lt;</FONT><FONT color="#0000CC">img src</FONT><FONT color="#006600">=</FONT><FONT
+color="#CC0000">&quot;barcode123.php&quot;</FONT><FONT color="#006600">&gt;</FONT><FONT
+color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<P> To see the image.</P>
+<P> You can also stream the image directly to a file by specifying a
+ second argument to the &quot;Stroke()&quot; method above. So if we instead wanted
+ the barcode to be stores in the file &quot;/tmp/barcode.png&quot; we could write
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php $symbology</FONT><FONT
+color="#006600"> =</FONT><FONT color="#0000CC"> BarcodeFactory</FONT><FONT
+color="#006600">::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">$code</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+ =</FONT><FONT color="#0000CC"> BackendFactory</FONT><FONT color="#006600">
+::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">BACKEND_IMAGE</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$symbology</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Stroke</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">'ABC123'</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+'/tmp/barcode.png'</FONT><FONT color="#006600">);</FONT><FONT color="#0000CC">
+</FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<HR> <SMALL><B> Note:</B> There is no automatic added extension to the
+ file name.</SMALL>
+<HR> 
+<P>For the image backend the &quot;Stroke()&quot; method returns &quot;true&quot; if the
+ image was created and sent back to the browser and &quot;false&quot; if there
+ were any problem. So a client program should include error checking
+ code similar to:
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php $symbology</FONT><FONT
+color="#006600"> =</FONT><FONT color="#0000CC"> BarcodeFactory</FONT><FONT
+color="#006600">::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">ENCODING_CODE39</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+ =</FONT><FONT color="#0000CC"> BackendFactory</FONT><FONT color="#006600">
+::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">BACKEND_IMAGE</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$symbology</FONT><FONT color="#006600">);
+<BR />if(</FONT><FONT color="#0000CC"> $barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Stroke</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">'ABC123'</FONT><FONT color="#006600">,</FONT><FONT color="#CC0000">
+'/tmp/barcode.png'</FONT><FONT color="#006600">)===</FONT><FONT color="#0000CC">
+false</FONT><FONT color="#006600"> ) {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#FF9900">//&nbsp;&nbsp;&nbsp;Suitable error handling
+<BR /></FONT><FONT color="#006600"> }</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV>
+<P> Again, please note that for the Postscript background the Stroke()
+ method normally returns the postscript file as a string if everything
+ went well.</P>
+<H4>1.4.2.1 Writing bar code to a file</H4>
+<P>
+ You can do this easily by adding a second argument, the file name, to
+ the &quot;Stroke()&quot; method. This works for all backends. The file name
+ should be an absolute path name. Since it is the PHP process that
+ writes the file you need to make sure that it has the necessary
+ privileges to write to the chosen directory.
+<P> The following code shows a complete example of writing a generated
+ image to a file:
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php $file</FONT><FONT
+color="#006600">=</FONT><FONT color="#CC0000">'/tmp/barcode.png'</FONT><FONT
+color="#006600">;
+<BR /></FONT><FONT color="#0000CC">$data</FONT><FONT color="#006600">=</FONT><FONT
+color="#CC0000">'ABC123'</FONT><FONT color="#006600">;
+<BR /></FONT><FONT color="#0000CC">$symbology</FONT><FONT color="#006600">
+ =</FONT><FONT color="#0000CC"> BarcodeFactory</FONT><FONT color="#006600">
+::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">ENCODING_CODE128</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+ =</FONT><FONT color="#0000CC"> BackendFactory</FONT><FONT color="#006600">
+::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">BACKEND_IMAGE</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$symbology</FONT><FONT color="#006600">);
+<BR />if(</FONT><FONT color="#0000CC"> $barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Stroke</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">$data</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$file</FONT><FONT color="#006600">)===</FONT><FONT color="#0000CC">false</FONT><FONT
+color="#006600"> ) {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#FF9900">//&nbsp;&nbsp;&nbsp;Suitable error handling
+<BR /></FONT><FONT color="#006600"> }
+<BR />else {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;echo</FONT><FONT color="#CC0000"> &quot;Wrote file: '$file'.&lt;p&gt;&quot;</FONT><FONT
+color="#006600">;
+<BR />}</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<H4>1.4.2.2 Adjusting module width</h4><p>
+ You adjust the module width by calling the &quot;SetModuleWIdth()&quot; method as
+ in
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php $symbology</FONT><FONT
+color="#006600"> =</FONT><FONT color="#0000CC"> BarcodeFactory</FONT><FONT
+color="#006600">::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">ENCODING_CODE128</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+ =</FONT><FONT color="#0000CC"> BackendFactory</FONT><FONT color="#006600">
+::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">BACKEND_IMAGE</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$symbology</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetModuleWidth</FONT><FONT color="#006600">
+()</FONT><FONT color="#0000CC"></FONT></FONT></CODE></B></DIV>
+<P> For an image the module width given is interpretated as number of
+ pixels. Hence for image backend it only makes sense to specify width in
+ integers. Any width given as fractions will be rounded to the nearest
+ integer.</P>
+<P> For the postscript backer the width given is interpretated as number
+ of points (pt), i.e. 1 pt = 1/72 inch. For postscript backend it is
+ therefore perfectly legal to specify width as fractions of a point.</P>
+<P> A modern high quality inkjet or laser printer should be able to
+ generate acceptable images for both 1 pixel wide images and down to 0.7
+ pt postscript files.</P>
+<P> But, to be on the safe side as a rule of thumb you shouldn't use a
+ module width less or equal &quot;2&quot; for images and 0.9 for postscript unless
+ you know what kind of printer will be used to make the hardcopy of the
+ bar codes.</P>
+<H4>1.4.2.3  Setting vertical or horizontal layout</h4><p>
+ You can rotate the bar code 90 degrees providing a vertical view of the
+ bar code with a call to &quot;SetVertical()&quot;
+<H4>1.4.2.4 Adjusting height of bar code</h4><p>
+ The height of the bar codes is specified with the &quot;SetHeight()&quot; method.
+ For images the height is interpretated as pixels and for postscript
+ files it is interpretated as points.
+<H4>1.4.2.5 Hide text</h4><p>
+ You can hide the text under the bar code with a call to the
+ &quot;HideText()&quot; method.
+<H4>1.4.2.6 Scaling of bar codes</h4><p>
+ You can specify a scaling for the bar codes using the &quot;SetScale()&quot;
+ method .
+<H4>1.4.2.7 Add frame around bar code</h4><p>
+ For images you can add a frame around the bar code with a call to
+ &quot;ShowFrame()&quot;
+<H3><A NAME="1_4_3">1.4.3  Examples of adjusting the output</A></h3><p>
+ The following example outputs a postscript file representing the bar
+ code with a module width of 1.2 pt, using a vertical layout and scaling
+ the image 2 times. For this example we are using CODE 39 with a
+ checksum (which is automatically generated)
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#0000CC"> &lt;?php $symbology</FONT><FONT
+color="#006600"> =</FONT><FONT color="#0000CC"> BarcodeFactory</FONT><FONT
+color="#006600">::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">ENCODING_CODE128</FONT><FONT color="#006600">
+);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+ =</FONT><FONT color="#0000CC"> BackendFactory</FONT><FONT color="#006600">
+::</FONT><FONT color="#0000CC">Create</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">BACKEND_IMAGE</FONT><FONT color="#006600">,</FONT><FONT color="#0000CC">
+$symbology</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetVertical</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">true</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Scale</FONT><FONT color="#006600">(</FONT><FONT
+color="#0000CC">2</FONT><FONT color="#006600">);
+<BR /></FONT><FONT color="#0000CC">$barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">SetModuleWidth</FONT><FONT color="#006600">
+(</FONT><FONT color="#0000CC">1.2</FONT><FONT color="#006600">);
+<BR />if(</FONT><FONT color="#0000CC"> $barcode</FONT><FONT color="#006600">
+-&gt;</FONT><FONT color="#0000CC">Stroke</FONT><FONT color="#006600">(</FONT><FONT
+color="#CC0000">'ABC123'</FONT><FONT color="#006600">) ) {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#FF9900">// Suitable error handling
+<BR /></FONT><FONT color="#006600">};</FONT><FONT color="#0000CC"></FONT>
+</FONT></CODE></B></DIV>
+<P></P>
+<H2><A NAME="1_5">1.5  Using the different symbologies</A></h2><p>
+ In the following section we will describe the requirements to encode in
+ each of the supported symbologies. Some symbologies have strict
+ standard for the data to be encoded and hence you might get a &quot;Data
+ validation&quot; error if the data you are trying to encode doesn't follow
+ the requirements.
+<P></P>
+<HR><B><FONT color="red"> Please note that the information given here is
+ in no way a replacement for the official AIM and ISO standards these
+ encoding are based on. Nor is there any guarantee that the information
+ given here is either correct or complete. It is assumed that the reader
+ have access to the official standards describing each of these
+ encodings.</FONT></B>
+<HR>
+<H3><A NAME="1_5_1">1.5.1 UPC A</A></h3><p>
+ UPC A = Universal Product Code Version A.
+<H4>1.5.1.1 Usage</h4><p>
+ Used for consumer goods. Is being slowly replaced by EAN13. UPCA is a
+ special case of of EAN13 where the first digit is always 0.
+<H4>1.5.1.2 Data input</h4><p>
+ Eleven digit. First digit is always 0.
+<H4>1.5.1.3 Checksum</h4><p>
+ Automatic, mandatory.
+<H4>1.5.1.4 Example</h4><p>
+ &quot;03456781233&quot;
+<BR> <IMG HEIGHT="70" src="img/upca-example.png" WIDTH="250">
+<BR> <SMALL><I><B>Figure 5.</B>UPC A encoding of &quot;03456781233&quot;</I></SMALL>
+<H3><A NAME="1_5_2">1.5.2 UPC E</A></h3><p>
+ UPC E = Universal Product Code Version E.
+<H4>1.5.2.1 Usage</h4><p>
+ Same general use as UPC A. Can be considered a subset and a more
+ compact version of UPC A. Used where UPC A bar codes are to wide.
+<P> The 6 resulting digits is take from the UPC A according to the
+ following 4 rules:</P>
+<OL>
+<LI>If a manufacturer's number ends in 000 or 100 or 200, he has
+ available to him 1,000 item numbers between 00000 and 00999. The six
+ characters are obtained from the first two characters of the
+ manufacturer's number followed by the last three characters of the item
+ number, followed by the third character of the manufacturer's number.</LI>
+<LI>If a manufacturer's number ends in 300, 400, 500, 600, 700, 800 or
+ 900, he has available to him 100 item numbers between 00000 and 00099.
+ The six characters are obtained from the first three characters of the
+ manufacturer's number followed by the last two characters of the item
+ number, followed by &quot;3&quot;.</LI>
+<LI>If a manufacturer's number ends in 10, 20, 30, 40, 50, 60, 70, 80 or
+ 90, he has available to him 10 item numbers between 00000 and 00009.
+ The six characters are obtained from the first four characters of the
+ manufacturer's number followed by the last character of the item
+ number, followed by &quot;4&quot;.</LI>
+<LI>If a manufacturer's number does not end in zero, then five item
+ numbers between 00005 and 00009 are available. The six characters are
+ obtained from all five of the manufacturer's identification number
+ followed by the last character of the item number.</LI>
+</OL><P>
+<H4>1.5.2.2 Data input</h4><p>
+ Eleven digits. First digit is always 0. Data input must follow UPC rule
+ for construction of UPC E data.
+<H4>1.5.2.3 Checksum</h4><p>
+ Automatic, mandatory
+<H4>1.5.2.4 Example</h4><p>
+ &quot;05510000120&quot;
+<BR> <IMG HEIGHT="70" src="img/upce-example.png" WIDTH="162">
+<BR> <SMALL><I><B>Figure 6.</B>UPC E Encoding of &quot;05510000120&quot;</I></SMALL>
+<P> As comparison the UPC-A version of the same data is shown below
+<BR> <IMG HEIGHT="70" src="img/upce-upcaexample.png" WIDTH="250">
+<BR> <SMALL><I><B>Figure 7.</B>UPC A Encoding of &quot;05510000120&quot;</I></SMALL>
+</P>
+<H3><A NAME="1_5_3">1.5.3 EAN 8</A></h3><p>
+<H4>1.5.3.1 Usage</h4><p>
+ A shorter version of EAN13 using only 7 digits + checksum digit.
+<H4>1.5.3.2 Data input</h4><p>
+ Seven digits.
+<H4>1.5.3.3 Checksum</h4><p>
+ Automatic, mandatory
+<H4>1.5.3.4 Example</h4><p>
+ &quot;3776221&quot;
+<BR> <IMG HEIGHT="70" src="img/ean8-example.png" WIDTH="194">
+<BR> <SMALL><I><B>Figure 8.</B>EAN8 Encoding of &quot;3776221&quot;</I></SMALL>
+<H3><A NAME="1_5_4">1.5.4 EAN 13</A></h3><p>
+<H4>1.5.4.1 Usage</h4><p>
+ Generic code for consumer goods. Is replacing UPC-A as worldwide
+ standard.
+<H4>1.5.4.2 Data input</h4><p>
+ Twelve digits.
+<H4>1.5.4.3 Checksum</h4><p>
+ Automatic, mandatory
+<H4>1.5.4.4 Example</h4><p>
+ &quot;377622153812&quot;
+<BR> <IMG HEIGHT="70" src="img/ean13-example.png" WIDTH="250">
+<BR> <SMALL><I><B>Figure 9.</B>EAN13 Encoding of &quot;377622153812&quot;</I></SMALL>
+<H3><A NAME="1_5_5">1.5.5 EAN 128</A></h3><p>
+<H4>1.5.5.1 Usage</h4><p>
+ EAN 128 is basically a CODE 128 where the data structure is strictly
+ regulated. Please refer to the official EAN-128 specifications for
+ details.
+<H4>1.5.5.2 Data input</h4><p>
+ An alphanumeric data string following EAN 128 rules. This means for one
+ thing that the string must start with a FUNC1 character which is
+ encoded using ASCII 128 in JpGraph Barcode available as constant
+ EA_FUNC1. The validation routines checks these rules and will fail any
+ data string not following the EAN 128 rules.
+<H4>1.5.5.3 Checksum</h4><p>
+ Automatic, mandatory.
+<H4>1.5.5.4 Example</h4><p>
+ &quot;3125134772&quot;
+<BR> <IMG HEIGHT="85" src="img/ean128-example.png" WIDTH="284">
+<BR> <SMALL><I><B>Figure 10.</B>EAN128 Encoding of &quot;3125134772&quot;</I></SMALL>
+<H3><A NAME="1_5_6">1.5.6 Industrial 2 of 5</A></h3><p>
+<H4>1.5.6.1 Usage</h4><p>
+ Old low density standard. For newer applications it should not be used.
+ Use interleaved 2 of 5 instead since this is a higher density code.
+<H4>1.5.6.2 Data input</h4><p>
+ Digits.
+<H4>1.5.6.3 Checksum</h4><p>
+ Optional.
+<H4>1.5.6.4 Example</h4><p>
+<TABLE>
+<TR><TD>&quot;13729&quot;, No checksum
+<BR> <IMG HEIGHT="85" src="img/code25-example.png" WIDTH="230">
+<BR> <SMALL><I><B> Figure 11.</B> Industrial 2 of 5 Encoding of &quot;13729&quot;</I>
+</SMALL></TD><TD></TD><TD>&quot;13729&quot;, With checksum
+<BR> <IMG HEIGHT="85" src="img/code25chk-example.png" WIDTH="258">
+<BR> <SMALL><I><B>Figure 12.</B> Industrial 2 of 5 Encoding of &quot;13729&quot;
+ with checksum</I></SMALL></TD></TR>
+</TABLE>
+<H3><A NAME="1_5_7">1.5.7 Interleaved 2 of 5</A></h3><p>
+<H4>1.5.7.1 Usage</h4><p>
+ Various. Relative hight density numeric code. Used for example on some
+ driving licenses.
+<H4>1.5.7.2 Data input</h4><p>
+ Even length numeric string when not using checksum. Odd length string
+ when using checksum.
+<H4>1.5.7.3 Checksum</h4><p>
+ Optional.
+<H4>1.5.7.4 Example</h4><p>
+ Note. Since using a checksum requires an odd number of digits you can
+ easily do this by adding a '0' to an even numbered data string.
+<TABLE>
+<TR><TD>&quot;137291&quot;, No checksum
+<BR> <IMG HEIGHT="85" src="img/codeI25-example.png" WIDTH="184">
+<BR> <SMALL><I><B> Figure 13.</B> Interleaved 2 of 5 Encoding of
+ &quot;137291&quot;</I></SMALL></TD><TD></TD><TD>&quot;0137291&quot;, With checksum
+<BR> <IMG HEIGHT="85" src="img/codeI25chk-example.png" WIDTH="220">
+<BR> <SMALL><I><B>Figure 14.</B> Interleaved 2 of 5 Encoding of
+ &quot;0137291&quot; with checksum</I></SMALL></TD></TR>
+</TABLE>
+<H3><A NAME="1_5_8">1.5.8 CODE 11 (USD 8)</A></h3><p>
+<FONT color="red"><B> THIS IS AN EXPERIMENTAL ENCODER</B></FONT>
+<BR> Due to the lack of CCD scanners supporting this code in Europe we
+ have not been able to verify this Code against any scanning equipment.
+<H4>1.5.8.1 Usage</h4><p>
+ Numeric only code. Used primarily on telecommunication equipment. Not
+ recommended for general usage.<B> Note:</B> This code is not widely
+ supported by handheld CCD scanners.
+<H4>1.5.8.2 Data input</h4><p>
+ Numeric including the dash &quot;-&quot; character.
+<H4>1.5.8.3 Checksum</h4><p>
+ Optional.
+<H4>1.5.8.4 Example</h4><p>
+<TABLE>
+<TR><TD>&quot;0137291&quot;, No checksum
+<BR> <IMG HEIGHT="85" src="img/code11-example.png" WIDTH="196">
+<BR> <SMALL><I><B> Figure 15.</B> Code 11, &quot;0137291&quot;</I></SMALL></TD><TD>
+</TD><TD>&quot;0137291&quot;, With checksum
+<BR> <IMG HEIGHT="85" src="img/code11chk-example.png" WIDTH="228">
+<BR> <SMALL><I><B>Figure 16.</B> Code 11, &quot;0137291&quot; with checksum</I></SMALL>
+</TD></TR>
+</TABLE>
+<H3><A NAME="1_5_9">1.5.9 CODE 39</A></h3><p>
+ ( a.k.a Code 3 of 9 )
+<H4>1.5.9.1 Usage</h4><p>
+ General alphanumeric data (Capitals only)
+<H4>1.5.9.2 Data input</h4><p>
+ Alphanumeric (CAPITALS only) including the special characters &quot;$&quot;, &quot;/&quot;,
+ &quot;+&quot;, &quot;%&quot; and &quot;*&quot;
+<H4>1.5.9.3 Checksum</h4><p>
+ Optional.
+<H4>1.5.9.4 Example</h4><p>
+<TABLE>
+<TR><TD>&quot;0137291&quot;, No checksum
+<BR> <IMG HEIGHT="85" src="img/code39-example.png" WIDTH="290">
+<BR> <SMALL><I><B> Figure 17.</B> Code 39, &quot;GRAPH12&quot;</I></SMALL></TD><TD>
+</TD><TD>&quot;0137291&quot;, With checksum
+<BR> <IMG HEIGHT="85" src="img/code39chk-example.png" WIDTH="316">
+<BR> <SMALL><I><B>Figure 18.</B> Code 39, &quot;GRAPH12&quot; with checksum</I></SMALL>
+</TD></TR>
+</TABLE>
+<H3><A NAME="1_5_10">1.5.10 CODE 39 Extended</A></h3><p>
+<H4>1.5.10.1 Usage</h4><p>
+ Same as Code 39 with the change that it support small letters
+ &quot;a,b,c,d,...&quot; but do not support the special characters &quot;+/%$+*&quot;.
+<H4>1.5.10.2 Data input</h4><p>
+ Alphanumeric data.
+<H4>1.5.10.3 Checksum</h4><p>
+ Optional.
+<H4>1.5.10.4 Example</h4><p>
+<TABLE>
+<TR><TD>&quot;Code39&quot;, No checksum
+<BR> <IMG HEIGHT="85" src="img/code39E-example.png" WIDTH="342">
+<BR> <SMALL><I><B> Figure 17.</B> Code 39, &quot;Code39&quot;</I></SMALL></TD><TD></TD><TD>
+&quot;Code39&quot;, With checksum
+<BR> <IMG HEIGHT="85" src="img/code39Echk-example.png" WIDTH="368">
+<BR> <SMALL><I><B>Figure 18.</B> Code 39, &quot;Code39&quot; with checksum</I></SMALL>
+</TD></TR>
+</TABLE>
+<H3><A NAME="1_5_11">1.5.11 CODE 128</A></h3><p>
+<H4>1.5.11.1 Usage</h4><p>
+ Generic high density code which supports the full ASCII set.
+<H4>1.5.11.2 Data input</h4><p>
+ Alphanumeric characters.
+<H4>1.5.11.3 Checksum</h4><p>
+ Automatic, mandatory.
+<H4>1.5.11.4 Example</h4><p>
+ &quot;Code128&quot;
+<BR> <IMG HEIGHT="85" src="img/code128-example.png" WIDTH="284">
+<BR> <SMALL><I><B>Figure 19.</B> Code 128, &quot;Code128&quot;</I></SMALL>
+<H3><A NAME="1_5_12">1.5.12 CODABAR</A></h3><p>
+<H4>1.5.12.1 Usage</h4><p>
+ Old, numeric + some alpha capability, code. Primarily used in the USA.
+<H4>1.5.12.2 Data input</h4><p>
+ Numbers 0-9, Special characters &quot;-$:/.+&quot;
+<H4>1.5.12.3 Checksum</h4><p>
+ None.
+<H4>1.5.12.4 Example</h4><p>
+ &quot;12354&quot;
+<BR> <IMG HEIGHT="85" src="img/codabar-example.png" WIDTH="200">
+<BR> <SMALL><I><B>Figure 20.</B> Codabar, &quot;12354&quot;</I></SMALL>
+<H3><A NAME="1_5_13">1.5.13 Bookland (ISBN)</A></h3><p>
+ This is a specially formatted EAN13 Code.
+<H4>1.5.13.1 Usage</h4><p>
+ Encodes ISBN codes in books and magazines.
+<H4>1.5.13.2 Data input</h4><p>
+ A valid ISBN number without last digit (check digit) and &quot;-&quot; signs.
+<H4>1.5.13.3 Checksum</h4><p>
+ Automatic, mandatory.
+<H4>1.5.13.4 Example</h4><p>
+ ISBN Code: 0-486-63926-6 (<I>Complex variables and the Laplace
+ Transforms for Engineers</I>)
+<BR> Input data: &quot;048663926&quot;
+<BR> <IMG HEIGHT="70" src="img/bookland-example.png" WIDTH="250">
+<BR> <SMALL><I><B>Figure 21.</B> Bookland, &quot;048663926&quot;</I></SMALL>
+</DIV>
+</BODY>
+</HTML>

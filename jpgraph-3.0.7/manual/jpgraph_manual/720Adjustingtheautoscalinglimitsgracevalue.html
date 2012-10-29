@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="7195InvertingtheYaxis.html">
+<LINK REL="Next" HREF="721Addingbandsofpatternandcolortographs.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="7195InvertingtheYaxis.html">前へ</A> <A HREF="721Addingbandsofpatternandcolortographs.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="7_20">7.20 自動スケールの上限を設定する</A>
+</H2>
+<P> 自動スケール機能を用いると、デフォルトでは最大値と最小値をグラフの上端と下端に合わせます。そのため、自動スケール機能を有効にしてグラフの描画を行うと、以下のような外見になります。<DIV class="example">
+<BR> <A href="exframes/frame_example3.2.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example3.2.png" WIDTH="300"></A> <BR><B>図 100:</B>自動スケール機能が有効なグラフの例 <A href="exframes/frame_example3.2.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> しかし、場合として最高値の上部、あるいは最小値の下部に余白を持たしたい場合があります。これは grace の割合を目盛りに加えることで可能になります。しかし、場合として最高値の上部、あるいは最小値の下部に余白を持たせたい場合があります。これを実現するため、たとえば Y 軸に 10% の空白を持たせるには、以下の通り <A href="../ref/LinearScale.html#_LINEARSCALE_SETGRACE">SetGrace()</A> メソッドを使用します。 </P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">yaxis</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetGrace</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">10</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">10</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> こうすることで、スケールの上部と下部に最小で 10% の余白を追加できます。なぜ&ldquo;最小&rdquo;という表現をしたかというと、特定のチック値によっては、偶数のチック マーク上にスケール フォールの終わりを作るために余白が少し多くなることがあるからです。</P>
+<P> これにより、グラフは以下のような外見になります。 </P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_example3.2.1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example3.2.1.png" WIDTH="300"></A> <BR><B>図 101:</B>Y 軸の上部と下部に 10% の余白を追加する <A href="exframes/frame_example3.2.1.html" target="blank">[ソース]</A>
+ 
+<P></P>
+</DIV></P>
+<P> X 軸の位置を調節していないので、X 軸が Y=0 の場所に表示されたままになっています。X 軸を最下部に表示するためには、以下の行を追加します。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">xaxis</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">SetPos</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;min&quot;</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> そのため X 軸は常に Y 値の最小の値を保持します。これにより、下記のような外見が得られます。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_example3.2.2.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example3.2.2.png" WIDTH="300"></A> <BR><B>図 102:</B>X 軸を最下部に持ってきた例 <A href="exframes/frame_example3.2.2.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="7195InvertingtheYaxis.html">前へ</A> <A HREF="721Addingbandsofpatternandcolortographs.html">次へ</A>
+</BODY>
+</HTML>

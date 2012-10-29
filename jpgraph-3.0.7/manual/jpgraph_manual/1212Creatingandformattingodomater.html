@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="81Radarplots.html">
+<LINK REL="Next" HREF="812Specifyingtitlesfortheaxisandlegendsfortheplots.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="1211Featuresodometer.html">前へ</A> <A HREF="12121Creatingodomater.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="12_1_2">1.2 基本オドメータ・グラフの作成とフォーマット</A></H3>
+<P>オドメータ・グラフを使うには「jpgraph_odo.php」という拡張モジュールをスクリプト内に記述する必要があります。これは通常の「jpgraph.php」コード・モジュールの追加としてです。</P>
+<p align="left">それ以外は、オドメータの作成でも通常の手順どおりグラフ・エリアを作成し、そのキャンバス上に１つまたは複数のプロットを追加します。 </p>
+<ol start="1" type="1">
+  <li>基本キャンバス・グラフをOdoGraphクラスのインスタンスとして作成します。 </li>
+  <li>１つまたは複数のオドメータ・プロットのインスタンスを、OdoPlotクラスのインスタンスとして作成し、グラフ・キャンバスに追加します。 </li>
+  <li>オドメータ・グラフをOdoGraph::Stroke()メソッドでブラウザに返します。 </li>
+</ol>
+<p align="left"><span mso-font-kerning:0pt'>次のスクリプトは原則に従った記述です。</span> </p>
+<DIV class="phpscript"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br />
+</span><span style="color: #FF8000">//&nbsp;300x200ピクセルの新規キャンバスを作成。<br />
+</span><span style="color: #0000BB">$graph&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">OdoGraph</span><span style="color: #007700">(</span><span style="color: #0000BB">300</span><span style="color: #007700">,</span><span style="color: #0000BB">200</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;パラメータを必要に応じて設定。<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(.......)<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">caption</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(...)<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;１つまたは複数のオドメータを作成。<br />
+</span><span style="color: #0000BB">$odo1&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Odometer</span><span style="color: #007700">();<br />
+</span><span style="color: #0000BB">$odo2&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Odometer</span><span style="color: #007700">();<br />
+&nbsp;<br />
+...<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;オドメータのパラメター、色、その他を設定。<br />
+</span><span style="color: #0000BB">$odo1</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">needle</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #0000BB">21</span><span style="color: #007700">);<br />
+</span><span style="color: #0000BB">$odo2</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">needle</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #0000BB">47</span><span style="color: #007700">);<br />
+&nbsp;<br />
+...<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;オドメータ・プロットを縦に並べる。<br />
+</span><span style="color: #0000BB">$l&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">LayoutVert</span><span style="color: #007700">(&nbsp;array(</span><span style="color: #0000BB">$odo1</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$odo2</span><span style="color: #007700">,&nbsp;...)&nbsp;);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;オドメータを設定済みのレイアウトでキャンバスに追加する。<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Add</span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$l&nbsp;</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;オドメータが１つだけの場合は次のように記述することも可能。<br />
+//&nbsp;$graph-&gt;Add(&nbsp;$odo1&nbsp;);<br />
+&nbsp;<br />
+//&nbsp;出来上がった画像をブラウザに返す。<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Stroke</span><span style="color: #007700">();&nbsp;&nbsp;<br />
+</span><span style="color: #0000BB">?&gt;<br />
+</span>
+</span>
+</code></DIV>
+</P>
+</P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="1211Featuresodometer.html">前へ</A> <A HREF="12121Creatingodomater.html">次へ</A>
+</BODY>
+</HTML>

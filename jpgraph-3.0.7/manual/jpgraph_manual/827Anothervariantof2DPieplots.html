@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="826Addingdropshadowstotheslices.html">
+<LINK REL="Next" HREF="83Polarplots.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="826Addingdropshadowstotheslices.html">前へ</A> <A HREF="83Polarplots.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="8_2_7">8.2.7 2D 円プロットに中心円を表示させる</A></H3>
+<P> 2D 円プロットには、2 種類の形状があります。一般的な円プロットは <A href="../ref/PiePlot.html#_C_PIEPLOT">PiePlot</A> クラスで作成します。もうひとつは、<A href="../ref/PiePlot.html#_C_PIEPLOTC">PiePlotC</A>クラスで作成します。</P>
+<P> PiePlotC クラスにより円プロットを作成した場合、中心に同心円が描画されます。以下に、その例を掲載します。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_piecex1.html" target="blank"><IMG border="0"
+HEIGHT="300" src="piecex1.png" WIDTH="300"></A> <BR><B>図 137：</B> 中心円が描かれた円プロットの例 <A href="exframes/frame_piecex1.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> PiePlotC クラスは通常の円プロットのクラスを拡張した形で実装されているため、PiePlot クラスのすべての機能を使用できます。</P>
+<P> また、中心円の形状を変更することもできます。この機能では、中心円のサイズや色、フォントを調整することができます。これらの機能は以下の関数で使用することができます。</P>
+<P></P>
+<TABLE>
+<TR><TD><A href="../ref/PiePlotC.html#_PIEPLOTC_SETMIDCOLOR">PiePlotC::SetMidColor()</A></TD><TD>円の塗りつぶしカラーを設定する。</TD></TR>
+<TR><TD><A href="../ref/PiePlotC.html#_PIEPLOTC_SETMIDSIZE">PiePlotC::SetMidSize()</A></TD><TD>円のサイズ (半径比) を設定する。</TD></TR>
+<TR><TD><A href="../ref/PiePlotC.html#_PIEPLOTC_SETMIDTITLE">PiePlotC::SetMidTitle()</A></TD><TD>タイトル文字列を設定する。複数行を指定可能。</TD></TR>
+<TR><TD><A href="../ref/PiePlotC.html#_PIEPLOTC_SETMID">PiePlotC::SetMid()</A></TD><TD>すべてのパラメータをまとめて変更できる。</TD></TR>
+</TABLE>
+<P> 通常の円プロットのイメージ マップ機能に加え、中心円にもクリック可能領域をつけることができます。<A href="../ref/PiePlotC.html#_PIEPLOTC_SETMIDCSIM">PiePlotC::SetMidCSIM()</A>メソッドで、対象を指定できます。</P>
+<P> 次のサンプルでは以下の特徴を備えたグラフを表示しています。 </P>
+<UL>
+<LI> 円グラフの周りにあるフレームが非表示 </LI>
+<LI> すべてのスライスを抜き出し</LI>
+<LI> 影を各スライスと中心円に追加 </LI>
+<LI> 複数行のラベルの指定 </LI>
+<LI> タイトルのフォントを変更 </LI>
+</UL>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_piecex2.html" target="blank"><IMG border="0"
+HEIGHT="400" src="piecex2.png" WIDTH="400"></A> <BR><B>図 138：</B> PiePlotC クラスを使った円プロット<A href="exframes/frame_piecex2.html" target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="826Addingdropshadowstotheslices.html">前へ</A> <A HREF="83Polarplots.html">次へ</A>
+</BODY>
+</HTML>

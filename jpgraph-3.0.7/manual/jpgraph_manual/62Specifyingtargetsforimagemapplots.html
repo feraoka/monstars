@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="61Thebasicstructureofanimagemapscript.html">
+<LINK REL="Next" HREF="63UsingStrokeCSIM.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="61Thebasicstructureofanimagemapscript.html">前へ</A> <A HREF="63UsingStrokeCSIM.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="6_2">6.2 イメージ マップ プロットにターゲットを指定する</A></H2>
+<P> 標準のイメージ スクリプト を CSIM スクリプトに変えるために、最初にするべきことは、イメージのホットスポットに適切なターゲットの URL を与えることです。 </P>
+<P> ホットスポットが表すものはプロット タイプによります。以下のプロット タイプとグラフのエリアはイメージ マップをサポートします。</P>
+<UL>
+<LI> 線 プロット。記号はホットスポットです。</LI>
+<LI> 散布プロット。記号はホットスポットです。</LI>
+<LI> 円プロットと 3D 円プロット。それぞれがホットスポットです</LI>
+<LI> バー グラフのすべてのタイプそれぞれがホットスポットです</LI>
+<LI> 説明</LI>
+<LI> テキスト文字、たとえば、タイトルや軸のタイトル</LI>
+</UL>
+<P> それぞれのホットスポットのリンクを特定するため、ホットスポットのあるグラフでそれぞれのプロット（または、特定のエリア）に <A href="../ref/Plot.html#_PLOT_SETCSIMTARGETS">SetCSIMTargets()</A> メソッドをしようするべきです。</P>
+<P> このメソッドには2 つの引数があります</P>
+<OL>
+<LI> $aTargets、有効な URL ターゲットの配列各ホットスポットの URL、たとえば、10 のバー プロットの値がある場合、10 個の URL が必要になります。たとえば、SetCSIMTarget() をテキストに適用した場合、当然1 つの URL だけが特定されます。</LI>
+<LI> $aAlts、有効な alt-texts の配列多くのブラウザ（しかし、すべてではありません）が、マウスがホットスポット上にとどまった場合、このテキスト文字を表示します。</LI>
+</OL>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="61Thebasicstructureofanimagemapscript.html">前へ</A> <A HREF="63UsingStrokeCSIM.html">次へ</A>
+</BODY>
+</HTML>

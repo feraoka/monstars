@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="711Adjustinglabelsonatextscale.html">
+<LINK REL="Next" HREF="713AddingtitlesandfooterstotheGraph.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="711Adjustinglabelsonatextscale.html">前へ</A> <A HREF="713AddingtitlesandfooterstotheGraph.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="7_12">7.12 グラフにテキスト文字列を追加する</A></H2>
+<P> JpGraph では、グラフの任意の位置にテキスト文字列を追加できます。テキストは複数行に渡ることが可能で、段落揃えも指定できます。 </P>
+<P> テキストを追加するには、<A href="../ref/Text.html#_C_TEXT">Text()</A> オブジェクトのインスタンスを作成し、<A href="../ref/Graph.html#_GRAPH_ADDTEXT">AddText()</A>メソッドを使ってテキスト オブジェクトをグラフに追加します。</P>
+<P> テキスト ボックスの位置はグラフの横と縦に対する割合で指定します。また、テキスト ボックスを配置する時には、テキスト ボックスのどの部分が指定した位置に対応しているのかを指定する必要があります。</P>
+<P> デフォルトでは、テキスト ボックスの左上部が使用されます。 </P>
+<P> テキストの位置を変更する方法を説明するために、とてもシンプルなバー プロットを使用します。まずは、ほとんどの値をデフォルトのままにして、1 行のテキストをグラフに追加してみましょう。  <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $txt</FONT><FONT color="#007700">=new </FONT><FONT
+color="#0000BB">Text</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;This is a text&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$txt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Pos</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT
+color="#007700">); <BR></FONT><FONT color="#0000BB">$txt</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;red&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">AddText</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$txt</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> この結果を以下に表します<DIV class="example">
+<BR> <A href="exframes/frame_example25.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example25.png" WIDTH="300"></A> <BR><B>図 89:</B>テキスト文字列を左上部に追加する <A href="exframes/frame_example25.html" target="blank">[ソース]</A>
+ 
+<P></P>
+</DIV></P>
+<P>簡単なことです。次に、背景色を加えてフォントを大きくしたテキスト ボックスを作成しましょう。また、テキスト ボックスの周囲にはフレームを設置し、ドロップシャドウを追加してみましょう。テキスト ボックスの調整には、<A href="../ref/Text.html#_TEXT_SETBOX">SetBox()</A> メソッドと<A href="../ref/Text.html#_TEXT_SETSHADOW"> SetBox()</A>メソッドを使用します。<DIV
+class="example">
+<BR> <A href="exframes/frame_example25.1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example25.1.png" WIDTH="300"></A> <BR><B>図 90:</B>テキストをより効果的にする <A href="exframes/frame_example25.1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> もっと良くなりました。ここで、注目します。 複数行のテキストを追加する場合は、各行の後に改行文字 (\n) を付け加えます。デフォルトでは段落は左揃えですが、右揃えや中央揃えを指定することもできます。</P>
+<P> 今回は、先ほどのテキストに数行を追加して、テキスト ボックスをグラフの中央に配置してみましょう。同時に、段落揃えを中央揃えに設定します。段落揃えを設定するには、<A href="../ref/Text.html#_TEXT_PARAGRAPHALIGN">Text::ParagraphAlign()</A>メソッドを使用します。<DIV class="example">
+<BR> <A href="exframes/frame_example25.2.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example25.2.png" WIDTH="300"></A> <BR><B>図 91:</B>複数の行があり、段落が中央揃えになっている場合 <A href="exframes/frame_example25.2.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> もちろん、グラフに追加できるテキスト文字列に制限はありません。</P>
+<P> JpGraph のバージョン 1.12 からは、スケール座標を用いてテキスト文字列を追加できるようになりました。これは、<A
+href="../ref/Text.html#_TEXT_SETSCALEPOS"> Text::SetScalePos()</A> メソッドを使います。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="711Adjustinglabelsonatextscale.html">前へ</A> <A HREF="713AddingtitlesandfooterstotheGraph.html">次へ</A>
+</BODY>
+</HTML>

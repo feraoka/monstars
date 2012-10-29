@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="1254Changingmoduletype.html">
+<LINK REL="Next" HREF="06FilledContourgraph.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="1254Changingmoduletype.html">前へ</A> <A HREF="06FilledContourgraph.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="12_5_5">5.5 プロットのアルファ・ブレンディング</A></H3>
+
+<p>初期設定ではプロットは選択したカラー・マップのソリッド・カラー（べた塗り色）で色づけされます。アルファ値を指定することによって背景の輝きをマトリックス・プロットに反映させることができます。アルファ・ブレンディングは次のメソッドで選択できます。</p>
+<ul>
+<li>MatrixPlot::SetAlpha($aAlpha)<br />
+$aAlpha , 0=無透明, 1=透明 (背景だけが表示されるため実用的ではない。)</li>
+</ul>
+
+<p>
+<div class="example">
+<A href="example_src/frame_matrix_ex04.1.html" target="_blank"><img src="matrix_ex04.1.png" alt="" /></A>
+<br /><B>図5.5_1</B> アルファ・ブレンディング=0.2のマトリックス<A href="example_src/frame_matrix_ex04.1.html" target="_blank">[ソース]</A>
+</div></p>
+
+<p>
+<div class="example">
+<A href="example_src/frame_matrix_ex04.2.html" target="_blank"><img src="matrix_ex04.2.png" alt="" /></A>
+<br /><B>図5.5_2</B> アルファ・ブレンディング=0.7のマトリックス<A href="example_src/frame_matrix_ex04.2.html" target="_blank">[ソース]</A>
+</div></p>
+ 
+<p>ご覧のとおりプロット・エリアだけが調整されます。凡例は常に透明化されることなく表示されます。</p>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="1254Changingmoduletype.html">前へ</A> <A HREF="06FilledContourgraph.html">次へ</A>
+</BODY>
+</HTML>

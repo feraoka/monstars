@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="1241Construtingtables.html">
+<LINK REL="Next" HREF="1242Samplestable.html">
+<STYLE TYPE="text/css">
+<!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+-->
+</STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="1241Construtingtables.html">前へ</A> <A HREF="1242Samplestable.html">次へ</A>
+<HR NOSHADE>
+<H4><A NAME="12_4_1_1">4.1.1 <strong>基本テーブル</strong></A></H4>
+<p align="left">テーブルはGTextTableクラスのインスタンスとして作成され、サンプル・アイコンや、テキスト、その他のプロット・オブジェクトとほぼ同様に操作できます。Graph::Addメソッドによって、X軸Y軸の座標のグラフに追加することもできます。 </p>
+<p align="left">テーブルの作成は「jpgraph_table.php」ファイルを呼び出すことから始めます。このファイルにはGTextTableクラスのクラス定義が含まれています。テーブルを作成するには、通常のグラフ・エリアに使われるGraphクラスのインスタンスをまず作成するか、それともCanvasGraphクラスのインスタンスで単体のテーブルを作成するかを決める必要があります。 </p>
+<p align="left">どちらにするかを決めれば、新規テーブルの作成は、GTextTableクラスのインスタンスを作成し、行や列のサイズを決定するための初期設定メソッドを呼び出すだけでできます。単体のテーブルを表示するには、グラフ・エリアであるCanvasGraphも作成してテーブルをグラフに追加する必要があります。 </p>
+<DIV class="phpscript"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br />
+</span><span style="color: #007700">require_once&nbsp;</span><span style="color: #DD0000">"jprgraph/jpgraph.php"</span><span style="color: #007700">;<br />
+require_once&nbsp;</span><span style="color: #DD0000">'jpgraph/jpgraph_canvas.php'</span><span style="color: #007700">;<br />
+require_once&nbsp;</span><span style="color: #DD0000">"jprgaph/jpgraph_table.php"</span><span style="color: #007700">;<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;基本となるキャンバス・グラフを設定する。<br />
+</span><span style="color: #0000BB">$graph&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">CanvasGraph</span><span style="color: #007700">(</span><span style="color: #0000BB">630</span><span style="color: #007700">,</span><span style="color: #0000BB">600</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;基本グラフ・エリアを作成する。<br />
+</span><span style="color: #0000BB">$table&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">GTextTable</span><span style="color: #007700">();<br />
+</span><span style="color: #0000BB">$table</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Init</span><span style="color: #007700">(</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">7</span><span style="color: #007700">);&nbsp;</span><span style="color: #FF8000">//&nbsp;Create&nbsp;a&nbsp;5&nbsp;rows&nbsp;x&nbsp;7&nbsp;columns&nbsp;table<br />
+&nbsp;<br />
+</span><span style="color: #007700">...<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;テーブルをグラフ・エリアに追加する。<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Add</span><span style="color: #007700">(</span><span style="color: #0000BB">$table</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;グラフ・エリアをクライアントに返す。<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Stroke</span><span style="color: #007700">();<br />
+</span><span style="color: #0000BB">?&gt;<br />
+</span>
+</span>
+</code>
+
+</DIV>
+</P>
+<p align="left">これまで見てきたように、テーブルの実際のサイズを指定することは（可能ですが）必要ではありません。実際のテーブル・サイズはテーブルのコンテンツによって自動的に決定されます。 </p>
+<p align="left">テーブル内のセルには連番が付加されます。(0,0)は一番上の左端、(n-1, m-1)は一番下の右端で、nが行数、mが列数です。 </p>
+<p align="left">次に、テーブルにデータを入力していきます。各セル内の内容は次のメソッドの中から指定します。 </p>
+<ul type="disc">
+  <li>GTextTable::Set($aRow, $aCol, $aText) </li>
+<p align="left">Set the specified text in cell ($aRow, $aCol)</P>
+  <P>GTextTable::Set($aData) </P>
+  <p>二次元配列内のデータ、$aDataをテーブルにコピーします。 
+  </p>
+  <li>GTextTable::SetImage($aRow, $aCol, $aText, $aImage) </li>
+<p align="left">セル($aRow, $aCol)の中の画像を設定します。 </p></ul>
+<ul type="disc">
+  <li>GTextTable::SetCellCountryFlag($aRow,$aCol,$aFlag,$aScale=1.0,$aMix=100,$aStdSize=3) </li>
+<p align="left">指定した国旗をセル($aRow, $aCol)に設定します。 </p></ul>
+  <p align="left">The Set()メソッドは２つの異なる方法で呼び出すことができます。 </p>
+<p align="left">ひとつは、ゼロで始まる行・列番号で個別のセルの値を指定する方法です。例えば、上の例を継続すると、一番上の行（0）の1列目と2列目の２つのセルに次のように値を入れます。 </p>
+ <DIV class="phpscript"><code><span style="color: #000000">
+...<br />
+$table-&gt;Set(0,0,1);<br />
+$table-&gt;Set(0,1,1);<br />
+...<br />
+</span>
+</code>
+</DIV>
+ <p align="left">もうひとつは（もう少し簡潔な方法かもしれませんが）、適切なの値を含む二次元配列をそれぞれ、最初でかつ最後の引数としてSet()メソッドに格納する方法で、次のように記述します。 </p>
+ <DIV class="phpscript">$data = array( array( 12, 7),
+               array( 10, 5));
+$table->Set($data)</DIV>
+
+ <p>テーブルをマトリックスとして直接指定するなら、マトリックス自体のサイズが自動的に決定するので最初のInit()メソッドを呼び出す必要はありません。 </p>
+ <p align="left">次の基本サンプルコードは連続した値を格納した2行4列の配列テーブルを作成する方法です。ここではテーブルを追加するグラフ・エリアを準備するためにCanvasGraphを使っています。このスクリプトの結果は次のように表示されます。 </p>
+<p align="left"><strong>例4.1　最も基本的な2行4列テーブル</strong> </p>
+<p>
+<DIV class="phpscript">(File: table_howto1.php)</br>
+<code><span style="color: #000000"> <span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #FF8000">//&nbsp;content="text/plain;&nbsp;charset=utf-8"<br /> </span><span style="color: #007700">require_once&nbsp;</span><span style="color: #DD0000">'jpgraph/jpgraph.php'</span><span style="color: #007700">;<br /> require_once&nbsp;</span><span style="color: #DD0000">'jpgraph/jpgraph_canvas.php'</span><span style="color: #007700">;<br /> require_once&nbsp;</span><span style="color: #DD0000">'jpgraph/jpgraph_table.php'</span><span style="color: #007700">;<br /> &nbsp;<br /> </span><span style="color: #FF8000">//&nbsp;Create&nbsp;a&nbsp;canvas&nbsp;graph&nbsp;where&nbsp;the&nbsp;table&nbsp;can&nbsp;be&nbsp;added<br /> </span><span style="color: #0000BB">$graph&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">CanvasGraph</span><span style="color: #007700">(</span><span style="color: #0000BB">70</span><span style="color: #007700">,</span><span style="color: #0000BB">50</span><span style="color: #007700">);<br /> &nbsp;<br /> </span><span style="color: #FF8000">//&nbsp;Setup&nbsp;the&nbsp;basic&nbsp;table<br /> </span><span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">=&nbsp;array(&nbsp;array(</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">),array(</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">6</span><span style="color: #007700">,</span><span style="color: #0000BB">7</span><span style="color: #007700">,</span><span style="color: #0000BB">8</span><span style="color: #007700">));<br /> </span><span style="color: #0000BB">$table&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">GTextTable</span><span style="color: #007700">();<br /> </span><span style="color: #0000BB">$table</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #0000BB">$data</span><span style="color: #007700">);<br /> &nbsp;<br /> </span><span style="color: #FF8000">//&nbsp;Add&nbsp;the&nbsp;table&nbsp;to&nbsp;the&nbsp;graph<br /> </span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Add</span><span style="color: #007700">(</span><span style="color: #0000BB">$table</span><span style="color: #007700">);<br /> &nbsp;<br /> </span><span style="color: #FF8000">//&nbsp;...&nbsp;and&nbsp;send&nbsp;back&nbsp;the&nbsp;table&nbsp;to&nbsp;the&nbsp;client<br /> </span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Stroke</span><span style="color: #007700">();<br /> &nbsp;<br /> </span><span style="color: #0000BB">?&gt;</span> </span> </code>
+</DIV></p>
+
+<p>
+<div class="example">
+<A href="example_src/frame_table_howto1.html" target="_blank"><img src="table_howto1.png" alt="" /></A>
+<br /><B>図4.1.1</B> 最も基本的な2行4列テーブル<A href="example_src/frame_table_howto1.html" target="_blank">[ソース]</A>
+</div></p>
+
+<p align="left">上の例では、簡単なショートカットも利用しています。テーブルに入力するデータが2次元配列で指定されている場合、テーブル・サイズは与えられた配列によって決定されるので、Init()メソッドを呼び出す必要がありません。 </p>
+
+<p></p>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="1241Construtingtables.html">前へ</A> <A HREF="1242Samplestable.html">次へ</A>
+																					<!-- 次へのリンク先は「4.2 サンプル集」-->
+</BODY>
+</HTML>

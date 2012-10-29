@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="727Usinggroupedaccumulatedbargraphs.html">
+<LINK REL="Next" HREF="729Usinggradientfillforbargraphs.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="727Usinggroupedaccumulatedbargraphs.html">前へ</A> <A HREF="729Usinggradientfillforbargraphs.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_2_8">7.2.8 水平のバー プロット</A></H3>
+<P> 数多くの値を表示したい時など、バー プロットを水平にした方が適している場合があります。JpGraph では直接水平バー プロットを使用できるわけではありませんが、通常の垂直バー プロットを 90 度回転させることで簡単にこの機能を実現できます。 </P>
+<P> 以下に水平バー プロットのサンプルを掲載します。<DIV class="example">
+<BR> <A href="exframes/frame_horizbarex3.html" target="blank"><IMG border="0"
+HEIGHT="500" src="horizbarex3.png" WIDTH="400"></A> <BR><B>図 44:</B>Y 軸が下部にある、一般的な水平バー プロット <A href="exframes/frame_horizbarex3.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> 水平バー プロットを作成するためには、このサンプルのコードを詳細まで理解する必要があります。</P>
+<UL>
+<LI> 単にグラフを回転しているだけでなく、回転の中心を画像の中央に設定しています。 この理由は、標準設定では回転の中心点が<STRONG> プロット エリア </STRONG>の中央に設定されているからです。プロット エリアの中心は、完全なイメージの中心を必要としないので、指定された余白により回転は予言されにくい場合があります。 &lt;</LI>
+<LI> プロット エリアのサイズは、もとの画像の幅と高さから余白を考慮して決定されます。プロット エリアが 90 度回転されると、左余白は上余白になります。これは回転したプロットの余白を概念的に指定したい場合、微妙な違いがあります。<BR> さらに簡単な回転したイメージ付きの予覚の使用には、メソッド &quot;Set90AndMargin()&quot; の使用を勧めます。これは、明白な方法で余白を指定すると同様にイメージの回転を許可します。</LI>
+</UL>
+<P> 最後に、3 種類の水平バー プロットのサンプルを掲載します。1 番目のサンプルでは、Y 軸が隠れており、2 番目のサンプルでは Y 軸を上部に表示しています。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_horizbarex1.html" target="blank"><IMG border="0"
+HEIGHT="500" src="horizbarex1.png" WIDTH="400"></A> <BR><B>図 45:</B>Y 軸を表示しない水平バープロット <A href="exframes/frame_horizbarex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_horizbarex2.html" target="blank"><IMG border="0"
+HEIGHT="500" src="horizbarex2.png" WIDTH="400"></A> <BR><B>図 46:</B>Y 軸が上部にある水平バープロット <A href="exframes/frame_horizbarex2.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> 3 番目のサンプルでは、ラベルを複数行に設定した場合の水平バープロットを掲載します。<DIV class="example">
+<BR> <A href="exframes/frame_horizbarex4.html" target="blank"><IMG border="0"
+HEIGHT="500" src="horizbarex4.png" WIDTH="400"></A> <BR><B>図 47:</B>手動の整数スケールを持ち、複数行のラベルを持つ水平バープロット <A href="exframes/frame_horizbarex4.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="727Usinggroupedaccumulatedbargraphs.html">前へ</A> <A HREF="729Usinggradientfillforbargraphs.html">次へ</A>
+</BODY>
+</HTML>

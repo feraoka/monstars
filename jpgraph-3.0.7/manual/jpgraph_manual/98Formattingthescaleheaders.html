@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="976Adjustingtheminimumdistancebetweenbars.html">
+<LINK REL="Next" HREF="981Minutescale.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="976Adjustingtheminimumdistancebetweenbars.html">前へ</A> <A HREF="981Minutescale.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_8">9.8 スケール ヘッダーをフォーマットする</A></H2>
+<P> スケールヘッダーは、同時に４つまでの異なるスケールを表示させることが可能です。４つの基本的なスケールは、以下のとおりです。</P>
+<UL>
+<LI> 日スケール</LI>
+<LI> 週スケール</LI>
+<LI> 月スケール</LI>
+<LI> 年スケール</LI>
+</UL>
+<P> SetScale() メソッドを使用することで、どのスケールを使うかを選択することができます。例えば、詳細なガント チャートに対しては、次のように指定して日や週の表示を選択できます。 <DIV class="phpscript"><CODE><FONT
+color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ShowHeaders</FONT><FONT color="#007700">( </FONT><FONT color="#0000BB">GANTT_HWEEK </FONT><FONT color="#007700">| </FONT><FONT color="#0000BB">GANTT_DAY </FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 大きな画像を生成したい場合、次のように指定すれば年や月を表示させるのに十分なスペースを確保することができます。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ShowHeaders</FONT><FONT color="#007700">( </FONT><FONT color="#0000BB">GANTT_HWEEK </FONT><FONT color="#007700">| </FONT><FONT color="#0000BB">GANTT_DAY </FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 好みのスケールの組み合わせを自由に選択できますが、当然ながら１つのチャートは少なくとも１つのスケールを持っていなくてはいけません。</P>
+<P> どの程度詳細なスケールを必要としているかを一旦決めたならば、次に、使用できる各スケールの詳細なレイアウト/フォーマットを以下のようにして調整します。</P>
+<P> これらのスケールヘッダーは、すべて次のように graphインスタンスの 'scale' を使って指定します。 <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">week</FONT></FONT></CODE></DIV></P>
+<P> あるいは  <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">scale</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">day</FONT></FONT></CODE></DIV>
+</P>
+<P>. これらすべてのヘッダーは、次のプロパティを共有しています。</P>
+<UL>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> Show</FONT><FONT color="#007700">()</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P> スケールを表示するかどうかを設定する</P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> SetFont</FONT><FONT color="#007700">()</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P>ヘッダ－内のテキストのフォントを設定する</P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> SetFontColor</FONT><FONT color="#007700">()</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P> ヘッダーのテキストの色を指定する</P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> SetStyle</FONT><FONT color="#007700">()</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P>使用する日付の形式を指定する。例えば、週スケールにおいては、週の数、週の開始の日付などを指定することができる。</P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> SetBackgroundColor</FONT><FONT color="#007700">()</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P>ヘッダーの背景色を指定する</P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> SetFrameWeight</FONT><FONT color="#007700">()</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P>スケール周りのボックスの線の太さを指定する</P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> SetFrameColor</FONT><FONT color="#007700">()</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P>フレームの線の色を指定する</P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> SetTitleVertMargin</FONT><FONT color="#007700">()</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P>タイトル文の上下の余白をパーセントで設定する</P>
+</LI>
+</UL>
+<P> これらの関数に加えて、どのスケールもグリッドラインの表示方法を決定する「grid」プロパティを備えています。すなわち SetColor() 、SetWeight()、 SetStyle()、Show()といった通常のラインメソッドを用いてグリッドラインの表示を変更することができます。例えば、週のグリッドラインを赤色に設定するためには、次のように設定します。<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">week</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">grid</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT
+color="#007700">(</FONT><FONT color="#DD0000">&quot;red&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> これから記述するように、どのスケールにも特別なフォーマットが備えられています。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="976Adjustingtheminimumdistancebetweenbars.html">前へ</A> <A HREF="981Minutescale.html">次へ</A>
+</BODY>
+</HTML>

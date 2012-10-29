@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="1213Samplesodometer.html">
+<LINK REL="Next" HREF="1221Featureswindrose.html">
+<STYLE TYPE="text/css">
+<!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+-->
+</STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="1213Samplesodometer.html">前へ</A> <A HREF="1221Featureswindrose.html">次へ</A>
+<HR NOSHADE>
+<h2><A NAME="12_2">2 風配図</A></h2>
+<p><div class="note"><b>注意:</b>このモジュールはJpGraphエンタープライズ版でのみ使用できます。</div></p>
+<p>風配図プロットは通常、コンパス方位に関する値を表示するために使われます。例えば一定時間に複数方位で測定された風力を表すことに使われます。次の図は一つの風配図を一つの風配図プロットにした例です。</p>
+
+<p>
+<div class="example">
+<img src="windrose_ex1.png" alt="" />
+<br /><B>図2.1</B> 風配図基本プロット
+</div></p>
+
+
+<p></p>
+<p>風配図プロットではレンジ（つまり下の表の各「バケット番号」に対応するカンマで区切られたレンジ）にデータを格納します。バケット内のデータポイントの数値は一定の方位にあるバケットの始点と終点を表現します。入力したデータは特定の方位の中心からの長さに対するパーセント比率を特定します。表21.1では初期設定では８つのバケットがそのレンジ表示されています。凡例の初期設定レンジは風力表示に使われる標準値です。凡例のバケット数の数字は仮の数値で、
+実際の表示はバケット番号を特定するためだけに入力した値であり絶対値ではありません。 「<A HREF="13CodedefinesinJpGraph.html" target="_blank">JpGraphの設定を変更する</A> 」 をご参照ください。</p>
+<div class="example">
+<div style="margin-left: 8.5em;">
+<table width="200" border="1">
+  <tr>
+    <th align="center">ﾊﾞｹｯﾄ番号</th>
+    <th align="center">ﾊﾞｹｯﾄ境界値</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>[0,1]</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>[1,2]</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>[2,3]</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>[3,5]</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>[5,6]</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>[6,10]</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>[10,13.5]</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>[13.5,99]</td>
+  </tr>
+</table>
+</div>
+<br /><b>表2.1</b> 風配図バケットの初期設定値</div>
+
+<p></p>
+<p><div class="note"><b>注意:</b>風配図の初期設定フォントはTTFです。つまり、この章のサンプル図と全く同じように表示するにはTTFフォントをインストールする必要があります。TTFが使えない場合はビルトイン・フォントのどれかに変更する必要があります。</div></p>
+<p></p>
+<p>風配図プロットは画像の境界部や斜線を完全にスムーズにするアンチエイリアス機能をサポートしています。上の図の画像はこのアンチエイリアス機能を使用しています。</p>
+<p><div class="note"><b>警告:</b>アンチエイリアスを使うにはTTFフォントを有効にして使用する必要があります。</div></p>
+<p></p>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="1213Samplesodometer.html">前へ</A> <A HREF="1221Featureswindrose.html">次へ</A>
+</BODY>
+</HTML>

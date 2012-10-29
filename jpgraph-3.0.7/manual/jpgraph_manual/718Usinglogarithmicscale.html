@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="717Usingthestepstyletorenderlineplots.html">
+<LINK REL="Next" HREF="719Moreonscales.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="717Usingthestepstyletorenderlineplots.html">前へ</A> <A HREF="719Moreonscales.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_1_8">7.1.8 対数グラフを使用する</A></H3>
+<P> 各軸に対数スケールを適用するには、対数モジュールである jpgraph_log.php を別途インクルードする必要があります。そのためには、プログラム コードの最上部で、以下のように記述します。  <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> </FONT><FONT color="#007700">include(</FONT><FONT color="#DD0000">&quot;jpgraph_log.php&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>  対数グラフの使用法を紹介するために、右側の Y 軸に対数軸を用いた片対数グラフを作成します。  <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetY2Scale</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;log&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>これにより、以下の結果が得られます。<DIV class="example">
+<BR> <A href="exframes/frame_example7.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example7.png" WIDTH="350"></A> <BR><B>図 17:</B>Y2 軸に対数スケールを使用する <A href="exframes/frame_example7.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> 同様に、X 軸に対数軸を使用することもできます。以下に例を紹介します。<DIV class="example">
+<BR> <A href="exframes/frame_loglogex1.html" target="blank"><IMG border="0"
+HEIGHT="300" src="loglogex1.png" WIDTH="500"></A> <BR><B>図 18:</B>X 軸と Y 軸に対数スケールを用いる例 <A href="exframes/frame_loglogex1.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> 対数スケールはバー プロット、エラー プロット、散布プロットなどでも同様に使用できます。また、ライン プロットだけでなく、バー プロットの場合も対数軸を使用できます。以下にその例を紹介します。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_logbarex1.html" target="blank"><IMG border="0"
+HEIGHT="220" src="logbarex1.png" WIDTH="400"></A> <BR><B>図 19:</B>棒グラフに対数軸を使用する <A href="exframes/frame_logbarex1.html" target="blank">[ソース]</A>
+ 
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="717Usingthestepstyletorenderlineplots.html">前へ</A> <A HREF="719Moreonscales.html">次へ</A>
+</BODY>
+</HTML>

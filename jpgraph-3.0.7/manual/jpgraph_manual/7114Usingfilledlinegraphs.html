@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="7113Adjustingtheticksonatextscale.html">
+<LINK REL="Next" HREF="7115Usingaccumulatedlinegraphs.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="7113Adjustingtheticksonatextscale.html">前へ</A> <A HREF="7115Usingaccumulatedlinegraphs.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_1_14">7.1.14 塗りつぶされたライン プロットを使用する</A></H3>
+<P> 塗りつぶされたライン プロットは、通常のライン プロットとあまり変わりません。通常のライン プロットとの違いは、<A href="../ref/LinePlot.html#_LINEPLOT_SETFILLCOLOR">SetFillColor()</A>を呼び出す必要がある事です。そうすることで、指定したカラーで線グラフの下側を塗りつぶします。</P>
+<P> 以下の例ではプロット マークも指定しました（前のセクションを参照してください）。<DIV class="example">
+<BR> <A href="exframes/frame_filledlineex01.html" target="blank"><IMG border="0"
+HEIGHT="200" src="filledlineex01.png" WIDTH="300"></A> <BR><B>図 25:</B>塗りつぶされた線グラフを表示する <A href="exframes/frame_filledlineex01.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><STRONG> 注意 1.</STRONG>後に追加されるプロットは、上書きして表示されます。そのため、複数の塗りつぶされたライン プロットを 1 つのグラフに使用する場合、Y 値が高い方のプロットを先に追加する必要があります。プロットはグラフに追加された順番で表示されるので、最前列に表示したいプロットは最後に追加してください。</P>
+<P><STRONG> 注意 2.</STRONG>塗りつぶされたライン プロットで凡例を使用する場合、凡例は上塗り色で表示されます。</P>
+<P><STRONG> 注意 3.</STRONG>塗りつぶされたライン プロットは、正の値の場合のみサポートされます。負の値の場合は期待する動作を行いません。</P>
+<P> 上記の例では、グリッド線はグラフの下に描画されています。もしグリッド線をグラフの上部に設置したい場合は、<A href="../ref/Graph.html#_GRAPH_SETGRIDDEPTH">Graph::SetGridDepth()</A>メソッドを使用して配置を指定できます。 <DIV class="example">
+<BR> <A href="exframes/frame_filledlineex01.1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="filledlineex01.1.png" WIDTH="300"></A> <BR><B>図 26:</B>グリッド線の奥行きを指定する <A href="exframes/frame_filledlineex01.1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="7113Adjustingtheticksonatextscale.html">前へ</A> <A HREF="7115Usingaccumulatedlinegraphs.html">次へ</A>
+</BODY>
+</HTML>

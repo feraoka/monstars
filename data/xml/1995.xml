@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="shift-jis" ?>
+<?xml version="1.0" encoding="utf8" ?>
 <monstars>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ  •½‰ª 5‰ñ Ž¸“_2 Ž©Ó“_0 ?K (Ÿ‚¿) 1Ÿ0”s0S “o”Â1&lt;br&gt;	   –Ø‘º 1‰ñ Ž¸“_0 Ž©Ó“_0 3K  0Ÿ0”s0S “o”Â1&lt;br&gt;Ž¸ô ‘q’m1 ŽÂè1 •õŽR1&lt;br&gt;&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950520&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/4/1" game="ƒI[ƒVƒƒƒ“ƒŠ[ƒO‘æ1í" loc="ŽÅŒö‰€" result="1" season="1995" team="ƒ}ƒOƒlƒbƒc" time="13:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾  å¹³å²¡ 5å›ž å¤±ç‚¹2 è‡ªè²¬ç‚¹0 ?K (å‹ã¡) 1å‹0æ•—0S ç™»æ¿1&lt;br&gt;	   æœ¨æ‘ 1å›ž å¤±ç‚¹0 è‡ªè²¬ç‚¹0 3K  0å‹0æ•—0S ç™»æ¿1&lt;br&gt;å¤±ç­– å€‰çŸ¥1 ç¯ å´Ž1 å³¯å±±1&lt;br&gt;&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950520&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/4/1" game="ã‚ªãƒ¼ã‚·ãƒ£ãƒ³ãƒªãƒ¼ã‚°ç¬¬1æˆ¦" loc="èŠå…¬åœ’" result="1" season="1995" team="ãƒžã‚°ãƒãƒƒãƒ„" time="13:00">
     <batters>
       <batter name="mine" order="1" position="6">
         <batting raw="1-B*" />
@@ -64,7 +64,7 @@
       <team batFirst="MonStars" fieldFirst="Mag" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;&lt;br&gt;“ŠŽè¬Ñ  •½‰ª 3‰ñ Ž¸“_11 Ž©Ó“_11 ?K (Ÿ‚¿) 1Ÿ1”s0S “o”Â2&lt;br&gt;	   –Ø‘º 1‰ñ Ž¸“_1 Ž©Ó“_1 3K  0Ÿ0”s0S “o”Â2&lt;br&gt;Ž¸ô ŽÂè1 ]Œ´1 •½‰ª1&lt;br&gt;&lt;br&gt;–‚S‰ñA]Œ´‘IŽè‚Ì”ò‹…Žž‚ÉA“—Û‚ðŽŽ‚Ý‚½ŽR‰º‘IŽèA‹A—Û‚Å‚«‚¸ƒAƒEƒg&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950527&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/5/20" game="ƒI[ƒVƒƒƒ“ƒŠ[ƒO‘æ2í" loc="”ª’ª–k" result="-1" season="1995" team="ƒ‰ƒCƒK[ƒX" time="13:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾  å¹³å²¡ 3å›ž å¤±ç‚¹11 è‡ªè²¬ç‚¹11 ?K (å‹ã¡) 1å‹1æ•—0S ç™»æ¿2&lt;br&gt;	   æœ¨æ‘ 1å›ž å¤±ç‚¹1 è‡ªè²¬ç‚¹1 3K  0å‹0æ•—0S ç™»æ¿2&lt;br&gt;å¤±ç­– ç¯ å´Ž1 æ±ŸåŽŸ1 å¹³å²¡1&lt;br&gt;&lt;br&gt;ï¼Šï¼”å›žã€æ±ŸåŽŸé¸æ‰‹ã®é£›çƒæ™‚ã«ã€ç›—å¡ã‚’è©¦ã¿ãŸå±±ä¸‹é¸æ‰‹ã€å¸°å¡ã§ããšã‚¢ã‚¦ãƒˆ&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950527&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/5/20" game="ã‚ªãƒ¼ã‚·ãƒ£ãƒ³ãƒªãƒ¼ã‚°ç¬¬2æˆ¦" loc="å…«æ½®åŒ—" result="-1" season="1995" team="ãƒ©ã‚¤ã‚¬ãƒ¼ã‚¹" time="13:00">
     <batters>
       <batter name="sophia" order="1" position="7">
         <batting raw="1-K-O" />
@@ -126,7 +126,7 @@
       <team batFirst="MonStars" fieldFirst="Lig" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ  •½‰ª 7‰ñ Ž¸“_8 Ž©Ó“_? ?K (•‰‚¯) 1Ÿ2”s0S “o”Â3&lt;br&gt;Ž¸ô ¬•û1 •õŽR2&lt;br&gt;&lt;br&gt;–‚P‰ñA—ÑŠÄ“Â•¹ŽE‘Å&lt;br&gt;–‚T‰ñA—ÑŠÄ“Â“—ÛŽ¸”s&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950625&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/5/27" game="ƒI[ƒVƒƒƒ“ƒŠ[ƒO‘æ3í" loc="‚Ó‚½‚±" result="-1" season="1995" team="ƒtƒŠƒbƒvƒ`ƒbƒvƒX" time="8:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾  å¹³å²¡ 7å›ž å¤±ç‚¹8 è‡ªè²¬ç‚¹? ?K (è² ã‘) 1å‹2æ•—0S ç™»æ¿3&lt;br&gt;å¤±ç­– å°æ–¹1 å³¯å±±2&lt;br&gt;&lt;br&gt;ï¼Šï¼‘å›žã€æž—ç›£ç£ä½µæ®ºæ‰“&lt;br&gt;ï¼Šï¼•å›žã€æž—ç›£ç£ç›—å¡å¤±æ•—&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950625&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/5/27" game="ã‚ªãƒ¼ã‚·ãƒ£ãƒ³ãƒªãƒ¼ã‚°ç¬¬3æˆ¦" loc="ãµãŸã“" result="-1" season="1995" team="ãƒ•ãƒªãƒƒãƒ—ãƒãƒƒãƒ—ã‚¹" time="8:00">
     <batters>
       <batter name="mine" order="1" position="6">
         <batting raw="1-8G-H1" />
@@ -185,7 +185,7 @@
       <team batFirst="F.F" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;ƒGƒ‰[ •ôŽR‚P,ŽÂŒ´‚P,‘q’m‚P,ŽÂè‚Q&lt;br&gt;“ŠŽè¬Ñ  •½‰ª ?‰ñ Ž¸“_? Ž©Ó“_? ?K  1Ÿ2”s0S “o”Â4&lt;br&gt;&lt;br&gt;9tanaka		  2-D	4-K-O			6-B*&lt;br&gt;&lt;br&gt;– 1‰ñ ŽR‰º‘IŽè‚Ì‘ÅÈŽžA•õŽR‘IŽè‚ª‚R“‚ÅƒAƒEƒg&lt;br&gt;– 2‰ñ ŽÂŒ´‘IŽèƒƒCƒ‹ƒhƒsƒbƒ`Žž‚É‚R—Û‚æ‚è¶ŠÒ&lt;br&gt;– 5‰ñ ŽÂŒ´‘IŽèƒtƒ‰ƒC‚ÌŽžAŽÂè‚ª”ò‚Ño‚µ‚Äƒ_ƒuƒ‹ƒvƒŒ[&lt;br&gt;– 6‰ñ‚ÍŽžŠÔØ‚ê‚Ì‚½‚ßŽQl‹L˜^B‚½‚¾‚µ‘ÅŒ‚‹L˜^‚Í—LŒø(‚Å‚¢‚¢H)&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950716&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/6/25" loc="‚Ó‚½‚±" result="0" season="1995" team="ƒxƒK[ƒY" time="10:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;ã‚¨ãƒ©ãƒ¼ å³°å±±ï¼‘,ç¯ åŽŸï¼‘,å€‰çŸ¥ï¼‘,ç¯ å´Žï¼’&lt;br&gt;æŠ•æ‰‹æˆç¸¾  å¹³å²¡ ?å›ž å¤±ç‚¹? è‡ªè²¬ç‚¹? ?K  1å‹2æ•—0S ç™»æ¿4&lt;br&gt;&lt;br&gt;9tanaka		  2-D	4-K-O			6-B*&lt;br&gt;&lt;br&gt;ï¼Š 1å›ž å±±ä¸‹é¸æ‰‹ã®æ‰“å¸­æ™‚ã€å³¯å±±é¸æ‰‹ãŒï¼“ç›—ã§ã‚¢ã‚¦ãƒˆ&lt;br&gt;ï¼Š 2å›ž ç¯ åŽŸé¸æ‰‹ãƒ¯ã‚¤ãƒ«ãƒ‰ãƒ”ãƒƒãƒæ™‚ã«ï¼“å¡ã‚ˆã‚Šç”Ÿé‚„&lt;br&gt;ï¼Š 5å›ž ç¯ åŽŸé¸æ‰‹ãƒ•ãƒ©ã‚¤ã®æ™‚ã€ç¯ å´ŽãŒé£›ã³å‡ºã—ã¦ãƒ€ãƒ–ãƒ«ãƒ—ãƒ¬ãƒ¼&lt;br&gt;ï¼Š 6å›žã¯æ™‚é–“åˆ‡ã‚Œã®ãŸã‚å‚è€ƒè¨˜éŒ²ã€‚ãŸã ã—æ‰“æ’ƒè¨˜éŒ²ã¯æœ‰åŠ¹(ã§ã„ã„ï¼Ÿ)&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950716&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/6/25" loc="ãµãŸã“" result="0" season="1995" team="ãƒ™ã‚¬ãƒ¼ã‚º" time="10:00">
     <batters>
       <batter name="mine" order="1" position="8">
         <batting raw="1-B" />
@@ -245,7 +245,7 @@
       <team batFirst="MonStars" fieldFirst="Beg" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ  •½‰ª 3‰ñ Ž¸“_2 Ž©Ó“_2 2K (•‰‚¯) 1Ÿ3”s0S “o”Â5&lt;br&gt;   ‚Í‚º 1/3‰ñ Ž¸“_4 Ž©Ó4	0Ÿ0”s0S “o”Â1&lt;br&gt;	   –Ø‘º 2/3‰ñ Ž¸“_0 Ž©Ó“_0 1K  0Ÿ0”s0S “o”Â3&lt;br&gt;Ž¸ôF—ÑŠÄ“Â1,ŽÂè1,‘q’m1,ƒnƒ[1&lt;br&gt;9fushimi 1-K		  3-B		5-5G-O&lt;br&gt;– 1‰ñ:‚Í‚º‘IŽèƒSƒ‚Ì•¹ŽE‚­‚¸‚ê‚ÌŠÔ‚É‚P“_“ü‚éB&lt;br&gt;– 3‰ñ:•½‰ª‘IŽèƒSƒ‚Í•¹ŽE‚­‚¸‚ê‚ÌŠÔ‚É‚P“_“ü‚éB&lt;br&gt;– 3‰ñ:—Ñ‚Ð‘IŽè1ƒSƒ‚ÍA1-2-5‚Ì•¹ŽEBƒŒƒ“ƒ^ƒ‹‚Ì–Ø‘º•ßŽè‚ªŠˆ–ôB&lt;br&gt;– 5‰ñ:‘–ŽÒ‚QE‚R—ÛA•šŒ©‘IŽèƒSƒ‚ÅA‚R—Û‚Ì‚¨‚ª‚½‘IŽè‹²ŽEB&lt;br&gt;– ‚»‚Ì‘¼F–Ø‘ºŠO–ìŽèA‘ŠŽè—Žq‘IŽè‚ÌƒZƒ“ƒ^[‘OƒSƒ‚ðˆê—Û–Ò•Ô‹…‚ÅƒAƒEƒgB&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950723&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/7/16" result="-1" season="1995" team="ƒvƒŒƒCƒLƒbƒY">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾  å¹³å²¡ 3å›ž å¤±ç‚¹2 è‡ªè²¬ç‚¹2 2K (è² ã‘) 1å‹3æ•—0S ç™»æ¿5&lt;br&gt;   ã¯ãœ 1/3å›ž å¤±ç‚¹4 è‡ªè²¬4	0å‹0æ•—0S ç™»æ¿1&lt;br&gt;	   æœ¨æ‘ 2/3å›ž å¤±ç‚¹0 è‡ªè²¬ç‚¹0 1K  0å‹0æ•—0S ç™»æ¿3&lt;br&gt;å¤±ç­–ï¼šæž—ç›£ç£1,ç¯ å´Ž1,å€‰çŸ¥1,ãƒã‚¼1&lt;br&gt;9fushimi 1-K		  3-B		5-5G-O&lt;br&gt;ï¼Š 1å›ž:ã¯ãœé¸æ‰‹ã‚´ãƒ­ã®ä½µæ®ºããšã‚Œã®é–“ã«ï¼‘ç‚¹å…¥ã‚‹ã€‚&lt;br&gt;ï¼Š 3å›ž:å¹³å²¡é¸æ‰‹ã‚´ãƒ­ã¯ä½µæ®ºããšã‚Œã®é–“ã«ï¼‘ç‚¹å…¥ã‚‹ã€‚&lt;br&gt;ï¼Š 3å›ž:æž—ã²é¸æ‰‹1ã‚´ãƒ­ã¯ã€1-2-5ã®ä½µæ®ºã€‚ãƒ¬ãƒ³ã‚¿ãƒ«ã®æœ¨æ‘æ•æ‰‹ãŒæ´»èºã€‚&lt;br&gt;ï¼Š 5å›ž:èµ°è€…ï¼’ãƒ»ï¼“å¡ã€ä¼è¦‹é¸æ‰‹ã‚´ãƒ­ã§ã€ï¼“å¡ã®ãŠãŒãŸé¸æ‰‹æŒŸæ®ºã€‚&lt;br&gt;ï¼Š ãã®ä»–ï¼šæœ¨æ‘å¤–é‡Žæ‰‹ã€ç›¸æ‰‹å¥³å­é¸æ‰‹ã®ã‚»ãƒ³ã‚¿ãƒ¼å‰ã‚´ãƒ­ã‚’ä¸€å¡çŒ›è¿”çƒã§ã‚¢ã‚¦ãƒˆã€‚&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950723&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/7/16" result="-1" season="1995" team="ãƒ—ãƒ¬ã‚¤ã‚­ãƒƒã‚º">
     <batters>
       <batter name="sinozaki" order="1" position="5">
         <batting raw="1-B*" />
@@ -297,7 +297,7 @@
       <team batFirst="MonStars" fieldFirst="Pla" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ  •½‰ª 4‰ñ Ž¸“_6 Ž©Ó“_6 ?K (•‰‚¯) 1Ÿ4”s0S “o”Â6&lt;br&gt;   ]Œ´ 1‰ñ Ž¸“_2 Ž©Ó0	0Ÿ0”s0S “o”Â1&lt;br&gt;Ž¸ôFŽÂè1,]Œ´1,—ÑƒJ1&lt;br&gt;9kayochan	2-K-O		4-K-O&lt;br&gt;– 4‰ñ:ŽÂŒ´‘IŽè‚ÌƒSƒ‚Å‘–ŽÒ‚QE‚R—ÛB•½‰ª‘IŽèƒSƒ‚ÌŠÔ‚ÉŽR‰º‘IŽè¶ŠÒB&lt;br&gt;– 5‰ñ:ŽR‰º‘IŽèŠO–ìƒtƒ‰ƒCƒGƒ‰[‚Å—Ñ‘IŽè¶ŠÒB&lt;br&gt;– ‚»‚Ì‘¼Fl”‚ª‚Vl‚¾‚Á‚½‚Ì‚ªŽc”O&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950729&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/7/23" game="ƒI[ƒVƒƒƒ“ƒŠ[ƒO—\‘I" loc="’·âƒXƒ|[ƒcƒ‰ƒ“ƒh" result="-1" season="1995" team="ƒhƒ‹ƒtƒBƒ“ƒY" time="13:30">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾  å¹³å²¡ 4å›ž å¤±ç‚¹6 è‡ªè²¬ç‚¹6 ?K (è² ã‘) 1å‹4æ•—0S ç™»æ¿6&lt;br&gt;   æ±ŸåŽŸ 1å›ž å¤±ç‚¹2 è‡ªè²¬0	0å‹0æ•—0S ç™»æ¿1&lt;br&gt;å¤±ç­–ï¼šç¯ å´Ž1,æ±ŸåŽŸ1,æž—ã‚«1&lt;br&gt;9kayochan	2-K-O		4-K-O&lt;br&gt;ï¼Š 4å›ž:ç¯ åŽŸé¸æ‰‹ã®ã‚´ãƒ­ã§èµ°è€…ï¼’ãƒ»ï¼“å¡ã€‚å¹³å²¡é¸æ‰‹ã‚´ãƒ­ã®é–“ã«å±±ä¸‹é¸æ‰‹ç”Ÿé‚„ã€‚&lt;br&gt;ï¼Š 5å›ž:å±±ä¸‹é¸æ‰‹å¤–é‡Žãƒ•ãƒ©ã‚¤ã‚¨ãƒ©ãƒ¼ã§æž—é¸æ‰‹ç”Ÿé‚„ã€‚&lt;br&gt;ï¼Š ãã®ä»–ï¼šäººæ•°ãŒï¼—äººã ã£ãŸã®ãŒæ®‹å¿µ&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950729&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/7/23" game="ã‚ªãƒ¼ã‚·ãƒ£ãƒ³ãƒªãƒ¼ã‚°äºˆé¸" loc="é•·å‚ã‚¹ãƒãƒ¼ãƒ„ãƒ©ãƒ³ãƒ‰" result="-1" season="1995" team="ãƒ‰ãƒ«ãƒ•ã‚£ãƒ³ã‚º" time="13:30">
     <batters>
       <batter name="haya" order="1" position="4">
         <batting raw="1-K-O" />
@@ -343,7 +343,7 @@
       <team batFirst="Dol" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ •½‰ª 3‰ñ 9Ž¸“_ Ž©Ó2? ?K  (•‰‚¯) 1Ÿ5”s0S “o”Â7&lt;br&gt;	  ]Œ´ 1‰ñ Ž¸“_0 Ž©Ó0	0Ÿ0”s0S “o”Â2&lt;br&gt;Ž¸ôFŽÂè2 ‘q’m1,ŽÂŒ´1,•ôŽR1,•½‰ª1&lt;br&gt;*5‰ñ:•½‰ª‘IŽè‚ÌƒSƒ,‘–ŽÒˆê‘|‚Ìƒ^ƒCƒ€ƒŠ[ƒGƒ‰[&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950805&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/7/29" result="-1" season="1995" team="ƒNƒŠƒbƒp[ƒY">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾ å¹³å²¡ 3å›ž 9å¤±ç‚¹ è‡ªè²¬2? ?K  (è² ã‘) 1å‹5æ•—0S ç™»æ¿7&lt;br&gt;	  æ±ŸåŽŸ 1å›ž å¤±ç‚¹0 è‡ªè²¬0	0å‹0æ•—0S ç™»æ¿2&lt;br&gt;å¤±ç­–ï¼šç¯ å´Ž2 å€‰çŸ¥1,ç¯ åŽŸ1,å³°å±±1,å¹³å²¡1&lt;br&gt;*5å›ž:å¹³å²¡é¸æ‰‹ã®ã‚´ãƒ­,èµ°è€…ä¸€æŽƒã®ã‚¿ã‚¤ãƒ ãƒªãƒ¼ã‚¨ãƒ©ãƒ¼&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950805&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/7/29" result="-1" season="1995" team="ã‚¯ãƒªãƒƒãƒ‘ãƒ¼ã‚º">
     <batters>
       <batter name="mine" order="1" position="6">
         <batting raw="1-K-O" />
@@ -405,7 +405,7 @@
       <team batFirst="MonStars" fieldFirst="Cli" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ •½‰ª 3?‰ñ 6Ž¸“_ Ž©Ó? ?K  (•‰‚¯) 1Ÿ6”s0S “o”Â8&lt;br&gt;	  ]Œ´ 2?‰ñ Ž¸“_0 Ž©Ó0	0Ÿ0”s0S “o”Â3&lt;br&gt;Ž¸ôF¬•û1,•½‰ª1,]Œ´1,–Ø‘º1&lt;br&gt;–2‰ñ:‚R—Û‘–ŽÒ‚ÌŽR‰º‘IŽèAƒƒCƒ‹ƒhƒsƒbƒ`‚Åƒz[ƒ€‘_‚¤‚ªƒAƒEƒgIŽc”O&lt;br&gt;–3‰ñ:—Ñ‚©‘IŽè‚Ìƒqƒbƒg‚ÍƒZ[ƒtƒeƒBƒoƒ“ƒhB(¬Œ÷‚Íƒ‚ƒ“ƒXƒ^[ƒY‰I)&lt;br&gt;–4‰ñ:ŽÂŒ´‘IŽè‚ÌƒVƒ‡[ƒgƒtƒ‰ƒC‚ªƒGƒ‰[,]Œ´ƒT[ƒh‚ÅƒtƒH[ƒXƒAƒEƒg&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950812&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/8/05" game="—ûKŽŽ‡" loc="‚Ó‚½‚±" result="-1" season="1995" team="ƒ^ƒCƒK[ƒX" time="10:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾ å¹³å²¡ 3?å›ž 6å¤±ç‚¹ è‡ªè²¬? ?K  (è² ã‘) 1å‹6æ•—0S ç™»æ¿8&lt;br&gt;	  æ±ŸåŽŸ 2?å›ž å¤±ç‚¹0 è‡ªè²¬0	0å‹0æ•—0S ç™»æ¿3&lt;br&gt;å¤±ç­–ï¼šå°æ–¹1,å¹³å²¡1,æ±ŸåŽŸ1,æœ¨æ‘1&lt;br&gt;ï¼Š2å›ž:ï¼“å¡èµ°è€…ã®å±±ä¸‹é¸æ‰‹ã€ãƒ¯ã‚¤ãƒ«ãƒ‰ãƒ”ãƒƒãƒã§ãƒ›ãƒ¼ãƒ ç‹™ã†ãŒã‚¢ã‚¦ãƒˆï¼æ®‹å¿µ&lt;br&gt;ï¼Š3å›ž:æž—ã‹é¸æ‰‹ã®ãƒ’ãƒƒãƒˆã¯ã‚»ãƒ¼ãƒ•ãƒ†ã‚£ãƒãƒ³ãƒ‰ã€‚(æˆåŠŸã¯ãƒ¢ãƒ³ã‚¹ã‚¿ãƒ¼ã‚ºåˆï¼)&lt;br&gt;ï¼Š4å›ž:ç¯ åŽŸé¸æ‰‹ã®ã‚·ãƒ§ãƒ¼ãƒˆãƒ•ãƒ©ã‚¤ãŒã‚¨ãƒ©ãƒ¼,æ±ŸåŽŸã‚µãƒ¼ãƒ‰ã§ãƒ•ã‚©ãƒ¼ã‚¹ã‚¢ã‚¦ãƒˆ&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#950812&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/8/05" game="ç·´ç¿’è©¦åˆ" loc="ãµãŸã“" result="-1" season="1995" team="ã‚¿ã‚¤ã‚¬ãƒ¼ã‚¹" time="10:00">
     <batters>
       <batter name="mine" order="1" position="6">
         <batting raw="1-1F-O" />
@@ -467,7 +467,7 @@
       <team batFirst="Tig" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;(6‰ñ— 1Ž€‚Å‰J‚Ì‚½‚ßƒR[ƒ‹ƒhƒQ[ƒ€)&lt;br&gt;“ŠŽè¬Ñ ]Œ´ 3‰ñ Ž¸“_4 Ž©Ó?	0Ÿ0”s0S “o”Â4&lt;br&gt;	  •½‰ª 3‰ñ Ž¸“_2 Ž©Ó?  1Ÿ6”s0S “o”Â9&lt;br&gt;Ž¸ôFŽÂŒ´1,—Ñ‚Ð1,‘q’m1,]Œ´1&lt;br&gt;&lt;br&gt;–1‰ñ:]Œ´‘IŽè‚Ì‘ÅÈŽžA–Ø‘º‘IŽè‚R“Ž¸”s‚Åƒ`ƒFƒ“ƒW&lt;br&gt;–3‰ñ:ŽÂŒ´‘IŽè‚Ìˆê”òŽžAŽÂè‘IŽè“—Û‚ðŽŽ‚Ý‚Ä‚¢‚Ä‹A—Û‚Å‚«‚¸ƒ_ƒuƒ‹ƒvƒŒ[&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;a name=950819.1&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/8/12" game="—ûKŽŽ‡" loc="“V‰¤B" result="0" season="1995" team="ƒWƒƒƒ}ƒCƒJ" time="15:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;(6å›žè£1æ­»ã§é›¨ã®ãŸã‚ã‚³ãƒ¼ãƒ«ãƒ‰ã‚²ãƒ¼ãƒ )&lt;br&gt;æŠ•æ‰‹æˆç¸¾ æ±ŸåŽŸ 3å›ž å¤±ç‚¹4 è‡ªè²¬?	0å‹0æ•—0S ç™»æ¿4&lt;br&gt;	  å¹³å²¡ 3å›ž å¤±ç‚¹2 è‡ªè²¬?  1å‹6æ•—0S ç™»æ¿9&lt;br&gt;å¤±ç­–ï¼šç¯ åŽŸ1,æž—ã²1,å€‰çŸ¥1,æ±ŸåŽŸ1&lt;br&gt;&lt;br&gt;ï¼Š1å›ž:æ±ŸåŽŸé¸æ‰‹ã®æ‰“å¸­æ™‚ã€æœ¨æ‘é¸æ‰‹ï¼“ç›—å¤±æ•—ã§ãƒã‚§ãƒ³ã‚¸&lt;br&gt;ï¼Š3å›ž:ç¯ åŽŸé¸æ‰‹ã®ä¸€é£›æ™‚ã€ç¯ å´Žé¸æ‰‹ç›—å¡ã‚’è©¦ã¿ã¦ã„ã¦å¸°å¡ã§ããšãƒ€ãƒ–ãƒ«ãƒ—ãƒ¬ãƒ¼&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;a name=950819.1&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/8/12" game="ç·´ç¿’è©¦åˆ" loc="å¤©çŽ‹å·ž" result="0" season="1995" team="ã‚¸ãƒ£ãƒžã‚¤ã‚«" time="15:00">
     <batters>
       <batter name="sinozaki" order="1" position="6">
         <batting raw="1-5F-O" />
@@ -522,7 +522,7 @@
       <team batFirst="Jam" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ ]Œ´ 3‰ñ Ž¸“_4 Ž©Ó?	0Ÿ0”s0S “o”Â4&lt;br&gt;“ŠŽè¬ÑF•½‰ª“ŠŽè‚U‰ñŽ¸“_‚XŽ©ÓH(•‰‚¯)1Ÿ7”s0S “o”Â10&lt;br&gt;Ž¸ôF—Ñ‚Ð‚PA•ôŽR‚P&lt;br&gt;2‰ñFŽÂŒ´‘IŽè‚Ì”ò‹…ŽžA‚R—Û•½‰ª‘IŽè”ò‚Ño‚µ‚ÄƒAƒEƒg &lt;br&gt;3‰ñF‚Í‚º‘IŽè‚Ì“à–ìƒSƒ‚ÍA5-4-3‚Ì•¹ŽE&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=950819.2&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/08/19" game="ƒI[ƒVƒƒƒ“ƒŠ[ƒO—\‘I" loc="‘åˆä•u“ª‚b–Ê" result="-1" season="1995" team="ƒnƒ“ƒOƒŠ[ƒ^ƒCƒK[ƒX" time="7:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾ æ±ŸåŽŸ 3å›ž å¤±ç‚¹4 è‡ªè²¬?	0å‹0æ•—0S ç™»æ¿4&lt;br&gt;æŠ•æ‰‹æˆç¸¾ï¼šå¹³å²¡æŠ•æ‰‹ï¼–å›žå¤±ç‚¹ï¼™è‡ªè²¬ï¼Ÿ(è² ã‘)1å‹7æ•—0S ç™»æ¿10&lt;br&gt;å¤±ç­–ï¼šæž—ã²ï¼‘ã€å³°å±±ï¼‘&lt;br&gt;2å›žï¼šç¯ åŽŸé¸æ‰‹ã®é£›çƒæ™‚ã€ï¼“å¡å¹³å²¡é¸æ‰‹é£›ã³å‡ºã—ã¦ã‚¢ã‚¦ãƒˆ &lt;br&gt;3å›žï¼šã¯ãœé¸æ‰‹ã®å†…é‡Žã‚´ãƒ­ã¯ã€5-4-3ã®ä½µæ®º&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=950819.2&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/08/19" game="ã‚ªãƒ¼ã‚·ãƒ£ãƒ³ãƒªãƒ¼ã‚°äºˆé¸" loc="å¤§äº•åŸ é ­ï¼£é¢" result="-1" season="1995" team="ãƒãƒ³ã‚°ãƒªãƒ¼ã‚¿ã‚¤ã‚¬ãƒ¼ã‚¹" time="7:00">
     <batters>
       <batter name="mine" order="1" position="6">
         <batting raw="1-8O-H2" />
@@ -586,7 +586,7 @@
       <team batFirst="MonStars" fieldFirst="HT" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬ÑF•½‰ª“ŠŽè‚U‰ñŽ¸“_‚XŽ©ÓH	1Ÿ7”s0S “o”Â10&lt;br&gt;“ŠŽè¬ÑF]Œ´“ŠŽè7‰ñŽ¸“_5Ž©ÓH(Ÿ‚¿) 1Ÿ0”s0S “o”Â5&lt;br&gt;Ž¸ôF ]Œ´‚PAŽÂè‚PA‘q’m‚P,ŽR‰º‚P&lt;br&gt;1‰ñFŽÂè‘IŽè‚Ì‚R“ŽžAˆ«‘—‹…‚Åƒz[ƒ€ƒCƒ“&lt;br&gt;2‰ñF•ôŽR‘IŽè‚ÌƒGƒ‰[‚ÌŽžA]Œ´‘IŽèƒz[ƒ€ƒCƒ“&lt;br&gt;4‰ñF‘q’m‘IŽè‚ÌƒGƒ‰[‚ÌŽžA•ôŽR‘IŽèƒz[ƒ€ƒCƒ“&lt;br&gt;4‰ñF‘q’m‘IŽè‚Ì‚Q“ƒAƒEƒg&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=950826&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/08/19" loc="‘åˆä•u“ªB–Ê" result="1" season="1995" team="–²‚Ì“‡ƒuƒ‹[ƒX" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾ï¼šå¹³å²¡æŠ•æ‰‹ï¼–å›žå¤±ç‚¹ï¼™è‡ªè²¬ï¼Ÿ	1å‹7æ•—0S ç™»æ¿10&lt;br&gt;æŠ•æ‰‹æˆç¸¾ï¼šæ±ŸåŽŸæŠ•æ‰‹7å›žå¤±ç‚¹5è‡ªè²¬ï¼Ÿ(å‹ã¡) 1å‹0æ•—0S ç™»æ¿5&lt;br&gt;å¤±ç­–ï¼š æ±ŸåŽŸï¼‘ã€ç¯ å´Žï¼‘ã€å€‰çŸ¥ï¼‘,å±±ä¸‹ï¼‘&lt;br&gt;1å›žï¼šç¯ å´Žé¸æ‰‹ã®ï¼“ç›—æ™‚ã€æ‚ªé€çƒã§ãƒ›ãƒ¼ãƒ ã‚¤ãƒ³&lt;br&gt;2å›žï¼šå³°å±±é¸æ‰‹ã®ã‚¨ãƒ©ãƒ¼ã®æ™‚ã€æ±ŸåŽŸé¸æ‰‹ãƒ›ãƒ¼ãƒ ã‚¤ãƒ³&lt;br&gt;4å›žï¼šå€‰çŸ¥é¸æ‰‹ã®ã‚¨ãƒ©ãƒ¼ã®æ™‚ã€å³°å±±é¸æ‰‹ãƒ›ãƒ¼ãƒ ã‚¤ãƒ³&lt;br&gt;4å›žï¼šå€‰çŸ¥é¸æ‰‹ã®ï¼’ç›—ã‚¢ã‚¦ãƒˆ&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=950826&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/08/19" loc="å¤§äº•åŸ é ­Bé¢" result="1" season="1995" team="å¤¢ã®å³¶ãƒ–ãƒ«ãƒ¼ã‚¹" time="9:00">
     <batters>
       <batter name="mine" order="1" position="6">
         <batting raw="1-1F-O" />
@@ -650,7 +650,7 @@
       <team batFirst="Blu" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬ÑF•½‰ª“ŠŽè3‰ñŽ¸“_2Ž©Ó1?ŽlŽ€‹…3K? 1Ÿ7”s0S “o”Â10&lt;br&gt;   ]Œ´“ŠŽè3‰ñŽ¸“_1Ž©Ó1?ŽlŽ€‹…3K?(Ÿ‚¿) 2Ÿ0”s0S “o”Â5&lt;br&gt;   –Ø‘º“ŠŽè3‰ñŽ¸“_1Ž©Ó0ŽlŽ€‹…?K?  0Ÿ0”s0S “o”Â3&lt;br&gt;Ž¸ôFŽÂè‚P&lt;br&gt;‘q’m‚P--•ßŽè‚É‚Äƒtƒ@[ƒ‹ƒtƒ‰ƒC‚ð—Ž‚Æ‚·B&lt;br&gt;       ŽR‰º‚P--ƒVƒ‡[ƒg‚É‚Äˆ«‘—‹…B&lt;br&gt;       •½‰ª‚P--Œ¡§‹…‚ðƒ|ƒ‚èB&lt;br&gt;&lt;br&gt;1‰ñ:•½‰ª‘IŽèA‚R—Û“—ÛŽ¸”s&lt;br&gt;2‰ñ:—ÑŠÄ“Â‚Ìƒtƒ‰ƒCŽž‚ÉŽÂŒ´‘IŽè‚ª”ò‚Ñ‚¾‚µ‚ÄƒAƒEƒg&lt;br&gt;3‰ñ:ŽÂè‘IŽè‚Q—ÛŒ¡§ƒAƒEƒgA‚»‚ÌŠÔ‚É—é–Ø‘IŽè¶ŠÒ&lt;br&gt;5‰ñ:‘q’m‘IŽè‚Ì“à–ìƒSƒƒGƒ‰[‚ÌŠÔ‚ÉŽÂè‘IŽè¶ŠÒB‘Å“_‚ª‚P“_‘«‚è‚È‚¢I&lt;br&gt;6‰ñ:ƒAƒEƒg‚ªˆê‚Â‘«‚è‚È‚¢A“¾“_‚Æ‘Å“_‚Ì·‚ª‚P“_‚ ‚èA—Ñ‚Ì‘Å“_‚ÆŽv‚¤B&lt;br&gt;8‰ñ:‰Ÿ‚µo‚µ‚Å–Ø‘º‚É‘Å“_‚PA—Ñ‚ª“ü‚è‚Ü‚µ‚½BŽÂŒ´‚Ì‚Æ‚«‚à‰Ÿ‚µo‚µ‚©‚ÈB&lt;br&gt;    ‚»‚ê‚Å‚à“¾“_‚Æ‘Å“_‚ª‡‚í‚È‚¢B&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=950909&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/08/26" game="—ûKŽŽ‡" loc="“ñŽq‹Êì" result="1" season="1995" team="ƒvƒŒƒCƒLƒbƒY" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾ï¼šå¹³å²¡æŠ•æ‰‹3å›žå¤±ç‚¹2è‡ªè²¬1?å››æ­»çƒ3K? 1å‹7æ•—0S ç™»æ¿10&lt;br&gt;   æ±ŸåŽŸæŠ•æ‰‹3å›žå¤±ç‚¹1è‡ªè²¬1?å››æ­»çƒ3K?(å‹ã¡) 2å‹0æ•—0S ç™»æ¿5&lt;br&gt;   æœ¨æ‘æŠ•æ‰‹3å›žå¤±ç‚¹1è‡ªè²¬0å››æ­»çƒ?K?  0å‹0æ•—0S ç™»æ¿3&lt;br&gt;å¤±ç­–ï¼šç¯ å´Žï¼‘&lt;br&gt;å€‰çŸ¥ï¼‘--æ•æ‰‹ã«ã¦ãƒ•ã‚¡ãƒ¼ãƒ«ãƒ•ãƒ©ã‚¤ã‚’è½ã¨ã™ã€‚&lt;br&gt;       å±±ä¸‹ï¼‘--ã‚·ãƒ§ãƒ¼ãƒˆã«ã¦æ‚ªé€çƒã€‚&lt;br&gt;       å¹³å²¡ï¼‘--ç‰½åˆ¶çƒã‚’ãƒãƒ­ã‚Šã€‚&lt;br&gt;&lt;br&gt;1å›ž:å¹³å²¡é¸æ‰‹ã€ï¼“å¡ç›—å¡å¤±æ•—&lt;br&gt;2å›ž:æž—ç›£ç£ã®ãƒ•ãƒ©ã‚¤æ™‚ã«ç¯ åŽŸé¸æ‰‹ãŒé£›ã³ã ã—ã¦ã‚¢ã‚¦ãƒˆ&lt;br&gt;3å›ž:ç¯ å´Žé¸æ‰‹ï¼’å¡ç‰½åˆ¶ã‚¢ã‚¦ãƒˆã€ãã®é–“ã«éˆ´æœ¨é¸æ‰‹ç”Ÿé‚„&lt;br&gt;5å›ž:å€‰çŸ¥é¸æ‰‹ã®å†…é‡Žã‚´ãƒ­ã‚¨ãƒ©ãƒ¼ã®é–“ã«ç¯ å´Žé¸æ‰‹ç”Ÿé‚„ã€‚æ‰“ç‚¹ãŒï¼‘ç‚¹è¶³ã‚Šãªã„ï¼&lt;br&gt;6å›ž:ã‚¢ã‚¦ãƒˆãŒä¸€ã¤è¶³ã‚Šãªã„ã€å¾—ç‚¹ã¨æ‰“ç‚¹ã®å·®ãŒï¼‘ç‚¹ã‚ã‚Šã€æž—ã®æ‰“ç‚¹ã¨æ€ã†ã€‚&lt;br&gt;8å›ž:æŠ¼ã—å‡ºã—ã§æœ¨æ‘ã«æ‰“ç‚¹ï¼‘ã€æž—ãŒå…¥ã‚Šã¾ã—ãŸã€‚ç¯ åŽŸã®ã¨ãã‚‚æŠ¼ã—å‡ºã—ã‹ãªã€‚&lt;br&gt;    ãã‚Œã§ã‚‚å¾—ç‚¹ã¨æ‰“ç‚¹ãŒåˆã‚ãªã„ã€‚&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=950909&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/08/26" game="ç·´ç¿’è©¦åˆ" loc="äºŒå­çŽ‰å·" result="1" season="1995" team="ãƒ—ãƒ¬ã‚¤ã‚­ãƒƒã‚º" time="11:00">
     <batters>
       <batter name="suzuki" order="1" position="4">
         <batting raw="1-6G-O" />
@@ -740,7 +740,7 @@
       <team batFirst="PK" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬ÑF•½‰ª“ŠŽè5‰ñŽ¸“_1Ž©Ó0ŽlŽ€‹…3K?(Ÿ‚¿)2Ÿ7”s0S “o”Â11&lt;br&gt;   ]Œ´“ŠŽè1‰ñŽ¸“_0Ž©Ó0ŽlŽ€‹…0K? 2Ÿ0”s0S “o”Â6&lt;br&gt;   –Ø‘º“ŠŽè1‰ñŽ¸“_0Ž©Ó0ŽlŽ€‹…0K1(ƒZ[ƒu) 0Ÿ0”s1S “o”Â4&lt;br&gt;Ž¸ôFŽÂè3&lt;br&gt;3‰ñF—Ñ‚©‘IŽèA2“ŽžA‘—‹…‚ªƒZƒ“ƒ^[‚Ö‚»‚êAˆê‹C‚Éƒz[ƒ€ƒCƒ“&lt;br&gt;7‰ñF—Ñ‚©‘IŽè‚Ìƒqƒbƒg‚ÍAƒZ[ƒtƒeƒB[ƒoƒ“ƒg&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=950910&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/09/09" game="—ûKŽŽ‡" loc="?" result="1" season="1995" team="”ª’ªƒhƒ‹ƒtƒBƒ“ƒY" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾ï¼šå¹³å²¡æŠ•æ‰‹5å›žå¤±ç‚¹1è‡ªè²¬0å››æ­»çƒ3K?(å‹ã¡)2å‹7æ•—0S ç™»æ¿11&lt;br&gt;   æ±ŸåŽŸæŠ•æ‰‹1å›žå¤±ç‚¹0è‡ªè²¬0å››æ­»çƒ0K? 2å‹0æ•—0S ç™»æ¿6&lt;br&gt;   æœ¨æ‘æŠ•æ‰‹1å›žå¤±ç‚¹0è‡ªè²¬0å››æ­»çƒ0K1(ã‚»ãƒ¼ãƒ–) 0å‹0æ•—1S ç™»æ¿4&lt;br&gt;å¤±ç­–ï¼šç¯ å´Ž3&lt;br&gt;3å›žï¼šæž—ã‹é¸æ‰‹ã€2ç›—æ™‚ã€é€çƒãŒã‚»ãƒ³ã‚¿ãƒ¼ã¸ãã‚Œã€ä¸€æ°—ã«ãƒ›ãƒ¼ãƒ ã‚¤ãƒ³&lt;br&gt;7å›žï¼šæž—ã‹é¸æ‰‹ã®ãƒ’ãƒƒãƒˆã¯ã€ã‚»ãƒ¼ãƒ•ãƒ†ã‚£ãƒ¼ãƒãƒ³ãƒˆ&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=950910&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/09/09" game="ç·´ç¿’è©¦åˆ" loc="?" result="1" season="1995" team="å…«æ½®ãƒ‰ãƒ«ãƒ•ã‚£ãƒ³ã‚º" time="9:00">
     <batters>
       <batter name="suzuki" order="1" position="2">
         <batting raw="1-B" />
@@ -812,7 +812,7 @@
       <team batFirst="MonStars" fieldFirst="Dol" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬ÑF]Œ´“ŠŽè5‰ñŽ¸“_1Ž©Ó0ŽlŽ€‹…3K?(make) 2Ÿ1”s0S “o”Â7&lt;br&gt;   –Ø‘º“ŠŽè2‰ñŽ¸“_0Ž©Ó0ŽlŽ€‹…0K1	0Ÿ0”s1S “o”Â5&lt;br&gt;Ž¸ôFsinozaki2&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=950930&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/09/10" game="•iì‹æ–¯‘å‰ï‚P‰ñí" loc="?" result="-1" season="1995" team="ƒTƒ{ƒeƒ“" time="8:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾ï¼šæ±ŸåŽŸæŠ•æ‰‹5å›žå¤±ç‚¹1è‡ªè²¬0å››æ­»çƒ3K?(make) 2å‹1æ•—0S ç™»æ¿7&lt;br&gt;   æœ¨æ‘æŠ•æ‰‹2å›žå¤±ç‚¹0è‡ªè²¬0å››æ­»çƒ0K1	0å‹0æ•—1S ç™»æ¿5&lt;br&gt;å¤±ç­–ï¼šsinozaki2&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=950930&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/09/10" game="å“å·åŒºæ°‘å¤§ä¼šï¼‘å›žæˆ¦" loc="?" result="-1" season="1995" team="ã‚µãƒœãƒ†ãƒ³" time="8:00">
     <batters>
       <batter name="sinozaki" order="1" position="5">
         <batting raw="1-5G-E*" />
@@ -877,7 +877,7 @@
       <team batFirst="Sab" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬ÑF]Œ´“ŠŽè6‰ñŽ¸“_2Ž©Ó?ŽlŽ€‹…?K?(Ÿ‚¿)	3Ÿ1”s0S “o”Â8&lt;br&gt;Ž¸ôFH&lt;br&gt;–‚Q‰ñF]Œ´‘IŽè‚Ì‚TƒSƒŽžAŽÂŒ´‘IŽè–{—Û‚ð‘_‚¤‚ªƒAƒEƒgB]Œ´‘IŽè‚Í“ü‘Ö‚è&lt;br&gt;–‚U‰ñFŽÂŒ´‘IŽè‚Ì‘ÅÈŒãAŽžŠÔØ‚êI—¹&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=951028&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/9/30" loc="‘åˆä•u“ª" result="1" season="1995" team="ƒGƒŒƒtƒ@ƒ“ƒc" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾ï¼šæ±ŸåŽŸæŠ•æ‰‹6å›žå¤±ç‚¹2è‡ªè²¬?å››æ­»çƒ?K?(å‹ã¡)	3å‹1æ•—0S ç™»æ¿8&lt;br&gt;å¤±ç­–ï¼šï¼Ÿ&lt;br&gt;ï¼Šï¼’å›žï¼šæ±ŸåŽŸé¸æ‰‹ã®ï¼•ã‚´ãƒ­æ™‚ã€ç¯ åŽŸé¸æ‰‹æœ¬å¡ã‚’ç‹™ã†ãŒã‚¢ã‚¦ãƒˆã€‚æ±ŸåŽŸé¸æ‰‹ã¯å…¥æ›¿ã‚Š&lt;br&gt;ï¼Šï¼–å›žï¼šç¯ åŽŸé¸æ‰‹ã®æ‰“å¸­å¾Œã€æ™‚é–“åˆ‡ã‚Œçµ‚äº†&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=951028&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/9/30" loc="å¤§äº•åŸ é ­" result="1" season="1995" team="ã‚¨ãƒ¬ãƒ•ã‚¡ãƒ³ãƒ„" time="9:00">
     <batters>
       <batter name="haya" order="1" position="9">
         <batting raw="1-5F-O" />
@@ -952,7 +952,7 @@
       <team batFirst="Ele" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;•½‰ª 3‰ñ 1Ž¸“_ Ž©Ó0 ?K&lt;br&gt;–Ø‘º 2‰ñ 3Ž¸“_ Ž©Ó0 ?K&lt;br&gt;“ŠŽè¬ÑF•½‰ª“ŠŽè3‰ñŽ¸“_1Ž©Ó0ŽlŽ€‹…?K?(Ÿ‚¿)	3Ÿ7”s0S “o”Â12&lt;br&gt;   –Ø‘º“ŠŽè2‰ñŽ¸“_3Ž©Ó0ŽlŽ€‹…?K?	0Ÿ0”s1S “o”Â6&lt;br&gt;Ž¸ôF—Ñ‚©ŽÂè1 •ôŽR1,•½‰ª1&lt;br&gt;* 1‰ñA—Ñ‚©‘IŽè‚Ì‚S”òŽžA—Ñ‚ÐŠÄ“Â‚Í“—Û‚ðŽŽ‚Ý‚Ä‚¢‚½‚½‚ß‹A—Û‚Å‚«‚¸ƒAƒEƒg&lt;br&gt;* 3‰ñA•½‰ª‘IŽè‚ªŽl”Ô‚ÌdÓ‚ð‰Ê‚½‚·–{—Û‘ÅB&lt;br&gt;* 4‰ñAŽÂè‘IŽè‚ÍƒƒCƒ‹ƒhƒsƒbƒ`Žž‚É‚R—Û‚ð‘_‚¤‚ªƒ^ƒbƒ`ƒAƒEƒgB&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=9511111&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/10/28" loc="‘åˆä•u“ª" result="1" season="1995" team="Jokers(nifty)" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;å¹³å²¡ 3å›ž 1å¤±ç‚¹ è‡ªè²¬0 ?K&lt;br&gt;æœ¨æ‘ 2å›ž 3å¤±ç‚¹ è‡ªè²¬0 ?K&lt;br&gt;æŠ•æ‰‹æˆç¸¾ï¼šå¹³å²¡æŠ•æ‰‹3å›žå¤±ç‚¹1è‡ªè²¬0å››æ­»çƒ?K?(å‹ã¡)	3å‹7æ•—0S ç™»æ¿12&lt;br&gt;   æœ¨æ‘æŠ•æ‰‹2å›žå¤±ç‚¹3è‡ªè²¬0å››æ­»çƒ?K?	0å‹0æ•—1S ç™»æ¿6&lt;br&gt;å¤±ç­–ï¼šæž—ã‹ç¯ å´Ž1 å³°å±±1,å¹³å²¡1&lt;br&gt;* 1å›žã€æž—ã‹é¸æ‰‹ã®ï¼”é£›æ™‚ã€æž—ã²ç›£ç£ã¯ç›—å¡ã‚’è©¦ã¿ã¦ã„ãŸãŸã‚å¸°å¡ã§ããšã‚¢ã‚¦ãƒˆ&lt;br&gt;* 3å›žã€å¹³å²¡é¸æ‰‹ãŒå››ç•ªã®é‡è²¬ã‚’æžœãŸã™æœ¬å¡æ‰“ã€‚&lt;br&gt;* 4å›žã€ç¯ å´Žé¸æ‰‹ã¯ãƒ¯ã‚¤ãƒ«ãƒ‰ãƒ”ãƒƒãƒæ™‚ã«ï¼“å¡ã‚’ç‹™ã†ãŒã‚¿ãƒƒãƒã‚¢ã‚¦ãƒˆã€‚&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=9511111&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/10/28" loc="å¤§äº•åŸ é ­" result="1" season="1995" team="Jokers(nifty)" time="9:00">
     <batters>
       <batter name="haya" order="1" position="7">
         <batting raw="1-5G-E--1*" />
@@ -1012,7 +1012,7 @@
       <team batFirst="MonStars" fieldFirst="Jok" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;(‘½–€ì‰ˆ‚¢‚Ì“úƒnƒ€ƒOƒ‰ƒEƒ“ƒh‚Ì‘¤‚ÌƒOƒ‰ƒEƒ“ƒh)&lt;br&gt;]Œ´ 5‰ñ 2Ž¸“_ Ž©Ó0 ?K&lt;br&gt;–Ø‘º 2‰ñ 3Ž¸“_ Ž©Ó3 ?K&lt;br&gt;“ŠŽè¬ÑF]Œ´“ŠŽè5‰ñŽ¸“_2Ž©Ó0ŽlŽ€‹…?K?(Ÿ‚¿)	4Ÿ1”s0S “o”Â9&lt;br&gt;   –Ø‘º“ŠŽè2‰ñŽ¸“_3Ž©Ó3ŽlŽ€‹…?K?	0Ÿ0”s1S “o”Â7&lt;br&gt;Ž¸ôFŽÂè2&lt;br&gt;8hosoe		2-6F-O		4-B*			6-B---1*&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=951202&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/11/11" game="—ûKŽŽ‡" loc="“V_‘æŽO‹…ê" result="1" season="1995" team="ƒ_ƒ“ƒT[ƒY" time="10:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;(å¤šæ‘©å·æ²¿ã„ã®æ—¥ãƒãƒ ã‚°ãƒ©ã‚¦ãƒ³ãƒ‰ã®å´ã®ã‚°ãƒ©ã‚¦ãƒ³ãƒ‰)&lt;br&gt;æ±ŸåŽŸ 5å›ž 2å¤±ç‚¹ è‡ªè²¬0 ?K&lt;br&gt;æœ¨æ‘ 2å›ž 3å¤±ç‚¹ è‡ªè²¬3 ?K&lt;br&gt;æŠ•æ‰‹æˆç¸¾ï¼šæ±ŸåŽŸæŠ•æ‰‹5å›žå¤±ç‚¹2è‡ªè²¬0å››æ­»çƒ?K?(å‹ã¡)	4å‹1æ•—0S ç™»æ¿9&lt;br&gt;   æœ¨æ‘æŠ•æ‰‹2å›žå¤±ç‚¹3è‡ªè²¬3å››æ­»çƒ?K?	0å‹0æ•—1S ç™»æ¿7&lt;br&gt;å¤±ç­–ï¼šç¯ å´Ž2&lt;br&gt;8hosoe		2-6F-O		4-B*			6-B---1*&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=951202&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/11/11" game="ç·´ç¿’è©¦åˆ" loc="å¤©ç¥žç¬¬ä¸‰çƒå ´" result="1" season="1995" team="ãƒ€ãƒ³ã‚µãƒ¼ã‚º" time="10:00">
     <batters>
       <batter name="haya" order="1" position="9">
         <batting raw="1-8F-O" />
@@ -1077,7 +1077,7 @@
       <team batFirst="Dan" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;—ûKŽŽ‡ V.S. ƒWƒ‡[ƒJ[ƒY(nifty)&lt;br&gt;“ŠŽè¬ÑF•½‰ª“ŠŽè4‰ñŽ¸“_2Ž©Ó1ŽlŽ€‹…?K?(Ÿ‚¿)	4Ÿ7”s0S “o”Â13&lt;br&gt;	   ]Œ´“ŠŽè2‰ñŽ¸“_0Ž©Ó0ŽlŽ€‹…?K?	4Ÿ1”s1S “o”Â11&lt;br&gt;Ž¸ô:•½‰ª1&lt;br&gt;*1‰ñ1Ž€–ž—Û:]Œ´‘IŽè‚Ì1—Ûƒ‰ƒCƒi[‚Åƒ_ƒuƒ‹ƒvƒŒ[&lt;br&gt;*1‰ñ‚ÌŽÂŒ´‘IŽèA4‰ñ‚Ì—é–Ø‘IŽè‚ÌŽlŽ€‹…‚Í‹¤‚É‰Ÿ‚µo‚µ‚Å‘Å“_1&lt;br&gt;*3‰ñ–³Ž€–ž—Û‚ÌŽç”õŽžA‘q’m—VŒ‚Žè‚Ö‚Ìƒ‰ƒCƒi[‚ÅƒgƒŠƒvƒ‹ƒvƒŒ[&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=951209&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/12/2" result="1" season="1995" team="Jokers(nifty)">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;ç·´ç¿’è©¦åˆ V.S. ã‚¸ãƒ§ãƒ¼ã‚«ãƒ¼ã‚º(nifty)&lt;br&gt;æŠ•æ‰‹æˆç¸¾ï¼šå¹³å²¡æŠ•æ‰‹4å›žå¤±ç‚¹2è‡ªè²¬1å››æ­»çƒ?K?(å‹ã¡)	4å‹7æ•—0S ç™»æ¿13&lt;br&gt;	   æ±ŸåŽŸæŠ•æ‰‹2å›žå¤±ç‚¹0è‡ªè²¬0å››æ­»çƒ?K?	4å‹1æ•—1S ç™»æ¿11&lt;br&gt;å¤±ç­–:å¹³å²¡1&lt;br&gt;*1å›ž1æ­»æº€å¡:æ±ŸåŽŸé¸æ‰‹ã®1å¡ãƒ©ã‚¤ãƒŠãƒ¼ã§ãƒ€ãƒ–ãƒ«ãƒ—ãƒ¬ãƒ¼&lt;br&gt;*1å›žã®ç¯ åŽŸé¸æ‰‹ã€4å›žã®éˆ´æœ¨é¸æ‰‹ã®å››æ­»çƒã¯å…±ã«æŠ¼ã—å‡ºã—ã§æ‰“ç‚¹1&lt;br&gt;*3å›žç„¡æ­»æº€å¡ã®å®ˆå‚™æ™‚ã€å€‰çŸ¥éŠæ’ƒæ‰‹ã¸ã®ãƒ©ã‚¤ãƒŠãƒ¼ã§ãƒˆãƒªãƒ—ãƒ«ãƒ—ãƒ¬ãƒ¼&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=951209&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/12/2" result="1" season="1995" team="Jokers(nifty)">
     <batters>
       <batter name="sinozaki" order="1" position="5">
         <batting raw="1-7G-H1*" />
@@ -1141,7 +1141,7 @@
       <team batFirst="Jok" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;—ûKŽŽ‡ V.S. ƒeƒbƒNƒƒCƒc&lt;br&gt;“ŠŽè¬ÑF]Œ´“ŠŽè7‰ñŽ¸“_1Ž©Ó0ŽlŽ€‹…0K?(Ÿ‚¿) 5Ÿ1”s1S “o”Â12&lt;br&gt;   *** –³Ž€‹…Š®“Š ***&lt;br&gt;Ž¸ôF&lt;br&gt;4kato	  1-3G-O	3-9F-O		5-9G-H1*	7-8F-O&lt;br&gt;&lt;br&gt;–‰–‘òA‰Á“¡‘IŽè‚ÍA‚·‚¯‚Á‚ÆB&lt;br&gt;–5‰ñF•½‰ª‘IŽèƒŒƒtƒg‚Ö‚Ìó‚¢ƒtƒ‰ƒC‚ðƒŒƒtƒg‚ªs‚«‰ß‚¬‚ÄƒGƒ‰[B‚Q“_“ü‚é&lt;br&gt;–6‰ñF‰–‘ò‘IŽèE‚P—ÛŒ¡§ƒAƒEƒg&lt;br&gt;–7‰ñFŽÂè‘IŽèA‚R“‚ðŽŽ‚Ý‚é‚Ä”PÁ‘ÞêB&lt;br&gt;–]Œ´“ŠŽè‚Ì–³Ž€‹…Š®“ŠIƒ‚ƒ“ƒXƒ^[ƒY‰I&lt;br&gt;–•½‰ª‘IŽè‚Ì‚Q‚Â‚Ìƒtƒ@ƒCƒ“ƒvƒŒ[‚ð‚Í‚¶‚ß“àŠO–ì‚Æ‚à‚É‚µ‚Ü‚Á‚½Žç”õ‚¾‚Á‚½&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=951216.1&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/12/9" result="1" season="1995" team="ƒeƒbƒNƒƒCƒc">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;ç·´ç¿’è©¦åˆ V.S. ãƒ†ãƒƒã‚¯ãƒ¡ã‚¤ãƒ„&lt;br&gt;æŠ•æ‰‹æˆç¸¾ï¼šæ±ŸåŽŸæŠ•æ‰‹7å›žå¤±ç‚¹1è‡ªè²¬0å››æ­»çƒ0K?(å‹ã¡) 5å‹1æ•—1S ç™»æ¿12&lt;br&gt;   *** ç„¡æ­»çƒå®ŒæŠ• ***&lt;br&gt;å¤±ç­–ï¼š&lt;br&gt;4kato	  1-3G-O	3-9F-O		5-9G-H1*	7-8F-O&lt;br&gt;&lt;br&gt;ï¼Šå¡©æ²¢ã€åŠ è—¤é¸æ‰‹ã¯ã€ã™ã‘ã£ã¨ã€‚&lt;br&gt;ï¼Š5å›žï¼šå¹³å²¡é¸æ‰‹ãƒ¬ãƒ•ãƒˆã¸ã®æµ…ã„ãƒ•ãƒ©ã‚¤ã‚’ãƒ¬ãƒ•ãƒˆãŒè¡ŒãéŽãŽã¦ã‚¨ãƒ©ãƒ¼ã€‚ï¼’ç‚¹å…¥ã‚‹&lt;br&gt;ï¼Š6å›žï¼šå¡©æ²¢é¸æ‰‹ãƒ»ï¼‘å¡ç‰½åˆ¶ã‚¢ã‚¦ãƒˆ&lt;br&gt;ï¼Š7å›žï¼šç¯ å´Žé¸æ‰‹ã€ï¼“ç›—ã‚’è©¦ã¿ã‚‹ã¦æ»æŒ«é€€å ´ã€‚&lt;br&gt;ï¼Šæ±ŸåŽŸæŠ•æ‰‹ã®ç„¡æ­»çƒå®ŒæŠ•ï¼ãƒ¢ãƒ³ã‚¹ã‚¿ãƒ¼ã‚ºåˆï¼&lt;br&gt;ï¼Šå¹³å²¡é¸æ‰‹ã®ï¼’ã¤ã®ãƒ•ã‚¡ã‚¤ãƒ³ãƒ—ãƒ¬ãƒ¼ã‚’ã¯ã˜ã‚å†…å¤–é‡Žã¨ã‚‚ã«ã—ã¾ã£ãŸå®ˆå‚™ã ã£ãŸ&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=951216.1&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/12/9" result="1" season="1995" team="ãƒ†ãƒƒã‚¯ãƒ¡ã‚¤ãƒ„">
     <batters>
       <batter name="sinozaki" order="1" position="5">
         <batting raw="1-K-O" />
@@ -1200,7 +1200,7 @@
       <team batFirst="MonStars" fieldFirst="TM" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;VS ƒhƒ‹ƒtƒBƒ“ƒY&lt;br&gt; ŽžŠÔ‚ÍŽb’è&lt;br&gt;“ŠŽè¬ÑF•½‰ª“ŠŽè6‰ñŽ¸“_4Ž©Ó?ŽlŽ€‹…?K?(Ÿ‚¿)	5Ÿ7”s0S “o”Â13&lt;br&gt;Ž¸ô: —Ñ‚©1 ]Œ´1, —ÑŠÄ“Â1&lt;br&gt;&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=951216.2&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/12/16" game="—ûKŽŽ‡" loc="?" result="1" season="1995" team="ƒhƒ‹ƒtƒBƒ“ƒY" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;VS ãƒ‰ãƒ«ãƒ•ã‚£ãƒ³ã‚º&lt;br&gt; æ™‚é–“ã¯æš«å®š&lt;br&gt;æŠ•æ‰‹æˆç¸¾ï¼šå¹³å²¡æŠ•æ‰‹6å›žå¤±ç‚¹4è‡ªè²¬?å››æ­»çƒ?K?(å‹ã¡)	5å‹7æ•—0S ç™»æ¿13&lt;br&gt;å¤±ç­–: æž—ã‹1 æ±ŸåŽŸ1, æž—ç›£ç£1&lt;br&gt;&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=951216.2&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="95/12/16" game="ç·´ç¿’è©¦åˆ" loc="?" result="1" season="1995" team="ãƒ‰ãƒ«ãƒ•ã‚£ãƒ³ã‚º" time="9:00">
     <batters>
       <batter name="hiro" order="1" position="4">
         <batting raw="1-1F-O" />
@@ -1267,7 +1267,7 @@
       <team batFirst="MonStars" fieldFirst="Dol" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; ŽžŠÔ‚ÍŽb’è&lt;br&gt;“ŠŽè¬ÑF ]Œ´“ŠŽè2‰ñŽ¸“_0Ž©Ó0ŽlŽ€‹…?K?((Ÿ‚¿)5Ÿ1”s1S “o”Â12&lt;br&gt;Ž¸ô: y-osa1&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;/BODY&gt;&lt;br&gt;&lt;/HTML&gt;&lt;br&gt;&lt;br&gt;" date="95/12/16" game="—ûKŽŽ‡" loc="?" result="1" season="1995" team="–²‚Ì“‡ƒuƒ‹[ƒX" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; æ™‚é–“ã¯æš«å®š&lt;br&gt;æŠ•æ‰‹æˆç¸¾ï¼š æ±ŸåŽŸæŠ•æ‰‹2å›žå¤±ç‚¹0è‡ªè²¬0å››æ­»çƒ?K?((å‹ã¡)5å‹1æ•—1S ç™»æ¿12&lt;br&gt;å¤±ç­–: y-osa1&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;/BODY&gt;&lt;br&gt;&lt;/HTML&gt;&lt;br&gt;&lt;br&gt;" date="95/12/16" game="ç·´ç¿’è©¦åˆ" loc="?" result="1" season="1995" team="å¤¢ã®å³¶ãƒ–ãƒ«ãƒ¼ã‚¹" time="11:00">
     <batters>
       <batter name="hiro" order="1" position="4">
         <batting raw="1-9G-O" />

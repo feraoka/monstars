@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="36Troubleshootingyourinstallation.html">
+<LINK REL="Next" HREF="4QuickStartDynamicImageGeneration.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="36Troubleshootingyourinstallation.html">前へ</A> <A HREF="4QuickStartDynamicImageGeneration.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="3_7">3.7 PHP 4をコンパイルする</A></H2>
+<P><I> PHP の構成、またはコンパイルについてすべて説明するということではありません。 JpGraph でよく起動していることで知られる PHP の構成の例ということです。</I></P>
+<P> 以下は、JｐGraph で使用する PHP を構成しコンパイルするために使用される標準の構成です。</P>
+<P> 特別なインストールの必要事項によって、他のオプションは指定される必要がある場合があります、特に外部のライブラリのパスは調整する必要がある場合があります。</P>
+<PRE>
+./configure --prefix=/usr/share \
+--datadir=/usr/share/php \
+--with-apxs=/usr/sbin/apxs \
+--libdir=/usr/share \
+--includedir=/usr/include \
+--bindir=/usr/bin \
+--with-config-file-path=/etc \
+--enable-mbstring --enable-mbregex \
+--with-pdflib=/usr \
+--with-mysql  \
+--with-ttf-dir=/usr/lib \
+--with-freetype-dir=/usr/lib \
+--with-gd --enable-gd-imgstrttf --enable-gd-native-ttf \
+--with-zlib-dir=/usr/lib \
+--with-png-dir=/usr/lib --with-jpeg-dir=/usr/lib --with-xpm-dir=/usr/X11R6 \
+--with-tiff-dir=/usr/lib \
+--enable-ftp \
+--enable-memory-limit --enable-safe-mode \
+--bindir=/usr/bin \
+--enable-bcmath -enable-calendar \
+--enable-ctype --with-ftp \
+--enable-magic-quotes \
+--enable-inline-optimization \
+--with-bz2 \
+--with-iconv
+</PRE>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="36Troubleshootingyourinstallation.html">前へ</A> <A HREF="4QuickStartDynamicImageGeneration.html">次へ</A>
+</BODY>
+</HTML>

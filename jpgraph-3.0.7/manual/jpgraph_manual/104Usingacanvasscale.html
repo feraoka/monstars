@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="103Addinglinesandrectanglestoacanvas.html">
+<LINK REL="Next" HREF="105SampleapplicationDrawingDBschema.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css"><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="103Addinglinesandrectanglestoacanvas.html">前へ</A> <A HREF="105SampleapplicationDrawingDBschema.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="10_4">10.4 キャンバス スケールを使用する</A></H2>
+<P> これまでの関数は座標を絶対値で指定してきました。  しかし、その方法だと画像の倍率を簡単に変更することはできず、低い解像度の場合はほとんど不可能です。特に基本的な形状を描画したい場合などに起こります。</P>
+<P> これを防ぐためには、キャンバスにスケールを使用します。これは &quot;ワークスペース&quot; を定義させます。例えば、座標をX:0-10とY:0-10の間に設定できるようになります。これにより、キャンバス内のオブジェクトの配置がより簡単になります。また、さらに2つの利点があります。</P>
+<UL>
+<LI> キャンバスのサイズを大きくする場合、すべてのオブジェクトは比率が変更されることなく自動的に拡大されます。</LI>
+<LI> 別のスケールを使うだけで、（イメージではなく）描画オブジェクトを縮小・拡大することができます。例えば、(0:10, 0:10)のスケールでオリジナルのイメージを描画する場合、 (0:20, 0:20)のスケールに変更すると描画オブジェクトは半分のサイズに&quot;縮小&quot;されます。</LI>
+</UL>
+<P></P>
+<P> このタイプのスケールを使用するには、&quot;jpgraph_canvtools.php&quot; をインクルードしていることを確認してください。スケーリングクラスに加えて、<A href="../ref/Shape.html#_C_SHAPE"> Shape</A> クラスなどの他の便利なユーティリティ クラスもいくつか存在します。</P>
+<P> スケールの使用はとても簡単です。まず、パラメーターとしてグラフを渡すスケール オブジェクトをインスタンス化し、使用したいスケールを指定します。 <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $scale </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">CanvasScale</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$scale</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$xmax</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$ymax</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P>    そしてあなたのワールド座標とスクリーン座標を変換する CanvasScale クラスのから、変換メソッドを1つ(例えば、<A href="../ref/CanvasScale.html#_CANVASSCALE_TRANSLATE">CanvasScale::Translate()</A>)使うことができます。上記の例のコードを用いるだけで可能になります。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> </FONT><FONT color="#007700">list(</FONT><FONT color="#0000BB">$x1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$y1</FONT><FONT
+color="#007700">) = </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Translate</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$x1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$y1</FONT><FONT
+color="#007700">); <BR>list(</FONT><FONT color="#0000BB">$x2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$y2</FONT><FONT color="#007700">) = </FONT><FONT color="#0000BB">$this</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">scale</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">Translate</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$x2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$y2</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">img</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Line</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$x1</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">$y1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$x2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$y2</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> このパターンは、描画するあらゆるオブジェクトで繰り返されるので、個別のクラスでこれをまとめるのはよい考えです。 また、これはまさにキャンバスツールファイルが<A href="../ref/Shape.html#_C_SHAPE"> Shape</A> と呼ばれるユーティリティ　クラスを持っている理由です。このクラスは、Image クラスの非常によく使われる関数郡のラッパーです。Shapeクラスに関する詳細はクラス リファレンスを参照してください。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$shape </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">Shape</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$g</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">$scale</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> これで Shape クラスの全てのメソッドを使う準備ができました。前の例を手本としてスケールを使用すると、以下にようなソースになります。<DIV class="phpscript">(File: canvasex03.php) <BR><CODE><FONT color="#000000"> <FONT color="#0000BB">&lt;?php <BR></FONT><FONT color="#FF8000">// $Id: canvasex03.php,v 1.1 2002/08/27 20:08:57 aditus Exp $ <BR></FONT><FONT color="#007700">include </FONT><FONT color="#DD0000">&quot;../jpgraph.php&quot;</FONT><FONT color="#007700">; <BR>include </FONT><FONT color="#DD0000">&quot;../jpgraph_canvas.php&quot;</FONT><FONT
+color="#007700">; <BR>include </FONT><FONT color="#DD0000">&quot;../jpgraph_canvtools.php&quot;</FONT><FONT
+color="#007700">; <BR> <BR></FONT><FONT color="#FF8000">// ワーク スペースを定義する <BR></FONT><FONT color="#0000BB">$xmax</FONT><FONT color="#007700">=</FONT><FONT
+color="#0000BB">20</FONT><FONT color="#007700">; <BR></FONT><FONT color="#0000BB">$ymax</FONT><FONT color="#007700">=</FONT><FONT
+color="#0000BB">20</FONT><FONT color="#007700">; <BR> <BR></FONT><FONT color="#FF8000">// キャンバスの設定 <BR></FONT><FONT color="#0000BB">$g </FONT><FONT color="#007700">= new </FONT><FONT
+color="#0000BB">CanvasGraph</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">400</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">200</FONT><FONT
+color="#007700">,</FONT><FONT color="#DD0000">'auto'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetMargin</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">11</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">6</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">11</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetShadow</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetMarginColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;teal&quot;</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// テキストが上書きされてしまうため、テキストを追加する前に  <BR>// プロットエリアとマージンを出力する必要がある<BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">InitFrame</FONT><FONT color="#007700">(); <BR> <BR></FONT><FONT color="#FF8000">// 新しいスケールを作成する <BR></FONT><FONT color="#0000BB">$scale </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">CanvasScale</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$scale</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$xmax</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$ymax</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">//  Shape クラスは、 Image クラスのラッパー <BR>  <BR></FONT><FONT color="#0000BB">$shape </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">Shape</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$g</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$scale</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$shape</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'black'</FONT><FONT color="#007700">); <BR> <BR> <BR></FONT><FONT color="#FF8000">// 黒いラインの追加 <BR></FONT><FONT color="#0000BB">$shape</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'green'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$shape</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">FilledRectangle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">20</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">20</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">//  円 (x,y,直径) の追加 <BR></FONT><FONT color="#0000BB">$shape</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Circle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">14</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// .. 塗りつぶした円 (x,y,直径) の追加 <BR></FONT><FONT color="#0000BB">$shape</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'red'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$shape</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">FilledCircle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">11</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">8</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// .. 長方形の追加 <BR></FONT><FONT color="#0000BB">$shape</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'green'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$shape</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">FilledRectangle</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">15</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">8</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">19</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">14</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// .. 塗りつぶした角の丸い長方形の追加 <BR></FONT><FONT color="#0000BB">$shape</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'green'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$shape</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">FilledRoundedRectangle</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">8</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">6</FONT><FONT color="#007700">); <BR></FONT><FONT color="#FF8000">// .. 暗いボーダーを使用 <BR></FONT><FONT color="#0000BB">$shape</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'darkgreen'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$shape</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">RoundedRectangle</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">8</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">6</FONT><FONT color="#007700">); <BR> <BR> <BR></FONT><FONT color="#FF8000">// グラフを出力する <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(); <BR> <BR></FONT><FONT color="#0000BB">?&gt;<BR></FONT> <BR></FONT></CODE></DIV> 上記のソースは以下の結果をもたらします。<DIV class="example">
+<BR> <A href="exframes/frame_canvasex03.html" target="blank"><IMG border="0"
+HEIGHT="200" src="canvasex03.png" WIDTH="400"></A> <BR><B>図 190:</B>スケールを使用してキャンバスに形を描写する <A href="exframes/frame_canvasex03.html"
+target="blank">[ソース]</A> 
+<P></P>
+</DIV></P>
+<P> より小さなイメージを作成したい場合は、イメージ サイズを変更するだけで、コードを全く変更することなく再構成することが可能です。たとえば、画像のサイズを半分にすると以下のような画像が出力されます。<DIV class="example">
+<BR> <A href="exframes/frame_canvasex04.html" target="blank"><IMG border="0"
+HEIGHT="100" src="canvasex04.png" WIDTH="200"></A> <BR><B>図 191:</B>スケーリングがそのオブジェクトの相対的な位置を維持するので、イメージのサイズを半分に縮小することは簡単です<A href="exframes/frame_canvasex04.html"
+target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P> イメージ サイズを変更せず、オブジェクトの形状を半分にするには単にスケールを2倍の大きさするだけです。<DIV class="example">
+<BR> <A href="exframes/frame_canvasex05.html" target="blank"><IMG border="0"
+HEIGHT="200" src="canvasex05.png" WIDTH="400"></A> <BR><B>図 192:</B>スケールを2倍の大きさにすることで、グラフィック オブジェクトを縮小します<A href="exframes/frame_canvasex05.html" target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> Shape クラスは、1 つの例外を除けば Image クラスのラッパーであるということを述べました。では、例外とは何でしょう。  例外には、&quot;デコボコの長方形&quot;を描画する追加メソッドがあります。デコボコの長方形は、 4つの角のうち1つが長方形の内側に移動した先の長方形です。<A href="../ref/Shape.html#_SHAPE_INDENTEDRECTANGLE">Shape::IndentedRectangle() </A> などの関数を呼びだす、デコボコの長方形を作成することができます。<DIV class="example">
+<BR> <A href="exframes/frame_canvasex06.html" target="blank"><IMG border="0"
+HEIGHT="200" src="canvasex06.png" WIDTH="400"></A> <BR><B>図 193:</B>塗りつぶされたデコボコの長方形の例<A href="exframes/frame_canvasex06.html"
+target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> 最後の注意として、角が丸みを帯びた長方形にテキストを追加できる<A href="../ref/CanvasRectangleText.html#_C_CANVASRECTANGLETEXT">CanvasRectangleText </A>クラスについて述べます。利用できるフォントが全て描画されたサンプル画像はこのクラスを使用しています。詳しくは説明しませんが、クラス リファレンスと 'listfontsex1.php' を参照してください。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="103Addinglinesandrectanglestoacanvas.html">前へ</A> <A HREF="105SampleapplicationDrawingDBschema.html">次へ</A>
+</BODY>
+</HTML>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="475UnderstandingtextalignmentinJpGraph.html">
+<LINK REL="Next" HREF="481Adjustingthetransparency.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="475UnderstandingtextalignmentinJpGraph.html">前へ</A> <A HREF="481Adjustingthetransparency.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="4_8">4.8 JpGraph でカラーを指定する</A></H2>
+<P> カラーは 3 種類の方法で指定できます。 </P>
+<OL>
+<LI> 400 個の定義済みのカラー名を使用できます。 <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB">  SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;yellow:1.2&quot;</FONT><FONT color="#007700">); </FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P> 定義済みのカラー名は係数を用いて調節するこができます。定数は 0 &lt; f &lt; 1 でより暗く、0 あるいは 1 で元のカラー、 f &gt; 1 でより明るくなります。値 &gt; 1は色を明るくします 以下にサンプルを掲載します。  <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">  SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;khaki:0.5&quot;</FONT><FONT color="#007700">); </FONT><FONT color="#FF8000">// &quot;khaki&quot; の暗いバージョン <BR></FONT><FONT color="#0000BB">  SetColor</FONT><FONT color="#007700">(</FONT><FONT
+color="#DD0000">&quot;yellow:1.2&quot;</FONT><FONT color="#007700">); </FONT><FONT color="#FF8000">// &quot;yellow&quot; の明るいバージョン</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+</LI>
+<LI> RGB 形式で指定できます。以下にサンプルを掲載します。   <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB">  SetColor</FONT><FONT color="#007700">(array(</FONT><FONT
+color="#0000BB">65</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">100</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">176</FONT><FONT
+color="#007700">));</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P></P>
+</LI>
+<LI> カラーを 16 進数形式で指定できます。以下にサンプルを掲載します。   <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB">  SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;#A16BFF&quot;</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV>
+<P></P>
+</LI>
+</OL>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="475UnderstandingtextalignmentinJpGraph.html">前へ</A> <A HREF="481Adjustingthetransparency.html">次へ</A>
+</BODY>
+</HTML>

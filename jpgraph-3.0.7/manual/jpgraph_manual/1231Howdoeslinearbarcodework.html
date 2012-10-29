@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="123Barcode.html">
+<LINK REL="Next" HREF="1232Barcodesymbologies.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="123Barcode.html">前へ</A> <A HREF="1232Barcodesymbologies.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="12_3_1">3.1 バーコードの仕組み</A></H3>
+<P>一次元バーコードはサポートされている文字が変換されて、幅の異なる棒線の組合せから成るバーコードとして表示されるように作成されます。バーコードの最初 と最後をスキャナが識別するために特別な「ガード」パターンが使われ、どのタイプのバーコード（シンボロジー）かも同時に識別されます。</P>
+<P>下の図は「Code25」シンボロジーを使用したバーコードを拡大・修正表示したもので、数時の「123」を暗号化しています。最初と最後のガード・パターンを色づけして、3桁の数字がどのように暗号化されたかが解るようにしてみました。</P>
+
+<P><DIV class="example">
+<img src="barcode-explained-1.png" alt="" /><BR>
+<B>図3.1</B> 一次元バーコードの仕組み（Code25の例）</DIV></P>
+
+<P>こでは理解しやすいようにCode25のバーコードを使っています。各文字はスペースで区切られた5本の黒い棒でできています。2本の太い棒と3本の細い棒、即ち2種類の棒5本の並び方ということで25と呼ばれます。一番細い棒の幅は<strong>モジュール幅</strong>とも呼ばれます。他のコードはもっと複雑なパターンで高密度、即ち同じ幅により多くの文字が暗号化されていますが、原則は同じです。</P>
+<P>典型的なスキャナは光を送って反射させ、バーコードを左から右へ読み取ります。白黒の領域の相対的なサイズを計測し、暗号化された文字を変換し直します。</P>
+<P>人が読んで理解できる文字列は、バーコードの下、厳密にはバーコードには含まれない場所に表示されます。これはバーコードの内容を人が理解できるように付けられているだけです。</P>
+<P>バーコードによっては一番後ろにチェック・ディジットを含んでいます。チェック・ディジットは変換されたデータが正しく読み込まれているかを検証するために使われます。</P>
+
+
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="123Barcode.html">前へ</A> <a href="1232Barcodesymbologies.html">次へ</a>
+</BODY>
+</HTML>

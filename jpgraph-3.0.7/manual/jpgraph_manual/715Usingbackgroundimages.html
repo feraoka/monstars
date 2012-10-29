@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="714Addingatabtitle.html">
+<LINK REL="Next" HREF="716Usingabackgroundgradient.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="714Addingatabtitle.html">前へ</A> <A HREF="716Usingabackgroundgradient.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="7_15">7.15 背景イメージを使用する</A></H2>
+<P> 単色の背景カラーではなく、任意のイメージ画像を背景に指定できます。指定できる形式は PNG、JPEG、あるいは GIF 形式で、インストール状況によって異なります。</P>
+<P></P>
+<HR> <SMALL>
+<P><STRONG> GD に関する注意事項:</STRONG>GD 2.x を使う場合は、USE_TRUECOLOR オプションを true に設定する必要があります。これはデフォルトの動作です。この設定を行わないと、画像が黒一色で塗りつぶされてしまいます。</P>
+</SMALL>
+<HR>
+<P> 特定のイメージを背景に使用する場合は、<A href="../ref/Graph.html#_GRAPH_SETBACKGROUNDIMAGE">Graph::SetBackgroundImage()</A> メソッドを使用します。引数では、ファイル名とグラフへの配置方法、画像の形式 (JPG、PNG、GIF 形式の場合) を指定します。画像の形式が auto として指定された場合、ファイルの拡張子から適切な画像形式が判断されます。</P>
+<P>  当然、ファイル名は明白ですが、2 つ目の引数はそうでない場合があります。2 番目の引数は、ファイルにあるイメージをグラフにコピーする方法を指定しています。以下の 4 種類の値を指定できます。</P>
+<OL>
+<LI> BGIMG_ COPY － イメージを変更することなくグラフにコピーします。イメージはグラフの左上隅に配置されます。 </LI>
+<LI> BGIMG_CENTER － イメージを変更することなくグラフにコピーします。イメージはグラフの中央に配置されます。 </LI>
+<LI> BGIMG_FILLFRAME － イメージを伸縮して、グラフの大きさに合わせます。 </LI>
+<LI> BGIMG_FILLPLOT － イメージを伸縮して、グラフのプロット エリアの大きさに合わせます。 </LI>
+</OL>
+<P></P>
+<P></P>
+<HR><STRONG>以下では、画像に基づいたパレットのみを取り扱います。この方法では True color の画像は取り扱えません。True Color の画像を使った場合には、効果が表示されません。</STRONG>
+<HR>
+<P> 背景イメージを、透かしとして使用したい方もいるでしょう。透かしに利用するには、元々のイメージを取得して、そのコントラストや明るさを下げる必要があります。最終的に背景画像として使用する修正した画像を保存します。</P>
+<P> JpGraph では、<A href="../ref/Graph.html#_GRAPH_ADJBACKGROUNDIMAGE">Graph::AdjBackgroundImage()</A> メソッドを使うことで自動的に透かしを作成できます。このメソッドは、画像の彩度と明るさ、コントラストを調節するものです。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">AdjBackgroundImage</FONT><FONT color="#007700">(...)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> グラフに侵入しすぎるイメージを回避する &quot;ウォターカラー&quot; 効果の遂行。 <DIV class="example">
+<BR> <A href="exframes/frame_backgroundex03.html" target="blank"><IMG border="0"
+HEIGHT="200" src="backgroundex03.png" WIDTH="400"></A> <BR><B>図 93:</B>透かしとして背景イメージを使用する例 <A href="exframes/frame_backgroundex03.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="note"><B>注意:</B> 背景イメージは 1998年のトライアンフ タイガーです。このバイクは900 ccの公道以外を走るためのバイクです。</DIV></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="714Addingatabtitle.html">前へ</A> <A HREF="716Usingabackgroundgradient.html">次へ</A>
+</BODY>
+</HTML>

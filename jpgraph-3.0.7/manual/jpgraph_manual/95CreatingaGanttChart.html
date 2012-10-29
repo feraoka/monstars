@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="94ThestructureofaGanttchart.html">
+<LINK REL="Next" HREF="96PositioningobjectsintheGanttplot.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="94ThestructureofaGanttchart.html">前へ</A> <A HREF="96PositioningobjectsintheGanttplot.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_5">9.5 ガント チャートを作成する</A></H2>
+<P> GanttChart()を呼び出して、新しいガント チャートを作成します。ガント チャートの書き方は、通常のJpGraphの場合と同様です。<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> </FONT><FONT color="#007700">function </FONT><FONT color="#0000BB">GanttGraph</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$aWidth</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$aHeight</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$aCachedName</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$aTimeOut</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$aInline</FONT><FONT color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>ただ一つ違うことは、大きさのパラメータ（奥行きや高さ）に-1を指定することができるということです。その場合、大きさは選択したスケールやフォントに応じて自動的に決められます。次の例で、新しいグラフを生成するいくつかの方法を見てみましょう。</P>
+<UL>
+<LI> $graph=new GanttGraph() <BR> グラフのサイズが自動的に決定されます。キャッシュは使用されず、グラフはインラインで作成されます。</LI>
+<LI> $graph=new GanttGraph(-1,-1,&quot;auto&quot;) <BR> グラフのサイズは自動的に決定され、キャッシュが使用されます（キャッシュファイル名はスクリプト名に基づいて付けられます）。また、キャッシュのタイムアウトは使用されず、グラフはインラインで作成されます。</LI>
+<LI> $graph=new GanttGraph(450,-1,&quot;auto&quot;,5) <BR> ほぼ前の例と同じですが、横幅が450ピクセルに固定され、キャッシュされたイメージは5分でタイムアウトされます。</LI>
+<LI> $graph=new GanttGraph(-1,-1,&quot;auto&quot;,5,false) <BR> イメージはインラインで作成されず、キャッシュされたイメージがタイムアウトした場合はそのキャッシュのみが更新され、それ以外の場合は何も起こりません。</LI>
+</UL>
+<P> GanttGraph()はGraph()から全ての（ガントグラフに対して意味のある）メソッドを受け継いでいるので、通常のフレームの影や色などを指定することができます。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="94ThestructureofaGanttchart.html">前へ</A> <A HREF="96PositioningobjectsintheGanttplot.html">次へ</A>
+</BODY>
+</HTML>

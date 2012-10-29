@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="7194Formattingthescalelabels.html">
+<LINK REL="Next" HREF="720Adjustingtheautoscalinglimitsgracevalue.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="7194Formattingthescalelabels.html">前へ</A> <A HREF="720Adjustingtheautoscalinglimitsgracevalue.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_19_5">7.19.5 Y 軸を反転する</A></H3>
+<P> Y 軸を反転することで、グラフをより魅力的に表現できる事があります</P>
+<P> Y 軸を反転すると、最小値が最上部に表示され、軸を下がるにつれて値が増加します。</P>
+<P> JpGraph ではこの機能を直接サポートするわけではありませんが、コードに数行記述するだけでこの機能を実現できます。</P>
+<P> Y 軸を反転したグラフの例を掲載します。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_inyaxisex2.html" target="blank"><IMG border="0"
+HEIGHT="300" src="inyaxisex2.png" WIDTH="400"></A> <BR><B>図 99:</B>Y 軸を反転した例 <A href="exframes/frame_inyaxisex2.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> この効果を得るためには、以下の 2 ステップを踏みます。</P>
+<OL>
+<LI> データの Y 値の正負を逆にする。 </LI>
+<LI> スケール ラベルの正負を逆にするコールバック関数を作成する。 </LI>
+</OL>
+<P> それだけです。 こうすることで、上記のような効果が得られます。 </P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="7194Formattingthescalelabels.html">前へ</A> <A HREF="720Adjustingtheautoscalinglimitsgracevalue.html">次へ</A>
+</BODY>
+</HTML>

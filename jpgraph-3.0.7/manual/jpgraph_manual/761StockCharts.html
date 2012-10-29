@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="76BoxandStockcharts.html">
+<LINK REL="Next" HREF="762BoxPLotsStockchartswithamedianline.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="76BoxandStockcharts.html">前へ</A> <A HREF="762BoxPLotsStockchartswithamedianline.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_6_1">7.6.1 ストック チャート</A></H3>
+<P> ストック チャートは、1 つのデータ点に対して 4 個の異なった値を表す時に使用されます。たとえば、毎日の株価の始値、高値、安値、終値を表す時に使用されます。そのためこのプロットはストック （株価） チャート、もしくはストック プロットと呼ばれます。</P>
+<P> 以下に、ストック チャートのサンプルを掲載します。<DIV class="example">
+<BR> <A href="exframes/frame_stockex1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="stockex1.png" WIDTH="300"></A> <BR><B>図 68:</B>簡単なストック チャートのサンプル <A href="exframes/frame_stockex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> ストック プロットの場合、Y 座標のデータは 4 個の値 (最大値、開始値、終了値、最小値) を保持する必要があります。中央のバーが高値と安値を表しており、バーの両端の線分が出来高と終値を表しています。</P>
+<P> データは以下の規則に従う必要があります。</P>
+<UL>
+<LI> 最小値 &lt; 最大値 </LI>
+<LI> 最小値&lt; 開始値、終了値のうち最小の値 </LI>
+<LI> 最大値&gt; 開始値、終了値のうち最大の値 </LI>
+</UL>
+<P> 開始値と終了値は、どちらが大きくても構いません。そのため、開始値 &gt; 終了値の場合と開始値 &lt; 終了値の 2 種類の場合が考えられ、それぞれ別のカラーが使用できます。これらのカラーは <A href="../ref/StockPlot.html#_STOCKPLOT_SETCOLOR">SetColor()</A> メソッドを使用して設定できます。デフォルトでは、バーが終了値 &gt; 開始値の場合は白色で上塗りされ、逆の場合は赤色で上塗りされます。 </P>
+<P> また、<A href="../ref/StockPlot.html#_STOCKPLOT_SETWIDTH">SetWidth()</A> メソッドを使用して、バーの幅をピクセル単位で設定できます。 </P>
+<P> ストック チャートの最後のバリエーションは、最小値、最大値の終値に水平ラインを表示させるかどうかを決定することです。さらに、<A href="../ref/StockPlot.html#_STOCKPLOT_HIDEENDLINES">HideEndLine()</A>メソッドを使うと、バーと最大値、最小値を結ぶ線分の表示、非表示を切り替えることができます。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="76BoxandStockcharts.html">前へ</A> <A HREF="762BoxPLotsStockchartswithamedianline.html">次へ</A>
+</BODY>
+</HTML>

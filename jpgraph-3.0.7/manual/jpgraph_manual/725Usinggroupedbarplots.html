@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="724Adjustingthealignmentofbarsonatextscale.html">
+<LINK REL="Next" HREF="726Usingaccumulatedbarplots.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="724Adjustingthealignmentofbarsonatextscale.html">前へ</A> <A HREF="726Usingaccumulatedbarplots.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_2_5">7.2.5 グループ化されたバー プロットを使用する</A></H3>
+<P> X 軸上の各目盛りに対して、複数のバー プロットをグループ化できます。バーはお互いの横にすぐに配置され、グループとしてそれぞれのチック マークに集中します。グループにするには、それぞれの棒グラフを作成し、それらを 元に<A href="../ref/GroupBarPlot.html#_C_GROUPBARPLOT">GroupBarPlot()</A> オブジェクトを作成します。<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> </FONT><FONT color="#FF8000">// バー プロットを作成 <BR></FONT><FONT color="#0000BB">$b1plot </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">BarPlot</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$data1y</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$b1plot</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFillColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;orange&quot;</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#0000BB">$b2plot </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">BarPlot</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$data2y</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$b2plot</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFillColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;blue&quot;</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// グループ化されたバー プロットを作成 <BR></FONT><FONT color="#0000BB">$gbplot </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">GroupBarPlot</FONT><FONT color="#007700">(array(</FONT><FONT color="#0000BB">$b1plot</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$b2plot</FONT><FONT color="#007700">)); <BR> <BR></FONT><FONT color="#FF8000">// ．．．そして、それをグラフに追加 <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$gbplot</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 以下にサンプルを掲載します。<DIV class="example">
+<BR> <A href="exframes/frame_example21.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example21.png" WIDTH="310"></A> <BR><B>図 40:</B> グループにしたバー プロット <A href="exframes/frame_example21.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> グループ化するグラフの数に制限はありません。</P>
+<P> GroupBarPlot() の SetWidth() メソッドを使用すると、追加したプロットを合計した横幅を設定できます。また、それぞれのバーの幅は同一になります。グループ化された棒グラフの幅は、デフォルトで 70% になっています。</P>
+<P> グループ化を 0.9 に設定した結果を以下に表示します。<DIV class="example">
+<BR> <A href="exframes/frame_example22.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example22.png" WIDTH="310"></A> <BR><B>図 41:</B> グループ化バー プロットの幅を調節する <A href="exframes/frame_example22.html"
+target="blank">[ソース]</A> 
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="724Adjustingthealignmentofbarsonatextscale.html">前へ</A> <A HREF="726Usingaccumulatedbarplots.html">次へ</A>
+</BODY>
+</HTML>

@@ -2,11 +2,14 @@
 
 TOP=..
 RAW=data/raw
-XML=/dev/shm/xml
+XML=$TOP/data/xml
 
 RAWFILES=`ls $TOP/$RAW |grep -v -E .*~`
 
-mkdir $XML
+if [ ! -d $XML ]; then
+    mkdir $XML
+fi
+
 for FILE in $RAWFILES
 do
 	XMLFILE=${FILE%txt}

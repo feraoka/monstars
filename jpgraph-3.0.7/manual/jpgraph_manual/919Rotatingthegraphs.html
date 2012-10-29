@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="9181Enablingantialiasedlines.html">
+<LINK REL="Next" HREF="920Adjustingbrightnessandcontrastforimagesandbackgrounds.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="9181Enablingantialiasedlines.html">前へ</A> <A HREF="920Adjustingbrightnessandcontrastforimagesandbackgrounds.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_19">9.19 グラフを回転させる</A></H2>
+<P> JpGraph は生成されたグラフを自由な角度で回転させることができます。 これは実際のグラフ（軸、軸タイトル、ラベルなど）と、タイトルやフッターのような固定されていないエレメントにだけ影響します。</P>
+<P> おそらくほとんどの場合、回転はグラフを90度回転するために使われます。たとえば、バープロットを水平に表示したい場合などです。</P>
+<P></P>
+<HR> <SMALL>
+<P><STRONG> パフォーマンス ノート：</STRONG> 回転処理を追加すると、画像を出力する前にグラフの全てのポイントが変換処理を行うので、グラフの生成が遅くなります。 JpGraph は予め計算された変換マトリックスを使用することでこの変換処理を効率的に行います。</P>
+</SMALL>
+<HR>
+<P> デフォルトでは、回転の中心は画像全体の中心点が含まれるプロットエリアの中心点となります。</P>
+<P> 回転をコントロールするには、2 つのメソッドを使用します。</P>
+<UL>
+<LI> <A href="../ref/RotImage.html#_ROTIMAGE_SETANGLE">Graph::image::SetAngle()</A>　回転する角度を指定する。</LI>
+<LI> <A href="../ref/RotImage.html#_ROTIMAGE_SETCENTER">Graph::image::SetCenter()</A>　ピクセルの絶対値で回転の中心を指定する。</LI>
+</UL>
+<P> 使用例は以下のようになります。<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">image</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">SetAngle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">45</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> <STRONG></STRONG>実際には、回転後にグラフを変換できる3つ目の関数があります。 これはおそらくあまり使われないメソッドなので、これ以上説明はしませんが、詳しく知りたい場合は <A href="../ref/RotImage.html#_ROTIMAGE_SETTRANSLATION">Graph:image::SetTranslation()</A> のクラス リファレンスを参照してください。</P>
+<P> イメージを回転するときは、各軸のラベルは回転しないということに注意してください。 このように設計されたのは以下の2つの理由からです。<BR><STRONG> a)</STRONG> ビット マップのフォントは回転できない <BR><STRONG> b)</STRONG> 読みやすさを保つため </P>
+<P> <A
+href="../ref/Axis.html#_AXIS_SETLABELANGLE">Axis::SetLabelAngle()</A> メソッドでラベルを回転することもできます。</P>
+<P> デフォルトでは、ラベルのアンカー ポイントは角度が0度の場合に最適となるので、回転したグラフを綺麗に表示させるために軸のラベルのアンカー ポイントや直線を調整したい場合があるでしょう。 これはメソッド <A href="../ref/Axis.html#_AXIS_SETLABELALIGN">Axis::SetLabelAlign()</A> を使用することで可能になります。 この方法の詳細な説明は<A href="./728Horizontalbargraphs.html">水平バー プロット</A>  を参照してください。</P>
+
+<P> 以下のテーブルは、どのようにして角度を回転させるか、そして角度の中心点が異なると違った効果をもたらすことを示すための例です。 左上のグラフはオリジナルのイメージです。  </P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_rotex0.html" target="blank"><IMG border="0" HEIGHT="170"
+src="rotex0.png" WIDTH="270"></A> <BR><B>図 176:</B>オリジナル イメージ <A href="exframes/frame_rotex0.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_rotex1.html" target="blank"><IMG border="0" HEIGHT="170"
+src="rotex1.png" WIDTH="270"></A> <BR><B>図 177:</B> プロット エリアの中央を中心点として45度回転 <A href="exframes/frame_rotex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_rotex2.html" target="blank"><IMG border="0" HEIGHT="170"
+src="rotex2.png" WIDTH="270"></A> <BR><B>図 178:</B> プロット エリアの中央を中心点として90度回転 <A href="exframes/frame_rotex2.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_rotex3.html" target="blank"><IMG border="0" HEIGHT="170"
+src="rotex3.png" WIDTH="270"></A> <BR><B>図 179:</B> イメージの中央を中心点として45度回転 <A href="exframes/frame_rotex3.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_rotex4.html" target="blank"><IMG border="0" HEIGHT="170"
+src="rotex4.png" WIDTH="270"></A> <BR><B>図 180:</B> イメージの中央を中心点として90度回転 <A href="exframes/frame_rotex4.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_rotex5.html" target="blank"><IMG border="0" HEIGHT="170"
+src="rotex5.png" WIDTH="270"></A> <BR><B>図 181:</B> プロット エリアの左下を中心点として30度回転 <A href="exframes/frame_rotex5.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> これらの画像で示されるように、プロット エリアの中心以外のポイントを回転する場合、プロットが回転後イメージの外に配置されてしまうこともあります。</P>
+<P> 設計上画像の回転はプロットエリアにのみ影響がでるので、余白のカラーが背景カラーと同じときに特に効果的です。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="9181Enablingantialiasedlines.html">前へ</A> <A HREF="920Adjustingbrightnessandcontrastforimagesandbackgrounds.html">次へ</A>
+</BODY>
+</HTML>

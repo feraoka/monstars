@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="shift-jis" ?>
+<?xml version="1.0" encoding="utf8" ?>
 <monstars>
-  <game comment="&lt;br&gt;" date="93/8/14" game="—ûKŽŽ‡" loc="ç—tŽsˆî–ÑŠC•lŒö‰€‚aƒOƒ‰ƒEƒ“ƒh" result="1" season="1993" team="ŽÅ‰YTEC‚Ìƒ`[ƒ€" time="13:00">
+  <game comment="&lt;br&gt;" date="93/8/14" game="ç·´ç¿’è©¦åˆ" loc="åƒè‘‰å¸‚ç¨²æ¯›æµ·æµœå…¬åœ’ï¼¢ã‚°ãƒ©ã‚¦ãƒ³ãƒ‰" result="1" season="1993" team="èŠæµ¦TECã®ãƒãƒ¼ãƒ " time="13:00">
     <scoreboard monstars="fieldFirst">
       <score batFirst="1" fieldFirst="0" inning="1" />
       <score batFirst="0" fieldFirst="3" inning="2" />
@@ -13,7 +13,7 @@
       <team batFirst="S-TEC" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;br&gt;" date="93/8/22" game="—ûKŽŽ‡" loc="‘åˆä•u“ª’†‰›ŠC•lŒö‰€" result="-1" season="1993" team="Amami—³'s" time="9:00">
+  <game comment="&lt;br&gt;" date="93/8/22" game="ç·´ç¿’è©¦åˆ" loc="å¤§äº•åŸ é ­ä¸­å¤®æµ·æµœå…¬åœ’" result="-1" season="1993" team="Amamiç«œ's" time="9:00">
     <scoreboard monstars="batFirst">
       <score batFirst="0" fieldFirst="5" inning="1" />
       <score batFirst="0" fieldFirst="1" inning="2" />
@@ -24,7 +24,7 @@
       <team batFirst="MonStars" fieldFirst="Amami" />
     </scoreboard>
   </game>
-  <game comment="&lt;br&gt;&lt;br&gt;" date="93/9/5" game="•iì‹æ–¯‘å‰ï1‰ñí" loc="Â‹ó‹…‹Zê" result="-1" season="1993" team="Fellows" time="13:30">
+  <game comment="&lt;br&gt;&lt;br&gt;" date="93/9/5" game="å“å·åŒºæ°‘å¤§ä¼š1å›žæˆ¦" loc="é’ç©ºçƒæŠ€å ´" result="-1" season="1993" team="Fellows" time="13:30">
     <scoreboard monstars="batFirst">
       <score batFirst="1" fieldFirst="0" inning="1" />
       <score batFirst="0" fieldFirst="3" inning="2" />
@@ -35,7 +35,7 @@
       <team batFirst="MonStars" fieldFirst="Fellows" />
     </scoreboard>
   </game>
-  <game comment="&lt;br&gt;" date="93/9/15" game="—ûKŽŽ‡" loc="‘åˆä•u“ª’†‰›ŠC•lŒö‰€" result="-1" season="1993" team="ƒ‰ƒK[(–ØŒ´Œ¤)" time="19:00">
+  <game comment="&lt;br&gt;" date="93/9/15" game="ç·´ç¿’è©¦åˆ" loc="å¤§äº•åŸ é ­ä¸­å¤®æµ·æµœå…¬åœ’" result="-1" season="1993" team="ãƒ©ã‚¬ãƒ¼(æœ¨åŽŸç ”)" time="19:00">
     <scoreboard monstars="batFirst">
       <score batFirst="0" fieldFirst="0" inning="1" />
       <score batFirst="0" fieldFirst="0" inning="2" />
@@ -47,7 +47,7 @@
       <team batFirst="MonStars" fieldFirst="R" />
     </scoreboard>
   </game>
-  <game comment="&lt;br&gt;&lt;br&gt;" date="93/9/25" game="—ûKŽŽ‡" loc="Ebina" result="0" season="1993" team="¬•û‚Ì—F’BŠñ‚¹W‚ß" time="9:00">
+  <game comment="&lt;br&gt;&lt;br&gt;" date="93/9/25" game="ç·´ç¿’è©¦åˆ" loc="Ebina" result="0" season="1993" team="å°æ–¹ã®å‹é”å¯„ã›é›†ã‚" time="9:00">
     <scoreboard monstars="batFirst">
       <score batFirst="1" fieldFirst="0" inning="1" />
       <score batFirst="1" fieldFirst="0" inning="2" />
@@ -59,7 +59,7 @@
       <team batFirst="MonStars" fieldFirst="Ogata's" />
     </scoreboard>
   </game>
-  <game comment="&lt;br&gt;&lt;br&gt;" date="93/10/10" result="-1" season="1993" team="ƒWƒ‡[ƒJ[ƒY">
+  <game comment="&lt;br&gt;&lt;br&gt;" date="93/10/10" result="-1" season="1993" team="ã‚¸ãƒ§ãƒ¼ã‚«ãƒ¼ã‚º">
     <batters>
       <batter name="kurachi" order="1" position="1">
         <batting raw="1-7F-O" />
@@ -117,7 +117,7 @@
       <team batFirst="Jokers" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="GAMEINFO 10/16 ? ”Â‹´?&lt;br&gt;&lt;br&gt;" date="93/10/16" season="1993" team="‚³‚ñ‚í">
+  <game comment="GAMEINFO 10/16 ? æ¿æ©‹?&lt;br&gt;&lt;br&gt;" date="93/10/16" season="1993" team="ã•ã‚“ã‚">
     <batters>
       <batter name="kurachi" order="1" position="1">
         <batting raw="1-B" />
@@ -186,7 +186,7 @@
       </batter>
     </batters>
   </game>
-  <game comment="&lt;br&gt;" date="93/12/5" result="-1" season="1993" team="ƒvƒŒƒCƒLƒbƒY">
+  <game comment="&lt;br&gt;" date="93/12/5" result="-1" season="1993" team="ãƒ—ãƒ¬ã‚¤ã‚­ãƒƒã‚º">
     <batters>
       <batter name="ogata" order="1" position="1">
         <batting raw="1-6G-O" />
@@ -249,7 +249,7 @@
       <team batFirst="MonStars" fieldFirst="PlayKids" />
     </scoreboard>
   </game>
-  <game comment="5suzu	2-8O-H1	3-D	4-5F-O	5-7O-HR-1	6-B&lt;br&gt;8itooka 2-K-O	4-6G-O	4-1G-H1	5-K-O&lt;br&gt;" date="93/12/11" season="1993" team="MGƒnƒ}[">
+  <game comment="5suzu	2-8O-H1	3-D	4-5F-O	5-7O-HR-1	6-B&lt;br&gt;8itooka 2-K-O	4-6G-O	4-1G-H1	5-K-O&lt;br&gt;" date="93/12/11" season="1993" team="MGãƒãƒžãƒ¼">
     <batters>
       <batter name="ogata" order="1" position="1">
         <batting raw="1-K-O" />

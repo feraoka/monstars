@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="726Usingaccumulatedbarplots.html">
+<LINK REL="Next" HREF="728Horizontalbargraphs.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="726Usingaccumulatedbarplots.html">前へ</A> <A HREF="728Horizontalbargraphs.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_2_7">7.2.7 グループ化された積み上げバー プロットを使用する</A></H3>
+<P> 積み上げバー プロットをグループにすることもできます。この場合は複数の積み上げバー プロットを追加します。   <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> </FONT><FONT color="#FF8000">// 4 つのバー プロットをすべて作成 <BR></FONT><FONT color="#0000BB">$b1plot </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">BarPlot</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$data1y</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$b1plot</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFillColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;orange&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$b2plot </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">BarPlot</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$data2y</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$b2plot</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFillColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;blue&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$b3plot </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">BarPlot</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$data3y</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$b3plot</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFillColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;green&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$b4plot </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">BarPlot</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$data4y</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$b4plot</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFillColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;brown&quot;</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// 蓄積されたバー プロットを作成 <BR></FONT><FONT color="#0000BB">$ab1plot </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">AccBarPlot</FONT><FONT color="#007700">(array(</FONT><FONT color="#0000BB">$b1plot</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$b2plot</FONT><FONT color="#007700">)); <BR></FONT><FONT color="#0000BB">$ab2plot </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">AccBarPlot</FONT><FONT color="#007700">(array(</FONT><FONT color="#0000BB">$b3plot</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$b4plot</FONT><FONT color="#007700">)); <BR> <BR></FONT><FONT color="#FF8000">// グループ化されたバー プロットを作成 <BR></FONT><FONT color="#0000BB">$gbplot </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">GroupBarPlot</FONT><FONT color="#007700">(array(</FONT><FONT color="#0000BB">$ab1plot</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$ab2plot</FONT><FONT color="#007700">)); <BR> <BR></FONT><FONT color="#FF8000">// ．．．そして、それをグラフに追加 <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$gbplot</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> これにより、以下のグラフが得られます。<DIV class="example">
+<BR> <A href="exframes/frame_example24.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example24.png" WIDTH="310"></A> <BR><B>図 43:</B>積み上げ棒グラフをグループ化する <A href="exframes/frame_example24.html"
+target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="726Usingaccumulatedbarplots.html">前へ</A> <A HREF="728Horizontalbargraphs.html">次へ</A>
+</BODY>
+</HTML>

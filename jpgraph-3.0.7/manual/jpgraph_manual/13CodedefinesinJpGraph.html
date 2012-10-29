@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="063SpecifyFilledContour.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A>  <A HREF="063SpecifyFilledContour.html">前へ</A>
+<HR NOSHADE>
+<H1><A NAME="13"> JpGraphの設定を変更する</A></H1>
+<P> JpGraph の多くの設定は環境設定ファイル &quot;jpg-config.inc.php&quot;内の DEFINE文 によって変更することができます。 これらの設定の多くは一般的な設定で動作するようなデフォルト値が入力されています。</P>
+<P> ここでは、すべての定数とそのデフォルトの値を記述しています。</P>
+<P></P>
+<TABLE cellpadding="3" cellspacing="0" class="codedefines">
+<TR><TH>定義、デフォルト値</TH><TH>解説</TH></TR>
+<TR><TD valign="top">&quot;CACHE_DIR&quot;,&quot;/tmp/jpgraph_cache/&quot;</TD><TD>キャッシュを保存するディレクトリの絶対パスです。このディレクトリは、<STRONG>PHPによる読み込み、書き込みが可能でなければなりません</STRONG>。最後に '/' の文字を付けるのは必須です。</TD></TR>
+<TR><TD valign="top">&quot;TTF_DIR&quot;,&quot;/usr/local/fonts/ttf/&quot;</TD><TD>
+JpGraphで使用する TTF フォントを格納するディレクトリを指定します'/' が終わりに必須です。格納するフォントはJpGraphが読み込めるような命名規則にしたがっている必要があります。</TD>
+</TR>
+<TR><TD valign="top">&quot;CSIMCACHE_DIR&quot;, &quot;csimcache/&quot;</TD><TD>CSIM を使用したグラフのキャッシュを保存するディレクトリです。 '/' が終わりに必須です。キャッシュを使用する設定の CSIM グラフがここにキャッシュされます。 ディレクトリはPHPが見ることができるようなファイルシステム名でなければなりません。 また、http バージョンは htdocs ディレクトリと関連するHTTPサーバーが見ることができるものを除いて同じディレクトリであるべきです。 相対パスが指定された場合、イメージ スクリプトが実行された場所からの相対パスとなります。注意: デフォルトの設定では、イメージ スクリプトが実行されたディレクトリにサブディレクトリを作り、すべてのファイルをそこに保存します。 もちろん、このディレクトリも PHP のプロセスによる書き込みが可能である必要があります。</TD></TR>
+<TR><TD valign="top">&quot;CSIMCACHE_HTTP_DIR&quot;, &quot;csimcache&quot;</TD><TD>HTTP形式の CSIM を使用したグラフのキャッシュを保存するディレクトリです。 '/' が終わりに必須です。キャッシュを使用する設定の CSIM グラフがここにキャッシュされます。 ディレクトリはPHPが見ることができるようなファイルシステム名でなければなりません。 また、http バージョンは htdocs ディレクトリと関連するHTTPサーバーが見ることができるものを除いて同じディレクトリであるべきです。 相対パスが指定された場合、イメージ スクリプトが実行された場所からの相対パスとなります。注意: デフォルトの設定では、イメージ スクリプトが実行されたディレクトリにサブディレクトリを作り、すべてのファイルをそこに保存します。 もちろん、このディレクトリも PHP のプロセスによる書き込みが可能である必要があります。</TD></TR>
+<TR><TD valign="top">&quot;CHINESE_TTF_FONT&quot;, &quot;bkai00mp.ttf&quot;</TD><TD> FF_CHINESE aka FF_BIG5 で使用される TTF ファイルのファイル名です。これは、フォント ファミリーが FF_CHINESE、またはFF_BIG5 のどちらかで指定される場合に使用されます。</TD></TR>
+<TR><TD valign="top">&quot;LANGUAGE_CYRILLIC&quot;, false</TD><TD> キリル言語をサポートします。</TD></TR>
+<TR><TD valign="top">&quot;CYRILLIC_FROM_WINDOWS&quot;, false</TD><TD> この設定を true に設定した場合、入力テキストは windows 1251 であると想定されて変換されます。false に設定した場合は koi8-r と仮定されます。</TD></TR>
+<TR><TD valign="top">'MINCHO_TTF_FONT', 'ipam.ttf'</TD><TD> FF_MINCHO で使用される日本語の TrueType フォント名を設定します。</TD></TR>
+<TR><TD valign="top">'PMINCHO_TTF_FONT', 'ipamp.ttf'</TD><TD> FF_PMINCHO で使用される日本語の TrueType フォント名を設定します。</TD></TR>
+<TR><TD valign="top">'GOTHIC_TTF_FONT', 'ipag.ttf'</TD><TD> FF_GOTHIC で使用される日本語の TrueType フォント名を設定します。</TD></TR>
+<TR><TD valign="top">'PGOTHIC_TTF_FONT', 'ipagp.ttf'</TD><TD> FF_PGOTHIC で使用される日本語の TrueType フォント名を設定します。</TD></TR>
+<TR><TD valign="top">&quot;INSTALL_PHP_ERR_HANDLER&quot;, false</TD><TD> ライブラリがデフォルトのエラーハンドラにグラフィカルなエラーメッセージを生成させるかどうかを設定する。 画像が期待されるページでエラーが起きた際、赤い&times;印が表示される代わりにエラー メッセージを画像で表示するようになるので、開発中はとても便利な設定です。</TD></TR>
+<TR><TD valign="top">&quot;CATCH_PHPERRMSG&quot;, true</TD><TD> ライブラリが global php_errmsg 文字列を調査し、いくつかのエラーをグラフィカルに表示するようにします。 たとえば、ヘッダー ファイルが見つからないためグラフが作成されず、赤い&times;印だけが表示されてしまうような場合にこれはとても便利です。 稼動中のサイトではこれは false に設定しておくべきです。</TD></TR>
+<TR><TD valign="top">&quot;USE_LIBRARY_GD2&quot;,false</TD><TD>GD 2.x を使用するか GD 1.x を使用するかを指定します。もしGD 2.xをインストールしているのなら、曲線の描画が綺麗になるので true に設定しておくことをお勧めします。もし GD2 をインストールしていないのならば、false に設定しておかなければなりません。</TD></TR>
+<TR><TD valign="top">'USE_TRUECOLOR',true</TD><TD>truecolor を使用するかどうかを設定します。注意 1.GD 2.0.2 以上の場合のみ使用することができます。注意 2.Win32 の GD 2.0.1 + PHP 4.0.6 の環境で truecolor を使用しようとするとクラッシュします。まだ GD 2.x が安定しているとは(特にWin32では)考えられないので、Truecolorサポートは、アルファ版だと考えてください。注意 3.背景画像の使用は GD2 を有効にしなければなりません。注意４:もし有効にしていたら、 truetypeフォントはとても見た目が悪くなるでしょう。⇒それらのバグが GD 2.01 で修正されるまで、同じ画像による背景画像と truetypeフォントを同時に表示させることはできません。</TD></TR>
+<TR><TD valign="top">&quot;USE_CACHE&quot;,false</TD><TD>キャッシュファイルを使用するかどうかを設定します。これを false に設定すると、キャッシュディレクトリにファイルが作成されないようになります。READ_CACHE を false に設定しても、キャッシュファイルは作成されています。USE_CACHE=false を設定することで、キャッシュファイルは生成されないようになります。</TD></TR>
+<TR><TD valign="top">&quot;READ_CACHE&quot;,true</TD><TD>画像の生成前にキャッシュファイルを探すかどうかを設定します。これを false に設定すると、画像を再生成した際にキャッシュの読み込みをせずに画像を作成するようになります。キャッシュの読み込みをしないように設定していても、画像が生成されるたびにキャッシュファイルは更新されることに注意してください。&quot;USE_CACHE&quot; も設定するようにしてください。</TD>
+</TR>
+<TR><TD valign="top">&quot;DEFAULT_GFORMAT&quot;,&quot;auto&quot;</TD><TD>これを &quot;auto&quot; に設定すると、画像の形式は png gif jpg の中から最適なものが選択されます。（サポートされる形式は、あなたのPHPの設定に依存します。）</TD></TR>
+<TR><TD valign="top">&quot;USE_IMAGE_ERROR_HANDLER&quot;,true</TD><TD> エラーハンドラが画像ベースかテキストベースかを設定します。画像ベースの場合、スクリプトは常に画像形式でエラーを返すのでとても作業がしやすくなります。</TD></TR>
+<TR><TD valign="top">&quot;USE_APPROX_COLORS&quot;,true</TD><TD>もしカラーパレットがいっぱいだったら、似ている色は近似値を使用してまとめるようにします。もし画像背景やグラデーションを使う予定なら、これを使用するのは良い考えかもしれません。もしそうでなければ、カラーパレットが使い尽くされたとエラーが出るでしょう。近似値を使用する際の欠点は、指定した通りの色が表示されないかもしれないということです。注意１:色数の制限が無いので、これは、true color イメージではなくパレットイメージを適用させるだけです。</TD></TR>
+<TR><TD valign="top">&quot;ERR_DEPRECATED&quot;,false</TD><TD>反対する関数の使用とパラメーターは、致命的なエラーを与えるべきでしょうか？(コードが今後の証拠であるかどうかチェックするために、役に立ちます。)</TD></TR>
+<TR><TD valign="top">&quot;BRAND_TIMING&quot;,false</TD><TD>各画像を作るのにかかる時間を、それぞれ作成された画像の左下に表示させます。これはグラフを作る際の性能の測定に役に立ちます。</TD>
+</TR>
+<TR><TD valign="top">&quot;BRAND_TIME_FORMAT&quot;,&quot;Generated in: %01.3fs&quot;</TD><TD>
+&quot;BRAND_TIMING&quot; で表示される、画像の作成時間の表示フォーマットを設定します。</TD></TR>
+</TABLE>
+<P> 以下の定義は、多くの場合変更する必要はありません。</P>
+<P></P>
+<TABLE cellpadding="3" cellspacing="0" class="codedefines">
+<TR><TH>定義、デフォルト値</TH><TH>解説</TH></TR>
+<TR><TD valign="top">&quot;CACHE_FILE_GROUP&quot;,&quot;wwwadmin&quot;</TD><TD>キャッシュされたファイルがどのグループに属するかを設定します。( &quot;&quot; に設定すると、デフォルトグループの &quot;PHP-user&quot; が与えられます) Apacheユーザーは指定されたグループのメンバーでなくてはなりません。そうでなければ指定されたグループをApacheが設定することが不可能になります。</TD></TR>
+<TR><TD valign="top">&quot;CACHE_FILE_MOD&quot;,0664</TD><TD>キャッシュされたファイルのパーミッションを設定します。( &quot;&quot; を設定すると、&quot;PHP-user&quot; のデフォルトのパーミッションが与えられます。)</TD></TR>
+<TR><TD valign="top">&quot;USE_BRESENHAM&quot;,false</TD><TD>Bresenham円のアルゴリズムを使用するか、組み込まれている Arc() 関数を使用するかを決定します。Bresenham はより綺麗な円を描くことができますが、CPUに高い負荷をかけ、GDのArc() 関数よりも処理が遅くなります。速度を重視するために、デフォルトでは false に設定されています。</TD></TR>
+<TR><TD valign="top">&quot;_CSIM_SPECIALFILE&quot;,&quot;_csim_special_&quot;</TD><TD>
+GetHTMLCSIM() 関数に内部的に使用される Graph::Stroke() の呼び出しにおいて、イメージマップを計算だけを行うということを示す特別なファイル名です。  </TD></TR>
+<TR><TD valign="top">&quot;_CSIM_DISPLAY&quot;,&quot;_jpg_csimd&quot;</TD><TD>イメージマップを使用する際、完全なCSIM HTMLページではなく、ただ画像の生成だけを行わせるということをスクリプトに知らせるための HTTP GET 引数です。</TD></TR>
+</TABLE>
+ &nbsp;
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</DIV><HR NOSHADE>
+<A HREF="toc.html">目次</A>  <A HREF="063SpecifyFilledContour.html">前へ</A>
+</BODY>
+</HTML>

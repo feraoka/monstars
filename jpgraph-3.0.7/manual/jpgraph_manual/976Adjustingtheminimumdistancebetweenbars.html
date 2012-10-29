@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="975Addingmarkerstoaganttbar.html">
+<LINK REL="Next" HREF="98Formattingthescaleheaders.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="975Addingmarkerstoaganttbar.html">前へ</A> <A HREF="98Formattingthescaleheaders.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="9_7_6">9.7.6 バーの間の最小距離を調整する</A>
+</H3>
+<P> 各バーの高さを確保された高さの100％として設定すると、一つ目のバーの下にもうひとつのアクティビティバーを加えることによってどんなことが起こるのか見てみましょう。そして、次の２行を前の例に付け加えることによって、各バーの高さを設定された高さの100％として設定するとどうなるのか見てみましょう（ここでは追加するもうひとつのバーについての追加行は省略してあります）。 <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$activity</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetHeight</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">1.0</FONT><FONT
+color="#007700">); <BR></FONT><FONT color="#0000BB">$activity2</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetHeight</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">1.0</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>  （ [0..1] の範囲の値は設定された高さの割合として解釈され、一方、1より大きな値はピクセルの絶対値として解釈されることに注意してください。）<DIV class="example">
+<BR> <A href="exframes/frame_ganttex10.html" target="blank"><IMG border="0"
+HEIGHT="243" src="ganttex10.png" WIDTH="502"></A> <BR><B>図 157:</B>それぞれのバーの高さを100％に設定する <A href="exframes/frame_ganttex10.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P>   バーが確保された利用可能な高さの100%を占めるように指定したので、それぞれのバーの間には余白がありません。では、バーを絶対値で10ピクセルと指定したらどうなるのでしょうか。<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB">$activity</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">SetHeight</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">10</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$activity2</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetHeight</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">10</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 代わりに、次のような結果を得るでしょう。<DIV class="example">
+<BR> <A href="exframes/frame_ganttex11.html" target="blank"><IMG border="0"
+HEIGHT="243" src="ganttex11.png" WIDTH="502"></A> <BR><B>図 158:</B> 両方のバーの高さを、10ピクセルに設定する <A href="exframes/frame_ganttex11.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> それでは、私たちは実際にどのようなことが出来るのでしょう。各バーに対して確保された高さが、タイトルを含むバーの高さの最大値であることを覚えているでしょうか。これは、２つのバーが決して重ならないということを保証します。タイトルがお互いあまり近くにならないようにするために 、タイトル間に余白を指定する<B>Vertical Label Margin</B> があります。余白の量は、タイトルの高さのパーセントで指定します。これを設定するためには、以下の文を使用します。  <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> GanttGraph</FONT><FONT color="#007700">::</FONT><FONT color="#0000BB">SetLabelVMarginFactor</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$aMargin</FONT><FONT color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 前の例のマージンを0に設定すると、どのように変化するのかを見てみましょう。<DIV class="example">
+<BR> <A href="exframes/frame_ganttex12.html" target="blank"><IMG border="0"
+HEIGHT="212" src="ganttex12.png" WIDTH="502"></A> <BR><B>図 159:</B> ラベルの縦方向のマージンを0%に設定する<A href="exframes/frame_ganttex12.html"
+target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P> 予想されたように、余白が全く加えられていないので、二つのバーはほとんど接触している状態です。2つのバーに余分な右マーカーがない場合、とても圧縮されたように見えます。</P>
+<P> デフォルトでは、縦方向の余白は 40% に設定されています。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="975Addingmarkerstoaganttbar.html">前へ</A> <A HREF="98Formattingthescaleheaders.html">次へ</A>
+</BODY>
+</HTML>

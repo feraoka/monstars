@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="824Specifyingandadjustinglabelsonpieplots.html">
+<LINK REL="Next" HREF="826Addingdropshadowstotheslices.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="824Specifyingandadjustinglabelsonpieplots.html">前へ</A> <A HREF="826Addingdropshadowstotheslices.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="8_2_5">8.2.5 円プロットのスライスに色とテーマを指定する</A></H3>
+<P> 他に可能な変更としては、スライスのカラーを変更することが挙げられます。これを行うには 2 通りの方法があります。1 つはそれぞれのスライスのカラーを<A href="../ref/PiePlot.html#_PIEPLOT_SETSLICECOLORS">SetSliceColors()</A> メソッドで手動で変更することです。もしスライス数よりも少ない数のカラーを指定した場合は、カラーのローテーションが行われます。 </P>
+<P> もう 1 つの方法は、定義済みのテーマを使用する方法です。テーマとは、あらかじめ定義されたカラーの集合で、スライスのカラーが全て決められています。テーマを使用するには、<A href="../ref/PiePlot.html#_PIEPLOT_SETTHEME">SetTheme()</A>メソッドを使用します。現在、以下のテーマが使用できます。 </P>
+<UL>
+<LI> earth テーマ </LI>
+<LI> pastel テーマ </LI>
+<LI> sand テーマ </LI>
+<LI> water テーマ </LI>
+</UL>
+<P> テーマの例を下に紹介します。<DIV class="example">
+<BR> <A href="exframes/frame_example28.html" target="blank"><IMG border="0"
+HEIGHT="150" src="example28.png" WIDTH="150"></A> <BR><B>図 132：</B> <A href="exframes/frame_example28.html" target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_example28.1.html" target="blank"><IMG border="0"
+HEIGHT="150" src="example28.1.png" WIDTH="150"></A> <BR><B>図 133：</B> <A href="exframes/frame_example28.1.html" target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_example28.2.html" target="blank"><IMG border="0"
+HEIGHT="150" src="example28.2.png" WIDTH="150"></A> <BR><B>図 134:</B> <A href="exframes/frame_example28.2.html" target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_example28.3.html" target="blank"><IMG border="0"
+HEIGHT="150" src="example28.3.png" WIDTH="150"></A> <BR><B>図 135：</B> <A href="exframes/frame_example28.3.html" target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> 使用できる色をすべて知りたい場合は、<A href="./483Themecolorsforpies.html">こちら</A>を参照してください。</P>
+<P> また、各スライスの枠線を取り外したり、カラーを変更したりすることもできます。これには、<A href="../ref/PiePlot.html#_PIEPLOT_SHOWBORDER">ShowBorder()</A> メソッドを使用します。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="824Specifyingandadjustinglabelsonpieplots.html">前へ</A> <A HREF="826Addingdropshadowstotheslices.html">次へ</A>
+</BODY>
+</HTML>

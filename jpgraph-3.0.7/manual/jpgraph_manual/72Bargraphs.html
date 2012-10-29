@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="7117Addingplotmarkstoalineplot.html">
+<LINK REL="Next" HREF="721Adjustingthewidthofthebars.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="7117Addingplotmarkstoalineplot.html">前へ</A> <A HREF="721Adjustingthewidthofthebars.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="7_2">7.2 バー プロット</A></H2>
+<P> Jpgraph では 2D のバー プロットの描画もサポートします。バー プロットの使用には、jpgraph_bar.php ファイルを事前にインクルードしておく必要があります。</P>
+<P> バー プロットの使用は非常に簡単で、これまでのサンプルで解説してきたライン プロットと同様です。[12, 8, 19, 3, 10, 5] というデータ配列があった場合、バー プロットで表示することを考えましょう。以下に最も簡単な例を掲載します：<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $datay</FONT><FONT color="#007700">=array(</FONT><FONT
+color="#0000BB">12</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">8</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">19</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">10</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">5</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$bplot </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">BarPlot</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$datay</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$bplot</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> このサンプルをこれまでの例 と比較すると、単にライン プロットを呼び出している部分 (LinePlot) をバー プロット <A href="../ref/BarPlot.html#_C_BARPLOT">BarPplot().</A> に置き換えているだけです。</P>
+<P> また、理由は後述しますが、X 軸にはテキスト スケールを使用することを推奨します。この2 つの単純な変更で、以下のイメージに表示されるバー グラフを得ます。<DIV class="example">
+<BR> <A href="exframes/frame_example18.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example18.png" WIDTH="300"></A> <BR><B>図 31:</B>簡単なエラー バーを作成する <A href="exframes/frame_example18.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> 当然、バー グラフの外観を変更することができます。カラーを上塗りするには、<A href="../ref/BarPlot.html#_BARPLOT_SETFILLCOLOR">BarPlot::SetFillColor()</A> メソッドを使用します。これらの修正を適応すると、グラフの外見は下記のようになります。<DIV class="example">
+<BR> <A href="exframes/frame_example19.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example19.png" WIDTH="300"></A> <BR><B>図 32:</B>簡単なエラー バーを作成する <A href="exframes/frame_example19.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="note"><B>注意:</B>この二つのグラフでは、X スケールの表示が違っています。バー プロットは、X 軸にテキスト スケールを使用する場合、チェック マークの間で自動的に中央寄せされます。リニア スケールを使用する場合は、X 値の左端からプロットが描かれます。この例を、以下に表示します。</DIV><DIV class="example">
+<BR> <A href="exframes/frame_example19.1.html" target="blank"><IMG border="0"
+HEIGHT="100" src="example19.1.png" WIDTH="260"></A> <BR><B>図 33:</B>リニアな X 軸を使用したバー グラフ <A href="exframes/frame_example19.1.html" target="blank">[ソース]</A>
+ 
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="7117Addingplotmarkstoalineplot.html">前へ</A> <A HREF="721Adjustingthewidthofthebars.html">次へ</A>
+</BODY>
+</HTML>

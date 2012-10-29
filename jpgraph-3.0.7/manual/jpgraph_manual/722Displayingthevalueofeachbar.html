@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="721Adjustingthewidthofthebars.html">
+<LINK REL="Next" HREF="723Addingadropshadowtothebar.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="721Adjustingthewidthofthebars.html">前へ</A> <A HREF="723Addingadropshadowtothebar.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_2_2">7.2.2 各バーの値を表示する</A></H3>
+<P> 各バーの上部にそのバーの値を表示できます。これを行うには、バーの value プロパティを使用します。例として、以下の行を付け足します。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $barplot</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">value</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Show</FONT><FONT color="#007700">();</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> これにより、以下の結果が得られます。<DIV class="example">
+<BR> <A href="exframes/frame_example20.1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example20.1.png" WIDTH="300"></A> <BR><B>図 35:</B>各バーの値を表示する <A href="exframes/frame_example20.1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> このグラフは少し見づらくなっています。JpGraph の自動スケール機能は、バーが枠内に入り込む最大の大きさで表示します。そのため、バーの上に値を追加すると、グラフの上部にはみ出てしまいます。これを回避するためには、<A href="../ref/LinearScale.html#_LINEARSCALE_SETGRACE">SetGrace()</A> メソッドを使用して、軸から指定した割合分だけ余白を作成します。今回の場合、上部に 20% 分の余白を作成するには、以下の通りにします。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">yaxis</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetGrace</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">20</FONT><FONT
+color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+</P>
+<P></P>
+<P> これにより、以下の結果が得られます。<DIV class="example">
+<BR> <A href="exframes/frame_example20.2.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example20.2.png" WIDTH="300"></A> <BR><B>図 36:</B>グラフの上部に余白を作り、値を適切に表示する <A
+href="exframes/frame_example20.2.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> また、データ値を表示する位置を <A href="../ref/BarPlot.html#_BARPLOT_SETVALUEPOS">BarPlot::SetValuePos()</A> メソッドで変更できます。位置は、top (上部、デフォルト)、center (中央)、bottom (下部) から選択できます。以下にcenter を指定した場合のグラフの例を紹介します。また、今回の例では値に小数点がつかないよう、書式の調整も行いました。<DIV class="example">
+<BR> <A href="exframes/frame_example20.5.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example20.5.png" WIDTH="300"></A> <BR><B>図 37:</B>バーの中央に値を表示する<A href="exframes/frame_example20.5.html"
+target="blank"> [ソース]</A> 
+<P></P>
+</DIV></P>
+<P> JpGraph では、データ値の表示形式をより詳細に指定できます。例として、回転やフォントの変更、カラーの変更などが可能です。また、実際に表示する値を printf() 形式の書式で指定することや、書式のコールバック関数を使ってより高度な処理を行えます。例を以下に表します。</P>
+<P>  何ができるかを示すため、多くの説明無しで調査できる別な例を紹介します。ただし、0 度か 90 度以外の角度をつけたテキストを表示するためには、TrueType フォントを使用します。フォントを指定するには、SetFont() メソッドを使用します。<DIV class="example">
+<BR> <A href="exframes/frame_example20.3.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example20.3.png" WIDTH="300"></A> <BR><B>図 38:</B>より詳細に値の書式を設定する <A href="exframes/frame_example20.3.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="721Adjustingthewidthofthebars.html">前へ</A> <A HREF="723Addingadropshadowtothebar.html">次へ</A>
+</BODY>
+</HTML>

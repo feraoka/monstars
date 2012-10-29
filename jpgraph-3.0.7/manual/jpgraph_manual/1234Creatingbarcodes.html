@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="1233Features.html">
+<LINK REL="Next" HREF="1235Errorhandling.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="1233Features.html">前へ</A> <A HREF="1235Errorhandling.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="12_3_4">3.4 バーコードを作成する -クイック・スタート-</A></H3>
+<P>一次元バーコードの作成はすべて、一律の手順に従います。</P>
+
+<ul type="1">
+<li>選択したコードの暗号化インスタンスを作成する。</li>
+<li>選択したアウトプット・フォーマット（画像かポストスクリプト）のバックエンド・インスタンスを作成する。</li>
+<li>データを暗号化し、バーコードを生成する。</li>
+</ul>
+
+<P>通常、基本バーコードを作成するには３行のコードしか必要としません。</P>
+<P>例えば、次のスクリプトは、「CODE 39」というシンボロジーを使用し文字列「ABC123」を表す画像を暗号化したバーコードを作成するものです。</P>
+
+<div class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB">&lt;?php<br /> </span><span style="color: #007700">require_once(</span><span style="color: #DD0000">'jpgraph_barcode.php'</span><span style="color: #007700">);<br /> &nbsp;<br /> </span><span style="color: #0000BB">$symbology&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">BarcodeFactory</span><span style="color: #007700">::</span><span style="color: #0000BB">Create&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">ENCODING_CODE39&nbsp;</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">$barcode&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">BackendFactory&nbsp;</span><span style="color: #007700">::</span><span style="color: #0000BB">Create</span><span style="color: #007700">(</span><span style="color: #0000BB">BACKEND_IMAGE</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$symbology</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">$barcode&nbsp;</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Stroke</span><span style="color: #007700">(</span><span style="color: #DD0000">'ABC123'</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">?&gt;</span> </span> </code></div>
+
+<P>作成されるバーコードは次のようになります。</P>
+
+<P><DIV class="example" style="margin-left: 2em;">
+<img src="barcode_c39_abc123_ex1.png" alt="" /><BR>
+<B>図3.4_1</B> CODE39で暗号化した「ABC123」
+</DIV></P>
+
+<P>このことかスクリプトから解るように、ライブラリへの基本インターフェースはシンボロジーによる暗号化とバックエンド出力という２つの理論上の「ファクト リー」を利用します。この設計はライブラリのエンド・ユーザーにとって、わかりやすい新しい出力フォーマットと新しいシンボロジーを追加することになります。</P>
+
+<P>「CODE 128」というバーコードを使用してデータ文字列を暗号化する場合、最初の行だけを変更し、下記のように記述します。</P>
+
+<div class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB">&lt;?php<br /> </span><span style="color: #007700">require_once(</span><span style="color: #DD0000">'jpgraph_barcode.php'</span><span style="color: #007700">);<br /> &nbsp;<br /> </span><span style="color: #0000BB">$symbology&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">BarcodeFactory</span><span style="color: #007700">::</span><span style="color: #0000BB">Create&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">ENCODING_CODE128&nbsp;</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">$barcode&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">BackendFactory&nbsp;</span><span style="color: #007700">::</span><span style="color: #0000BB">Create</span><span style="color: #007700">(</span><span style="color: #0000BB">BACKEND_IMAGE</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$symbology</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">$barcode&nbsp;</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Stroke</span><span style="color: #007700">(</span><span style="color: #DD0000">'ABC123'</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">?&gt;</span> </span> </code></div>
+
+<P>作成されるバーコードは次のようになります。</P>
+
+<P><DIV class="example" style="margin-left: 2em;">
+<img src="barcode_c128_abc123_ex1.png" alt="" /><BR>
+<B>図3.4_2</B> CODE 128で暗号化した「ABC123」
+</DIV></P>
+
+<P>上の２つの例で見たように、記号定数を使うことにより、バックエンド画像とシンボロジーの両方を指定できます。ライブラリがサポートしているシンボロジーを指定する記号定数は下記のとおりです。</P>
+
+<ul type="1">
+<li>ENCODING_EAN128</li>
+<li>ENCODING_EAN13</li>
+<li>ENCODING_EAN8</li>
+<li>ENCODING_UPCA</li>
+<li>ENCODING_UPCE</li>
+<li>ENCODING_CODE39</li>
+<li>ENCODING_CODE128</li>
+<li>ENCODING_CODE25</li>
+<li>ENCODING_CODEI25</li>
+<li>ENCODING_CODABAR</li>
+<li>ENCODING_CODE11</li>
+<li>ENCODING_BOOKLAND</li>
+</ul>
+
+<!--<P>個々のシンボロジーの使用方法と典型的な応用例はSection 23.9で説明しています。</P> -->
+
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="1233Features.html">前へ</A> <a href="1235Errorhandling.html">次へ</a>
+</BODY>
+</HTML>

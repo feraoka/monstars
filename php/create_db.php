@@ -5,8 +5,7 @@
  * xmlファイルからデータベースを構築する
  */
 
-//define('DEFAULT_DATA_PATH', "../data");
-define('DEFAULT_DATA_PATH', "/dev/shm");
+define('DEFAULT_DATA_DIR', "../data");
 
 require_once "gameXml.php";
 
@@ -18,7 +17,7 @@ final class monstarsdb {
     private $batting_tbl = "batting_tbl";
     private $bat_tbl = "bat_tbl";
   
-    function __construct($dataPath = DEFAULT_DATA_PATH) {
+    function __construct($dataPath = DEFAULT_DATA_DIR) {
         $file = $dataPath."/".$this->dbFile;
         try {
             $this->dbh = new PDO("sqlite:$file", '', '');
@@ -125,7 +124,7 @@ final class monstarsdb {
         $fp = fopen($file, "r");
         while (!feof($fp)) {
             $line = fgets($fp);
-            if (!ereg("^#", $line)) {
+            if (!preg_match("/^#/", $line)) {
                 $line = preg_replace("/[\r\n]/", "", $line);
                 $a = explode(",", $line);
                 if ($a[0] == NULL) {
@@ -141,7 +140,7 @@ final class monstarsdb {
         }
     }
 
-    function addXmlData($dataFilePath = DEFAULT_DATA_PATH) {
+    function addXmlData($dataFilePath = DEFAULT_DATA_DIR) {
         $xmlDataFilePath = $dataFilePath."/xml";
         $query = "INSERT INTO $this->game_tbl
               (gameId, season, date, time, location, team , type,
@@ -215,7 +214,7 @@ final class monstarsdb {
         $dh = opendir($xmlDataFilePath);
         $dataFiles = array();
         while ($file = readdir($dh)) {
-            if (ereg("\.xml$", $file)) {
+            if (preg_match("/\.xml$/", $file)) {
                 array_push($dataFiles, $file);
             }
         }
@@ -323,8 +322,6 @@ print "Completed\n";
 /*
  * Local variables:
  * tab-width: 4
- * c-basic-offset: 4
- * c-hanging-comment-ender-p: nil
  * End:
  */
 

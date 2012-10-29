@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="7102Specifyingadatetimescalewithamanualcallback.html">
+<LINK REL="Next" HREF="712Addingarbitrarytextstringstothegraph.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="7102Specifyingadatetimescalewithamanualcallback.html">前へ</A> <A HREF="712Addingarbitrarytextstringstothegraph.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="7_11">7.11 テキスト スケールのラベルを調整する</A></H2>
+<P> 次に、テキスト スケールにおいてラベルを操作する方法を紹介します。主に、多数の値がある場合にテキスト スケールを扱う場合を想定します。</P>
+<P> テキスト スケールは、X 軸の値が数値ではない場合 (要するにデータの順番だけが大切な場合) に使用するためのものです。もしラベルを手動で指定しない場合、下のサンプルの通り 1 からの連番で自動でラベルが作成されます。 </P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_bartutex1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="bartutex1.png" WIDTH="300"></A> <BR><B>図 83:</B>自動のテキスト スケールを用いたバー プロットの例 <A href="exframes/frame_bartutex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> X 軸のラベルを文字列で指定するには、<A href="../ref/Axis.html#_AXIS_SETTICKLABELS">Axis::SetTickLabels()</A> メソッドを使用して、テキスト ラベルが格納されている配列を手渡します。指定されたラベル数よりもデータの数の方が多い場合は、デフォルトの数値も使用されます。先ほどの例に月の名前を使用した例を下記に掲載します。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_bartutex2.html" target="blank"><IMG border="0"
+HEIGHT="200" src="bartutex2.png" WIDTH="300"></A> <BR><B>図 84:</B>手動でテキスト スケール ラベルを指定する <A href="exframes/frame_bartutex2.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P></P>
+<HR> <SMALL><STRONG> ヒント:</STRONG>月の名前と曜日の名前を地域別に扱うため、JpGraph では <A href="../ref/DateLocale.html#_C_DATELOCALE">DateLocal</A> クラスを提供しています。ロケールが指定されていない場合は、システムのデフォルトのロケールが使用されます。</SMALL>
+<HR>
+<P> では、バーの数が大量にあった場合はどうなるでしょうか。25 個のバーがある場合の結果を見てみましょう。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_bartutex3.html" target="blank"><IMG border="0"
+HEIGHT="200" src="bartutex3.png" WIDTH="300"></A> <BR><B>図 85:</B>バーの数が多い場合 <A href="exframes/frame_bartutex3.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> あまり見栄えがよくありません。ラベルの数が増えると、お互いが接近してしまいすべてのラベルを表示できなくなってしまいます。従って、すべてのラベルを表示するのは良い考えではありません。表示するラベルの数を調節するには、<A href="../ref/Axis.html#_AXIS_SETTEXTLABELINTERVAL">SetTextLabelInterval()</A> メソッドを使用します。のメソッドの引数には、表示するテキスト ラベルの間隔を指定します。3 ヶ月ごとにラベルを表示するには、以下のようにします。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">xaxis</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">SetTextLabelIntervall</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> これにより、以下のような外見になります。<DIV class="example">
+<BR> <A href="exframes/frame_bartutex4.html" target="blank"><IMG border="0"
+HEIGHT="200" src="bartutex4.png" WIDTH="300"></A> <BR><B>図 86:</B>ラベルを 3 個ごとに表示する <A href="exframes/frame_bartutex4.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> これにより、かなり外見が改善されました。</P>
+<P> さらにデータの数が多くなった場合は、すべての目盛りを表示するのも難しくなってきます。そのため、JpGraph では目盛りを表示する間隔も変更できます (<A href="../ref/Axis.html#_AXIS_SETTEXTTICKINTERVAL">SetTextTickIntervall()</A> 関数を使用します) 。しかし、テキスト スケールを使用しているグラフの場合、目盛りはバーの間に表示されるため、下記のグラフのようにあまり見栄えはよくありません。下記の例のように不可能というわけではありませんが、それほど見栄えがよいわけではありません。<DIV class="example">
+<BR> <A href="exframes/frame_bartutex5.html" target="blank"><IMG border="0"
+HEIGHT="200" src="bartutex5.png" WIDTH="300"></A> <BR><B>図 87:</B>目盛りを 3 個ごとに表示する<A href="exframes/frame_bartutex5.html"
+target="blank"> [ソース]</A> 
+<P></P>
+</DIV></P>
+<P></P>
+<P> 目盛りを非表示にすることもできます。目盛りを隠すには、<A href="../ref/Axis.html#_AXIS_HIDETICKS">Axis::HideTicks()</A> メソッドを使用します。X 軸にある目盛りを隠した場合は、以下のような結果が得られます。<DIV class="example">
+<BR> <A href="exframes/frame_bartutex6.html" target="blank"><IMG border="0"
+HEIGHT="200" src="bartutex6.png" WIDTH="300"></A> <BR><B>図 88:</B>すべての目盛りを非表示にする<A href="exframes/frame_bartutex6.html"
+target="blank"> [ソース]</A> 
+<P></P>
+</DIV></A></A></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="7102Specifyingadatetimescalewithamanualcallback.html">前へ</A> <A HREF="712Addingarbitrarytextstringstothegraph.html">次へ</A>
+</BODY>
+</HTML>

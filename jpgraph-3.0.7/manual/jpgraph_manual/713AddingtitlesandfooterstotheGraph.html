@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="712Addingarbitrarytextstringstothegraph.html">
+<LINK REL="Next" HREF="714Addingatabtitle.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="712Addingarbitrarytextstringstothegraph.html">前へ</A> <A HREF="714Addingatabtitle.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="7_13">7.13 グラフにタイトルとフッターを追加する</A></H2>
+<P> 各グラフは 3 種類のタイトルを持つことができます。それぞれ以下の通りです。</P>
+<OL>
+<LI> タイトル (title オブジェクト) </LI>
+<LI> サブタイトル (subtitleオブジェクト) </LI>
+<LI> サブサブタイトル (subsubtitle オブジェクト) </LI>
+</OL>
+<P> これらの 3 種類のプロパティは標準的なテキスト オブジェクトで、異なったフォントやカラー、サイズなどを設定できます。</P>
+<P> また、グラフの周りに余白を設定したい場合は<A href="../ref/Graph.html#_GRAPH_SETMARGIN">Graph::SetMargin()</A> メソッドを使用します。</P>
+<P> これらのタイトルは自動で配置され、使用されているフォント サイズに調節されます。</P>
+<P> もし、タイトルの周りに余白を設定したい場合は、<A href="../ref/Text.html#_TEXT_SETMARGIN">Text::SetMargin()</A> メソッドを使用できます。たとえば、以下のようにした場合</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">title</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">SetMargin</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">20</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>タイトル文字列の上端と グラフの上端の間には 20 ピクセル分の余白ができます。同様に、サブタイトルに対して SetMargin() メソッドを呼び出した場合は、タイトルの下端とサブタイトルの上端の間の余白が変更されます。 </P>
+<P> タイトルはグラフの上部に配置され、中央揃えで表示されます。各タイトルは改行文字 (\n) を用いて複数行指定できます。デフォルトでは各タイトルは中央揃えになっていますが、ParagraphAlign() メソッドにより変更が可能です。 </P>
+<P> 各グラフではフッターも使用できます。実際には、フッターには 3 種類のフッターがあり、left、center、right フッターが提供されています。left フッターは左揃えのもので、center フッターは中央揃え、right フッターは右揃えです。</P>
+<P> これらのフッターは標準的な テキスト オブジェクトなので、任意にカラーやフォント、サイズなどを変更できます。</P>
+<P> フッターには、以下の通り Graph::footer プロパティを使用してアクセスできます。 </P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">footer</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">left</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;(C) 2002 KXY&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">footer</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">center</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT
+color="#007700">(</FONT><FONT color="#DD0000">&quot;CONFIDENTIAL&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">footer</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">center</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;red&quot;</FONT><FONT
+color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">footer</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">center</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_FONT2</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FS_BOLD</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">footer</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">right</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT
+color="#007700">(</FONT><FONT color="#DD0000">&quot;19 Aug 2002&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P><DIV class="note"><B>注意:</B> ブランド タイミング引数を使用する場合は、left フッターを空にします。</DIV></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="712Addingarbitrarytextstringstothegraph.html">前へ</A> <A HREF="714Addingatabtitle.html">次へ</A>
+</BODY>
+</HTML>

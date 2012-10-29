@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="721Addingbandsofpatternandcolortographs.html">
+<LINK REL="Next" HREF="722Addingstaticlinestotheplot.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="721Addingbandsofpatternandcolortographs.html">前へ</A> <A HREF="722Addingstaticlinestotheplot.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_21_1">7.21.1 パターンをカスタマイズする</A></H3>
+<P> すべてのパターンは以下の通りカスタマイズが可能です。 </P>
+<UL>
+<LI> ... バンドのカラーを変更する。<BR>   </LI>
+<LI> ... <A href="../ref/PlotBand.html#_PLOTBAND_SETDENSITY">PlotBand::SetDensity()</A> メソッドを使用してパターンの密度を変更する。密度は 1 から 100 までの整数値で指定でき、値が高くなるほど密度が高くなります。たとえば、3DPLANE 形式で密度を 60 に設定した場合、下記のような外見が得られます。 <DIV class="example">
+<BR> <A href="exframes/frame_smallstaticbandsex4.html" target="blank"><IMG
+border="0" HEIGHT="150" src="smallstaticbandsex4.png" WIDTH="200"></A> <BR><B>図 111:</B>パターンの密度を高くした例 <A href="exframes/frame_smallstaticbandsex4.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV>
+<P>
+<BR>  </P>
+</LI>
+<LI> ... フレームをパターンの周囲に表示、非表示するには、<A href="../ref/PlotBand.html#_PLOTBAND_SHOWFRAME">PlotBand::ShowFrame()</A> メソッドを使用します。フレームはバンドと同じカラーで表示されます。  <BR>  </LI>
+<LI> ... バンドとプロットの前後関係を <A href="../ref/PlotBand.html#_PLOTBAND_SETORDER">PlotBand::SetOrder()</A> メソッドで指定できます。デフォルトではバンドはプロットの下位にあります。 <DIV class="example">
+<BR> <A href="exframes/frame_smallstaticbandsex5.html" target="blank"><IMG
+border="0" HEIGHT="150" src="smallstaticbandsex5.png" WIDTH="200"></A> <BR><B>図 112:</B>パターンをプロットの上部に描画する <A href="exframes/frame_smallstaticbandsex5.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV>
+<P></P>
+</LI>
+</UL>
+<P><DIV class="note"><B>注意:</B> 3DPLANE 形式のパターンでは、奥行きの指定が可能です。以下の通りに指定します。水平の値を変更するために関数を直接呼び出すことはできませんが、下のようにすれば可能です。  </DIV><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $band</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">prect</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetHorizon</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$aHorizon</FONT><FONT color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P><SMALL> バンドは 3D の面と考えられます。</SMALL></P>
+<P> 最後に、バンドを組み合わせる方法を紹介します。<DIV class="example">
+<BR> <A href="exframes/frame_staticbandbarex7.html" target="blank"><IMG border="0"
+HEIGHT="300" src="staticbandbarex7.png" WIDTH="400"></A> <BR><B>図 113:</B>ラインと３DPLANE、SOLID バンドを組み合わせる <A
+href="exframes/frame_staticbandbarex7.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="721Addingbandsofpatternandcolortographs.html">前へ</A> <A HREF="722Addingstaticlinestotheplot.html">次へ</A>
+</BODY>
+</HTML>

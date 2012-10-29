@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="74Scatterplots.html">
+<LINK REL="Next" HREF="76BoxandStockcharts.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="74Scatterplots.html">前へ</A> <A HREF="76BoxandStockcharts.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="7_5">7.5 フィールド プロット</A></H2>
+<P> 散布プロットのうち、<I>フィールド プロット</I>と呼ばれるものは、0 から 359 度までの方向を矢印で持つ散布ポイントを有しています。これにより、各点において 3 個の情報 (X、Y、角度) を表現できます。さらに、各散布プロットにコールバック関数を定義でき、各ポイントのカラーも指定できます。</P>
+<P> フィールド プロットを作成するには、通常の散布プロットと同様、<A href="../ref/FieldPlot.html#_C_FIELDPLOT">FieldPlot</A> インスタンスを作成します。このメソッドへの引数は、Y 座標、Y 座標、そして角度です。コールバック関数を指定するには、<A href="../ref/FieldPlot.html#_FIELDPLOT_SETCALLBACK">FieldPlot::SetCallback()</A>メソッドを使用します。</P>
+<P> 以下に、フィールド プロット形式の散布プロットの例を紹介します。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_fieldscatterex1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="fieldscatterex1.png" WIDTH="300"></A> <BR><B>図 67:</B>フィールド プロット形式の例 <A href="exframes/frame_fieldscatterex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> また、フィールド プロットでは矢印のサイズを調節したり、矢印の頭の部分のサイズのみを設定することもできます。矢印のサイズはピクセル単位で指定します。矢印の頭の部分のサイズは 0 から 10 までの整数値で指定します。これらのサイズは <A href="../ref/FieldArrow.html#_FIELDARROW_SETSIZE">FieldPlot::arrow::SetSize()</A>メソッドを呼び出しことで調節できます。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="74Scatterplots.html">前へ</A> <A HREF="76BoxandStockcharts.html">次へ</A>
+</BODY>
+</HTML>

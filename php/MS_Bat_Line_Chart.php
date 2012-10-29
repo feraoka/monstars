@@ -1,4 +1,5 @@
 <?php
+set_include_path(get_include_path() . PATH_SEPARATOR . "../jpgraph/src");
 include ("jpgraph.php");
 include ("jpgraph_line.php");
 require_once "MS_Main.php";

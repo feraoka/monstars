@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="714AddingasecondYscale.html">
+<LINK REL="Next" HREF="716Handlingnullvaluesinlineplots.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="714AddingasecondYscale.html">前へ</A> <A HREF="716Handlingnullvaluesinlineplots.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_1_5">7.1.5 グラフに凡例を追加する</A></H3>
+<P> 1 つのグラフに複数のプロットがある場合、どのプロットが何を示しているかを説明する必要があります。そのためには凡例を追加します。 </P>
+<P> 各プロットには、凡例を指定するための SetLegend() メソッドを有しています。凡例を追加するためには以下の行を加えます。   <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $lineplot</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">SetLegend</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;Plot 1&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$lineplot2</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetLegend</FONT><FONT color="#007700">(</FONT><FONT
+color="#DD0000">&quot;Plot 2&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>   詳細はソースコードを参照してください。<DIV class="example">
+<BR> <A href="exframes/frame_example5.1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example5.1.png" WIDTH="300"></A> <BR><B>図 12:</B>円プロットに凡例を追加する <A href="exframes/frame_example5.1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> これで、表示するための凡例テキストを持つプロットがいくつあるかによって、凡例は自動的に配置されます。デフォルトで、凡例は画像の右上に配置されます。凡例の位置の調整や、余白を追加も調節できます。両方してみましょう。 </P>
+<P> まず右側の余白を増やし、凡例がほぼ中央に置かれるよう配置します。また、プロット エリアが圧迫されないように、画像全体の大きさを広げます。</P>
+<P> 凡例を修正するには、グラフの legend プロパティを使用してください。凡例の詳細な機能に関しては、クラス リファレンスの <A href="../ref/Legend.html#_C_LEGEND/">legend クラス</A> を参照してください。</P>
+<P> たとえば、凡例の位置を指定するには SetPos() メソッドを使用します。    <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">legend</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Pos</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0.05</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0.5</FONT><FONT
+color="#007700">,</FONT><FONT color="#DD0000">&quot;right&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;center&quot;</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> これにより、以下の通りの結果が得られます。<DIV class="example">
+<BR> <A href="exframes/frame_example6.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example6.png" WIDTH="400"></A> <BR><B>図 13:</B>グラフに凡例を追加する <A href="exframes/frame_example6.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> 上記の SetPos() メソッドに説明を加えます。まず、最初の 2 個の引数には、画像の横幅と縦幅を 1 にしたときの割合を指定します。割合を指定することで、画像の大きさが変化した場合も相対的な大きさが引き継がれます。私たちは、同じメソッドがイメージに任意のテキストを置くということをその後理解するでしょう。 </P>
+<P> 柔軟性を追加するために、一つは、さらに、与えられた位置が関連するどのエッジの凡例かを指定しなければなりません。今回の例では、水平位置は右 (right) 端から、垂直位置は中央 (center) であることを指定しています。</P>
+<P> これにより、凡例は右から 5% の位置の中央に描かれることになります。もし凡例を、left と指定した場合は、画像の左側から 5% の位置に描画されます。</P>
+<P> デフォルトでは、それぞれの凡例は縦に整列します。これ以外にも、横に整列させることができます。この指定には、<A href="../ref/Legend.html#_LEGEND_SETLAYOUT">SetLayout()</A> メソッドを使用します。先ほどのサンプルで横揃えの凡例を使用すると、以下の通りになります。<DIV class="example">
+<BR> <A href="exframes/frame_example6.1.html" target="blank"><IMG border="0"
+HEIGHT="240" src="example6.1.png" WIDTH="300"></A> <BR><B>図 14:</B>凡例を水平に設置する <A href="exframes/frame_example6.1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<H4>7.1.5.1 凡例のレイアウトを調節する</H4>
+<P> もっと高度な凡例のフォーマットのため、調節することができます。</P>
+<UL>
+<LI> 凡例のコラム</LI>
+<LI> 凡例のコラムに縦/横の余白を指定する</LI>
+</UL>
+<P> 凡例で使用されるコラムの調節で、メソッド<I> Legend::SetColumns</I> が使用されます。たとえば、3 つのコラムの使用で調整される凡例を持つため、以下のラインをスクリプトに追加する必要があります。<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">legend</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColumns</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">3</FONT><FONT
+color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+</P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="714AddingasecondYscale.html">前へ</A> <A HREF="716Handlingnullvaluesinlineplots.html">次へ</A>
+</BODY>
+</HTML>

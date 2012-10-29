@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="11AntiSpamChallenges.html">
+<LINK REL="Next" HREF="12NonfilledContourgraph.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css"><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="11AntiSpamChallenges.html">前へ</A> <A HREF="12NonfilledContourgraph.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="11_1">11.1 アンチスパム画像を作成する</A></H2>
+<P> アンチスパム画像を生成する方法は2通りあります。</P>
+<OL>
+<LI> 使用される文字列を送る</LI>
+<LI> ランダムに文字列を生成する これを選択する場合、モジュールに作成された文字列を保存し、ユーザが入力した内容と一致するかどうかを確認してください。</LI>
+</OL>
+<P> アンチスパムを生成するスクリプトを書くには、4つのステップがあります。</P>
+<P><B>1</B> ライブラリファイル<I> jpgraph_antispam.php</I> をインクルードする。 すべての機能がこのライブラリ ファイルに含まれているので、 &quot;jpgraph.php&quot; をインクルードする必要はありません。<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> </FONT><FONT color="#007700">require_once </FONT><FONT color="#DD0000">&quot;jpgraph_antispam.php&quot;</FONT><FONT
+color="#007700">;</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+</P>
+<P><B>2</B><I> AntiSpam</I> クラスの新しいインスタンスを作成します<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $spam </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">AntiSpam</FONT><FONT color="#007700">();</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P><B>3</B> アンチスパムで使用される文字列を指定します。 文字列を指定しない場合、自動的に文字列が生成されます。<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> </FONT><FONT color="#FF8000">// 生成する文字列の長さを決定する<BR></FONT><FONT color="#0000BB">$chars </FONT><FONT color="#007700">=</FONT><FONT
+color="#0000BB">$spam</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Rand</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">5</FONT><FONT
+color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+</P>
+<P> 使用する文字列を指定する場合、この文字列は AntiSpam() インスタンスの作成時、または<I> Set()</I> 関数の呼び出しで指定します。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $spam</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;aui8k&quot;</FONT><FONT
+color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+</P>
+<P>文字の 'O' と数字の '0' (ゼロ) は非常によく似ていて間違えやすいので、これらの文字は無視されるということに注意してください。</P>
+<P><B>4</B> <I> AntiSpam</I> クラスのインスタンスで<I> Stroke()</I> 関数を呼ぶことで画像を出力します。<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> </FONT><FONT color="#007700">if( </FONT><FONT color="#0000BB">$spam</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">Stroke</FONT><FONT color="#007700">() === </FONT><FONT color="#0000BB">false </FONT><FONT color="#007700">) { <BR>    die (</FONT><FONT color="#DD0000">&quot;Illegal or no data to plot&quot;</FONT><FONT
+color="#007700">); <BR>}</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>  他のグラフ タイプと同様に、<I> Stroke()</I> にファイル名を引数として送ることで生成されたイメージをファイルに書き出すことができます。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="11AntiSpamChallenges.html">前へ</A> <A HREF="12NonfilledContourgraph.html">次へ</A>
+</BODY>
+</HTML>

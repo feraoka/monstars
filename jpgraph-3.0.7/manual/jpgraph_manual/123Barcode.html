@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="1224Sampleswindrose.html">
+<LINK REL="Next" HREF="1231Howdoeslinearbarcodework.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="1224Sampleswindrose.html">前へ</A> <A HREF="1231Howdoeslinearbarcodework.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="12_3">3 バーコード</A></H2>
+<P>このモジュールはエンタープライズ版のライブラリにのみ含まれています。</P>
+<P>バーコード拡張モジュールでは、一般に使われているコードはどれでも使用してバーコードを作成することができます。ここでは一次元バーコードについて説明しま す。完成したバーコードはPNG画像,JPEG画像、または高解像度プリンタ印刷用のPostscriptファイルとして生成されます。</P>
+<P> バーコード拡張モジュールは大規模なデータ検証を可能にし、作成されたバーコードは公式な適用企画に確実に対応しています。</P>
+<P>欧州でほとんどサポートされていないCODE11を除き、JpGraphが作成するすべてのバーコードはMetrologic CCD-47スキャナによる広範な検証を経てきています。</P>
+<P>バーコードを作成するには「jpgraph_barcode.php」モジュールを含む必要があります。</P>
+<P>バーコードには数種類ありますが、すべて同じ原則に従います。コードの種類がいくつか存在する理由は、ひとつには、「数値データのみ」や「数値とアルファベッ トの混合データ」など異なる要求に対応するためであり、また、同様の課題に対して複数のメーカーが開発・製造したことにもよります。ライブラリは一般の一 次元バーコードのほとんどに対応しています。これらのタイプのバーコードはたいていの消費財についているものと同様です。</P>
+<P>異なる種類のバーコードは<strong>シンボロジー</strong>というバーコードの種類として分類・参照されます。</P>
+<P>よく使われるシンボロジーのほとんどはISO標準やIEC標準に昇格しました。ISO標準として認可されていないバーコードの一部はAIM(<A HREF="http://www.aimglobal.org">http://www.aimglobal.org</A>)をご参照ください。米国ではUniform Code Council (UCC)という機関がバーコードに使用される小売業界のコード発行を管理しています。</P>
+<P>これらの標準は広範囲のバーコードをカバーしている一方、エンド・ユーザにはほとんどメリットはありません。バーコードを選択するとき、エンド・ユーザにとって最重要課題は次のようなことが考えられます。</P>
+
+<UL TYPE="1">
+<LI>このコードでどんな文字が暗号化できるのか。</LI>
+<LI>入力値に対してバーコードはどれくらいの大きさになるのか（どれくらい効率的か）。 </LI>
+</UL>
+
+<P STYLE="MARGIN-LEFT: 2EM;">
+一般的に、一次元バーコードはアルファベットや数値の文字列を最大20文字に暗号化します。</P>
+
+<P><DIV class="note" STYLE="MARGIN-LEFT: 2EM;"><B>注意：</B>
+多くの種類のバーコードは理論的には無限の文字数に対応できますが、実際にはバーコード・リーダーやスキャナの読み取りができるサイズによって限界がありま す。バーコード・リーダーのほとんどは10cmより長いバーコードの場合、信頼できるレベルでの読み取りができません。</DIV></P>
+
+<UL TYPE="1">
+<LI VALUE="3">物理的損傷に対してどれくらいの強度があるか。つまり、バーコードが何パーセントくらいまで破壊されてもまだスキャナに読み取れるのか。</LI>
+</UL>
+
+<P STYLE="MARGIN-LEFT: 2EM;">一次元バーコードの許容値はたいてい低いものです。バーが1本でも読めなくなると、バーコード全部が読み取り不可能にできなくなります。バーコードの種類に よってはチェック・ディジットを含んだものもありますが損傷データを再作成するには十分ではなく、データが編さんされていないかどうかを証明するのみです。それさえ、２つのエラーが偶然、本来エラーを示すはずのチェック・ディジットを正しい数字にしてしまう可能性もあります。</P>
+<P STYLE="MARGIN-LEFT: 2EM;">一次元バーコードの強度を上げるには通常、物理的にバーコードを大きくし、高さを持たせます。</P>
+<P>一 次元バーコードは今でもレガシーとして広く使われていますが、新しいアプリケーションで一次元バーコードを使っているものはほとんどありません。上にあげ たような、強度や柔軟性に対する限界がその理由の一部です。新しいアプリケーションのほとんどはRFIDタグか二次元バーコードを使っています。データ許 容量と強度が遙かに優れているからです。</P>
+
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="1224Sampleswindrose.html">前へ</A> <a href="1231Howdoeslinearbarcodework.html">次へ</a>
+</BODY>
+</HTML>

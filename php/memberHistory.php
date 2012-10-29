@@ -1,4 +1,5 @@
 <?php
+set_include_path(get_include_path() . PATH_SEPARATOR . "../jpgraph/src");
 include ("jpgraph.php");
 include ("jpgraph_gantt.php");
 
@@ -31,8 +32,9 @@ foreach ($ans as $row) {
 }
 
 // A new graph with automatic size
-$graph = new GanttGraph(600,0,"auto");
+$graph = new GanttGraph(800,0,"auto");
 //$graph->SetShadow();
+
 $graph->img->SetMargin(10,30,10,60);
 $graph->setColor('#cccccc');
 $graph->SetFrame(true, '#aaaaaa');
@@ -40,8 +42,8 @@ $graph->SetFrame(true, '#aaaaaa');
 //  A new activity on row '0'
 $n = 0;
 foreach($periods as $period) {
-  $firstDay = ereg_replace("/", "-", $period['firstDay']);
-  $lastDay = ereg_replace("/", "-", $period['lastDay']);
+  $firstDay = preg_replace("/\//", "-", $period['firstDay']);
+  $lastDay = preg_replace("/\//", "-", $period['lastDay']);
   $label = new Text($period['name']);
   $label = $period['name'];
   $activity = new GanttBar($n, $label, $firstDay, $lastDay);
@@ -52,7 +54,7 @@ foreach($periods as $period) {
   $n++;
 }
 
-$graph->ShowHeaders(GANTT_HYEAR); 
+$graph->ShowHeaders(GANTT_HYEAR);
 $graph->scale->year->grid->SetColor('gray');
 $graph->scale->year->grid->Show(true);
 $graph->hgrid->Show();

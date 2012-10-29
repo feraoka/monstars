@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="1235Errorhandling.html">
+<LINK REL="Next" HREF="124Tables.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="1235Errorhandling.html">前へ</A> <A HREF="124Tables.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="12_3_6">3.6 コマンドラインを使用してバーコードを作成する</A></H3>
+<P>ライブラリはコマンドライン・ユーティリティをライブラリ使用方法の追加例として含んでいます。</P>
+
+<ul>
+<li>mkbarcode.php</li>
+</ul>
+
+<P>このユーティリティは「barcode/」ディレクトリの中にあり、次のようにコマンドラインで使います。</P>
+
+<div class="phpscript">
+<code><span style="color: #000000">
+$&gt;php&nbsp;mkbarcode.php&nbsp;-b&nbsp;code39&nbsp;ABC123&nbsp;&gt;&nbsp;barcode.png</span>
+</code>
+</div>
+
+<P>このコマンドラインはCode 39シンボロジーを使用してデータ文字列「abc123」のバーコードを作成し、生成された画像を「barcode.png」ファイルに保存します。</P>
+<P>このコマンドライン・ユーティリティはクライアント側にもコマンドラインのPHPが存在していることを前提としています。</P>
+<P>このユーティリティは次のような構文を含みます。</P>
+
+<div class="phpscript">
+<code><span style="color: #000000"> mkbarcode.php&nbsp;-b&nbsp;&lt;symbology&gt;&nbsp;[-r&nbsp;-h&nbsp;-c&nbsp;-o&nbsp;&lt;output&nbsp;format&gt;&nbsp;-m&nbsp;&lt;width&gt;&nbsp;-s&nbsp;&lt;scale&gt;\\&nbsp;<br /> -y&nbsp;&lt;height&gt;&nbsp;-f&nbsp;&lt;filename&gt;&nbsp;]&nbsp;datastring</span> </code></div>
+
+<p>
+<div class="example">
+<table border="1px">
+<tr>
+<td rowspan="13">-b</td>
+<td>使用するシンボロジーは下記より１つ選択(大文字・小文字区別なし)</td>
+</tr>
+
+<tr>
+<td>UPCA</td>
+</tr>
+
+<tr>
+<td>UPCE</td>
+</tr>
+
+<tr>
+<td>EAN128</td>
+</tr>
+
+<tr>
+<td>EAN13</td>
+</tr>
+
+<tr>
+<td>EAN8</td>
+</tr>
+
+<tr>
+<td>CODE11</td>
+</tr>
+
+<tr>
+<td>CODE39</td>
+</tr>
+
+<tr>
+<td>CODE128</td>
+</tr>
+
+<tr>
+<td>CODE25</td>
+</tr>
+
+<tr>
+<td>CODEI25</td>
+</tr>
+
+<tr>
+<td>CODABAR</td>
+</tr>
+
+<tr>
+<td>BOOKLAND</td>
+</tr>
+
+<tr>
+<td>-c</td>
+<td>チェックディジットに対応するシンボロジーにはディジットを追加</td>
+</tr>
+
+<tr>
+<td>-o</td>
+<td>出力フォーマット。0=Image, 1=PS, 2=EPS</td>
+</tr>
+
+<tr>
+<td>-m</td>
+<td>モジュールの</td>
+</tr>
+
+<tr>
+<td>-s</td>
+<td>スケール・ファクター</td>
+</tr>
+
+<tr>
+<td>-h</td>
+<td>このヘルプを表示</td>
+</tr>
+
+<tr>
+<td>-f</td>
+<td>書き込むファイル名</td>
+</tr>
+
+
+<tr>
+<td>-r</td>
+<td>バーコードを90度回転させる</td>
+</tr>
+
+<tr>
+<td>-y height</td>
+<td>高さをピクセルで設定</td>
+</tr>
+
+<tr>
+<td>-x</td>
+<td>読解可能なテキストを非表示にする</td>
+</tr>
+
+<tr>
+<td>--silent</td>
+<td>サイレント。エラー・メッセージを表示しない</td>
+</tr>
+</table>
+</div>
+</p>
+
+<P>ファイル名が指定されていない場合、画像をファイルに変換するように促す表示が返されます。</P>
+
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="1235Errorhandling.html">前へ</A> <a href="124Tables.html">次へ</a>
+</BODY>
+</HTML>

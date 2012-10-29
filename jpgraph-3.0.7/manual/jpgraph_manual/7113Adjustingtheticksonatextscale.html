@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="7112SpecifyingtextlabelsfortheXaxis.html">
+<LINK REL="Next" HREF="7114Usingfilledlinegraphs.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="7112SpecifyingtextlabelsfortheXaxis.html">前へ</A> <A HREF="7114Usingfilledlinegraphs.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_1_13">7.1.13 テキスト スケールのチックを調整する</A></H3>
+<P> 先ほどの例では、X 軸のラベル間の余白があまりありませんでした。イメージを拡大させるか、x-軸のより少ないチックのラベルを単に表示することにより、これを改正する場合があります。</P>
+<P> たとえば、1 個置きにラベルを表示するには、<A href="../ref/Axis.html#_AXIS_SETTEXTLABELINTERVAL">SetTextLabelInterval()</A> メソッドを使用します。これにより、以下のグラフが描画されます。 <DIV class="example">
+<BR> <A href="exframes/frame_example9.1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example9.1.png" WIDTH="350"></A> <BR><B>図 23:</B>X 軸のラベルを 1 個置きに表示する <A href="exframes/frame_example9.1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> テキスト ラベルが長い場合、テキストを回転することができます。今回は、X 軸のラベルを 90 度回転してみましょう。それには <A href="../ref/Axis.html#_AXIS_SETLABELANGLE">SetLabelAngle()</A> メソッドを使用します。
+</P>
+<P> これにより、以下のグラフが得られます。<DIV class="example">
+<BR> <A href="exframes/frame_example9.2.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example9.2.png" WIDTH="350"></A> <BR><B>図 24:</B>X 軸のラベルを 90 度回転します <A href="exframes/frame_example9.2.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="note"><B>注意:</B>内部フォントは 0 度、あるいは 90 度しか回転できません。TrueType フォントの場合は任意の角度で回転できます。フォントに関する詳しい説明は後に表記します。</DIV></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="7112SpecifyingtextlabelsfortheXaxis.html">前へ</A> <A HREF="7114Usingfilledlinegraphs.html">次へ</A>
+</BODY>
+</HTML>

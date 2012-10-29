@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="35DetailedstepstoinstallJpGraph.html">
+<LINK REL="Next" HREF="37CompilingPHP4.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="35DetailedstepstoinstallJpGraph.html">前へ</A> <A HREF="37CompilingPHP4.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="3_6">3.6 インストールのトラブルシューティング</A></H2>
+<P> ユーザーのうち 99% の方が、何の問題もなくインストールできています。しかし、一部の環境において JpGraph がうまく動作しないこともございます。</P>
+<P> 多くの場合は、TTF ライブラリのインストールや、GD ライブラリのバージョンが古いことに起因しています。 以下の通り手段を踏むことで、解決を進めてください。</P>
+<OL>
+<LI> 背景画像が表示されない場合（黒い立体ボックスが表示される代わりに）、可能性は GD 2.x は利用可能ですが、jpg-config.inc.php が変更されたのでトゥルー カラーのイメージが無効になったことです。USE_TRUECOLOR 定数を有効にしてください。 </LI>
+<LI> 背景画像に問題がある場合、USE_GD2_LIBRARY 定数が間違っている可能性があります。例、GD2をインストールしていない場合、この定数を false に設定する必要があります。</LI>
+<LI> Windows 2000 と IIS の環境下で動作させており、&quot;Can't find font&quot; エラーが発生する場合は、UNIX 形式で記述されている TTF フォントへのパスを変更してください。ただし、フォント フォルダへのパスは、htdocs からの相対パスではなく、絶対パスで記述する必要があることに注意してください。  </LI>
+<LI> 画像が表示されなかったり、エラー メッセージがブラウザに送り返されなかった場合、HTTP サーバー のPHP モジュール（例、Apache PHP）に変更があった可能性があります。 これは、PHP のインストールが不完全だったり、True Type ライブラリに問題がある可能性があります。 これらの種類の問題をトラックする最善の方法は、PHP クラッシュの証拠の HTTP サーバー ログ、またはシステム ログを調査することです。他にも、GD ライブラリの自動検出に失敗する可能性があります。 GD1 ライブラリが利用可能で、JpGraph ライブラリが間違って GD2 を検出する場合、まれなケースで PHP にクラッシュします。これを検証するには、USE_GD2_LIBRARY 定数を false にセットしてください。</LI>
+<LI> Windows 版で IIS を使っている場合、TTF フォントを使うと空白のページになることがあります。この場合は、jpg-config.php で TTF_DIR パスを手動でセット (通常は C:\WINDOWS\Fonts) してください。</LI>
+<LI> キャッシュが有効な場合、キャッシュ デイレクトリの許可が正しく設定されているので、Apache/PHP を起動している処理がキャッシュ デイレクトリに書き込みできることを確認してください。</LI>
+<LI> TTF フォントが黄色に表示される場合は、FreeType フォント ライブラリにバグがあります。この場合は、PHP と GD を再インストールする以外に方法がありません。</LI>
+</OL>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="35DetailedstepstoinstallJpGraph.html">前へ</A> <A HREF="37CompilingPHP4.html">次へ</A>
+</BODY>
+</HTML>

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="812Specifyingtitlesfortheaxisandlegendsfortheplots.html">
+<LINK REL="Next" HREF="814Addingseveralplotstothesameradargraph.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="812Specifyingtitlesfortheaxisandlegendsfortheplots.html">前へ</A> <A HREF="814Addingseveralplotstothesameradargraph.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="8_1_3">8.1.3 レーダー プロットにグリッド ラインを描画する</A></H3>
+<P> それぞれの目盛りを使用してグリッドを作成できます。グリッドはグラフの grid プロパティを使用してアクセスできます。グリッドを有効にして、そのスタイルを点線にしたい場合は、以下のように記述します。    <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">grid</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">Show</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">grid</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetLineStyle</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;dotted&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>これにより、以下のグラフが表示されます。<DIV class="example">
+<BR> <A href="exframes/frame_radarex4.html" target="blank"><IMG border="0"
+HEIGHT="200" src="radarex4.png" WIDTH="250"></A> <BR><B>図 117：</B> 点線のグリッド線をグラフに追加する <A href="exframes/frame_radarex4.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P>プロットはグリッド線の上部、そしてそれぞれの軸の下部に描画されます。そのため、グリッド線には非表示になる部分があります。</P>
+<P> グリッド線をより見やすくするには、SetColor() メソッドなどを使用してカラーを変更します。</P>
+<P> また、レーダー グラフの背景色を変更することもできます。これも、グラフ オブジェクトの SetColor() メソッドを使用します。<DIV class="example">
+<BR> <A href="exframes/frame_radarex6.html" target="blank"><IMG border="0"
+HEIGHT="200" src="radarex6.png" WIDTH="250"></A> <BR><B>図 118：</B> 背景色を変更する <A href="exframes/frame_radarex6.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="812Specifyingtitlesfortheaxisandlegendsfortheplots.html">前へ</A> <A HREF="814Addingseveralplotstothesameradargraph.html">次へ</A>
+</BODY>
+</HTML>

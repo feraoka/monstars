@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="99Moreformattingforbars.html">
+<LINK REL="Next" HREF="992Addingprogressindicatorstobars.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="99Moreformattingforbars.html">前へ</A> <A HREF="992Addingprogressindicatorstobars.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="9_9_1">9.9.1 バーに見出しを追加する</A></H3>
+<P> バーの見出しは、バーの一番右側につけられます。それらは、例えば、タスクそのもやタスクの継続時間、アクティビティの経過に対して割り当てられるリソースを表示するために使用されます。</P>
+<P> バーの見出し文は、バーの作成時に指定するか、後でバーのキャプションプロパティから指定することができます。 <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $activity </FONT><FONT
+color="#007700">= new </FONT><FONT color="#0000BB">GanttBar</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">&quot;Activity 1&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;2001-11-21&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;2001-12-20&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;[BS,ER]&quot;</FONT><FONT color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>  <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $activity</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">caption</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT
+color="#007700">(</FONT><FONT color="#DD0000">&quot;[BS,ER]&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 上記の2行はともにアクティビティの見出し&quot;[BS,ER]&quot;を指定する方法です。アクティビティは標準のJpGraphテキストオブジェクトなので、SetFont() やSetColor()を用いて、簡単にフォントや色、サイズを修正できます。 例：  <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $activity</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">caption</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FF_BOLD</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">9</FONT><FONT
+color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+</P>
+<P></P>
+<P> 以下の図は、見出しの使用例を示したものです。<DIV class="example">
+<BR> <A href="exframes/frame_ganttex13.html" target="blank"><IMG border="0"
+HEIGHT="186" src="ganttex13.png" WIDTH="409"></A> <BR><B>図 161:</B> 見出しを使用した場合の実例 <A href="exframes/frame_ganttex13.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="99Moreformattingforbars.html">前へ</A> <A HREF="992Addingprogressindicatorstobars.html">次へ</A>
+</BODY>
+</HTML>

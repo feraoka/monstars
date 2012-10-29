@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="728Horizontalbargraphs.html">
+<LINK REL="Next" HREF="7210Creatingsemifilledbargraphs.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="728Horizontalbargraphs.html">前へ</A> <A HREF="7210Creatingsemifilledbargraphs.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_2_9">7.2.9 バー プロットにグラデーション カラーを使用する</A></H3>
+<P> バー プロットの各バーにグラデーション カラーを使用できます。 </P>
+<P> グラデーション カラーとは、2 色のカラーを連続的につなげたものです。グラデーションの方向は、塗りつぶしのスタイルにより指定できます。JpGraph では、以下の 8 種類のスタイルをサポートしています。 サポートされているすべてのスタイルを以下に表示します。<DIV class="example">
+<BR> <A href="exframes/frame_bargradsmallex1.html" target="blank"><IMG border="0"
+HEIGHT="150" src="bargradsmallex1.png" WIDTH="200"></A> <BR><B>図 48:</B> <A href="exframes/frame_bargradsmallex1.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_bargradsmallex2.html" target="blank"><IMG border="0"
+HEIGHT="150" src="bargradsmallex2.png" WIDTH="200"></A> <BR><B>図 49:</B> <A href="exframes/frame_bargradsmallex2.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_bargradsmallex3.html" target="blank"><IMG border="0"
+HEIGHT="150" src="bargradsmallex3.png" WIDTH="200"></A> <BR><B>図 50:</B> <A href="exframes/frame_bargradsmallex3.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_bargradsmallex4.html" target="blank"><IMG border="0"
+HEIGHT="150" src="bargradsmallex4.png" WIDTH="200"></A> <BR><B>図 51:</B> <A href="exframes/frame_bargradsmallex4.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_bargradsmallex5.html" target="blank"><IMG border="0"
+HEIGHT="150" src="bargradsmallex5.png" WIDTH="200"></A> <BR><B>図 52:</B> <A href="exframes/frame_bargradsmallex5.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_bargradsmallex6.html" target="blank"><IMG border="0"
+HEIGHT="150" src="bargradsmallex6.png" WIDTH="200"></A> <BR><B>図 53:</B> <A href="exframes/frame_bargradsmallex6.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_bargradsmallex7.html" target="blank"><IMG border="0"
+HEIGHT="150" src="bargradsmallex7.png" WIDTH="200"></A> <BR><B>図 54:</B> <A href="exframes/frame_bargradsmallex7.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_bargradsmallex8.html" target="blank"><IMG border="0"
+HEIGHT="150" src="bargradsmallex8.png" WIDTH="200"></A> <BR><B>図 55:</B> <A href="exframes/frame_bargradsmallex8.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV></P>
+<P></P>
+<P> グラデーション カラーを指定する場合は、<A href="../ref/BarPlot.html#_BARPLOT_SETFILLGRADIENT">BarPlot::SetFillGradient()</A> メソッドを使用します。詳細はクラス リファレンスを参照してください。</P>
+<P> グラデーション カラーを使用する場合は、以下の点に注意してください。</P>
+<UL>
+<LI>グラデーション処理には非常に多くの計算処理が必要です。グラデーションを使った大きなプロットは、1 色の処理の 6 倍かかります。グラフの生成に数分かかるような場合は、JpGraph のキャッシュ機能の利用が役に立つでしょう。</LI>
+<LI>グラデーションはより多くの色を使用するため、画像のカラーパレットがより大きくなり、その結果画像のサイズが大きくなります。アンチエイリアス処理も多くの色を使用する可能性があるので、グラデーション処理された画像にアンチエイリアス処理を使用すると、深刻な影響を受ける可能性があります。そのためカラーパレットは、必要な数より多く用意しておくとよいでしょう。グラデーションカラーを使用する場合は TrueColor を使用するべきです。<BR>これは、指定した色が別の色で表示されてしまうという現象を回避するためです。これは JpGraph のバグではありません。とりわけアンチエイリアスが使用可能になっている場合や、多くの色を使用している場合に良く見られます。そのため、線の角度にもよりますが、アンチエイリアスを使用する場合は実際に使用される色の数を予測することは不可能です。</LI>
+</UL>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="728Horizontalbargraphs.html">前へ</A> <A HREF="7210Creatingsemifilledbargraphs.html">次へ</A>
+</BODY>
+</HTML>

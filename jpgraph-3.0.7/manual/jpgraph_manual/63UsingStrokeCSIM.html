@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="62Specifyingtargetsforimagemapplots.html">
+<LINK REL="Next" HREF="64ExamplesofImagemaps.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="62Specifyingtargetsforimagemapplots.html">前へ</A> <A HREF="64ExamplesofImagemaps.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="6_3">6.3 StrokeCSIM() を使用する </A></H2>
+<P> CSIM イメージの一番簡単な作成方法は、 StrokeCSIM() メッソドを使用します。前に説明したとおり、このメソッドはイメージ マップの仕様と同様にイメージタグを含む （小さい）HTML ページを実際に返します。標準のイメージタグ src プロパティではこのメソッドで終わるスクリプトを使うことが<B>できません</B>。</P>
+<P> CSIM（または、イメージ マップを維持する）を作成する2 つの方法があります。</P>
+<OL>
+<LI> 標準のアンカー リファレンスでターゲットとして CSIM イメージ スクリプトを使用します、たとえば<CODE>
+<PRE>
+&lt;a href=&quot;mycsimscript.html&quot;&gt;
+</PRE>
+</CODE>イメージだけを含むイメージ ページには欠点があります。</LI>
+<LI> もう1 つの方法は、標準の &quot;include&quot; php ステートメントを使っている HTML ページでイメージ スクリプトを含むだけで、任意の HTML ページに含まれるイメージ スクリプトを許可します。たとえば、<CODE>
+<PRE>
+&lt;h2&gt; This is an CSIM image &lt;/h2&gt;
+
+&lt;?php
+include &quot;mycsimscript.php&quot;
+?&gt;
+</PRE>
+</CODE></LI>
+</OL>
+<P><DIV class="note"><B>注意:</B>同じページに複数の CSIM イメージがある場合、同じページにファイルが複数回含まれる、または何度か&ldquo;既に定義されたエラー&rdquo;が表示されるの、&ldquo;jpgraph.php&rdquo; を含むスクリプトで &ldquo;include_once&rdquo; を使う必要があります。</DIV></P>
+<P> Stroke() を StrokeCSIM() に置き換えるプロセスは困難です。StrokeCSIM() に呼ぶのに等しい Stroke() への既存の呼び出しをすべて交換してください。</P>
+<P> 違いは、 StrokeCSIM() メソッドで最小のファイル名を与える必要があるということのみです。最初の引数は、拡張子を含む実際のイメージ スクリプトの名前であるべきです。たとえば、イメージ スクリプトは書き込み必要な &ldquo;mycsimscript.php&rdquo; と呼ばれます。<BR>  <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">StrokeCSIM</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'mycsimscript.php'</FONT><FONT color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>
+<BR>ただし、ここでは小さな &ldquo;trick&rdquo; の適用が可能です。PHP は、常に現在のファイル名に設定される、 &ldquo;__FILE__&rdquo; と呼ばれる特別な変数を維持します。これは、以下のコンストラクションで使用できるということです：</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">StrokeCSIM</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">basename</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">__FILE__</FONT><FONT color="#007700">))</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>スクリプトは、別な方法で必要なファイルのコードを変更せずに名前を変更できるので、これはより良い方法です。<DIV
+class="note"><B>注意:</B>なぜ、スクリプト名は最初のパラメーターとして使われるのですか？理由は、送られる HTML ページの生成で、イメージ タグのスクリプトに関連する必要があるからです。それなら、なぜ PHP_SELF リファレンスを使用することができないのですか？PHP_SELF での問題は、HTML ページにイメージ・スクリプトがあり、PHP_SELF を使用する場合、HTML ページの名前を取得し PHP_SELF で実際のスクリプトが使用されないということです。また、コンテキストで __FILE__ が &ldquo;jpgraph.php&rdquo; に設定されないの、ライブラリで __FILE__ トリックを使用することができません。したがって、上に示したように、クライアントはこれを指定しなければなりません。</DIV></P>
+<P> StrokeCSIM() の他の引数はオプションです。同じ HTML ページで複数の CSIM イメージを使用する場合、 すべてのイメージがそれぞれのイメージに対してそれぞれのイメージ マップに適切に調和するためユニークでなければならないので、2 つ目のパラメーターとしてイメージ マップの名前を指定する必要があるということに注意してください。<A href="../ref/Graph.html#_GRAPH_STROKECSIM">StrokeCSIM()</A> の詳細に関してはクラス リファレンスを参照してください。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="62Specifyingtargetsforimagemapplots.html">前へ</A> <A HREF="64ExamplesofImagemaps.html">次へ</A>
+</BODY>
+</HTML>

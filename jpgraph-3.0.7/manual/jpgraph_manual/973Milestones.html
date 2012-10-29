@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="972Specifyingstartandendpositionforabar.html">
+<LINK REL="Next" HREF="974Verticalline.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="972Specifyingstartandendpositionforabar.html">前へ</A> <A HREF="974Verticalline.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="9_7_3">9.7.3 マイルストーン</A></H3>
+<P> マイルストーンはバーに似ていますが、終了日をもちません。というのは、マイルストーンはある一日のみに適用されるためです。マイルストーンは多くがアクティビティと同じ方法で作成されますが、代わりにMileStone()メソッドを使用します。</P>
+<P> マイルスト-ンのコンストラクタは以下のとおりです<DIV class="phpscript"><CODE><FONT
+color="#000000"> <FONT color="#0000BB"> </FONT><FONT color="#007700">function </FONT><FONT color="#0000BB">MileStone</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$aVPos</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$aTitle</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$aDate</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$aCaption</FONT><FONT color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P></P>
+<TABLE border="0">
+<TR><TD valign="top">
+<!--span style=&quot;font-family:times;font-size:85%;font-weight:bold;&quot;--> <CODE><FONT color="#000000"> <FONT color="#0000BB"> $aVPos </FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>バーの鉛直位置　[0..n]</TD></TR>
+<TR><TD valign="top">
+<!--span style=&quot;font-family:times;font-size:85%;font-weight:bold;&quot;--> <CODE><FONT color="#000000"> <FONT color="#0000BB"> $aTitle </FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>アクティビティのタイトル</TD></TR>
+<TR><TD valign="top">
+<!--span style=&quot;font-family:times;font-size:85%;font-weight:bold;&quot;--> <CODE><FONT color="#000000"> <FONT color="#0000BB"> $aDate </FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>マイルスト-ンの日付</TD></TR>
+<TR><TD valign="top">
+<!--span style=&quot;font-family:times;font-size:85%;font-weight:bold;&quot;--> <CODE><FONT color="#000000"> <FONT color="#0000BB"> $aCaption </FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>マイルストーンの右側に表示されるテキスト</TD></TR>
+</TABLE>
+<P> 有効なマイルストーンの例は次のようなものです。</P>
+<UL>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">&nbsp;$milestone&nbsp;</FONT><FONT color="#007700">=&nbsp;new&nbsp;</FONT><FONT color="#0000BB">MileStone</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">3</FONT><FONT
+color="#007700">,</FONT><FONT color="#DD0000">&quot;Code&nbsp;complete&quot;</FONT><FONT
+color="#007700">,</FONT><FONT color="#DD0000">&quot;2001-12-01&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P></P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">&nbsp;$milestone&nbsp;</FONT><FONT color="#007700">=&nbsp;new&nbsp;</FONT><FONT color="#0000BB">MileStone</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">3</FONT><FONT
+color="#007700">,</FONT><FONT color="#DD0000">&quot;Code&nbsp;complete&quot;</FONT><FONT
+color="#007700">,</FONT><FONT color="#DD0000">&quot;2001-12-01&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;(2001-12-01)&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P></P>
+</LI>
+</UL>
+<P> デフォルトでは、マイルストーンは塗りつぶしの「ダイヤモンド」形状として描かれます。これはオプションで修正することができます。実際の形状は、PlotMark()クラスのインスタンスの一つであるマイルストーンの「mark」プロパティを用いて指定します。（バープロットにおけるマークと同じクラス）</P>
+<P> 例えばマイルストーンの形状を三角形に変更するためには、以下のようにSetType()メソッドを使用します。  <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB">&nbsp;$milestone</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">mark</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetType</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">MARK_DTRIANGLE</FONT><FONT color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> これを実行し、これまでの例にマイルストーンを加えてみましょう。これにより下図151のような結果が得られます。<DIV class="example">
+<BR> <A href="exframes/frame_ganttex04.html" target="blank"><IMG border="0"
+HEIGHT="189" src="ganttex04.png" WIDTH="493"></A> <BR><B>図 151:</B> ガントチャートにマイルストーンを加える<A href="exframes/frame_ganttex04.html" target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> デフォルトでは、マイルストーンのタイトル色は赤色であることに気づくでしょう。たとえばこれを太字の黒色に変更したいなら、以下のようにマイルストーンのタイトルプロパティで、SetColor()やSetFont()を実行します。 <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT
+color="#0000BB"> $milestone</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">FF_FONT1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FF_BOLD</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$milestone</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;black&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> この結果は次のようになります。<DIV class="example">
+<BR> <A href="exframes/frame_ganttex05.html" target="blank"><IMG border="0"
+HEIGHT="189" src="ganttex05.png" WIDTH="502"></A> <BR><B>図 152:</B> マイルストーンタイトルの色とフォントを変更する <A href="exframes/frame_ganttex05.html"
+target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P> 見出しを修正するためには、 title プロパティのかわりに caption プロパティに使用すること以外は、全く同じことを行います。 <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $milestone</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">caption</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_FONT1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FF_BOLD</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$milestone</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">caption</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;black&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> バーのタイトルやキャプションプロパティに同じ方法で使用することによって、バータイトルや見出しを修正することもできます。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="972Specifyingstartandendpositionforabar.html">前へ</A> <A HREF="974Verticalline.html">次へ</A>
+</BODY>
+</HTML>

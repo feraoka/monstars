@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="983Dayscale.html">
+<LINK REL="Next" HREF="985Monthscale.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="983Dayscale.html">前へ</A> <A HREF="985Monthscale.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="9_8_4">9.8.4 週スケール</A></H3>
+<P> 週スケールは、デフォルトでは1～53の範囲で週数を表示します。（ISO8601 によって定義されています。詳細はリファレンスセクションを参照ください） </P>
+<P> ここで、週数の計算はJpGraph内で実行され、OSの日付ライブラリによらないということを記述しておく必要があるかもしれません。このことは、多くのOS上で一貫した挙動を示すことを意味します（少なくとも、M$ Windows はISO-8601に<B>従わない</B>か、あるいは、strftime()などの通常のライブラリを用いて週数を計算する方法を提供しています。）</P>
+<P> 3つの方法で、週の動作を変更することができます。以下の定数を SetStyle() 関数で使用することで異なる日付フォーマットを指定することができます。</P>
+<UL>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> WEEKSTYLE_WNBR</FONT></FONT></CODE></DIV>
+<P> 週数を表示します。週数の表示フォーマットをさらに変更するために、次の関数を呼び出してオプションでフォーマットの文字列を与えます。 <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> SetLabelFormatString</FONT><FONT
+color="#007700">()</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+</P>
+<P> ここで使用する文字列のフォーマットは、整数（週数）を使う sprintf() 関数の書式でなくてはなりません。デフォルトでは、'W'が数字の前に付け加えられます。</P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> WEEKSTYLE_FIRSTDAY</FONT></FONT></CODE></DIV>
+<P> 週の最初の日付を表示します。</P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> WEEKSTYLE_FIRSTDAY2</FONT></FONT></CODE></DIV>
+<P> 週の最初の日付と月の略称を表示します。</P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> WEEKSTYLE_FIRSTDAYWNBR</FONT></FONT></CODE></DIV>
+<P> 週の最初の日にちの週数を表示します。</P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> WEEKSTYLE_FIRSTDAY2WNBR</FONT></FONT></CODE></DIV>
+<P> 週と月の最初の日の週数を表示します。</P>
+</LI>
+</UL>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="983Dayscale.html">前へ</A> <A HREF="985Monthscale.html">次へ</A>
+</BODY>
+</HTML>

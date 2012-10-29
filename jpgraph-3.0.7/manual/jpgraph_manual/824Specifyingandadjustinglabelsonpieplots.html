@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="823Explodingpieslices.html">
+<LINK REL="Next" HREF="825Specifyingslicecolorsandusingthemes.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="823Explodingpieslices.html">前へ</A> <A HREF="825Specifyingslicecolorsandusingthemes.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="8_2_4">8.2.4 円プロットのラベルを指定して調整する</A>
+</H3>
+<P> デフォルトでは、各スライスの値は円プロットの外側に、パーセント値で表示されます。絶対値で表示したい場合は、<A href="../ref/PiePlot.html#_PIEPLOT_SETLABELTYPE">SetLabelType()</A> メソッドを使用します。以下に例を掲載します。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">&nbsp;$pieplot</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetLabelType</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;PIE_VALUE_ABS&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> さらに、printf() 形式で書式を設定する (<A href="../ref/DisplayValue.html#_DISPLAYVALUE_SETFORMAT">SetFormat()</A> メソッド) 、あるいはコールバック関数を使用する (<A href="../ref/DisplayValue.html#_DISPLAYVALUE_SETFORMATCALLBACK">SetFormatCallback()</A>メソッド) ことで、より高度な書式設定が可能です。 </P>
+<P> また、ラベルの位置は<A href="../ref/PiePlot.html#_PIEPLOT_SETLABELPOS">PiePlot::SetLabelPos()</A>  メソッドで調節できます。このメソッドの引数には、角度の割合か auto のいずれかを指定します。後者の場合は、JpGraph は自動的に最前の場所を判定し、以下のような出力を行います。 <DIV class="example">
+<BR> <A href="exframes/frame_pieex8.html" target="blank"><IMG border="0" HEIGHT="200"
+src="pieex8.png" WIDTH="250"></A> <BR><B>図 131：</B> スライスのラベルの位置を調節する <A href="exframes/frame_pieex8.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> さらには、手動で各ラベルを別々に指定することもできます。これを行うには、<A href="../ref/PiePlot.html#_PIEPLOT_SETLABELS">PiePLot::SetLabels()</A> メソッドを使用します。このメソッドを使用することで、各ラベルのテキスト文字列を指定できます。また、数値に対しては printf() 形式の書式も設定できます。手渡す数値は<A href="../ref/PiePlot.html#_PIEPLOT_SETLABELTYPE">SetLabelType()</A>メソッドの指定により、絶対値、あるいはパーセント値になります。 </P>
+<P> また、SetLabels() メソッドでは第 2 引数としてラベルの位置を指定できます。これは、SetLabelPos() メソッドの代わりとして使用できます。引数が省略された場合、デフォルトで auto が使用されます。<DIV class="note"><B>注意:</B>ラベルの配置は円プロットの内側か外側かで動作が異なります。円プロットの内側の場合は、文字列は指定した角度でスライスの中央に配置されます。円プロットの外側の場合は、角度に依存し、円プロットの上にラベルの文字列がかからないようにします。</DIV></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="823Explodingpieslices.html">前へ</A> <A HREF="825Specifyingslicecolorsandusingthemes.html">次へ</A>
+</BODY>
+</HTML>

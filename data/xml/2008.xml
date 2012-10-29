@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf8" ?>
+<monstars>
+  <game comment="&lt;br&gt;オーシャンリーグ&lt;br&gt;&lt;br&gt;&lt;br&gt;投手成績&lt;br&gt;  伊藤  勝ち(6回完投) 1勝0敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt; 2回 水谷選手のファーストゴロでランナー入れ替わり&lt;br&gt; 2回 桜井選手のピッチャーゴロでランナー入れ替わり&lt;br&gt;&lt;br&gt;" date="08/04/05" game="オーシャンリーグ" loc="天王洲A" result="1" season="2008" team="ピーナッツ" time="17:00">
+    <batters>
+      <batter name="machiyama" order="1" position="4">
+        <batting raw="1-5G-H1*" />
+        <batting raw="2-1G-E" />
+        <batting raw="4-K-O" />
+        <batting raw="6-B--1" />
+      </batter>
+      <batter name="mizutani" order="2" position="6">
+        <batting raw="1-B*" />
+        <batting raw="2-3G-O" />
+        <batting raw="4-5G-O" />
+        <batting raw="6-9F-O" />
+      </batter>
+      <batter name="sakurai" order="3" position="5">
+        <batting raw="1-5G-H1-1-1*" />
+        <batting raw="2-1G-O" />
+        <batting raw="4-1G-O" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="oomi" order="4" position="8">
+        <batting raw="1-4F-E-1*" />
+        <batting raw="2-5F-O" />
+        <batting raw="5-9G-H1--1" />
+        <batting raw="6-B" />
+      </batter>
+      <batter name="suzuki" order="5" position="9">
+        <batting raw="1-K-O" />
+        <batting raw="3-8F-O" />
+        <batting raw="5-8F-O" />
+        <batting raw="6-7F-O" />
+      </batter>
+      <batter name="ekimura" order="6" position="7">
+        <batting raw="1-8F-G-1" />
+        <batting raw="3-8O-H2" />
+        <batting raw="5-7G-H1--1" />
+      </batter>
+      <batter name="itoh" order="7" position="1">
+        <batting raw="1-6G-E-1" />
+        <batting raw="3-6G-H1--1" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="kawahara" order="8" position="2">
+        <batting raw="1-1G-O" />
+        <batting raw="3-4F-O" />
+        <batting raw="5-7F-O" />
+      </batter>
+      <batter name="takemoto" order="9" position="3">
+        <batting raw="2-8G-H1" />
+        <batting raw="3-5G-O" />
+        <batting raw="5-6G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="4" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="1" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="4" fieldFirst="1" inning="total" />
+      <team batFirst="MonStars" fieldFirst="ピーナッツ" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;投手成績&lt;br&gt;  伊藤  負け 1勝1敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="08/04/12" game="オーシャンリーグ" loc="多摩川緑地" result="-1" season="2008" team="オーシャンズ" time="14:00">
+    <batters>
+      <batter name="sakurai" order="1" position="4">
+        <batting raw="1-8F-O" />
+        <batting raw="3-2G-O" />
+        <batting raw="6-1G-O" />
+      </batter>
+      <batter name="y-osa" order="2" position="7">
+        <batting raw="1-5G-O" />
+        <batting raw="4-5G-O" />
+        <batting raw="7-8F-O" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-3G-O" />
+        <batting raw="4-3G-O" />
+        <batting raw="7-4F-O" />
+      </batter>
+      <batter name="ekimura" order="4" position="6">
+        <batting raw="2-1G-O" />
+        <batting raw="4-4F-O" />
+        <batting raw="7-8F-O" />
+      </batter>
+      <batter name="itoh" order="5" position="1">
+        <batting raw="2-6G-H1" />
+        <batting raw="5-6L-O" />
+      </batter>
+      <batter name="suzuki" order="6" position="9">
+        <batting raw="2-K-O" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="takasu" order="7" position="5">
+        <batting raw="2-5G-O" />
+        <batting raw="5-1G-O" />
+      </batter>
+      <batter name="takemoto" order="8" position="3">
+        <batting raw="3-6F-O" />
+        <batting raw="6-6F-O" />
+      </batter>
+      <batter name="kawahara" order="9" position="2">
+        <batting raw="3-6F-O" />
+        <batting raw="6-K-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="2" fieldFirst="0" inning="3" />
+      <score batFirst="2" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="1" fieldFirst="0" inning="6" />
+      <score batFirst="0" fieldFirst="0" inning="7" />
+      <score batFirst="5" fieldFirst="0" inning="total" />
+      <team batFirst="オーシャンズ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;&lt;br&gt;投手成績&lt;br&gt;伊藤 勝ち(5回) 2勝1敗&lt;br&gt;鈴木 (1回)&lt;br&gt;&lt;br&gt;5nakajima : 中島さん, 4sakai : 酒井さん は 999からの助っ人&lt;br&gt;&lt;br&gt;5nakajima      2-K-O                           4-4F-H1*        5-6G-O-1    6-5G-O&lt;br&gt;4sakai                         3-5F-O          4-7F-O-1        5-B&lt;br&gt;&lt;br&gt;4回 川原さんの盗塁阻止の送球が乱れたところで桜井さんホームイン（川原さんの盗塁も成功）&lt;br&gt;5回 川原さん酒井さんの四球で押し出しホームイン&lt;br&gt;&lt;br&gt;" date="08/06/14" game="オーシャンリーグ" loc="萩中公園" result="1" season="2008" team="スーパーソニックス" time="13:00">
+    <batters>
+      <batter name="suzuki" order="1" position="7">
+        <batting raw="1-5F-O" />
+        <batting raw="3-7G-H1*" />
+        <batting raw="4-6F-O" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="takasu" order="2" position="6">
+        <batting raw="1-5G-O" />
+        <batting raw="3-7L-H1*" />
+        <batting raw="5-D*" />
+        <batting raw="6-5G-H1*" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-5F-O" />
+        <batting raw="3-8O-H2-2-1" />
+        <batting raw="5-B*" />
+        <batting raw="6-8L-H2-1*" />
+      </batter>
+      <batter name="y-osa" order="4" position="9">
+        <batting raw="2-7O-H2*" />
+        <batting raw="3-7F-G-1" />
+        <batting raw="5-6F-O" />
+        <batting raw="6-1F-O" />
+      </batter>
+      <batter name="itoh" order="5" position="1">
+        <batting raw="2-7O-HR-2*" />
+        <batting raw="3-5F-O" />
+        <batting raw="5-1G-H1*" />
+        <batting raw="6-8G-H1-1" />
+      </batter>
+      <batter name="sakurai" order="6" position="3">
+        <batting raw="2-1G-O" />
+        <batting raw="4-8O-H3-1*" />
+        <batting raw="5-8O-H2-2*" />
+        <batting raw="6-8F-O" />
+      </batter>
+      <batter name="kawahara" order="7" position="2">
+        <batting raw="2-5G-H1" />
+        <batting raw="4-B--1*" />
+        <batting raw="5-8O-H2-1*" />
+      </batter>
+      <batter name="takemoto" order="8" position="@">
+        <batting raw="2-7F-O" />
+        <batting raw="4-B--1" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="machiyama" order="9" position="@">
+        <batting raw="3-D*" />
+        <batting raw="4-5F-O" />
+        <batting raw="5-5F-E" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="2" fieldFirst="0" inning="2" />
+      <score batFirst="3" fieldFirst="0" inning="3" />
+      <score batFirst="3" fieldFirst="0" inning="4" />
+      <score batFirst="5" fieldFirst="1" inning="5" />
+      <score batFirst="2" fieldFirst="0" inning="6" />
+      <score batFirst="15" fieldFirst="1" inning="total" />
+      <team batFirst="MonStars" fieldFirst="スーパーソニックス" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;&lt;br&gt;投手成績&lt;br&gt;伊藤 負け 2勝 2敗&lt;br&gt;&lt;br&gt;&lt;br&gt; 3回 竹本さん、水谷さんの四球で２塁に進塁後、牽制アウト&lt;br&gt; 4回 山下さんのショートゴロで伊藤さんフォースアウト。&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="08/07/05" game="オーシャンリーグ" loc="天王洲A面" result="-1" season="2008" team="バミューダズ" time="11:00">
+    <batters>
+      <batter name="ekimura" order="1" position="5">
+        <batting raw="1-K-O" />
+        <batting raw="3-3F-O" />
+        <batting raw="6-2G-O" />
+      </batter>
+      <batter name="mizutani" order="2" position="6">
+        <batting raw="1-6G-O" />
+        <batting raw="3-B" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-8O-H2--1" />
+        <batting raw="4-4F-O" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="sakurai" order="4" position="9">
+        <batting raw="1-3L-O" />
+        <batting raw="4-6G-O" />
+        <batting raw="7-9F-O" />
+      </batter>
+      <batter name="itoh" order="5" position="1">
+        <batting raw="2-1G-O" />
+        <batting raw="4-4G-H1" />
+        <batting raw="7-5G-O" />
+      </batter>
+      <batter name="y-osa" order="6" position="7">
+        <batting raw="2-5G-O" />
+        <batting raw="4-6G-O" />
+        <batting raw="7-9F-H1--1" />
+      </batter>
+      <batter name="kawahara" order="7" position="2">
+        <batting raw="2-3F-O" />
+        <batting raw="5-5G-O" />
+        <batting raw="7-B--1" />
+      </batter>
+      <batter name="takemoto" order="8" position="3">
+        <batting raw="3-B-O" />
+        <batting raw="5-1F-O" />
+        <batting raw="7-B" />
+      </batter>
+      <batter name="machiyama" order="9" position="4">
+        <batting raw="3-7F-O" />
+        <batting raw="5-2F-O" />
+        <batting raw="7-6G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="3" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="3" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="0" fieldFirst="x" inning="7" />
+      <score batFirst="0" fieldFirst="6" inning="total" />
+      <team batFirst="MonStars" fieldFirst="バミューダズ" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;（オーシャン公式戦は6回まで）&lt;br&gt;&lt;br&gt;投手成績&lt;br&gt;伊藤 勝ち 3勝 2敗&lt;br&gt;&lt;br&gt;3murayama  1-B---2*         3-B---2*          5-B*       6-7F-O&lt;br&gt;&lt;br&gt; 3murayama : 村山さんは助っ人&lt;br&gt;1回 伊藤選手のゴロで鈴木さんがフォースアウト&lt;br&gt;1回 篠崎選手のレフトライナーで水谷選手が飛び出し戻れずアウト&lt;br&gt;2回 タカシ選手２塁で牽制アウト&lt;br&gt;3回 鈴木選手３盗直後相手のエラーでホームイン&lt;br&gt;5回 鈴木選手 ワイルドピッチで3塁進塁、パスボールでホームイン&lt;br&gt;6回 桜井選手パスボールでホームインを狙うもタッチアウト&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="08/07/26" game="オーシャンリーグ" loc="潮田公園" result="1" season="2008" team="フェアスピリッツ" time="9:00">
+    <batters>
+      <batter name="suzuki" order="1" position="7">
+        <batting raw="1-B---1" />
+        <batting raw="3-B---1*" />
+        <batting raw="5-7G-H2-1*" />
+        <batting raw="6-B*" />
+      </batter>
+      <batter name="oomi" order="2" position="8">
+        <batting raw="1-B*" />
+        <batting raw="3-1G-O-1" />
+        <batting raw="5-6G-O" />
+        <batting raw="6-8G-H1*" />
+      </batter>
+      <batter name="sakurai" order="3" position="4">
+        <batting raw="1-8F-H1-1*" />
+        <batting raw="3-1G-H1" />
+        <batting raw="5-B" />
+        <batting raw="6-8O-H3-3" />
+      </batter>
+      <batter name="itoh" order="4" position="1">
+        <batting raw="1-1G-O" />
+        <batting raw="3-5G-O" />
+        <batting raw="5-5G-O" />
+        <batting raw="7-5G-O" />
+      </batter>
+      <batter name="mizutani" order="5" position="6">
+        <batting raw="1-1G-E-1" />
+        <batting raw="3-1G-O" />
+        <batting raw="6-7O-H2--1*" />
+        <batting raw="7-1G-O" />
+      </batter>
+      <batter name="kawahara" order="6" position="2">
+        <batting raw="1-5G-E-1" />
+        <batting raw="4-6G-O" />
+        <batting raw="6-6G-O" />
+        <batting raw="7-4G-H1" />
+      </batter>
+      <batter name="sinozaki" order="7" position="9">
+        <batting raw="1-7L-O" />
+        <batting raw="4-5G-H1" />
+        <batting raw="6-6G-E--1*" />
+        <batting raw="7-B" />
+      </batter>
+      <batter name="takashi" order="8" position="5">
+        <batting raw="2-B---1" />
+        <batting raw="4-1F-O" />
+        <batting raw="6-5F-H1*" />
+        <batting raw="7-5G-O" />
+      </batter>
+      <batter name="machiyama" order="9" position="@">
+        <batting raw="2-1G-O" />
+        <batting raw="4-5G-O" />
+        <batting raw="6-8F-H3-3*" />
+      </batter>
+      <batter name="takemoto" order="10" position="@">
+        <batting raw="2-K-O" />
+        <batting raw="5-1G-O" />
+        <batting raw="6-8F-H1-1*" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="3" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="2" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="2" fieldFirst="0" inning="5" />
+      <score batFirst="7" fieldFirst="0" inning="6" />
+      <score batFirst="14" fieldFirst="0" inning="total" />
+      <team batFirst="MonStars" fieldFirst="フェアスピリッツ" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;&lt;br&gt;投手成績&lt;br&gt;伊藤 負け 3勝3敗 (1-5回)&lt;br&gt;待山 (6回)&lt;br&gt;&lt;br&gt;&lt;br&gt;6回 タカシ選手のゴロで竹本選手２塁でアウト（ランナー入れ替わり)&lt;br&gt;6回 鈴木選手振り逃げ（書き方が分かりませんでした。)&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="08/08/09" game="オーシャンリーグ" loc="ガス橋緑地3号面" result="-1" season="2008" team="レコーズ" time="10:00">
+    <batters>
+      <batter name="takashi" order="1" position="5">
+        <batting raw="1-B---1*" />
+        <batting raw="3-K-O" />
+        <batting raw="6-6G-O*" />
+      </batter>
+      <batter name="y-osa" order="2" position="3">
+        <batting raw="1-1G-O" />
+        <batting raw="4-8O-HR-1*" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-8F-O-1" />
+        <batting raw="4-D---1*" />
+        <batting raw="6-9O-H2-1-1*" />
+      </batter>
+      <batter name="sakurai" order="4" position="4">
+        <batting raw="1-8F-O" />
+        <batting raw="4-4G-O-1" />
+        <batting raw="6-9O-H3-1*" />
+      </batter>
+      <batter name="itoh" order="5" position="1">
+        <batting raw="2-4G-E--1" />
+        <batting raw="4-6G-O" />
+        <batting raw="6-9G-H1-1" />
+      </batter>
+      <batter name="suzuki" order="6" position="7">
+        <batting raw="2-4G-E" />
+        <batting raw="4-7F-O" />
+        <batting raw="6-K-E" />
+      </batter>
+      <batter name="sinozaki" order="7" position="9">
+        <batting raw="2-6F-O" />
+        <batting raw="5-2F-O" />
+        <batting raw="6-6L-O" />
+      </batter>
+      <batter name="kawahara" order="8" position="2">
+        <batting raw="2-9F-O" />
+        <batting raw="5-7G-H1" />
+      </batter>
+      <batter name="takasu" order="9" position="6">
+        <batting raw="2-K-O" />
+        <batting raw="5-2F-O" />
+      </batter>
+      <batter name="machiyama" order="10" position="@">
+        <batting raw="3-K-O" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="takemoto" order="11" position="@">
+        <batting raw="3-5G-O" />
+        <batting raw="6-7G-H1" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="2" fieldFirst="1" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="3" fieldFirst="2" inning="4" />
+      <score batFirst="5" fieldFirst="0" inning="5" />
+      <score batFirst="7" fieldFirst="3" inning="6" />
+      <score batFirst="17" fieldFirst="6" inning="total" />
+      <team batFirst="レコーズ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;&lt;br&gt;投手成績&lt;br&gt;伊藤 勝ち 4勝3敗 (6回)&lt;br&gt;&lt;br&gt;&lt;br&gt;1回 桜井選手のファーストゴロで鈴木選手がホームに突っ込みタッチアウト&lt;br&gt;1回 伊藤選手の打席でパスボールにより大海選手ホームイン&lt;br&gt;3回 山下選手ダブルプレー&lt;br&gt;5回 鈴木選手ホームでタッチアウト&lt;br&gt;6回 待山選手のショートゴロで水谷選手がセカンドでアウト&lt;br&gt;" date="08/08/23" game="オーシャンリーグ" loc="天王洲A" result="1" season="2008" team="フリップチップス" time="9:00">
+    <batters>
+      <batter name="takashi" order="1" position="2">
+        <batting raw="1-2F-O" />
+        <batting raw="3-6G-H1--1*" />
+        <batting raw="4-8F-O" />
+        <batting raw="5-B*" />
+        <batting raw="6-B" />
+      </batter>
+      <batter name="suzuki" order="2" position="9">
+        <batting raw="1-B---1" />
+        <batting raw="3-8G-H1-1-2" />
+        <batting raw="4-9G-H1-1" />
+        <batting raw="5-B--1" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-9G-H2*" />
+        <batting raw="3-3G-H1" />
+        <batting raw="4-3G-O" />
+        <batting raw="5-6F-O" />
+        <batting raw="6-4G-O" />
+      </batter>
+      <batter name="sakurai" order="4" position="5">
+        <batting raw="1-1G-O--1" />
+        <batting raw="3-1G-O" />
+        <batting raw="5-D---2*" />
+        <batting raw="5-B--1" />
+      </batter>
+      <batter name="itoh" order="5" position="1">
+        <batting raw="1-B---1" />
+        <batting raw="3-B" />
+        <batting raw="5-B*" />
+        <batting raw="5-8G-H1-1" />
+      </batter>
+      <batter name="y-osa" order="6" position="7">
+        <batting raw="1-5G-O" />
+        <batting raw="3-1G-O" />
+        <batting raw="5-7O-H3-2*" />
+        <batting raw="6-B---1*" />
+      </batter>
+      <batter name="mizutani" order="7" position="6">
+        <batting raw="2-4G-O" />
+        <batting raw="4-4G-O" />
+        <batting raw="5-9G-H1-1-1*" />
+        <batting raw="6-9G-H1-1" />
+      </batter>
+      <batter name="machiyama" order="8" position="4">
+        <batting raw="2-1G-O" />
+        <batting raw="4-8O-H2*" />
+        <batting raw="5-B---1*" />
+        <batting raw="6-6G-O--1" />
+      </batter>
+      <batter name="takemoto" order="9" position="3">
+        <batting raw="2-3G-O" />
+        <batting raw="4-B" />
+        <batting raw="5-6F-O" />
+        <batting raw="6-9G-H1" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="1" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="1" fieldFirst="3" inning="3" />
+      <score batFirst="1" fieldFirst="0" inning="4" />
+      <score batFirst="6" fieldFirst="0" inning="5" />
+      <score batFirst="1" fieldFirst="1" inning="6" />
+      <score batFirst="10" fieldFirst="4" inning="total" />
+      <team batFirst="MonStars" fieldFirst="フリップチップス" />
+    </scoreboard>
+  </game>
+</monstars>

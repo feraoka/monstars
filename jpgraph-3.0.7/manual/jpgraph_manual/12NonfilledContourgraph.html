@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="111GeneratingAntiSpamchallenge.html">
+<LINK REL="Next" HREF="121NonfilledContourData.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css"><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="111GeneratingAntiSpamchallenge.html">前へ</A> <A HREF="121NonfilledContourData.html">次へ</A>
+<HR NOSHADE>
+<H1><A NAME="12">12 等高線グラフ</A></H1>
+
+<P> 等高線グラフを作成するためには、「jpgraph_contour.php」という拡張モジュールが必要となります。</P>
+
+<div class="note"><b>注意:</b><br />3.1以降のエンタープライズ版では「jpgraph_contourf.php」という拡張モジュールもあります。<br />
+  「jpgraph_contourf.php」を使用すると、等高線グラフを作成するだけでなく、等高線グラフの中を塗りつぶす、 <A HREF="06FilledContourgraph.html">(塗りつ
+ぶし）等高線グラフ</A>を作成することができます。エンタープライズ版では、データを手動で補間しなくとも、メッシュ・アルゴリズムが提供されているので、自動的に塗
+りつぶしデータが補間されます。<br /> <br /> 
+  例えば、三角形や四角形の補間メッシュが提供されます。<br />
+  塗りつぶし等高線グラフに関しては<A HREF="06FilledContourgraph.html">エンタープライズ版6章</A>で説明します。
+</div>
+
+<P>等高線プロットは、３次元の等高線を描画するのに使用します。</P>
+<P>等高線プロットそのものは２次元のプロットであり、ありふれた地形図のように見えます。</P>
+<P>等高線グラフの一つの例を図12で示します。</P>
+
+<DIV class="example">
+  <A href="example_src/frame_basic_contourex01.html" target="_blank"><img src="basic_contourex01.png" alt="" /></A><BR >
+  <B>図12 基本等高線グラフ</B> <A href="example_src/frame_basic_contourex01.html" target="_blank">[ソース]</A>
+</DIV>
+
+<P> 等高線グラフを作成するためには、「jpgraph_contour.php」という拡張モジュールが必要となります。</P>
+<UL><LI>等高線グラフは基本的なグラフ・エリアとして、基本的なx-yクラス・グラフを使用します。</LI>
+    <LI>等高線グラフには、標準グラフが備えている全てのオプションが提供されています。</LI>
+    <LI>凡例は自動生成されます。</LI>
+    <LI>入力データは行列であり、配列ではありません。</LI>
+</UL>
+
+<P>次に、等高線プロットの体裁を調整するために使用する基本的な４つのパラメーターについて記載します。</P>
+<UL><LI>1. 等高線の数<br >
+        初期設定では10本の等高線が描画されます。</LI>
+    <LI>2. データ格子補間のレベル<br >
+       すなわち、よりなめらかな等高線に見せるために、行列データにいくつかの中間点を設定することができます。</LI>
+    <LI>3. Y軸の反転<br >
+    <LI>初期設定では、入力行列の最初の行が、y=0に対応します。<br >
+      しかし、この場合、入力行列とプロットされた等高線が反転しています。<br >
+      見た目の都合上、入力データ行列と、結果として表示されるグラフを同じ向きに表示させたい場合は、この機能を利用して入力データ行列の最終行をy=0に対応させることができます。</LI>
+    <LI>4.等高線の色<br >
+       初期設定では、等高線の色は自然色スペクトル(青：等高線の低い点に対応、赤：等高線の高い点に対応)に指定されています。</LI>
+</UL>
+
+<P>等高線プロットでは、上述の方法に加え、基本的なグラフ・レイアウト変更によって、体裁を変更することもできます。例えば、タイトルの追加、色の調整、表示される軸のタイプの変更などができます。</P>
+<P>等高線プロットのスケール（目盛）は、初期設定ではナチュラル・スケールになっています、
+すなわち、点は(0..n)とみなされ、「n」は、対応する方向の、入力データ行列の各エントリに対応する点の数となります。</P>
+
+
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="111GeneratingAntiSpamchallenge.html">前へ</A> <A HREF="121NonfilledContourData.html">次へ</A>
+</BODY>
+</HTML>

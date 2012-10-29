@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="313PreparingTrueTypeFontFiles.html">
+<LINK REL="Next" HREF="32Customizingtheinstallation.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A>
+<A HREF="313PreparingTrueTypeFontFiles.html">前へ</A>
+<A HREF="32Customizingtheinstallation.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="3_1_4">3.1.4 日本語フォントを使用する</A></H3>
+<P>１．使用する日本語TrueTypeフォントをフォント用のディレクトリに格納します。</P>
+<BLOCKQUOTE>
+<P>ここでは例として、独立行政法人 情報処理推進機構が提供しているIPAフォントを使用します。</P>
+<BLOCKQUOTE>
+<P><a href="http://ossipedia.ipa.go.jp/ipafont/old/index.html" target="_blank" class="honbun_link">http://ossipedia.ipa.go.jp/ipafont/old/index.html</a></p>
+</BLOCKQUOTE>
+<P>上記URLより「一般利用者向けＩＰＡフォント使用許諾契約書」に同意の上、</P>
+<BLOCKQUOTE>
+<P> ・IPAfont00203.zip ( 15.3 MB)</P>
+</BLOCKQUOTE>
+<P> をダウンロードして解凍してください。</P>
+<P>生成されたfontsディレクトリの中にある、ipam.ttf、ipamp.ttf、ipag.ttf、ipagp.ttf を使用します。</P>
+<P>この4つのフォントファイルを、用意したフォントディレクトリに移動してください。<BR>
+ここでは例として、</P>
+<BLOCKQUOTE>
+<P> /usr/share/fonts/ja/TrueType/</P>
+</BLOCKQUOTE>
+<P>にフォントファイルを格納することにします。</P>
+</BLOCKQUOTE>                        
+<P><br>
+２. jpg-confing.inc.php 40行目付近にある以下の文章のコメントアウトを外します。</P>
+<BLOCKQUOTE>
+<P> // DEFINE(&quot;MBTTF_DIR&quot;,&quot;/usr/share/fonts/ja/TrueType/&quot;);<BR><BR>
+DEFINE(&quot;MBTTF_DIR&quot;,&quot;/usr/share/fonts/ja/TrueType/&quot;);</P>
+</BLOCKQUOTE>                        
+<P><BR>
+３．先ほどの定義文の2番目のパラメーターに、フォントを格納したディレクトリ名を指定します。</P>
+<BLOCKQUOTE>
+<P>例）<BR>
+DEFINE(&quot;MBTTF_DIR&quot;,&quot;/usr/share/fonts/ja/TrueType/&quot;);</P>
+</BLOCKQUOTE><P></P>
+<P>４．jpg-config.inc.php 110行目付近で定義されている下記の定義文を修正します。</P>
+<BLOCKQUOTE>
+<P> DEFINE('MINCHO_TTF_FONT','ipam.ttf');<BR>
+DEFINE('PMINCHO_TTF_FONT','ipam.ttf');<BR>
+DEFINE('GOTHIC_TTF_FONT','ipag.ttf');<BR>
+DEFINE('PGOTHIC_TTF_FONT','ipagp.ttf');</P>
+<P>これらの2番目のパラメーターを、それぞれ用意したフォントファイル名に変更します。<BR>
+ここでは用意したIPAフォント名がすでに指定されているのでこのままで使用します。<BR>
+日本語フォントはここで指定した4種類のみ使用できます。</P>
+</BLOCKQUOTE>                        
+<P>以上の設定でJpGraphで日本語フォントを使用できるようになります。</P>
+<HR SIZE="1" NOSHADE>                        
+<P>フォントファミリーは上から順に、FF_MINCHO、FF_PMINCHO、FF_GOTHIC、FF_PGOTHICと設定されます。<BR>
+例えば、タイトルに ipam.ttf を使用したい場合はJpGraphのソースコード内で以下のように設定します。</P>
+<BLOCKQUOTE>
+<P>例）<BR>
+$graph-&gt;title-&gt;SetFont(FF_PMINCHO);</P>
+</BLOCKQUOTE>                        
+<P>日本語フォントでは「太字」、「斜体字」、「太斜体字」のスタイルを使用することはできません。</P>
+<P>日本語フォントで文字のサイズを変更したいときは、フォントスタイルに FS_NORMAL を指定してください。</P>
+<BLOCKQUOTE>
+<P>例）<BR>
+$graph-&gt;title-&gt;SetFont(FF_MINCHO,FS_NORMAL,20);</P>
+</BLOCKQUOTE>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A>
+<A HREF="313PreparingTrueTypeFontFiles.html">前へ</A>
+<A HREF="32Customizingtheinstallation.html">次へ</A>
+</BODY>
+</HTML>

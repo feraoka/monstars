@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="73Errorplots.html">
+<LINK REL="Next" HREF="74Scatterplots.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="73Errorplots.html">前へ</A> <A HREF="74Scatterplots.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_3_1">7.3.1 ライン エラー プロットを使用する</A></H3>
+<P> ライン エラー プロットは、エラー プロットに加えてエラー点の平均値を線で結合したものです。この形式のプロットは、エラープロットとほとんど同じように使用できます。ライン エラー プロットを作成する場合は、jpgraph_line.php をインクルードして、<A href="../ref/ErrorPlot.html#_C_ERRORPLOT">ErrorLinePlot()</A> インスタンスを作成します。ライン エラー プロットは、LinePlotクラスを使用してラインを描画します。</P>
+<P> 描画するラインのプロパティを調節するには、ErrorLinePlot オブジェクトの line プロパティを使用します。たとえば、ラインの幅を 2 ピクセルにして、そのカラーを青色に設定する場合は以下の通りになります。   <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $elplot</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">line</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetWeight</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">2</FONT><FONT
+color="#007700">); <BR></FONT><FONT color="#0000BB">$elplot</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">line</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;blue&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>これで、以下のグラフが生成されます。<DIV class="example">
+<BR> <A href="exframes/frame_example15.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example15.png" WIDTH="300"></A> <BR><B>図 59:</B>ライン エラー プロットの例 <A href="exframes/frame_example15.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> もちろん、ライン プロット、エラー プロットそれぞれに対して凡例を追加できます。そこで、以下は、レッド エラー バーの凡例 &quot;Min/Max&quot;と 追加しなければならないブルー ラインの凡例 &quot;Average&quot; が欲しい場合の例です。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $errplot</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetLegend</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;Min/Max&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$errplot</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">line</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetLegend</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;Average&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> これにより、以下のグラフが作成されます。今回はデフォルトの位置に凡例を設置しました。<DIV class="example">
+<BR> <A href="exframes/frame_example16.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example16.png" WIDTH="300"></A> <BR><B>図 60:</B>ライン エラー プロットに凡例を追加する <A href="exframes/frame_example16.html"
+target="blank">[ソース]</A> 
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="73Errorplots.html">前へ</A> <A HREF="74Scatterplots.html">次へ</A>
+</BODY>
+</HTML>

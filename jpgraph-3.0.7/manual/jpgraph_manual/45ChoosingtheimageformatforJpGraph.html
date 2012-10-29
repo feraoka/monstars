@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="44ThebasicprincipleofJpGraphandthecreationofimages.html">
+<LINK REL="Next" HREF="46Alternativestostreamingbacktheimage.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="44ThebasicprincipleofJpGraphandthecreationofimages.html">前へ</A> <A HREF="46Alternativestostreamingbacktheimage.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="4_5">4.5 JpGraph の画像形式を選択する</A></H2>
+<P> デフォルトでは、JpGraph は PNG、JPEG、GIF の順に自動的に画像形式を選択します。実際に選択される形式はシステムに依存します。ファイルの形式を明示的に指定するには、以下の 2 通りの方法があります。 </P>
+<OL>
+<LI> DEFINE を用いてデフォルトの画像形式を変更する   <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB">&nbsp;DEFINE</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;DEFAULT_GFORMAT&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;auto&quot;</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV>
+<P></P>
+</LI>
+<LI> <A href="../ref/Image.html#_IMAGE_SETIMGFORMAT">SetImgFormat()</A> メソッドを使用して、スクリプトにて画像形式を設定する。たとえば、スクリプトで JPEG の使用を強制する場合は、以下のとおり記述します。  <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT
+color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">img</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetImgFormat</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;jpeg&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P></P>
+</LI>
+</OL>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="44ThebasicprincipleofJpGraphandthecreationofimages.html">前へ</A> <A HREF="46Alternativestostreamingbacktheimage.html">次へ</A>
+</BODY>
+</HTML>

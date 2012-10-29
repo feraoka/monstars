@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="981Minutescale.html">
+<LINK REL="Next" HREF="983Dayscale.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="981Minutescale.html">前へ</A> <A HREF="983Dayscale.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="9_8_2">9.8.2 時スケール</A></H3>
+<P> 時スケールは、より多くの組み込みフォーマットを備えています。以下のフォーマットオプションを使用することが可能です。 </P>
+<OL>
+<LI> &quot;HOURSTYLE_HM24&quot;  13：00のように、24時間制の時刻表示で、時と分の両方を表示します。</LI>
+<LI> &quot;HOURSTYLE_H24&quot;  13 のように、24時間制の時刻表示で、時のみを表示します。</LI>
+<LI>&quot;HOURSTYLE_HMAMPM&quot; 1：30pmのように、適切な am/pm とともに時と分を表示します。</LI>
+<LI> &quot;HOURSTYLE_HAMPM&quot;  1pmのように、適切な am/pm とともに時のみを表示します。 </LI>
+<LI>&quot;HOURSTYLE_CUSTOM&quot;  ヘッダープロパティのSetFormatString()を呼び出して指定されるカスタム定義のフォーマットで表示します。</LI>
+</OL>
+<P> 時間の間隔は2つの方法のどちらかで指定することが可能です。 6 のように整数を使用する方法、もしくは &rdquo;1：30&rdquo; のように時間を指定することができます。これは時間間隔を1時間30分にする例です。唯一の制限は、その間隔が24時間に対して割り切れる数値でなければならないということです。というのは、一日は、表示可能な最も小さな間隔であるためです。つまり、例えば、 2、4、6、&quot;1：30&quot;、&quot;0:45&quot; は使うことができますが、7 や &quot;2：45&quot; は使えないということです。</P>
+<P> 以下のコードは、分スケールを45分間隔とし、いくつかのカスタムカラーを設定する方法を示したものです。 <DIV class="phpscript"><CODE><FONT
+color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">hour</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetBackgroundColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'lightyellow:1.5'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">hour</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">FF_FONT1</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">hour</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetStyle</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">HOURSTYLE_HMAMPM</FONT><FONT
+color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">hour</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetIntervall</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;0:45&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 以下は、日スケールと時スケールを使えるようにした例です。<DIV class="example">
+<BR> <A href="exframes/frame_gantthourex1.html" target="blank"><IMG border="0"
+HEIGHT="173" src="gantthourex1.png" WIDTH="545"></A> <BR><B>図 160:</B> ガントチャート内で時スケールを使用する<A href="exframes/frame_gantthourex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="981Minutescale.html">前へ</A> <A HREF="983Dayscale.html">次へ</A>
+</BODY>
+</HTML>

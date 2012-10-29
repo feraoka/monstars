@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="6UsingimagemapswithJpGraph.html">
+<LINK REL="Next" HREF="62Specifyingtargetsforimagemapplots.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="6UsingimagemapswithJpGraph.html">前へ</A> <A HREF="62Specifyingtargetsforimagemapplots.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="6_1">6.1 イメージ マップ スクリプトの基本構造ゲット</A></H2>
+<P> クライアント側のイメージ マップを使用する HTML ページの標準構造は、以下のラインを使用しています。</P>
+<P></P>
+<PRE>
+// &ldquo;mapname&rdquo; を持つイメージマップの仕様
+&lt;MAP NAME=...&gt;
+... specification ...
+&lt;/MAP&gt;
+
+// イメージ タグ
+&lt;img src=&quot;...&quot; ISMAP USEMAP=&quot;mapname&quot;&gt;
+</PRE>
+<P> 興味深い質問を持ち出します。</P>
+<P> 普通、&lt;img&gt; タグで直接グラフのスクリプトを呼ぶので、この &ldquo;HTML ラッパー&rdquo; スクリプトでどのようにイメージ マップ（イメージ スクリプトでのみ可能な）を維持しますか？</P>
+<P> JpGraph には、これを解く2 つの解決策があります。</P>
+<OL>
+<LI> 標準の Graph::Stroke() メソッドの代わりに、変更した Stroke() method Graph::StrokeCSIM() を使用する &quot;builtin&quot; 方法を使用してください。</LI>
+<LI> より複雑なコード化を犠牲にしてあなたに素晴らしいコントロールを提供する Graph::GetHTMLImageMap() を直接使用してください。 </LI>
+</OL>
+<P> 最初の方法は変更したストロークを使用するので、イメージを返す前に（標準の Stroke() メソッドのように）、StrokeCSIM() はイメージ マップの仕様と正しい &lt;IMG&gt; タグの両方を含む HTML ページを返します。</P>
+<P> 非CSIM イメージと異なるイメージ スクリプトを返すイメージ マップを処理する必要があるということを意味しています。たとえば、イメージ マップと一緒にいイメージ タグを含む実際の HTML ページを送るので、 &lt;IMG&gt; タグの &ldquo;src&rdquo; のターゲットとして、直接使用することができません。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="6UsingimagemapswithJpGraph.html">前へ</A> <A HREF="62Specifyingtargetsforimagemapplots.html">次へ</A>
+</BODY>
+</HTML>

@@ -1,0 +1,1702 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=iso-iso-8859-1">
+<LINK REL=STYLESHEET TYPE="text/css" HREF="../jpgdoc.css">
+</HEAD>
+
+<BODY>
+<DIV class="page">
+<DIV align="center"> 
+<H1>JpGraph PDF417 Barcode Manual</H1>
+
+<P> <IMG HEIGHT="79" src="pdf417_titleimg.png" WIDTH="436"></P>
+<BR><FONT style="font-size:14;"> 1 Apr, 2005</FONT>
+</DIV>
+<HR>
+<H1 ALIGN="CENTER"><A NAME="CONTENTS">Table of Contents</A></h1>
+<BR>
+<BR><B><A HREF="#1">1 Principle of PDF417 Barcodes</A></B>
+<UL>
+<LI><A HREF="#1_1">1.1 PDF417 standard</A></LI>
+<LI><A HREF="#1_2">1.2 Data capacity</A></LI>
+<LI><A HREF="#1_3">1.3 Structure of PDF417 barcodes</A></LI>
+</UL>
+<B><A HREF="#2">2  PDF-417 2D Barcodes with JpGraph</A></B>
+<UL>
+<LI><A HREF="#2_1">2.1  Introduction</A></LI>
+<UL>
+<LI><A HREF="#2_1_1">2.1.1  Verification</A></LI>
+</UL>
+<LI><A HREF="#2_2">2.2  Features</A></LI>
+<UL>
+<LI><A HREF="#2_2_1">2.2.1  Sample application</A></LI>
+<LI><A HREF="#2_2_2">2.2.2 Examples</A></LI>
+</UL>
+<LI><A HREF="#2_3">2.3  Creating barcodes - Quick start</A></LI>
+<UL>
+<LI><A HREF="#2_3_1">2.3.1 Adjusting the output</A></LI>
+</UL>
+<LI><A HREF="#2_4">2.4 Specifying the PDF417 parameters</A></LI>
+<UL>
+<LI><A HREF="#2_4_1">2.4.1 Specifying encoding and input data</A></LI>
+<LI><A HREF="#2_4_2">2.4.2 Adjusting the number of data columns</A></LI>
+<LI><A HREF="#2_4_3">2.4.3 Adjusting the error level</A></LI>
+<LI><A HREF="#2_4_4">2.4.4 Truncated PDF417</A></LI>
+</UL>
+<LI><A HREF="#2_5">2.5 Adjusting the output</A></LI>
+<UL>
+<LI><A HREF="#2_5_1">2.5.1 Output format</A></LI>
+<LI><A HREF="#2_5_2">2.5.2 Summary of user settings to specify output</A>
+</LI>
+</UL>
+<LI><A HREF="#2_6">2.6 Putting it all together</A></LI>
+</UL>
+<B><A HREF="#3">3 Method reference</A></B>
+<UL>
+<LI><A HREF="#3_1">3.1 Encoder methods</A></LI>
+<UL>
+<LI><A HREF="#3_1_1">3.1.1 PDF417Barcode($aNumCols=10,$aErrLevel=2)</A></LI>
+<LI><A HREF="#3_1_2">3.1.2 SetColumns($aCols)</A></LI>
+<LI><A HREF="#3_1_3">3.1.3 SetErrLevel($aErrLevel)</A></LI>
+<LI><A HREF="#3_1_4">3.1.4 SetTruncated($aTrunc=true)</A></LI>
+</UL>
+<LI><A HREF="#3_2">3.2 Backend methods</A></LI>
+<UL>
+<LI><A HREF="#3_2_1">3.2.1 Methods common to all backends</A></LI>
+<LI><A HREF="#3_2_2">3.2.2 Methods only for use with image backends</A></LI>
+<LI><A HREF="#3_2_3">3.2.3 Methods only for use with Postscript backends</A>
+</LI>
+</UL>
+</UL>
+<B><A HREF="#4">4 Example script</A></B>
+<UL>
+<LI><A HREF="#4_1">4.1 Example 1: Default values</A></LI>
+<LI><A HREF="#4_2">4.2 Example 2: Basic parameter settings</A></LI>
+<LI><A HREF="#4_3">4.3 Example 3: Showing human readable text</A></LI>
+<LI><A HREF="#4_4">4.4 Example 4: Altering colors</A></LI>
+<LI><A HREF="#4_5">4.5 Example 5: Creating postscript output</A></LI>
+<LI><A HREF="#4_6">4.6 Example 6: Manually selecting compaction schema</A>
+</LI>
+</UL>
+<B><A HREF="#5">5 Example application</A></B><HR>
+<h2><A NAME="1">1 Principle of PDF417 Barcodes</A></h2>
+<P> This first chapter give a very brief explanation of the general
+ structure of PDF417 barcodes and gives some capacity figures.</P>
+<H2><A NAME="1_1">1.1 PDF417 standard</A></H2>
+<p>
+ The PDF417 is a modern high capacity barcode and is fully described in
+ the official standard<I> ISO/IEC 15438:2001</I> available for purchase
+ from<A href="http://www.iso.ch/iso/en/CombinedQueryResult.CombinedQueryResult?queryString=pdf417">
+ ISO Standard Organization</A>. As for a standard this is actually a
+ quite readable document.
+<H2><A NAME="1_2">1.2 Data capacity</A></h2><p>
+ PDF417 is a row based 2 dimensional barcode that consists of a maximum
+ of 90 rows and 30 columns. The maximum number of data is dependent on
+<UL>
+<LI> The compaction mode used</LI>
+<LI> The number of columns (and rows)</LI>
+<LI> The error correction level</LI>
+</UL>
+ The maximum number of data is
+<UL>
+<LI>2710 digits in numeric compaction mode</LI>
+<LI>1850 characters in text compaction mode</LI>
+<LI>1108 bytes in byte compaction mode</LI>
+</UL>
+<H2><A NAME="1_3">1.3 Structure of PDF417 barcodes</A></h2><p>
+ Each PDF417 barcode is built up according to the following principle
+<P></P>
+<TABLE border="1">
+<TR><TH>Start pattern</TH><TH>Left row indicator</TH><TH>Data count</TH><TH>
+Datawords</TH><TH>Right row indicator</TH><TH>Stop pattern</TH></TR>
+<TR><TH>Start pattern</TH><TH>Left row indicator</TH><TH colspan="2">
+Datawords</TH><TH>Right row indicator</TH><TH>Stop pattern</TH></TR>
+<TR><TH colspan="6">[....]</TH></TR>
+<TR><TH>Start pattern</TH><TH>Left row indicator</TH><TH colspan="2">
+Datawords</TH><TH>Right row indicator</TH><TH>Stop pattern</TH></TR>
+<TR><TH>Start pattern</TH><TH>Left row indicator</TH><TH>Datawords</TH><TH>
+Error correction</TH><TH>Right row indicator</TH><TH>Stop pattern</TH></TR>
+</TABLE>
+ <SMALL><I><B>PDF417 Barcodes in principle.</B> Each barcode is
+ constructed by stacking a number of rows that is built up in the same
+ way. The error correction words are added to the end of the payload
+ data, each barcode has a minimum of 2 error detection codewords. Up to
+ 510 additional error correction codewords can be added for maximum data
+ correction.</I></SMALL>
+<P> Each dataword (symbol character) consists of 4 bars and four spaces
+ in a 17 module structure, hence the name PDF<I>417</I>. The figure
+ below explains the different parts of a full PDF417 barcode.</P>
+<P> <IMG HEIGHT="225" src="pdf417sd.png" WIDTH="555">
+<BR> <SMALL><I><B>Figure 0.</B> The details of a PDF417 barcode. The
+ above barcode uses 5 columns of data and encodes the string &quot;PDF417&quot;
+ with error correction level 4.</I></SMALL></P>
+<P> The data to be converted into a barcode has to go through a number
+ of steps which are handled by the library</P>
+<P>
+<OL>
+<LI>The first step is a high level compression schema known as<I>
+ compaction</I>. This schema translates the input string into a number
+ of codewords. Each codeword has a numeric value between 0 and 928. To
+ achieve the highest possible compaction and flexibility the PDF417
+ standard defined three different compaction schemas, numeric (which
+ only encodes digits), text (which encodes ASCII 32-126) and byte
+ (encodes ASCII 0-255). The numeric schema compact up to 2.9 digits per
+ codeword, the text mode up to 1.8 characters per codeword and finally
+ the byte mode up to 1.2 bytes per codeword.</LI>
+<LI>The second step is the transformation of codeword into (4,17)
+ symbols. The exact symbol used is dependent on which row the codeword
+ to be encoded is on. Three different sets of codewords, known as
+ clusters, are used. This ensures that two adjacent rows uses different
+ clusters. This allows the barcode to be scanned without using specific
+ divider symbols.</LI>
+<LI>In the third step the error codewords specified are calculated and
+ added to the end of the payload data. The error correction uses
+ polynomial Reed-Solomon coding which is one of the best currently known
+ codes counted as effort vs efficiency (i.e. error correcting ability vs
+ the computational effort to handle the codes). (The actual algorithm is
+ a non-trivial process and readers interested in pursuing this is best
+ recommended to consult one of the numerous mathematical textbooks
+ covering this area.)</LI>
+<LI>Finally these codeword are layed out in the specified rows, the left
+ and right row indicators calculated and the the start and stop patterns
+ added.</LI>
+</OL>
+<p>
+ All these steps are are completely transparent to the user of the
+ library and is only explained here as a background reading.
+
+<h2><A NAME="2">2 PDF-417 2D Barcodes with JpGraph</A></h2>
+<H2><A NAME="2_1">2.1  Introduction</A></h2><p>
+ With the PDF-417 2D barcode extension to JpGraph you can create
+ 2-Dimensional PDF417 barcodes. These are high capacity barcodes and has
+ excellent (user selectable) error detection and correction built-in.
+ PDF417 barcodes can be created as an image (in either PNG or JPEG
+ format) or as a Postscript file ready for printing on high resolution
+ printers.
+<P> In addition the barcode extension provides extensive data
+ verification which makes sure you can't create an invalid barcode.</P>
+<H3><A NAME="2_1_1">2.1.1  Verification</A></h3><p>
+ The JpGraph PDF417 barcodem module have been extensively verified using
+ an ARGOX 8213 2D CCD handheld scanner.
+<H2><A NAME="2_2">2.2  Features</A></h2><p>
+ This is a summary of the features available in the JpGraph PDF417
+ barcode extension.
+<UL>
+<LI> Supports both standard and truncated PDF 417 codes</LI>
+<LI> Output format
+<P><OL>
+<LI> Image format, either JPEG or PNG</LI>
+<LI> Postscript</LI>
+<LI> Encapsulated postscript</LI>
+</OL><P>
+</LI>
+<LI> Supports both auto and user selectable number of columns and rows</LI>
+<LI> Support all 8 possible error correction levels as specified in the
+ official PDF-417 specifications</LI>
+<LI> Supports all defined compaction schemes, Alpha, Numeric and Byte.
+ In addition the library has an auto-detection algorithm that can
+ automatically detect the best possible encoding given a specific input
+ data.</LI>
+<LI> User specified module hight</LI>
+<LI> User specified module width factor</LI>
+<LI> User specified scaling of resulting barcode</LI>
+<LI> Horizontal or vertical barcode layout</LI>
+<LI> Optional human readable text on barcodes</LI>
+<LI> Foreground and background color specification</LI>
+</UL>
+<H3><A NAME="2_2_1">2.2.1  Sample application</A></h3><p>
+ Even though primarily the JpGraph 2D PDF-417 barcodes are meant, and
+ designed, to be used as a library within a larger system there is a
+ small demo barcode creation application included in the distribution.
+ This application can be used to easily create barcode through it's WEB
+ interface.
+<P> This application is primarily included as a demo on the features
+ available in the library and not as a finalized product.</P>
+<P> You can find the application in the &quot;pdf417demoapp/&quot; subdirectory in
+ the distribution. Or by using this<A href="../../src/pdf417demoapp/">
+ this link.</A></P>
+<H3><A NAME="2_2_2">2.2.2 Examples</A></h3><p>
+ A number of small example script that creates various versions of
+ PDF-417 barcodes can be found in the &quot;pdf417examples/&quot; directory in the
+ distribution.
+<H2><A NAME="2_3">2.3  Creating barcodes - Quick start</A></h2><p>
+ All barcode creation follows the following simple steps :
+<P>
+<OL>
+<LI> Include the necessary library modules in your script<I> jpgraph.php</I>
+ and<I> jpgraph_pdf417.php</I>.</LI>
+<LI> Create an encoder with the chosen PDF-417 layout (number of
+ columns)</LI>
+<LI> Create a backend for your chosen output format (image or
+ postscript)</LI>
+<LI> Encode your data</LI>
+</OL><P>
+ So, for example to create a barcode (in PNG format) representing the
+ data string &quot;PDF-417&quot; encoded in PDF-417 using default number of
+ columns and the default error detection level you would just have to
+ create the script
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#000000">
+ // Setup some data
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =</FONT><FONT
+color="#DD0000"> 'PDF-417'</FONT><FONT color="#007700">;
+<BR /></FONT><FONT color="#000000">// Create a new encoder and backend
+ to generate PNG images
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+ = new</FONT><FONT color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">
+();
+<BR /></FONT><FONT color="#0000BB">$backend</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">
+::</FONT><FONT color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$backend</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$data</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB">
+</FONT></FONT></CODE></B></DIV>
+<P></P>
+<P> This would then create the image shown in figure 1 below.</P>
+<P> <IMG HEIGHT="29" src="pdf4170D.png" WIDTH="218">
+<BR> <SMALL><B>Figure 1.</B><I> PDF417 barcode for &quot;PDF-417&quot;</I></SMALL></P>
+<P> As you can see from the code above the basic interface to the
+ library makes use of one abstract factory to create the appropriate
+ output backend. This design makes the addition of new output formats
+ transparent for the end user of the library.</P>
+<P> If you instead wanted to specifically encode the data with 8-columns
+ and using error detection level 5 you would have to modify the above
+ script as
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#000000">
+ // Setup some data
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =</FONT><FONT
+color="#DD0000"> 'PDF-417'</FONT><FONT color="#007700">;
+<BR /></FONT><FONT color="#000000">// Create a new encoder
+<BR /></FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 8</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use 8 data (payload) columns
+<BR /></FONT><FONT color="#0000BB">$errlevel</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 5</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use error level 5
+<BR /></FONT><FONT color="#0000BB"> $encoder</FONT><FONT color="#007700">
+ = new</FONT><FONT color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#000000">// Create an image backend
+<BR /></FONT><FONT color="#0000BB">$backend</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">
+::</FONT><FONT color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$backend</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$data</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB">
+</FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<P> <IMG HEIGHT="47" src="pdf4170E.png" WIDTH="235">
+<BR> <SMALL><B>Figure 2.</B><I> PDF417 barcode for &quot;PDF-417&quot; with 8 data
+ columns and level 5 error encoding.</I></SMALL></P>
+<P> This would give a more robust version of the data (which better can
+ handle damages on barcode tags) on the expense of the size of the
+ barcode.</P>
+<H3><A NAME="2_3_1">2.3.1 Adjusting the output</A></h3><p>
+ As mentioned in the introduction you have some flexibility in how the
+ generated barcodes is formatted. Two common modifications is to either
+ change the module width used (=the width of a unit line in the bar) or
+ add the printing of the human readable version of the data string below
+ the barcode.
+<P> To adjust the module width you make use of the<I> SetModuleWidth()</I>
+ method of the backend. So for example to augment the previous example
+ and change the module width to 2 and have the human readable text we
+ would change the code to
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#000000">
+ // Setup some data
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =</FONT><FONT
+color="#DD0000"> 'PDF-417'</FONT><FONT color="#007700">;
+<BR /></FONT><FONT color="#000000">// Create a new encoder
+<BR /></FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 8</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use 8 data (payload) columns
+<BR /></FONT><FONT color="#0000BB">$errlevel</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 5</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use error level 5
+<BR /></FONT><FONT color="#0000BB"> $encoder</FONT><FONT color="#007700">
+ = new</FONT><FONT color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#000000">// Create an image backend
+<BR /></FONT><FONT color="#0000BB">$backend</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">
+::</FONT><FONT color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$backend</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$data</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB">
+</FONT></FONT></CODE></B></DIV></P>
+<P></P>
+<P> <IMG HEIGHT="87" src="pdf4170F.png" WIDTH="470">
+<BR> <SMALL><B>Figure 3.</B><I> Increasing the module width to '2' and
+ adding human readable text.</I></SMALL></P>
+<P> A note on the module width might be in order here. For image type
+ backends this specifies the number of pixels used for a module and for
+ Postscript (and Encapsulated PS) this specifies the width in points
+ (i.e. 1/72 inch). This also means that for image type backends only
+ integer values makes sense.</P>
+<P> You should keep in mind that depending on the quality of the printer
+ (and paper) very small module width might not be readable with all
+ barcode readers. For images it is therefore recommended to use &quot;2&quot;
+ pixels as the minimum module width and for postscript output the
+ minimum recommended width is &quot;0.8&quot; pt.</P>
+<H2><A NAME="2_4">2.4 Specifying the PDF417 parameters</A></h2><p>
+ Note. The following section is not meant as a general introduction to
+ the way PDF417 barcode is specified. It assumes that the reader has a
+ basic understanding of the nature of PDF417 encoding. This section will
+ focus on how to make use of the methods in the library to specify the
+ various settings for the PDF417 barcodes.
+<H3><A NAME="2_4_1">2.4.1 Specifying encoding and input data</A></h3><p>
+ The absolute simplest way of encoding data is simply to create a simple
+ string representing the data to be encoded and then pass that string as
+ the first argument to the<I> Stroke()</I> method in the backend. This
+ will make the JpGraph barcode module analyze the data and choose the
+ most efficient space saving encoding for that particular data.
+<P> The PDF417 standard stipulates 3 different compaction schemas that
+ can be used to minimize the number of codewords used for a particular
+ data string. The available compaction modes are:</P>
+<UL>
+<LI>Alpha compaction mode (also known as Text compaction mode).
+ Efficient encoding of ASCII 32-126, (inclusively) i.e. the normal
+ alphabet including numbers. Encodes 1.8 characters per codeword.</LI>
+<LI>Numeric compaction mode. Efficient encoding of numeric data. For
+ long consecutive strings of digits this gives a better compaction than
+ the alpha mode. Numeric compaction encodes about 2.9 digits per
+ codeword.</LI>
+<LI>Byte compaction mode. The least efficient encoding of them all. Used
+ only when there is a need to encode byte values as is, i.e. values in
+ the range 0-255. Please note that many barcode readers, especially
+ those with a keyboard wedge, don't send back the proper encoding for
+ ASCII values lower than 32 or higher than 126. Byte compaction mode
+ encodes roughly 1.2 byte per codeword.</LI>
+</UL>
+<p>
+ When the Automatic encoding is chosen this will also the optimum
+ encoding (from a size perspective) of the supplied data. This includes
+ shifting encoding method in the middle of the data one or several time
+ depending on the data. This means that it might start by compacting the
+ data according to the Alpha compaction schema but if it encounters a
+ long numeric data string it will switch to Numeric compaction mode.
+<P> However, some applications stipulates that a specific compaction
+ mode shall be used regardless whether it is the most optimal or not.
+ Therefore it of course possible to specify exactly what schema you want
+ to use.</P>
+<P> Since the application might dictate that several modes shall be used
+ the way one determines this is by supplying a 2-dimensional data input
+ array. This array in principle works by specifying the specific
+ compaction mode for each part of the data.</P>
+<P> The way the compaction mode is specified is by using one of the
+ following predefined constant</P>
+<UL>
+<LI><B> USE_TC</B>, Use Text compaction schema</LI>
+<LI><B> USE_NC</B>, Use Numeric compaction schema</LI>
+<LI><B> USE_BC</B>, Use Byte compaction schema</LI>
+</UL>
+<p>
+ Each section of data must therefore have the compaction mode specified.
+ An example will clarify how this is works.
+<P><B> Example 1:</B>
+<BR> In the following example we will assume that you want to encode the
+ data string<I> $data=&quot;1234567890&quot;</I> If you want to use the automatic
+ encoding then you would simply send in the string as is, i.e.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"> ...
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$data</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT>
+</CODE></B></DIV></P>
+<P> If you instead wanted to make sure only alpha mode (text) compaction
+ schema is used then you would have to create a 2-dimension array as
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $newdata</FONT><FONT color="#007700"> = array(array(</FONT><FONT color="#0000BB">
+USE_TC</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$data</FONT><FONT
+color="#007700">));
+<BR />...
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$newdata</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT>
+</FONT></CODE></B></DIV></P>
+<P> In the above example we used the constant<I> USE_TC</I> (short for
+ use-text-compaction). This will then force the second element to be
+ encoded using only text compaction.</P>
+<P> If you instead wanted to enforce numeric compaction you would have
+ to change the script to
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $newdata</FONT><FONT color="#007700"> = array(array(</FONT><FONT color="#0000BB">
+USE_NC</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$data</FONT><FONT
+color="#007700">));
+<BR />...
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$newdata</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT>
+</FONT></CODE></B></DIV></P>
+<P> Can you spot the difference? The only change is that we now
+ specified<I> USE_NC</I> (short for use-numeric-compaction). This will
+ force the second element to be encoded using numeric compaction schema.</P>
+<P> We will come back to the usage of byte compaction mode since it has
+ one additional complicating factor.</P>
+<P> In the above example we just used a single compaction schema, what
+ then if your application requires you to use multiple schemas? Well,
+ that is no problem. We just split our data for each of the compaction
+ mode we want to use and create an input array. An example will make
+ this clear.</P>
+<P><B> Example 2:</B>
+<BR> We will assume that we want to encode the string &quot;1234abc567&quot; by
+ using numeric compaction for the first 4 digits, then use text
+ compaction for the three letters and finally go back to numeric
+ compaction schema for the last three digits. For this to work we would
+ have to create an input array as is shown below.
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $newdata</FONT><FONT color="#007700"> = array(array(</FONT><FONT color="#0000BB">
+USE_NC</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;1234&quot;</FONT><FONT
+color="#007700">),array(</FONT><FONT color="#0000BB">USE_TC</FONT><FONT color="#007700">
+,</FONT><FONT color="#DD0000">&quot;abc&quot;</FONT><FONT color="#007700">),array(</FONT><FONT
+color="#0000BB">USE_NC</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+&quot;567&quot;</FONT><FONT color="#007700">));
+<BR />...
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$newdata</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT>
+</FONT></CODE></B></DIV></P>
+<P></P>
+<H4>2.4.1.1 Using byte compaction mode</H4>
+<p>
+ In the section above we stated that byte compaction is slightly
+ different. The reason for this is that we need, for technical reasons,
+ specify if the size (length) of the data to be encoded is an even
+ multiple of 6 or not. Hence, we have to Byte code compaction schemas<I>
+ USE_BC_E6</I> (for even multiples of 6) and<I> USE_BC_O6</I> (for odd
+ data). So to encode some specific data using byte compaction mode the
+ following code would have to be used
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $even6</FONT><FONT color="#007700"> = (</FONT><FONT color="#0000BB">
+strlen</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$data</FONT><FONT
+color="#007700">)%</FONT><FONT color="#0000BB">6</FONT><FONT color="#007700">
+===</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$newdata</FONT><FONT color="#007700">
+ = array(array(</FONT><FONT color="#0000BB"> $even6</FONT><FONT color="#007700">
+ ?</FONT><FONT color="#0000BB"> USE_BC_E6</FONT><FONT color="#007700"> :</FONT><FONT
+color="#0000BB"> USE_BC_O6</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$data</FONT><FONT color="#007700">));
+<BR />...
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$newdata</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT>
+</FONT></CODE></B></DIV>
+<P><FONT color="red"> Please again note that most keyboard wedge barcode
+ scanners do not handle byte values &lt; 32 or &gt; 127 properly.</FONT></P>
+<H3><A NAME="2_4_2">2.4.2 Adjusting the number of data columns</A></h3><p>
+ PDF417 barcode is made up of a number of rows and columns. The library
+ allows you to specify your wanted number of columns and it will then
+ determine the necessary number of rows to hold all the data. (and the
+ error correction information). Since each row has some overhead
+ (start/stop, sync codewords) you will minimize the overall area taken
+ by the barcode if you try to use as many columns as possible. The
+ standard will allow for up to 30 columns to be used.
+<P> However, it should be noted that there is often a physical
+ limitation to the maximum width that a scanner can read. Depending on
+ how the output is layed out this needs to be taken into consideration.</P>
+<H3><A NAME="2_4_3">2.4.3 Adjusting the error level</A></h3><p>
+ All PDF417 barcodes have a minium of two error detection codewords.
+ Above that the user is free to specify a higher level of not only error
+ detection but also error correction.
+<P> The error level specification determines how much redundancy is
+ added in the barcode label. A high level of redundancy ensures that a
+ partially damaged barcode can still be correctly read by the barcode
+ scanner. The downside is of course that the higher the error level the
+ bigger the barcode label gets. Another restriction one must be aware of
+ is that the total number of codewords (boat data and error correction)
+ can not exceed 925. This means that the more error correction codewords
+ the less is available for the payload.</P>
+<P>
+<TABLE border="1">
+<TR><TH>Error level</TH><TH>Error correction codewords</TH><TH>Maximum
+ payload</TH></TR>
+<TR><TD>0</TD><TD>2</TD><TD>923</TD></TR>
+<TR><TD>1</TD><TD>4</TD><TD>921</TD></TR>
+<TR><TD>2</TD><TD>8</TD><TD>917</TD></TR>
+<TR><TD>3</TD><TD>16</TD><TD>909</TD></TR>
+<TR><TD>4</TD><TD>32</TD><TD>893</TD></TR>
+<TR><TD>5</TD><TD>64</TD><TD>861</TD></TR>
+<TR><TD>6</TD><TD>128</TD><TD>797</TD></TR>
+<TR><TD>7</TD><TD>256</TD><TD>669</TD></TR>
+<TR><TD>8</TD><TD>512</TD><TD>413</TD></TR>
+</TABLE>
+<P> The recommended minimum error level is a dependent on the payload
+ size and is given in table 2 below.<p>
+<TABLE border="1">
+<TR><TH>Data codewords</TH><TH>Recommended error level</TH></TR>
+<TR><TD>1 to 40</TD><TD>2</TD></TR>
+<TR><TD>41 to 160</TD><TD>3</TD></TR>
+<TR><TD>161 to 320</TD><TD>4</TD></TR>
+<TR><TD>321 to 863</TD><TD>5</TD></TR>
+</TABLE>
+<p>
+ Please note that the number of codewords is not the same thing as, for
+ example, the number of digits or letters in a string to be encoded.
+ Depending on the chosen encoding the number of symbols per codeword is
+ &gt; 1. For example in numeric compaction mode (encoding) each codewords
+ encode, on average, 2.93 digits.
+<P> The error level in JpGraph is specified as an integer in the range
+ [0-8] inclusively and can be specified when creating a particular
+ encoder. For example the code
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#000000">
+ // Use 10-columns for data
+<BR /></FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">
+=</FONT><FONT color="#0000BB">10</FONT><FONT color="#007700">;
+<BR /></FONT><FONT color="#000000">// Create a new encode using the
+ default error correction
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+ = new</FONT><FONT color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></B></DIV>
+<P> uses the default error correction (2). While the following specifies
+ and error correction level of 6
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $columns</FONT><FONT color="#007700">=</FONT><FONT color="#0000BB">10</FONT><FONT
+color="#007700">;</FONT><FONT color="#000000"> // Use 10-columns for
+ data
+<BR /></FONT><FONT color="#0000BB">$errlevel</FONT><FONT color="#007700">
+=</FONT><FONT color="#0000BB">6</FONT><FONT color="#007700">;</FONT><FONT
+color="#000000"> // Error correction level 6
+<BR />
+<BR />// Create a new encode using the default error correction
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+ = new</FONT><FONT color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$errlevel</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB">
+</FONT></FONT></CODE></B></DIV>
+<P> In addition to specifying the number of data columns and error level
+ in the creation of the encoder it is also possible to adjust them
+ afterwards. For example, one might want to create the encoder in the
+ beginning of a script and then use the same encoder with different
+ settings controlled by, for example, entries in a DB.
+<P> The two encoder methods<I> SetErrLevel()</I> and<I> SetColumns()</I>
+ are used for this purpose. The code snippet below does the exact same
+ things as the code snippet above but using these two methods efter the
+ encoder has been instantiated
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $columns</FONT><FONT color="#007700">=</FONT><FONT color="#0000BB">10</FONT><FONT
+color="#007700">;</FONT><FONT color="#000000"> // Use 10-columns for
+ data
+<BR /></FONT><FONT color="#0000BB">$errlevel</FONT><FONT color="#007700">
+=</FONT><FONT color="#0000BB">6</FONT><FONT color="#007700">;</FONT><FONT
+color="#000000"> // Error correction level 6
+<BR />
+<BR />// Create a new encode using the default error correction
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+ = new</FONT><FONT color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">
+();
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">SetColumns</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$columns</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">SetErrLevel</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$errlevel</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB">
+</FONT></FONT></CODE></B></DIV>
+<P>
+<H3><A NAME="2_4_4">2.4.4 Truncated PDF417</A></h3><p>
+<B> Warning: Not all PDF417 barcode readers can handle truncated PDF417</B>
+<P> In situations where the physical size of the label is restricted one
+ might use the truncated version of the PDF417 code. This works by
+ simply stripping of some redundant information in the right side of the
+ barcode. This will of course also make the barcode more sensible for
+ damage.
+<P> The two images below shows a normal version together with the
+ truncated version (both barcodes encode the same information).
+<P>
+<TABLE>
+<TR><TD> <IMG HEIGHT="57" src="pdf4170G.png" WIDTH="334">
+<BR> <SMALL><B>Figure 4a.</B><I> Normal PDF417</I></SMALL></TD><TD> <IMG HEIGHT="57"
+src="pdf4170H.png" WIDTH="266">
+<BR> <SMALL><B>Figure 4b.</B><I> Truncated PDF417</I></SMALL></TD></TR>
+</TABLE>
+<P> You can specify that you want to use truncated output using the
+ method<I> SetTruncated()</I> as the following example shows
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $columns</FONT><FONT color="#007700">=</FONT><FONT color="#0000BB">10</FONT><FONT
+color="#007700">;</FONT><FONT color="#000000"> // Use 10-columns for
+ data
+<BR /></FONT><FONT color="#0000BB">$errlevel</FONT><FONT color="#007700">
+=</FONT><FONT color="#0000BB">4</FONT><FONT color="#007700">;</FONT><FONT
+color="#000000"> // Error correction level 4
+<BR /></FONT><FONT color="#0000BB">$truncated</FONT><FONT color="#007700">
+=</FONT><FONT color="#0000BB">true
+<BR /></FONT><FONT color="#000000">// Create a new encode using the
+ default error correction
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+ = new</FONT><FONT color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">
+();
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">SetTruncated</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$truncated</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">SetColumns</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$columns</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">SetErrLevel</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$errlevel</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB">
+</FONT></FONT></CODE></B></DIV>
+<P>
+<H2><A NAME="2_5">2.5 Adjusting the output</A></h2><p>
+ This section deals with the way you can adjust the visual quality and
+ appearance of the output.
+<H3><A NAME="2_5_1">2.5.1 Output format</A></h3><p>
+ By choosing the appropriate backend you can choose to generate the
+ barcode label as either an image (in either PNG or JPEG format) or as
+ Postscript (both standalone and Encapsulated postscript) . For images
+ the PNG is strongly recommended and used by default. The reason is that
+ PNG is a non-destructive format and will ensure the maximum quality of
+ the barcodes while JPEG is not well suited for this type of
+ applications since it is a destructive format.
+<P> This choice is being made by creating the appropriate backend. The
+ backend is created by calling the factory method<I>
+ PDF417BackendFactory::Create()</I> specifying what type of backend and
+ what encoder to use. The following code snippet shows how to create a
+ suitable backend to create PNG images
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700">
+<BR /></FONT><FONT color="#000000"> // Create a new encode using the
+ default error correction
+<BR />// and columns
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+ = new</FONT><FONT color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">
+();
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT>
+</FONT></CODE></B></DIV>
+<P> You could also, if you application requires it have one encoder and
+ two different backends as the following example shows
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700">
+<BR /></FONT><FONT color="#0000BB"> $date</FONT><FONT color="#007700">=</FONT><FONT
+color="#DD0000">'ABC123'</FONT><FONT color="#007700">;
+<BR /></FONT><FONT color="#0000BB">$file</FONT><FONT color="#007700">=</FONT><FONT
+color="#DD0000">' ...'</FONT><FONT color="#007700">;</FONT><FONT color="#000000">
+ // Some filename to write the PS file to
+<BR />// Create a new encode using the default error correction
+<BR />// and columns
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+ = new</FONT><FONT color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">
+();
+<BR /></FONT><FONT color="#0000BB">$eImg</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$eEPS</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_EPS</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$eEPS</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$data</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$file</FONT><FONT
+color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$eImg</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$data</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT>
+</CODE></B></DIV>
+<P> The code snippet above will use the same encoder to drive both the
+ image and the postscript backends.
+<H3><A NAME="2_5_2">2.5.2 Summary of user settings to specify output</A></h3><p>
+ In the list below is a short description of the available possibilities
+ to change the output. For a more detailed explanation of the parameters
+ for each method please consult the method reference in the end of this
+ manual.
+<UL>
+<LI><B>Specifying the module width.</B> The module width for the barcode
+ is user selectable, For images this specifies the number of pixels for
+ the module and for Postscript output this specifies the number of
+ points (1/72 inch).</LI>
+<LI><B>Specifying the width/height factor</B> Specify the height of each
+ individual row in the barcode as a multiple of the width. By default
+ the height is 3x the width.</LI>
+<LI><B>Specifying background and foreground color</B> The foreground
+ color and the background color for the barcodes are user selectable.
+ The colors can be specified as any of JpGraphs builtin colors.</LI>
+<LI><B>Adding human readable text</B> This is an extension to the PDF417
+ standard. This adds a plaintext string of the data that has been
+ encoded under the barcode. This is useful when debugging applications
+ to make sure that the right values have been read, for example, from a
+ DB.</LI>
+<LI><B>Rotating 90 degrees (Vertical output)</B> This enables the
+ barcode to be printed vertically.</LI>
+<LI><B>Scaling the image</B> The resulting barcode images can be scaled
+ by an arbitrary factor.</LI>
+</UL>
+<H2><A NAME="2_6">2.6 Putting it all together</A></h2><p>
+ In the example directory in the distribution you can find many more
+ examples on how to create barcodes. As a good start the following
+ (simple) template may be used
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700">
+<BR /></FONT><FONT color="#0000BB"> $data</FONT><FONT color="#007700"> =</FONT><FONT
+color="#DD0000"> 'PDF-417'</FONT><FONT color="#007700">;
+<BR />
+<BR /></FONT><FONT color="#000000">// Setup some symbolic names for
+ barcode specification
+<BR /></FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 8</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use 8 data (payload) columns
+<BR /></FONT><FONT color="#0000BB">$errlevel</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 4</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use error level 4
+<BR /></FONT><FONT color="#0000BB">$modwidth</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 2</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Setup module width (in pixels)
+<BR /></FONT><FONT color="#0000BB">$height</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 3</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Height factor
+<BR /></FONT><FONT color="#0000BB">$truncated</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> false</FONT><FONT color="#007700">;</FONT><FONT
+color="#000000"> // Don't truncate
+<BR /></FONT><FONT color="#0000BB">$showtext</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> true</FONT><FONT color="#007700">;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Show human readable string
+<BR />
+<BR />// Create a new encoder and backend to generate PNG images
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+ = new</FONT><FONT color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">SetTruncated</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$truncated</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetModuleWidth</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$modwidth</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetHeight</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$height</FONT><FONT color="#007700">);
+<BR /> &nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">NoText</FONT><FONT color="#007700">(!</FONT><FONT
+color="#0000BB">$showtext</FONT><FONT color="#007700">);&nbsp;&nbsp;&nbsp;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$r</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> $e</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$data</FONT><FONT
+color="#007700">);
+<BR />}
+<BR />else {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;die(</FONT><FONT color="#DD0000">'Can'</FONT><FONT color="#0000BB">
+t create PDF417 encoder</FONT><FONT color="#007700">.'</FONT><FONT color="#0000BB">
+);
+<BR /> }</FONT></FONT></CODE></B></DIV>
+<P> In a real life situation you would probably use your own error
+ handling and read the data from a DB but the above skeleton outlines
+ the general usage.</P>
+<h2><A NAME="3">3 Method reference</A></h2>
+<p>
+ In the following section all publically available methods are
+ described. Each method is listed with parameters and default values.
+<H2><A NAME="3_1">3.1 Encoder methods</A></h2><p>
+ All encoder methods are accessed on the encoder which first has to be
+ instantiated by creating a instance of the class<I> PDF417Barcode()</I>
+ as the following example shows
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $encoder</FONT><FONT color="#007700"> = new</FONT><FONT color="#0000BB">
+ PDF417Barcode</FONT><FONT color="#007700">();
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+-&gt; ...</FONT><FONT color="#0000BB"></FONT></FONT></CODE></B></DIV>
+<P></P>
+<H3><A NAME="3_1_1">3.1.1 PDF417Barcode($aNumCols=10,$aErrLevel=2)</A></h3><p>
+<B> Purpose:</B><p>
+To create a new PDF417 encoder with a chosen number of columns and
+ error level. Please note that these parameters can also be adjusted
+ using the methods described below.
+<P><B> Returns:</B>
+<BR> A new encoder which is used by the backend to generate the barcode
+ label.</P>
+<P><B>Example:</B>
+<p>
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $encoder</FONT><FONT color="#007700"> = new</FONT><FONT color="#0000BB">
+ PDF417Barcode</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+20</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT>
+</CODE></B></DIV></P>
+<P><B> Note:</B>
+<BR></P>
+<H3><A NAME="3_1_2">3.1.2 SetColumns($aCols)</A></h3><p>
+<B> Purpose:</B>
+<p>Specify number ber of data columns. This should be a value in the
+ range [2-30] (inclusively)
+<P></P>
+<P><B>Example:</B>
+<BR> &nbsp;
+<BR><DIV  class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $encoder</FONT><FONT color="#007700"> = new</FONT><FONT color="#0000BB">
+ PDF417Barcode</FONT><FONT color="#007700">();
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">SetColumns</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">20</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB">
+</FONT></FONT></CODE></B></DIV></P>
+<P><B> Note:</B>
+<BR> The number of rows will be automatically adjusted to fit the data
+ and the error correction codewords as specified by the error level
+ setting. The number of rows is not directly user configurable.</P>
+<H3><A NAME="3_1_3">3.1.3 SetErrLevel($aErrLevel)</A></h3><p>
+<B> Purpose:</B>
+<BR> Specify the chosen level of error correction.
+<P><B>Example:</B>
+<BR> &nbsp;
+<BR><DIV class="exscript">
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $encoder</FONT><FONT color="#007700"> = new</FONT><FONT color="#0000BB">
+ PDF417Barcode</FONT><FONT color="#007700">();
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">SetErrLevel</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">5</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB">
+</FONT></FONT></CODE></B></DIV></P>
+<P><B> Note:</B>
+<BR> A high error level will limit the number of payload data since the
+ total number of data in the label is fixed.</P>
+<H3><A NAME="3_1_4">3.1.4 SetTruncated($aTrunc=true)</A></h3><p>
+<B> Purpose:</B>
+<BR> Specify that the barcode label should be truncated. This will make
+ the label slightly narrower and might be used where the physical space
+ is at premium.
+<P><B>Example:</B>
+<BR> &nbsp;
+<BR><DIV class="exscript" >
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $encoder</FONT><FONT color="#007700"> = new</FONT><FONT color="#0000BB">
+ PDF417Barcode</FONT><FONT color="#007700">();
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">SetTruncated</FONT><FONT color="#007700">
+();</FONT><FONT color="#0000BB"></FONT></FONT></CODE></B></DIV></P>
+<P><B> Note:</B>
+<BR> Not all barcode scanners can handle truncated PDF417.</P>
+<H2><A NAME="3_2">3.2 Backend methods</A></h2><p>
+ The backend is responsible for the actual output of the barcode label.
+ It is possible to either create an image or a postscript backend. All
+ barcode scripts must create a suitable backend. In the creation of the
+ backend the previous created encoder (front end) is given as the second
+ argument. The actual output from the script (to create the barcode
+ label) is done with a call to the<I> Stroke()</I> method in the
+ backend. As usual this call should be the last line in the script if it
+ is used to send the image back to the browser.
+<P> One should always include a check that the backend has been
+ successfully created before trying to use any methods on the object as
+ the following short template illustrates.</P>
+<P></P>
+<P><B>Example:</B>
+<BR> &nbsp;
+<BR><DIV class="exscript" >
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $encoder</FONT><FONT color="#007700"> = new</FONT><FONT color="#0000BB">
+ PDF417Barcode</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$columns</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#000000">// .. Output formatting
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR />}</FONT><FONT color="#0000BB"></FONT></FONT></CODE></B></DIV></P>
+<P> In the example above we have chosen to create an image encoder
+ (specified by constant<I> BACKEND_IMAGE</I>) by default the image
+ format used will be PNG which is also the recommended format.</P>
+<H3><A NAME="3_2_1">3.2.1 Methods common to all backends</A></h3><p>
+<H4>3.2.1.1 Stroke($aData,$aFile='')</H4>
+<B> Purpose:</B>
+<P> Encode a specific data string entered as the first argument and
+ send the barcode output, depending on backend, either directly back to
+ the browser as an image or return the Postscript representation as a
+ string.
+<P> If a valid file name is specified the image will be written directly
+ to that file instead.</P>
+<P></P>
+<H4>3.2.1.2 SetVertical($aFlg=true)</H4>
+<B> Purpose:</B>
+<P> This will make the barcode label rendered vertical instead of
+ horizontal
+<P><B>Example:</B>
+<BR> &nbsp;
+<BR><DIV class="exscript" >
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $encoder</FONT><FONT color="#007700"> = new</FONT><FONT color="#0000BB">
+ PDF417Barcode</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$columns</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetVertical</FONT><FONT color="#007700">();
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR />}</FONT><FONT color="#0000BB"></FONT></FONT></CODE></B></DIV></P>
+<P><B> Note:</B>
+<BR></P>
+<H4>3.2.1.3 SetScale($aScale)</H4>
+<B> Purpose:</B>
+<P> Will arbitrary scale the generated barcode image. Scale factor is
+ specified as a floating point number .
+<P><B>Example:</B>
+<BR> &nbsp;
+<BR><DIV class="exscript" >
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $encoder</FONT><FONT color="#007700"> = new</FONT><FONT color="#0000BB">
+ PDF417Barcode</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$columns</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Scale</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+2.5</FONT><FONT color="#007700">);&nbsp;&nbsp;</FONT><FONT color="#000000">// Make
+ the barcode 2.5x bigger
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR />}</FONT><FONT color="#0000BB"></FONT></FONT></CODE></B></DIV></P>
+<P><B> Note:</B>
+<BR> See also SetModuleWidth() below.</P>
+<H4>3.2.1.4 SetModuleWidth($aWidth)</H4>
+<B> Purpose:</B>
+<P> Specifies the module width to be used in the barcode. The module
+ width is interpretated differently depending on whether it is applied
+ on an image or a postscript backend. The module width will determine
+ the physical width of the overall barcode. Please make sure that the
+ printer you intend to use has good enough resolution to handle the
+ chosen module width.
+<P> For image backends is specifies the number of pixels to be used for
+ the width of one module in the barcode. You may think of the module as
+ the thinnest line printed in the barcode. Even though most modern
+ inkjet printers (2003 and later) can resolve modules down to 1 pixels
+ it is recommended that for inkjet printers a module width of &gt;= 2 is
+ used. Your mileage may vary.</P>
+<P> For Postcript backend the module width specified the width in
+ Postscript points (1 point = 1/72 inch).</P>
+<P><B>Example:</B>
+<BR> &nbsp;
+<BR><DIV class="exscript" >
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $encoder</FONT><FONT color="#007700"> = new</FONT><FONT color="#0000BB">
+ PDF417Barcode</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$columns</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetModuleWidth</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+2</FONT><FONT color="#007700">);&nbsp;&nbsp;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR />}</FONT><FONT color="#0000BB"></FONT></FONT></CODE></B></DIV></P>
+<P><B> Note:</B>
+<BR> You can fine tune the barcode image by applying an overall scaling
+ constant as specified with the method SetScale().</P>
+<H4>3.2.1.5 SetHeight($aHeight)</H4>
+<B> Purpose:</B>
+<P> Specified the height to width ratio for the individual rows in the
+ barcode. By default the ratio is 3, which means that the height of the
+ rows in the barcode is 3x the module width. Most scanners can handle a
+ factor between 2-5. You should very rarely have to change this
+ parameter. The ratio is specified as an integer.
+<P> One reason to change this to a smaller value is of course to make a
+ barcode label take up less vertical space.</P>
+<P><B>Example:</B>
+<BR> &nbsp;
+<BR><DIV class="exscript" >
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $encoder</FONT><FONT color="#007700"> = new</FONT><FONT color="#0000BB">
+ PDF417Barcode</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$columns</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetHeight</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+2</FONT><FONT color="#007700">);&nbsp;&nbsp;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR />}</FONT><FONT color="#0000BB"></FONT></FONT></CODE></B></DIV></P>
+<P><B> Note:</B>
+<BR> Please keep in mind though that not all barcode scanners is good at
+ handling very small ratios.</P>
+<H4>3.2.1.6 SetColor($aFrgColor,$aBkgColor)</H4>
+<B> Purpose:</B>
+<P> Specify the foreground and background color for the barcode.
+<P><B>Example:</B>
+<BR> &nbsp;
+<BR><DIV class="exscript" >
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $encoder</FONT><FONT color="#007700"> = new</FONT><FONT color="#0000BB">
+ PDF417Barcode</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$columns</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'black'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'lightyellow'</FONT><FONT color="#007700">);&nbsp;&nbsp;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR />}</FONT><FONT color="#0000BB"></FONT></FONT></CODE></B></DIV></P>
+<P><B> Note:</B>
+<BR> To invert the barcode label specify a foreground color as 'white'
+ and background color as 'black'.</P>
+<H4>3.2.1.7 ShowFrame($aFlg=true)</H4>
+<B> Purpose:</B>
+<P> Draw a 1 pixel frame around the barcode. This is not recommended in
+ production since it might disturb some scanners reading. This is only
+ useful if you need a visual feedback on the boundaries for the image.
+<P><B>Example:</B>
+<BR> &nbsp;
+<BR><DIV class="exscript" >
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $encoder</FONT><FONT color="#007700"> = new</FONT><FONT color="#0000BB">
+ PDF417Barcode</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$columns</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFrame</FONT><FONT color="#007700">();&nbsp;&nbsp;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR />}</FONT><FONT color="#0000BB"></FONT></FONT></CODE></B></DIV></P>
+<P><B> Note:</B>
+<BR></P>
+<H4>3.2.1.8 NoText($aFlg=true)</H4>
+<B> Purpose:</B>
+<P> Show human readable text of the encoded data underneath the barcode
+ label.
+<P><B>Example:</B> See below.</P>
+<P><B> Note:</B>
+<BR><B> This is an extension specific to JpGraph and human readable text
+ is not part of the official PDF417 standard</B>. There are usually no
+ problem of including this text but it is not recommended to do so in a
+ production environment. This is mostly useful when debugging an
+ application and to make it easer to see that the correct data is
+ encoded as a barcode label.</P>
+<H4>3.2.1.9 SetFont($aFontFam,$aFontStyle,$aFontSize)</H4>
+<B> Purpose:</B>
+<P> Specify the font for the human readable text underneath the barcode
+ label.
+<P><B>Example:</B>
+<BR> &nbsp;
+<BR><DIV class="exscript" >
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $encoder</FONT><FONT color="#007700"> = new</FONT><FONT color="#0000BB">
+ PDF417Barcode</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$columns</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Notext</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+false</FONT><FONT color="#007700">);&nbsp;&nbsp;</FONT><FONT color="#000000">//
+ Show text
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">8</FONT><FONT
+color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR />}</FONT><FONT color="#0000BB"></FONT></FONT></CODE></B></DIV></P>
+<P><B> Note:</B>
+<BR></P>
+<H3><A NAME="3_2_2">3.2.2 Methods only for use with image backends</A></h3><p>
+<H4>3.2.2.1 SetImgFormat($aFormat)</H4>
+<B> Purpose:</B>
+<P> Specify image format as either PNG (default) or JPEG (not
+ recommended). Possible values are
+<UL>
+<LI> &quot;auto&quot;</LI>
+<LI> &quot;png&quot;</LI>
+<LI> &quot;jpeg&quot;</LI>
+<LI> &quot;gif&quot;.<B><FONT color="red"> Note:</FONT></B> This is usually<B> not</B>
+ supported by your installation of PHP due to copyright issues with the
+ GIF format.</LI>
+</UL>
+<P><B>Example:</B>
+<BR> &nbsp;
+<BR><DIV class="exscript" >
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $encoder</FONT><FONT color="#007700"> = new</FONT><FONT color="#0000BB">
+ PDF417Barcode</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$columns</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetImgFormat</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+&quot;jpeg&quot;</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR />}</FONT><FONT color="#0000BB"></FONT></FONT></CODE></B></DIV></P>
+<P><B> Note:</B>
+<BR> Since JPEG is a destructive coding it might yield artifacts in the
+ barcode mage due to the very high spatial frequencies in a typical
+ barcode label.</P>
+<H3><A NAME="3_2_3">3.2.3 Methods only for use with Postscript backends</A>
+</h3><p>
+<H4>3.2.3.1 SetEPS($aFlg=true)</H4>
+<B> Purpose:</B>
+<P> Format the output as Encapsulated Postcript. This adds a bounding
+ box information to the output and makes this format suitable to be
+ included in other postscript files.
+<P><B>Example:</B>
+<BR> &nbsp;
+<BR><DIV class="exscript" >
+<B><CODE><FONT color="#000000"><FONT color="#007700"></FONT><FONT color="#0000BB">
+ $encoder</FONT><FONT color="#007700"> = new</FONT><FONT color="#0000BB">
+ PDF417Barcode</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$columns</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_PS</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetEPS</FONT><FONT color="#007700">();
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">();
+<BR />}</FONT><FONT color="#0000BB"></FONT></FONT></CODE></B></DIV></P>
+<P><B> Note:</B>
+<BR></P>
+<h2><A NAME="4">4 Example script</A></h2>
+ The following section shows a number of fully working scripts that can
+ serve as templates for your own development.
+<H2><A NAME="4_1">4.1 Example 1: Default values</A></h2><p>
+<B> Purpose:</B>
+<P> Show how to create the simplest possible barcode using just default
+ values and send the generated barcode back to the browser as an image.
+<P><B> Script:</B><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+(File: pdf417_ex1.php)
+<BR><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php
+<BR /></FONT><FONT color="#007700">require_once(</FONT><FONT color="#DD0000">
+'../../jpgraph.php'</FONT><FONT color="#007700">);
+<BR />require_once(</FONT><FONT color="#DD0000">
+'../../jpgraph_canvas.php'</FONT><FONT color="#007700">);
+<BR />require_once(</FONT><FONT color="#DD0000">'../jpgraph_pdf417.php'</FONT><FONT
+color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#000000">// Simplest possible PDF417 barcode
+ using just default values
+<BR />
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =</FONT><FONT
+color="#DD0000"> 'PDF-417'</FONT><FONT color="#007700">;
+<BR />
+<BR /></FONT><FONT color="#000000">// Create a new encoder and backend
+ to generate PNG images
+<BR /></FONT><FONT color="#0000BB">$backend</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">
+::</FONT><FONT color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">BACKEND_IMAGE</FONT><FONT color="#007700">,new</FONT><FONT
+color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">());
+<BR /></FONT><FONT color="#0000BB">$backend</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$data</FONT><FONT color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#0000BB">?&gt;
+<BR /></FONT></FONT></CODE></DIV></P>
+<P><B> Output:</B>
+<BR> <IMG HEIGHT="32" src="pdf4170I.png" WIDTH="269"></P>
+<H2><A NAME="4_2">4.2 Example 2: Basic parameter settings</A></h2><p>
+<B> Purpose:</B>
+<P> Show how to manipulate the most common user selectable parameters.
+<P><B> Script:</B><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+(File: pdf417_ex2.php)
+<BR><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php
+<BR /></FONT><FONT color="#007700">require_once(</FONT><FONT color="#DD0000">
+'../../jpgraph.php'</FONT><FONT color="#007700">);
+<BR />require_once(</FONT><FONT color="#DD0000">
+'../../jpgraph_canvas.php'</FONT><FONT color="#007700">);
+<BR />require_once(</FONT><FONT color="#DD0000">'../jpgraph_pdf417.php'</FONT><FONT
+color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =</FONT><FONT
+color="#DD0000"> 'PDFf-417'</FONT><FONT color="#007700">;
+<BR />
+<BR /></FONT><FONT color="#000000">// Setup some symbolic names for
+ barcode specification
+<BR />
+<BR /></FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 8</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use 8 data (payload) columns
+<BR /></FONT><FONT color="#0000BB">$errlevel</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 2</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use error level 2 (minimum recommended)
+<BR /></FONT><FONT color="#0000BB">$modwidth</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 2</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Setup module width (in pixels)
+<BR /></FONT><FONT color="#0000BB">$height</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 3</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Height factor
+<BR />
+<BR />// Create a new encoder and backend to generate PNG images
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+ = new</FONT><FONT color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetModuleWidth</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$modwidth</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetHeight</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$height</FONT><FONT color="#007700">);&nbsp;&nbsp;&nbsp;&nbsp;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$r</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> $e</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$data</FONT><FONT
+color="#007700">);
+<BR />}
+<BR />else {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;die(</FONT><FONT color="#DD0000">'Cant create PDF417 encoder.'</FONT><FONT
+color="#007700">);
+<BR /> }
+<BR /></FONT><FONT color="#0000BB">?&gt;
+<BR /></FONT></FONT></CODE></DIV></P>
+<P><B> Output:</B>
+<BR> <IMG HEIGHT="38" src="pdf4170J.png" WIDTH="470"></P>
+<H2><A NAME="4_3">4.3 Example 3: Showing human readable text</A></h2><p>
+<B> Purpose:</B>
+<P> Show how to add human readable text under the barcode.
+<P><B> Script:</B><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+(File: pdf417_ex3.php)
+<BR><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php
+<BR /></FONT><FONT color="#007700">require_once(</FONT><FONT color="#DD0000">
+'../../jpgraph.php'</FONT><FONT color="#007700">);
+<BR />require_once(</FONT><FONT color="#DD0000">
+'../../jpgraph_canvas.php'</FONT><FONT color="#007700">);
+<BR />require_once(</FONT><FONT color="#DD0000">'../jpgraph_pdf417.php'</FONT><FONT
+color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =</FONT><FONT
+color="#DD0000"> 'PDF-417'</FONT><FONT color="#007700">;
+<BR />
+<BR /></FONT><FONT color="#000000">// Setup some symbolic names for
+ barcode specification
+<BR />
+<BR /></FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 8</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use 8 data (payload) columns
+<BR /></FONT><FONT color="#0000BB">$errlevel</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 4</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use error level 4
+<BR /></FONT><FONT color="#0000BB">$modwidth</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 2</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Setup module width (in pixels)
+<BR /></FONT><FONT color="#0000BB">$height</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 2</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Height factor (=2)
+<BR /></FONT><FONT color="#0000BB">$showtext</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> true</FONT><FONT color="#007700">;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Show human readable string
+<BR />
+<BR />// Create a new encoder and backend to generate PNG images
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+ = new</FONT><FONT color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetModuleWidth</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$modwidth</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetHeight</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$height</FONT><FONT color="#007700">);
+<BR /> &nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">NoText</FONT><FONT color="#007700">(!</FONT><FONT
+color="#0000BB">$showtext</FONT><FONT color="#007700">);&nbsp;&nbsp;&nbsp;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$r</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> $e</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$data</FONT><FONT
+color="#007700">);
+<BR />}
+<BR />else {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;die(</FONT><FONT color="#DD0000">'Cant create PDF417 encoder.'</FONT><FONT
+color="#007700">);
+<BR /> }
+<BR /></FONT><FONT color="#0000BB">?&gt;
+<BR /></FONT></FONT></CODE></DIV></P>
+<P><B> Output:</B>
+<BR> <IMG HEIGHT="53" src="pdf4170K.png" WIDTH="470"></P>
+<H2><A NAME="4_4">4.4 Example 4: Altering colors</A></h2><p>
+<B> Purpose:</B>
+<P> Show how to add user specified foreground and background colors.
+<P><B> Script:</B><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+(File: pdf417_ex4.php)
+<BR><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php
+<BR /></FONT><FONT color="#007700">require_once(</FONT><FONT color="#DD0000">
+'../../jpgraph.php'</FONT><FONT color="#007700">);
+<BR />require_once(</FONT><FONT color="#DD0000">
+'../../jpgraph_canvas.php'</FONT><FONT color="#007700">);
+<BR />require_once(</FONT><FONT color="#DD0000">'../jpgraph_pdf417.php'</FONT><FONT
+color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =</FONT><FONT
+color="#DD0000"> 'PDF-417'</FONT><FONT color="#007700">;
+<BR />
+<BR /></FONT><FONT color="#000000">// Setup some symbolic names for
+ barcode specification
+<BR />
+<BR /></FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 8</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use 8 data (payload) columns
+<BR /></FONT><FONT color="#0000BB">$errlevel</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 4</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use error level 4
+<BR /></FONT><FONT color="#0000BB">$modwidth</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 2</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Setup module width (in pixels)
+<BR /></FONT><FONT color="#0000BB">$height</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 2</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Height factor (=2)
+<BR /></FONT><FONT color="#0000BB">$showtext</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> true</FONT><FONT color="#007700">;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Show human readable string
+<BR />
+<BR />// Create a new encoder and backend to generate PNG images
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+ = new</FONT><FONT color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetModuleWidth</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$modwidth</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetHeight</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$height</FONT><FONT color="#007700">);
+<BR /> &nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">NoText</FONT><FONT color="#007700">(!</FONT><FONT
+color="#0000BB">$showtext</FONT><FONT color="#007700">);&nbsp;&nbsp;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'black'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'yellow'</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$r</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> $e</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$data</FONT><FONT
+color="#007700">);
+<BR />}
+<BR />else {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;die(</FONT><FONT color="#DD0000">'Cant create PDF417 encoder.'</FONT><FONT
+color="#007700">);
+<BR /> }
+<BR /></FONT><FONT color="#0000BB">?&gt;
+<BR /></FONT></FONT></CODE></DIV></P>
+<P><B> Output:</B>
+<BR> <IMG HEIGHT="53" src="pdf4170L.png" WIDTH="470"></P>
+<H2><A NAME="4_5">4.5 Example 5: Creating postscript output</A></h2><p>
+<P> Purpose:</B>
+<BR> Show how to generate Postscript output. Running this script will
+ send back the raw postscript file to the browser as an illustration.
+<P><B> Script:</B><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+(File: pdf417_ex5.php)
+<BR><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php
+<BR /></FONT><FONT color="#007700">require_once(</FONT><FONT color="#DD0000">
+'../../jpgraph.php'</FONT><FONT color="#007700">);
+<BR />require_once(</FONT><FONT color="#DD0000">
+'../../jpgraph_canvas.php'</FONT><FONT color="#007700">);
+<BR />require_once(</FONT><FONT color="#DD0000">'../jpgraph_pdf417.php'</FONT><FONT
+color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =</FONT><FONT
+color="#DD0000"> 'PDF-417'</FONT><FONT color="#007700">;
+<BR />
+<BR /></FONT><FONT color="#000000">// Setup some symbolic names for
+ barcode specification
+<BR />
+<BR /></FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 8</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use 8 data (payload) columns
+<BR /></FONT><FONT color="#0000BB">$errlevel</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 4</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use error level 4
+<BR /></FONT><FONT color="#0000BB">$modwidth</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 0.8</FONT><FONT color="#007700">;</FONT><FONT
+color="#000000">// Setup module width (in PS points)
+<BR /></FONT><FONT color="#0000BB">$height</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 3</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Height factor (=2)
+<BR /></FONT><FONT color="#0000BB">$showtext</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> true</FONT><FONT color="#007700">;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Show human readable string
+<BR />
+<BR />// Create a new encoder and backend to generate PNG images
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+ = new</FONT><FONT color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_PS</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetModuleWidth</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$modwidth</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetHeight</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$height</FONT><FONT color="#007700">);
+<BR /> &nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">NoText</FONT><FONT color="#007700">(!</FONT><FONT
+color="#0000BB">$showtext</FONT><FONT color="#007700">);&nbsp;&nbsp;
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">
+'black'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">
+'yellow'</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$r</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> $e</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">
+Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$data</FONT><FONT
+color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;echo</FONT><FONT color="#0000BB"> nl2br</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">htmlspecialchars</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$r</FONT><FONT color="#007700">));
+<BR />}
+<BR />else {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;die(</FONT><FONT color="#DD0000">'Cant create PDF417 encoder.'</FONT><FONT
+color="#007700">);
+<BR /> }
+<BR /></FONT><FONT color="#0000BB">?&gt;
+<BR /></FONT></FONT></CODE></DIV></P>
+<P><B> Output:</B><I> (A postscript file, actual output omitted from
+ this manual. Please run the example.)</I></P>
+<H2><A NAME="4_6">4.6 Example 6: Manually selecting compaction schema</A>
+</h2><p>
+<B> Purpose:</B>
+<P> To show how to manually specify the compaction schema to be used
+ for the input data. The example below shows how to manually specify
+ when to use numeric and when to use text mode.
+<P><B> Script:</B><DIV style="background-color:#E6E6E6;font-family:courier new;font-size:80%;font-weight:bold;">
+(File: pdf417_ex6.php)
+<BR><CODE><FONT color="#000000"><FONT color="#0000BB"> &lt;?php
+<BR /></FONT><FONT color="#007700">require_once(</FONT><FONT color="#DD0000">
+'../../jpgraph.php'</FONT><FONT color="#007700">);
+<BR />require_once(</FONT><FONT color="#DD0000">
+'../../jpgraph_canvas.php'</FONT><FONT color="#007700">);
+<BR />require_once(</FONT><FONT color="#DD0000">'../jpgraph_pdf417.php'</FONT><FONT
+color="#007700">);
+<BR />
+<BR /></FONT><FONT color="#0000BB">$data1</FONT><FONT color="#007700"> =</FONT><FONT
+color="#DD0000"> '12345'</FONT><FONT color="#007700">;
+<BR /></FONT><FONT color="#0000BB">$data2</FONT><FONT color="#007700"> =</FONT><FONT
+color="#DD0000"> 'Abcdef'</FONT><FONT color="#007700">;
+<BR /></FONT><FONT color="#0000BB">$data3</FONT><FONT color="#007700"> =</FONT><FONT
+color="#DD0000"> '6789'</FONT><FONT color="#007700">;
+<BR />
+<BR /></FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700"> =
+ array(
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;array(</FONT><FONT color="#0000BB">USE_NC</FONT><FONT color="#007700">
+,</FONT><FONT color="#0000BB">$data1</FONT><FONT color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;array(</FONT><FONT color="#0000BB">USE_TC</FONT><FONT color="#007700">
+,</FONT><FONT color="#0000BB">$data2</FONT><FONT color="#007700">),
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;array(</FONT><FONT color="#0000BB">USE_NC</FONT><FONT color="#007700">
+,</FONT><FONT color="#0000BB">$data3</FONT><FONT color="#007700">));
+<BR />
+<BR /></FONT><FONT color="#000000">//$data = &quot;12345Abcdef6789&quot;;
+<BR />
+<BR />// Setup some symbolic names for barcode specification
+<BR />
+<BR /></FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 8</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use 8 data (payload) columns
+<BR /></FONT><FONT color="#0000BB">$modwidth</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 2</FONT><FONT color="#007700">;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use 2 pixel module width
+<BR /></FONT><FONT color="#0000BB">$errlevel</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> 2</FONT><FONT color="#007700">;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Use error level 2
+<BR /></FONT><FONT color="#0000BB">$showtext</FONT><FONT color="#007700">
+ =</FONT><FONT color="#0000BB"> true</FONT><FONT color="#007700">;&nbsp;&nbsp;</FONT><FONT
+color="#000000">// Show human readable string
+<BR />
+<BR />// Create a new encoder and backend to generate PNG images
+<BR /></FONT><FONT color="#0000BB">$encoder</FONT><FONT color="#007700">
+ = new</FONT><FONT color="#0000BB"> PDF417Barcode</FONT><FONT color="#007700">
+(</FONT><FONT color="#0000BB">$columns</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$errlevel</FONT><FONT color="#007700">);
+<BR /></FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700"> =</FONT><FONT
+color="#0000BB"> PDF417BackendFactory</FONT><FONT color="#007700">::</FONT><FONT
+color="#0000BB">Create</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+BACKEND_IMAGE</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">
+$encoder</FONT><FONT color="#007700">);
+<BR />
+<BR />if(</FONT><FONT color="#0000BB"> $e</FONT><FONT color="#007700"> )
+ {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetModuleWidth</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">
+$modwidth</FONT><FONT color="#007700">);
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">NoText</FONT><FONT color="#007700">(!</FONT><FONT color="#0000BB">
+$showtext</FONT><FONT color="#007700">);
+<BR /> &nbsp;&nbsp;&nbsp;&nbsp;</FONT><FONT color="#0000BB">$e</FONT><FONT color="#007700">
+-&gt;</FONT><FONT color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$data</FONT><FONT color="#007700">);
+<BR />}
+<BR />else {
+<BR />&nbsp;&nbsp;&nbsp;&nbsp;die(</FONT><FONT color="#DD0000">'Can\'t create PDF417
+ encoder.'</FONT><FONT color="#007700">);
+<BR /> }
+<BR /></FONT><FONT color="#0000BB">?&gt;
+<BR /></FONT></FONT></CODE></DIV></P>
+<P><B> Output:</B>
+<BR> <IMG HEIGHT="57" src="pdf4170M.png" WIDTH="470"></P>
+<h2><A NAME="5">5 Example application</A></h2>
+ The example application is a WEB-based application that serves three
+ purposes
+<P><OL>
+<LI> It will give you an easy way to create single PDF417 barcodes</LI>
+<LI> It can serve as an experimental platform to find out what
+ paramaters that you want to use in your own applications.</LI>
+<LI> It shows you a real world slightly more complex use of the library.</LI>
+</OL><P>
+ You run the application by simply using your favourite browser and
+ point it to the PDF417 demo directory ( &quot;jpgraph/src/pdf417/demoapp/&quot;
+ ). You will then see two frames, a entry form on the left and the
+ actual output on the right.
+<P></P>
+<TABLE borders="0">
+<TR><TD valiagn="top"> <IMG align="left" HEIGHT="550" src="pdf417di.png" WIDTH="318">
+</TD><TD valign="top"><B> Description of Fields:</B>
+<BR>
+<UL>
+<LI><B>Data:</B> Data to be encoded. This should be entered as a
+ standard string.</LI>
+<LI><B>Encoding:</B> Determine the compaction schema to be used</LI>
+<LI><B>Columns:</B> Number of data columns to be used</LI>
+<LI><B>Error level:</B> What error level to be used</LI>
+<LI><B>Module width:</B> Module width</LI>
+<LI><B>Height factor:</B> Specify the height of the individual rows in
+ the barcode as a multiplier of the width.</LI>
+<LI><B>Scale:</B> Scale factor.</LI>
+<LI><B>Text:</B> Should the human readable text be shown?</LI>
+<LI><B>Vertical:</B> Should the bercode use vertical layout?</LI>
+<LI><B>Frame:</B> Should a frame be added to the barcode?</LI>
+<LI><B>Truncated:</B> Should the barcode be truncated?</LI>
+<LI><B>File:</B> If specified the output will be written to this file</LI>
+<LI><B>PS Module:</B> If specified will be used as the module width for
+ PS</LI>
+<LI><B>Format:</B> If specified will set what image encoding will be
+ used output</LI>
+<LI><B>Debug info:</B> Will open a new frame and display some internal
+ debugging information from the library.</LI>
+</UL>
+</TD></TR>
+</TABLE>
+
+</div>
+</BODY>
+</HTML>

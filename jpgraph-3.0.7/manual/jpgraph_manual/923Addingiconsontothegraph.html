@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="922Usingcountryflagsinvariouscontext.html">
+<LINK REL="Next" HREF="10Workingwithcanvasgraphs.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="922Usingcountryflagsinvariouscontext.html">前へ</A> <A HREF="10Workingwithcanvasgraphs.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_23">9.23 グラフ上のアイコンを追加する</A></H2>
+<P> 標準の背景イメージに加えて、グラフの背景に任意の数のアイコンを追加することもできます。 これらのアイコンは特別なプロット クラス<I> IconPlot</I> で作成されます。</P>
+<P> アイコンからのイメージはファイル、または組み込まれた国旗のうちの1 つから取ったものです。</P>
+<P> どれくらいのアイコンが割合 (1-100) の指定で背景に融合するかコンとロールする場合があります。 下の例は、塗りつぶされたライン グラフの背景と写真 &ldquo;Tux&rdquo;との混み合わせの方法を現しています。 注意: この例はアルファの組み合わせを使用しているので GD2 が必要です。<DIV class="example">
+<BR> <A href="exframes/frame_lineiconex1.html" target="blank"><IMG border="0"
+HEIGHT="250" src="lineiconex1.png" WIDTH="400"></A> <BR><B>図 184:</B> 背景にアイコンを追加する <A href="exframes/frame_lineiconex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> アイコンとして200 国の旗を指定するには、初め空のアイコンを指定して、適切なパラメータで IconPlot::SetCountryFlag() を呼びます。 （クラス リファレンスを参照してください）。 これは以下にアイコンとして背景にアイスランドの旗を追加することで例証されています。<DIV class="example">
+<BR> <A href="exframes/frame_lineiconex2.html" target="blank"><IMG border="0"
+HEIGHT="250" src="lineiconex2.png" WIDTH="400"></A> <BR><B>図 185:</B> 背景に旗のアイコンを追加する <A href="exframes/frame_lineiconex2.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="note"><B>注意:</B>内蔵GDを使っている前4.33 PHP のいくつかの古いヴァージョンは、混ざったイメージの読み込みで問題を起こします。もし、この問題を抱えたら、より新しい PHP ヴァージョンにアップグレードする必要があります。</DIV></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="922Usingcountryflagsinvariouscontext.html">前へ</A> <A HREF="10Workingwithcanvasgraphs.html">次へ</A>
+</BODY>
+</HTML>

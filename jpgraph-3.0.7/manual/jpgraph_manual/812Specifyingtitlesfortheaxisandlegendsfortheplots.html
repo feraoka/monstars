@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="811Simpleradarplots.html">
+<LINK REL="Next" HREF="813Addinggridlinetotheradarplot.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="811Simpleradarplots.html">前へ</A> <A HREF="813Addinggridlinetotheradarplot.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="8_1_2">8.1.2 プロットの軸と凡例にタイトルを指定する</A></H3>
+<P> それぞれの軸に対して、値の数値だけではなく文字列を表示させることもできます。タイトルを指定するには、SetTitles() メソッドを使用します。たとえば、それぞれの軸に月名を入れたい場合、以下のように記述します。 <DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB">$titles </FONT><FONT color="#007700">= </FONT><FONT color="#0000BB">$gDateLocale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">GetShortMonth</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetTitles</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$titles</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> レーダー プロットでは、タイトルやプロット ポイントは反時計回りで描画されます。逆順で描画したい場合は、データ配列とタイトル配列を逆順に変換すれば可能です。</P>
+<P> 凡例を指定するには、それぞれのレーダー プロットに対して<A href="../ref/RadarPlot.html#_RADARPLOT_SETLEGEND">SetLegend();</A> メソッドを使用します。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="811Simpleradarplots.html">前へ</A> <A HREF="813Addinggridlinetotheradarplot.html">次へ</A>
+</BODY>
+</HTML>

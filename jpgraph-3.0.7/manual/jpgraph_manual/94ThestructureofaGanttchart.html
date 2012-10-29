@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="93AsimpleGanttchart.html">
+<LINK REL="Next" HREF="95CreatingaGanttChart.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="93AsimpleGanttchart.html">前へ</A> <A HREF="95CreatingaGanttChart.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_4">9.4  ガント チャートの構造</A></H2>
+<P> ガント チャートは4つの領域から構成されています。</P>
+<OL>
+<LI>左部にあるアクティビティ タイトルの列</LI>
+<LI>上部にあるスケール ヘッダー（最大４つのヘッダーが表示可能）</LI>
+<LI>全てのガント バーやマーカーが表示されるプロット エリア</LI>
+<LI>タイトルなどが表示される余白部</LI>
+</OL>
+<P> ガント チャートはJpgraph Graph()のプロパティを全て受け継ぐので、これまでと同様に、イメージをフォーマットするメソッドを利用することができます。例えば、Graph::SetShadow()を呼び出してイメージの周辺に影をつけたり、Graph::SetMarginColor()を使用して余白の色を設定したりすることができます。サポートされている機能の完全なリストについては、リファレンスドキュメントをご覧下さい。</P>
+<P> ガント チャートを生成するためには、オブジェクトをガント チャートに <STRONG>add</STRONG> する必要があります。GanttChart::Add()メソッドを使用して、以下のオブジェクトをガント チャートに追加することができます。</P>
+<UL>
+<LI> ガント バー（アクティビティの期間を示す）</LI>
+<LI> マイルストン（指定した日付につけるマーク）</LI>
+<LI> バーティカルライン（プロジェクトの進捗状況の評価を示すために使用する縦線）</LI>
+</UL>
+<P> これらのオブジェクトはすべて広範囲にわたって拡張することができます。色（塗りつぶし色やフレームの色の両方）、サイズ、タイトル、スタイルやパターンなどを指定することが可能です。これらのオブジェクトはすべて（私の考えでは）適切なデフォルト値が設定されるので、全てのパラメータを指定する必要はありません。しかし、細かな調整の必要があったり自分の好みに合わないような場合は変更することができます。<STRONG></STRONG></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="93AsimpleGanttchart.html">前へ</A> <A HREF="95CreatingaGanttChart.html">次へ</A>
+</BODY>
+</HTML>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="7111Usingfilledgridlines.html">
+<LINK REL="Next" HREF="7113Adjustingtheticksonatextscale.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="7111Usingfilledgridlines.html">前へ</A> <A HREF="7113Adjustingtheticksonatextscale.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_1_12">7.1.12 X 軸にテキスト ラベルを指定する</A></H3>
+<P> テキスト スケールが指定されている場合、X 軸に特定のラベルを表示できます。上記の例では、Y 軸の値がそれぞれ最初の 10 ヶ月間を表しています。X スケールに各月の名前を表示したい場合は、以下のように設定します。</P>
+<P> スケールにラベルを指定する場合、<A href="../ref/Axis.html#_AXIS_SETTICKLABELS">SetTickLabels()</A> メソッドを使用します。  </P>
+<P> JpGraph では、<A href="../ref/DateLocale.html#_C_DATELOCALE">DateLocale</A> インスタンスの $gDateLocal オブジェクトを使用すると、月の名前が取得できます。</P>
+<P> このクラスでは、さまざまな日付（月や週）の名前を取り出せます。 </P>
+<P> X 軸に短い形式の月名を指定したい場合、以下の通りに記述します。   <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $a </FONT><FONT color="#007700">= </FONT><FONT color="#0000BB">$gDateLocale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">GetShortMonth</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">xaxis</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetTickLabels</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$a</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> これで、以下の通りの結果が得られます。<DIV class="example">
+<BR> <A href="exframes/frame_example9.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example9.png" WIDTH="350"></A> <BR><B>図 22:</B>X 軸にテキスト ラベルを指定する <A href="exframes/frame_example9.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="note"><B>注意:</B>同様に、Y 軸と Y2 軸のラベルを上書きできます。しかし、指定するラベルは系列の各数値にのみ適用されるので、系列に無い値にラベルを指定できません。 十分な数のラベルが与えられないと、空のラベルが表示されます。</DIV></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="7111Usingfilledgridlines.html">前へ</A> <A HREF="7113Adjustingtheticksonatextscale.html">次へ</A>
+</BODY>
+</HTML>

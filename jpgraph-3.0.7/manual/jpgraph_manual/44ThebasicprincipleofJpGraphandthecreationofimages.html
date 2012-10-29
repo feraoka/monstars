@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="43UsingPHPdirectly.html">
+<LINK REL="Next" HREF="45ChoosingtheimageformatforJpGraph.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="43UsingPHPdirectly.html">前へ</A> <A HREF="45ChoosingtheimageformatforJpGraph.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="4_4">4.4 JpGraph の基本概念と画像の生成</A></H2>
+<P> グラフを生成する共通のパターンは</P>
+<OL>
+<LI> スクリプトを作成し、画像、形式、カラーなどを構成する。 </LI>
+<LI> &lt;IMG&gt; タグを持つスクリプト (ラッパー スクリプト) を作成し、&lt;IMG&gt; タグを用いて HTML ページの適切な場所にグラフを設置する。 </LI>
+</OL>
+<P> もちろん、生成した画像をブラウザで表示するために、画像生成スクリプトをブラウザから呼び出すこともできます。</P>
+<P> また GET や POST などの HTTP パラメータを使用して、引数を画像スクリプトに手渡すことも可能です。   たとえば、<DIV
+class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"></FONT><FONT
+color="#007700">&lt;</FONT><FONT color="#0000BB">img src</FONT><FONT color="#007700">=</FONT><FONT color="#DD0000">&quot;showgraph.php?a=1&amp;b=2&quot;</FONT><FONT color="#007700">&gt;</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> これにより、画像の見た目を制御したり、表示させる画像を変更したりすることができます。ただし、この方法で大量のデータを送信することは推奨しません。代わりに、データベースなどから大容量のデータを取得する方法があります。 大容量のデータをイメージ スクリプトに送るもうひとつの方法としては、イメージ スクリプトに POST リクエストを作成する方法があります。<DIV class="note"><B>注意:</B><B>表示される画像はブラウザに強制的に更新させてください。</B>ブラウザの中には、ユーザーが [更新] ボタン (多くの場合 F5) をクリックするまで、リクエストを送信しないものがあります。これが原因で、ユーザーには古い画像が表示されてしまうことがあります。これを回避するための簡単な方法は、スクリプトには影響しないダミーの日付を引数として追加することです。たとえば、 
+<PRE>
+echo '&lt;img src=&quot;myimagescript.php?dummy='.now().'&quot;&gt;';
+</PRE>
+ ブラウザの内部のキャッシュ機能を認識することも重要です。動的に生成された画像で最もよく起こる問題は、画像生成のスクリプト(ファイル)が同じものを表示してしまうことです。 これは、データが変更されていないとブラウザが認識してしまい、そして、キャッシュされたデータがあると、ファイルのタイムスタンプが同じ場合キャッシュされたデータを使用するので、新しい GET リクエストが送られることはありません。　</DIV></P>
+<P> 画像を生成するスクリプトは次のような構造になります。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"></FONT><FONT color="#FF8000">// ...必要なスクリプトをincludeする部分 <BR> <BR></FONT><FONT color="#0000BB">$graph </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">Graph</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$width</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$height</FONT><FONT color="#007700">,...); <BR> <BR></FONT><FONT color="#FF8000">// ...グラフの細部を設定する部分 <BR> <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> JpGraph は完全にオブジェクト指向に基づいており、すべての呼び出しはクラスのインスタンスを用いて行われます。その基本クラスの 1 つとして、グラフすべての基となる Graph() クラスが挙げられます。</P>
+<P> Graph() オブジェクトを作成したあとで、プログラム コードを追加していきグラフの細部を構築していきます。</P>
+<P> イメージ スクリプトで呼ばれる最後のメソッドは、そのほとんどが<I>Graph::Stroke()</I> メソッドとなります。 これによって構築された画像がブラウザに送り返されます。 グラフにイメージ マップを使用する場合は、別の表示用関数を使用します。 この場合、最後に呼び出す関数は<I>Graph::StrokeCSIM()</I>となります。</P>
+<P> 加えて、Graph::Stroke()関数は以下のような場合にも使用します。</P>
+<UL>
+<LI> ... 生成したグラフをファイルとして直接保存する。</LI>
+<LI> ... 画像を処理するために GD イメージ ハンドラにアクセスする。 (PDF ファイル内の画像を扱う場合も必要となります。)</LI>
+<LI> ... すでに生成されている画像をキャッシュ システムを使用してブラウザに送る。</LI>
+</UL>
+<P> キャッシュ システムは PHP サーバーの負荷を削減するために用意されています。 最初の Graph() オブジェクトの呼び出しの時点で、既に画像を作成済みかどうかを確認し、その場合は以前に保存している画像をブラウザへと送信します。 キャッシュ システムを利用する場合は、キャッシュのファイル名とキャッシュの存続期間を指定する必要があります。</P>
+<P> このマニュアル内の多くのサンプルでは以下の構文が使用されています。<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">Graph</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">300</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">200</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;auto&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> このサンプルでは、最初の 2 つの引数はグラフの横幅と縦幅を指定しています。3 番目の引数は、キャッシュ ディレクトリに保存するファイル名を指定しています。<I>&quot;auto&quot;</I>は、キャッシュ ファイル名をスクリプトと同じ名前にすることを意味します。ただし、拡張子はグラフの形式に合わせ、.jpg や .png に変換されます。</P>
+<P> キャッシュ システムはデフォルトでは無効になっており、&quot;jpg-config.inc.php&quot; ファイル内で適切に設定することで有効になります。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="43UsingPHPdirectly.html">前へ</A> <A HREF="45ChoosingtheimageformatforJpGraph.html">次へ</A>
+</BODY>
+</HTML>

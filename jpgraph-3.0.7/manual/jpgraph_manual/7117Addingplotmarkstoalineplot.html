@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="7116ConstructingsmoothlineplotswithCubicSplines.html">
+<LINK REL="Next" HREF="72Bargraphs.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="7116ConstructingsmoothlineplotswithCubicSplines.html">前へ</A> <A HREF="72Bargraphs.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_1_17">7.1.17 プロット記号をライン プロットに追加する</A></H3>
+<P> 特定のデータ ポイントを強調するため、プロット記号を各データ プロットに追加できます。プロット記号には以下のものがあります。</P>
+<UL>
+<LI> 単純な形状 (正方形、円、クロスなど) </LI>
+<LI> ファイルから読み込んだ任意の図形 </LI>
+<LI> 内蔵の図形 </LI>
+</UL>
+<P> プロット記号には mark インスタンスを通じて指定できます。たとえば以下の通りです。<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$lineplot</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">mark</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT
+color="#007700">(</FONT><FONT color="#DD0000">&quot;red&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 異なったプロット記号を選択する場合、<A href="../ref/PlotMark.html#_PLOTMARK_SETTYPE">PlotMark::SetType()</A> メソッドを使用します。</P>
+<P> 単純な形状には、以下のものが定義されています。</P>
+<UL>
+<LI> MARK_SQUARE</LI>
+<LI> MARK_UTRIANGLE</LI>
+<LI> MARK_DTRIANGLE</LI>
+<LI> MARK_DIAMOND</LI>
+<LI> MARK_CIRCLE</LI>
+<LI> MARK_FILLEDCIRCLE</LI>
+<LI> MARK_CROSS</LI>
+<LI> MARK_STAR</LI>
+<LI> MARK_X</LI>
+<LI> MARK_LEFTTRIANGLE</LI>
+<LI> MARK_RIGHTTRIANGLE</LI>
+<LI> MARK_FLASH</LI>
+</UL>
+<P> 画像を読み込む場合、以下の定義を使用します。 </P>
+<UL>
+<LI> MARK_IMG</LI>
+</UL>
+<P> この場合は、別途プロットの画像に使用するのファイル名と、オプションでスケール サイズを指定します。例えば次のようになります。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $lineplot</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">mark</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetTYPE</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">MARK_IMG</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;myimage.jpg&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">1.5</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> もし定義済みの画像を使用する場合、以下のものが利用可能です。ただし、すべての画像ですべてのカラーが使用可能でないということに注意してください。使用できるカラーの一覧は下記に列挙します。 </P>
+<P> 以下の形状のプロット マークを使用できます。</P>
+<OL>
+<LI>MARK_SQUARE － 塗りつぶされた正方形</LI>
+<LI>MARK_UTRIANGLE － 上向きの三角形 </LI>
+<LI>MARK_DTRIANGLE － 下向きの三角形 </LI>
+<LI>MARK_DIAMOND － ダイヤモンド型 </LI>
+<LI>MARK_CIRCLE － 円形 </LI>
+<LI>MARK_FILLEDCIRCLE － 塗りつぶされた円</LI>
+<LI>MARK_CROSS － 十字型 </LI>
+<LI>MARK_STAR － 星型 </LI>
+<LI>MARK_X － X 文字 </LI>
+<LI>MARK_FLASH － フラッシュ型 </LI>
+<LI>MARK_IMAGE － 外部ファイルを使用する場合の画像形式 </LI>
+</OL>
+<P></P>
+<P> 定義済みの画像を使用する場合は、2 番目の引数でカラーを指定する必要があります。</P>
+<P> これらの画像には数種類のサイズの画像を持つものもあります。この理由は、3 番目の引数でスケールを指定すると、オリジナルの画像にピクセル補完を行って表示するため画像が劣化してしまうからです。スケールを 1.0 より小さくすると、より綺麗な画像になります。</P>
+<P> また、スケール機能は GD 1 と GD 2 の両方で使用できますが、GD 2 の方がより優れた品質で描画されます。</P>
+<P> 定義済みの画像では、以下のカラーが使用できます。</P>
+<TABLE border="1">
+<TR><TH>形式</TH><TH>説明</TH><TH>使用できるカラー</TH></TR>
+<TR><TD>MARK_IMG_PUSHPIN, MARK_IMG_SPUSHPIN</TD><TD> プッシュピン型画像</TD><TD>
+'red','blue','green','pink','orange'</TD></TR>
+<TR><TD>MARK_IMG_LPUSHPIN</TD><TD> 大サイズのプッシュピン型画像</TD><TD>
+'red','blue','green','pink','orange'</TD></TR>
+<TR><TD>MARK_IMG_BALL, MARK_IMAGE_SBALL</TD><TD>丸い 3D ボール</TD><TD>
+'bluegreen','cyan','darkgray','greengray', 'gray','graypurple','green','greenblue','lightblue', 'lightred','navy','orange','purple','red','yellow'</TD></TR>
+<TR><TD>MARK_IMAGE_MBALL</TD><TD>中サイズの丸い 3D ボール</TD><TD>
+'blue','bluegreen','brown','cyan', 'darkgray','greengray','gray','green', 'greenblue','lightblue','lightred', 'purple','red','white','yellow'</TD>
+</TR>
+<TR><TD>MARK_IMAGE_LBALL</TD><TD>大サイズの丸い 3D ボール</TD><TD>
+'blue','lightblue','brown','darkgreen', 'green','purple','red','gray','yellow','silver','gray'</TD></TR>
+<TR><TD>MARK_IMAGE_SQUARE</TD><TD>3D 正方形</TD><TD>
+'bluegreen','blue','green', 'lightblue','orange','purple','red','yellow'</TD>
+</TR>
+<TR><TD>MARK_IMG_STAR</TD><TD>3D 星型</TD><TD>
+'bluegreen','lightblue','purple','blue','green','pink','red','yellow'</TD>
+</TR>
+<TR><TD>MARK_IMG_DIAMOND</TD><TD>3D ダイヤモンド型</TD><TD>
+'lightblue','darkblue','gray', 'blue','pink','purple','red','yellow'</TD>
+</TR>
+<TR><TD>MARK_IMG_BEVEL</TD><TD>3D 傾斜型</TD><TD>
+'green','purple','orange','red','yellow'</TD></TR>
+</TABLE>
+以下に、これらの機能を使用した例を掲載します。<DIV class="example">
+<BR> <A href="exframes/frame_imgmarkerex1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="imgmarkerex1.png" WIDTH="300"></A> <BR><B>図 29:</B>任意の画像をプロット マークに使用する <A href="exframes/frame_imgmarkerex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV>
+<P></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_builtinplotmarksex1.html" target="blank"><IMG
+border="0" HEIGHT="200" src="builtinplotmarksex1.png" WIDTH="350"></A> <BR><B>図 30:</B>定義済みの画像を使用する <A href="exframes/frame_builtinplotmarksex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="7116ConstructingsmoothlineplotswithCubicSplines.html">前へ</A> <A HREF="72Bargraphs.html">次へ</A>
+</BODY>
+</HTML>

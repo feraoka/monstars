@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="7115Usingaccumulatedlinegraphs.html">
+<LINK REL="Next" HREF="7117Addingplotmarkstoalineplot.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="7115Usingaccumulatedlinegraphs.html">前へ</A> <A HREF="7117Addingplotmarkstoalineplot.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_1_16">7.1.16 三次スプラインで滑らかなライン プロットを作成する</A></H3>
+<P> データ ポイントの数が少ないものの、滑らかなカーブでデータ ポイントを接続したい場合、JpGraph では三次スプライン補完を使用してグラフの描画を行えます。三次スプラインを聞いたことがなくても心配しないでください。 知っているデータ ポイントを与える必要があり、 JpGraph にグラフに欲しい挿入されたポイントが合計でいくつかということを伝えます。この機能を使うと、JpGraph はすべてのデータ ポイントの間を滑らかな曲線で自動的に補完します。新しい曲線は、与えられた補完ポイントの数だけ正確に生成されます。</P>
+<P> スプライン補完を行う場合、データ ポイントの X と Y 座標を指定する必要があります。 </P>
+<P> まずは <A href="">Spline</A> インスタンスを作成します。Spline クラスを使用する場合、jpgraph_regstat.php ファイルをインクルードする必要があります。インスタンスの作成時には、2 種類のデータ配列 (X 座標と Y 座標) を指定します。<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $spline </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">Spline</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">$xdata</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$ydata</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>これにより、データ ポイント間に三次スプライン補完を行います。また、これらのデータ ポイントは、スプラインの<I> コントロール ポイント</I> としても機能します。Spline クラスでは、実際の線の描画を行いません。その代わりに、補完値を含む新しいデータ配列を作成します。その後、このデータ配列をプロットに使用してください。この方法は補完データを使用する場合、高い柔軟性を与えてくれます。</P>
+<P> <A href="">Spline::Get()</A> メソッドにより、ポイントが補完されたデータ配列を取得できます。以下に、その例を掲載します。   <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> </FONT><FONT color="#007700">list(</FONT><FONT color="#0000BB">$sdatax</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$sdatay</FONT><FONT color="#007700">) = </FONT><FONT color="#0000BB">$spline</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Get</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">50</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P>この例では、 $sdatax および $sdatay 配列を作成しています。それぞれ 50 データ ポイント分作成されています。これらの配列は、$spline オブジェクトを作成する際に指定したコントロール ポイントから作成されます。</P>
+<P> 次にこれらのデータ配列を使用して、グラフを描画します。</P>
+<P> 以下に、その例を掲載します。<DIV class="example">
+<BR> <A href="exframes/frame_splineex1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="splineex1.png" WIDTH="300"></A> <BR><B>図 28:</B>三次元スプライン補完でコントロール ポイントを接続する<A href="exframes/frame_splineex1.html" target="blank"> [ソース]</A> 
+<P></P>
+</DIV></P>
+<P> より良い例を作成するために、実際は 2 つのプロットを使用しました。一つは滑らかな曲線を得るためのライン プロットで、もう一つはコントロール ポイントがある場所を示すための散布プロットです。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="7115Usingaccumulatedlinegraphs.html">前へ</A> <A HREF="7117Addingplotmarkstoalineplot.html">次へ</A>
+</BODY>
+</HTML>

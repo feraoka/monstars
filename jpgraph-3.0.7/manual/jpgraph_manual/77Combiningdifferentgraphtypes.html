@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="763ImagemapsforBoxandStockcharts.html">
+<LINK REL="Next" HREF="78Specifyingthescalemanually.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="763ImagemapsforBoxandStockcharts.html">前へ</A> <A HREF="78Specifyingthescalemanually.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="7_7">7.7 複数のプロット形式を組み合わせる</A></H2>
+<P> 複数のプロットを 1 つのグラフに追加できます。この場合、プロットの種類は別のものであっても構わないので、ライン プロットとバー プロットを重ね合わせることも可能です。ただし、これらのプロットは画像として描画されるため、後に描画したものが上塗りしてしまうことに注意が必要です。プロットを指定する場合は、追加した順番に描画されます。例、一番最初に追加されたプロットは一番最初に描画されます。つまり、どのプロットが後列に表示され、どのプロットが前列に表示されるのかはプロットを追加する順番を変更することで調整できます。</P>
+<P> まずは、フィルド ライン プロットと通常のライン プロットを組み合わせるサンプルを紹介します。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_example16.1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example16.1.png" WIDTH="400"></A> <BR><B>図 70:</B>フィルド ライン プロットとライン プロットを 1 つのグラフで描画する <A href="exframes/frame_example16.1.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> もう少し複雑にしましょう。次に、バー プロットとライン プロットを組み合わせてみましょう。先ほどのバー グラフをライン プロットに変更して、外見がどのように変化するか確認してみましょう。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_example16.2.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example16.2.png" WIDTH="400"></A> <BR><B>図 71:</B>ライン プロットをバー グラフに追加する <A href="exframes/frame_example16.2.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> 悪くありません。ライン プロットがバー プロットの裏側にきてしまったので、グラフにライン プロットを追加する順番を変更してみましょう。<DIV class="example">
+<BR> <A href="exframes/frame_example16.3.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example16.3.png" WIDTH="400"></A> <BR><B>図 72:</B>逆の順番でライン プロットをバー プロットに追加する <A href="exframes/frame_example16.3.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> ライン プロットをバーの中央に配置したい場合は、以下の 2 通りの方法があります。</P>
+<P> テキスト スケールを使用している場合は、<A href="../ref/LinePlot.html#_LINEPLOT_SETBARCENTER">LinePlot::SetBarCenter()</A>を呼び出す必要があります。<DIV class="example">
+<BR> <A href="exframes/frame_linebarcentex1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="linebarcentex1.png" WIDTH="400"></A> <BR><B>図 73:</B>LinePlot::SetBarCenter() メソッドを使用して、ライン プロットをバーの中央に配置する <A href="exframes/frame_linebarcentex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> また、整数スケールを使用することもできます。この場合、バー プロットとライン プロットの<STRONG>両方</STRONG>が、各目盛りの中央に配置されます。そのため、以下のような結果になります。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_example16.4.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example16.4.png" WIDTH="400"></A> <BR><B>図 74:</B> リニア スケールを使用した場合 <A href="exframes/frame_example16.4.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="note"><B>注意:</B>今回の例では、テキスト ラベルをリニア スケール (整数スケール) に使用するサンプルも兼ねています。</DIV></P>
+<P> 最後に、散布プロットとライン プロットを組み合わせ、回帰直線を描画するサンプルを掲載します。<DIV
+class="example">
+<BR> <A href="exframes/frame_example16.6.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example16.6.png" WIDTH="300"></A> <BR><B>図 75:</B>散布プロットとライン プロットを組み合わせる <A href="exframes/frame_example16.6.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="763ImagemapsforBoxandStockcharts.html">前へ</A> <A HREF="78Specifyingthescalemanually.html">次へ</A>
+</BODY>
+</HTML>

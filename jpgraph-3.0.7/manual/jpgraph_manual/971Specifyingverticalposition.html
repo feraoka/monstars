@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="97Ganttbars.html">
+<LINK REL="Next" HREF="972Specifyingstartandendpositionforabar.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="97Ganttbars.html">前へ</A> <A HREF="972Specifyingstartandendpositionforabar.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="9_7_1">9.7.1 鉛直位置を指定する</A></H3>
+<P> 上述のように、鉛直方向の位置は「n」が任意の定数である[0..n]の範囲の数値として指定されます。(実用的な目的では、ほとんどの場合 n &lt; 100 です)</P>
+<P> 先の例を使用してこのパラメータを説明しましょう。[project]アクティビティの位置をポジション７へ変更します。 そこで、GanttBar()の呼び出しを以下のように変更します。 <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB">&nbsp;$activity&nbsp;</FONT><FONT color="#007700">=&nbsp;new&nbsp;</FONT><FONT
+color="#0000BB">GanttBar</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">7</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;Project&quot;</FONT><FONT
+color="#007700">,</FONT><FONT color="#DD0000">&quot;2001-12-21&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;2002-02-20&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> すると下図150のようなチャートが出力されます。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_ganttex03.html" target="blank"><IMG border="0"
+HEIGHT="280" src="ganttex03.png" WIDTH="486"></A> <BR><B>図 150:</B>垂直の位置を7へ変更する<A href="exframes/frame_ganttex03.html"
+target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P> それぞれの位置（鉛直方向の位置）の高さは、バーの実際の高さに依存するということに注意してください。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="97Ganttbars.html">前へ</A> <A HREF="972Specifyingstartandendpositionforabar.html">次へ</A>
+</BODY>
+</HTML>

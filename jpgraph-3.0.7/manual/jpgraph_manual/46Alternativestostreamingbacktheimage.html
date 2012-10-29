@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="45ChoosingtheimageformatforJpGraph.html">
+<LINK REL="Next" HREF="47WorkingwithfontsinJpGraph.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="45ChoosingtheimageformatforJpGraph.html">前へ</A> <A HREF="47WorkingwithfontsinJpGraph.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="4_6">4.6 画像をブラウザに送る以外の処理方法</A></H2>
+<P> ブラウザに画像を送信するのではなくファイルに保存する場合は、Graph::Stroke() メソッドで絶対ファイル名を指定します。  </P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Stroke</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;/usr/home/peter/images/result2002.png&quot;</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> この場合、指定したディレクトリに Apache/PHP がファイルを作成する権限があることを確認してください。</P>
+<P> また、ファイル名には特別な意味を表す 2 種類の文字列が定義されています。</P>
+<UL>
+<LI>&quot;auto&quot; － 画像をスクリプトのファイル名と同じ名前でスクリプトと同じディレクトリに作成します。この場合、拡張子は正しいものに変換されます。 </LI>
+<LI>_IMG_HANDLER － この定数は jpgraph.php で定義されています。このファイル名を指定すると、画像ファイルを作成したり、ブラウザに返したりしないようになります。その代わりに、Stroke() 関数により GD イメージのハンドルが返却されます。これは JpGraph でサポートしていない画像の操作をする場合に役に立ちます。たとえば、PDF ファイル内で生成された画像を扱う場合に使用できます。<BR><I> 例:</I><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT
+color="#0000BB"> $handle </FONT><FONT color="#007700">= </FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Stroke</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">_IMG_HANDLER</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P></P>
+</LI>
+</UL>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="45ChoosingtheimageformatforJpGraph.html">前へ</A> <A HREF="47WorkingwithfontsinJpGraph.html">次へ</A>
+</BODY>
+</HTML>

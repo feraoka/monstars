@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="973Milestones.html">
+<LINK REL="Next" HREF="975Addingmarkerstoaganttbar.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="973Milestones.html">前へ</A> <A HREF="975Addingmarkerstoaganttbar.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="9_7_4">9.7.4 バーティカル ライン</A></H3>
+<P> ガントチャートに加える最後のオブジェクトは、簡単ですがとても有用なもので、プロットの縦全体に伸びる鉛直の直線です。これは、例えば、あるプロジェクトの進捗段階の遅れや誤差を示すためなどに使用されます。GanttVLine() を呼び出すことで、ラインオブジェクトを作成できます。</P>
+<P> GanttVLine()の完全なコンストラクタは以下の通りです。 <DIV class="phpscript"><CODE><FONT
+color="#000000"> <FONT color="#0000BB"> </FONT><FONT color="#007700">function </FONT><FONT color="#0000BB">GanttVLine</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$aDate</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">$aTitle</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$aColor</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$aWeight</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$aStyle</FONT><FONT color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P></P>
+<TABLE border="0">
+<TR><TD valign="top">
+<!--span style=&quot;font-family:times;font-size:85%;font-weight:bold;&quot;--> <CODE><FONT color="#000000"> <FONT color="#0000BB"> $aDate </FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>マイルストーンの日付</TD></TR>
+<TR><TD valign="top">
+<!--span style=&quot;font-family:times;font-size:85%;font-weight:bold;&quot;--> <CODE><FONT color="#000000"> <FONT color="#0000BB"> $aTitle </FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>アクティビティのタイトルタイトルはラインの下に表示されます。</TD></TR>
+<TR><TD valign="top">
+<!--span style=&quot;font-family:times;font-size:85%;font-weight:bold;&quot;--> <CODE><FONT color="#000000"> <FONT color="#0000BB"> $aColor </FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>ラインの色</TD></TR>
+<TR><TD valign="top">
+<!--span style=&quot;font-family:times;font-size:85%;font-weight:bold;&quot;--> <CODE><FONT color="#000000"> <FONT color="#0000BB"> $aWeight </FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD>ラインの太さ</TD></TR>
+<TR><TD valign="top">
+<!--span style=&quot;font-family:times;font-size:85%;font-weight:bold;&quot;--> <CODE><FONT color="#000000"> <FONT color="#0000BB"> $aStyle </FONT></FONT></CODE></TD><TD valign="top">&nbsp;</TD><TD> 破線（dashed）や点線（dotted）などといったラインのスタイル</TD></TR>
+</TABLE>
+<P> ラインの生成法は以下の通りです。</P>
+<UL>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $vline </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">GanttVLine</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;2001-12-24&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P></P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $vline </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">GanttVLine</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;2001-12-24&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;Phase 1&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P></P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $vline </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">GanttVLine</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;2001-12-24&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;Phase 1&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;darkred&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P></P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $vline </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">GanttVLine</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;2001-12-24&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;Phase 1&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;darkred&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">5</FONT><FONT
+color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P></P>
+</LI>
+<LI><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $vline </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">GanttVLine</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;2001-12-24&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;Phase 1&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;darkred&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">5</FONT><FONT
+color="#007700">,</FONT><FONT color="#DD0000">&quot;dotted&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+<P></P>
+</LI>
+</UL>
+<P> グラフにラインを付け加えるために、マイルストーンやバーの時と同様にGanttGraph::Add()を呼び出す必要があります。先の例にラインを加えることによってバーティカルラインの使用法を説明しましょう。<DIV class="phpscript"><CODE><FONT
+color="#000000"> <FONT color="#0000BB"> $vline </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">GanttVLine</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;2001-12-24&quot;</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">&quot;Phase 1&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$vline</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> この例は図153のようになります。<DIV class="example">
+<BR> <A href="exframes/frame_ganttex06.html" target="blank"><IMG border="0"
+HEIGHT="189" src="ganttex06.png" WIDTH="502"></A> <BR><B>図 153:</B> ガントチャートにタイトルつきバーティカルラインを加える<A href="exframes/frame_ganttex06.html" target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P> 上の図から、デフォルトでは指定された日の始まりに、破線で描かれることがわかります。これは、もちろん変更可能で、線は指定した日のどこにでも描いたり並べたりできます。修正を行うには、線を引きたい場所に対応する一日の割合を指定する引数を用いて、SetDayOffset() メソッドを使用します。</P>
+<P> 例えば一日の真ん中に線を加えたい場合、次の文をこれまでのコードへ付け加えるだけです。 <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $vline</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetDayOffset</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0.5</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> その結果は以下のようになります。<DIV class="example">
+<BR> <A href="exframes/frame_ganttex07.html" target="blank"><IMG border="0"
+HEIGHT="189" src="ganttex07.png" WIDTH="502"></A> <BR><B>図 154:</B> 線の位置を変更する<A href="exframes/frame_ganttex07.html" target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> 通常通り、適切なメソッド（SetFont()，SetColor()）を実行して、フォントやサイズや色を修正できます。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="973Milestones.html">前へ</A> <A HREF="975Addingmarkerstoaganttbar.html">次へ</A>
+</BODY>
+</HTML>

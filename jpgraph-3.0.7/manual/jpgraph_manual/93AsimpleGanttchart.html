@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="92CapabilitiesinJpGraphGanttmodule.html">
+<LINK REL="Next" HREF="94ThestructureofaGanttchart.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="92CapabilitiesinJpGraphGanttmodule.html">前へ</A> <A HREF="94ThestructureofaGanttchart.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_3">9.3 シンプルなガント チャート</A></H2>
+<P> ここでは、ガント チャートの作成例と、作成がいかに簡単かということを説明したいと思います。それでは、最もシンプルなガント チャートを作成してみましょう。このガントチャートには、&ldquo;2001-11-01&rdquo;から&ldquo;2002-02-20&rdquo;までの&ldquo;Project&rdquo;という名前のアクティビティを1つだけ登録します。</P>
+<P> これを表示するコードは以下のとおりです。（すべてデフォルト値を使用しています）<DIV class="phpscript">(File: radarex1.php) <BR><CODE><FONT color="#000000"> <FONT color="#0000BB">&lt;?php <BR></FONT><FONT color="#007700">include (</FONT><FONT color="#DD0000">&quot;../jpgraph.php&quot;</FONT><FONT color="#007700">); <BR>include (</FONT><FONT color="#DD0000">&quot;../jpgraph_radar.php&quot;</FONT><FONT color="#007700">); <BR>     <BR></FONT><FONT color="#FF8000">// 自動的にサイズを設定する新しいグラフ <BR></FONT><FONT color="#0000BB">$graph </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">GanttGraph</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;auto&quot;</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// 0行目の新しいアクティビティ <BR></FONT><FONT color="#0000BB">$activity </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">GanttBar</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">&quot;Project&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;2001-12-21&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;2002-01-20&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$activity</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// グラフを表示 <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB">?&gt; <BR></FONT></FONT></CODE></DIV></P>
+<P> 下の図147はこの出力結果です。<DIV style="margin-left:-120px;">
+<DIV class="example">
+<BR> <A href="exframes/frame_ganttex00.html" target="blank"><IMG border="0"
+HEIGHT="112" src="ganttex00.png" WIDTH="486"></A> <BR><B>図 147:</B>シンプルなガント チャート<A href="exframes/frame_ganttex00.html"
+target="blank"> [ソース]</A>
+<P></P>
+</DIV>
+<P></P>
+</DIV></P>
+<P> 上図の画像とコードに関して、いくつかの点に注意しましょう:</P>
+<UL>
+<LI> まず、jpgraph.php と jpgraph_gantt.php の両方を常にインクルードする必要があります。</LI>
+<LI> 鉛直方向の位置（これについてはすぐに詳細を説明）、タイトル、スタートの日付、終了の日付、の最低４つのパラメータを用いてバーを指定します。</LI>
+<LI> 画像の大きさを指定しない場合、バーの最小と最大の日付を含む週全体を表示するように自動的に決定されます。</LI>
+<LI> デフォルトでは、週および日のスケールが表示されます。</LI>
+<LI> 週末の背景は、デフォルトでは薄いグレー色で表示されます。</LI>
+<LI> 日曜日は赤色で描かれます。</LI>
+<LI> 週はISO8601に準拠して番号付けされます。</LI>
+<LI> アクティビティバーは、デフォルトでは白地に青色のストライプとして表示されます。</LI>
+</UL>
+<P> それでは、このグラフを少しだけ面白いものにしてみましょう。最初にタイトルを加え、次に月スケールを加え、最後にバーの色を変更してみましょう。</P>
+<P> それらすべては以下のコードで実行できます。<DIV class="phpscript">
+(File:ganttex01.php) <BR><CODE><FONT color="#000000"> <FONT color="#0000BB">&lt;?php <BR></FONT><FONT color="#007700">include (</FONT><FONT color="#DD0000">&quot;../jpgraph.php&quot;</FONT><FONT color="#007700">); <BR>include (</FONT><FONT color="#DD0000">&quot;../jpgraph_gantt.php&quot;</FONT><FONT
+color="#007700">); <BR> <BR></FONT><FONT color="#0000BB">$graph </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">GanttGraph</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;auto&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetShadow</FONT><FONT color="#007700">(); <BR> <BR></FONT><FONT color="#FF8000">// タイトルとサブタイトルを加える <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;A nice main title&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FS_BOLD</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">12</FONT><FONT
+color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">subtitle</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;(Draft version)&quot;</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// 日、週、月のスケールを表示する <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">ShowHeaders</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">GANTT_HDAY </FONT><FONT color="#007700">| </FONT><FONT color="#0000BB">GANTT_HWEEK </FONT><FONT color="#007700">| </FONT><FONT color="#0000BB">GANTT_HMONTH</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// 週番号のかわりに、  <BR>// 週スケールで週の最初の日付けを表示する<BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">week</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetStyle</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">WEEKSTYLE_FIRSTDAY</FONT><FONT
+color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// 週スケールで週の最初の日付けを表示する<BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">week</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">FF_FONT0</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000"><BR>//  週スケールフォントをデフォルトより小さくする <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">month</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetStyle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">MONTHSTYLE_SHORTNAMEYEAR2</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// 最初のアクティビティのバーを初期化する<BR>// ($row,$title,$startdate,$enddate) <BR></FONT><FONT color="#0000BB">$activity?</FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">GanttBar</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">&quot;Project&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;2001-12-21&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;2002-01-20&quot;</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// アクティビティを赤色の背景、黄色の斜線にする<BR></FONT><FONT color="#0000BB">$activity</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetPattern</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">BAND_RDIAG</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;yellow&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$activity</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFillColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;red&quot;</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// グラフにバーを加える <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$activity</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// グラフを表示する<BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB">?&gt;<BR></FONT></FONT></CODE></DIV> 下の図148はこのスクリプトの出力結果です。<DIV class="example">
+<BR> <A href="exframes/frame_ganttex01.html" target="blank"><IMG border="0"
+HEIGHT="152" src="ganttex01.png" WIDTH="486"></A> <BR><B>図 148:</B>タイトルや多くの色を使用してガントチャートを作成する<A href="exframes/frame_ganttex01.html"
+target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P> 上の例で、いくつかの注意点があります。</P>
+<UL>
+<LI> 余白の大きさは、追加されたタイトルやサブタイトルに応じて自動的に調整されます。</LI>
+<LI> スケールヘッダの高さは、フォントを変更すると自動的に調整されます。</LI>
+<LI> スケールラベルのフォーマットの選択は高い柔軟性を持っています。例えば、月のヘッダーに西暦を4桁で表示したい場合、上のコード内の定数 MONTHSTYLE_SHORTNAMEYEAR2 を MONTHSTYLE_SHORTNAMEYEAR4 へ変更するだけで可能です。</LI>
+<LI> ヘッダーのフォントや色や背景、サイズ等は全て自由に変更することができます。</LI>
+</UL>
+<P> これらは全て簡単に設定することができます。以下の文を加え、月スケール内で西暦を4桁で表示し、ヘッダースタイルが紺色の背景に白字となるように設定してみましょう。  <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> </FONT><FONT color="#FF8000">// 4桁の西暦と月の名前を <BR>// 月スケール上に並べて表示させる <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">month</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetStyle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">MONTHSTYLE_SHORTNAMEYEAR4</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">month</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetTextColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;white&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">month</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetBackgroundColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;blue&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> この出力結果は下図149のようになります。<DIV class="example">
+<BR> <A href="exframes/frame_ganttex02.html" target="blank"><IMG border="0"
+HEIGHT="112" src="ganttex02.png" WIDTH="381"></A> <BR><B>図 149:</B>スケールヘッダーを調整する<A href="exframes/frame_ganttex02.html"
+target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="92CapabilitiesinJpGraphGanttmodule.html">前へ</A> <A HREF="94ThestructureofaGanttchart.html">次へ</A>
+</BODY>
+</HTML>

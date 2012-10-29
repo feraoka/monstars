@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="1253Meshinterpolatingofinputdata.html">
+<LINK REL="Next" HREF="1255Adjustingalphablending.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="1253Meshinterpolatingofinputdata.html">前へ</A> <A HREF="1255Adjustingalphablending.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="12_5_4">5.4 モジュール・タイプを変更する</A></H3>
+
+<p>初期設定によりマトリックスの個々のセルに割当てられるモジュール・タイプは四角形です。この章の始めに説明したように円形のモジュールも使うことができます。タイプの選択は次のメソッドで行えます。</p>
+<ul>
+<li>MatrixPlot::SetModuleType($aType)<br />
+$aType, 0 = 四角形を使用, 1 = 円形を使用
+</li>
+</ul>
+<p>円形のモジュールを使うときはプロットの背景色も別途指定したほうがいいかもしれません。円と円の隙間から背景が見えるからです。背景色は次のメソッドで指定します。</p>
+<ul>
+<li>MatrixPlot::SetBackgroundColor($aColor)</li>
+</ul>
+<p>円形モジュールの使用例です。</p>
+
+<p>
+<div class="example">
+<A href="example_src/frame_matrix_ex05.html" target="_blank"><img src="matrix_ex05.png" alt="" /></A>
+<br /><B>図5.4</B> 円形モジュール・タイプの使用例<A href="example_src/frame_matrix_ex05.html" target="_blank">[ソース]</A>
+</div></p>
+
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="1253Meshinterpolatingofinputdata.html">前へ</A> <A HREF="1255Adjustingalphablending.html">次へ</A>
+</BODY>
+</HTML>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="64ExamplesofImagemaps.html">
+<LINK REL="Next" HREF="66Gettingholdoftheimagemap.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="64ExamplesofImagemaps.html">前へ</A> <A HREF="66Gettingholdoftheimagemap.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="6_5">6.5 StrokeCSIM() の動き</A></H2>
+<P> StrokeCSIM() の作動方法の正確な技術的詳細の知識は、おそらく多くの人によって必要ではありません。しかし、完全に対して、この短いセクションでそれらの詳細について概説します。</P>
+<P> 解決しなければならない根本的な問題は、2 つのモードでイメージ スクリプトを呼ぶことができなければならないということです。ユーザがイメージ スクリプトを持っている場合、StrokeCSIM() メソッドは HTML ページを返すべきですが、イメージ スクリプトがイメージ タグに直接後で呼ばれた場合、実際のイメージ以外 HTML ページを返してはいけません。</P>
+<P> この方法は、イメージ・タグでイメージ スクリプトの名前を使った場合、自動的に渡される1 つの HTTP 引数を使うことで解決します。</P>
+<P> 生成された HTML を判断する場合、イメージ タグの src・プロパティの引数は単にスクリプト名ではありませんが、追加の引数ではスクリプト名であるということを理解します。</P>
+<P> JpGraph の内部のコードで、このあらかじめ定義された引数は確認され、それが存在する場合、HTML ページではなくイメージが送られます。</P>
+<P> この引数の名前は JpGraph の DEFINE() ステートメントによって定義されます。その定義は _CSIM_DISPLAY です。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="64ExamplesofImagemaps.html">前へ</A> <A HREF="66Gettingholdoftheimagemap.html">次へ</A>
+</BODY>
+</HTML>

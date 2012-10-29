@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="12NonfilledContourgraph.html">
+<LINK REL="Next" HREF="122CreateNonfilledContour.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css"><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="12NonfilledContourgraph.html">前へ</A> <A HREF="122CreateNonfilledContour.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="12_1">12.1 等高線グラフの入力データ</A></H2>
+<P>等高線グラフの入力データは行列です。</P>
+<P>行列内の各エントリの値は、行列内の高さ(「row,col」の指定)を意味します。</P>
+<P>これから扱う全てのサンプルでは、以下の行列データを使用します。</P>
+
+
+<DIV class="phpscript"><code><span style="color: #000000"> <span style="color: #0000BB">&lt;?php<br /> $data&nbsp;</span><span style="color: #007700">=&nbsp;array(<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;(</span><span style="color: #0000BB">0.5</span><span style="color: #007700">,</span><span style="color: #0000BB">1.1</span><span style="color: #007700">,</span><span style="color: #0000BB">1.5</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">2.0</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">0.1</span><span style="color: #007700">),<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;(</span><span style="color: #0000BB">1.0</span><span style="color: #007700">,</span><span style="color: #0000BB">1.5</span><span style="color: #007700">,</span><span style="color: #0000BB">3.0</span><span style="color: #007700">,</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">6.0</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">1.2</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">),<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;(</span><span style="color: #0000BB">0.9</span><span style="color: #007700">,</span><span style="color: #0000BB">2.0</span><span style="color: #007700">,</span><span style="color: #0000BB">2.1</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">6.0</span><span style="color: #007700">,</span><span style="color: #0000BB">7</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">1.4</span><span style="color: #007700">),<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;(</span><span style="color: #0000BB">1.0</span><span style="color: #007700">,</span><span style="color: #0000BB">1.5</span><span style="color: #007700">,</span><span style="color: #0000BB">3.0</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">,</span><span style="color: #0000BB">6.0</span><span style="color: #007700">,</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">1.5</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">),<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;(</span><span style="color: #0000BB">0.8</span><span style="color: #007700">,</span><span style="color: #0000BB">2.0</span><span style="color: #007700">,</span><span style="color: #0000BB">3.0</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">4.0</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">2.4</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">),<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;(</span><span style="color: #0000BB">0.6</span><span style="color: #007700">,</span><span style="color: #0000BB">1.1</span><span style="color: #007700">,</span><span style="color: #0000BB">1.5</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">4.0</span><span style="color: #007700">,</span><span style="color: #0000BB">3.5</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">),<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;(</span><span style="color: #0000BB">1.0</span><span style="color: #007700">,</span><span style="color: #0000BB">1.5</span><span style="color: #007700">,</span><span style="color: #0000BB">3.0</span><span style="color: #007700">,</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">6.0</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">1.2</span><span style="color: #007700">,</span><span style="color: #0000BB">2.7</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">),<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;(</span><span style="color: #0000BB">0.8</span><span style="color: #007700">,</span><span style="color: #0000BB">2.0</span><span style="color: #007700">,</span><span style="color: #0000BB">3.0</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">5.5</span><span style="color: #007700">,</span><span style="color: #0000BB">6</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">1.4</span><span style="color: #007700">),<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;(</span><span style="color: #0000BB">1.0</span><span style="color: #007700">,</span><span style="color: #0000BB">1.5</span><span style="color: #007700">,</span><span style="color: #0000BB">3.0</span><span style="color: #007700">,</span><span style="color: #0000BB">4</span><span style="color: #007700">,</span><span style="color: #0000BB">6.0</span><span style="color: #007700">,</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">1</span><span style="color: #007700">,</span><span style="color: #0000BB">0.5</span><span style="color: #007700">,</span><span style="color: #0000BB">0.2</span><span style="color: #007700">));<br /> </span><span style="color: #0000BB">?&gt;</span> </span> </code></DIV>
+
+
+<P>初期設定では、エントリ(0,0)すなわちrow=0, col=0は、グラフ位置(0,0)すなわち左下角に対応します。</P>
+<P>よって、行列データに対して、逆さの像が表示されます。</P>
+<P>同じ行列データを使用して、同方向のグラフ（左上角をエントリ(0,0)としたグラフ）を作成するために、以下のメソッド<A href="../ref/Graph.html#_GRAPH_SETCLIPPING">ContourPlot::SetInvert($aFlg=true)</A>を使用します。</P>
+
+<P>なめらかな等高線プロットを描画するためには、適切な数の点データが必要となります。「適切な」数　であるかどうかは、全体のグラフのサイズに依存します。
+より大きいグラフには、よりたくさんの点が必要とされます。</P>
+<P>なめらかな等高線プロットを作成するために、JpGraphでは、特定の深さで、自動的に線を補間する機能が提供されています。
+補間することは、データの精度を向上させることではない、ということに注意してください。
+なめらかな曲線を描くことは、単に、見せかけの点を作ることであり、結果的に精度を低下させることになります。</P>
+
+<DIV class="note"><B>ヒント:</B>
+<UL style="margin-top: 0px;">
+  <LI>ファイル内に記述された行列のデータを使用する場合、ファイル内から数列を読み込むユーティリティ「ReadFileData」クラスを使用してください。</LI>
+  <LI>ファイル内に記述する行列では、各行を改行し、列の区切りには特定の区切り文字を使用してください。</LI>
+  <LI>初期設定では、スペースが区切り文字として使用されます。</LI>
+  <LI>読み込まれた全ての値は　浮動小数点数(倍精度)に変換されます。</LI>
+  <LI>次のスクリプトを記述するだけで、「matrixdata.txt」に記述された行列を読み込むことができます。</LI>
+<DIV class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">ReadFileData</span><span style="color: #007700">::</span><span style="color: #0000BB">FromMatrix</span><span style="color: #007700">(</span><span style="color: #DD0000">'matrixdata.txt'</span><span style="color: #007700">);</span><span style="color: #0000BB"></span> </span> </code>
+</DIV>
+
+</UL>
+</DIV>
+
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="12NonfilledContourgraph.html">前へ</A> <A HREF="122CreateNonfilledContour.html">次へ</A>
+</BODY>
+</HTML>

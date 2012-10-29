@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="1222Differenttypeofwindrose.html">
+<LINK REL="Next" HREF="1224Sampleswindrose.html">
+<STYLE TYPE="text/css">
+<!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+-->
+</STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <a href="1222Differenttypeofwindrose.html">前へ </a><a href="1224Sampleswindrose.html">次へ</a>
+<HR NOSHADE>
+<h4><A NAME="12_2_3_2">2.3.2 方位ラベルを指定する</a></h4>
+<p>ここでは「方位ラベル」とは風配図プロットのまわりのコンパス方位の名前のことを指します。初期設定では16の方位はそれぞれ英語の方位名の省略形になっています。これもご使用になる地域・言語に合わせて変更が可能です。<br>
+
+<p><strong>方位軸ラベルのフォントとフォントカラーの指定</strong></p>
+<p>軸ラベルのフォントは次の関数に通常の引数を入れて指定します。</p>
+<ul type="disc">
+  <li>WindrosePlot::SetFont()</li>
+  <li>WindrosePlot::SetFontColor()</li>
+</ul>
+<p>下は引数を入れた記述例です。</p>
+<DIV class="phpscript"><code><span style="color: #000000"> <span style="color: #0000BB">$windplot</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetFont</span><span style="color: #007700">(</span><span style="color: #0000BB">FF_TIMES</span><span style="color: #007700">,</span><span style="color: #0000BB">FS_BOLD</span><span style="color: #007700">,</span><span style="color: #0000BB">12</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">$windplot</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetFontColor</span><span style="color: #007700">(</span><span style="color: #DD0000">'darkgreen'</span><span style="color: #007700">);</span><span style="color: #0000BB"></span> </span> </code>
+</DIV>
+<p>風配図プロットの表示は<a href="1224Sampleswindrose.html#12244">図2.4_4</a>の風配図プロットのようになります。</p>
+<p><strong>データの方位の任意文字列の設定</strong></p>
+<p>フリー・タイプの風配図プロットを使う場合、ラベルの初期設定はデータの角度と同じ方位になっています。これば次の方法で自由にカスタマイズできます。 </p>
+<ul type="disc">
+  <li>WindrosePlot::SetLabels($aLabels)
+    <p>この方法による入力データでは、連想配列を使い、キーに方位、カッコ内には表示するテキストを記述します。</p>
+  </li></ul>
+  <p>通常のコンパス方位の風配図プロットでは方位ラベルは変更できないことにご注意ください。変更は「WINDROSE_TYPEFREE」の風配図プロットでのみ可能です。</p>
+  <p>次の例では、角度が50度の位置でテキスト「Point\n#7315」のラベルのデータポイントを指定する例です。</p>
+  <p><div class="note"><b>ヒント:</b>ラベルには改行を行う「\n」を含むこともできます。</div></p>
+<DIV class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">=&nbsp;array(&nbsp;</span><span style="color: #0000BB">50&nbsp;</span><span style="color: #007700">=&gt;&nbsp;array(</span><span style="color: #0000BB">12</span><span style="color: #007700">,</span><span style="color: #0000BB">12</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">)&nbsp;);<br /> </span><span style="color: #0000BB">$labels&nbsp;</span><span style="color: #007700">=&nbsp;array(&nbsp;</span><span style="color: #0000BB">50&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Point&nbsp;#7315'&nbsp;</span><span style="color: #007700">);<br /> ...<br /> </span><span style="color: #0000BB">$windplot&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">WindrosePlot</span><span style="color: #007700">();<br /> </span><span style="color: #0000BB">$windplot</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetLabels</span><span style="color: #007700">(</span><span style="color: #0000BB">$labels</span><span style="color: #007700">);</span><span style="color: #0000BB"></span> </span> </code></DIV>
+
+<p>このサンプルは下の図のようになります。(使っているバケットの角度は異なります。)</p>
+<p><strong>配置と余白を調整する</strong></p>
+<p>プロットのまわりのコンパス・ラベルの位置を調整するには以下の2通りの方法があります。 </p>
+<ul type="disc">
+  <li>ラベルとプロットの外周の間の余白を調整する。</li>
+  <li>ラベルのアンカー・ポイント（基準点）を調整する。</li>
+</ul>
+<p>まず、プロットのまわりに見えない円があると想像してみてください。余白のマージンはこの想像上の外円を、いちばん外の目盛りにとなる円からどれくらい離れた場所に置くかによって指定します。 </p>
+<p>プロットの外周の円の中のどこにラベルを置くかについては、テキストのどの点を外円に合わせるかを選択することによって、いくつかの方法があります。一番簡単な方法はテキストの真ん中、（つまり縦横両方向でみた中央）を選択することです。すべてのラベルの大きさがほぼ同じ場合はこの方法でうまくいきます。最大ラベルと最小ラベルのサイズに大きな違いがある場合は余白を大きくとって、テキストがプロットと衝突するのを避ける必要があるかもしれません。</p>
+<p>もっといいのはテキスト上でプロットに最短となるポイントを決め、そのポイントを円の上で設定する方法です。この最短ポイントはどのコンパス方位にラベルを置くかによって異なります。例えば「東」に置くラベルならテキストの左端の中央が最短ポイントとなり、「西」での最短点はテキスト右端の中央になります。</p>
+<p>ライブラリは下記の方法によって両方の位置設定をサポートします。 </p>
+<ul type="disc">
+  <li>WindrosePlot::SetLabelPosition($aPosition)</li>
+</ul>
+<p>$aPosition に有効な値は LBLPOSIITON_CENTER と LBLPOSITION_EDGEです。</p>
+<p>余白と位置の両方を指定するには次のように記述します。 </p>
+<DIV class="phpscript"><code><span style="color: #000000"> <span style="color: #0000BB">$windplot</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetLabelMargin</span><span style="color: #007700">(</span><span style="color: #0000BB">30</span><span style="color: #007700">);<br /> </span><span style="color: #0000BB">$windplot</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetLabelPosition</span><span style="color: #007700">(</span><span style="color: #0000BB">LBLPOSITION_EDGE</span><span style="color: #007700">);</span><span style="color: #0000BB"></span> </span> </code>
+</DIV>
+<p>下の図の中の赤い円は、上で説明した想像上のラベルを置くための円です。プロット上の一番外の円からラベルのアンカー・ポイントまでの幅が余白マージンです。</p>
+<div style="margin-left: 4em;">
+<table width="200" border="1">
+  <tr>
+    <td><p><strong>図2.3.2_1</strong><br />
+          LBLPOSITION_CENTERによる位置設定<br />
+    <img src="windrose_label-align1.png" width="300" height="300"></p></td>
+    <td><p><strong>図2.3.2_2</strong><br />
+    LBLPOSITION_EDGEによる位置設定。<br />
+    <img src="windrose_label-align2.png" width="300" height="300"></p></td>
+  </tr>
+</table>
+</div>
+<p>この方法で描かれたラベルの例は<a href="1224Sampleswindrose.html#ex12246">図2.4_6</a>をご覧ください。</p>
+<p>&nbsp;</p>
+<hr noshade>
+<A HREF="toc.html">目次</A> <a href="1222Differenttypeofwindrose.html">前へ </a><a href="1224Sampleswindrose.html">次へ</a>
+</BODY>
+</HTML>

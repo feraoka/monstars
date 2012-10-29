@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="shift-jis" ?>
+<?xml version="1.0" encoding="utf8" ?>
 <monstars>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ       ]Œ´ 6‰ñ Ž¸“_7&lt;br&gt; 6‰ñF’|–{‘IŽè‚ÌƒqƒbƒgŽžAŽR‰º‘IŽè‚Í‚R—ÛƒAƒEƒg&lt;br&gt; j! •½‰ª‘IŽèC’ÊŽZ100ŽŽ‡oê&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980509&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/04/19" game="•iì‹æ–¯‚P‰ñí" loc="?" result="-1" season="1998" team="ƒtƒBƒŠ[ƒY" time="14:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾       æ±ŸåŽŸ 6å›ž å¤±ç‚¹7&lt;br&gt; 6å›žï¼šç«¹æœ¬é¸æ‰‹ã®ãƒ’ãƒƒãƒˆæ™‚ã€å±±ä¸‹é¸æ‰‹ã¯ï¼“å¡ã‚¢ã‚¦ãƒˆ&lt;br&gt; ç¥! å¹³å²¡é¸æ‰‹ï¼Œé€šç®—100è©¦åˆå‡ºå ´&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980509&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/04/19" game="å“å·åŒºæ°‘ï¼‘å›žæˆ¦" loc="?" result="-1" season="1998" team="ãƒ•ã‚£ãƒªãƒ¼ã‚º" time="14:00">
     <batters>
       <batter name="sinozaki" order="1" position="3">
         <batting raw="1-4G-O" />
@@ -68,7 +68,7 @@
       <team batFirst="MonStars" fieldFirst="Fields" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ       ]Œ´ 4‰ñ Ž¸“_1&lt;br&gt;		’|–{ 2‰ñ Ž¸“_0&lt;br&gt; j! ŽR‰º‘IŽèC’ÊŽZ100ˆÀ‘Å’B¬&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980516.1&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/05/09" game="ƒI[ƒVƒƒƒ“—\‘IƒŠ[ƒO" loc="Â‹óB–Ê" result="1" season="1998" team="ƒG[ƒRƒ“ƒY" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾       æ±ŸåŽŸ 4å›ž å¤±ç‚¹1&lt;br&gt;		ç«¹æœ¬ 2å›ž å¤±ç‚¹0&lt;br&gt; ç¥! å±±ä¸‹é¸æ‰‹ï¼Œé€šç®—100å®‰æ‰“é”æˆ&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980516.1&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/05/09" game="ã‚ªãƒ¼ã‚·ãƒ£ãƒ³äºˆé¸ãƒªãƒ¼ã‚°" loc="é’ç©ºBé¢" result="1" season="1998" team="ã‚¨ãƒ¼ã‚³ãƒ³ã‚º" time="11:00">
     <batters>
       <batter name="sinozaki" order="1" position="3">
         <batting raw="1-7G-H1--1" />
@@ -145,7 +145,7 @@
       <team batFirst="Echons" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ       ]Œ´ 5‰ñ Ž¸“_3&lt;br&gt;				’†“‡ 2‰ñ Ž¸“_4&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980516.2&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/05/16" game="ƒI[ƒVƒƒƒ“—\‘IƒŠ[ƒO" loc="?" result="-1" season="1998" team="ƒ}ƒOƒlƒbƒc" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾       æ±ŸåŽŸ 5å›ž å¤±ç‚¹3&lt;br&gt;				ä¸­å³¶ 2å›ž å¤±ç‚¹4&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980516.2&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/05/16" game="ã‚ªãƒ¼ã‚·ãƒ£ãƒ³äºˆé¸ãƒªãƒ¼ã‚°" loc="?" result="-1" season="1998" team="ãƒžã‚°ãƒãƒƒãƒ„" time="11:00">
     <batters>
       <batter name="sophia" order="1" position="7">
         <batting raw="1-9G-H1--1*" />
@@ -215,7 +215,7 @@
       <team batFirst="MonStars" fieldFirst="Magnets" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ       ’|–{ 4 2/3‰ñ Ž¸“_5&lt;br&gt;		]Œ´ 1/3‰ñ   Ž¸“_0&lt;br&gt; 5‰ñC‘q’m‘IŽè‚Ì6G‚ÍCƒ‰ƒ“ƒi[‚ÌŽÂè‘IŽèƒAƒEƒg‚Å“ü‘Ö‚è&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980530&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/05/16" game="ƒI[ƒVƒƒƒ“—\‘IƒŠ[ƒO" loc="?" result="0" season="1998" team="‘å‰fƒsƒ…[ƒsƒ…[ƒY" time="13:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾       ç«¹æœ¬ 4 2/3å›ž å¤±ç‚¹5&lt;br&gt;		æ±ŸåŽŸ 1/3å›ž   å¤±ç‚¹0&lt;br&gt; 5å›žï¼Œå€‰çŸ¥é¸æ‰‹ã®6Gã¯ï¼Œãƒ©ãƒ³ãƒŠãƒ¼ã®ç¯ å´Žé¸æ‰‹ã‚¢ã‚¦ãƒˆã§å…¥æ›¿ã‚Š&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980530&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/05/16" game="ã‚ªãƒ¼ã‚·ãƒ£ãƒ³äºˆé¸ãƒªãƒ¼ã‚°" loc="?" result="0" season="1998" team="å¤§æ˜ ãƒ”ãƒ¥ãƒ¼ãƒ”ãƒ¥ãƒ¼ã‚º" time="13:00">
     <batters>
       <batter name="sophia" order="1" position="7">
         <batting raw="1-5G-H1*" />
@@ -273,7 +273,7 @@
       <team batFirst="Pyupyuz" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ       ]Œ´ 6‰ñ Ž¸“_4&lt;br&gt; 1‰ñC‘q’m‘IŽè‚Í“ü‘Ö‚è‚Åƒ‰ƒ“ƒi[D&lt;br&gt; 1‰ñCŽR‰º‘IŽè‚Í3—Ûƒ^ƒbƒ`ƒAƒEƒg&lt;br&gt; 5‰ñ,‘q’m‘IŽè‚Í‚UƒS‚ÅAƒ‰ƒ“ƒi[]Œ´‚ªƒAƒEƒg‚Ì‘ã‚í‚è‚É‚P—ÛŽcB&lt;br&gt; &lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980613&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/05/30" game="ƒI[ƒVƒƒƒ“—\‘IƒŠ[ƒO" loc="Ž­ÀŒö‰€–ì‹…ê" result="1" season="1998" team="ƒ‰ƒCƒK[ƒX" time="16:30">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾       æ±ŸåŽŸ 6å›ž å¤±ç‚¹4&lt;br&gt; 1å›žï¼Œå€‰çŸ¥é¸æ‰‹ã¯å…¥æ›¿ã‚Šã§ãƒ©ãƒ³ãƒŠãƒ¼ï¼Ž&lt;br&gt; 1å›žï¼Œå±±ä¸‹é¸æ‰‹ã¯3å¡ã‚¿ãƒƒãƒã‚¢ã‚¦ãƒˆ&lt;br&gt; 5å›ž,å€‰çŸ¥é¸æ‰‹ã¯ï¼–ã‚´ã§ã€ãƒ©ãƒ³ãƒŠãƒ¼æ±ŸåŽŸãŒã‚¢ã‚¦ãƒˆã®ä»£ã‚ã‚Šã«ï¼‘å¡æ®‹ã€‚&lt;br&gt; &lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980613&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/05/30" game="ã‚ªãƒ¼ã‚·ãƒ£ãƒ³äºˆé¸ãƒªãƒ¼ã‚°" loc="é¹¿æ²¼å…¬åœ’é‡Žçƒå ´" result="1" season="1998" team="ãƒ©ã‚¤ã‚¬ãƒ¼ã‚¹" time="16:30">
     <batters>
       <batter name="sinozaki" order="1" position="7">
         <batting raw="1-6F-O" />
@@ -340,7 +340,7 @@
       <team batFirst="Ligers" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ       ]Œ´ 5‰ñ Ž¸“_1(Ž©Ó0) (Ÿ‚¿)&lt;br&gt;	’|–{ ‚P‰ñ&lt;br&gt;&lt;br&gt; 1‰ñ ŽÂè‘IŽè‚Í“—ÛƒAƒEƒg&lt;br&gt; 3‰ñ ’|–{‘IŽè‚Í2—Û”ò‚Ño‚µ‚ÅƒAƒEƒg&lt;br&gt; 4‰ñ ŽÂè‘IŽè‚Í“—ÛƒAƒEƒg&lt;br&gt; 5‰ñ ‘q’m‘IŽè‚ÌƒqƒbƒgŽž‚ÉC]Œ´‘IŽè–{—ÛƒAƒEƒg‚Åƒ`ƒFƒ“ƒW&lt;br&gt; &lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980627&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/06/13" game="ƒI[ƒVƒƒƒ“—\‘IƒŠ[ƒO" loc="‘åˆä•u“ªŠC•lŒö‰€" result="1" season="1998" team="ƒCƒ“ƒpƒ‹ƒX" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾       æ±ŸåŽŸ 5å›ž å¤±ç‚¹1(è‡ªè²¬0) (å‹ã¡)&lt;br&gt;	ç«¹æœ¬ ï¼‘å›ž&lt;br&gt;&lt;br&gt; 1å›ž ç¯ å´Žé¸æ‰‹ã¯ç›—å¡ã‚¢ã‚¦ãƒˆ&lt;br&gt; 3å›ž ç«¹æœ¬é¸æ‰‹ã¯2å¡é£›ã³å‡ºã—ã§ã‚¢ã‚¦ãƒˆ&lt;br&gt; 4å›ž ç¯ å´Žé¸æ‰‹ã¯ç›—å¡ã‚¢ã‚¦ãƒˆ&lt;br&gt; 5å›ž å€‰çŸ¥é¸æ‰‹ã®ãƒ’ãƒƒãƒˆæ™‚ã«ï¼Œæ±ŸåŽŸé¸æ‰‹æœ¬å¡ã‚¢ã‚¦ãƒˆã§ãƒã‚§ãƒ³ã‚¸&lt;br&gt; &lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980627&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/06/13" game="ã‚ªãƒ¼ã‚·ãƒ£ãƒ³äºˆé¸ãƒªãƒ¼ã‚°" loc="å¤§äº•åŸ é ­æµ·æµœå…¬åœ’" result="1" season="1998" team="ã‚¤ãƒ³ãƒ‘ãƒ«ã‚¹" time="11:00">
     <batters>
       <batter name="sinozaki" order="1" position="7">
         <batting raw="1-B" />
@@ -406,7 +406,7 @@
       <team batFirst="MonStars" fieldFirst="Impulse" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ  ]Œ´ 5‰ñ Ž¸“_2 (Ÿ‚¿)&lt;br&gt;&lt;br&gt;9niwa			3-B---1* 4-5G-O*&lt;br&gt;@ashihara		3-K-O	4-7G-HR-3*&lt;br&gt; 1‰ñ —é–Ø‘IŽè‚Ì¶”òŽž‚É•½‰ª‘IŽè‚Í1—Û”ò‚Ño‚µƒAƒEƒg&lt;br&gt; 3‰ñ ŽR‰º‘IŽè‚ÌˆÀ‘ÅŽž‚ÉC—é–Ø‘IŽèƒz[ƒ€ƒ^ƒbƒ`ƒAƒEƒg&lt;br&gt; 4‰ñ ’O‰H‘IŽè‚Ì5G‚Íƒz[ƒ€ƒ^ƒbƒ`ƒAƒEƒg‚Åƒ‰ƒ“ƒi[“ü‚ê‘Ö‚í‚è&lt;br&gt; 5‰ñ –Ø‘º‘IŽè‚Ì5GƒGƒ‰[‚Å’†“‡‘IŽè‚Í¶ŠÒC‘å“c‘IŽè‚Íƒ^ƒbƒ`ƒAƒEƒg&lt;br&gt; &lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980808&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/06/27" game="ƒI[ƒVƒƒƒ“—\‘IƒŠ[ƒO" loc="‘åˆä•u“ªŠC•lŒö‰€" result="1" season="1998" team="ƒs[ƒiƒbƒc" time="15:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾  æ±ŸåŽŸ 5å›ž å¤±ç‚¹2 (å‹ã¡)&lt;br&gt;&lt;br&gt;9niwa			3-B---1* 4-5G-O*&lt;br&gt;@ashihara		3-K-O	4-7G-HR-3*&lt;br&gt; 1å›ž éˆ´æœ¨é¸æ‰‹ã®å·¦é£›æ™‚ã«å¹³å²¡é¸æ‰‹ã¯1å¡é£›ã³å‡ºã—ã‚¢ã‚¦ãƒˆ&lt;br&gt; 3å›ž å±±ä¸‹é¸æ‰‹ã®å®‰æ‰“æ™‚ã«ï¼Œéˆ´æœ¨é¸æ‰‹ãƒ›ãƒ¼ãƒ ã‚¿ãƒƒãƒã‚¢ã‚¦ãƒˆ&lt;br&gt; 4å›ž ä¸¹ç¾½é¸æ‰‹ã®5Gã¯ãƒ›ãƒ¼ãƒ ã‚¿ãƒƒãƒã‚¢ã‚¦ãƒˆã§ãƒ©ãƒ³ãƒŠãƒ¼å…¥ã‚Œæ›¿ã‚ã‚Š&lt;br&gt; 5å›ž æœ¨æ‘é¸æ‰‹ã®5Gã‚¨ãƒ©ãƒ¼ã§ä¸­å³¶é¸æ‰‹ã¯ç”Ÿé‚„ï¼Œå¤§ç”°é¸æ‰‹ã¯ã‚¿ãƒƒãƒã‚¢ã‚¦ãƒˆ&lt;br&gt; &lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980808&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/06/27" game="ã‚ªãƒ¼ã‚·ãƒ£ãƒ³äºˆé¸ãƒªãƒ¼ã‚°" loc="å¤§äº•åŸ é ­æµ·æµœå…¬åœ’" result="1" season="1998" team="ãƒ”ãƒ¼ãƒŠãƒƒãƒ„" time="15:00">
     <batters>
       <batter name="sinozaki" order="1" position="4">
         <batting raw="1-1G-O" />
@@ -458,7 +458,7 @@
       <team batFirst="Peanuts" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ       ]Œ´ 4‰ñ Ž¸“_2&lt;br&gt;	‚·‚¯‚Á‚Æƒtƒ‹ƒ„ 1‰ñ Ž¸“_1&lt;br&gt;&lt;br&gt;9furuya_suketto	3-8O-H3-1*  3-7F-O 		5-5G-E&lt;br&gt;8tanaka_suketto	3-B*	    3-4G-O-1 		5-1G-O&lt;br&gt; ‚WC‚X”Ô‚ÍŒ»’n’²’B‚µ‚½‚·‚¯‚Á‚Æ&lt;br&gt; 4‰ñ‚Ì]Œ´‘IŽè‚Ìƒs[ƒSƒ‚Íƒsƒbƒ`ƒƒ[‚ª–\“Š‚µ‚ÄA‘q’m‘IŽè‚ª¶ŠÒB&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980822&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/08/08" game="ƒI[ƒVƒƒƒ“—\‘IƒŠ[ƒO" loc="‘åˆä•u“ª" result="1" season="1998" team="ƒGƒŒƒtƒ@ƒ“ƒc" time="15:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾       æ±ŸåŽŸ 4å›ž å¤±ç‚¹2&lt;br&gt;	ã™ã‘ã£ã¨ãƒ•ãƒ«ãƒ¤ 1å›ž å¤±ç‚¹1&lt;br&gt;&lt;br&gt;9furuya_suketto	3-8O-H3-1*  3-7F-O 		5-5G-E&lt;br&gt;8tanaka_suketto	3-B*	    3-4G-O-1 		5-1G-O&lt;br&gt; ï¼˜ï¼Œï¼™ç•ªã¯ç¾åœ°èª¿é”ã—ãŸã™ã‘ã£ã¨&lt;br&gt; 4å›žã®æ±ŸåŽŸé¸æ‰‹ã®ãƒ”ãƒ¼ã‚´ãƒ­ã¯ãƒ”ãƒƒãƒãƒ£ãƒ¼ãŒæš´æŠ•ã—ã¦ã€å€‰çŸ¥é¸æ‰‹ãŒç”Ÿé‚„ã€‚&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980822&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/08/08" game="ã‚ªãƒ¼ã‚·ãƒ£ãƒ³äºˆé¸ãƒªãƒ¼ã‚°" loc="å¤§äº•åŸ é ­" result="1" season="1998" team="ã‚¨ãƒ¬ãƒ•ã‚¡ãƒ³ãƒ„" time="15:00">
     <batters>
       <batter name="sinozaki" order="1" position="6">
         <batting raw="1-3F-O" />
@@ -512,7 +512,7 @@
       <team batFirst="MonStars" fieldFirst="Elephants" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ    ’|–{‚R‰ñ(Ÿ‚¿j&lt;br&gt;     ’†“‡‚Q‰ñ&lt;br&gt;     ]Œ´ 1‰ñ &lt;br&gt;&lt;br&gt; ‚P‰ñAŽÂè‘IŽè‚R“ƒAƒEƒg&lt;br&gt; ‚Q‰ñA‘q’m‘IŽèƒpƒXƒ{[ƒ‹‚Åƒz[ƒ€ƒCƒ“&lt;br&gt; ‚T‰ñA•½‰ª‘IŽè‚Í‚Q—Û‚ð‚Ë‚ç‚Á‚ÄƒAƒEƒg&lt;br&gt; –Ø‘º‘IŽèA‘ñŠC‚ÌŽqŽç‚è‚Ì‚½‚ßoê‚Å‚«‚¸&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;/BODY&gt;&lt;br&gt;&lt;/HTML&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980912&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/08/22" game="ƒI[ƒVƒƒƒ“—\‘IƒŠ[ƒO" loc="‘åˆä•u“ª" result="1" season="1998" team="96ers" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾    ç«¹æœ¬ï¼“å›ž(å‹ã¡ï¼‰&lt;br&gt;     ä¸­å³¶ï¼’å›ž&lt;br&gt;     æ±ŸåŽŸ 1å›ž &lt;br&gt;&lt;br&gt; ï¼‘å›žã€ç¯ å´Žé¸æ‰‹ï¼“ç›—ã‚¢ã‚¦ãƒˆ&lt;br&gt; ï¼’å›žã€å€‰çŸ¥é¸æ‰‹ãƒ‘ã‚¹ãƒœãƒ¼ãƒ«ã§ãƒ›ãƒ¼ãƒ ã‚¤ãƒ³&lt;br&gt; ï¼•å›žã€å¹³å²¡é¸æ‰‹ã¯ï¼’å¡ã‚’ã­ã‚‰ã£ã¦ã‚¢ã‚¦ãƒˆ&lt;br&gt; æœ¨æ‘é¸æ‰‹ã€æ‹“æµ·ã®å­å®ˆã‚Šã®ãŸã‚å‡ºå ´ã§ããš&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;/BODY&gt;&lt;br&gt;&lt;/HTML&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980912&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/08/22" game="ã‚ªãƒ¼ã‚·ãƒ£ãƒ³äºˆé¸ãƒªãƒ¼ã‚°" loc="å¤§äº•åŸ é ­" result="1" season="1998" team="96ers" time="11:00">
     <batters>
       <batter name="sinozaki" order="1" position="6">
         <batting raw="1-1F-E--1" />
@@ -575,7 +575,7 @@
       <team batFirst="96ers" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ       ]Œ´ 7‰ñ Ž¸“_1&lt;br&gt;&lt;br&gt;@ozaki		2-K-O		4-7G-H1			7-1G-O&lt;br&gt;@yokoyama	2-5G-O		4-7F-O			7-6G-O&lt;br&gt; 7C8”Ô‚ÍŒ»’n’²’B‚µ‚½‚·‚¯‚Á‚Æ&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980919&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/09/12" game="ƒI[ƒVƒƒƒ“—\‘IƒŠ[ƒO" loc="‘½–€ì—Î’n‚U–Ê" result="-1" season="1998" team="ƒX[ƒp[ƒ\ƒjƒbƒNƒX" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾       æ±ŸåŽŸ 7å›ž å¤±ç‚¹1&lt;br&gt;&lt;br&gt;@ozaki		2-K-O		4-7G-H1			7-1G-O&lt;br&gt;@yokoyama	2-5G-O		4-7F-O			7-6G-O&lt;br&gt; 7ï¼Œ8ç•ªã¯ç¾åœ°èª¿é”ã—ãŸã™ã‘ã£ã¨&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980919&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/09/12" game="ã‚ªãƒ¼ã‚·ãƒ£ãƒ³äºˆé¸ãƒªãƒ¼ã‚°" loc="å¤šæ‘©å·ç·‘åœ°ï¼–é¢" result="-1" season="1998" team="ã‚¹ãƒ¼ãƒ‘ãƒ¼ã‚½ãƒ‹ãƒƒã‚¯ã‚¹" time="11:00">
     <batters>
       <batter name="sinozaki" order="1" position="3">
         <batting raw="1-8G-H1" />
@@ -625,7 +625,7 @@
       <team batFirst="MonStars" fieldFirst="SuperSonics" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ       ’|–{ 4‰ñ Ž¸“_2&lt;br&gt;	’†“‡ 2‰ñ Ž¸“_0&lt;br&gt;&lt;br&gt; 6‰ñ‚ÍA’†“‡‘IŽè‚ÌƒqƒbƒgŽž‚Éƒz[ƒ€ƒ^ƒbƒ`ƒAƒEƒg&lt;br&gt; 7‰ñ‚ÍAŽžŠÔØ‚ê‚ÅƒI[ƒVƒƒƒ“‚ÌŒöŽ®‹L˜^‚É‚Í‚È‚ç‚È‚¢&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980920&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/09/19" game="ƒI[ƒVƒƒƒ“—\‘IƒŠ[ƒO" loc="‘åˆä•u“ª‚d–Ê" result="0" season="1998" team="ƒeƒbƒNƒƒCƒc" time="13:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾       ç«¹æœ¬ 4å›ž å¤±ç‚¹2&lt;br&gt;	ä¸­å³¶ 2å›ž å¤±ç‚¹0&lt;br&gt;&lt;br&gt; 6å›žã¯ã€ä¸­å³¶é¸æ‰‹ã®ãƒ’ãƒƒãƒˆæ™‚ã«ãƒ›ãƒ¼ãƒ ã‚¿ãƒƒãƒã‚¢ã‚¦ãƒˆ&lt;br&gt; 7å›žã¯ã€æ™‚é–“åˆ‡ã‚Œã§ã‚ªãƒ¼ã‚·ãƒ£ãƒ³ã®å…¬å¼è¨˜éŒ²ã«ã¯ãªã‚‰ãªã„&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980920&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/09/19" game="ã‚ªãƒ¼ã‚·ãƒ£ãƒ³äºˆé¸ãƒªãƒ¼ã‚°" loc="å¤§äº•åŸ é ­ï¼¥é¢" result="0" season="1998" team="ãƒ†ãƒƒã‚¯ãƒ¡ã‚¤ãƒ„" time="13:00">
     <batters>
       <batter name="sinozaki" order="1" position="6">
         <batting raw="1-5G-O" />
@@ -688,7 +688,7 @@
       <team batFirst="MonStars" fieldFirst="TechMates" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ       ]Œ´ 0‰ñ1/3 Ž¸“_4?&lt;br&gt;	’|–{ 4‰ñ2/3 Ž¸“_4? (•‰‚¯)&lt;br&gt;&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980926&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/09/20" game="•iì‹æ–¯‘å‰ï1‰ñí" loc="‘åˆä•u“ª‚d–Ê" result="-1" season="1998" team="Isles" time="13:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾       æ±ŸåŽŸ 0å›ž1/3 å¤±ç‚¹4?&lt;br&gt;	ç«¹æœ¬ 4å›ž2/3 å¤±ç‚¹4? (è² ã‘)&lt;br&gt;&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;980926&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/09/20" game="å“å·åŒºæ°‘å¤§ä¼š1å›žæˆ¦" loc="å¤§äº•åŸ é ­ï¼¥é¢" result="-1" season="1998" team="Isles" time="13:00">
     <batters>
       <batter name="sinozaki" order="1" position="6">
         <batting raw="1-6F-O" />
@@ -745,7 +745,7 @@
       <team batFirst="MonStars" fieldFirst="Isles" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ       ]Œ´ 6‰ñ Ž¸“_6&lt;br&gt;&lt;br&gt;7shiba			3-9G-H3* 4-K-O			6-1G-O&lt;br&gt; 4‰ñ‚ÍAŽÂŒ´‘IŽè‚Ì‚S‚k‚ÍƒtƒBƒ‹ƒ_[ƒXƒ`ƒ‡ƒCƒX&lt;br&gt; ‚T‰ñAŽR‰º‘IŽè‚Íƒz[ƒ€ƒ‰ƒ“ƒi[‚ªƒAƒEƒg‚ÅA“ü‚ê‘Ö‚í‚è&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;981114&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/09/26" loc="‘½–€ìƒKƒX‹´ƒOƒ‰ƒEƒ“ƒh‚R–Ê" result="-1" season="1998" team="ƒoƒbƒJƒX" time="13:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾       æ±ŸåŽŸ 6å›ž å¤±ç‚¹6&lt;br&gt;&lt;br&gt;7shiba			3-9G-H3* 4-K-O			6-1G-O&lt;br&gt; 4å›žã¯ã€ç¯ åŽŸé¸æ‰‹ã®ï¼”ï¼¬ã¯ãƒ•ã‚£ãƒ«ãƒ€ãƒ¼ã‚¹ãƒãƒ§ã‚¤ã‚¹&lt;br&gt; ï¼•å›žã€å±±ä¸‹é¸æ‰‹ã¯ãƒ›ãƒ¼ãƒ ãƒ©ãƒ³ãƒŠãƒ¼ãŒã‚¢ã‚¦ãƒˆã§ã€å…¥ã‚Œæ›¿ã‚ã‚Š&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;981114&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/09/26" loc="å¤šæ‘©å·ã‚¬ã‚¹æ©‹ã‚°ãƒ©ã‚¦ãƒ³ãƒ‰ï¼“é¢" result="-1" season="1998" team="ãƒãƒƒã‚«ã‚¹" time="13:00">
     <batters>
       <batter name="sinozaki" order="1" position="6">
         <batting raw="1-K-O" />
@@ -802,7 +802,7 @@
       <team batFirst="MonStars" fieldFirst="Vacavons" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ       ]Œ´ 7‰ñ Ž¸“_2&lt;br&gt;&lt;br&gt;7takasu	2-D--1		4-5G-E*	5-4G-O			8-6G-O&lt;br&gt; ‚{‚³‚ñ‚ÍA‘q’m‚³‚ñ‚ªˆê‚ÉŽdŽ–‚µ‚Ä‚¢‚éŽæˆø‹ÆŽÒ‚³‚ñB&lt;br&gt; ‚W‰ñ‚ÍAŽŽ‡I—¹Œã‚ÌƒGƒLƒXƒgƒ‰B‚½‚¾‚µA‘ÅŒ‚‹L˜^‚ÍŽc‚·B&lt;br&gt; 5‰ñ‚ÍAŽÂŒ´‘IŽè‚Ì‚Æ‚±‚ë‚É’|–{‘IŽè‘ã‘ÅB‚½‚¾‚µA‚W‰ñ‚Í“ñl‚Æ‚à‘Å‚ÂB&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;981212&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/11/14" game="—ûKŽŽ‡" loc="‘½–€ì‹´—Î’nƒOƒ‰ƒEƒ“ƒh7–Ê" result="1" season="1998" team="ƒoƒ~ƒ…[ƒ_ƒY" time="10:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾       æ±ŸåŽŸ 7å›ž å¤±ç‚¹2&lt;br&gt;&lt;br&gt;7takasu	2-D--1		4-5G-E*	5-4G-O			8-6G-O&lt;br&gt; é«˜é ˆã•ã‚“ã¯ã€å€‰çŸ¥ã•ã‚“ãŒä¸€ç·’ã«ä»•äº‹ã—ã¦ã„ã‚‹å–å¼•æ¥­è€…ã•ã‚“ã€‚&lt;br&gt; ï¼˜å›žã¯ã€è©¦åˆçµ‚äº†å¾Œã®ã‚¨ã‚­ã‚¹ãƒˆãƒ©ã€‚ãŸã ã—ã€æ‰“æ’ƒè¨˜éŒ²ã¯æ®‹ã™ã€‚&lt;br&gt; 5å›žã¯ã€ç¯ åŽŸé¸æ‰‹ã®ã¨ã“ã‚ã«ç«¹æœ¬é¸æ‰‹ä»£æ‰“ã€‚ãŸã ã—ã€ï¼˜å›žã¯äºŒäººã¨ã‚‚æ‰“ã¤ã€‚&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;981212&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="98/11/14" game="ç·´ç¿’è©¦åˆ" loc="å¤šæ‘©å·æ©‹ç·‘åœ°ã‚°ãƒ©ã‚¦ãƒ³ãƒ‰7é¢" result="1" season="1998" team="ãƒãƒŸãƒ¥ãƒ¼ãƒ€ã‚º" time="10:00">
     <batters>
       <batter name="sinozaki" order="1" position="4">
         <batting raw="1-5-O" />
@@ -868,7 +868,7 @@
       <team batFirst="MonStars" fieldFirst="Bermudas" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;“ŠŽè¬Ñ       ŽR‰º‚P‰ñ Ž¸“_4&lt;br&gt;				–Ø‘º ‚S‰ñ&lt;br&gt;&lt;br&gt;7kawashima		2-8G-O			4-5G-H1	5-B&lt;br&gt;9nakai			2-6F-O			4-B		5-6F-O&lt;br&gt; kawashima, nakai ‚Í‚·‚¯‚Á‚Æ&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;/BODY&gt;&lt;br&gt;&lt;/HTML&gt;&lt;br&gt;" date="98/12/12" game="—ûKŽŽ‡" loc="˜Z‹½3–Ê" result="-1" season="1998" team="Volts" time="12:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;æŠ•æ‰‹æˆç¸¾       å±±ä¸‹ï¼‘å›ž å¤±ç‚¹4&lt;br&gt;				æœ¨æ‘ ï¼”å›ž&lt;br&gt;&lt;br&gt;7kawashima		2-8G-O			4-5G-H1	5-B&lt;br&gt;9nakai			2-6F-O			4-B		5-6F-O&lt;br&gt; kawashima, nakai ã¯ã™ã‘ã£ã¨&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;/BODY&gt;&lt;br&gt;&lt;/HTML&gt;&lt;br&gt;" date="98/12/12" game="ç·´ç¿’è©¦åˆ" loc="å…­éƒ·3é¢" result="-1" season="1998" team="Volts" time="12:00">
     <batters>
       <batter name="y-osa" order="1" position="1">
         <batting raw="1-1G-O" />

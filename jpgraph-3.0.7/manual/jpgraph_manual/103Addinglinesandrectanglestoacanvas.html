@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="102Creatingasimplecanvas.html">
+<LINK REL="Next" HREF="104Usingacanvasscale.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css"><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="102Creatingasimplecanvas.html">前へ</A> <A HREF="104Usingacanvasscale.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="10_3">10.3 キャンバスに線と長方形を追加する</A></H2>
+<P> キャンバスは円や線などの基本的な形状を簡単に表示させることができます。覚えておかなければならないことは、スクリーン座標は絶対値で使用するということと、全ての描画オブジェクトは Graph クラスのプロパティである <A href="../ref/Image.html#_C_IMAGE">Image</A> クラスで発見できるということです。例えば、座標 (0,0) と (100,100) の間に線を引くには、線オブジェクトを追加しなければなりません。<DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">img</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Line</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">100</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">100</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> 以下の例で、Image クラスからアクセス可能ないつかの描画オブジェクトを表示しています。<DIV class="phpscript">
+(File: canvasex02.php) <BR><CODE><FONT color="#000000"> <FONT color="#0000BB">&lt;?php <BR></FONT><FONT color="#FF8000">// $Id: canvasex02.php,v 1.1 2002/08/27 20:08:57 aditus Exp $ <BR></FONT><FONT color="#007700">include </FONT><FONT color="#DD0000">&quot;../jpgraph.php&quot;</FONT><FONT color="#007700">; <BR>include </FONT><FONT color="#DD0000">&quot;../jpgraph_canvas.php&quot;</FONT><FONT
+color="#007700">; <BR> <BR></FONT><FONT color="#FF8000">// 基本キャンバスの設定 <BR></FONT><FONT color="#0000BB">$g </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">CanvasGraph</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">400</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">200</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">'auto'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetMargin</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">5</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">11</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">6</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">11</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetShadow</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetMarginColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;teal&quot;</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// テキストが上書きされてしまうため、テキストを追加する前に  <BR>// プロットエリアとマージンを出力する必要がある<BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">InitFrame</FONT><FONT color="#007700">(); <BR> <BR></FONT><FONT color="#FF8000">// 黒い線を追加する <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">img</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'black'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">img</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Line</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">100</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">100</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// .. 円 (x,y,直径) を追加する <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">img</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Circle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">100</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">100</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">50</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// .. 塗りつぶした円 (x,y,直径) の追加 <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">img</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'red'</FONT><FONT
+color="#007700">); <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">img</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">FilledCircle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">200</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">100</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">50</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// .. 長方形を追加する <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">img</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'black'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">img</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Line</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">10</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">10</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">50</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">50</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// .. 塗りつぶした角の丸い長方形を追加する <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">img</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'green'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">img</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">FilledRoundedRectangle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">300</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">30</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">350</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">80</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">10</FONT><FONT color="#007700">); <BR></FONT><FONT color="#FF8000">// .. 暗いボーダーを使用 <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">img</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'darkgreen'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">img</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">RoundedRectangle</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">300</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">30</FONT><FONT
+color="#007700">,</FONT><FONT color="#0000BB">350</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">80</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">10</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// グラフを出力する <BR></FONT><FONT color="#0000BB">$g</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(); <BR> <BR></FONT><FONT color="#0000BB">?&gt; <BR></FONT> <BR></FONT></CODE></DIV></P>
+<P> Graph クラスの img プロパティを通してこれらのルーチンにアクセスする方法に注目してください。また、座標は絶対値であるということも覚えておいてください。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_canvasex02.html" target="blank"><IMG border="0"
+HEIGHT="200" src="canvasex02.png" WIDTH="400"></A> <BR><B>図 189:</B>キャンバス オブジェクトの例 <A href="exframes/frame_canvasex02.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P></P>
+<HR> <SMALL>
+<P><STRONG> GDでの注意点</STRONG> GD 1.xx を使用する場合、大きな &quot;塗りつぶされた円&quot; は完全には塗りつぶされていないということに気付くかと思います。GD 1.xx には低い解像度の場合に楕円や円を塗りつぶすための基本要素がないので、JpGraphは悪い状況のまま作成したり、擬似的に塗りつぶされた円を作ろうとしたりします。 JpGraphはいくつかの既存の GD ルーチンを使用して描画速度を上げています。しかし、これは完璧な解決ではなく、このような大きな塗りつぶし円の場合は、モアレパターン(moire-patterns)を取得します。GD 2.x にアップグレードすると、それらの既存のメソッドを十分に利用することができ、塗りつぶし処理も完璧に行うことができるようになります。</P>
+</SMALL>
+<HR>
+<P> 他の描画オブジェクトについてはクラス リファレンスを参照してください。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="102Creatingasimplecanvas.html">前へ</A> <A HREF="104Usingacanvasscale.html">次へ</A>
+</BODY>
+</HTML>

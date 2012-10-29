@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="1241Samplestable.html">
+<LINK REL="Next" HREF="1251Featuresmatrix.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="1242Samplestable.html">前へ</A> <A HREF="1251Featuresmatrix.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="12_2_5">5 マトリックス・グラフ</A></H3>
+<P>このモジュールはエンタープライズ版のライブラリにのみ含まれています。</P>
+<P> マ トリックス・グラフは四角形のマトリックスのコンテンツを視覚化するために使います。マトリックスの各セルの入力値はそれぞれの色でマッピングされ、入力 するマトリックスのサイズに適合した四角形のプロットに表示されます。入力用マトリックスに対応する各モジュールのサイズはカスタマイズできます。マ トリックスの構成要素であるモジュールには円形と四角形の2種類あります。</P>
+<P> 円形のモジュールで高品質のマトリックスにするためには、ユーザ設定のオプショナルのスーパー・サンプリングを活用して色のついた円の強みを生かしたアンチ・エイリアス効果を達成します。  </P>
+<P>各入力値に対する色の割当ては選択したカラー・マップによってコントロールされます。ライブラリはまずマトリックス上で最小値と最大値を確立し、最小値はカラーマップ上、一番下の色、最大値は一番上の色に合わせます。その間に存在するすべての値はリニア補間によって、一定間隔でその値に応じた色が割り当てられます。カラー・マップは、事前に設定されたものと、ユーザが自由に設定できるものがいくつか装備されています。  </P>
+<P>凡例（追加するかどうかは選択可能）は対応しているプロットの色の範囲を表示しています。</P>
+<P><DIV class="note"><B>Tips:</B>ライブラリはメッシュ補間をサポートしています。メッシュ補間そのものは新たなデータを生成するものではありませんが、マトリックス上の元の入力値の間に「仮の」補間値を作成してスムーズなプロットを作成するのに役立ちます。これはMATRAB&trade;関数の2次元データ補間に使われるinterp2に似ています。</DIV></P>
+<P> マトリックス・グラフの全体的な構造と性能は、風配図などライブラリの他のグラフと 同様です。グラフ・エリアには複数のプロット、タイトル、フッタ、テキスト、アイコン、背景画像等を追加することができます。図5は中程度に複雑な ２つのマトリックス・プロットをマトリックス・グラフ・エリアに追加した例です。背景画像やアイコン（左上のロゴ）、グラフ・エリアのトリミング、フリー・ポジショニングによるテキスト配置などの機能を使っています。ここではプロット上にアルファ・ブレンディングも若干取り入れ、背景に輝きが少し出るようにしました。これら２つのプロットは同じサンプル・データによるものですが、異なるカラー・マップを使っています。</P>
+<P><DIV class="example" style="margin-left: 2em;">
+<A href="example_src/frame_matrix_introex.html" target="_blank"><img src="matrix_introex.png" alt="" /></A><BR>
+<B>図5</B> マトリックス・プロットの性能を一部反映した中程度に複雑なグラフ<A href="example_src/frame_matrix_introex.html" target="_blank">[ソース]</A>
+</DIV></P>
+
+<P>ライブラリには、プロットに使用する色を自在に調整してビジュアル的にフォーマットする広範囲の機能を装備しています。カラー・マップは、ビルトイン・タイプとプロットのコントラスト調整（スケール・レンジの調整）などマニュアル指定ができるタイプがあります。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="1242Samplestable.html">前へ</A> <a href="1251Featuresmatrix.html">次へ</a>
+</BODY>
+</HTML>

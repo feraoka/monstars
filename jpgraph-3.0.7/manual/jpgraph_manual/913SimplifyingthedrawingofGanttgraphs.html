@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="9126Adjustingthemarginswithautosizing.html">
+<LINK REL="Next" HREF="914AddingCSIMClientsideImageMapstoGanttcharts.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="9126Adjustingthemarginswithautosizing.html">前へ</A> <A HREF="914AddingCSIMClientsideImageMapstoGanttcharts.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_13">9.13 ガント チャート作成の簡略化</A></H2>
+<P> これまでの例で示されるように、ガント チャートを構成するものの多くは同じような繰り返しのタスクから成り立っています。つまり、個々のアクティビティ バーを作成し、グラフへそれらを加えるという処理です。</P>
+<P> この基本的な作動法が理解できたとき、あるヘルパー関数に感謝するはずです。 <A href="../ref/GanttGraph.html#_GANTTGRAPH_CREATESIMPLE">GanttGraph::CreateSimple()</A>.この関数は、ガントチャートとこのチャートを構成するデータを格納する配列を必要とします。この方法を使用すると、グラフ作成の簡略化のためにいくつかの調整は省かれます。この方法は、魔法のようなものでもなんでもなく、ただアクティビティに対するデータ（スタートや、終了日、タイトル、経過、制限など）を得て、アクティビティを組み立て、それらをグラフへと追加するだけです。</P>
+<P> ここで作成するアクティビティは、次のようなフィールドをもったデータ配列で指定します。</P>
+<UL>
+<LI> アクティビティの格納される配列のキー番号</LI>
+<LI> アクティビティタイプ　　外見を調整する。これは以下からひとつ選択する。
+<OL>
+<LI> ACTYPE_NORMAL　　標準的なアクティビティバー</LI>
+<LI> ACTYPE_GROUP　　グループ化されたバー</LI>
+<LI> ACTYPE_MILESTONE　　マイルストーン</LI>
+<LI></LI>
+</OL>
+<P></P>
+</LI>
+<LI> タイトル文字列</LI>
+<LI> スタート日</LI>
+<LI> 終了日（マイルストーンに対するものではない）</LI>
+<LI> 見出し</LI>
+</UL>
+<P></P>
+<P> 例えば、グループ化された2つのアクティビティとマイルストーンからなるガントチャートを作成するためには、次のようなコードを使用する必要があります。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $data </FONT><FONT color="#007700">= array( <BR> array(</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">ACTYPE_GROUP</FONT><FONT color="#007700">,    </FONT><FONT
+color="#DD0000">&quot;Phase 1&quot;</FONT><FONT color="#007700">,        </FONT><FONT
+color="#DD0000">&quot;2001-10-26&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;2001-11-23&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;&quot;</FONT><FONT color="#007700">), <BR>  array(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">ACTYPE_NORMAL</FONT><FONT color="#007700">,   </FONT><FONT
+color="#DD0000">&quot;  Label 2&quot;</FONT><FONT color="#007700">,      </FONT><FONT
+color="#DD0000">&quot;2001-10-26&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;2001-11-13&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;[KJ]&quot;</FONT><FONT color="#007700">), <BR>  array(</FONT><FONT color="#0000BB">2</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">ACTYPE_NORMAL</FONT><FONT color="#007700">,   </FONT><FONT
+color="#DD0000">&quot;  Label 3&quot;</FONT><FONT color="#007700">,      </FONT><FONT
+color="#DD0000">&quot;2001-11-20&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;2001-11-22&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;[EP]&quot;</FONT><FONT color="#007700">), <BR>  array(</FONT><FONT color="#0000BB">3</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">ACTYPE_MILESTONE</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">&quot;  Phase 1 Done&quot;</FONT><FONT color="#007700">, </FONT><FONT
+color="#DD0000">&quot;2001-11-23&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;M2&quot;</FONT><FONT color="#007700">) ); <BR> <BR></FONT><FONT color="#FF8000">// 基本的なグラフを作成する<BR></FONT><FONT color="#0000BB">$graph </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">GanttGraph</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;Gantt Graph using CreateSimple()&quot;</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// スケールを設定する<BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">ShowHeaders</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">GANTT_HYEAR </FONT><FONT color="#007700">| </FONT><FONT color="#0000BB">GANTT_HMONTH </FONT><FONT color="#007700">| </FONT><FONT color="#0000BB">GANTT_HDAY </FONT><FONT color="#007700">| </FONT><FONT color="#0000BB">GANTT_HWEEK</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">week</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetStyle</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">WEEKSTYLE_FIRSTDAY</FONT><FONT
+color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// 特別なアクティビティを加える<BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">CreateSimple</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#FF8000">// グラフを出力する <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> この結果は、以下のようになります。<DIV class="example">
+<BR> <A href="exframes/frame_ganttsimpleex1.html" target="blank"><IMG border="0"
+HEIGHT="231" src="ganttsimpleex1.png" WIDTH="523"></A> <BR><B>図 170:</B> CreateSimple()メソッドによって簡略化した方法を使用する <A href="exframes/frame_ganttsimpleex1.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> <A href="../ref/GanttGraph.html#_GANTTGRAPH_SETSIMPLEFONT">GanttGraph::SetSimpleFont() </A>メソッドや <A
+href="../ref/GanttGraph.html#_GANTTGRAPH_SETSIMPLESTYLE">GanttGraph::SetSimpleStyle()</A>メソッドを用いて、簡単なガントチャートの外観を（すこしだけ）修正することもできます。しかし、簡単にグラフを構築するこの方法の目的は、ほかでもない作成の簡略化であるということを思い出して下さい。もしかなり高度な調整が必要であるようならば、通常の方法ですべてのアクティビティを構築する必要があります。</P>
+<P> また、GanttGraph::CreateSimple()に付加的なデータ配列を与えることで、制限やそれぞれのバーに対する進捗状況を指定することもできます。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="9126Adjustingthemarginswithautosizing.html">前へ</A> <A HREF="914AddingCSIMClientsideImageMapstoGanttcharts.html">次へ</A>
+</BODY>
+</HTML>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="82Pieplots.html">
+<LINK REL="Next" HREF="822Creating3Dpieplots.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="82Pieplots.html">前へ</A> <A HREF="822Creating3Dpieplots.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="8_2_1">8.2.1 円プロットにガイド ラインを追加する</A></H3>
+<P> とても細かい円プロットではスペースが足りないので、各スライスの横にラベルを表示することができません。 そのような場合、ラベルにガイド ラインを使用することができます。 この機能を使用すると、円プロットから離れて配置されたラベルにスライスの中心からガイドラインが描画されます。</P>
+<P> これを使用するには、 <I>PiePlot::SetGuideLines()</I> メソッドを使用します。<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB">$pieplot</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetGuideLines</FONT><FONT color="#007700">();</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 以下はこの機能を使用した例です。<DIV class="example">
+<BR> <A href="exframes/frame_pielabelsex1.html" target="blank"><IMG border="0"
+HEIGHT="350" src="pielabelsex1.png" WIDTH="300"></A> <BR><B>図 124：</B> 円プロットにガイド ラインを使用する <A href="exframes/frame_pielabelsex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> 上の例に表示されているように、Excelのような他のプログラムによって生成されたガイド ラインとよく似たものを作成できます。上記の改良に加えて、読みやすくするためにラベルを縦に並べるように指定することもできます。 これは、SetGuideLines() の2 つ目のパラメーターを <I>'false'</I> に指定することで可能です。<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT
+color="#0000BB">$pieplot</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetGuideLines</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">true</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">false</FONT><FONT
+color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+</P>
+<P> 一つ目の引数はガイド ラインの表示・非表示を指定します。 上の例と同じグラフを用いてこの例を表示します。<DIV class="example">
+<BR> <A href="exframes/frame_pielabelsex2.html" target="blank"><IMG border="0"
+HEIGHT="350" src="pielabelsex2.png" WIDTH="300"></A> <BR><B>図 125：</B> 円プロットにガイド ラインを使用し、ラベルを縦に並べる<A href="exframes/frame_pielabelsex2.html" target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P> ラベル間の縦の幅を設定することもできます。 デフォルトでは、ラベルの間の幅はおおよそラベル フォントの高さの40 %です。 <I>PiePlot::SetGuideLinesAdjust()</I> を使用することによって、ラベルの下部と次のラベルの下部との間の幅の値を指定することもできます。 '1.0' を指定することは、ラベルの間にスペースを空けないことを意味しています。 デフォルト値は1.4 です。</P>
+<P> この値を増減させることで、よりコンパクトにラベルを配置することができます。 下記の図は上の例とを用いて'1.1' に幅を減少したもので、さらにコンパクトになったラベルを表示しています。<DIV class="example">
+<BR> <A href="exframes/frame_pielabelsex4.html" target="blank"><IMG border="0"
+HEIGHT="350" src="pielabelsex4.png" WIDTH="300"></A> <BR><B>図 126：</B> ラベル間の縦幅を調整する <A href="exframes/frame_pielabelsex4.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P><B> 注意:</B>ガイド ラインは2D の円プロットでのみ使用できます。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="82Pieplots.html">前へ</A> <A HREF="822Creating3Dpieplots.html">次へ</A>
+</BODY>
+</HTML>

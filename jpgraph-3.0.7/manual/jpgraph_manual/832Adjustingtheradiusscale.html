@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="831Overview.html">
+<LINK REL="Next" HREF="833Adjustingthegridlines.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="831Overview.html">前へ</A> <A HREF="833Adjustingthegridlines.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="8_3_2">8.3.2 半径スケールを調整する</A></H3>
+<P> 半径軸は、リニアあるいは対数スケールで表示されます。スケールの指定は、<A href="../ref/PolarGraph.html#_POLARGRAPH_SETSCALE">PolarGraph::SetScale()</A> メソッドを使用します。以下のサンプルでは、リニア スケールと対数 スケールでプロットを行っています。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_polarex3.html" target="blank"><IMG border="0"
+HEIGHT="300" src="polarex3.png" WIDTH="300"></A> <BR><B>図 141：</B> 対数スケールを使用した場合 <A href="exframes/frame_polarex3.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_polarex3-lin.html" target="blank"><IMG border="0"
+HEIGHT="300" src="polarex3-lin.png" WIDTH="300"></A> <BR><B>図 142：</B> リニア スケールを使用した場合 <A href="exframes/frame_polarex3-lin.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> スケールの最大値が異なっている事に注意してください。</P>
+<P> デフォルトでは、データに応じてスケールが自動で調整されます。また、SetScale() メソッドに引数を渡すことで、手動でスケールを指定することもできます。スケールの指定で XY 形式のグラフと異なる点は、極プロットでは最大値だけを指定する事です。極プロットの場合は、最小値は必ず 0 になります。そして、対数スケールの場合は、10 の対数値 (1、0.1、0.001 など) になります。</P>
+<P> プロットはプロット エリアに表示される際にクリッピングされるため、最大値よりも小さなスケールを指定した場合はプロット エリアの外部に表示されます。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="831Overview.html">前へ</A> <A HREF="833Adjustingthegridlines.html">次へ</A>
+</BODY>
+</HTML>

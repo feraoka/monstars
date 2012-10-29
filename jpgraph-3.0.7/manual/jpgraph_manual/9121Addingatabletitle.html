@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="912MoregeneralGanttformatting.html">
+<LINK REL="Next" HREF="9122Modifyingthedividerlines.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="912MoregeneralGanttformatting.html">前へ</A> <A HREF="9122Modifyingthedividerlines.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="9_12_1">9.12.1 テーブル タイトルを追加する</A></H3>
+<P> ガントテーブルの左上の白い（デフォルトでは）部分には、タイトルをつけることができます。これは、ガントスケールの 'tableTitle' プロパティで設定します。以下に示すように、とても簡単です。<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">tableTitle</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;(Rev: 1.22)&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">tableTitle</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_FONT1</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FS_BOLD</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetTableTitleBackground</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;silver&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">tableTitle</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Show</FONT><FONT color="#007700">();</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> また、このサンプルコードは、デフォルトの白い背景を銀色に変更しています。先の例にこれらのコードを加えると、次のような結果が得られます。<DIV class="example">
+<BR> <A href="exframes/frame_ganttex16.html" target="blank"><IMG border="0"
+HEIGHT="191" src="ganttex16.png" WIDTH="439"></A> <BR><B>図 166:</B>テーブル タイトルを追加する<A href="exframes/frame_ganttex16.html"
+target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P> 以上の例から、左のコラムの幅（すべてのタイトルを含む）が、テーブルタイトルに合わせて自動的に調節されているということに気付かれるでしょう。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="912MoregeneralGanttformatting.html">前へ</A> <A HREF="9122Modifyingthedividerlines.html">次へ</A>
+</BODY>
+</HTML>

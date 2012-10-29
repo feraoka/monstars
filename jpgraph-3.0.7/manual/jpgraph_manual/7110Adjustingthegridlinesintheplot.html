@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="719Moreonscales.html">
+<LINK REL="Next" HREF="7111Usingfilledgridlines.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="719Moreonscales.html">前へ</A> <A HREF="7111Usingfilledgridlines.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="7_1_10">7.1.10 プロットでグリッド (目盛り)ライン を調整する</A></H3>
+<P> デフォルトでは、Y 軸にのみグリッド線が適用されています。例、ラベル付きのチック。当然、これの変更は可能です。 グリッド線は、X、Y、Y2 軸のいずれの軸にも使用できます。また、グリッドに小さなチェック マークをつけることも可能です。例、ラベルなしのチック。上記のグラフにこれを適用する方法を見てみましょう。 </P>
+<P> グリッドは、グラフの xgrid あるいは ygrid コンポーネントを通じて指定できます。Y グラフの補助グリッド線を表示する場合、以下の通りに記述します。<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">ygrid</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">Show</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">true</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">true</FONT><FONT color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 1 番目の引数で、グリッドを表示するかどうかを指定します。2 番目の引数で、補助グリッド線を表示するかどうかを指定します。</P>
+<P> Y2 軸にもグリッド線を表示する場合は、以下の通りに記述します。<DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">y2grid</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Show</FONT><FONT
+color="#007700">(</FONT><FONT color="#0000BB">true</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">true</FONT><FONT color="#007700">)</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P><STRONG> 注意:</STRONG>結果のイメージがビューワーでは読みづらくなるので、一般的には、Y 軸と Y2 軸の両方にグリッドを表示するのは良いアイデアではありません。</P>
+<P> また、X 軸のグリッドを表示するには以下の通りに記述します。<DIV class="phpscript">
+<CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">xgrid</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Show</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">true</FONT><FONT color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P></P>
+<P> 上記の場合は、補助グリッド線を表示しません。</P>
+<P> これらをすべて使用することで、X 軸と Y 軸のグリッド線を表示できます。<DIV class="example">
+<BR> <A href="exframes/frame_example8.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example8.png" WIDTH="350"></A> <BR><B>図 20:</B>X 軸のグリッド線、Y 軸のグリッド線と補助グリッド線を表示する <A href="exframes/frame_example8.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="note"><B>注意:</B> Y 軸の最初の値が X 軸に近すぎると感じたら、<A href="../ref/Axis.html#_AXIS_SETLABELMARGIN">SetLabelMargin()</A> メソッドを使用して余白を増やすか、<A href="../ref/Axis.html#_AXIS_HIDEFIRSTTICKLABEL">HideFirstTickLabel()</A> メソッドを使用して最初のラベルを非表示にしてください。</DIV></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="719Moreonscales.html">前へ</A> <A HREF="7111Usingfilledgridlines.html">次へ</A>
+</BODY>
+</HTML>

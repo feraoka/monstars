@@ -1,0 +1,1031 @@
+<?xml version="1.0" encoding="utf8" ?>
+<monstars>
+  <game comment="&lt;br&gt;&lt;br&gt;&lt;br&gt;投手成績&lt;br&gt;木村 (1-3回)&lt;br&gt;伊藤 (4-6回)&lt;br&gt;&lt;br&gt;&lt;br&gt; ４回水谷選手ホームでタッチアウト&lt;br&gt; ６回鈴木選手ホームゲッツーくずれ&lt;br&gt;&lt;br&gt;" date="09/04/11" game="オーシャンリーグ" loc="天王洲A" result="1" season="2009" team="ピーナッツ" time="13:00">
+    <batters>
+      <batter name="sakurai" order="1" position="3">
+        <batting raw="1-9G-H1--1" />
+        <batting raw="3-B---1" />
+        <batting raw="4-8G-H1-1" />
+        <batting raw="6-B*" />
+      </batter>
+      <batter name="suzuki" order="2" position="5">
+        <batting raw="1-K-O" />
+        <batting raw="3-5G-E--1" />
+        <batting raw="5-9L-H1--1*" />
+        <batting raw="6-1G*" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-6F-O" />
+        <batting raw="3-3F-O" />
+        <batting raw="5-9F-O" />
+        <batting raw="6-8G-H1-2-1" />
+      </batter>
+      <batter name="y-osa" order="4" position="7">
+        <batting raw="1-5G-O" />
+        <batting raw="3-1G-O" />
+        <batting raw="5-9L-H2-1-1" />
+        <batting raw="6-9G-H1-1" />
+      </batter>
+      <batter name="ekimura" order="5" position="1">
+        <batting raw="2-B---1*" />
+        <batting raw="3-B" />
+        <batting raw="5-5G-O" />
+        <batting raw="6-B" />
+      </batter>
+      <batter name="nakajima" order="6" position="4">
+        <batting raw="2-B---1*" />
+        <batting raw="3-K-O" />
+        <batting raw="5-B" />
+        <batting raw="6-6F-O" />
+      </batter>
+      <batter name="itoh" order="7" position="6">
+        <batting raw="2-7O-H2-2-1*" />
+        <batting raw="4-4F-E--2*" />
+        <batting raw="5-9F-O" />
+      </batter>
+      <batter name="mizutani" order="8" position="9">
+        <batting raw="2-9G-H1-1-1" />
+        <batting raw="4-B---1" />
+        <batting raw="6-4G-E--1" />
+      </batter>
+      <batter name="machiyama" order="9" position="2">
+        <batting raw="2-5F-O" />
+        <batting raw="4-K-O" />
+        <batting raw="6-3G-O" />
+      </batter>
+      <batter name="takemoto" order="10" position="@">
+        <batting raw="2-K-O" />
+        <batting raw="4-4F-O" />
+        <batting raw="6-B*" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="3" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="1" fieldFirst="1" inning="4" />
+      <score batFirst="1" fieldFirst="0" inning="5" />
+      <score batFirst="3" fieldFirst="2" inning="6" />
+      <score batFirst="8" fieldFirst="3" inning="total" />
+      <team batFirst="MonStars" fieldFirst="ピーナッツ" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;投手成績&lt;br&gt;木村 (完投)&lt;br&gt;&lt;br&gt;&lt;br&gt; 3回 林選手、木村選手とランナー入れ替わり&lt;br&gt; 4回 竹本選手振り逃げ&lt;br&gt; 4回 林選手、野手と交錯&lt;br&gt; 7回 待山選手暴走で憤死&lt;br&gt;&lt;br&gt;" date="09/04/18" game="オーシャンリーグ" loc="六郷５面" result="0" season="2009" team="レコーズ" time="12:00">
+    <batters>
+      <batter name="mizutani" order="1" position="7">
+        <batting raw="1-1G-O" />
+        <batting raw="3-8G-H1-1" />
+        <batting raw="4-1G-E" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="machiyama" order="2" position="2">
+        <batting raw="1-8F-O" />
+        <batting raw="3-7G-H1-1" />
+        <batting raw="4-6G-H1-1" />
+        <batting raw="7-7L-H3" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-6F-O" />
+        <batting raw="3-3F-O" />
+        <batting raw="4-4G-O" />
+        <batting raw="7-B---1" />
+      </batter>
+      <batter name="sakurai" order="4" position="6">
+        <batting raw="2-5G-O" />
+        <batting raw="3-6F-O" />
+        <batting raw="5-6G-O" />
+        <batting raw="7-7F-O" />
+      </batter>
+      <batter name="suzuki" order="5" position="5">
+        <batting raw="2-5G-O" />
+        <batting raw="4-B---1*" />
+        <batting raw="5-9F-O" />
+        <batting raw="7-D" />
+      </batter>
+      <batter name="takemoto" order="6" position="3">
+        <batting raw="2-1G-O" />
+        <batting raw="4-K---1*" />
+        <batting raw="5-B" />
+        <batting raw="7-B" />
+      </batter>
+      <batter name="y-osa" order="7" position="4">
+        <batting raw="3-B*" />
+        <batting raw="4-K-O" />
+        <batting raw="5-1G-O" />
+        <batting raw="7-K-O" />
+      </batter>
+      <batter name="ekimura" order="8" position="1">
+        <batting raw="3-5G-H1" />
+        <batting raw="4-1F-O" />
+        <batting raw="6-1G-O" />
+      </batter>
+      <batter name="hiro" order="9" position="9">
+        <batting raw="3-3G*" />
+        <batting raw="4-B" />
+        <batting raw="6-9G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="1" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="2" fieldFirst="2" inning="3" />
+      <score batFirst="0" fieldFirst="2" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="1" fieldFirst="0" inning="7" />
+      <score batFirst="4" fieldFirst="4" inning="total" />
+      <team batFirst="レコーズ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;投手成績&lt;br&gt;1〜3回 伊藤&lt;br&gt;4〜5回 木村&lt;br&gt;&lt;br&gt;&lt;br&gt; １回 大海選手パスボールでホームイン&lt;br&gt; １回 山下選手、３塁親類中にショートの送球が当り、テイク１ベースでホー&lt;br&gt; ムイン&lt;br&gt; ２回 大海選手、待山選手の打席パスボールでホームイン&lt;br&gt; ２回 待山選手、竹本選手の打席パスボールでホームイン&lt;br&gt; ３回 山下選手のゴロの間にサイトウ選手ホームイン&lt;br&gt; ４回 はぜ選手、セカンド盗塁アウト&lt;br&gt;&lt;br&gt;" date="09/05/16" game="オーシャンリーグ" loc="ガス橋４号面" result="1" season="2009" team="スイングアウト" time="10:00">
+    <batters>
+      <batter name="suzuki" order="1" position="5">
+        <batting raw="1-5G-H1*" />
+        <batting raw="2-B*" />
+        <batting raw="3-9G-H1" />
+      </batter>
+      <batter name="ekimura" order="2" position="7">
+        <batting raw="1-7G-H1*" />
+        <batting raw="2-1F-O" />
+        <batting raw="3-6F-O" />
+      </batter>
+      <batter name="y-osa" order="3" position="4">
+        <batting raw="1-7G-H1-1*" />
+        <batting raw="2-8G-H1--1*" />
+        <batting raw="3-5G--1" />
+      </batter>
+      <batter name="oomi" order="4" position="8">
+        <batting raw="1-8G-H1-1*" />
+        <batting raw="2-7G-H2-2-1*" />
+        <batting raw="3-1F-O" />
+      </batter>
+      <batter name="sakurai" order="5" position="6">
+        <batting raw="1-6G-E*" />
+        <batting raw="2-K-O" />
+        <batting raw="4-K-O" />
+      </batter>
+      <batter name="machiyama" order="6" position="2">
+        <batting raw="1-7F-O" />
+        <batting raw="2-B*" />
+        <batting raw="4-8F-O" />
+      </batter>
+      <batter name="hazedon" order="7" position="9">
+        <batting raw="1-9G-H2-1*" />
+        <batting raw="2-9G-H1" />
+        <batting raw="4-B" />
+      </batter>
+      <batter name="itoh" order="8" position="1">
+        <batting raw="1-7-H2-1" />
+        <batting raw="2-1G-E" />
+      </batter>
+      <batter name="takemoto" order="9" position="3">
+        <batting raw="1-7-H1" />
+        <batting raw="2-B" />
+      </batter>
+      <batter name="hiro" order="10" position="@">
+        <batting raw="1-3F-O" />
+        <batting raw="2-K-O" />
+      </batter>
+      <batter name="saito" order="11" position="@">
+        <batting raw="1-1F-O" />
+        <batting raw="3-7G-H1*" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="0" fieldFirst="6" inning="1" />
+      <score batFirst="2" fieldFirst="4" inning="2" />
+      <score batFirst="0" fieldFirst="1" inning="3" />
+      <score batFirst="1" fieldFirst="0" inning="4" />
+      <score batFirst="4" fieldFirst="x" inning="5" />
+      <score batFirst="7" fieldFirst="11" inning="total" />
+      <team batFirst="スイングアウト" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt; 勝投手：木村 7回 97球 被安打3 三振5 四死球4 暴投1&lt;br&gt; 負投手：猪狩 7回 106球 被安打7 三振5 四死球5 自責点1&lt;br&gt;&lt;br&gt;@shiokawa                 3-6G-E--1     5-9L-H1&lt;br&gt;&lt;br&gt; 4回山下さん時サードとダブルプレー&lt;br&gt; 5回水谷選手送りバント&lt;br&gt; 6回鈴木さんパスボールで2塁へ進塁。セカンドへ暴投で3塁進塁&lt;br&gt; 6回待山さん時サードライナーで、サードランナーとダブルプレー&lt;br&gt;&lt;br&gt;" date="09/06/24" game="オーシャンリーグ" loc="多摩川六郷橋緑地5号面" result="1" season="2009" team="アプリコッツ" time="10:00">
+    <batters>
+      <batter name="suzuki" order="1" position="5">
+        <batting raw="1-B---1" />
+        <batting raw="3-5F-O" />
+        <batting raw="6-7L-H1" />
+      </batter>
+      <batter name="saito" order="2" position="7">
+        <batting raw="1-K-O" />
+        <batting raw="3-8F-O" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="machiyama" order="3" position="2">
+        <batting raw="1-5G-O" />
+        <batting raw="4-B" />
+        <batting raw="6-5L-O" />
+      </batter>
+      <batter name="oomi" order="4" position="8">
+        <batting raw="1-4G-O" />
+        <batting raw="4-9L-H1" />
+        <batting raw="7-9F-O" />
+      </batter>
+      <batter name="y-osa" order="5" position="4">
+        <batting raw="2-B--1" />
+        <batting raw="4-5L-O" />
+        <batting raw="7-7L-H1--1*" />
+      </batter>
+      <batter name="etoh" order="6" position="9">
+        <batting raw="2-5F-O" />
+        <batting raw="4-3G-O" />
+        <batting raw="7-9F-O" />
+      </batter>
+      <batter name="takemoto" order="7" position="3">
+        <batting raw="2-K-O" />
+        <batting raw="5-B" />
+        <batting raw="7-9L-H1" />
+      </batter>
+      <batter name="mizutani" order="8" position="6">
+        <batting raw="2-K-O" />
+        <batting raw="5-5G-G" />
+        <batting raw="7-8F-H1-1" />
+      </batter>
+      <batter name="hiro" order="9" position="@">
+        <batting raw="3-K-O" />
+        <batting raw="5-B" />
+        <batting raw="7-1G-O" />
+      </batter>
+      <batter name="ekimura" order="10" position="1">
+        <batting raw="3-5G-H1" />
+        <batting raw="5-8F-O" />
+      </batter>
+      <batter name="kurachi" order="11" position="@">
+        <batting raw="3-B" />
+        <batting raw="5-1F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="1" fieldFirst="0" inning="7" />
+      <score batFirst="1" fieldFirst="0" inning="total" />
+      <team batFirst="MonStars" fieldFirst="アプリコッツ" />
+    </scoreboard>
+  </game>
+  <game comment=" 【天気】 曇り&lt;br&gt; 【球審】 伏見審判員&lt;br&gt;&lt;br&gt;&lt;br&gt; 勝投手：木村 5回 69球 被安打2 三振5 四死球2&lt;br&gt; 負投手：大川 6回 131球 被安打9 三振2 四死球7&lt;br&gt; セーブ投手：水谷 1回 27球 被安打2 三振1 四死球4&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; 1回山下さん時、水谷さんホームでアウト(入れ替わり)&lt;br&gt; 1回木村さん時、竹本さんホームでアウト&lt;br&gt; 3回水谷さん時、ライトのトンネル、ライトーセカンド間中継エラーでホームイン&lt;br&gt; 4回鈴木さん時、林さんセカンドでアウト(入れ替わり)&lt;br&gt;&lt;br&gt;" date="09/07/11" game="オーシャンリーグ" loc="多摩川六郷橋緑地5号面" result="1" season="2009" team="フェアスピリッツ" time="10:10">
+    <batters>
+      <batter name="mizutani" order="1" position="6">
+        <batting raw="1-B---1" />
+        <batting raw="3-9G-H1-1*" />
+        <batting raw="4-K-O" />
+        <batting raw="6-9L-H2-2" />
+      </batter>
+      <batter name="suzuki" order="2" position="5">
+        <batting raw="1-6F-O" />
+        <batting raw="3-6G-E--1*" />
+        <batting raw="4-6G-O" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-6F-H1--1*" />
+        <batting raw="3-8L-H2*" />
+        <batting raw="4-9F-O" />
+      </batter>
+      <batter name="y-osa" order="4" position="4">
+        <batting raw="1-1G-O*" />
+        <batting raw="3-2F-E*" />
+        <batting raw="5-4F-O" />
+      </batter>
+      <batter name="takemoto" order="5" position="@">
+        <batting raw="1-B" />
+        <batting raw="3-4G-E-2" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="ekimura" order="6" position="1">
+        <batting raw="1-7L-H2-2" />
+        <batting raw="3-K-O" />
+        <batting raw="5-5F-O" />
+      </batter>
+      <batter name="takasu" order="7" position="@">
+        <batting raw="2-B*" />
+        <batting raw="3-7G-H1-1" />
+        <batting raw="5-1F-O" />
+      </batter>
+      <batter name="etoh" order="8" position="9">
+        <batting raw="2-9O-H3-1" />
+        <batting raw="3-B" />
+        <batting raw="6-1F-O" />
+      </batter>
+      <batter name="saito" order="9" position="7">
+        <batting raw="2-5F-O" />
+        <batting raw="3-1F-O" />
+        <batting raw="6-7F-O" />
+      </batter>
+      <batter name="machiyama" order="10" position="2">
+        <batting raw="2-3F-O" />
+        <batting raw="3-1F-O" />
+        <batting raw="6-7G-H1*" />
+      </batter>
+      <batter name="hiro" order="11" position="@">
+        <batting raw="2-9F-O" />
+        <batting raw="4-B" />
+        <batting raw="6-B--1*" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="2" fieldFirst="0" inning="1" />
+      <score batFirst="1" fieldFirst="1" inning="2" />
+      <score batFirst="4" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="2" fieldFirst="3" inning="6" />
+      <score batFirst="9" fieldFirst="4" inning="total" />
+      <team batFirst="MonStars" fieldFirst="フェアスピリッツ" />
+    </scoreboard>
+  </game>
+  <game comment=" 【天気】 曇り&lt;br&gt; 【球審】 橋本&lt;br&gt;&lt;br&gt;&lt;br&gt; 勝投手：木村 6回 91球 被安打2 三振8 四死球3&lt;br&gt; 負投手：山本 6回 100球 被安打4 三振3 四死球2&lt;br&gt;&lt;br&gt;&lt;br&gt; 1回待山さん時、大海さんディレイスチールで相手牽制暴投で伊藤さん帰還&lt;br&gt; 3回木村さん時、レフトへヒット時、2塁でアウト&lt;br&gt; 5回山下さん時、サードゴロ時、竹本さん2塁でアウト(入れ替わり)&lt;br&gt; 5回木村さん時、サードゴロ時、山下さん3塁でアウト(入れ替わり)&lt;br&gt;&lt;br&gt;" date="09/07/18" game="オーシャンリーグ" loc="大井埠頭中央公園" result="1" season="2009" team="オーシャンズ" time="11:00">
+    <batters>
+      <batter name="mizutani" order="1" position="6">
+        <batting raw="1-K-O" />
+        <batting raw="4-8L-H1--1" />
+      </batter>
+      <batter name="suzuki" order="2" position="9">
+        <batting raw="1-6G-O" />
+        <batting raw="4-K-O" />
+      </batter>
+      <batter name="itoh" order="3" position="5">
+        <batting raw="1-6G-H1--1*" />
+        <batting raw="4-5G-O" />
+      </batter>
+      <batter name="oomi" order="4" position="8">
+        <batting raw="1-4G-E--1" />
+        <batting raw="4-4F-O" />
+      </batter>
+      <batter name="machiyama" order="5" position="@">
+        <batting raw="1-1F-O" />
+        <batting raw="5-5L-O" />
+      </batter>
+      <batter name="takemoto" order="6" position="3">
+        <batting raw="2-9F-O" />
+        <batting raw="5-8G-H1" />
+      </batter>
+      <batter name="y-osa" order="7" position="@">
+        <batting raw="2-1G-O" />
+        <batting raw="5-6G-O--1" />
+      </batter>
+      <batter name="saito" order="8" position="7">
+        <batting raw="2-8F-O" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="ekimura" order="9" position="1">
+        <batting raw="3-7L-H1" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="takasu" order="10" position="4">
+        <batting raw="3-4F-O" />
+        <batting raw="6-2F-O" />
+      </batter>
+      <batter name="kurachi" order="11" position="2">
+        <batting raw="3-B---1" />
+        <batting raw="6-6G-O" />
+      </batter>
+      <batter name="hiro" order="12" position="@">
+        <batting raw="3-K-O" />
+        <batting raw="6-6G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="1" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="1" fieldFirst="0" inning="total" />
+      <team batFirst="MonStars" fieldFirst="オーシャンズ" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt; 勝投手：木村 5回&lt;br&gt; セーブ投手：伊藤 1回&lt;br&gt;&lt;br&gt;9shiokawa            2-4G-O                   5-K-O   6-4F-O&lt;br&gt;@nakagawa            2-9F-H2-1                5-9F-O  6-7G-H1&lt;br&gt;&lt;br&gt; 2回伊藤さん時、中川さん3塁でアウト(入れ替わり)&lt;br&gt;&lt;br&gt;" date="09/08/01" game="オーシャンリーグ" loc="多摩川ガス橋緑地1号面" result="1" season="2009" team="スーパーソニックス" time="10:00">
+    <batters>
+      <batter name="itoh" order="1" position="5">
+        <batting raw="1-B---2*" />
+        <batting raw="2-5G-O" />
+        <batting raw="5-9F-O" />
+        <batting raw="6-6F-O" />
+      </batter>
+      <batter name="saito" order="2" position="7">
+        <batting raw="1-K-O" />
+        <batting raw="3-5F-O" />
+        <batting raw="6-8F-H1--2*" />
+      </batter>
+      <batter name="machiyama" order="3" position="2">
+        <batting raw="1-K-O" />
+        <batting raw="3-9F-O" />
+        <batting raw="6-B---1*" />
+      </batter>
+      <batter name="ekimura" order="4" position="1">
+        <batting raw="1-8G-H1-1*" />
+        <batting raw="3-5G-O" />
+        <batting raw="6-B*" />
+      </batter>
+      <batter name="mizutani" order="5" position="6">
+        <batting raw="1-8G-H1-1-1" />
+        <batting raw="4-1F-O" />
+        <batting raw="6-8O-H2-3*" />
+      </batter>
+      <batter name="takemoto" order="6" position="4">
+        <batting raw="1-5F-O" />
+        <batting raw="4-5F-O" />
+        <batting raw="6-9L-H1--1*" />
+      </batter>
+      <batter name="fujinaga" order="7" position="8">
+        <batting raw="2-D---1*" />
+        <batting raw="4-5G-O" />
+        <batting raw="6-7O-HR-3*" />
+      </batter>
+      <batter name="sakurai" order="8" position="3">
+        <batting raw="2-2F-O" />
+        <batting raw="5-B" />
+        <batting raw="6-5F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="2" fieldFirst="0" inning="1" />
+      <score batFirst="1" fieldFirst="1" inning="2" />
+      <score batFirst="0" fieldFirst="2" inning="3" />
+      <score batFirst="0" fieldFirst="1" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="6" fieldFirst="1" inning="6" />
+      <score batFirst="9" fieldFirst="5" inning="total" />
+      <team batFirst="MonStars" fieldFirst="スーパーソニックス" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt; 勝投手：伊藤 5回&lt;br&gt; セーブ投手：木村 2回&lt;br&gt;&lt;br&gt;@ogasawara                                     6-8G-H1-1*&lt;br&gt;@jinda         2-5G-O             4-K-O&lt;br&gt;@nishikawa                                     6-8G-H1-1&lt;br&gt;@sasaki        2-4G-H1-2          4-5G-O&lt;br&gt;4midorikawa    2-1G-O             4-7G-H1      6-6F-O&lt;br&gt;9shiokawa      2-5G-O             4-8F-O       6-5L-O&lt;br&gt;&lt;br&gt; 3回山下さん時、伊藤さん2塁でアウト(入れ替わり)&lt;br&gt; 3回木村さん時、山下さん2塁でアウト(入れ替わり)&lt;br&gt;&lt;br&gt;" date="09/08/08" game="オーシャンリーグ" loc="多摩川ガス橋緑地4号面" result="1" season="2009" team="ハンターズ" time="8:00">
+    <batters>
+      <batter name="takasu" order="1" position="6">
+        <batting raw="1-8F-H1--1*" />
+        <batting raw="3-B*" />
+        <batting raw="5-6G-O" />
+      </batter>
+      <batter name="saito" order="2" position="2">
+        <batting raw="1-5G-E-1" />
+        <batting raw="3-7F-H1-1-1*" />
+        <batting raw="5-8G-H1-1" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-4G-O" />
+        <batting raw="3-9G-H1-2*" />
+        <batting raw="5-6F-O" />
+      </batter>
+      <batter name="itoh" order="4" position="1">
+        <batting raw="1-4F-O" />
+        <batting raw="3-5G-E" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="y-osa" order="5" position="7">
+        <batting raw="1-5G-O" />
+        <batting raw="3-5G-O" />
+        <batting raw="6-B*" />
+      </batter>
+      <batter name="ekimura" order="6" position="5">
+        <batting raw="2-8F-E*" />
+        <batting raw="3-5G-O" />
+        <batting raw="6-5F-O" />
+      </batter>
+      <batter name="takemoto" order="7" position="@">
+        <batting raw="2-9F-H1--1*" />
+        <batting raw="3-1G-O" />
+      </batter>
+      <batter name="sakurai" order="8" position="3">
+        <batting raw="3-B---1*" />
+        <batting raw="5-B---1*" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="1" fieldFirst="1" inning="1" />
+      <score batFirst="0" fieldFirst="2" inning="2" />
+      <score batFirst="0" fieldFirst="4" inning="3" />
+      <score batFirst="2" fieldFirst="0" inning="4" />
+      <score batFirst="1" fieldFirst="1" inning="5" />
+      <score batFirst="0" fieldFirst="2" inning="6" />
+      <score batFirst="0" fieldFirst="x" inning="7" />
+      <score batFirst="4" fieldFirst="10" inning="total" />
+      <team batFirst="ハンターズ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment=" 【日時】 200922 (土) 10:00-12:00&lt;br&gt; 【場所】 多摩川緑地４号面&lt;br&gt; 【天気】 曇り時々晴れ&lt;br&gt; 【球審】 ?&lt;br&gt;&lt;br&gt;&lt;br&gt; 負投手：木村 4回&lt;br&gt; セーブ投手：伊藤 2/3回&lt;br&gt;&lt;br&gt;&lt;br&gt; 1回伊藤さん時、衛藤さん盗塁アウト&lt;br&gt; 3回藤永さん時、竹本さん2塁でアウト(入れ替わり)&lt;br&gt; 4回山下さん時、ピッチャーゴロで衛藤さんホームアウト&lt;br&gt; 4回齋藤さん時、ショートゴロで山下さんセカンドアウト&lt;br&gt; 5回木村さん時、PBで桜井ホームアウト&lt;br&gt;&lt;br&gt;" date="09/08/22" game="オーシャンリーグ" loc="多摩川緑地４号面" result="-1" season="2009" team="バミューダズ" time="10:00">
+    <batters>
+      <batter name="etoh" order="1" position="7">
+        <batting raw="1-8G-H1" />
+        <batting raw="2-5G-H1*" />
+        <batting raw="4-B---1" />
+        <batting raw="5-7F-O" />
+      </batter>
+      <batter name="itoh" order="2" position="6">
+        <batting raw="1-B---2*" />
+        <batting raw="2-7O-H2-2*" />
+        <batting raw="4-8F-G-1" />
+        <batting raw="5-5F-O" />
+      </batter>
+      <batter name="suzuki" order="3" position="5">
+        <batting raw="1-5G-E*" />
+        <batting raw="2-7L-H1-2" />
+        <batting raw="4-7G-H1--1" />
+      </batter>
+      <batter name="oomi" order="4" position="8">
+        <batting raw="1-9L-H1*" />
+        <batting raw="2-8G-H1" />
+        <batting raw="4-B" />
+      </batter>
+      <batter name="y-osa" order="5" position="@">
+        <batting raw="1-8O-H2" />
+        <batting raw="2-6G-O" />
+        <batting raw="4-1G-O" />
+      </batter>
+      <batter name="saito" order="6" position="2">
+        <batting raw="1-5G-O" />
+        <batting raw="3-7F-O" />
+        <batting raw="4-6G-O" />
+      </batter>
+      <batter name="takemoto" order="7" position="3">
+        <batting raw="1-4G-O" />
+        <batting raw="3-B" />
+        <batting raw="5-B*" />
+      </batter>
+      <batter name="fujinaga" order="8" position="9">
+        <batting raw="2-1F-O" />
+        <batting raw="3-5G-O" />
+        <batting raw="5-5G-H1*" />
+      </batter>
+      <batter name="sakurai" order="9" position="@">
+        <batting raw="2-6G-O" />
+        <batting raw="3-6F-H1--1" />
+        <batting raw="5-9L-H1" />
+      </batter>
+      <batter name="machiyama" order="10" position="4">
+        <batting raw="2-6G-E*" />
+        <batting raw="3-6G-O" />
+        <batting raw="5-8O-H2-2*" />
+      </batter>
+      <batter name="ekimura" order="11" position="1">
+        <batting raw="2-B*" />
+        <batting raw="4-8O-H2--1*" />
+        <batting raw="5-8O-H2-1-1" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="3" fieldFirst="2" inning="1" />
+      <score batFirst="4" fieldFirst="5" inning="2" />
+      <score batFirst="0" fieldFirst="1" inning="3" />
+      <score batFirst="1" fieldFirst="3" inning="4" />
+      <score batFirst="2" fieldFirst="x" inning="5" />
+      <score batFirst="10" fieldFirst="11" inning="total" />
+      <team batFirst="MonStars" fieldFirst="バミューダズ" />
+    </scoreboard>
+  </game>
+  <game comment=" 【日時】 2009/08/29 (土) 10:00-12:00&lt;br&gt; 【場所】 多摩川六郷橋緑地３号面&lt;br&gt; 【天気】 晴れ&lt;br&gt; 【球審】 ?&lt;br&gt;&lt;br&gt;&lt;br&gt; 勝投手：伊藤 5回&lt;br&gt;&lt;br&gt;&lt;br&gt; 2回大海さん時、セカンドで待山さんアウト(入れ替わり)&lt;br&gt; 4回待山さん時、牽制で暴投で3塁に進塁&lt;br&gt; 4回山下さん時、パスボールで待山さんホームイン&lt;br&gt; 4回竹本さん時、伊藤さん2塁盗塁したが、大海さん3塁からの飛び出しでアウト&lt;br&gt; 4回竹本さん時、振り逃げで伊藤さんホームイン&lt;br&gt; 5回中島さん、体調不良の為途中退場&lt;br&gt; 5回伊藤さん時、大海さん飛び出しで、待山さんホームに突っ込むもアウト&lt;br&gt;&lt;br&gt;" date="09/08/29" game="オーシャンリーグ" loc="多摩川六郷橋緑地３号面" result="1" season="2009" team="スクラッチ" time="10:00">
+    <batters>
+      <batter name="machiyama" order="1" position="9">
+        <batting raw="1-B*" />
+        <batting raw="2-D" />
+        <batting raw="4-B*" />
+        <batting raw="5-5G-E-1" />
+      </batter>
+      <batter name="etoh" order="2" position="7">
+        <batting raw="1-9G-H1*" />
+        <batting raw="2-K-O" />
+        <batting raw="4-8G-H1-1*" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-9G-H1-1*" />
+        <batting raw="2-4G-O--1" />
+        <batting raw="4-B" />
+        <batting raw="5-6F-H1-1" />
+      </batter>
+      <batter name="y-osa" order="4" position="4">
+        <batting raw="1-K-O" />
+        <batting raw="2-K-O" />
+        <batting raw="4-8F-G-1" />
+        <batting raw="5-5F-O" />
+      </batter>
+      <batter name="itoh" order="5" position="1">
+        <batting raw="1-B*" />
+        <batting raw="3-1G-E" />
+        <batting raw="4-B*" />
+      </batter>
+      <batter name="takemoto" order="6" position="@">
+        <batting raw="1-B--1" />
+        <batting raw="3-K-O" />
+        <batting raw="4-K-E-1" />
+      </batter>
+      <batter name="takasu" order="7" position="6">
+        <batting raw="1-B--1" />
+        <batting raw="3-D" />
+        <batting raw="4-6G-O" />
+      </batter>
+      <batter name="kurachi" order="8" position="2">
+        <batting raw="1-5G-E-1" />
+        <batting raw="3-K-O" />
+        <batting raw="5-B*" />
+      </batter>
+      <batter name="nakajima" order="9" position="5">
+        <batting raw="1-K-O" />
+        <batting raw="3-6G-O" />
+      </batter>
+      <batter name="sakurai" order="10" position="3">
+        <batting raw="1-1F-O" />
+        <batting raw="4-8L-H1--1*" />
+        <batting raw="5-D*" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="4" fieldFirst="3" inning="1" />
+      <score batFirst="0" fieldFirst="1" inning="2" />
+      <score batFirst="0" fieldFirst="1" inning="3" />
+      <score batFirst="4" fieldFirst="0" inning="4" />
+      <score batFirst="2" fieldFirst="1" inning="5" />
+      <score batFirst="10" fieldFirst="6" inning="total" />
+      <team batFirst="MonStars" fieldFirst="スクラッチ" />
+    </scoreboard>
+  </game>
+  <game comment=" 【日時】 2009/09/12 (土) 09:00-10:00&lt;br&gt; 【場所】 砧公園&lt;br&gt; 【天気】 曇りのち雨&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; 2回衛藤さん時、桜井2塁へ盗塁成功後、ファールと勘違いしてアウト&lt;br&gt;&lt;br&gt;" date="09/09/12" game="オーシャンリーグ" loc="砧公園" result="1" season="2009" team="フリップチップス" time="9:00">
+    <batters>
+      <batter name="saito" order="1" position="6">
+        <batting raw="1-5G-E--1*" />
+        <batting raw="3-1F-O" />
+      </batter>
+      <batter name="machiyama" order="2" position="2">
+        <batting raw="1-7G-H1" />
+        <batting raw="3-7G-H1*" />
+      </batter>
+      <batter name="itoh" order="3" position="1">
+        <batting raw="1-5G-O" />
+        <batting raw="3-7L-HR-2*" />
+      </batter>
+      <batter name="oomi" order="4" position="8">
+        <batting raw="1-9F-O" />
+        <batting raw="3-8G-H1--1*" />
+      </batter>
+      <batter name="sakurai" order="5" position="3">
+        <batting raw="2-7G-H1--1" />
+        <batting raw="3-5G-E-1-2*" />
+      </batter>
+      <batter name="etoh" order="6" position="9">
+        <batting raw="2-K-O" />
+        <batting raw="3-6G-O" />
+      </batter>
+      <batter name="suzuki" order="7" position="7">
+        <batting raw="2-5G-H1--2*" />
+        <batting raw="3-8G-H1-1" />
+      </batter>
+      <batter name="kurachi" order="8" position="5">
+        <batting raw="2-5G-H1-1-2*" />
+        <batting raw="3-9G-H1" />
+      </batter>
+      <batter name="nakajima" order="9" position="@">
+        <batting raw="2-8G-H1-1-1*" />
+        <batting raw="3-7F-O" />
+      </batter>
+      <batter name="takasu" order="10" position="4">
+        <batting raw="2-4G-H1" />
+      </batter>
+      <batter name="takemoto" order="11" position="@">
+        <batting raw="2-1G-E-1" />
+      </batter>
+      <batter name="hiro" order="12" position="@">
+        <batting raw="2-1F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="1" fieldFirst="0" inning="1" />
+      <score batFirst="3" fieldFirst="0" inning="2" />
+      <score batFirst="4" fieldFirst="0" inning="3" />
+      <score batFirst="8" fieldFirst="0" inning="total" />
+      <team batFirst="MonStars" fieldFirst="フリップチップス" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;【日時】 2009/09/19 (土) 09:00-10:00&lt;br&gt;【場所】 潮田公園&lt;br&gt;【天気】 曇&lt;br&gt;&lt;br&gt;&lt;br&gt;@ogasawara   2-K-O                5-K-O    6-B*&lt;br&gt;&lt;br&gt; 1回齋藤さん時、振り逃げで出塁&lt;br&gt; 7回待山さん時、サードで竹本さんアウト（入れ替わり）&lt;br&gt;&lt;br&gt;" date="09/09/19" game="オーシャンリーグ" loc="潮田公園" result="-1" season="2009" team="多摩川キャッツ" time="9:00">
+    <batters>
+      <batter name="saito" order="1" position="6">
+        <batting raw="1-K-O" />
+        <batting raw="3-7O-H2*" />
+        <batting raw="5-5G-H1*" />
+        <batting raw="6-7O-H2" />
+      </batter>
+      <batter name="suzuki" order="2" position="7">
+        <batting raw="1-5G-E--1" />
+        <batting raw="3-6G-E" />
+        <batting raw="5-B---1*" />
+      </batter>
+      <batter name="sakurai" order="3" position="3">
+        <batting raw="1-9F-O" />
+        <batting raw="3-6G-O-1" />
+        <batting raw="5-5G-H1-2-1*" />
+      </batter>
+      <batter name="oomi" order="4" position="8">
+        <batting raw="1-3F-O" />
+        <batting raw="3-B" />
+        <batting raw="5-6F-H1-1-1" />
+      </batter>
+      <batter name="kurachi" order="5" position="5">
+        <batting raw="1-K-O" />
+        <batting raw="3-1F-O" />
+        <batting raw="5-B---1" />
+      </batter>
+      <batter name="hiro" order="6" position="9">
+        <batting raw="2-K-O" />
+        <batting raw="4-6G-O" />
+        <batting raw="5-1F-O" />
+      </batter>
+      <batter name="takemoto" order="7" position="4">
+        <batting raw="2-K-O" />
+        <batting raw="4-3G-O" />
+        <batting raw="6-7G-H1" />
+      </batter>
+      <batter name="ekimura" order="8" position="1">
+        <batting raw="2-8O-H2--1" />
+        <batting raw="4-4G-O" />
+        <batting raw="6-9F-O" />
+      </batter>
+      <batter name="machiyama" order="9" position="2">
+        <batting raw="3-5G-O" />
+        <batting raw="5-5G-O" />
+        <batting raw="6-5G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="1" inning="1" />
+      <score batFirst="0" fieldFirst="2" inning="2" />
+      <score batFirst="1" fieldFirst="1" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="3" fieldFirst="2" inning="5" />
+      <score batFirst="1" fieldFirst="|" inning="6" />
+      <score batFirst="5" fieldFirst="6" inning="total" />
+      <team batFirst="MonStars" fieldFirst="多摩川キャッツ" />
+    </scoreboard>
+  </game>
+  <game comment=" 【日時】 2009/10/12 (月) 09:05-10:40&lt;br&gt; 【場所】 潮田公園&lt;br&gt; 【天気】 晴れ&lt;br&gt; 【スコア】&lt;br&gt;&lt;br&gt; 【投手成績】&lt;br&gt; 木村さん 7回 勝投手(詳細は記録していないので、わからず）&lt;br&gt;&lt;br&gt; 【打撃成績】&lt;br&gt;&lt;br&gt; 【打撃補足】&lt;br&gt; 1回山下さん時、サードゴロで待山さん入れ替わりホームでアウト&lt;br&gt; 1回水谷さん時、齋藤さんタッチアップでホームアウト&lt;br&gt;&lt;br&gt;" date="09/10/12" game="オーシャンリーグ決勝T1回戦" loc="潮田公園" result="1" season="2009" team="ピースアイランド" time="9:05">
+    <batters>
+      <batter name="itoh" order="1" position="5">
+        <batting raw="1-D*" />
+        <batting raw="3-5G-O" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="machiyama" order="2" position="@">
+        <batting raw="1-B" />
+        <batting raw="3-B---1*" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="saito" order="3" position="7">
+        <batting raw="1-7G-H1-1" />
+        <batting raw="3-5G-O" />
+        <batting raw="5-4F-O" />
+      </batter>
+      <batter name="oomi" order="4" position="8">
+        <batting raw="1-B" />
+        <batting raw="3-6G-E-2-1" />
+        <batting raw="6-1F-O" />
+      </batter>
+      <batter name="y-osa" order="5" position="@">
+        <batting raw="1-5G-O" />
+        <batting raw="3-B" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="mizutani" order="6" position="6">
+        <batting raw="1-8F-O" />
+        <batting raw="3-K-O" />
+        <batting raw="6-4G-O" />
+      </batter>
+      <batter name="sakurai" order="7" position="3">
+        <batting raw="2-7F-O" />
+        <batting raw="4-B---1*" />
+        <batting raw="7-K-O" />
+      </batter>
+      <batter name="etoh" order="8" position="9">
+        <batting raw="2-8F-O" />
+        <batting raw="4-K-O" />
+        <batting raw="7-3G-O" />
+      </batter>
+      <batter name="takasu" order="9" position="4">
+        <batting raw="2-7G-H1--1" />
+        <batting raw="4-7G-H1-1-1" />
+        <batting raw="7-3F-O" />
+      </batter>
+      <batter name="takemoto" order="10" position="@">
+        <batting raw="2-B" />
+        <batting raw="4-5G-O" />
+      </batter>
+      <batter name="kurachi" order="11" position="2">
+        <batting raw="2-3F-O" />
+        <batting raw="4-B---1" />
+      </batter>
+      <batter name="ekimura" order="12" position="1">
+        <batting raw="3-1G-E--1*" />
+        <batting raw="4-5G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="1" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="2" fieldFirst="0" inning="3" />
+      <score batFirst="1" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="0" fieldFirst="1" inning="7" />
+      <score batFirst="4" fieldFirst="1" inning="total" />
+      <team batFirst="MonStars" fieldFirst="ピースアイランド" />
+    </scoreboard>
+  </game>
+  <game comment=" 【日時】 2009/10/17 (土) 12:00-14:00&lt;br&gt; 【場所】 夢の島公園10面&lt;br&gt; 【天気】 晴れ&lt;br&gt; 【球審】 広沢&lt;br&gt;&lt;br&gt; 【試合結果】&lt;br&gt;&lt;br&gt; 【投手戦績】&lt;br&gt; モンスターズ&lt;br&gt; 投手：木村 4回 65球 被安打4 四球5 死球0 三振1 (勝)&lt;br&gt;     ：伊藤 1回 17球 被安打1 四球1 死球0 三振0 (S)&lt;br&gt; レコーズ&lt;br&gt; 投手：石川 2回 72球 被安打4 四球5 死球2 三振2 &lt;br&gt;     畑中 2回 17球 被安打0 死球4 死球0 三振0 (負)&lt;br&gt;&lt;br&gt; 【打撃戦績】&lt;br&gt;4midorikawa          2-K-O   3-B---1&lt;br&gt;&lt;br&gt; 【補足事項】&lt;br&gt; 3回水谷さん時、ピッチャーボークで斉藤選手帰還&lt;br&gt; 3回水谷さん時、パスボールで大海選手、桜井帰還&lt;br&gt;&lt;br&gt;" date="09/10/17" game="オーシャンリーグ準決勝" loc="夢の島公園10面" result="1" season="2009" team="レコーズ" time="12:00">
+    <batters>
+      <batter name="itoh" order="1" position="5">
+        <batting raw="1-B---1*" />
+        <batting raw="2-6G-H1-1" />
+        <batting raw="4-8F-G-1" />
+      </batter>
+      <batter name="machiyama" order="2" position="@">
+        <batting raw="1-7O-H2-1*" />
+        <batting raw="2-K-O" />
+        <batting raw="4-B" />
+      </batter>
+      <batter name="saito" order="3" position="7">
+        <batting raw="1-7O-H2-1*" />
+        <batting raw="3-B*" />
+        <batting raw="4-8F-O" />
+      </batter>
+      <batter name="oomi" order="4" position="8">
+        <batting raw="1-3L-H2-1-1*" />
+        <batting raw="3-D*" />
+      </batter>
+      <batter name="sakurai" order="5" position="3">
+        <batting raw="1-8F-G-1" />
+        <batting raw="3-B*" />
+      </batter>
+      <batter name="mizutani" order="6" position="6">
+        <batting raw="1-3F-O" />
+        <batting raw="3-B---1" />
+      </batter>
+      <batter name="y-osa" order="7" position="@">
+        <batting raw="1-6G-O" />
+        <batting raw="3-3F-O" />
+      </batter>
+      <batter name="etoh" order="8" position="9">
+        <batting raw="2-1G-O" />
+        <batting raw="3-3G-O" />
+      </batter>
+      <batter name="takemoto" order="9" position="@">
+        <batting raw="2-B*" />
+        <batting raw="3-4F-O" />
+      </batter>
+      <batter name="ekimura" order="10" position="1">
+        <batting raw="2-B" />
+        <batting raw="4-B---2*" />
+      </batter>
+      <batter name="kurachi" order="11" position="2">
+        <batting raw="2-B" />
+        <batting raw="4-4F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="0" fieldFirst="4" inning="1" />
+      <score batFirst="1" fieldFirst="1" inning="2" />
+      <score batFirst="0" fieldFirst="3" inning="3" />
+      <score batFirst="4" fieldFirst="1" inning="4" />
+      <score batFirst="1" fieldFirst="x" inning="5" />
+      <score batFirst="6" fieldFirst="9" inning="total" />
+      <team batFirst="レコーズ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment=" 【日時】 2009/10/24 (土) 11:00-13:00&lt;br&gt; 【場所】 岸根公園&lt;br&gt; 【天気】 曇り&lt;br&gt; 【球審】 林 審判員&lt;br&gt;&lt;br&gt; 【スコア】&lt;br&gt;&lt;br&gt; 【投手戦績】&lt;br&gt; モンスターズ&lt;br&gt; 投手：木村 7回 105球 被安打3 四球4 死球0 三振8 (負)&lt;br&gt; ：伊藤 0回 4球  被安打1 四球0 死球0 三振0 &lt;br&gt; ブルーインフィニティ&lt;br&gt; 投手：大胡 7回 97球  被安打4 四球1 死球0 三振6 (勝)&lt;br&gt; (8回の記録が残ってない。orz なので、大胡さんももう少し投げてます。)&lt;br&gt;&lt;br&gt; 【攻撃戦績】(モンスターズ)&lt;br&gt;---(ブルーインフィニティ)&lt;br&gt;7.fujishiro 1-8G-H1       4-4G-O    6-B&lt;br&gt;6.kawakami 1-6G-O--1      4-2F-O    6-7F-O&lt;br&gt;D.uraguchi 1-K-O        4-8F-O        7-K-O&lt;br&gt;5.shagi   1-6G-O           5-4F-O    7-K-O&lt;br&gt;8.gotoh       2-K-O       5-K-O     7-B&lt;br&gt;9.nakajima      2-1G-O       5-4G-O    7-7G-H1&lt;br&gt;3.yagitaku      2-K-O          6-9F-H1 7-K-O&lt;br&gt;2.igari          3-3F-O       6-6F-O     8-B*&lt;br&gt;1.daigo          3-3F-O       6-B       8-7G-H1-1&lt;br&gt;4.suehiro         3-1G-O       6-K-O&lt;br&gt;&lt;br&gt;【補足事項】&lt;br&gt; 3回桜井のファーストライナー時、伊藤さんダブルプレー&lt;br&gt;&lt;br&gt; 1回川上さん時、入れ替わりで2塁藤城さんアウト&lt;br&gt; 8回大胡さん時、パスボール2回でランナー3塁まで進塁&lt;br&gt;&lt;br&gt;" date="09/10/24" game="オーシャンリーグ決勝" loc="岸根公園" result="-1" season="2009" team="ブルーインフィニティ" time="11:00">
+    <batters>
+      <batter name="itoh" order="1" position="5">
+        <batting raw="1-5G-O" />
+        <batting raw="4-9G-H1--1" />
+        <batting raw="7-6G-O" />
+      </batter>
+      <batter name="sakurai" order="2" position="3">
+        <batting raw="1-B---1" />
+        <batting raw="4-3L-O" />
+        <batting raw="8-4F-O" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-1F-O" />
+        <batting raw="5-1G-O" />
+        <batting raw="8-4G-O" />
+      </batter>
+      <batter name="saito" order="4" position="7">
+        <batting raw="1-K-O" />
+        <batting raw="5-5F-O" />
+        <batting raw="8-8L-H2" />
+      </batter>
+      <batter name="machiyama" order="5" position="@">
+        <batting raw="2-K-O" />
+        <batting raw="5-7G-H1" />
+        <batting raw="8-K-O" />
+      </batter>
+      <batter name="takasu" order="6" position="4">
+        <batting raw="2-5G-O" />
+        <batting raw="5-5F-O" />
+      </batter>
+      <batter name="mizutani" order="7" position="6">
+        <batting raw="2-K-O" />
+        <batting raw="6-9F-O" />
+      </batter>
+      <batter name="suzuki" order="8" position="9">
+        <batting raw="3-K-O" />
+        <batting raw="6-9G-H3" />
+      </batter>
+      <batter name="y-osa" order="9" position="@">
+        <batting raw="3-7L-H1" />
+        <batting raw="6-4G-O" />
+      </batter>
+      <batter name="kurachi" order="10" position="2">
+        <batting raw="3-K-O" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="takemoto" order="11" position="@">
+        <batting raw="3-4F-O" />
+      </batter>
+      <batter name="etoh" order="12" position="9">
+        <batting raw="7-8F-O" />
+      </batter>
+      <batter name="ekimura" order="13" position="2">
+        <batting raw="4-5G-O" />
+        <batting raw="7-6G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="0" fieldFirst="0" inning="7" />
+      <score batFirst="0" fieldFirst="1x" inning="8" />
+      <score batFirst="0" fieldFirst="1" inning="total" />
+      <team batFirst="MonStars" fieldFirst="ブルーインフィニティ" />
+    </scoreboard>
+  </game>
+  <game comment=" 【日時】 2009/11/21 (土) 09:00-11:00&lt;br&gt; 【場所】 天王洲B&lt;br&gt; 【天気】 晴れ&lt;br&gt; 【球審】 攻撃側&lt;br&gt;&lt;br&gt;&lt;br&gt; 【投手戦績】&lt;br&gt; モンスターズ&lt;br&gt; 投手：水谷 3回&lt;br&gt; 鈴木 2回&lt;br&gt; 齋藤 2回&lt;br&gt;&lt;br&gt;7shiokawa               3-1G-E--1* 3-6F-O  5-9F-H1 6-7F-O&lt;br&gt;" date="09/11/21" game="練習試合" loc="天王洲B" result="1" season="2009" team="ハニーベアーズ" time="9:00">
+    <batters>
+      <batter name="mizutani" order="1" position="1">
+        <batting raw="1-7F-O" />
+        <batting raw="3-7L-H1*" />
+        <batting raw="4-6G-O" />
+        <batting raw="5-6G-O" />
+        <batting raw="6-6G-E" />
+      </batter>
+      <batter name="suzuki" order="2" position="5">
+        <batting raw="1-7F-E--1" />
+        <batting raw="3-7G-H1-1*" />
+        <batting raw="4-5G-E" />
+        <batting raw="6-6F-O" />
+        <batting raw="6-7F-O" />
+      </batter>
+      <batter name="saito" order="3" position="8">
+        <batting raw="1-3F-O" />
+        <batting raw="3-1F-O" />
+        <batting raw="4-8F-O" />
+        <batting raw="6-3G-H1*" />
+        <batting raw="7-7F-O" />
+      </batter>
+      <batter name="y-osa" order="4" position="3">
+        <batting raw="1-5F-O" />
+        <batting raw="3-7L-H1*" />
+        <batting raw="4-9F-O" />
+        <batting raw="6-7L-H2*" />
+        <batting raw="7-5G-O" />
+      </batter>
+      <batter name="sakurai" order="5" position="6">
+        <batting raw="2-6G-O" />
+        <batting raw="3-9O-HR-4*" />
+        <batting raw="5-6G-O" />
+        <batting raw="6-8L-H1-2*" />
+        <batting raw="7-9G-O" />
+      </batter>
+      <batter name="takemoto" order="6" position="2">
+        <batting raw="2-6F-O" />
+        <batting raw="3-8G-H1" />
+        <batting raw="5-3G-O" />
+        <batting raw="6-8G-H1" />
+      </batter>
+      <batter name="hiro" order="7" position="9">
+        <batting raw="2-1F-O" />
+        <batting raw="3-7L-O" />
+        <batting raw="5-8F-H1" />
+        <batting raw="6-9L-H1-1" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="1" fieldFirst="5" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="3" inning="6" />
+      <score batFirst="2" fieldFirst="0" inning="7" />
+      <score batFirst="4" fieldFirst="x" inning="8" />
+      <score batFirst="7" fieldFirst="8" inning="total" />
+      <team batFirst="ハニーベアーズ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+</monstars>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="913SimplifyingthedrawingofGanttgraphs.html">
+<LINK REL="Next" HREF="915Addingconstrainsbetweenyouractivities.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="913SimplifyingthedrawingofGanttgraphs.html">前へ</A> <A HREF="915Addingconstrainsbetweenyouractivities.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_14">9.14 ガント チャートに CSIM （クライアントサイド イメージ マップ）を追加する</A></H2>
+<P> ガントチャートは、アクティビティ内や、それぞれのアクティビティに関連するラベル内に独立した（異なったターゲットの）ホット スポットを持つことが出来ます。</P>
+<P> <A href="../ref/GanttPlotObject.html#_GANTTPLOTOBJECT_SETCSIMTARGET">GanttBar::SetCSIMTarget()</A> や <A href="../ref/GanttPlotObject.html#_GANTTPLOTOBJECT_SETCSIMALT">GanttBar::SetCSIMAlt()</A>を呼び出して、アクティビティバーにターゲットやそれに関連する &quot;Alt&quot; テキストを指定します。</P>
+<P> 同様の方法で、次のコードのように、アクティビティ タイトルに対してターゲットや Alt テキストを設定します。<DIV class="phpscript"><CODE><FONT
+color="#000000"> <FONT color="#0000BB"> $bar</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetCSIMTarget</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;http://localhost/abc/&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$bar</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetCSIMAlt</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;Alt Text for the bar&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$bar</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetCSIMTarget</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;http://localhost/abc&quot;</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$bar</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetCSIMAlt</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;Alt Text for the title&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 上述のコードは、あなたのアクティビティが変数バーとして使用されることを仮定しています。example ディレクトリの中に、ガント チャートを CSIM を用いて使用する方法を示したサンプルファイル&rdquo;ganttcsimex1.php&quot; があります。（この例が、CreateSimple() メソッドを使用して簡単化されたガント チャートの例であることに注意してください。）</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="913SimplifyingthedrawingofGanttgraphs.html">前へ</A> <A HREF="915Addingconstrainsbetweenyouractivities.html">次へ</A>
+</BODY>
+</HTML>

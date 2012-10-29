@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="815Addingplotmarksiradargraphs.html">
+<LINK REL="Next" HREF="821AddingguidelinestoPiePlots.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="815Addingplotmarksiradargraphs.html">前へ</A> <A HREF="821AddingguidelinestoPiePlots.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="8_2">8.2 円プロット</A></H2>
+<P> これまでは XY 座標に基づいたプロットだけを扱ってきました。JpGraphで作成できるグラフはこれだけではありません。その一つの形式が円プロットです。JpGraph では2D と 3D の円プロット をサポートしています。また、2D 円プロットの場合は後述するとおり 2 種類のものがあります。</P>
+<P> XY プロットとの最大の違いは、円プロットは Graph() オブジェクトではなく <A href="../ref/PieGraph.html#_C_PIEGRAPH">PieGraph()</A> オブジェクトを基に作成することです。これを使用するには、jpgraph_pie.php ファイル、あるいは jpgraph_pie3d.php ファイルをインクルードする必要があります。</P>
+<P> まずはデフォルトの最もシンプルな円プロットを作成する例を掲載します。</P>
+<P><DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"></FONT><FONT color="#007700">include (</FONT><FONT color="#DD0000">&quot;../jpgraph.php&quot;</FONT><FONT color="#007700">); <BR>include (</FONT><FONT color="#DD0000">&quot;../jpgraph_pie.php&quot;</FONT><FONT
+color="#007700">); <BR> <BR></FONT><FONT color="#0000BB">$data </FONT><FONT color="#007700">= array(</FONT><FONT color="#0000BB">40</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">60</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">21</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">33</FONT><FONT
+color="#007700">); <BR> <BR></FONT><FONT color="#0000BB">$graph </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">PieGraph</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">300</FONT><FONT color="#007700">,</FONT><FONT
+color="#0000BB">200</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">SetShadow</FONT><FONT color="#007700">(); <BR> <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">title</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">Set</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">&quot;A simple Pie plot&quot;</FONT><FONT color="#007700">); <BR> <BR></FONT><FONT color="#0000BB">$p1 </FONT><FONT color="#007700">= new </FONT><FONT
+color="#0000BB">PiePlot</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$data</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Add</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">$p1</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">Stroke</FONT><FONT color="#007700">(); <BR></FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> このコードを使うと、下記のような外見のグラフが出力されます。<DIV class="example">
+<BR> <A href="exframes/frame_example26.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example26.png" WIDTH="300"></A> <BR><B>図 121：</B> もっとも簡単な円プロットの例<A href="exframes/frame_example26.html"
+target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P> 円プロットでは以下のような機能があります。</P>
+<UL>
+<LI> デフォルトですべてのスライスの外側に値の割合が表示されます。 </LI>
+<LI> すべてのスライスにカラーが自動的に設定されます。 </LI>
+<LI> デフォルトで各スライスに黒い枠線が表示されます。</LI>
+<LI> 1 番目のスライスは 0 度 (3 時の方向) から始まります。 </LI>
+</UL>
+<P> また、円プロットの外見も様々に変更できます。たとえば、以下の通りです：</P>
+<UL>
+<LI> 1 番目のスライスの開始角度を変更する  (<A href="../ref/PiePlot.html#_PIEPLOT_SETSTARTANGLE">PiePlot::SetStartAngle()</A>)</LI>
+<LI>円プロットの周りにある枠線を取り除く (<A href="../ref/PiePlot.html#_PIEPLOT_SHOWBORDER">PiePlot::ShowBorder()</A>)  </LI>
+<LI>枠線の色を変更する  (<A href="../ref/PiePlot.html#_PIEPLOT_SETCOLOR">PiePlot::SetColor()</A>)、 </LI>
+<LI>スライスのカラーを変更する  (<A href="../ref/PiePlot.html#_PIEPLOT_SETSLICECOLORS">PiePlot::SetSliceCOlors()</A>)</LI>
+<LI> 円プロットのサイズや位置を変更する  (<A href="../ref/PiePlot.html#_PIEPLOT_SETSIZE">PiePlot::SetSize()</A>,<A href="../ref/PiePlot.html#_PIEPLOT_SETCENTER">PiePlot::SetCenter()</A>)</LI>
+<LI> スライスのラベル（色、フォント、フォーマット、位置）を円プロットの<A href="../ref/DisplayValue.html#_C_DISPLAYVALUE"> value プロパティ</A> にアクセスして変更する、たとえば (<A href="../ref/DisplayValue.html#_DISPLAYVALUE_SETFONT">PiePlot::value::SetFont()</A>と指定します。。ラベルのフォーマットや表示される値の変更の方法についてはこの章のいちばん下で読むことができます。</LI>
+</UL>
+<P></P>
+<P> 次に、円プロットに凡例を追加してみましょう。凡例は <A href="../ref/PiePlot.html#_PIEPLOT_SETLEGENDS">SetLegends();</A> メソッドを使用します。凡例を追加すると以下のような画像が出力されます。<DIV class="example">
+<BR> <A href="exframes/frame_example26.1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example26.1.png" WIDTH="300"></A> <BR><B>図 122：</B> 円プロットに凡例を追加する<A href="exframes/frame_example26.1.html"
+target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> （上記の例では、円プロットの中心を少し左にずらし、凡例を表示するスペースを空けています。）</P>
+<P> 凡例のテキストでは、数値の整形に printf() 形式の書式を指定することができます。この場合、文字列に渡される数値は絶対値かパーセント値のいずれかです。詳細はこの章の後半で説明します。</P>
+<P> 次に、円プロットのサイズと位置を調節しましょう。円プロットのサイズは<A href="../ref/PiePlot.html#_PIEPLOT_SETSIZE">SetSize();</A> メソッドを使用します。また、円プロットの位置を中心に配置するには、<A href="../ref/PiePlot.html#_PIEPLOT_SETCENTER">SetCenter()</A> メソッドを使用します。サイズはピクセル単位の絶対値か、横幅もしくは縦幅と比較した割合のいずれかで指定できます。円プロットの位置は横幅と縦幅で指定できます。</P>
+<P> 1 つのグラフ内に、複数の円プロットを設置する方法を紹介します。下の例では、スライスの凡例を小さなフォントに設定しました。</P>
+<P> サイズや配置の説明をするために、今回は 4 個の円プロットを作成し、それらをグラフの四隅に配置します。それにより、以下の画像が出力されます。<DIV class="example">
+<BR> <A href="exframes/frame_pieex3.html" target="blank"><IMG border="0" HEIGHT="300"
+src="pieex3.png" WIDTH="350"></A> <BR><B>図 123：</B> 複数の円プロットを 1 つのグラフ内に配置する<A href="exframes/frame_pieex3.html"
+target="blank"> [ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="815Addingplotmarksiradargraphs.html">前へ</A> <A HREF="821AddingguidelinestoPiePlots.html">次へ</A>
+</BODY>
+</HTML>

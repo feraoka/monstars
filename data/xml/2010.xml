@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="utf8" ?>
+<monstars>
+  <game comment="&lt;br&gt;&lt;br&gt;【天気】 晴れ&lt;br&gt;【球審】 橋本審判員&lt;br&gt;&lt;br&gt;【スコア】&lt;br&gt;&lt;br&gt;【投手戦績】&lt;br&gt;モンスターズ&lt;br&gt;投手：木村 5回負け&lt;br&gt;&lt;br&gt;&lt;br&gt;3回、鈴木さんセカンドエラー時、桜井3塁とホームで挟まれアウト&lt;br&gt;4回、齋藤さん2塁打時、3塁目指すもタッチアウト&lt;br&gt;5回、鈴木さんライトフライ時、桜井タッチアップするもホームでアウト&lt;br&gt;&lt;br&gt;" date="10/03/27" game="オーシャンリーグ" loc="大井埠頭中央海浜公園Ｃ面" result="-1" season="2010" team="スクラッチ" time="11:00">
+    <batters>
+      <batter name="saito" order="1" position="6">
+        <batting raw="1-B*" />
+        <batting raw="2-9F-H1" />
+        <batting raw="4-7O-H2" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="machiyama" order="2" position="2">
+        <batting raw="1-B*" />
+        <batting raw="2-7G-H1" />
+        <batting raw="5-7F-O" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-K-O" />
+        <batting raw="2-1G-O" />
+        <batting raw="5-8O-H3*" />
+      </batter>
+      <batter name="sakurai" order="4" position="4">
+        <batting raw="1-3G-O" />
+        <batting raw="3-5G-E--1" />
+        <batting raw="5-6G-H1-1-1" />
+      </batter>
+      <batter name="etoh" order="5" position="7">
+        <batting raw="1-8L-H1-2" />
+        <batting raw="3-K-O" />
+        <batting raw="5-6G-H1" />
+      </batter>
+      <batter name="suzuki" order="6" position="5">
+        <batting raw="1-3G-O" />
+        <batting raw="3-4G-E" />
+        <batting raw="5-9F-O" />
+      </batter>
+      <batter name="hazedon" order="7" position="9">
+        <batting raw="2-B" />
+        <batting raw="3-K-O" />
+        <batting raw="6-1G-O" />
+      </batter>
+      <batter name="takemoto" order="8" position="3">
+        <batting raw="2-K-O" />
+        <batting raw="4-K-O" />
+        <batting raw="6-1G-O" />
+      </batter>
+      <batter name="ekimura" order="9" position="1">
+        <batting raw="2-K-O" />
+        <batting raw="4-1F-O" />
+        <batting raw="6-7F-H1" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="2" fieldFirst="3" inning="1" />
+      <score batFirst="0" fieldFirst="2" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="1" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="x" inning="6" />
+      <score batFirst="3" fieldFirst="5" inning="total" />
+      <team batFirst="MonStars" fieldFirst="スクラッチ" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;【日時】 2010/05/29 (土) 11:00-13:00&lt;br&gt;【場所】 砧公園Ａ面&lt;br&gt;【天気】 曇り&lt;br&gt;【球審】 淵審判員&lt;br&gt;&lt;br&gt;【スコア】&lt;br&gt;&lt;br&gt;&lt;br&gt;【投手戦績】&lt;br&gt;モンスターズ&lt;br&gt;投手：中島 7回勝ち&lt;br&gt;&lt;br&gt;&lt;br&gt;2回、竹本さん時、木村さん3塁へ盗塁するもアウト&lt;br&gt;6回、中島さんレフトフライ時、木村さんタッチアップが早過ぎて申告アウト&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="10/05/29" game="オーシャンリーグ" loc="砧公園Ａ面" result="1" season="2010" team="フェアスピリッツ" time="11:00">
+    <batters>
+      <batter name="machiyama" order="1" position="2">
+        <batting raw="1-2F-O" />
+        <batting raw="3-K-O" />
+        <batting raw="4-7O-H2*" />
+        <batting raw="6-1G-O" />
+      </batter>
+      <batter name="saito" order="2" position="6">
+        <batting raw="1-1F-O" />
+        <batting raw="3-5G-E*" />
+        <batting raw="4-B*" />
+        <batting raw="6-5G-E--1*" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-B---2" />
+        <batting raw="3-9L-H1-1" />
+        <batting raw="4-8L-H3-3" />
+        <batting raw="6-8G-H1-1-2" />
+      </batter>
+      <batter name="sakurai" order="4" position="5">
+        <batting raw="1-3F-O" />
+        <batting raw="3-B--1" />
+        <batting raw="4-9F-O" />
+        <batting raw="6-B---1" />
+      </batter>
+      <batter name="y-osa" order="5" position="4">
+        <batting raw="2-5G-E--1*" />
+        <batting raw="3-K-O" />
+        <batting raw="5-K-O" />
+        <batting raw="6-6G-O" />
+      </batter>
+      <batter name="etoh" order="6" position="9">
+        <batting raw="2-7F-O" />
+        <batting raw="3-5F-O" />
+        <batting raw="5-6F-O" />
+        <batting raw="7-1G-H1" />
+      </batter>
+      <batter name="ekimura" order="7" position="7">
+        <batting raw="2-7L-H2-1" />
+        <batting raw="4-7O-H3*" />
+        <batting raw="5-7L-H1--1" />
+        <batting raw="7-6G-E" />
+      </batter>
+      <batter name="takemoto" order="8" position="3">
+        <batting raw="2-K-O" />
+        <batting raw="4-8G-H1-1*" />
+        <batting raw="5-1G-O" />
+        <batting raw="7-8G-H1" />
+      </batter>
+      <batter name="nakajima" order="9" position="1">
+        <batting raw="3-B*" />
+        <batting raw="4-5F-O" />
+        <batting raw="6-7L-H1*" />
+        <batting raw="7-7F-O" />
+      </batter>
+      <batter name="hiro" order="10" position="@">
+        <batting raw="3-5G-H1*" />
+        <batting raw="4-4G-O" />
+        <batting raw="6-5G-O" />
+        <batting raw="7-5G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="1" fieldFirst="0" inning="2" />
+      <score batFirst="2" fieldFirst="3" inning="3" />
+      <score batFirst="4" fieldFirst="1" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="2" fieldFirst="0" inning="6" />
+      <score batFirst="1" fieldFirst="0" inning="7" />
+      <score batFirst="10" fieldFirst="4" inning="total" />
+      <team batFirst="MonStars" fieldFirst="フェアスピリッツ" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;【日時】 2010/06/05 (土) 09:00-11:00&lt;br&gt;【場所】 大井ふ頭中央公園Ｆ面&lt;br&gt;【天気】 晴れ&lt;br&gt;【球審】 八木審判員&lt;br&gt;&lt;br&gt;&lt;br&gt;【投手戦績】&lt;br&gt;モンスターズ&lt;br&gt;投手：中島 7回分け&lt;br&gt;&lt;br&gt;2d-naka      2-5G-O      4-B        6-4F-O&lt;br&gt;&lt;br&gt;4.d-nakaは999の中島さん(助っ人)&lt;br&gt;2回、中島さんサードゴロで、竹本さんと中島さんがゲッツー&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="10/06/05" game="オーシャンリーグ" loc="大井ふ頭中央公園Ｆ面" result="0" season="2010" team="オーシャンズ" time="9:00">
+    <batters>
+      <batter name="suzuki" order="1" position="5">
+        <batting raw="1-1L-O" />
+        <batting raw="3-6G-H1--1" />
+        <batting raw="5-6G-E--1*" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="etoh" order="2" position="7">
+        <batting raw="1-K-O" />
+        <batting raw="3-K-O" />
+        <batting raw="5-4G-H1*" />
+        <batting raw="7-1F-O" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-4G-H1" />
+        <batting raw="3-4L-O" />
+        <batting raw="5-9O-HR-3*" />
+        <batting raw="7-8F-O" />
+      </batter>
+      <batter name="sakurai" order="4" position="6">
+        <batting raw="1-K-O" />
+        <batting raw="4-4L-O" />
+        <batting raw="5-6G-O" />
+        <batting raw="7-1G-O" />
+      </batter>
+      <batter name="y-osa" order="5" position="4">
+        <batting raw="2-8F-H2*" />
+        <batting raw="4-9F-O" />
+        <batting raw="5-6G-O" />
+      </batter>
+      <batter name="takemoto" order="6" position="3">
+        <batting raw="2-8L-H1-1" />
+        <batting raw="4-8G-H1" />
+        <batting raw="6-7F-O" />
+      </batter>
+      <batter name="nakajima" order="7" position="1">
+        <batting raw="2-5G-O" />
+        <batting raw="4-1F-O" />
+        <batting raw="6-7F-H1" />
+      </batter>
+      <batter name="hiro" order="8" position="9">
+        <batting raw="3-3F-O" />
+        <batting raw="5-5G-O" />
+        <batting raw="6-B" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="1" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="2" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="3" inning="5" />
+      <score batFirst="1" fieldFirst="0" inning="6" />
+      <score batFirst="1" fieldFirst="0" inning="7" />
+      <score batFirst="4" fieldFirst="4" inning="total" />
+      <team batFirst="オーシャンズ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;【日時】 2010/06/12 (土) 10:00-12:00&lt;br&gt;【場所】 ガス橋緑地6号面&lt;br&gt;【天気】 晴れ&lt;br&gt;【球審】 伏見審判員&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;【投手戦績】&lt;br&gt;モンスターズ&lt;br&gt;投手：齋藤 5回負け&lt;br&gt;&lt;br&gt;9shiokawa      2-3G-O  3-K-O&lt;br&gt;&lt;br&gt;9shiokawaさんは助っ人&lt;br&gt;4回、高須さん、レフト前ヒット時に1塁飛び出し過ぎで、アウト&lt;br&gt;2回、竹本さん、林さん時パスボールで3塁へ進塁&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="10/06/12" game="オーシャンリーグ" loc="ガス橋緑地6号面" result="-1" season="2010" team="レコーズ" time="10:00">
+    <batters>
+      <batter name="sakurai" order="1" position="4">
+        <batting raw="1-8L-H2*" />
+        <batting raw="2-6F-O" />
+        <batting raw="4-K-O" />
+      </batter>
+      <batter name="suzuki" order="2" position="5">
+        <batting raw="1-7G-H2-1" />
+        <batting raw="2-K-O" />
+        <batting raw="5-5F-O" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-5F-O" />
+        <batting raw="3-9G-H1--1*" />
+        <batting raw="5-2F-O" />
+      </batter>
+      <batter name="saito" order="4" position="8">
+        <batting raw="1-K-O" />
+        <batting raw="3-8G-H1--1*" />
+        <batting raw="5-4G-O" />
+      </batter>
+      <batter name="y-osa" order="5" position="7">
+        <batting raw="1-5G-E--1" />
+        <batting raw="3-K-O" />
+      </batter>
+      <batter name="machiyama" order="6" position="2">
+        <batting raw="1-6F-O" />
+        <batting raw="3-5F-O" />
+      </batter>
+      <batter name="takemoto" order="7" position="3">
+        <batting raw="2-9G-H1*" />
+        <batting raw="3-8L-H1-2" />
+      </batter>
+      <batter name="hiro" order="8" position="1">
+        <batting raw="2-9G-H1-1" />
+        <batting raw="4-K-O" />
+      </batter>
+      <batter name="takasu" order="9" position="6">
+        <batting raw="2-7G-H1" />
+        <batting raw="4-7G-H1" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="2" fieldFirst="1" inning="1" />
+      <score batFirst="0" fieldFirst="1" inning="2" />
+      <score batFirst="0" fieldFirst="2" inning="3" />
+      <score batFirst="2" fieldFirst="0" inning="4" />
+      <score batFirst="4" fieldFirst="0" inning="5" />
+      <score batFirst="8" fieldFirst="4" inning="total" />
+      <team batFirst="レコーズ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;【日時】 2010/06/26 (土) 09:00-11:00&lt;br&gt;【場所】 岸根公園&lt;br&gt;【天気】 晴れ&lt;br&gt;【球審】 黒田審判員&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;【投手戦績】&lt;br&gt;モンスターズ&lt;br&gt;投手：中島 6回勝ち&lt;br&gt;&lt;br&gt;&lt;br&gt;2回、林さん、鈴木さん時パスボールで2塁へ&lt;br&gt;2回、林さん、齋藤さん時入れ替わりでアウト&lt;br&gt;3回、待山さん、山下さん時パスボールで2塁へ&lt;br&gt;4回、桜井、木村さん時サードゴロ中にホームイン&lt;br&gt;5回、鈴木さん、齋藤さん時パスボールで2塁へ&lt;br&gt;6回、待山さん、山下さん時入れ替わりでアウト&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="10/06/26" game="オーシャンリーグ" loc="岸根公園" result="1" season="2010" team="ライガース" time="9:00">
+    <batters>
+      <batter name="suzuki" order="1" position="5">
+        <batting raw="1-4G-H1--2*" />
+        <batting raw="2-B*" />
+        <batting raw="4-3F-O" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="saito" order="2" position="6">
+        <batting raw="1-B---1*" />
+        <batting raw="2-5G-O*" />
+        <batting raw="4-5G-E--1*" />
+        <batting raw="5-6F-O" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-9F-E-2*" />
+        <batting raw="2-9O-H2-1*" />
+        <batting raw="4-4G-H1-1-1*" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="sakurai" order="4" position="4">
+        <batting raw="1-7L-H2-1-1" />
+        <batting raw="2-9O-H2-2" />
+        <batting raw="4-7L-H2-2-1*" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="ekimura" order="5" position="7">
+        <batting raw="1-K-O" />
+        <batting raw="2-6F-O" />
+        <batting raw="4-5G-O-1" />
+        <batting raw="6-1F-O" />
+      </batter>
+      <batter name="machiyama" order="6" position="2">
+        <batting raw="1-6F-O" />
+        <batting raw="3-B" />
+        <batting raw="4-7F-E*" />
+        <batting raw="6-7O-H2" />
+      </batter>
+      <batter name="y-osa" order="7" position="9">
+        <batting raw="1-B---1" />
+        <batting raw="3-K-O" />
+        <batting raw="4-8O-H2-1" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="takemoto" order="8" position="3">
+        <batting raw="1-3G-O" />
+        <batting raw="3-8F-O" />
+        <batting raw="4-6G-O" />
+        <batting raw="6-3G-E" />
+      </batter>
+      <batter name="nakajima" order="9" position="1">
+        <batting raw="2-4F-O" />
+        <batting raw="3-6G-O" />
+        <batting raw="5-7L-H2" />
+        <batting raw="6-4F-O" />
+      </batter>
+      <batter name="hiro" order="10" position="@">
+        <batting raw="2-7F-E" />
+        <batting raw="4-B*" />
+        <batting raw="5-6G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="3" fieldFirst="2" inning="1" />
+      <score batFirst="3" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="5" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="11" fieldFirst="2" inning="total" />
+      <team batFirst="MonStars" fieldFirst="ライガース" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;【日時】 2010/07/03 (土) 10:00-12:00&lt;br&gt;【場所】 六郷橋緑地3号面&lt;br&gt;【天気】 曇り&lt;br&gt;【球審】 伏見審判員&lt;br&gt;&lt;br&gt;&lt;br&gt;【投手戦績】&lt;br&gt;モンスターズ&lt;br&gt;投手：中島 6回勝ち&lt;br&gt;&lt;br&gt;&lt;br&gt;2回、大海さん、2塁盗塁時相手エラーで3塁へ&lt;br&gt;3回、高須さん、倉知さん犠打でホームイン&lt;br&gt;4回、大海さん、桜井三振時、2塁へ盗塁し、相手エラーで3塁へ&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="10/07/03" game="オーシャンリーグ" loc="六郷橋緑地3号面" result="1" season="2010" team="バミューダズ" time="10:00">
+    <batters>
+      <batter name="suzuki" order="1" position="5">
+        <batting raw="1-5G-O" />
+        <batting raw="4-5G-O" />
+        <batting raw="5-7L-H1-2" />
+      </batter>
+      <batter name="saito" order="2" position="6">
+        <batting raw="1-3G-O" />
+        <batting raw="4-7L-H3*" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="oomi" order="3" position="2">
+        <batting raw="1-9F-H1--1" />
+        <batting raw="4-9F-H1-1-1" />
+        <batting raw="6-9O-HR-1*" />
+      </batter>
+      <batter name="sakurai" order="4" position="8">
+        <batting raw="1-9F-O" />
+        <batting raw="4-K-O" />
+        <batting raw="6-3F-E--1*" />
+      </batter>
+      <batter name="etoh" order="5" position="7">
+        <batting raw="2-6F-O" />
+        <batting raw="4-K-O" />
+        <batting raw="6-3F-O" />
+      </batter>
+      <batter name="takemoto" order="6" position="3">
+        <batting raw="2-3G-O" />
+        <batting raw="5-6G-E*" />
+        <batting raw="6-9O-H2-1*" />
+      </batter>
+      <batter name="nakajima" order="7" position="1">
+        <batting raw="2-5G-O" />
+        <batting raw="5-5G-O" />
+        <batting raw="6-1F-O" />
+      </batter>
+      <batter name="takasu" order="8" position="9">
+        <batting raw="3-7L-H3*" />
+        <batting raw="5-B*" />
+        <batting raw="6-7O-H2-1" />
+      </batter>
+      <batter name="kurachi" order="9" position="4">
+        <batting raw="3-9F-G-1" />
+        <batting raw="5-8G-H1*" />
+        <batting raw="6-6G-O" />
+      </batter>
+      <batter name="hiro" order="10" position="@">
+        <batting raw="3-2F-O" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="y-osa" order="11" position="@">
+        <batting raw="3-2F-O" />
+        <batting raw="5-7G-H2-2*" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="1" fieldFirst="0" inning="3" />
+      <score batFirst="1" fieldFirst="1" inning="4" />
+      <score batFirst="4" fieldFirst="0" inning="5" />
+      <score batFirst="3" fieldFirst="1" inning="6" />
+      <score batFirst="9" fieldFirst="2" inning="total" />
+      <team batFirst="MonStars" fieldFirst="バミューダズ" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;【日時】 2010/07/24 (土) 09:00-11:00&lt;br&gt;【場所】 砧公園B面&lt;br&gt;【天気】 晴れ&lt;br&gt;【球審】 ？(アプリコッツ側提供)&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;【投手戦績】&lt;br&gt;モンスターズ&lt;br&gt;投手：伊藤 7回勝ち(1勝)&lt;br&gt;&lt;br&gt;&lt;br&gt;5回、待山さん、木村さんと入れ替わりでアウト&lt;br&gt;6回、高須さん、鈴木さんと入れ替わりでアウト&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="10/07/24" game="オーシャンリーグ" loc="砧公園B面" result="1" season="2010" team="アプリコッツ" time="9:00">
+    <batters>
+      <batter name="suzuki" order="1" position="5">
+        <batting raw="1-8F-O" />
+        <batting raw="2-4F-O" />
+        <batting raw="4-8F-O" />
+        <batting raw="6-5G-O--1*" />
+      </batter>
+      <batter name="saito" order="2" position="6">
+        <batting raw="1-B---1*" />
+        <batting raw="3-5G-E--1*" />
+        <batting raw="4-7L-H3-1*" />
+        <batting raw="6-7O-H2-1" />
+      </batter>
+      <batter name="oomi" order="3" position="2">
+        <batting raw="1-B---1*" />
+        <batting raw="3-9L-H1--1*" />
+        <batting raw="4-9O-HR-2*" />
+        <batting raw="6-B--1" />
+      </batter>
+      <batter name="sakurai" order="4" position="3">
+        <batting raw="1-7F-O" />
+        <batting raw="3-6G-G-1" />
+        <batting raw="4-K-O" />
+        <batting raw="6-6G-G-1" />
+      </batter>
+      <batter name="y-osa" order="5" position="7">
+        <batting raw="1-5G-H1" />
+        <batting raw="3-7L-H2-1*" />
+        <batting raw="4-5G-O" />
+        <batting raw="6-1F-O" />
+      </batter>
+      <batter name="itoh" order="6" position="1">
+        <batting raw="1-B--1" />
+        <batting raw="3-5G-O" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="machiyama" order="7" position="9">
+        <batting raw="1-B--1" />
+        <batting raw="3-7L-H1-1*" />
+        <batting raw="5-7L-H1" />
+      </batter>
+      <batter name="ekimura" order="8" position="8">
+        <batting raw="1-K-O" />
+        <batting raw="3-B" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="takemoto" order="9" position="@">
+        <batting raw="2-2F-O" />
+        <batting raw="3-9L-H1-1-1" />
+        <batting raw="5-9G-H1" />
+      </batter>
+      <batter name="hiro" order="10" position="@">
+        <batting raw="2-B" />
+        <batting raw="3-5F-O" />
+        <batting raw="5-8F-O" />
+      </batter>
+      <batter name="takasu" order="11" position="4">
+        <batting raw="2-7F-O" />
+        <batting raw="4-7L-H1--1*" />
+        <batting raw="6-8O-H1" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="0" fieldFirst="2" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="4" inning="3" />
+      <score batFirst="0" fieldFirst="3" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="1" inning="6" />
+      <score batFirst="0" fieldFirst="x" inning="7" />
+      <score batFirst="0" fieldFirst="10" inning="total" />
+      <team batFirst="アプリコッツ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;[天気] 晴れ&lt;br&gt;[球審] 黒田&lt;br&gt;---&lt;br&gt;【スコア】&lt;br&gt;---&lt;br&gt;4honda         2-B        4-8F-H1  5-8O-H1&lt;br&gt;---&lt;br&gt;1回、山下さん、わざとけん制で挟まれアウト、大海さん生還&lt;br&gt;2回、本田さん、竹本さんと入れ替わりで2塁アウト&lt;br&gt;4回、本田さん、竹本さんと入れ替わりで2塁アウト&lt;br&gt;&lt;br&gt;" date="10/07/31" game="オーシャンリーグ" loc="八潮北公園" result="-1" season="2010" team="96ers" time="9:00">
+    <batters>
+      <batter name="sakurai" order="1" position="3">
+        <batting raw="1-7O-H2*" />
+        <batting raw="2-8L-O" />
+        <batting raw="4-7L-H1" />
+      </batter>
+      <batter name="saito" order="2" position="6">
+        <batting raw="1-1F-O" />
+        <batting raw="3-5G-O" />
+        <batting raw="4-7L-H1" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-9G-H1-1-1*" />
+        <batting raw="3-9F-H2" />
+        <batting raw="4-3G-H1-1" />
+      </batter>
+      <batter name="y-osa" order="4" position="9">
+        <batting raw="1-7G-H1" />
+        <batting raw="3-B" />
+        <batting raw="4-K-O" />
+      </batter>
+      <batter name="machiyama" order="5" position="2">
+        <batting raw="1-7F-O" />
+        <batting raw="3-B" />
+        <batting raw="4-6G-O" />
+      </batter>
+      <batter name="suzuki" order="6" position="5">
+        <batting raw="2-5G-O" />
+        <batting raw="3-3F-O" />
+        <batting raw="5-8F-O" />
+      </batter>
+      <batter name="etoh" order="7" position="7">
+        <batting raw="2-B---1" />
+        <batting raw="3-K-O" />
+        <batting raw="5-9L-O" />
+      </batter>
+      <batter name="takemoto" order="8" position="1">
+        <batting raw="2-6G-O--1" />
+        <batting raw="4-5G-O*" />
+        <batting raw="5-3F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="2" fieldFirst="2" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="9" inning="3" />
+      <score batFirst="1" fieldFirst="1" inning="4" />
+      <score batFirst="0" fieldFirst="x" inning="5" />
+      <score batFirst="3" fieldFirst="12" inning="total" />
+      <team batFirst="MonStars" fieldFirst="96ers" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;[天気] 晴れ&lt;br&gt;[球審] 伏見&lt;br&gt;---&lt;br&gt;【スコア】&lt;br&gt;---&lt;br&gt;@honda 4-K-O 6-K-O    8-D*&lt;br&gt;&lt;br&gt;---&lt;br&gt;1回、齋藤さん、桜井と入れ替わりでホームアウト。&lt;br&gt;1回、桜井、盗塁失敗。&lt;br&gt;--&lt;br&gt;7回以降は練習試合&lt;br&gt;7回、高須さん、山下さんと入れ替わりでホームアウト。&lt;br&gt;7回、木村さんセンターフライ時、ダブルプレーでアウト。&lt;br&gt;&lt;br&gt;" date="10/08/21" game="オーシャンリーグ" loc="天王洲公園Ａ" result="1" season="2010" team="多摩川キャッツ" time="9:00">
+    <batters>
+      <batter name="saito" order="1" position="6">
+        <batting raw="1-7O-H2" />
+        <batting raw="4-5G-H1--1*" />
+        <batting raw="7-B*" />
+        <batting raw="8-7G-H1-1*" />
+      </batter>
+      <batter name="takasu" order="2" position="9">
+        <batting raw="1-D" />
+        <batting raw="4-9G-H1" />
+        <batting raw="7-D" />
+        <batting raw="8-B--1*" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-4G-O" />
+        <batting raw="4-8F-G-1" />
+        <batting raw="7-B" />
+        <batting raw="8-9L-HR-4*" />
+      </batter>
+      <batter name="sakurai" order="4" position="9">
+        <batting raw="1-6G-O" />
+        <batting raw="4-4L-O" />
+        <batting raw="7-B" />
+        <batting raw="8-8F-O" />
+      </batter>
+      <batter name="y-osa" order="5" position="@">
+        <batting raw="2-1G-O" />
+        <batting raw="5-K-O" />
+        <batting raw="7-4G-O" />
+      </batter>
+      <batter name="ekimura" order="6" position="8">
+        <batting raw="2-7L-H3" />
+        <batting raw="5-8L-H2" />
+        <batting raw="7-8F-O" />
+      </batter>
+      <batter name="etoh" order="7" position="7">
+        <batting raw="2-4G-O" />
+        <batting raw="5-6F-O" />
+        <batting raw="8-6G-O" />
+      </batter>
+      <batter name="takemoto" order="8" position="3">
+        <batting raw="2-6G-O" />
+        <batting raw="5-3G-O" />
+        <batting raw="8-9F-H1*" />
+      </batter>
+      <batter name="suzuki" order="9" position="5">
+        <batting raw="3-1G-O" />
+        <batting raw="6-B---1" />
+        <batting raw="8-1G-O" />
+      </batter>
+      <batter name="hiro" order="10" position="@">
+        <batting raw="3-4F-O" />
+        <batting raw="6-K-O" />
+        <batting raw="8-7G-H1*" />
+      </batter>
+      <batter name="nakajima" order="11" position="1">
+        <batting raw="3-5G-O" />
+        <batting raw="6-4F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="1" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="0" fieldFirst="x" inning="7" />
+      <score batFirst="0" fieldFirst="1" inning="total" />
+      <team batFirst="多摩川キャッツ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;[天気] 晴れ&lt;br&gt;[球審] 伏見&lt;br&gt;---&lt;br&gt;【スコア】&lt;br&gt;---&lt;br&gt;4honda        2-6G-O      4-K-O 5-5F-O   6-K-O&lt;br&gt;---&lt;br&gt;1回、鈴木さん、大海さんの犠牲フライで生還&lt;br&gt;3回、林さん、鈴木さんのショートゴロで入れ替わりアウト&lt;br&gt;--&lt;br&gt;&lt;br&gt;" date="10/08/28" game="オーシャンリーグ" loc="ガス橋緑地8号面" result="1" season="2010" team="ハンターズ" time="8:00">
+    <batters>
+      <batter name="suzuki" order="1" position="5">
+        <batting raw="1-5G-H2--1*" />
+        <batting raw="3-6G-O--1*" />
+        <batting raw="5-6G-E--2*" />
+        <batting raw="6-B*" />
+      </batter>
+      <batter name="takasu" order="2" position="6">
+        <batting raw="1-6F-O" />
+        <batting raw="3-5G-E*" />
+        <batting raw="5-B*" />
+        <batting raw="6-B" />
+      </batter>
+      <batter name="oomi" order="3" position="2">
+        <batting raw="1-8F-G-1" />
+        <batting raw="3-9L-H3-2*" />
+        <batting raw="5-7F-HR-3*" />
+        <batting raw="6-3G-O-1" />
+      </batter>
+      <batter name="sakurai" order="4" position="8">
+        <batting raw="1-4F-O" />
+        <batting raw="3-B---1" />
+        <batting raw="5-8O-H2*" />
+        <batting raw="6-9L-H1-1-1" />
+      </batter>
+      <batter name="etoh" order="5" position="7">
+        <batting raw="2-8F-O" />
+        <batting raw="3-6G-O" />
+        <batting raw="5-9L-H1-1-1" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="takemoto" order="6" position="3">
+        <batting raw="2-K-O" />
+        <batting raw="4-7L-H2" />
+        <batting raw="5-3F-O" />
+      </batter>
+      <batter name="hiro" order="7" position="9">
+        <batting raw="3-7L-H2" />
+        <batting raw="4-3F-O" />
+        <batting raw="5-1F-O" />
+      </batter>
+      <batter name="nakajima" order="8" position="1">
+        <batting raw="3-1F-O" />
+        <batting raw="4-3F-O" />
+        <batting raw="6-B*" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="0" fieldFirst="1" inning="1" />
+      <score batFirst="1" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="3" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="1" fieldFirst="4" inning="5" />
+      <score batFirst="1" fieldFirst="2" inning="6" />
+      <score batFirst="0" fieldFirst="x" inning="7" />
+      <score batFirst="3" fieldFirst="10" inning="total" />
+      <team batFirst="ハンターズ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;[天気] 晴れ&lt;br&gt;[球審] なし&lt;br&gt;---&lt;br&gt;【スコア】&lt;br&gt;---&lt;br&gt;&lt;br&gt;---&lt;br&gt;2回、木村さん、大海さん時タッチアップでホームイン&lt;br&gt;5回、高須さん、鈴木さん時タッチアップでホームアウト&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="10/09/18" game="オーシャンリーグ" loc="東調布公園" result="1" season="2010" team="ドルフィンズ" time="11:00">
+    <batters>
+      <batter name="ekimura" order="1" position="8">
+        <batting raw="1-7L-H1*" />
+        <batting raw="2-B*" />
+        <batting raw="3-7L-H1" />
+        <batting raw="4-6G-O" />
+      </batter>
+      <batter name="takasu" order="2" position="1">
+        <batting raw="1-B*" />
+        <batting raw="2-7L-H1--1*" />
+        <batting raw="3-B" />
+        <batting raw="5-7G-H1" />
+      </batter>
+      <batter name="oomi" order="3" position="2">
+        <batting raw="1-4F-O" />
+        <batting raw="2-9F-G-1" />
+        <batting raw="3-4G-E-1" />
+        <batting raw="5-9O-H2" />
+      </batter>
+      <batter name="sakurai" order="4" position="7">
+        <batting raw="1-B*" />
+        <batting raw="2-7L-H2-1" />
+        <batting raw="3-1F-O" />
+        <batting raw="5-5F-O" />
+      </batter>
+      <batter name="itoh" order="5" position="6">
+        <batting raw="1-7L-H1-2*" />
+        <batting raw="2-1G-O" />
+        <batting raw="4-8G-H1" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="suzuki" order="6" position="5">
+        <batting raw="1-7L-H2-1" />
+        <batting raw="3-8G-H2*" />
+        <batting raw="4-8F-O" />
+        <batting raw="5-7F-O" />
+      </batter>
+      <batter name="takemoto" order="7" position="3">
+        <batting raw="1-4G-O-1" />
+        <batting raw="3-6G-O" />
+        <batting raw="4-8G-H1" />
+      </batter>
+      <batter name="hiro" order="8" position="9">
+        <batting raw="1-1G-O" />
+        <batting raw="3-5G-E-1*" />
+        <batting raw="4-5G-E" />
+      </batter>
+      <batter name="nakajima" order="9" position="4">
+        <batting raw="2-1G-O" />
+        <batting raw="3-7F-O" />
+        <batting raw="4-2F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="3" fieldFirst="4" inning="1" />
+      <score batFirst="0" fieldFirst="2" inning="2" />
+      <score batFirst="0" fieldFirst="2" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="x" inning="6" />
+      <score batFirst="3" fieldFirst="8" inning="total" />
+      <team batFirst="ドルフィンズ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;[天気] 晴れ(前々日の雨で外野はぬかるんでいる)&lt;br&gt;[球審] 八木&lt;br&gt;---&lt;br&gt;【スコア】&lt;br&gt;---&lt;br&gt;&lt;br&gt;---&lt;br&gt;5回、齋藤さん、伊藤さん時2塁へ盗塁失敗&lt;br&gt;7回、鈴木さん、中島さん時キャッチャーフライタッチアップでホームアウト&lt;br&gt;---&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="10/10/02" game="オーシャンリーグ決勝T" loc="多摩川六郷橋緑地3号面" result="1" season="2010" team="スーパーソニックス" time="11:00">
+    <batters>
+      <batter name="saito" order="1" position="6">
+        <batting raw="1-5F-O" />
+        <batting raw="4-5G-H1--2*" />
+        <batting raw="5-5G-E" />
+        <batting raw="7-K-O" />
+      </batter>
+      <batter name="itoh" order="2" position="5">
+        <batting raw="1-5G-O" />
+        <batting raw="4-B---1*" />
+        <batting raw="5-7F-O" />
+      </batter>
+      <batter name="oomi" order="3" position="2">
+        <batting raw="1-9G-H1--1" />
+        <batting raw="4-6F-O" />
+        <batting raw="5-5F-O" />
+      </batter>
+      <batter name="sakurai" order="4" position="7">
+        <batting raw="1-3F-O" />
+        <batting raw="4-5G-E-1-1*" />
+        <batting raw="6-5F-O" />
+      </batter>
+      <batter name="ekimura" order="5" position="8">
+        <batting raw="2-5G-O" />
+        <batting raw="4-K-O" />
+        <batting raw="6-7O-HR-1*" />
+      </batter>
+      <batter name="etoh" order="6" position="9">
+        <batting raw="2-9F-O" />
+        <batting raw="4-8G-H1-2-1*" />
+        <batting raw="6-2F-O" />
+      </batter>
+      <batter name="machiyama" order="7" position="4">
+        <batting raw="2-5F-O" />
+        <batting raw="4-5G-E*" />
+        <batting raw="6-6G-O" />
+      </batter>
+      <batter name="suzuki" order="8" position="@">
+        <batting raw="3-8F-O" />
+        <batting raw="4-7L-H1-1*" />
+        <batting raw="7-7L-H2" />
+      </batter>
+      <batter name="takemoto" order="9" position="3">
+        <batting raw="3-4G-O" />
+        <batting raw="4-8O-H2-2" />
+        <batting raw="7-7F-H1--1" />
+      </batter>
+      <batter name="nakajima" order="10" position="1">
+        <batting raw="3-K-O" />
+        <batting raw="4-5G-O" />
+        <batting raw="7-2F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="6" fieldFirst="1" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="1" fieldFirst="1" inning="6" />
+      <score batFirst="0" fieldFirst="0" inning="7" />
+      <score batFirst="7" fieldFirst="2" inning="total" />
+      <team batFirst="MonStars" fieldFirst="スーパーソニックス" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;[天気] 晴れ&lt;br&gt;[球審] 広沢&lt;br&gt;---&lt;br&gt;【スコア】&lt;br&gt;---&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="10/10/16" game="オーシャンリーグ決勝T準決勝" loc="岡野公園" result="-1" season="2010" team="オーシャンズ" time="11:00">
+    <batters>
+      <batter name="itoh" order="1" position="6">
+        <batting raw="1-5G-O" />
+        <batting raw="3-5G-O" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="takasu" order="2" position="4">
+        <batting raw="1-K-O" />
+        <batting raw="4-9F-O" />
+      </batter>
+      <batter name="oomi" order="3" position="2">
+        <batting raw="1-K-O" />
+        <batting raw="4-2F-O" />
+      </batter>
+      <batter name="sakurai" order="4" position="8">
+        <batting raw="2-B---1" />
+        <batting raw="4-K-O" />
+      </batter>
+      <batter name="etoh" order="5" position="7">
+        <batting raw="2-K-O" />
+        <batting raw="5-4G-O" />
+      </batter>
+      <batter name="suzuki" order="6" position="5">
+        <batting raw="2-4G-O" />
+        <batting raw="5-4G-O" />
+      </batter>
+      <batter name="takemoto" order="7" position="3">
+        <batting raw="2-1G-O" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="machiyama" order="8" position="9">
+        <batting raw="3-4F-O" />
+        <batting raw="6-4F-O" />
+      </batter>
+      <batter name="nakajima" order="9" position="1">
+        <batting raw="3-8F-O" />
+        <batting raw="6-K-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="5" fieldFirst="0" inning="1" />
+      <score batFirst="4" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="3" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="12" fieldFirst="0" inning="total" />
+      <team batFirst="オーシャンズ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;[天気] 晴れ(グランドは少しぬかるみあり)&lt;br&gt;[球審] 八木&lt;br&gt;---&lt;br&gt;【スコア】&lt;br&gt;---&lt;br&gt;4honda       2-K-O       5-K-O   6-B&lt;br&gt;---&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="10/10/23" game="オーシャンリーグ決勝T3位決定戦" loc="六郷橋緑地1号面" result="-1" season="2010" team="スクラッチ" time="09:00">
+    <batters>
+      <batter name="takasu" order="1" position="5">
+        <batting raw="1-B---1" />
+        <batting raw="3-K-O" />
+        <batting raw="5-9L-H1--1*" />
+      </batter>
+      <batter name="saito" order="2" position="6">
+        <batting raw="1-K-O" />
+        <batting raw="3-6G-O" />
+        <batting raw="5-B*" />
+      </batter>
+      <batter name="oomi" order="3" position="8">
+        <batting raw="1-6G-H1--1" />
+        <batting raw="3-9L-H1" />
+        <batting raw="5-8L-H2-2" />
+      </batter>
+      <batter name="sakurai" order="4" position="7">
+        <batting raw="1-K-O" />
+        <batting raw="3-K-O" />
+        <batting raw="5-1G-H1--1" />
+      </batter>
+      <batter name="itoh" order="5" position="1">
+        <batting raw="1-1G-O" />
+        <batting raw="4-5G-O" />
+        <batting raw="5-4G-O" />
+      </batter>
+      <batter name="suzuki" order="6" position="2">
+        <batting raw="2-K-O" />
+        <batting raw="4-6G-O" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="takemoto" order="7" position="3">
+        <batting raw="2-B" />
+        <batting raw="4-6G-O" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="hiro" order="8" position="9">
+        <batting raw="2-K-O" />
+        <batting raw="5-1F-O" />
+        <batting raw="6-6G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="1" inning="4" />
+      <score batFirst="2" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="2x" inning="6" />
+      <score batFirst="2" fieldFirst="3" inning="total" />
+      <team batFirst="MonStars" fieldFirst="スクラッチ" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;[天気] 晴れ&lt;br&gt;[球審] 福田&lt;br&gt;---&lt;br&gt;【スコア】&lt;br&gt;---&lt;br&gt;9osawa  1-K-O       3-5G-O     5-5G-H1-1&lt;br&gt;3tobah       2-8G-H1     4-5G-O 5-K-O&lt;br&gt;4jitsukawa     2-K-O      4-1F-O     6-8L-H1&lt;br&gt;---&lt;br&gt;2回竹本さんキャッチャーフライ時、鳥羽さんゲッツーでアウト&lt;br&gt;3回齋藤さんサードゴロ時、鈴木さん入れ替わりアウト&lt;br&gt;6回竹本さんショートゴロ時、實川さんセカンドで入れ替わりアウト&lt;br&gt;" date="10/12/11" game="練習試合" loc="世田谷区野毛町公園" result="-1" season="2010" team="テックメイツ" time="11:00">
+    <batters>
+      <batter name="suzuki" order="1" position="5">
+        <batting raw="1-1F-O" />
+        <batting raw="3-8L-H1" />
+        <batting raw="5-5F-O" />
+        <batting raw="6-B" />
+      </batter>
+      <batter name="machiyama" order="2" position="2">
+        <batting raw="1-K-O" />
+        <batting raw="3-8L-H1*" />
+        <batting raw="5-8L-H1*" />
+        <batting raw="6-1F-O" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-2F-H1--1" />
+        <batting raw="3-5G-O" />
+        <batting raw="5-7G-H1" />
+      </batter>
+      <batter name="sakurai" order="4" position="8">
+        <batting raw="1-4G-H1--1" />
+        <batting raw="3-8G-H1-1" />
+        <batting raw="5-2G-H1" />
+      </batter>
+      <batter name="takemoto" order="5" position="3">
+        <batting raw="2-2F-O" />
+        <batting raw="4-2F-O" />
+        <batting raw="6-6G-O" />
+      </batter>
+      <batter name="nakajima" order="6" position="1">
+        <batting raw="3-6G-O" />
+        <batting raw="5-3F-O" />
+        <batting raw="6-6F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="1" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="1" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="4" inning="4" />
+      <score batFirst="1" fieldFirst="2" inning="5" />
+      <score batFirst="0" fieldFirst="x" inning="6" />
+      <score batFirst="2" fieldFirst="7" inning="total" />
+      <team batFirst="MonStars" fieldFirst="テックメイツ" />
+    </scoreboard>
+  </game>
+</monstars>

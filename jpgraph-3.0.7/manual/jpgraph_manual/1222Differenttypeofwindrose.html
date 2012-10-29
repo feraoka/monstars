@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="1221Featureswindrose.html">
+<LINK REL="Next" HREF="1223Creatingandformattingwindrose.html">
+<STYLE TYPE="text/css">
+<!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+-->
+</STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="1221Featureswindrose.html">前へ</A> <A HREF="1223Creatingandformattingwindrose.html">次へ</A>
+<HR NOSHADE>
+<h3><A NAME="12_2_2">2.2 風配図の種類</A></h3>
+<p><br>
+風配図プロットには以下の２つの基本タイプがあります。 
+<ul>
+  <li><strong>コンパス・タイプ</strong> </li>
+</ul>
+<p>コンパス・タイプの風配図プロットでは、コンパス方位の軸数は16本、8本、４本の中から選べます。入力データの方位はプロット内のコンパス方位軸の1本ごとに限定されます。方位は方位軸の番号で特定します。<br>
+  方位軸のラベルの初期設定はコンパス方位の短縮形です。例えば「E」「N」「W」「S」。コンパス方位の初期設定名の変更の仕方はこれによりご想像がつくと思いますが、東、つまり3時の方位から時計と反対回りに番号がついています。</p>
+<ul>
+  <li><strong>フリー・タイプ</strong> </li>
+</ul>
+<p>フリー・ライプの風配図プロットは事前に設定された方位軸はありません。入力データのディレクション定数で任意の角度が設定できます。（例えば「NW」などのように指定できます。方位ゼロは東、つまり3時の方角です。<br>
+<br>
+  プロット・タイプは次の方法で指定します。</p>
+<ul>
+  <li>$aDirection は４つの初期設定のコンパス・タイプ定数から選びます。</li>
+</ul>
+<ul type="circle">
+  <ul type="circle">
+    <li>WINDROSE_TYPE4        は４本の方位軸のコンパス・タイプ</li>
+    <li>WINDROSE_TYPE8        は８本の方位軸のコンパス・タイプ</li>
+    <li>WINDROSE_TYPE16       は16本の方位軸のコンパス・タイプ</li>
+    <li>WINDROSE_TYPEFREE, フリー・タイプ。データ方位は任意の角度となり、事前に設定されたラベルや軸はありません。</li>
+  </ul>
+</ul>
+<p>  下図2.2_1から2.2_4は基本となるタイプ別風配図プロットを表しています。</p>
+<div style="margin-left: 2em;">
+<table width="120" border="1" align="center">
+  <tr>
+    <th>図2.2_1 WINDROSE_TYPE4<img align="center" src="windrose_type4.png" width="200" height="200"></th>
+    <th>図2.2_2 WINDROSE_TYPE8<img align="center" src="windrose_type8.png" width="200" height="200"></th>
+  </tr>
+  <tr>
+    <th>図2.2_3 WINDROSE_TYPE16<img align="center" src="windrose_type16.png" width="200" height="200"></th>
+    <th>図2.2_4 WINDROSE_TYPEFREE<img align="center" src="windrose_typefree.png" width="200" height="200"></th>
+  </tr>
+</table>
+</div>
+<p>次のコードでは16軸のコンパス方位がある風配図を指定しています。 </p>
+<DIV class="phpscript"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br />
+$wp&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">WindrosePlot</span><span style="color: #007700">(</span><span style="color: #0000BB">$data</span><span style="color: #007700">);<br />
+</span><span style="color: #0000BB">$wp</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">SetType</span><span style="color: #007700">(</span><span style="color: #0000BB">WINDROSE_TYPE16</span><span style="color: #007700">);&nbsp;<br />
+</span><span style="color: #0000BB">?&gt;<br />
+</span>
+</span>
+</code>
+</DIV>
+
+<p><div class="note"><b>注意::</b>
+風配図プロット・タイプが指定されていない場合、初期設定は16軸のコンパス方位となります。</div></p>
+<p><strong>入力データでタイプを指定：</strong></p>
+<p>入力データは配列の形をとります。配列関数への入力がそれぞれ一方位に対するデータを表す配列となります。入力データはある方位とバケットに属する全データに対するパーセント数と解釈します。つまり、すべての方位に対するすべての入力値の合計は100以下であることになります。データが損失した場合は100未満になります。</p>
+<p>最初のバケット、「バケット0(ゼロ)」は0値、即ちデータのその部分は計測無し（または無風状態）を指定します。無風状態では方位も存在しないため、バケット0はすべて内側の円にまとめて表示されます。</p>
+<p>凡例に表示される初期設定の各バケット境界値は次の通りです。</p>
+<p>0-1, 1-2, 2-3, 3-5, 5-6, 6-10, 10-13.5, 13-99<br>
+0-1, 1-2, 2-3, 3-5, 5-6, 6-10, 10-13, 13-99</p>
+<p>最初の要素「0-1」は0から1示度数のパーセント値を指定しており、風配図プロットの中心に置かれます。次の要素「1-2」は１から２パーセントの測定値、「2-3」は２から３パーセントの測定値…となります。</p>
+<p>方位はその要素を特定するカギとなります。方位の特定方法は次のいずれかで行います。</p>
+<ul>
+  <li>  「N」「SN」など、表示されたコンパス方位を指定するStringを使う。</li>
+  <li>配列の使用例：<br />
+<code><span style="color: #000000"> $data&nbsp;=&nbsp;array&nbsp;(&nbsp;array('E'&nbsp;=&gt;&nbsp;&lt;east_bucket0&gt;,&lt;east_bucket1&gt;&nbsp;...&nbsp;&lt;east_bucketN&gt;&nbsp;),<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array('ESE'&nbsp;=&gt;&nbsp;&lt;eastsoutheast_bucket0&gt;,&nbsp;...&nbsp;&lt;eastsoutheast_bucketN&gt;&nbsp;),&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;....<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array('NE'&nbsp;=&gt;&nbsp;&lt;northeast_bucket0&gt;,&nbsp;...&nbsp;&lt;northeast_bucketN&gt;&nbsp;),&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array('ENE'&nbsp;=&gt;&nbsp;&lt;eastnortheast_bucket0&gt;,&nbsp;...&nbsp;&lt;eastnortheast_bucketN&gt;&nbsp;));</span> </code>
+</li>
+</ul>
+<ul>
+  <li>    東の方位から時計と反対回りに軸を表示する通常のプロットに対し、0から15の番号（整数）を使う。表示されている軸だけを数えることに注意。ゼロは東の方位を指定。<br>
+    <br />
+<code><span style="color: #000000"> $data&nbsp;=&nbsp;array&nbsp;(&nbsp;array(0&nbsp;=&gt;&nbsp;&lt;east_bucket0&gt;,&lt;east_bucket1&gt;&nbsp;...&nbsp;&lt;east_bucketN&gt;&nbsp;),<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(1&nbsp;=&gt;&nbsp;&lt;eastsoutheast_bucket0&gt;,&nbsp;...&nbsp;&lt;eastsoutheast_bucketN&gt;&nbsp;),&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;....<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(2&nbsp;=&gt;&nbsp;&lt;northeast_bucket0&gt;,&nbsp;...&nbsp;&lt;northeast_bucketN&gt;&nbsp;),&nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(3&nbsp;=&gt;&nbsp;&lt;eastnortheast_bucket0&gt;,&nbsp;...&nbsp;&lt;eastnortheast_bucketN&gt;&nbsp;));</span> </code></li><br />
+  <li>    角度が「34.5」のような数値の場合、分数ではなくString変数として認識できる小数点を指定する必要があります。小数であればライブラリは有効な角度として自動的に認識し、グラフ上で想定通りに扱います。（これは浮動小数点型は連想配列の中で使用できないためです。）<br>
+    <br>
+<code><span style="color: #000000"> $data&nbsp;=&nbsp;array&nbsp;(&nbsp;array('12.5'&nbsp;=&gt;&nbsp;&lt;bucket0&gt;,&lt;bucket1&gt;&nbsp;...&nbsp;&lt;bucketN&gt;&nbsp;),<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array('22.1'&nbsp;=&gt;&nbsp;&lt;bucket0&gt;,&nbsp;...&nbsp;&lt;bucketN&gt;&nbsp;),&nbsp;<br /> </span> </code></ul>
+<p>同じデータセットの中ではスタイルを混合することも可能です。<br>
+</p>
+
+<p><div class="note"><b>警告:</b>
+ライブラリは、すべてのバケット値の合計が100％より大きいかどうか以外はデータの検証を行いません。指定されたデータが理にかなったものであるかはブラウザでの確認が必要です。</div></p>
+<p>通常のコンパス方位風配図プロットを使用中に表示できない角度を指定するとそれを知らせるエラーメッセージが出ます。</p>
+<p>この機能がどう働くかを下記の例で説明します。</p>
+<p><strong>例2.2_1 通常の風配図コンパス方位での入力データの例</strong></p>
+<p>(16本の軸がすべて表示されていると仮定。)　</p>
+<DIV class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">=&nbsp;array(&nbsp;</span><span style="color: #DD0000">'N'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;array(</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">6</span><span style="color: #007700">)&nbsp;);</span><span style="color: #0000BB"></span> </span> </code></DIV>
+<p>このデータ配列では「北」という１つの方位のみ指定しており、バケット値の範囲が0では2％、0～1では5％、1～2では6％を表します。
+</p>
+<p>(16本の軸がすべて表示されていると仮定。)　</p>
+<DIV class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">=&nbsp;array(&nbsp;</span><span style="color: #0000BB">1&nbsp;</span><span style="color: #007700">=&gt;&nbsp;array(</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">6</span><span style="color: #007700">),&nbsp;</span><span style="color: #0000BB">3&nbsp;</span><span style="color: #007700">=&gt;&nbsp;&nbsp;array(</span><span style="color: #0000BB">6</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">),&nbsp;</span><span style="color: #DD0000">'NW'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;array(</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">)&nbsp;)</span><span style="color: #0000BB"></span> </span> </code></code>
+</DIV>
+<p>このデータ配列では３つの方位を指定しています。ご覧のように、方位を示す軸番号や「NW」のような方位名を混合させることが可能です。しかし同時に使用するときはひとつの方法に決めておくほうが明確でいいでしょう。</p>
+<p><strong>例2.2_2　フリー風配図プロット用の入力データ例</strong></p>
+<p>フリータイプの特別な点は16本のコンパス方位に限らず任意の方位を指定できることです。 </p>
+<DIV class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">=&nbsp;array(&nbsp;</span><span style="color: #0000BB">10&nbsp;</span><span style="color: #007700">=&gt;&nbsp;array(</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">6</span><span style="color: #007700">),&nbsp;</span><span style="color: #0000BB">24&nbsp;</span><span style="color: #007700">=&gt;&nbsp;&nbsp;array(</span><span style="color: #0000BB">6</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">),&nbsp;</span><span style="color: #0000BB">137&nbsp;</span><span style="color: #007700">=&gt;&nbsp;array(</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">)&nbsp;)</span><span style="color: #0000BB"></span> </span> </code></code>
+
+</DIV>
+<p>このデータ配列では、10度、24度、137度の3つの方位のバケットの数値を指定しています。 </p>
+<DIV class="phpscript">
+<code><span style="color: #000000"> <span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">=&nbsp;array(&nbsp;</span><span style="color: #DD0000">'21.&nbsp;5'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;array(</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">5</span><span style="color: #007700">,</span><span style="color: #0000BB">6</span><span style="color: #007700">),&nbsp;</span><span style="color: #DD0000">'N'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;array(</span><span style="color: #0000BB">6</span><span style="color: #007700">,</span><span style="color: #0000BB">3</span><span style="color: #007700">),&nbsp;</span><span style="color: #0000BB">137&nbsp;</span><span style="color: #007700">=&gt;&nbsp;array(</span><span style="color: #0000BB">3</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">,</span><span style="color: #0000BB">2</span><span style="color: #007700">)&nbsp;)</span><span style="color: #0000BB"></span> </span> </code></DIV>
+<p>このデータ配列は、21.5度、「北」（90度）、137度の3方位の測定値を指定しています。分数になりそうな数値を持つ角度であれば「21.5」のようにString値として扱われる角度を指定します。それによってライブラリが自動的に適切に取り扱います。</p>
+<p>&nbsp;</p>
+<hr noshade>
+<A HREF="toc.html">目次</A> <A HREF="1221Featureswindrose.html">前へ</A><a href="1223Creatingandformattingwindrose.html"> 次へ</a>
+</BODY>
+</HTML>

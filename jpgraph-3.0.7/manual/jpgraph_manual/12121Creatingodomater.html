@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="1212Creatingandformattingodomater.html">
+<LINK REL="Next" HREF="1213Samplesodometer.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+<style type="text/css">
+<!--
+.style1 {color: #000000}
+-->
+</style></HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="1212Creatingandformattingodomater.html">前へ</A> <A HREF="1213Samplesodometer.html">次へ</A>
+<HR NOSHADE>
+<h4><A NAME="12_1_2_1">1.2.1 基本オドメータを作成する</A></h4>
+<P>初期設定値のみを使用した一番簡単なオドメータのスクリプトは下記のようになります。</P>
+<p align="left"><strong>例1.2.1&nbsp;基本オドメータ</strong></p>
+<DIV class="phpscript"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #FF8000">//&nbsp;content="text/plain;&nbsp;charset=utf-8"<br />
+</span><span style="color: #007700">require_once&nbsp;(</span><span style="color: #DD0000">"jpgraph/jpgraph.php"</span><span style="color: #007700">);<br />
+require_once&nbsp;(</span><span style="color: #DD0000">"jpgraph/jpgraph_odo.php"</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;新規オドメータ・グラフ・エリアを作成。(幅250,&nbsp;高さ200ピクセル)<br />
+</span><span style="color: #0000BB">$graph&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">OdoGraph</span><span style="color: #007700">(</span><span style="color: #0000BB">250</span><span style="color: #007700">,</span><span style="color: #0000BB">140</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;オドメータを作成しグラフ・エリアに追加。<br />
+//&nbsp;初期設定によりスケール（目盛り）は0から100。<br />
+</span><span style="color: #0000BB">$odo&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Odometer</span><span style="color: #007700">();<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;オドメータの指針が指す値を設定。<br />
+</span><span style="color: #0000BB">$odo</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">needle</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #0000BB">30</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;オドメータをグラフ・エリアに追加。<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Add</span><span style="color: #007700">(</span><span style="color: #0000BB">$odo</span><span style="color: #007700">);<br />
+&nbsp;<br />
+</span><span style="color: #FF8000">//&nbsp;...&nbsp;最後に、完成した画像をブラウザに返す。<br />
+</span><span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Stroke</span><span style="color: #007700">();<br />
+&nbsp;<br />
+</span><span style="color: #0000BB">?&gt;<br />
+</span>
+</span>
+</code>
+</DIV>
+</P>
+</P>
+
+<P><DIV class="example">
+<A href="example_src/frame_odotutex00.html" target="_blank"><img src="odotutex00.png" alt="" /></A><BR>
+<B>図1.2.1</B> 基本オドメータ<A href="example_src/frame_odotutex00.html" target="_blank">[ソース]</A>
+</DIV></P>
+
+<P></P>
+<p align="left">オドメータのサイズは与えられた画像に最適に適合するよう自動的に設定されます。オドメータのサイズはどのようなオドメータ・キャプション、グラフ・タイトル、グラフ・キャプションにでも適応するように自動設定されるので、手動で調整する必要な滅多にありません。 </p>
+<P>しかし、手動で半径の絶対ピクセル数か画像サイズに対する比率でオドメータのサイズを手動設定することも可能です。</P>
+<p align="left">オドメータの半径に値を設定するには次のメソッドを使います。 </p>
+<ul type="disc">
+  <li>OdoPlot::SetSize($aRadius) </li>
+</ul>
+<P>OdoGraphクラスは他のすべての基本グラフの機能を受け継いでいるので、コードを追加することで、例えば上の図のオドメータ・グラフにタイトルを付けることも可能です。</P>
+<DIV class="phpscript"><code><span style="color: #000000"> <span style="color: #0000BB">$graph</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">title</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">Set</span><span style="color: #007700">(</span><span style="color: #DD0000">'A&nbsp;suitable&nbsp;graph&nbsp;title'</span><span style="color: #007700">);</span><span style="color: #0000BB"></span> </span> </code>
+</DIV>
+<P>
+この後の章ではオドメータ・グラフのサイズや形、見栄えを変更するためのオプションを見ていきます。</P>
+<P><DIV class="note"><B>Tips:</B>オドメータは他のすべての基本グラフの機能を有しているので、画像キャッシュなどもサポートしています。</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="1212Creatingandformattingodomater.html">前へ</A> <A HREF="1213Samplesodometer.html">次へ</A>
+</BODY>
+</HTML>

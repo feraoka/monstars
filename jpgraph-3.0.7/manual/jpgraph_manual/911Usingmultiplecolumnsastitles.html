@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="910Groupingactivities.html">
+<LINK REL="Next" HREF="9111Addingatitleforthecolumns.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="910Groupingactivities.html">前へ</A> <A HREF="9111Addingatitleforthecolumns.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="9_11">9.11 タイトルに複数行を設定する</A></H2>
+<P> ガントバーに1つのタイトルを表示するだけでなく、タイトルやスタート日、終了日、継続時間といったものを表示したいということがしばしば起こります。これまで、作業を簡単化するために、それぞれのアクティビティに対して1つのタイトルのみを表示してきました。そこで、ここではグラフ列へアイコンを加えたときと同様に、ガントチャートに任意の数の文字列をタイトルとして指定する方法を説明しましょう。</P>
+<P> まず最初に、私たちがこれから行うことをイメージしやすくするため、1つの例を示します。<DIV class="example">
+<BR> <A href="exframes/frame_gantticonex1.html" target="blank"><IMG border="0"
+HEIGHT="197" src="gantticonex1.png" WIDTH="590"></A> <BR><B>図 164:</B> 複数の列を使用したガントチャート <A href="exframes/frame_gantticonex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> 複数行を使用するためには、２つのステップがあります。まず最初に、タイトル（名前、色、フォントなど）を設定し、その後、個々のバーに対してタイトル行を加える必要があります。</P>
+<P> タイトル行を設定するためには、<I>Activity information </I>プロパティを使用して、作業する必要があります。以下のコードは、その設定方法を示したものです。 <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">scale</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">actinfo</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColTitles</FONT><FONT color="#007700">( <BR>    array(</FONT><FONT color="#DD0000">'Note'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">'Task'</FONT><FONT color="#007700">,</FONT><FONT
+color="#DD0000">'Duration'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">'Start'</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">'Finish'</FONT><FONT color="#007700">),array(</FONT><FONT color="#0000BB">30</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">100</FONT><FONT
+color="#007700">));</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV>
+</P>
+<P>ここで２つのことに気づくでしょう。はじめに、1つの配列を使用してタイトルを指定しました。また、30と100という数を用いて2番目の配列も指定しました。この配列は、この場合最初の２つのカラムの幅の最小値を指定するオプションの配列です。デフォルトでは、カラムは最大長のテキスト文字列を全て含むことができる長さに設定されます。しかし、見た目を整えるために最小幅を大きくしたいと思うことがあるかもしれません。これが私たちがここで最初の２つのカラムに対して行ったことです。</P>
+<P> さらに、背景の色やスタイル、縦の仕切りグリッドラインの色も調節することができます。これまでのイメージの中では、次の行を使用しました。 <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT
+color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">actinfo</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">SetBackgroundColor</FONT><FONT
+color="#007700">(</FONT><FONT color="#DD0000">'green:0.5@0.5'</FONT><FONT
+color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">actinfo</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetFont</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">FF_ARIAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">FS_NORMAL</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">10</FONT><FONT
+color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">actinfo</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">vgrid</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">SetStyle</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'solid'</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$graph</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">scale</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">actinfo</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">vgrid</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">SetColor</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'gray'</FONT><FONT color="#007700">);</FONT><FONT
+color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> また、ライブラリ内にある線に対する別のフォーマットの場合と同様に、グリッドラインのスタイルを&rdquo;破線（dashed）&rdquo;や&rdquo;ドット(dotted)&rdquo;、&rdquo;長い破線(longdashed)&rdquo;にすることも可能です。また、タイトル内に小さく3D効果をつけることも可能です。これはデフォルトで有効になっています。以下の文を使用すると、簡単に3D効果を付け加えることが出来ます。 <DIV class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $graph</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">scale</FONT><FONT
+color="#007700">-&gt;</FONT><FONT color="#0000BB">actinfo</FONT><FONT color="#007700">-&gt;</FONT><FONT color="#0000BB">SetStyle</FONT><FONT color="#007700">(</FONT><FONT
+color="#0000BB">ACTINFO_2D</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> タイトル内の縦の仕切り線の色を調節するには、SetColor()メソッドを次のように使用します。 &quot;$graph-&gt;scale-&gt;actinfo-&gt;SetColor('navy');&quot;.</P>
+<P> 次にすることは、実際にカラムを埋めることです。これはもちろん、グラフにアクティビティバーを加える際に実行されます。以前にカラムを使用していなかったとき、私たちはひとつの文字列をタイトルとして使用していました。この文字列を単に配列に取り替えることによって、カラムの内容を指定することができます。</P>
+<P> 例えば、上の例のようなガントバーを作成する2カラムのタイトルを指定する場合、数種類のバーを作成するので、よりよいコーディング習慣のためにこれらすべてを配列へ入れます。</P>
+<P> 通常のテキストに加え、画像や、先に定義した使用可能なアイコンを付け加えることもできます。カラムへそれらを加えるには、はじめに<I>IconImage() </I>のインスタンスを作成し、次にテキストのかわりにそれらのインスタンスを指定します。そこで、以前のコードの中で、最初のカラムに&rdquo;オープンフォルダー&rdquo;の画像を挿入したい場合、以下のように文を変更します。 <DIV
+class="phpscript"><CODE><FONT color="#000000"> <FONT color="#0000BB"> $iconopen </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">IconImage</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">GICON_FOLDEROPEN</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">0.6</FONT><FONT color="#007700">); <BR></FONT><FONT color="#0000BB">$title2</FONT><FONT color="#007700">=</FONT><FONT
+color="#DD0000">&quot;&quot;</FONT><FONT color="#007700">; <BR></FONT><FONT color="#0000BB">$bar </FONT><FONT color="#007700">= new </FONT><FONT color="#0000BB">GanttBar</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">0</FONT><FONT color="#007700">,array(</FONT><FONT
+color="#0000BB">$iconopen</FONT><FONT color="#007700">,</FONT><FONT color="#0000BB">$title2</FONT><FONT color="#007700">),</FONT><FONT color="#DD0000">&quot;2003-11-23&quot;</FONT><FONT color="#007700">,</FONT><FONT color="#DD0000">&quot;2003-12-05&quot;</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 使用可能な内蔵アイコンは、以下の通りです。</P>
+<UL>
+<LI>GICON_WARNINGRED</LI>
+<LI>GICON_TEXT</LI>
+<LI>GICON_ENDCONS</LI>
+<LI>GICON_MAIL</LI>
+<LI>GICON_STARTCONS</LI>
+<LI>GICON_CALC</LI>
+<LI>GICON_MAGNIFIER</LI>
+<LI>GICON_LOCK</LI>
+<LI>GICON_STOP</LI>
+<LI>GICON_WARNINGYELLOW</LI>
+<LI>GICON_FOLDEROPEN</LI>
+<LI>GICON_FOLDER</LI>
+<LI>GICON_TEXTIMPORTANT</LI>
+</UL>
+<P> さらに、引数を文字列として指定するならば、あなたが用意した画像を使用することもできます。 <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB"> $myicon </FONT><FONT color="#007700">= </FONT><FONT
+color="#0000BB">IconImage</FONT><FONT color="#007700">(</FONT><FONT color="#DD0000">'myicon.png'</FONT><FONT color="#007700">);</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 奇妙に思えるかもしれませんが、<I>IconImage()</I> の呼び出しの際の2番目の引数は、画像の大きさを調節するために使用するオプションの値です。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="910Groupingactivities.html">前へ</A> <A HREF="9111Addingatitleforthecolumns.html">次へ</A>
+</BODY>
+</HTML>

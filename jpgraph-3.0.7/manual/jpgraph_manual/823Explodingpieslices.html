@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="822Creating3Dpieplots.html">
+<LINK REL="Next" HREF="824Specifyingandadjustinglabelsonpieplots.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="822Creating3Dpieplots.html">前へ</A> <A HREF="824Specifyingandadjustinglabelsonpieplots.html">次へ</A>
+<HR NOSHADE>
+<H3><A NAME="8_2_3">8.2.3 円スライスを抜き出す</A></H3>
+<P> 円プロットの一部のスライスを抜き出すことで、その部分を目立たせることができます。JpGraph では、2D および 3D 円プロットの両方で、任意の数のスライスを抜き出すことができます。 </P>
+<P> スライスを抜き出すには、<A href="../ref/PiePlot.html#_PIEPLOT_EXPLODE">Explode()</A> メソッドと<A href="../ref/PiePlot.html#_PIEPLOT_EXPLODESLICE">ExplodeSlice()</A> メソッドを使用します。前者は複数個のスライスを抜き出すときに使用し、後者は 1 個のスライスだけを抜き出すときに便利な方法です。 </P>
+<P> 例として、1 個のスライスをデフォルトの形式で抜き出すには、以下の通り記述します。   <DIV class="phpscript"><CODE><FONT color="#000000"><FONT color="#0000BB">&nbsp;$pieplot</FONT><FONT color="#007700">-&gt;</FONT><FONT
+color="#0000BB">ExplodeSlice</FONT><FONT color="#007700">(</FONT><FONT color="#0000BB">1</FONT><FONT color="#007700">)</FONT><FONT color="#0000BB"></FONT></FONT></CODE></DIV></P>
+<P> 上記の指定では、2 番目のスライス (スライスは 0 番から順次番号付けされます) をデフォルトの距離だけ抜き出します。これにより、以下の結果が得られます。<DIV class="example">
+<BR> <A href="exframes/frame_example27.2.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example27.2.png" WIDTH="300"></A> <BR><B>図 129：</B> スライスを抜き出す <A href="exframes/frame_example27.2.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_example27.3.html" target="blank"><IMG border="0"
+HEIGHT="200" src="example27.3.png" WIDTH="330"></A> <BR><B>図 130：</B> 3D スライスを抜き出す <A href="exframes/frame_example27.3.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P></P>
+<P> すべてのスライスを一度に抜き出すには、<A href="../ref/PiePlot.html#_PIEPLOT_EXPLODEALL">PiePlot::ExplodeAll()</A> メソッドを使用します。複数のスライスを抜き出すには、<A href="../ref/PiePlot.html#_PIEPLOT_EXPLODE">PiePlot::Explode()</A> メソッドを使用して、適切な配列を引数で手渡します。</P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="822Creating3Dpieplots.html">前へ</A> <A HREF="824Specifyingandadjustinglabelsonpieplots.html">次へ</A>
+</BODY>
+</HTML>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="731Usinglineerrorplots.html">
+<LINK REL="Next" HREF="75Fieldplots.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="731Usinglineerrorplots.html">前へ</A> <A HREF="75Fieldplots.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="7_4">7.4 散布プロット</A></H2>
+<P> 散布プロットは非常に簡単に作成できます。X 座標と Y 座標で指定された点をプロットします。ライン プロットと同様、イメージ上には各ポイントが描画されます。また、それぞれのポイントを線分で結ぶこともできます。<DIV class="note"><B>注意:</B> X、Y プロットとして利用できるのは散布プロットだけですが、バー プロットとライン プロットでも X、Y 座標を使用して位置を決定できます。</DIV></P>
+<P> 通常の使用では X 座標を指定しますが、X スケールにテキスト スケールを使用することもできます。これは最後に説明する、インパルス形式の散布プロットを使用する際に便利です。 </P>
+<P> 散布プロットは jpgraph_scatter.php をインクルードして、ScatterPlot() のインスタンスを作成することで作成できます。また、マーカーを指定するには mark 変数を使用します。デフォルトでは、小さな円が使用されます。</P>
+<P> 散布プロットを作成するには、インスタンスを生成する必要があります。</P>
+<P> デフォルトの値を使用する、簡単な例を下に表示します。</P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_scatterex1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="scatterex1.png" WIDTH="300"></A> <BR><B>図 61:</B>簡単な散布プロット <A href="exframes/frame_scatterex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P>マーカーのサイズやカラーを設定することで、異なった効果を得られます。<DIV class="example">
+<BR> <A href="exframes/frame_scatterex2.html" target="blank"><IMG border="0"
+HEIGHT="200" src="scatterex2.png" WIDTH="300"></A> <BR><B>図 62:</B>マーカーを独自に設定した散布プロット <A href="exframes/frame_scatterex2.html" target="blank">[ソース]</A>
+ 
+<P></P>
+</DIV></P>
+<P> また、インパルス形式の散布プロットを作成できます。これは、通常の散布プロットとは異なり、Y = 0 のベース ラインからラインが引かれます。散布プロットをインパルス形式に変更する場合は、<A href="../ref/ScatterPlot.html#_SCATTERPLOT_SETIMPULS">SetImpuls()</A> メソッドを使用します。 </P>
+<P> インパルス形式のプロットは、デジタル信号処理の際、信号を描画する時に使用されます。以下に、簡単なインパルス形式のプロットを紹介します。 <DIV class="example">
+<BR> <A href="exframes/frame_impulsex1.html" target="blank"><IMG border="0"
+HEIGHT="200" src="impulsex1.png" WIDTH="300"></A> <BR><B>図 63:</B>簡単なインパルス形式のプロット <A href="exframes/frame_impulsex1.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P> 次に、インパルス形式のプロットのカラーや線幅を設定する方法を紹介します。<DIV class="example">
+<BR> <A href="exframes/frame_impulsex2.html" target="blank"><IMG border="0"
+HEIGHT="200" src="impulsex2.png" WIDTH="300"></A> <BR><B>図 64:</B>カスタマイズしたインパルス形式のプロット <A href="exframes/frame_impulsex2.html"
+target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="note"><B>注意:</B>インパルス形式のプロットでマークを使用しない場合、マークの形式として -1 を指定することで、インパルスのラインだけが描画されます。この方法でのみ、インパルス線を描くことができます。</DIV></P>
+<P> 最後に、より高度なインパルス プロットを掲載します。このグラフでは、Y 軸のラベルの書式を指定し、軸の位置も調節しています。 <DIV class="example">
+<BR> <A href="exframes/frame_impulsex3.html" target="blank"><IMG border="0"
+HEIGHT="200" src="impulsex3.png" WIDTH="400"></A> <BR><B>図 65:</B>このインパルス プロットでは、X 軸を下部に配置し、Y 軸の書式を変更しています <A href="exframes/frame_impulsex3.html" target="blank">[ソース]</A>
+<P></P>
+</DIV></P>
+<P><DIV class="example">
+<BR> <A href="exframes/frame_impulsex4.html" target="blank"><IMG border="0"
+HEIGHT="250" src="impulsex4.png" WIDTH="500"></A> <BR><B>図 66:</B>このインパルス プロットでは、ドット ライン形式のライン プロットも追加しています <A href="exframes/frame_impulsex4.html" target="blank">[ソース]</A> 
+<P></P>
+</DIV></P>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="731Usinglineerrorplots.html">前へ</A> <A HREF="75Fieldplots.html">次へ</A>
+</BODY>
+</HTML>
