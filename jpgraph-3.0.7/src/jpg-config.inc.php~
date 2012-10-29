@@ -39,7 +39,7 @@
 // define('TTF_DIR','/usr/share/fonts/truetype/');
 // define('MBTTF_DIR','/usr/share/fonts/truetype/');
 //DEFINE("MBTTF_DIR","../fonts/");
-if (isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] === "monstars.lisfactory.com") {
+if ($_SERVER['HTTP_HOST'] === "monstars.lisfactory.com") {
   DEFINE("MBTTF_DIR","/home/pecom/www/monstars/fonts/");
 } else {
   DEFINE("MBTTF_DIR","/Users/monstars0/monstars/fonts/");
