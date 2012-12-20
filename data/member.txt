@@ -40,3 +40,4 @@ kojiro,光次郎,Kojiro
 okiyama,沖山,Okiyama
 etoh,衛藤,Etoh
 saito,斉藤,Saito
+hirose,広瀬,Hirose
