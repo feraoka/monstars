@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="utf8" ?>
+<monstars>
+  <game comment="&lt;br&gt;&lt;br&gt;鈴木さん 1勝(3回) 【通算】1勝&lt;br&gt;中島さん (1回)  【通算】&lt;br&gt;木村さん 1S(1回) 【通算】1S&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="13/04/13" result="1" season="2013" team="Flipchips">
+    <batters>
+      <batter name="ekimura" order="1" position="5">
+        <batting raw="1-K-O" />
+        <batting raw="2-5G-E-1" />
+        <batting raw="3-5G-O" />
+        <batting raw="4-K-E" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="y-osa" order="2" position="7">
+        <batting raw="1-7F-O" />
+        <batting raw="2-5G-O" />
+        <batting raw="3-K-O" />
+        <batting raw="5-7G-H1" />
+        <batting raw="5-6F-O" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-7F-H1--1" />
+        <batting raw="3-1G-E--1*" />
+        <batting raw="4-5G-E--1*" />
+        <batting raw="5-B*" />
+      </batter>
+      <batter name="sakurai" order="4" position="2">
+        <batting raw="1-D" />
+        <batting raw="3-7O-H3-1*" />
+        <batting raw="4-6G-O" />
+        <batting raw="5-B*" />
+      </batter>
+      <batter name="suzuki" order="5" position="1">
+        <batting raw="1-5G-O" />
+        <batting raw="3-D*" />
+        <batting raw="4-8G-H1-1-2*" />
+        <batting raw="5-1G-O*" />
+      </batter>
+      <batter name="nakajima" order="6" position="3">
+        <batting raw="2-K-O" />
+        <batting raw="3-3G-E-1-1*" />
+        <batting raw="4-B--1*" />
+        <batting raw="5-9L-H1-1" />
+      </batter>
+      <batter name="takemoto" order="7" position="9">
+        <batting raw="2-8G-H1*" />
+        <batting raw="3-K-O" />
+        <batting raw="4-K-O-1" />
+        <batting raw="5-4G-O-1*" />
+      </batter>
+      <batter name="hazedon" order="8" position="8">
+        <batting raw="2-8L-H1" />
+        <batting raw="3-5G-E" />
+        <batting raw="4-6G-H1-1-1*" />
+        <batting raw="5-7G-H1-1" />
+      </batter>
+      <batter name="hiro" order="9" position="4">
+        <batting raw="2-D" />
+        <batting raw="3-B" />
+        <batting raw="4-6F-H1-1" />
+        <batting raw="5-9F-E-1" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="1" inning="1" />
+      <score batFirst="1" fieldFirst="0" inning="2" />
+      <score batFirst="4" fieldFirst="0" inning="3" />
+      <score batFirst="4" fieldFirst="2" inning="4" />
+      <score batFirst="4" fieldFirst="0" inning="5" />
+      <score batFirst="13" fieldFirst="3" inning="total" />
+      <team batFirst="MonStars" fieldFirst="フリップチップス" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;鈴木さん 1勝(3回) 【通算】2勝&lt;br&gt;中島さん 1S(2回) 【通算】1S&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="13/04/20" result="1" season="2013" team="96ers">
+    <batters>
+      <batter name="hirose" order="1" position="9">
+        <batting raw="1-7G-H1--1*" />
+        <batting raw="2-6F-O" />
+        <batting raw="4-B---1*" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="etoh" order="2" position="8">
+        <batting raw="1-B*" />
+        <batting raw="2-8F-O" />
+        <batting raw="4-B*" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-D*" />
+        <batting raw="3-1F-O" />
+        <batting raw="4-7G-H1*" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="sakurai" order="4" position="2">
+        <batting raw="1-1G-E-1-1" />
+        <batting raw="3-B---1*" />
+        <batting raw="4-B--1" />
+        <batting raw="6-1G-O" />
+      </batter>
+      <batter name="suzuki" order="5" position="1">
+        <batting raw="1-6F-O" />
+        <batting raw="3-9F-H1--1*" />
+        <batting raw="4-7G-H1-2-1" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="y-osa" order="6" position="7">
+        <batting raw="1-8F-G-1" />
+        <batting raw="3-8G-H1-2" />
+        <batting raw="4-6F-O" />
+      </batter>
+      <batter name="nakajima" order="7" position="3">
+        <batting raw="1-6G-E-1-1" />
+        <batting raw="3-1G-O" />
+        <batting raw="5-4F-O" />
+      </batter>
+      <batter name="sano" order="8" position="5">
+        <batting raw="1-B" />
+        <batting raw="3-K-O" />
+        <batting raw="5-8F-H1" />
+      </batter>
+      <batter name="hiro" order="9" position="4">
+        <batting raw="1-9F-O" />
+        <batting raw="4-K-O" />
+        <batting raw="5-9F-O" />
+      </batter>
+      <batter name="takemoto" order="10" position="@">
+        <batting raw="2-5F-O" />
+        <batting raw="4-9F-O" />
+        <batting raw="5-8G-H1" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="3" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="1" inning="2" />
+      <score batFirst="2" fieldFirst="0" inning="3" />
+      <score batFirst="3" fieldFirst="1" inning="4" />
+      <score batFirst="0" fieldFirst="1" inning="5" />
+      <score batFirst="0" fieldFirst="1x" inning="6" />
+      <score batFirst="8" fieldFirst="4" inning="total" />
+      <team batFirst="MonStars" fieldFirst="96ers" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;鈴木さん 1敗(6回) 【通算】2勝1敗&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="13/04/27" result="-1" season="2013" team="records">
+    <batters>
+      <batter name="hirose" order="1" position="9">
+        <batting raw="1-K-O" />
+        <batting raw="3-8F-O" />
+        <batting raw="5-K-O" />
+        <batting raw="7-5G-O" />
+      </batter>
+      <batter name="etoh" order="2" position="8">
+        <batting raw="1-1G-O" />
+        <batting raw="4-6F-O" />
+        <batting raw="5-1G-O" />
+        <batting raw="7-K-O" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-5G-O" />
+        <batting raw="4-5G-E--1" />
+        <batting raw="6-9F-E--1*" />
+        <batting raw="7-K" />
+      </batter>
+      <batter name="sakurai" order="4" position="2">
+        <batting raw="2-K-O" />
+        <batting raw="4-1G-O" />
+        <batting raw="6-1G-E*" />
+        <batting raw="7-9F-H2" />
+      </batter>
+      <batter name="y-osa" order="5" position="7">
+        <batting raw="2-6G-O" />
+        <batting raw="4-1F-O" />
+        <batting raw="6-8F-H1-1*" />
+        <batting raw="7-5G-O" />
+      </batter>
+      <batter name="takemoto" order="6" position="3">
+        <batting raw="2-9G-H1" />
+        <batting raw="5-9G-H1*" />
+        <batting raw="6-B" />
+      </batter>
+      <batter name="nakajima" order="7" position="5">
+        <batting raw="2-1G-O" />
+        <batting raw="5-9L-H1" />
+        <batting raw="6-9F-O" />
+      </batter>
+      <batter name="hiro" order="8" position="4">
+        <batting raw="3-4G-O" />
+        <batting raw="5-1G-E" />
+        <batting raw="6-B" />
+      </batter>
+      <batter name="suzuki" order="9" position="1">
+        <batting raw="3-4F-H1" />
+        <batting raw="5-9G-O-1" />
+        <batting raw="6-K-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="3" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="1" inning="4" />
+      <score batFirst="3" fieldFirst="1" inning="5" />
+      <score batFirst="1" fieldFirst="0" inning="6" />
+      <score batFirst="0" fieldFirst="x" inning="7" />
+      <score batFirst="4" fieldFirst="5" inning="total" />
+      <team batFirst="MonStars" fieldFirst="レコーズ" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;鈴木さん 1敗(4回2/3) 【通算】2勝2敗&lt;br&gt;中島さん (1回1/3)  【通算】1S&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="13/05/11" result="-1" season="2013" team="tekmates">
+    <batters>
+      <batter name="hirose" order="1" position="8">
+        <batting raw="1-K-O" />
+        <batting raw="2-K-O" />
+        <batting raw="4-K-O" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="etoh" order="2" position="7">
+        <batting raw="1-4G-H1--2*" />
+        <batting raw="3-5F-O" />
+        <batting raw="5-7L-O" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-D---1" />
+        <batting raw="3-5G-O" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="sakurai" order="4" position="2">
+        <batting raw="1-6G-E" />
+        <batting raw="3-8L-H1" />
+        <batting raw="5-6G-O" />
+      </batter>
+      <batter name="y-osa" order="5" position="3">
+        <batting raw="1-6G-O" />
+        <batting raw="3-I" />
+        <batting raw="6-B---2*" />
+      </batter>
+      <batter name="nakajima" order="6" position="5">
+        <batting raw="1-2G-O" />
+        <batting raw="3-2F-O" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="dai" order="7" position="9">
+        <batting raw="2-4G-H1--2" />
+        <batting raw="4-7O-H2*" />
+        <batting raw="6-B---1" />
+      </batter>
+      <batter name="hiro" order="8" position="4">
+        <batting raw="2-B" />
+        <batting raw="4-9F-H1-1" />
+        <batting raw="6-4F-O" />
+      </batter>
+      <batter name="suzuki" order="9" position="1">
+        <batting raw="2-4G-O" />
+        <batting raw="4-K-O" />
+        <batting raw="6-6G-E-1" />
+      </batter>
+      <batter name="hazedon" order="10" position="@">
+        <batting raw="2-K-O" />
+        <batting raw="4-K-O" />
+        <batting raw="6-8G-H1" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="3" fieldFirst="1" inning="1" />
+      <score batFirst="2" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="1" inning="4" />
+      <score batFirst="8" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="2" inning="6" />
+      <score batFirst="13" fieldFirst="4" inning="total" />
+      <team batFirst="テックメイツ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;鈴木さん 1勝(4回) 【通算】3勝2敗&lt;br&gt;木村さん 1S(1回)  【通算】2S&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="13/05/18" result="1" season="2013" team="hunters">
+    <batters>
+      <batter name="hirose" order="1" position="8">
+        <batting raw="1-7F-O" />
+        <batting raw="2-7O-H3-1*" />
+        <batting raw="4-B---1*" />
+        <batting raw="5-6F-O" />
+      </batter>
+      <batter name="etoh" order="2" position="3">
+        <batting raw="1-9F-O" />
+        <batting raw="2-8F-G-1" />
+        <batting raw="4-4G-O-1" />
+        <batting raw="5-8G-H1*" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-7G-H1--1*" />
+        <batting raw="2-7F-H1--1*" />
+        <batting raw="4-7L-H1-1-1*" />
+        <batting raw="5-5G-H1--1*" />
+      </batter>
+      <batter name="sakurai" order="4" position="2">
+        <batting raw="1-7O-H3-2*" />
+        <batting raw="2-5G-E-1" />
+        <batting raw="4-8L-H1-1-1*" />
+        <batting raw="5-6F-O" />
+      </batter>
+      <batter name="ekimura" order="5" position="5">
+        <batting raw="1-7G-H1--1" />
+        <batting raw="2-5G-O" />
+        <batting raw="4-B---1*" />
+        <batting raw="5-5G-E-1*" />
+      </batter>
+      <batter name="kusano" order="6" position="9">
+        <batting raw="1-5G-O" />
+        <batting raw="3-5G-H1" />
+        <batting raw="4-7G-H1-1*" />
+        <batting raw="5-8O-H3-2" />
+      </batter>
+      <batter name="hazedon" order="7" position="7">
+        <batting raw="2-9O-H2*" />
+        <batting raw="3-7F-O" />
+        <batting raw="4-K-O" />
+        <batting raw="5-B---1" />
+      </batter>
+      <batter name="hiro" order="8" position="4">
+        <batting raw="2-7L-H1-1*" />
+        <batting raw="3-5G-O" />
+        <batting raw="4-8G-H1-1" />
+        <batting raw="5-1G-O" />
+      </batter>
+      <batter name="saito-ken" order="9" position="@">
+        <batting raw="2-1G-O" />
+        <batting raw="3-6F-O" />
+        <batting raw="4-8G-H1-1" />
+      </batter>
+      <batter name="suzuki" order="10" position="1">
+        <batting raw="2-5G-E-1*" />
+        <batting raw="4-7F-E--1*" />
+        <batting raw="4-5G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="2" fieldFirst="0" inning="1" />
+      <score batFirst="5" fieldFirst="1" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="6" fieldFirst="0" inning="4" />
+      <score batFirst="3" fieldFirst="2" inning="5" />
+      <score batFirst="16" fieldFirst="3" inning="total" />
+      <team batFirst="MonStars" fieldFirst="ハンターズ" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;[天気] 晴れ&lt;br&gt;[球審] 八木さん&lt;br&gt;---&lt;br&gt;【スコア】&lt;br&gt;---&lt;br&gt;---&lt;br&gt;3回草野さんピッチャーゴロ時、渡辺さん2塁で入れ替わりアウト&lt;br&gt;&lt;br&gt;【投手成績】&lt;br&gt; 鈴木さん 1敗(6回) 【通算】3勝3敗&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="13/06/09" game="オーシャンAリーグ公式戦" loc="多摩川緑地12号面" result="-1" season="2013" team="ligers" time="08:00">
+    <batters>
+      <batter name="etoh" order="1" position="3">
+        <batting raw="1-4G-E--1*" />
+        <batting raw="2-K-O" />
+        <batting raw="4-4G-O" />
+      </batter>
+      <batter name="hazedon" order="2" position="7">
+        <batting raw="1-2F-O" />
+        <batting raw="2-8F-H2*" />
+        <batting raw="4-K-O" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-8F-H1*" />
+        <batting raw="2-5G-O" />
+        <batting raw="5-6G-O" />
+      </batter>
+      <batter name="hirose" order="4" position="8">
+        <batting raw="1-1G-E-1*" />
+        <batting raw="2-7F-H2-1" />
+        <batting raw="5-4G-O" />
+      </batter>
+      <batter name="y-osa" order="5" position="4">
+        <batting raw="1-2G-E*" />
+        <batting raw="2-5G-O" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="watanabe" order="6" position="5">
+        <batting raw="1-5G-H1-1*" />
+        <batting raw="3-1G-H1" />
+        <batting raw="6-1G-O" />
+      </batter>
+      <batter name="kusano" order="7" position="9">
+        <batting raw="1-5G-E-1" />
+        <batting raw="3-1G-O" />
+        <batting raw="6-6G-O" />
+      </batter>
+      <batter name="saito-ken" order="8" position="2">
+        <batting raw="1-9F-H1-2" />
+        <batting raw="3-1F-O" />
+        <batting raw="6-1G-O" />
+      </batter>
+      <batter name="hiro" order="9" position="@">
+        <batting raw="1-5G-O" />
+        <batting raw="3-K-O" />
+      </batter>
+      <batter name="suzuki" order="10" position="1">
+        <batting raw="1-K-O" />
+        <batting raw="4-K-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="3" fieldFirst="5" inning="1" />
+      <score batFirst="0" fieldFirst="1" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="5" fieldFirst="0" inning="4" />
+      <score batFirst="1" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="0" inning="6" />
+      <score batFirst="9" fieldFirst="6" inning="total" />
+      <team batFirst="ライガース" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;鈴木さん 1敗(5回) 【通算】3勝4敗&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="13/07/13" result="-1" season="2013" team="Scratch">
+    <batters>
+      <batter name="etoh" order="1" position="9">
+        <batting raw="1-3G-O" />
+        <batting raw="3-4G-O" />
+        <batting raw="4-3G-H1-2" />
+      </batter>
+      <batter name="hazedon" order="2" position="8">
+        <batting raw="1-K-O" />
+        <batting raw="3-5G-O" />
+        <batting raw="4-B" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-6L-O" />
+        <batting raw="4-7G-H1*" />
+        <batting raw="4-3G-H1-1" />
+      </batter>
+      <batter name="sakurai" order="4" position="2">
+        <batting raw="2-B" />
+        <batting raw="4-5G-E*" />
+        <batting raw="4-K" />
+      </batter>
+      <batter name="ekimura" order="5" position="5">
+        <batting raw="2-B*" />
+        <batting raw="4-7L-H1-1*" />
+        <batting raw="5-6G-H1" />
+      </batter>
+      <batter name="nakajima" order="6" position="3">
+        <batting raw="2-2F-O" />
+        <batting raw="4-K-O" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="watanabe" order="7" position="7">
+        <batting raw="2-7F-H2-1" />
+        <batting raw="4-B*" />
+        <batting raw="5-1F-O" />
+      </batter>
+      <batter name="hiro" order="8" position="4">
+        <batting raw="2-K-O" />
+        <batting raw="4-5G-O" />
+      </batter>
+      <batter name="suzuki" order="9" position="1">
+        <batting raw="3-K-O" />
+        <batting raw="4-B*" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="3" inning="1" />
+      <score batFirst="1" fieldFirst="2" inning="2" />
+      <score batFirst="0" fieldFirst="5" inning="3" />
+      <score batFirst="5" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="6" fieldFirst="10" inning="total" />
+      <team batFirst="MonStars" fieldFirst="スクラッチ" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;鈴木さん 1敗(3回) 【通算】3勝5敗&lt;br&gt;木村さん (3回)   【通算】2S&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="13/07/20" result="-1" season="2013" team="Swingout">
+    <batters>
+      <batter name="ekimura" order="1" position="5">
+        <batting raw="1-K-O" />
+        <batting raw="2-7G-H1" />
+        <batting raw="4-B" />
+        <batting raw="6-7L-H2-2*" />
+      </batter>
+      <batter name="y-osa" order="2" position="7">
+        <batting raw="1-6G-O" />
+        <batting raw="2-6G-O" />
+        <batting raw="4-6G-O" />
+        <batting raw="6-6G-O-1" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-6G-E--1*" />
+        <batting raw="3-5G-E*" />
+        <batting raw="5-K-O" />
+        <batting raw="6-8O-H2-1" />
+      </batter>
+      <batter name="sakurai" order="4" position="2">
+        <batting raw="1-8G-H1-1-1*" />
+        <batting raw="3-6G-O" />
+        <batting raw="5-1G-O" />
+      </batter>
+      <batter name="watanabe" order="5" position="8">
+        <batting raw="1-6G-H1-1" />
+        <batting raw="3-6G-O" />
+        <batting raw="5-6G-O" />
+      </batter>
+      <batter name="kusano" order="6" position="9">
+        <batting raw="1-7O-H2" />
+        <batting raw="3-8G-H1-1" />
+        <batting raw="6-B*" />
+      </batter>
+      <batter name="takemoto" order="7" position="3">
+        <batting raw="2-3G-O" />
+        <batting raw="3-3G-O" />
+        <batting raw="6-B*" />
+      </batter>
+      <batter name="hiro" order="8" position="4">
+        <batting raw="2-1G-O" />
+        <batting raw="4-9F-H1" />
+        <batting raw="6-B*" />
+      </batter>
+      <batter name="suzuki" order="9" position="1">
+        <batting raw="2-8F-E" />
+        <batting raw="4-6G-O" />
+        <batting raw="6-8F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="1" fieldFirst="2" inning="1" />
+      <score batFirst="3" fieldFirst="0" inning="2" />
+      <score batFirst="3" fieldFirst="1" inning="3" />
+      <score batFirst="4" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="4" inning="6" />
+      <score batFirst="11" fieldFirst="7" inning="total" />
+      <team batFirst="スイングアウト" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;鈴木さん (2回)   【通算】3勝5敗&lt;br&gt;中島さん 1勝(3回) 【通算】1勝&lt;br&gt;木村さん 1S(2回)  【通算】3S&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="13/08/3" result="1" season="2013" team="Peanuts">
+    <batters>
+      <batter name="etoh" order="1" position="9">
+        <batting raw="1-3F-O" />
+        <batting raw="2-4G-E--1*" />
+        <batting raw="4-9L-H1--1" />
+        <batting raw="6-1G-O-1-1" />
+      </batter>
+      <batter name="sakurai" order="2" position="2">
+        <batting raw="1-7L-H1--1*" />
+        <batting raw="2-5G-E--1*" />
+        <batting raw="4-5G-E" />
+        <batting raw="6-1G-O" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-7F-O" />
+        <batting raw="2-7O-H3-2*" />
+        <batting raw="4-5L-O" />
+      </batter>
+      <batter name="hirose" order="4" position="8">
+        <batting raw="1-9F-H2-1*" />
+        <batting raw="2-5G-E--1*" />
+        <batting raw="5-7F-O" />
+      </batter>
+      <batter name="ekimura" order="5" position="5">
+        <batting raw="1-B---1*" />
+        <batting raw="2-B" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="kusano" order="6" position="7">
+        <batting raw="1-B" />
+        <batting raw="2-7F-O" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="watanabe" order="7" position="4">
+        <batting raw="1-9F-H2-1" />
+        <batting raw="3-7F-O" />
+        <batting raw="6-5G-H1*" />
+      </batter>
+      <batter name="nakajima" order="8" position="3">
+        <batting raw="1-4G-O" />
+        <batting raw="3-1F-O" />
+        <batting raw="6-7L-H2-1*" />
+      </batter>
+      <batter name="suzuki" order="9" position="1">
+        <batting raw="2-2F-O" />
+        <batting raw="3-1G-O" />
+        <batting raw="6-6F-O" />
+      </batter>
+      <batter name="takemoto" order="10" position="@">
+        <batting raw="2-B" />
+        <batting raw="4-6F-O" />
+        <batting raw="6-3G-E-1" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="1" fieldFirst="3" inning="1" />
+      <score batFirst="2" fieldFirst="4" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="1" fieldFirst="2" inning="6" />
+      <score batFirst="0" fieldFirst="x" inning="7" />
+      <score batFirst="4" fieldFirst="9" inning="total" />
+      <team batFirst="ピーナッツ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;中島さん     (2回) 【通算】1勝(通算)&lt;br&gt;木村さん     (3回) 【通算】3S(通算)&lt;br&gt;齋藤(謙)さん  1勝(1回) 【通算】1勝(通算)&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="13/08/10" result="1" season="2013" team="Bears">
+    <batters>
+      <batter name="sakurai" order="1" position="8">
+        <batting raw="1-B---1*" />
+        <batting raw="2-9F-H1-1-1*" />
+        <batting raw="4-B" />
+        <batting raw="5-9F-H1-1" />
+      </batter>
+      <batter name="kusano" order="2" position="9">
+        <batting raw="1-1G-O" />
+        <batting raw="2-5G-O" />
+        <batting raw="4-B" />
+        <batting raw="5-6F-O" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-6G-O" />
+        <batting raw="2-9O-H2-2" />
+        <batting raw="4-4G-E" />
+        <batting raw="6-B*" />
+      </batter>
+      <batter name="hirose" order="4" position="7">
+        <batting raw="1-7L-H1-1" />
+        <batting raw="2-7F-O" />
+        <batting raw="4-1G-O" />
+        <batting raw="6-B*" />
+      </batter>
+      <batter name="ekimura" order="5" position="5">
+        <batting raw="1-1F-O" />
+        <batting raw="3-B" />
+        <batting raw="4-7F-O" />
+        <batting raw="6-B*" />
+      </batter>
+      <batter name="watanabe" order="6" position="4">
+        <batting raw="2-B--2*" />
+        <batting raw="3-1F-O" />
+        <batting raw="5-8L-H2*" />
+        <batting raw="6-D--1" />
+      </batter>
+      <batter name="saito-ken" order="7" position="2">
+        <batting raw="2-B*" />
+        <batting raw="3-8G-H1" />
+        <batting raw="5-7G-H1" />
+        <batting raw="6-8F-E-2" />
+      </batter>
+      <batter name="nakajima" order="8" position="1">
+        <batting raw="2-B*" />
+        <batting raw="3-K-O" />
+        <batting raw="5-1F-O" />
+      </batter>
+      <batter name="takemoto" order="9" position="3">
+        <batting raw="2-B" />
+        <batting raw="3-3G-O" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="hiro" order="10" position="@">
+        <batting raw="2-B--1*" />
+        <batting raw="4-7F-O" />
+        <batting raw="5-5F-E" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="3" fieldFirst="1" inning="1" />
+      <score batFirst="0" fieldFirst="5" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="1" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="1" inning="5" />
+      <score batFirst="5" fieldFirst="3" inning="6" />
+      <score batFirst="9" fieldFirst="10" inning="total" />
+      <team batFirst="ベアーズ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;中島さん    1敗(2回2/3) 【通算】1勝1敗(通算)&lt;br&gt;齋藤(謙）さん   (1回1/3) 【通算】1勝(通算)&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="13/08/31" result="-1" season="2013" team="Guliters">
+    <batters>
+      <batter name="sakurai" order="1" position="2">
+        <batting raw="1-5G-O" />
+        <batting raw="2-B--1" />
+        <batting raw="4-8G-H1--1" />
+      </batter>
+      <batter name="etoh" order="2" position="9">
+        <batting raw="1-4G-O" />
+        <batting raw="2-K-O" />
+        <batting raw="5-5F-O" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-9F-H1" />
+        <batting raw="3-8O-H2--1*" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="hirose" order="4" position="8">
+        <batting raw="1-4G-E" />
+        <batting raw="3-K-O" />
+        <batting raw="5-7G-H1*" />
+      </batter>
+      <batter name="y-osa" order="5" position="4">
+        <batting raw="1-K-O" />
+        <batting raw="3-1G-O" />
+        <batting raw="5-B*" />
+      </batter>
+      <batter name="watanabe" order="6" position="5">
+        <batting raw="2-K-O" />
+        <batting raw="3-B" />
+        <batting raw="5-8G-H1*" />
+      </batter>
+      <batter name="kusano" order="7" position="7">
+        <batting raw="2-9L-O" />
+        <batting raw="3-5G-E" />
+        <batting raw="5-B--1" />
+      </batter>
+      <batter name="saito-ken" order="8" position="3">
+        <batting raw="2-4G-H1*" />
+        <batting raw="3-3G-O" />
+        <batting raw="5-7G-H1-2" />
+      </batter>
+      <batter name="nakajima" order="9" position="1">
+        <batting raw="2-7F-E" />
+        <batting raw="4-5F-O" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="takemoto" order="10" position="@">
+        <batting raw="2-B" />
+        <batting raw="4-3F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="0" fieldFirst="1" inning="1" />
+      <score batFirst="1" fieldFirst="3" inning="2" />
+      <score batFirst="1" fieldFirst="3" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="3" fieldFirst="x" inning="5" />
+      <score batFirst="5" fieldFirst="7" inning="total" />
+      <team batFirst="MonStars" fieldFirst="グリターズ" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;木村さん   1分(4回) 【通算】1分3S&lt;br&gt;齋藤(謙)さん   (3回) 【通算】1勝&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="13/09/07" result="0" season="2013" team="Supersonics">
+    <batters>
+      <batter name="sakurai" order="1" position="2">
+        <batting raw="1-5G-O" />
+        <batting raw="3-5G-H1--1*" />
+        <batting raw="5-1G-E--1*" />
+        <batting raw="7-6G-O" />
+      </batter>
+      <batter name="etoh" order="2" position="7">
+        <batting raw="1-8O-H3" />
+        <batting raw="3-2F-O" />
+        <batting raw="5-1G-O-1" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-5G-O" />
+        <batting raw="3-8O-H2-2" />
+        <batting raw="5-6F-O" />
+      </batter>
+      <batter name="hirose" order="4" position="8">
+        <batting raw="1-B---1" />
+        <batting raw="3-4G-O" />
+        <batting raw="6-7O-HR-1*" />
+      </batter>
+      <batter name="ekimura" order="5" position="5">
+        <batting raw="1-B" />
+        <batting raw="4-8F-O" />
+        <batting raw="6-7F-O" />
+      </batter>
+      <batter name="suzuki" order="6" position="3">
+        <batting raw="1-5G-O" />
+        <batting raw="4-B*" />
+        <batting raw="6-4F-H1--1" />
+      </batter>
+      <batter name="watanabe" order="7" position="4">
+        <batting raw="2-3F-O" />
+        <batting raw="4-5G-O" />
+        <batting raw="6-5F-O" />
+      </batter>
+      <batter name="kusano" order="8" position="9">
+        <batting raw="2-1F-O" />
+        <batting raw="4-5G-E--1*" />
+        <batting raw="6-8F-O" />
+      </batter>
+      <batter name="saito-ken" order="9" position="1">
+        <batting raw="2-K-O" />
+        <batting raw="4-8L-H1-2-1" />
+        <batting raw="7-K-O" />
+      </batter>
+      <batter name="takemoto" order="10" position="@">
+        <batting raw="3-8O-H2*" />
+        <batting raw="4-5F-O" />
+        <batting raw="7-5G-O" />
+      </batter>
+      <batter name="hiro" order="11" position="@">
+        <batting raw="3-5G-O" />
+        <batting raw="5-K-O" />
+        <batting raw="7-9F-H1" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="2" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="2" inning="3" />
+      <score batFirst="1" fieldFirst="2" inning="4" />
+      <score batFirst="0" fieldFirst="1" inning="5" />
+      <score batFirst="1" fieldFirst="1" inning="6" />
+      <score batFirst="2" fieldFirst="0" inning="7" />
+      <score batFirst="6" fieldFirst="6" inning="total" />
+      <team batFirst="スーパーソニックス" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;&lt;br&gt;齋藤(謙)さん 1勝(5回) 【通算】2勝&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="13/09/14" result="1" season="2013" team="FairSpirits">
+    <batters>
+      <batter name="suzuki" order="1" position="5">
+        <batting raw="1-B---2*" />
+        <batting raw="2-1G-O" />
+        <batting raw="4-5G-E-1*" />
+        <batting raw="5-B--1*" />
+      </batter>
+      <batter name="sakurai" order="2" position="2">
+        <batting raw="1-B---1*" />
+        <batting raw="2-B---1" />
+        <batting raw="4-1F-E*" />
+        <batting raw="5-8G-H1-2-1" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-B*" />
+        <batting raw="2-4F-O" />
+        <batting raw="4-B--1" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="hirose" order="4" position="8">
+        <batting raw="1-B--1*" />
+        <batting raw="2-3G-O" />
+        <batting raw="4-B--1" />
+      </batter>
+      <batter name="etoh" order="5" position="7">
+        <batting raw="1-9G-H3-3" />
+        <batting raw="3-6F-O" />
+        <batting raw="4-B" />
+      </batter>
+      <batter name="takemoto" order="6" position="3">
+        <batting raw="1-B*" />
+        <batting raw="3-1L-O" />
+        <batting raw="4-1G-O" />
+      </batter>
+      <batter name="y-osa" order="7" position="4">
+        <batting raw="1-8L-H2" />
+        <batting raw="3-6G-H1" />
+        <batting raw="5-9F-H1--2*" />
+      </batter>
+      <batter name="saito-ken" order="8" position="1">
+        <batting raw="1-1G-O" />
+        <batting raw="3-8F-O" />
+        <batting raw="5-2F-O" />
+      </batter>
+      <batter name="nakajima" order="9" position="@">
+        <batting raw="1-7G-H1-1-1" />
+        <batting raw="4-B*" />
+        <batting raw="5-B---1*" />
+      </batter>
+      <batter name="hazedon" order="10" position="9">
+        <batting raw="1-B" />
+        <batting raw="4-B*" />
+        <batting raw="5-D*" />
+      </batter>
+      <batter name="hiro" order="11" position="@">
+        <batting raw="1-K-O" />
+        <batting raw="4-5G-O" />
+        <batting raw="5-4F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="5" fieldFirst="2" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="4" fieldFirst="2" inning="4" />
+      <score batFirst="4" fieldFirst="2" inning="5" />
+      <score batFirst="13" fieldFirst="6" inning="total" />
+      <team batFirst="MonStars" fieldFirst="フェアスピリッツ" />
+    </scoreboard>
+  </game>
+</monstars>

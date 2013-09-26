@@ -41,3 +41,7 @@ okiyama,沖山,Okiyama
 etoh,衛藤,Etoh
 saito,斉藤,Saito
 hirose,廣瀬,Hirose
+sano,佐野,Sano Kohei
+saito-ken,斎藤(謙),Saito Kenichi
+watanabe,渡辺,Watanabe
+kusano,草野,Kusano
