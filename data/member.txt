@@ -45,3 +45,4 @@ sano,佐野,Sano Kohei
 saito-ken,斎藤(謙),Saito Kenichi
 watanabe,渡辺,Watanabe
 kusano,草野,Kusano
+ykimura,木村Jr,Y Kimura

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf8" ?>
+<monstars>
+  <game comment="&lt;br&gt;&lt;br&gt;&lt;br&gt;1回表 齊藤選手サードゴロ時、渡邉さん3塁ホースアウト&lt;br&gt;3回表 広瀬選手ピッチャーゴロ時、ホームで齊藤さんアウト&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="14/05/17" result="-1" season="2014" team="BlueInfinity">
+    <batters>
+      <batter name="watanabe" order="1" position="5">
+        <batting raw="1-5G-H1" />
+        <batting raw="2-8L-H1" />
+        <batting raw="4-B" />
+      </batter>
+      <batter name="suzuki" order="2" position="3">
+        <batting raw="1-7G-H1*" />
+        <batting raw="2-1F-O" />
+        <batting raw="4-K-O" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-5G-O*" />
+        <batting raw="3-7O-H3" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="hirose" order="4" position="8">
+        <batting raw="1-6G-E*" />
+        <batting raw="3-1G-O" />
+        <batting raw="5-9F-H1" />
+      </batter>
+      <batter name="etoh" order="5" position="9">
+        <batting raw="1-9O-HR-4*" />
+        <batting raw="3-K-O" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="y-osa" order="6" position="4">
+        <batting raw="1-5G-O" />
+        <batting raw="3-5G-O" />
+        <batting raw="5-K-O" />
+      </batter>
+      <batter name="kusano" order="7" position="7">
+        <batting raw="1-B" />
+        <batting raw="4-8G-H1*" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="sakurai" order="8" position="2">
+        <batting raw="1-1F-O" />
+        <batting raw="4-4L-E" />
+      </batter>
+      <batter name="ekimura" order="9" position="1">
+        <batting raw="2-K-O" />
+        <batting raw="4-6F-O" />
+      </batter>
+      <batter name="nakajima" order="10" position="@">
+        <batting raw="2-K-O" />
+        <batting raw="4-9L-H1-1" />
+      </batter>
+      <batter name="takemoto" order="11" position="@">
+        <batting raw="2-B" />
+        <batting raw="4-K-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="0" fieldFirst="4" inning="1" />
+      <score batFirst="1" fieldFirst="0" inning="2" />
+      <score batFirst="2" fieldFirst="0" inning="3" />
+      <score batFirst="3" fieldFirst="1" inning="4" />
+      <score batFirst="2" fieldFirst="0" inning="5" />
+      <score batFirst="8" fieldFirst="5" inning="total" />
+      <team batFirst="ブルーインフィニティ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="&lt;br&gt;1回表 山下選手ショートゴロ時、斎藤さん2塁ホースアウト&lt;br&gt;4回表 渡邉選手セカンドゴロ時、竹本さん2塁ホースアウト&lt;br&gt;6回表 渡邉選手ピッチャーゴロ時、林さん3塁ホースアウト&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="14/06/21" result="-1" season="2014" team="PeaceIsland">
+    <batters>
+      <batter name="watanabe" order="1" position="5">
+        <batting raw="1-B*" />
+        <batting raw="2-K-O" />
+        <batting raw="4-4G-O" />
+        <batting raw="6-1G-O*" />
+      </batter>
+      <batter name="suzuki" order="2" position="7">
+        <batting raw="1-B*" />
+        <batting raw="2-5G-O" />
+        <batting raw="4-B" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-B" />
+        <batting raw="3-5F-O" />
+        <batting raw="4-6G-O" />
+        <batting raw="6-8L-H2-2" />
+      </batter>
+      <batter name="sakurai" order="4" position="2">
+        <batting raw="1-K-O" />
+        <batting raw="3-3L-O" />
+        <batting raw="5-9F-O" />
+        <batting raw="6-7G-H1--1" />
+      </batter>
+      <batter name="y-osa" order="5" position="8">
+        <batting raw="1-6G-O-1" />
+        <batting raw="3-8F-O" />
+        <batting raw="5-8G-H1" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="nakajima" order="6" position="3">
+        <batting raw="1-B" />
+        <batting raw="4-4F-O" />
+        <batting raw="5-1G-O" />
+      </batter>
+      <batter name="saito-ken" order="7" position="1">
+        <batting raw="1-B--1" />
+        <batting raw="4-8L-H1*" />
+        <batting raw="5-1G-O" />
+      </batter>
+      <batter name="hiro" order="8" position="4">
+        <batting raw="1-K-O" />
+        <batting raw="4-B" />
+        <batting raw="6-B" />
+      </batter>
+      <batter name="takemoto" order="9" position="9">
+        <batting raw="2-1G-O" />
+        <batting raw="4-B" />
+        <batting raw="6-B*" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="2" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="3" inning="2" />
+      <score batFirst="0" fieldFirst="3" inning="3" />
+      <score batFirst="1" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="2" fieldFirst="4" inning="6" />
+      <score batFirst="5" fieldFirst="10" inning="total" />
+      <team batFirst="MonStars" fieldFirst="ピースアイランド" />
+    </scoreboard>
+  </game>
+  <game comment="1回裏 廣瀬選手サードゴロ時、1塁エラーでファールライン中に入りタッチアウト&lt;br&gt;2回裏 竹本選手ピッチャーゴロ時、林さん2塁ホースアウト&lt;br&gt;5回裏 木村選手センター前時、2塁で廣瀬選手ホースアウト&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="14/07/19" result="1" season="2014" team="TekMates">
+    <batters>
+      <batter name="watanabe" order="1" position="5">
+        <batting raw="1-5G-O" />
+        <batting raw="2-6G-O" />
+        <batting raw="5-7G-H1*" />
+        <batting raw="5-B" />
+      </batter>
+      <batter name="suzuki" order="2" position="7">
+        <batting raw="1-5G-E*" />
+        <batting raw="2-1G-O" />
+        <batting raw="5-B*" />
+        <batting raw="5-7G-H1-1" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-7L-H2-1" />
+        <batting raw="3-7O-H2" />
+        <batting raw="5-B*" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="hirose" order="4" position="8">
+        <batting raw="1-5G-E" />
+        <batting raw="3-5G-O" />
+        <batting raw="5-8G-H1-1" />
+        <batting raw="6-3G-O" />
+      </batter>
+      <batter name="ekimura" order="5" position="1">
+        <batting raw="1-1G-O" />
+        <batting raw="3-5F-O" />
+        <batting raw="5-8L-O-1*" />
+        <batting raw="6-3F-O" />
+      </batter>
+      <batter name="y-osa" order="6" position="9">
+        <batting raw="2-5G-E*" />
+        <batting raw="3-6G-O" />
+        <batting raw="5-8L-H2-1*" />
+        <batting raw="6-B*" />
+      </batter>
+      <batter name="sakurai" order="7" position="2">
+        <batting raw="2-8O-H2*" />
+        <batting raw="4-6G-O" />
+        <batting raw="5-5G-O" />
+        <batting raw="6-B*" />
+      </batter>
+      <batter name="hiro" order="8" position="4">
+        <batting raw="2-B" />
+        <batting raw="4-6G-O" />
+        <batting raw="5-B*" />
+        <batting raw="6-8L-H1-2-1*" />
+      </batter>
+      <batter name="takemoto" order="9" position="3">
+        <batting raw="2-1G-O" />
+        <batting raw="4-B" />
+        <batting raw="5-9L-H1-2*" />
+        <batting raw="6-8L-H2" />
+      </batter>
+      <batter name="saito-ken" order="10" position="@">
+        <batting raw="2-9L-H1" />
+        <batting raw="4-4F-O" />
+        <batting raw="5-9L-H2-1" />
+        <batting raw="6-2F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="0" fieldFirst="1" inning="1" />
+      <score batFirst="1" fieldFirst="2" inning="2" />
+      <score batFirst="1" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="1" fieldFirst="7" inning="5" />
+      <score batFirst="0" fieldFirst="3" inning="6" />
+      <score batFirst="0" fieldFirst="x" inning="7" />
+      <score batFirst="3" fieldFirst="13" inning="total" />
+      <team batFirst="テックメイツ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+  <game comment="5回裏 倉知選手時、斎藤(謙)選手盗塁失敗で2塁でアウト&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="14/07/26" result="-1" season="2014" team="Ligers">
+    <batters>
+      <batter name="watanabe" order="1" position="5">
+        <batting raw="1-5G-E*" />
+        <batting raw="3-6F-O" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="suzuki" order="2" position="7">
+        <batting raw="1-9F-H3-1*" />
+        <batting raw="3-5F-O" />
+        <batting raw="6-6G-O" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-7L-H1-1" />
+        <batting raw="3-5F-O" />
+      </batter>
+      <batter name="hirose" order="4" position="8">
+        <batting raw="1-1G-O" />
+        <batting raw="4-5G-O" />
+      </batter>
+      <batter name="ekimura" order="5" position="7">
+        <batting raw="1-5G-O" />
+        <batting raw="4-8L-H2" />
+      </batter>
+      <batter name="y-osa" order="6" position="9">
+        <batting raw="1-8F-O" />
+        <batting raw="4-5G-O" />
+      </batter>
+      <batter name="sakurai" order="7" position="2">
+        <batting raw="2-7L-H1--2*" />
+        <batting raw="4-6G-O" />
+      </batter>
+      <batter name="saito-ken" order="8" position="1">
+        <batting raw="2-3G-O" />
+        <batting raw="5-I" />
+      </batter>
+      <batter name="kurachi" order="9" position="4">
+        <batting raw="2-5G-O-1" />
+        <batting raw="5-6G-O" />
+      </batter>
+      <batter name="hiro" order="10" position="@">
+        <batting raw="2-D" />
+        <batting raw="5-6G-O" />
+      </batter>
+      <batter name="takemoto" order="11" position="@">
+        <batting raw="2-1G-O" />
+        <batting raw="6-4F-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="2" fieldFirst="5" inning="1" />
+      <score batFirst="1" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="1" inning="3" />
+      <score batFirst="0" fieldFirst="1" inning="4" />
+      <score batFirst="0" fieldFirst="3" inning="5" />
+      <score batFirst="0" fieldFirst="1" inning="6" />
+      <score batFirst="3" fieldFirst="11" inning="total" />
+      <team batFirst="MonStars" fieldFirst="ライガース" />
+    </scoreboard>
+  </game>
+  <game comment="1回表 斎藤(謙)選手ピッチャーゴロ時、斎藤選手でホームホースアウト&lt;br&gt;3回表 斎藤(謙)選手時、タカシ選手2塁盗塁失敗でアウト&lt;br&gt;4回表 鈴木選手、足がつったため、打席立てず&lt;br&gt;5回表 斎藤選手時、牽制暴投のため、廣瀬選手3塁からホームイン&lt;br&gt;5回表 鈴木選手、足がつったため、打席たてず&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="14/08/23" result="-1" season="2014" team="Scratch">
+    <batters>
+      <batter name="watanabe" order="1" position="5">
+        <batting raw="1-B*" />
+        <batting raw="2-1F-O" />
+        <batting raw="5-4F-O" />
+      </batter>
+      <batter name="kusano" order="2" position="7">
+        <batting raw="1-5G-E*" />
+        <batting raw="2-1F-O" />
+        <batting raw="5-8G-H1" />
+      </batter>
+      <batter name="saito" order="3" position="6">
+        <batting raw="1-9G-H1-1" />
+        <batting raw="3-6G-O" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="takashi" order="4" position="8">
+        <batting raw="1-9L-H1-1*" />
+        <batting raw="3-D" />
+        <batting raw="5-5G-O" />
+      </batter>
+      <batter name="saito-ken" order="5" position="3">
+        <batting raw="1-1G-O" />
+        <batting raw="3-3F-O" />
+        <batting raw="6-5G-O" />
+      </batter>
+      <batter name="sakurai" order="6" position="2">
+        <batting raw="1-2F-O" />
+        <batting raw="4-9L-H2" />
+        <batting raw="6-B---2" />
+      </batter>
+      <batter name="ekimura" order="7" position="1">
+        <batting raw="1-8F-H1-1" />
+        <batting raw="4-K-O" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="suzuki" order="8" position="9">
+        <batting raw="1-1G-O" />
+        <batting raw="2-5G-O-1" />
+      </batter>
+      <batter name="hiro" order="9" position="4">
+        <batting raw="2-5G-O" />
+        <batting raw="4-5G-O" />
+        <batting raw="6-9L-O" />
+      </batter>
+      <batter name="takemoto" order="10" position="@">
+        <batting raw="2-B" />
+        <batting raw="4-1F-O" />
+      </batter>
+      <batter name="hirose" order="11" position="@">
+        <batting raw="2-B" />
+        <batting raw="5-5G-E*" />
+      </batter>
+    </batters>
+    <scoreboard monstars="batFirst">
+      <score batFirst="3" fieldFirst="3" inning="1" />
+      <score batFirst="0" fieldFirst="4" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="1" inning="4" />
+      <score batFirst="1" fieldFirst="3" inning="5" />
+      <score batFirst="0" fieldFirst="x" inning="6" />
+      <score batFirst="4" fieldFirst="11" inning="total" />
+      <team batFirst="MonStars" fieldFirst="スクラッチ" />
+    </scoreboard>
+  </game>
+  <game comment="6回裏 中島さんセンター前時、木村さんホームでタッチアウト&lt;br&gt;" date="14/09/06" result="1" season="2014" team="FairSpirits">
+    <batters>
+      <batter name="watanabe" order="1" position="5">
+        <batting raw="1-9F-O" />
+        <batting raw="3-1G-O" />
+        <batting raw="5-4F-O" />
+      </batter>
+      <batter name="ykimura" order="2" position="7">
+        <batting raw="1-6F-O" />
+        <batting raw="4-1G-E" />
+        <batting raw="6-K-O" />
+      </batter>
+      <batter name="suzuki" order="3" position="5">
+        <batting raw="1-6G-O" />
+        <batting raw="4-7G-H1" />
+        <batting raw="6-B*" />
+      </batter>
+      <batter name="hirose" order="4" position="8">
+        <batting raw="2-1G-O" />
+        <batting raw="4-K-O" />
+        <batting raw="6-7G-H1*" />
+      </batter>
+      <batter name="y-osa" order="5" position="4">
+        <batting raw="2-5F-O" />
+        <batting raw="4-5G-O" />
+        <batting raw="6-8L-H2-1*" />
+      </batter>
+      <batter name="ekimura" order="6" position="1">
+        <batting raw="2-K-O" />
+        <batting raw="4-K-O" />
+        <batting raw="6-7G-H1-1" />
+      </batter>
+      <batter name="nakajima" order="7" position="2">
+        <batting raw="3-K-O" />
+        <batting raw="5-K-O" />
+        <batting raw="6-8G-H1-1" />
+      </batter>
+      <batter name="takemoto" order="8" position="3">
+        <batting raw="3-5F-O" />
+        <batting raw="5-9F-O" />
+        <batting raw="6-5G-O" />
+      </batter>
+    </batters>
+    <scoreboard monstars="fieldFirst">
+      <score batFirst="0" fieldFirst="0" inning="1" />
+      <score batFirst="0" fieldFirst="0" inning="2" />
+      <score batFirst="0" fieldFirst="0" inning="3" />
+      <score batFirst="0" fieldFirst="0" inning="4" />
+      <score batFirst="0" fieldFirst="0" inning="5" />
+      <score batFirst="0" fieldFirst="3" inning="6" />
+      <score batFirst="0" fieldFirst="x" inning="7" />
+      <score batFirst="0" fieldFirst="3" inning="total" />
+      <team batFirst="フェアスピリッツ" fieldFirst="MonStars" />
+    </scoreboard>
+  </game>
+</monstars>
