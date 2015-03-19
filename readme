@@ -1,2 +1,31 @@
+モンスターズ秘密基地
+
+データ追加
+----------
 データを追加して、データベースを再構築する。
     ./batch.sh
+
+メンバー追加
+------------
+data/member.txt に追加する。
+
+動作確認
+
+/etc/hosts に
+127.0.0.1 monstars
+を追加
+
+virtual host の設定は
+/etc/apache2/extra/httpd-vhosts.conf
+
+<VirtualHost *:80>
+	ServerName monstars
+	DocumentRoot /Users/monstars0/monstars
+	<Directory "/Users/monstars0/monstars">
+		AllowOverride All
+		Require all granted
+	</Directory>
+</VirtualHost>
+
+サーバの起動は
+$ sudo apachectl start
