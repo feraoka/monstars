@@ -1,7 +1,2 @@
-ToDo
-- adding Simple::XML into svn tree
-
-Reminder
-- How to add load path
-  export PERL5LIB=~/svn/monstars/tools
-
+データを追加して、データベースを再構築する。
+    ./batch.sh
