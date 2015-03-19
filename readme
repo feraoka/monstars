@@ -29,3 +29,6 @@ virtual host の設定は
 
 サーバの起動は
 $ sudo apachectl start
+
+Yosemite だとGDのpngサポートがない。PHPを差し替える。
+http://plusblog.jp/12776/
