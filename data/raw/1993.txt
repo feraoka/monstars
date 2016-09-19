@@ -1,31 +1,31 @@
- [93/8/14 vs ŽÅ‰YTEC‚Ìƒ`[ƒ€ ]
- 8/14 13:00-15:00 ç—tŽsˆî–ÑŠC•lŒö‰€‚aƒOƒ‰ƒEƒ“ƒh —ûKŽŽ‡
+ [93/8/14 vs èŠæµ¦TECã®ãƒãƒ¼ãƒ  ]
+ 8/14 13:00-15:00 åƒè‘‰å¸‚ç¨²æ¯›æµ·æµœå…¬åœ’ï¼¢ã‚°ãƒ©ã‚¦ãƒ³ãƒ‰ ç·´ç¿’è©¦åˆ
  S-TEC    |1 0 0 1 6 0 1  | 9
  MonStars |0 3 3 1 4 2 x  |13
 
- [ 93/8/22 vs Amami—³'s ]
- 8/22 9:00-11:00 ‘åˆä•u“ª’†‰›ŠC•lŒö‰€ —ûKŽŽ‡
+ [ 93/8/22 vs Amamiç«œ's ]
+ 8/22 9:00-11:00 å¤§äº•åŸ é ­ä¸­å¤®æµ·æµœå…¬åœ’ ç·´ç¿’è©¦åˆ
  MonStars  0 0 0 0 1
  Amami     5 1 0 0 X
 
  [ 93/9/5 vs Fellows]
- 9/5 13:30-15:00 Â‹ó‹…‹Zê •iì‹æ–¯‘å‰ï1‰ñí
+ 9/5 13:30-15:00 é’ç©ºçƒæŠ€å ´ å“å·åŒºæ°‘å¤§ä¼š1å›žæˆ¦
  MonStars 1 0 0 0 0 | 1
  Fellows  0 3 2 3 x | 8
 
 
- [ 93/9/15 vs ƒ‰ƒK[(–ØŒ´Œ¤)]
- 9/15 19:00-21:00 ‘åˆä•u“ª’†‰›ŠC•lŒö‰€ —ûKŽŽ‡
+ [ 93/9/15 vs ãƒ©ã‚¬ãƒ¼(æœ¨åŽŸç ”)]
+ 9/15 19:00-21:00 å¤§äº•åŸ é ­ä¸­å¤®æµ·æµœå…¬åœ’ ç·´ç¿’è©¦åˆ
  MonStars | 0 0 0 0 0 2 | 2
  R        | 0 0 3 8 1 X | 12
 
- [ 93/9/25 vs ¬•û‚Ì—F’BŠñ‚¹W‚ß]
- 9/25 9:00-13:00 Ebina —ûKŽŽ‡
+ [ 93/9/25 vs å°æ–¹ã®å‹é”å¯„ã›é›†ã‚]
+ 9/25 9:00-13:00 Ebina ç·´ç¿’è©¦åˆ
  MonStars 1 1 1 0 0 3 | 6
  Ogata's  0 0 1 4 1 0 | 6
 
 
-[93/10/10 vs ƒWƒ‡[ƒJ[ƒY]
+[93/10/10 vs ã‚¸ãƒ§ãƒ¼ã‚«ãƒ¼ã‚º]
  Jokers   | 1 0 1 4 2 1 | 9
  MonStars | 0 4 1 0 0 0 | 5
 
@@ -41,8 +41,8 @@
 8ogata	2-9G-H1-1	5-8F-O
 9sophia	2-7G-H1-1	4-K-O
 
-[93/10/16 vs ‚³‚ñ‚í]
- GAMEINFO 10/16 ? ”Â‹´?
+[93/10/16 vs ã•ã‚“ã‚]
+ GAMEINFO 10/16 ? æ¿æ©‹?
 1kurachi	1-B	2-6G-E-2	4-8G-H1	5-9G-H1-1	6-3G-O
 2tamotsu	1-6G-O	2-9F-O	4-B	5-1G-E	6-B
 3y-osa	1-5G-O	2-7F-O	4-B--1	5-3G-H1-1	6-9G-H1
@@ -54,7 +54,7 @@
 9sophia	2-7G-H1	4-K-O	5-7O-H2-1	6-5G-E
 10haya	2-6F-O	4-B	5-K-O	6-D
 
-[93/12/5 vs ƒvƒŒƒCƒLƒbƒY]
+[93/12/5 vs ãƒ—ãƒ¬ã‚¤ã‚­ãƒƒã‚º]
  MonStars 0 0 1 0 1 3  | 5
  PlayKids 2 2 2 0 0 X  | 6
 1ogata	1-6G-O		3-1F-O		5-1G-O	6-7O-H2-2
@@ -67,7 +67,7 @@
 8haya		2-6G-O		4-K-O		6-7G-H1
 9mine		2-K-O			5-7F-O	6-B
 
-[93/12/11 vs MGƒnƒ}[]
+[93/12/11 vs MGãƒãƒžãƒ¼]
 1ogata	1-K-O	2-6F-O	4-B	4-7O-HR-4	5-6F-O
 2sinozaki	1-7F-H1	3-6G-O	4-5G-E-1	4-5G-O	6-8G-H1
 3dai	1-K-O	3-K-O	4-8G-H1-2	4-8O-H1-1	6-2F-O
