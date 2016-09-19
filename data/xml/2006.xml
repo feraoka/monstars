@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf8" ?>
 <monstars>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;鈴木 3回 勝ち 登板1 / 1勝0敗0S&lt;br&gt;   待山 2回      登板1 / 0勝0敗0S&lt;br&gt;&lt;br&gt;6nakajima999  1-8F-H1--1* 2-B*        3-5G-E                 5-5G-H1&lt;br&gt;2sakanishi    1-K-O                   3-7G-H1--2*&lt;br&gt;9yajima                   2-1G-O      3-B*       4-1G-O&lt;br&gt;@aoyagi                   2-1G-O      3-6G-O-1   4-6G-O      5-1G-O&lt;br&gt; たかしは助っ人として相手チームのピッチャーをしたため3回の打席はなし,4回代わりに打つ&lt;br&gt;坂西さんは負傷のため4回以降欠場&lt;br&gt; 桜井は助っ人として相手チームのキャッチャーをしたため4回の打席はなし&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060422&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="05/12/17" loc="荻中公園" result="1" season="2006" team="オアシス" time="14:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;鈴木 3回 勝ち 登板1 / 1勝0敗0S&lt;br&gt;   待山 2回      登板1 / 0勝0敗0S&lt;br&gt;&lt;br&gt;6nakajima999  1-8F-H1--1* 2-B*        3-5G-E                 5-5G-H1&lt;br&gt;2sakanishi    1-K-O                   3-7G-H1--2*&lt;br&gt;9yajima                   2-1G-O      3-B*       4-1G-O&lt;br&gt;@aoyagi                   2-1G-O      3-6G-O-1   4-6G-O      5-1G-O&lt;br&gt; たかしは助っ人として相手チームのピッチャーをしたため3回の打席はなし,4回代わりに打つ&lt;br&gt;坂西さんは負傷のため4回以降欠場&lt;br&gt; 桜井は助っ人として相手チームのキャッチャーをしたため4回の打席はなし&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060422&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="05/12/17" loc="荻中公園" result="1" season="2006" team="オアシス" time="14:00">
     <batters>
       <batter name="machiyama" order="1" position="5">
         <batting raw="1-3G-O" />
@@ -48,7 +48,7 @@
       <team batFirst="Oasis" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;木村 6回 勝ち 登板1 / 1勝0敗0S&lt;br&gt;&lt;br&gt; 1回、待山選手ホームアウト&lt;br&gt; 2回、竹本選手ホームアウト&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060429&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/04/22" game="オーシャンリーグ" loc="ガス橋緑地野球場(4面)" result="1" season="2006" team="多摩川キャッツ" time="10:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;木村 6回 勝ち 登板1 / 1勝0敗0S&lt;br&gt;&lt;br&gt; 1回、待山選手ホームアウト&lt;br&gt; 2回、竹本選手ホームアウト&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060429&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/04/22" game="オーシャンリーグ" loc="ガス橋緑地野球場(4面)" result="1" season="2006" team="多摩川キャッツ" time="10:00">
     <batters>
       <batter name="dai" order="1" position="@">
         <batting raw="1-K-O" />
@@ -121,7 +121,7 @@
       <team batFirst="Cats" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;木村 6回 登板2 / 1勝0敗0S&lt;br&gt;&lt;br&gt; 2回、竹本選手ヒットで水谷選手ホームイン&lt;br&gt; 4回、桜井選手ゴロ時に篠原選手3塁オーバーランでアウト&lt;br&gt; 7回、時間切れ終了&lt;br&gt; 試合後、ラスト15分すぎてから最終回に入ったことについて相手から抗議、事務局判断にしてもらう&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060603&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/04/29" game="オーシャンリーグ" loc="大井埠頭D面" result="0" season="2006" team="スクラッチ" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;木村 6回 登板2 / 1勝0敗0S&lt;br&gt;&lt;br&gt; 2回、竹本選手ヒットで水谷選手ホームイン&lt;br&gt; 4回、桜井選手ゴロ時に篠原選手3塁オーバーランでアウト&lt;br&gt; 7回、時間切れ終了&lt;br&gt; 試合後、ラスト15分すぎてから最終回に入ったことについて相手から抗議、事務局判断にしてもらう&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060603&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/04/29" game="オーシャンリーグ" loc="大井埠頭D面" result="0" season="2006" team="スクラッチ" time="11:00">
     <batters>
       <batter name="kurachi" order="1" position="2">
         <batting raw="1-B" />
@@ -189,7 +189,7 @@
       <team batFirst="Scratch" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;木村 7回 登板3 / 1勝1敗0S&lt;br&gt;(たかし 1回 登板1 / 0勝0敗0S -&gt; 試合成立後の８回の練習試合に登板）&lt;br&gt;&lt;br&gt; 6回、鈴木選手と平岡選手はランナー入れ替わり。その後、鈴木選手盗塁失敗アウト&lt;br&gt; 試合成立後、時間が余っていたので８回は練習試合として行った&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060617&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/06/03" game="オーシャンリーグ" loc="八潮北" result="-1" season="2006" team="テックメイツ" time="13:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;木村 7回 登板3 / 1勝1敗0S&lt;br&gt;(たかし 1回 登板1 / 0勝0敗0S -&gt; 試合成立後の８回の練習試合に登板）&lt;br&gt;&lt;br&gt; 6回、鈴木選手と平岡選手はランナー入れ替わり。その後、鈴木選手盗塁失敗アウト&lt;br&gt; 試合成立後、時間が余っていたので８回は練習試合として行った&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060617&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/06/03" game="オーシャンリーグ" loc="八潮北" result="-1" season="2006" team="テックメイツ" time="13:00">
     <batters>
       <batter name="suzuki" order="1" position="9">
         <batting raw="1-3G-O" />
@@ -252,7 +252,7 @@
       <team batFirst="Techmates" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;水谷 3回 登板1 / 0勝1敗0S&lt;br&gt;伊藤 4回 登板1 / 0勝0敗0S&lt;br&gt;&lt;br&gt; 7回、たかし選手２盗後、３盗を狙うがアウト&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060624&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/06/17" game="オーシャンリーグ" loc="潮田公園" result="-1" season="2006" team="グリターズ" time="13:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;水谷 3回 登板1 / 0勝1敗0S&lt;br&gt;伊藤 4回 登板1 / 0勝0敗0S&lt;br&gt;&lt;br&gt; 7回、たかし選手２盗後、３盗を狙うがアウト&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060624&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/06/17" game="オーシャンリーグ" loc="潮田公園" result="-1" season="2006" team="グリターズ" time="13:00">
     <batters>
       <batter name="machiyama" order="1" position="5">
         <batting raw="1-K-O" />
@@ -313,7 +313,7 @@
       <team batFirst="Griters" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;伊藤   4回 登板2 勝ち / 1勝0敗0S&lt;br&gt;たかし 1回 登板1 / 0勝0敗0S&lt;br&gt;&lt;br&gt; 1回、篠崎選手5Gはランナー入れ替わり&lt;br&gt; 2回、伊藤選手7ヒットは、７後逸でそのままホームイン。3点。&lt;br&gt; 2回、伊藤選手7ヒットは、７後逸でそのままホームイン。3点。&lt;br&gt; 4回、川原選手の５H時、平岡選手がアウト&lt;br&gt; 5回、たかし選手はエラーでホームイン&lt;br&gt; 桜井選手、サイクルヒット！！！&lt;br&gt; 伊藤投手５回１安打ピッチング、たかし投手と完封リレー&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060715&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/06/24" game="オーシャンリーグ" loc="夢の島９面" result="1" season="2006" team="ベアーズ" time="10:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;伊藤   4回 登板2 勝ち / 1勝0敗0S&lt;br&gt;たかし 1回 登板1 / 0勝0敗0S&lt;br&gt;&lt;br&gt; 1回、篠崎選手5Gはランナー入れ替わり&lt;br&gt; 2回、伊藤選手7ヒットは、７後逸でそのままホームイン。3点。&lt;br&gt; 2回、伊藤選手7ヒットは、７後逸でそのままホームイン。3点。&lt;br&gt; 4回、川原選手の５H時、平岡選手がアウト&lt;br&gt; 5回、たかし選手はエラーでホームイン&lt;br&gt; 桜井選手、サイクルヒット！！！&lt;br&gt; 伊藤投手５回１安打ピッチング、たかし投手と完封リレー&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060715&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/06/24" game="オーシャンリーグ" loc="夢の島９面" result="1" season="2006" team="ベアーズ" time="10:00">
     <batters>
       <batter name="ekimura" order="1" position="8">
         <batting raw="1-2F-O" />
@@ -392,7 +392,7 @@
       <team batFirst="Bears" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;伊藤  4回 登板3 勝ち / 2勝0敗0S&lt;br&gt;木村  1回 登板4      / 1勝1敗0S&lt;br&gt;&lt;br&gt; 1回、木村選手５G時に桜井選手ホームイン&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060729&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/07/15" game="オーシャンリーグ" loc="萩中公園" result="1" season="2006" team="ライガース" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;伊藤  4回 登板3 勝ち / 2勝0敗0S&lt;br&gt;木村  1回 登板4      / 1勝1敗0S&lt;br&gt;&lt;br&gt; 1回、木村選手５G時に桜井選手ホームイン&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060729&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/07/15" game="オーシャンリーグ" loc="萩中公園" result="1" season="2006" team="ライガース" time="9:00">
     <batters>
       <batter name="mizutani" order="1" position="6">
         <batting raw="1-9G-H1*" />
@@ -474,7 +474,7 @@
       <team batFirst="MonStars" fieldFirst="ライガース" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;伊藤  6回 登板4 勝ち / 3勝0敗0S&lt;br&gt;&lt;br&gt; 2回伊東選手、桜井選手ともパスボールでホームイン&lt;br&gt; 3回篠崎選手５Gは、川原選手とランナー入れ替わり&lt;br&gt; 4回桜井選手4Gは、伊藤選手とランナー入れ替わり&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060812&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/07/29" game="オーシャンリーグ" loc="岸根公園" result="1" season="2006" team="マグネッツ" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;伊藤  6回 登板4 勝ち / 3勝0敗0S&lt;br&gt;&lt;br&gt; 2回伊東選手、桜井選手ともパスボールでホームイン&lt;br&gt; 3回篠崎選手５Gは、川原選手とランナー入れ替わり&lt;br&gt; 4回桜井選手4Gは、伊藤選手とランナー入れ替わり&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060812&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/07/29" game="オーシャンリーグ" loc="岸根公園" result="1" season="2006" team="マグネッツ" time="9:00">
     <batters>
       <batter name="takasu" order="1" position="@">
         <batting raw="1-B*" />
@@ -548,7 +548,7 @@
       <team batFirst="MonStars" fieldFirst="マグネッツ" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;伊藤  6回 登板5 勝ち / 4勝0敗0S&lt;br&gt;&lt;br&gt; 2回大海選手、２塁打でオーバランしてタッチアウト&lt;br&gt; 4回鈴木選手は１・３塁で、偽投で飛び出して２塁アウト。&lt;br&gt; 4回たかし選手2塁の送球時に、山下選手ホームイン&lt;br&gt; 5回大海選手、パスボールでホームイン&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060909&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/08/12" game="オーシャンリーグ" loc="青空B面" result="1" season="2006" team="96ers" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;伊藤  6回 登板5 勝ち / 4勝0敗0S&lt;br&gt;&lt;br&gt; 2回大海選手、２塁打でオーバランしてタッチアウト&lt;br&gt; 4回鈴木選手は１・３塁で、偽投で飛び出して２塁アウト。&lt;br&gt; 4回たかし選手2塁の送球時に、山下選手ホームイン&lt;br&gt; 5回大海選手、パスボールでホームイン&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060909&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/08/12" game="オーシャンリーグ" loc="青空B面" result="1" season="2006" team="96ers" time="9:00">
     <batters>
       <batter name="takasu" order="1" position="4">
         <batting raw="1-6G-E*" />
@@ -621,7 +621,7 @@
       <team batFirst="96ers" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;木村  4回 勝ち 登板5 / 2勝1敗0S&lt;br&gt;倉知  2回      登板1 / 0勝0敗0S&lt;br&gt;竹本  1回      登板1 / 0勝0敗0S&lt;br&gt;&lt;br&gt; 2回桜井選手６Ｇは、平岡選手２塁フォースアウトでランナー入れ替わり&lt;br&gt; 2回桜井選手はパスボールでホームイン&lt;br&gt; 4回江原選手６Ｇは、平岡選手ホームフォースアウトでランナー入れ替わり&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060916&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/09/09" game="オーシャンリーグ" loc="三ツ沢公園" result="1" season="2006" team="アプリコッツ" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;木村  4回 勝ち 登板5 / 2勝1敗0S&lt;br&gt;倉知  2回      登板1 / 0勝0敗0S&lt;br&gt;竹本  1回      登板1 / 0勝0敗0S&lt;br&gt;&lt;br&gt; 2回桜井選手６Ｇは、平岡選手２塁フォースアウトでランナー入れ替わり&lt;br&gt; 2回桜井選手はパスボールでホームイン&lt;br&gt; 4回江原選手６Ｇは、平岡選手ホームフォースアウトでランナー入れ替わり&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;060916&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/09/09" game="オーシャンリーグ" loc="三ツ沢公園" result="1" season="2006" team="アプリコッツ" time="9:00">
     <batters>
       <batter name="sinozaki" order="1" position="4">
         <batting raw="1-8G-H1--1" />
@@ -702,7 +702,7 @@
       <team batFirst="Apricots" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;木村  7回 勝ち 登板6 / 3勝1敗0S&lt;br&gt;(待山投手は8回表の練習試合に登板)&lt;br&gt;&lt;br&gt; 4回竹本選手3塁打時、ホームを狙いかけて3塁に戻るところでタッチアウト&lt;br&gt; 7回裏の攻撃、8回表の守備は練習試合&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;061014&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/09/16" game="オーシャンリーグ" loc="ガス橋緑地" result="1" season="2006" team="ピースアイランド" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;木村  7回 勝ち 登板6 / 3勝1敗0S&lt;br&gt;(待山投手は8回表の練習試合に登板)&lt;br&gt;&lt;br&gt; 4回竹本選手3塁打時、ホームを狙いかけて3塁に戻るところでタッチアウト&lt;br&gt; 7回裏の攻撃、8回表の守備は練習試合&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;061014&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/09/16" game="オーシャンリーグ" loc="ガス橋緑地" result="1" season="2006" team="ピースアイランド" time="9:00">
     <batters>
       <batter name="sinozaki" order="1" position="4">
         <batting raw="1-D---1" />
@@ -771,7 +771,7 @@
       <team batFirst="PeaceIslands" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt; 伊藤  6回  登板6 勝ち / 5勝0敗0S&lt;br&gt; 木村  1回  登板7      / 3勝1敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt; 4回桜井選手、パスボールで本塁突入アウト&lt;br&gt; 伊藤投手６回途中まで無安打無失点&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;061021&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/10/14" game="オーシャンリーグ決勝Ｔ一回戦" loc="天王州B" result="1" season="2006" team="ピーナッツ" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt; 伊藤  6回  登板6 勝ち / 5勝0敗0S&lt;br&gt; 木村  1回  登板7      / 3勝1敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt; 4回桜井選手、パスボールで本塁突入アウト&lt;br&gt; 伊藤投手６回途中まで無安打無失点&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;061021&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/10/14" game="オーシャンリーグ決勝Ｔ一回戦" loc="天王州B" result="1" season="2006" team="ピーナッツ" time="9:00">
     <batters>
       <batter name="mizutani" order="1" position="6">
         <batting raw="1-B---1*" />
@@ -844,7 +844,7 @@
       <team batFirst="ピーナッツ" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt; 伊藤  5回  登板7 負け / 5勝1敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt; 3回鈴木選手、遊ゴロでランナー入れ替わり&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;061028&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/10/21" game="オーシャンリーグ準決勝" loc="大井埠頭海浜公園" result="-1" season="2006" team="オーシャンズ" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt; 伊藤  5回  登板7 負け / 5勝1敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt; 3回鈴木選手、遊ゴロでランナー入れ替わり&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;061028&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/10/21" game="オーシャンリーグ準決勝" loc="大井埠頭海浜公園" result="-1" season="2006" team="オーシャンズ" time="9:00">
     <batters>
       <batter name="mizutani" order="1" position="6">
         <batting raw="1-5G-E*" />
@@ -908,7 +908,7 @@
       <team batFirst="オーシャンズ" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt; 伊藤  5回  登板8 勝ち / 6勝1敗0S&lt;br&gt; 木村  2回  登板8      / 3勝1敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt; 3回川原選手は、大海選手バッター時にパスボールでホームイン&lt;br&gt; 4回桜井選手内野ゴロは、3塁高須選手へのフィルダースチョイスでオールセーフ&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;061118&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/10/28" game="オーシャンリーグ3位決定戦" loc="今川公園" result="1" season="2006" team="レコーズ" time="15:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt; 伊藤  5回  登板8 勝ち / 6勝1敗0S&lt;br&gt; 木村  2回  登板8      / 3勝1敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt; 3回川原選手は、大海選手バッター時にパスボールでホームイン&lt;br&gt; 4回桜井選手内野ゴロは、3塁高須選手へのフィルダースチョイスでオールセーフ&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;061118&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="06/10/28" game="オーシャンリーグ3位決定戦" loc="今川公園" result="1" season="2006" team="レコーズ" time="15:00">
     <batters>
       <batter name="mizutani" order="1" position="6">
         <batting raw="1-K-O" />
@@ -978,7 +978,7 @@
       <team batFirst="MonStars" fieldFirst="レコーズ" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt; 木村  7回  登板9  負け    / 3勝2敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;" date="06/11/18" game="練習試合" loc="岸根公園" result="-1" season="2006" team="オーシャンズ" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt; 木村  7回  登板9  負け    / 3勝2敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;" date="06/11/18" game="練習試合" loc="岸根公園" result="-1" season="2006" team="オーシャンズ" time="9:00">
     <batters>
       <batter name="hiro" order="1" position="2">
         <batting raw="1-B---1" />
@@ -1046,7 +1046,7 @@
       <team batFirst="MonStars" fieldFirst="Oceans" />
     </scoreboard>
   </game>
-  <game comment="投手成績 &lt;br&gt;酒井 6回 登板1 0勝0敗0S (999からの助っ人）&lt;br&gt;待山 1回 登板1 0勝0敗0S &lt;br&gt;鈴木 1回 登板1 0勝0敗0S &lt;br&gt;水谷 1回 登板2 勝ち 1勝1敗0S&lt;br&gt;&lt;br&gt;8nakajima.999        2-5F-O          4-5G-O  5-6G-O          7-5G-O               9-B*&lt;br&gt;1sakai.999           2-7O-H3*        4-5G-O           6-5F-O 7-5F-O               9-6F-O&lt;br&gt;&lt;br&gt; 時間があったので9回まで。最後もさよなら無しで3アウトまで。&lt;br&gt; 6番中島選手、7番酒井選手は999から来てくれた助っ人&lt;br&gt; 8回、山下選手５Ｇはランナー入れ替わり&lt;br&gt;&lt;br&gt;&lt;/BODY&gt;&lt;br&gt;&lt;/HTML&gt;&lt;br&gt;&lt;br&gt;" date="06/12/02" game="練習試合" loc="砧公園" result="1" season="2006" team="レコーズ" time="13:00">
+  <game comment="投手成績&lt;br&gt;酒井 6回 登板1 0勝0敗0S (999からの助っ人）&lt;br&gt;待山 1回 登板1 0勝0敗0S&lt;br&gt;鈴木 1回 登板1 0勝0敗0S&lt;br&gt;水谷 1回 登板2 勝ち 1勝1敗0S&lt;br&gt;&lt;br&gt;8nakajima.999        2-5F-O          4-5G-O  5-6G-O          7-5G-O               9-B*&lt;br&gt;1sakai.999           2-7O-H3*        4-5G-O           6-5F-O 7-5F-O               9-6F-O&lt;br&gt;&lt;br&gt; 時間があったので9回まで。最後もさよなら無しで3アウトまで。&lt;br&gt; 6番中島選手、7番酒井選手は999から来てくれた助っ人&lt;br&gt; 8回、山下選手５Ｇはランナー入れ替わり&lt;br&gt;&lt;br&gt;&lt;/BODY&gt;&lt;br&gt;&lt;/HTML&gt;&lt;br&gt;" date="06/12/02" game="練習試合" loc="砧公園" result="1" season="2006" team="レコーズ" time="13:00">
     <batters>
       <batter name="takemoto" order="1" position="@">
         <batting raw="1-9F-O" />

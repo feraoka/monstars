@@ -1264,7 +1264,7 @@
       <team batFirst="MonStars" fieldFirst="Blues" />
     </scoreboard>
   </game>
-  <game comment="投手成績	&lt;br&gt;平岡	4回 失点7 自責点?&lt;br&gt;木村	1回 失点1 自責点0&lt;br&gt;失策	小方1 平岡2 山下1 倉知1 峯山1 篠原？&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="94/11/03" game="練習試合" loc="ふたこ" result="1" season="1994" team="タイガース" time="10:00">
+  <game comment="投手成績&lt;br&gt;平岡	4回 失点7 自責点?&lt;br&gt;木村	1回 失点1 自責点0&lt;br&gt;失策	小方1 平岡2 山下1 倉知1 峯山1 篠原？&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="94/11/03" game="練習試合" loc="ふたこ" result="1" season="1994" team="タイガース" time="10:00">
     <batters>
       <batter name="haya" order="1" position="5">
         <batting raw="1-5G-E*" />
@@ -1333,7 +1333,7 @@
       <team batFirst="Tigers" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="投手成績	&lt;br&gt;平岡	7回 失点2 自責点0 ?K&lt;br&gt;失策	篠崎1 小方1 平岡1 山下1&lt;br&gt;&lt;br&gt;&lt;br&gt;※ ４回１死林選手の１塁フライ時に、篠原選手飛びだして併殺チェンジ&lt;br&gt;&lt;br&gt;" date="94/11/26" game="練習試合" loc="大井B面" result="1" season="1994" team="べんけい" time="9:00">
+  <game comment="投手成績&lt;br&gt;平岡	7回 失点2 自責点0 ?K&lt;br&gt;失策	篠崎1 小方1 平岡1 山下1&lt;br&gt;&lt;br&gt;&lt;br&gt;※ ４回１死林選手の１塁フライ時に、篠原選手飛びだして併殺チェンジ&lt;br&gt;&lt;br&gt;" date="94/11/26" game="練習試合" loc="大井B面" result="1" season="1994" team="べんけい" time="9:00">
     <batters>
       <batter name="sinozaki" order="1" position="5">
         <batting raw="1-D---1" />
@@ -1396,7 +1396,7 @@
       <team batFirst="MonStars" fieldFirst="Benkei" />
     </scoreboard>
   </game>
-  <game comment="投手成績	&lt;br&gt;平岡	7回 失点6 自責点0 ?K&lt;br&gt;失策	篠崎5 池田1 倉知1 磯江1 鈴木1&lt;br&gt;&lt;br&gt;7suzuki 	 2-7F-O			4-7L-H3* 	6-5G-O&lt;br&gt;9isoe   	 2-B			4-7G-H1		8-1G-O&lt;br&gt;* ２回２死篠崎選手の安打時にいそえ選手本塁タッチアウト&lt;br&gt;" date="94/12/03" game="練習試合" loc="Futaco" result="-1" season="1994" team="マグネッツ" time="12:00">
+  <game comment="投手成績&lt;br&gt;平岡	7回 失点6 自責点0 ?K&lt;br&gt;失策	篠崎5 池田1 倉知1 磯江1 鈴木1&lt;br&gt;&lt;br&gt;7suzuki 	 2-7F-O			4-7L-H3* 	6-5G-O&lt;br&gt;9isoe   	 2-B			4-7G-H1		8-1G-O&lt;br&gt;* ２回２死篠崎選手の安打時にいそえ選手本塁タッチアウト&lt;br&gt;" date="94/12/03" game="練習試合" loc="Futaco" result="-1" season="1994" team="マグネッツ" time="12:00">
     <batters>
       <batter name="sinozaki" order="1" position="5">
         <batting raw="1-5G-O" />

@@ -127,7 +127,7 @@
       <team batFirst="MonStars" fieldFirst="Doplphins" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績       竹本 4回 失点2&lt;br&gt;	木村 2回 失点2 (負け)&lt;br&gt;      &lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990515.1&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/05/09" game="春季品川区民１回戦" loc="?" result="-1" season="1999" team="ボラーチョ" time="9:30">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績       竹本 4回 失点2&lt;br&gt;	木村 2回 失点2 (負け)&lt;br&gt;&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990515.1&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/05/09" game="春季品川区民１回戦" loc="?" result="-1" season="1999" team="ボラーチョ" time="9:30">
     <batters>
       <batter name="sinozaki" order="1" position="6">
         <batting raw="1-4G-E" />
@@ -185,7 +185,7 @@
       <team batFirst="ボラーチョ" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; 投手成績       江原 5回 失点2(勝ち)&lt;br&gt;      &lt;br&gt; 1回，パスボールで3塁から篠崎選手生還&lt;br&gt; 6回表，時間切れ終了&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990515.2&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/05/15" game="オーシャン予選" loc="芝公園" result="-1" season="1999" team="大映ピューピューズ" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; 投手成績       江原 5回 失点2(勝ち)&lt;br&gt;&lt;br&gt; 1回，パスボールで3塁から篠崎選手生還&lt;br&gt; 6回表，時間切れ終了&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990515.2&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/05/15" game="オーシャン予選" loc="芝公園" result="-1" season="1999" team="大映ピューピューズ" time="11:00">
     <batters>
       <batter name="sinozaki" order="1" position="4">
         <batting raw="1-4G-H1--1*" />
@@ -256,7 +256,7 @@
       <team batFirst="PuPues" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;&lt;br&gt; 投手成績       平岡 4回 失点4(勝ち)&lt;br&gt;         水谷 2回 失点4&lt;br&gt;      &lt;br&gt;8takenaka 1-6F-O	2-5G-E			4-8O-H1-1*&lt;br&gt; 9版は，大映ピュピューズから借りたスケット竹中さん&lt;br&gt; 4回, 山下選手のサードライナーで2塁の篠崎選手2度も飛び出して get two&lt;br&gt; 5回, 水谷選手の3塁フライ)で, ランナー盗塁を試みたところだったため get two&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990522&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/05/15" game="練習試合" loc="芝公園" result="1" season="1999" team="テックメイツ" time="13:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;&lt;br&gt; 投手成績       平岡 4回 失点4(勝ち)&lt;br&gt;         水谷 2回 失点4&lt;br&gt;&lt;br&gt;8takenaka 1-6F-O	2-5G-E			4-8O-H1-1*&lt;br&gt; 9版は，大映ピュピューズから借りたスケット竹中さん&lt;br&gt; 4回, 山下選手のサードライナーで2塁の篠崎選手2度も飛び出して get two&lt;br&gt; 5回, 水谷選手の3塁フライ)で, ランナー盗塁を試みたところだったため get two&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990522&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/05/15" game="練習試合" loc="芝公園" result="1" season="1999" team="テックメイツ" time="13:00">
     <batters>
       <batter name="sinozaki" order="1" position="4">
         <batting raw="1-5F-O" />
@@ -318,7 +318,7 @@
       <team batFirst="TechMates" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;&lt;br&gt; 投手成績       竹本 4回 失点4(負け)&lt;br&gt;         倉知 2回 失点2&lt;br&gt;      &lt;br&gt; 2回, はぜ選手の内野フラエラーが，in field fry にならず get two&lt;br&gt; 4回, 山下選手の内野ゴロエラー時に倉知選手サードアウト&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990605&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/05/22" game="オーシャン予選" loc="芝公園" result="-1" season="1999" team="パワーズ" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;&lt;br&gt; 投手成績       竹本 4回 失点4(負け)&lt;br&gt;         倉知 2回 失点2&lt;br&gt;&lt;br&gt; 2回, はぜ選手の内野フラエラーが，in field fry にならず get two&lt;br&gt; 4回, 山下選手の内野ゴロエラー時に倉知選手サードアウト&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990605&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/05/22" game="オーシャン予選" loc="芝公園" result="-1" season="1999" team="パワーズ" time="9:00">
     <batters>
       <batter name="sinozaki" order="1" position="6">
         <batting raw="1-8F-O" />
@@ -375,7 +375,7 @@
       <team batFirst="Powers" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; 投手成績       江原 6回 失点11(負け)&lt;br&gt;      &lt;br&gt; 4回, 高須選手2盗アウト&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990717&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/06/05" game="オーシャン予選" loc="青空B面" result="-1" season="1999" team="テックメイツ" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; 投手成績       江原 6回 失点11(負け)&lt;br&gt;&lt;br&gt; 4回, 高須選手2盗アウト&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990717&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/06/05" game="オーシャン予選" loc="青空B面" result="-1" season="1999" team="テックメイツ" time="11:00">
     <batters>
       <batter name="sinozaki" order="1" position="4">
         <batting raw="1-1G-O" />
@@ -440,7 +440,7 @@
       <team batFirst="MonStars" fieldFirst="TechMates" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; 投手成績       江原 5回 失点6(勝ち)&lt;br&gt;      &lt;br&gt;4kuroiwa		2-K-O	3-K-O	4-K-O&lt;br&gt;9yusuke		2-B*		4-B*	4-1G-O&lt;br&gt; すけっと：平岡の弟ゆうすけと，その友達黒岩君(高校時代サッカー長野選抜)&lt;br&gt; 4回，投手への返球がそれる間に3塁ランナー山下選手ホームイン&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990724&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/07/17" game="オーシャン予選" loc="芝公園" result="1" season="1999" team="グリターズ" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; 投手成績       江原 5回 失点6(勝ち)&lt;br&gt;&lt;br&gt;4kuroiwa		2-K-O	3-K-O	4-K-O&lt;br&gt;9yusuke		2-B*		4-B*	4-1G-O&lt;br&gt; すけっと：平岡の弟ゆうすけと，その友達黒岩君(高校時代サッカー長野選抜)&lt;br&gt; 4回，投手への返球がそれる間に3塁ランナー山下選手ホームイン&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;990724&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/07/17" game="オーシャン予選" loc="芝公園" result="1" season="1999" team="グリターズ" time="9:00">
     <batters>
       <batter name="sinozaki" order="1" position="6">
         <batting raw="1-K-O" />
@@ -487,7 +487,7 @@
       <team batFirst="グリターズ" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; 天気 晴れ，猛暑&lt;br&gt; 投手成績       江原 5回 失点3(勝ち)&lt;br&gt; 	         木村 1回 失点0&lt;br&gt;      &lt;br&gt; 山下選手，1試合2ホームラン!!!&lt;br&gt; 2回，平岡選手の1Gで get two&lt;br&gt; 4回，牽制悪送球で高須選手ホームイン&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#990731&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/07/24" game="オーシャン予選" loc="芝公園" result="1" season="1999" team="ベガーズ" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; 天気 晴れ，猛暑&lt;br&gt; 投手成績       江原 5回 失点3(勝ち)&lt;br&gt; 	         木村 1回 失点0&lt;br&gt;&lt;br&gt; 山下選手，1試合2ホームラン!!!&lt;br&gt; 2回，平岡選手の1Gで get two&lt;br&gt; 4回，牽制悪送球で高須選手ホームイン&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#990731&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/07/24" game="オーシャン予選" loc="芝公園" result="1" season="1999" team="ベガーズ" time="9:00">
     <batters>
       <batter name="sinozaki" order="1" position="6">
         <batting raw="1-B---1*" />
@@ -823,7 +823,7 @@
       <team batFirst="MonStars" fieldFirst="Magnets" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;（注：1,2回戦は不 戦勝)&lt;br&gt;投手成績   江原4回&lt;br&gt;           木村1回&lt;br&gt;&lt;br&gt;2sugioka		2-9F-O		4-3G-O-1&lt;br&gt; 8番杉岡さんは助っ人。公式審判員！ &lt;br&gt; ビッグサーカスカップ的には、ポジション別じゃんけん勝負で5-3で&lt;br&gt; モンスターズの勝ち！&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#991002&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/09/05" game="ビッグサーカスカップ野球大会3回戦" loc="富士通厚木総合グラウンド" result="0" season="1999" team="FIP" time="10:30">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;（注：1,2回戦は不 戦勝)&lt;br&gt;投手成績   江原4回&lt;br&gt;           木村1回&lt;br&gt;&lt;br&gt;2sugioka		2-9F-O		4-3G-O-1&lt;br&gt; 8番杉岡さんは助っ人。公式審判員！&lt;br&gt; ビッグサーカスカップ的には、ポジション別じゃんけん勝負で5-3で&lt;br&gt; モンスターズの勝ち！&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#991002&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/09/05" game="ビッグサーカスカップ野球大会3回戦" loc="富士通厚木総合グラウンド" result="0" season="1999" team="FIP" time="10:30">
     <batters>
       <batter name="sinozaki" order="1" position="4">
         <batting raw="1-1G-O" />
@@ -872,7 +872,7 @@
       <team batFirst="MonStars" fieldFirst="FIP" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 江原4回2/3 （勝ち）&lt;br&gt;         竹本1/3回&lt;br&gt; 杉岡さんが審判にきてくれた&lt;br&gt; 1回、中島選手左飛時、鈴木選手がタッチアップでホームイン&lt;br&gt; 2回、鈴木選手の安打時に倉知選手本塁アウト&lt;br&gt; 4回、平岡選手の内野ゴロ時に高須選手3塁タッチアウト&lt;br&gt; &lt;br&gt; スコア表の篠崎選手の字に「汚い字」と書くのはやめよう！&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#991113&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/10/02" game="オーシャンリーグ決勝トーナメント１回戦" loc="青空球場B面" result="1" season="1999" team="エーコンズ" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 江原4回2/3 （勝ち）&lt;br&gt;         竹本1/3回&lt;br&gt; 杉岡さんが審判にきてくれた&lt;br&gt; 1回、中島選手左飛時、鈴木選手がタッチアップでホームイン&lt;br&gt; 2回、鈴木選手の安打時に倉知選手本塁アウト&lt;br&gt; 4回、平岡選手の内野ゴロ時に高須選手3塁タッチアウト&lt;br&gt; スコア表の篠崎選手の字に「汚い字」と書くのはやめよう！&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#991113&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/10/02" game="オーシャンリーグ決勝トーナメント１回戦" loc="青空球場B面" result="1" season="1999" team="エーコンズ" time="9:00">
     <batters>
       <batter name="sinozaki" order="1" position="4">
         <batting raw="1-B*" />
@@ -998,7 +998,7 @@
       <team batFirst="MonStars" fieldFirst="Records" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;&lt;br&gt;投手成績	竹本2回 失点0（勝ち）&lt;br&gt;			平岡1回 失点0&lt;br&gt;		江原1回 失点1&lt;br&gt; 1回、山下選手ヒットで2塁を狙いタッチアウト&lt;br&gt; 2回、平岡選手振り逃げで出塁。その後、パスボールで3塁を狙いアウト&lt;br&gt; 3回、倉知選手2塁打時に篠崎選手ホームタッチアウト&lt;br&gt; 5回、鈴木選手はパスボールでホームイン（？）&lt;br&gt; 相手チームの分析：&lt;br&gt; 相手の一人目のピッチャーはめちゃくちゃ良かった。ストレートが速く、 &lt;br&gt; カーブもストレートと同じぐらい速く、しかも鋭く曲がる。3回からは&lt;br&gt; 練習試合のためだと思うが2番手ピッチャーになった。スピードはあるが&lt;br&gt; 全部高めのボールになるため四球多発。3番手からは速度もない。&lt;br&gt; 守備は、内野の肩があまりよくない。&lt;br&gt; 打撃のほうは、そこそこ打つが何故かタイムリーがでなかった。&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;&lt;a name=&quot;#991127&quot;&gt;&lt;/a&gt;&lt;br&gt;" date="99/11/23" game="練習試合" loc="砧公園" result="1" season="1999" team="ブルーインフィニティ" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;&lt;br&gt;投手成績	竹本2回 失点0（勝ち）&lt;br&gt;			平岡1回 失点0&lt;br&gt;		江原1回 失点1&lt;br&gt; 1回、山下選手ヒットで2塁を狙いタッチアウト&lt;br&gt; 2回、平岡選手振り逃げで出塁。その後、パスボールで3塁を狙いアウト&lt;br&gt; 3回、倉知選手2塁打時に篠崎選手ホームタッチアウト&lt;br&gt; 5回、鈴木選手はパスボールでホームイン（？）&lt;br&gt; 相手チームの分析：&lt;br&gt; 相手の一人目のピッチャーはめちゃくちゃ良かった。ストレートが速く、&lt;br&gt; カーブもストレートと同じぐらい速く、しかも鋭く曲がる。3回からは&lt;br&gt; 練習試合のためだと思うが2番手ピッチャーになった。スピードはあるが&lt;br&gt; 全部高めのボールになるため四球多発。3番手からは速度もない。&lt;br&gt; 守備は、内野の肩があまりよくない。&lt;br&gt; 打撃のほうは、そこそこ打つが何故かタイムリーがでなかった。&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;&lt;a name=&quot;#991127&quot;&gt;&lt;/a&gt;&lt;br&gt;" date="99/11/23" game="練習試合" loc="砧公園" result="1" season="1999" team="ブルーインフィニティ" time="11:00">
     <batters>
       <batter name="sinozaki" order="1" position="4">
         <batting raw="1-K-O" />
@@ -1068,7 +1068,7 @@
       <team batFirst="MonStars" fieldFirst="BlueInfinity" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;6回は時間切れのためノーカウント&lt;br&gt;投手成績 江原4回失点１(勝ち)&lt;br&gt;         木村1回 (セーブ)&lt;br&gt; !!!!! オーシャンリーグ初優勝 !!!!! &lt;br&gt; 1回、倉知選手はパスボールでホームイン&lt;br&gt; 1回、平岡選手2塁打時に竹本選手ホームタッチアウト.足がもつれていた。&lt;br&gt; 3回、高須選手,四球で1塁進塁時に相手のすきをつきそのまま2塁へ。&lt;br&gt; 6回、鈴木のランニングホームラン後に時間切れ終了&lt;br&gt; 杉岡さんが審判にきてくれた&lt;br&gt; &lt;br&gt; 相手チームの分析：&lt;br&gt; 相手の一人目のピッチャーはストレートはまずまず速かったが、コントロールが&lt;br&gt; 乱れていた。また、カーブは遅すぎるのでストレートとはっきり区別できて恐くない&lt;br&gt; 2番手はカーブを連投する投手。&lt;br&gt; 守備は、右方面がやや弱かった。&lt;br&gt; 打撃のほうは、あまり振れていなかった。決勝の緊張のため？&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#991211&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/11/27" game="オーシャンリーグ決勝" loc="太田スタジアム" result="1" season="1999" team="ピーナッツ" time="13:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;6回は時間切れのためノーカウント&lt;br&gt;投手成績 江原4回失点１(勝ち)&lt;br&gt;         木村1回 (セーブ)&lt;br&gt; !!!!! オーシャンリーグ初優勝 !!!!!&lt;br&gt; 1回、倉知選手はパスボールでホームイン&lt;br&gt; 1回、平岡選手2塁打時に竹本選手ホームタッチアウト.足がもつれていた。&lt;br&gt; 3回、高須選手,四球で1塁進塁時に相手のすきをつきそのまま2塁へ。&lt;br&gt; 6回、鈴木のランニングホームラン後に時間切れ終了&lt;br&gt; 杉岡さんが審判にきてくれた&lt;br&gt; 相手チームの分析：&lt;br&gt; 相手の一人目のピッチャーはストレートはまずまず速かったが、コントロールが&lt;br&gt; 乱れていた。また、カーブは遅すぎるのでストレートとはっきり区別できて恐くない&lt;br&gt; 2番手はカーブを連投する投手。&lt;br&gt; 守備は、右方面がやや弱かった。&lt;br&gt; 打撃のほうは、あまり振れていなかった。決勝の緊張のため？&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;#991211&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="99/11/27" game="オーシャンリーグ決勝" loc="太田スタジアム" result="1" season="1999" team="ピーナッツ" time="13:00">
     <batters>
       <batter name="sinozaki" order="1" position="4">
         <batting raw="1-B---1*" />

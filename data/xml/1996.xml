@@ -1135,7 +1135,7 @@
       <team batFirst="MonStars" fieldFirst="Gok" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H2&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;８月１７日（土） ? 大井埠頭 オーシャン公式戦 &lt;br&gt;投手成績 竹本７回&lt;br&gt; 遅刻：篠崎、峰山&lt;br&gt;&lt;br&gt; チーム記録の１試合３本塁打!!!&lt;br&gt; ４回倉知さんの三振時に竹本さん三盗を試みるがアウト。&lt;br&gt; 竹本選手の談話：&lt;br&gt; 「フルカウントだったし、倉知なら三振はないと思って走ったのに。。。」&lt;br&gt; ５回の篠崎選手の内野ゴロは２塁ホースアウトでランナー入れ替わり&lt;br&gt; ６回林監督２塁打で出塁するも、センターが塁に入る牽制でアウト。&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;960907&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H2&gt;&lt;br&gt;" date="96/8/24" result="1" season="1996" team="Do-Kids">
+  <game comment="&lt;/H2&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;８月１７日（土） ? 大井埠頭 オーシャン公式戦&lt;br&gt;投手成績 竹本７回&lt;br&gt; 遅刻：篠崎、峰山&lt;br&gt;&lt;br&gt; チーム記録の１試合３本塁打!!!&lt;br&gt; ４回倉知さんの三振時に竹本さん三盗を試みるがアウト。&lt;br&gt; 竹本選手の談話：&lt;br&gt; 「フルカウントだったし、倉知なら三振はないと思って走ったのに。。。」&lt;br&gt; ５回の篠崎選手の内野ゴロは２塁ホースアウトでランナー入れ替わり&lt;br&gt; ６回林監督２塁打で出塁するも、センターが塁に入る牽制でアウト。&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;960907&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H2&gt;&lt;br&gt;" date="96/8/24" result="1" season="1996" team="Do-Kids">
     <batters>
       <batter name="kurachi" order="1" position="6">
         <batting raw="1-K-O" />
@@ -1401,7 +1401,7 @@
       <team batFirst="Jamaica" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H2&gt;&lt;br&gt;&lt;pre&gt;&lt;br&gt;試合時間は暫定&lt;br&gt;投手成績 江原 ４回 負け&lt;br&gt;         木村 １回&lt;br&gt;&lt;br&gt;helper                3-K-O           5-5F-O &lt;br&gt;&lt;/pre&gt;&lt;br&gt; 3回 篠原選手盗塁アウト&lt;br&gt;&lt;br&gt;&lt;a name=&quot;961005&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H2&gt;&lt;br&gt;" date="96/9/21" loc="大井" result="-1" season="1996" team="ベガーズ" time="13:00">
+  <game comment="&lt;/H2&gt;&lt;br&gt;&lt;pre&gt;&lt;br&gt;試合時間は暫定&lt;br&gt;投手成績 江原 ４回 負け&lt;br&gt;         木村 １回&lt;br&gt;&lt;br&gt;helper                3-K-O           5-5F-O&lt;br&gt;&lt;/pre&gt;&lt;br&gt; 3回 篠原選手盗塁アウト&lt;br&gt;&lt;br&gt;&lt;a name=&quot;961005&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H2&gt;&lt;br&gt;" date="96/9/21" loc="大井" result="-1" season="1996" team="ベガーズ" time="13:00">
     <batters>
       <batter name="mine" order="1" position="4">
         <batting raw="1-7-H2" />

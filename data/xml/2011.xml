@@ -544,7 +544,7 @@
       <team batFirst="バミューダズ" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;br&gt;[天気] 晴れ&lt;br&gt;[球審] 黒田さん&lt;br&gt;---&lt;br&gt;【スコア】&lt;br&gt;&lt;br&gt;---&lt;br&gt;---&lt;br&gt;3回大海さん、桜井ショートライナーで、ダブルプレー&lt;br&gt;4回竹本さん、待山さんショートゴロ時にセカンドで入れ替わりアウト&lt;br&gt;4回林さんピッチャーゴロで、待山さん盗塁の中、1-4-3のダブルプレー&lt;br&gt;5回斉藤さん、盗塁失敗&lt;br&gt;&lt;br&gt;【投手成績】&lt;br&gt; 木村さん 1敗&lt;br&gt;                                            &lt;br&gt;" date="11/10/29" game="オーシャンリーグ決勝T" loc="多摩川緑地3面" result="-1" season="2011" team="テックメイツ" time="11:00">
+  <game comment="&lt;br&gt;[天気] 晴れ&lt;br&gt;[球審] 黒田さん&lt;br&gt;---&lt;br&gt;【スコア】&lt;br&gt;&lt;br&gt;---&lt;br&gt;---&lt;br&gt;3回大海さん、桜井ショートライナーで、ダブルプレー&lt;br&gt;4回竹本さん、待山さんショートゴロ時にセカンドで入れ替わりアウト&lt;br&gt;4回林さんピッチャーゴロで、待山さん盗塁の中、1-4-3のダブルプレー&lt;br&gt;5回斉藤さん、盗塁失敗&lt;br&gt;&lt;br&gt;【投手成績】&lt;br&gt; 木村さん 1敗&lt;br&gt;&lt;br&gt;" date="11/10/29" game="オーシャンリーグ決勝T" loc="多摩川緑地3面" result="-1" season="2011" team="テックメイツ" time="11:00">
     <batters>
       <batter name="saito" order="1" position="6">
         <batting raw="1-5G-O" />

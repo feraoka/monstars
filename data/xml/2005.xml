@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf8" ?>
 <monstars>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;木村 4回 勝ち 登板1 / 1勝0敗0S&lt;br&gt;   伊藤 2回      登板1 / 0勝0敗0S&lt;br&gt;&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;050430&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="05/04/23" loc="大井埠頭Ｅ面" result="1" season="2005" team="ベガーズ" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;木村 4回 勝ち 登板1 / 1勝0敗0S&lt;br&gt;   伊藤 2回      登板1 / 0勝0敗0S&lt;br&gt;&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;050430&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="05/04/23" loc="大井埠頭Ｅ面" result="1" season="2005" team="ベガーズ" time="11:00">
     <batters>
       <batter name="itoh" order="1" position="5">
         <batting raw="1-5F-O" />
@@ -75,7 +75,7 @@
       <team batFirst="ベガーズ" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;木村 5回  負け    登板2 / 1勝1敗0S&lt;br&gt;   伊藤 2回          登板2 / 0勝1敗0S&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;050508&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="05/04/30" loc="大田スタジアム" result="-1" season="2005" team="グリターズ" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;木村 5回  負け    登板2 / 1勝1敗0S&lt;br&gt;   伊藤 2回          登板2 / 0勝1敗0S&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;050508&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="05/04/30" loc="大田スタジアム" result="-1" season="2005" team="グリターズ" time="11:00">
     <batters>
       <batter name="kurachi" order="1" position="2">
         <batting raw="1-5G-O" />
@@ -138,7 +138,7 @@
       <team batFirst="グリターズ" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;木村 4回         登板3 / 1勝1敗0S&lt;br&gt;   水谷 1回   負け  登板1 / 0勝1敗0S&lt;br&gt;&lt;br&gt; 桜井弟のtakashi初登場！&lt;br&gt; ビヨンドマックス今回もなし(篠崎が電車に忘れて拾得物置き場行き)&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;050521&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="05/05/08" loc="二子多摩川健保" result="-1" season="2005" team="ブルーインフィニティ" time="12:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;木村 4回         登板3 / 1勝1敗0S&lt;br&gt;   水谷 1回   負け  登板1 / 0勝1敗0S&lt;br&gt;&lt;br&gt; 桜井弟のtakashi初登場！&lt;br&gt; ビヨンドマックス今回もなし(篠崎が電車に忘れて拾得物置き場行き)&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;050521&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="05/05/08" loc="二子多摩川健保" result="-1" season="2005" team="ブルーインフィニティ" time="12:00">
     <batters>
       <batter name="sinozaki" order="1" position="3">
         <batting raw="1-5G-O" />
@@ -203,7 +203,7 @@
       <team batFirst="MonStars" fieldFirst="BI" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;江原 4回 勝ち   登板1 / 1勝0敗0S&lt;br&gt;   伊藤 2回 セーブ 登板3 / 0勝0敗1S&lt;br&gt;&lt;br&gt; 1回平岡選手、2盗アウト&lt;br&gt; 2回江原選手、キャッチャーのインターフェアーで出塁&lt;br&gt; 3回水谷選手はワイルドピッチで3塁からホームイン&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;050625&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="05/05/21" loc="岸根公園" result="1" season="2005" team="マグネッツ" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;江原 4回 勝ち   登板1 / 1勝0敗0S&lt;br&gt;   伊藤 2回 セーブ 登板3 / 0勝0敗1S&lt;br&gt;&lt;br&gt; 1回平岡選手、2盗アウト&lt;br&gt; 2回江原選手、キャッチャーのインターフェアーで出塁&lt;br&gt; 3回水谷選手はワイルドピッチで3塁からホームイン&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;050625&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="05/05/21" loc="岸根公園" result="1" season="2005" team="マグネッツ" time="9:00">
     <batters>
       <batter name="sinozaki" order="1" position="3">
         <batting raw="1-5G-E--1*" />
@@ -276,7 +276,7 @@
       <team batFirst="MonStars" fieldFirst="マグネッツ" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;木村 6回 勝ち   登板4 / 2勝1敗0S&lt;br&gt;   伊藤 1回 セーブ 登板4 / 0勝0敗2S&lt;br&gt;&lt;br&gt; 2回江原選手内野安打時に篠崎選手2塁からホームイン&lt;br&gt; 3回高須選手の打席時に、伊藤選手パスボールをついてホームイン&lt;br&gt; 6回??選手の打席時に、藤永選手パスボールをついてホームイン&lt;br&gt; 7回は残り15分きってから練習でやったのでオーシャンの記録としてはノーカウント&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;050716&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="05/06/25" loc="ガス橋5面" result="1" season="2005" team="多摩川キャッツ" time="16:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;木村 6回 勝ち   登板4 / 2勝1敗0S&lt;br&gt;   伊藤 1回 セーブ 登板4 / 0勝0敗2S&lt;br&gt;&lt;br&gt; 2回江原選手内野安打時に篠崎選手2塁からホームイン&lt;br&gt; 3回高須選手の打席時に、伊藤選手パスボールをついてホームイン&lt;br&gt; 6回??選手の打席時に、藤永選手パスボールをついてホームイン&lt;br&gt; 7回は残り15分きってから練習でやったのでオーシャンの記録としてはノーカウント&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;050716&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="05/06/25" loc="ガス橋5面" result="1" season="2005" team="多摩川キャッツ" time="16:00">
     <batters>
       <batter name="itoh" order="1" position="5">
         <batting raw="1-7F-O" />
@@ -347,7 +347,7 @@
       <team batFirst="キャッツ" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 &lt;br&gt;江原 2回        登板2 / 1勝0敗0S&lt;br&gt;木村 3回 負け   登板5 / 2勝2敗0S&lt;br&gt; 1回たかし選手はパスボールでホームイン&lt;br&gt; 2回待山選手ゴロはホームフォースアウトでランナー入れ替わり&lt;br&gt; 3回山下選手ごろは桜井選手ホームフォースアウト&lt;br&gt; 3回江原選手は打撃妨害で出塁、押し出しで1点入る（打点はつかない？）&lt;br&gt; 4回篠崎選手ゴロは2塁フォースアウトでランナー入れ替わり&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;050730&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="05/07/16" loc="萩中公園" result="-1" season="2005" team="スーパーソニックス" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績&lt;br&gt;江原 2回        登板2 / 1勝0敗0S&lt;br&gt;木村 3回 負け   登板5 / 2勝2敗0S&lt;br&gt; 1回たかし選手はパスボールでホームイン&lt;br&gt; 2回待山選手ゴロはホームフォースアウトでランナー入れ替わり&lt;br&gt; 3回山下選手ごろは桜井選手ホームフォースアウト&lt;br&gt; 3回江原選手は打撃妨害で出塁、押し出しで1点入る（打点はつかない？）&lt;br&gt; 4回篠崎選手ゴロは2塁フォースアウトでランナー入れ替わり&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;br&gt;&lt;a name=&quot;050730&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="05/07/16" loc="萩中公園" result="-1" season="2005" team="スーパーソニックス" time="11:00">
     <batters>
       <batter name="takashi" order="1" position="5">
         <batting raw="1-8O-H2*" />
@@ -1071,7 +1071,7 @@
       <team batFirst="MonStars" fieldFirst="キャッツ" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; 主将組&lt;br&gt;2sakanishi  1-K-O              3-D     4-1G-O            6-6G-O 7-5G-O&lt;br&gt;&lt;br&gt; 監督組&lt;br&gt; 3回山下選手飛球の返球エラーで待山選手ホームイン、高須選手はホームタッチアウト &lt;br&gt; 6回山下選手の2塁打で、高洲選手3塁アウト&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;/BODY&gt;&lt;br&gt;&lt;/HTML&gt;&lt;br&gt;&lt;br&gt;" date="05/12/10" game="紅白戦" loc="大井埠頭F面" result="internal" season="2005" team="紅白戦" time="13:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt; 主将組&lt;br&gt;2sakanishi  1-K-O              3-D     4-1G-O            6-6G-O 7-5G-O&lt;br&gt;&lt;br&gt; 監督組&lt;br&gt; 3回山下選手飛球の返球エラーで待山選手ホームイン、高須選手はホームタッチアウト&lt;br&gt; 6回山下選手の2塁打で、高洲選手3塁アウト&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;&lt;/BODY&gt;&lt;br&gt;&lt;/HTML&gt;&lt;br&gt;" date="05/12/10" game="紅白戦" loc="大井埠頭F面" result="internal" season="2005" team="紅白戦" time="13:00">
     <batters>
       <batter name="kurachi" order="1" position="6">
         <batting raw="1-B" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf8" ?>
 <monstars>
-  <game comment="&lt;br&gt;&lt;br&gt;&lt;br&gt;投手成績 &lt;br&gt;  伊藤 6回 勝ち 登板1 / 1勝0敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt; 3回ワイルドピッチで鈴木選手が生還&lt;br&gt; 5回平岡選手のピッチャーゴロは併殺&lt;br&gt;&lt;br&gt;" date="07/04/21" game="オーシャンリーグ" loc="荻中公園" result="1" season="2007" team="ドルフィンズ" time="11:00">
+  <game comment="&lt;br&gt;&lt;br&gt;&lt;br&gt;投手成績&lt;br&gt;  伊藤 6回 勝ち 登板1 / 1勝0敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt; 3回ワイルドピッチで鈴木選手が生還&lt;br&gt; 5回平岡選手のピッチャーゴロは併殺&lt;br&gt;&lt;br&gt;" date="07/04/21" game="オーシャンリーグ" loc="荻中公園" result="1" season="2007" team="ドルフィンズ" time="11:00">
     <batters>
       <batter name="mizutani" order="1" position="6">
         <batting raw="1-B*" />
@@ -82,7 +82,7 @@
       <team batFirst="MonStars" fieldFirst="Dolphins" />
     </scoreboard>
   </game>
-  <game comment="&lt;br&gt;&lt;br&gt;&lt;br&gt;投手成績 &lt;br&gt;  伊藤 5回 勝ち 登板1 / 2勝0敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt; 3回大海選手けん制飛び出しアウト&lt;br&gt; 4回篠崎選手ホーム突っ込むもアウト&lt;br&gt; 5回大海選手キャッチャーフライは守備妨害でアウト&lt;br&gt; はぜ選手試合開始を11時と思い遅刻&lt;br&gt; 倉知選手見学&lt;br&gt;&lt;br&gt;" date="07/05/12" game="オーシャンリーグ" loc="ガス橋" result="1" season="2007" team="スクラッチ" time="10:00">
+  <game comment="&lt;br&gt;&lt;br&gt;&lt;br&gt;投手成績&lt;br&gt;  伊藤 5回 勝ち 登板1 / 2勝0敗0S&lt;br&gt;&lt;br&gt;&lt;br&gt; 3回大海選手けん制飛び出しアウト&lt;br&gt; 4回篠崎選手ホーム突っ込むもアウト&lt;br&gt; 5回大海選手キャッチャーフライは守備妨害でアウト&lt;br&gt; はぜ選手試合開始を11時と思い遅刻&lt;br&gt; 倉知選手見学&lt;br&gt;&lt;br&gt;" date="07/05/12" game="オーシャンリーグ" loc="ガス橋" result="1" season="2007" team="スクラッチ" time="10:00">
     <batters>
       <batter name="machiyama" order="1" position="4">
         <batting raw="1-K-O" />
@@ -149,7 +149,7 @@
       <team batFirst="MonStars" fieldFirst="Scratch" />
     </scoreboard>
   </game>
-  <game comment="&lt;br&gt;&lt;br&gt;&lt;br&gt;投手成績 &lt;br&gt;  伊藤 3回 勝ち 登板1 / 3勝0敗0S&lt;br&gt;         中島 1回&lt;br&gt;         待山 2回&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="07/05/26" game="オーシャンリーグ" loc="砧公園" result="1" season="2007" team="999" time="13:00">
+  <game comment="&lt;br&gt;&lt;br&gt;&lt;br&gt;投手成績&lt;br&gt;  伊藤 3回 勝ち 登板1 / 3勝0敗0S&lt;br&gt;         中島 1回&lt;br&gt;         待山 2回&lt;br&gt;&lt;br&gt;&lt;br&gt;" date="07/05/26" game="オーシャンリーグ" loc="砧公園" result="1" season="2007" team="999" time="13:00">
     <batters>
       <batter name="mizutani" order="1" position="6">
         <batting raw="1-9O-H1--3*" />

@@ -258,7 +258,7 @@
       <team batFirst="Bermudas" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;PRE&gt;&lt;br&gt;投手成績   江原5回(負け) 登板5 / 2勝1敗0S&lt;br&gt;	    竹本1回 登板2 / 1勝0敗0S (記録につかない6回表登板．失点1)&lt;br&gt;	   &lt;br&gt; 1回、篠崎選手は盗塁アウト&lt;br&gt; 1回、高須選手は2塁牽制アウト&lt;br&gt; 1回、篠原選手は三振振り逃げで出塁&lt;br&gt; 2回、山下選手は江原選手のゴロで3塁を狙いアウト。&lt;br&gt; 4回、鈴木選手は竹本選手のヒット時に3塁アウト&lt;br&gt; 4回、はぜ選手は盗塁アウト&lt;br&gt; 6回ははぜ選手がうったところで時間切れで終了のため、打撃成績のみ残します。&lt;br&gt; &amp;lt;相手チームのメモ&amp;gt;&lt;br&gt; 相手チームはオーシャン新加入だが，なかなか強かった．SMOJの秋葉原付近の&lt;br&gt; 営業の人が中心とのこと．チーム辞退は以前からあったらしい．&lt;br&gt; 先発投手は低めをつく丁寧な投球．カーブはあまりストライクに入らなかった&lt;br&gt; が，それなりに曲がる．直球は100-110KMぐらいか?．&lt;br&gt; 打撃では左打ちが多く砧のライトに2本HRを打たれた．HRは砧だということも&lt;br&gt; あるので仕方ないが，全体的に鋭い振りをする選手が多かった．&lt;br&gt;&lt;/PRE&gt;&lt;A name=010526&gt;&lt;/A&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="01/05/19" game="オーシャンリーグ予選" loc="砧Ａ面" result="-1" season="2001" team="スイングアウト" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;PRE&gt;&lt;br&gt;投手成績   江原5回(負け) 登板5 / 2勝1敗0S&lt;br&gt;	    竹本1回 登板2 / 1勝0敗0S (記録につかない6回表登板．失点1)&lt;br&gt;&lt;br&gt; 1回、篠崎選手は盗塁アウト&lt;br&gt; 1回、高須選手は2塁牽制アウト&lt;br&gt; 1回、篠原選手は三振振り逃げで出塁&lt;br&gt; 2回、山下選手は江原選手のゴロで3塁を狙いアウト。&lt;br&gt; 4回、鈴木選手は竹本選手のヒット時に3塁アウト&lt;br&gt; 4回、はぜ選手は盗塁アウト&lt;br&gt; 6回ははぜ選手がうったところで時間切れで終了のため、打撃成績のみ残します。&lt;br&gt; &amp;lt;相手チームのメモ&amp;gt;&lt;br&gt; 相手チームはオーシャン新加入だが，なかなか強かった．SMOJの秋葉原付近の&lt;br&gt; 営業の人が中心とのこと．チーム辞退は以前からあったらしい．&lt;br&gt; 先発投手は低めをつく丁寧な投球．カーブはあまりストライクに入らなかった&lt;br&gt; が，それなりに曲がる．直球は100-110KMぐらいか?．&lt;br&gt; 打撃では左打ちが多く砧のライトに2本HRを打たれた．HRは砧だということも&lt;br&gt; あるので仕方ないが，全体的に鋭い振りをする選手が多かった．&lt;br&gt;&lt;/PRE&gt;&lt;A name=010526&gt;&lt;/A&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="01/05/19" game="オーシャンリーグ予選" loc="砧Ａ面" result="-1" season="2001" team="スイングアウト" time="11:00">
     <batters>
       <batter name="sinozaki" order="1" position="4">
         <batting raw="1-B" />
@@ -512,7 +512,7 @@
       <team batFirst="MonStars" fieldFirst="Device" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;PRE&gt;&lt;br&gt;投手成績  江原7回(負け)&lt;br&gt;&lt;br&gt; 1回、7回とも3番バッターにライトに砧ホームランでサヨナラまけ．&lt;br&gt; 特に1本目は普通なら定位置のふらいだけに，くやしい．&lt;br&gt; 新人の待山君が初参加！ &lt;br&gt;&lt;/PRE&gt;&lt;A name=010714&gt;&lt;/A&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="01/07/07" game="オーシャンリーグ" loc="砧公園" result="-1" season="2001" team="ベアーズ" time="9:00">
+  <game comment="&lt;/H1&gt;&lt;PRE&gt;&lt;br&gt;投手成績  江原7回(負け)&lt;br&gt;&lt;br&gt; 1回、7回とも3番バッターにライトに砧ホームランでサヨナラまけ．&lt;br&gt; 特に1本目は普通なら定位置のふらいだけに，くやしい．&lt;br&gt; 新人の待山君が初参加！&lt;br&gt;&lt;/PRE&gt;&lt;A name=010714&gt;&lt;/A&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="01/07/07" game="オーシャンリーグ" loc="砧公園" result="-1" season="2001" team="ベアーズ" time="9:00">
     <batters>
       <batter name="sinozaki" order="1" position="4">
         <batting raw="1-6F-O" />
@@ -709,8 +709,8 @@
       <team batFirst="S.Sonics" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="横浜旭区のグラウンドだったが相手のミスでグラウンドがなかった。 不戦勝だが、かなりひどい。。。 &lt;br&gt;&lt;A name=010901&gt;&lt;/A&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="01/08/25" game="オーシャンリーグ" loc="横浜市旭区子供自然公園内野球場" result="不戦勝" season="2001" team="ドルフィンズ" time="13:00" />
-  <game comment="&lt;/H1&gt;&lt;PRE&gt;&lt;br&gt;投手成績  江原7回（勝ち）&lt;br&gt;&lt;br&gt; 5回,江原選手の１ゴロは３塁1塁でダブルﾌﾟﾚｰ。&lt;br&gt; 6回,山下選手の右方向の砧ホームランで勝ち越し。&lt;br&gt;&lt;/PRE&gt;&lt;A name=010923&gt;&lt;/A&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="01/09/01" game="オーシャンリーグ" loc="砧公園" result="1" season="2001" team="テックメイツ" time="15:00">
+  <game comment="横浜旭区のグラウンドだったが相手のミスでグラウンドがなかった。 不戦勝だが、かなりひどい。。。&lt;br&gt;&lt;A name=010901&gt;&lt;/A&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="01/08/25" game="オーシャンリーグ" loc="横浜市旭区子供自然公園内野球場" result="不戦勝" season="2001" team="ドルフィンズ" time="13:00" />
+  <game comment="&lt;/H1&gt;&lt;PRE&gt;&lt;br&gt;投手成績  江原7回（勝ち）&lt;br&gt;&lt;br&gt; 5回,江原選手の１ゴロは３塁1塁でダブルプレー。&lt;br&gt; 6回,山下選手の右方向の砧ホームランで勝ち越し。&lt;br&gt;&lt;/PRE&gt;&lt;A name=010923&gt;&lt;/A&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="01/09/01" game="オーシャンリーグ" loc="砧公園" result="1" season="2001" team="テックメイツ" time="15:00">
     <batters>
       <batter name="suzuki" order="1" position="5">
         <batting raw="1-5G-O" />
@@ -771,7 +771,7 @@
       <team batFirst="TechMates" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;PRE&gt;&lt;br&gt;投手成績  江原6回（勝ち）&lt;br&gt;&lt;br&gt; 3回,杉岡選手の4ゴロは平岡選手タッチ＆1塁でダブルﾌﾟﾚｰ。&lt;br&gt; 4回,鈴木選手は2盗失敗アウト&lt;br&gt; 5回,山下選手のさく越えホームラン。&lt;br&gt; 区民大会2回戦は翌日の24日と当日言われたこともあり人数がそろわず棄権&lt;br&gt;&lt;/PRE&gt;&lt;A name=011006&gt;&lt;/A&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="01/09/23" game="品川区民大会1回戦" loc="大井埠頭F面" result="1" season="2001" team="大崎ブローズ" time="15:00">
+  <game comment="&lt;/H1&gt;&lt;PRE&gt;&lt;br&gt;投手成績  江原6回（勝ち）&lt;br&gt;&lt;br&gt; 3回,杉岡選手の4ゴロは平岡選手タッチ＆1塁でダブルプレー。&lt;br&gt; 4回,鈴木選手は2盗失敗アウト&lt;br&gt; 5回,山下選手のさく越えホームラン。&lt;br&gt; 区民大会2回戦は翌日の24日と当日言われたこともあり人数がそろわず棄権&lt;br&gt;&lt;/PRE&gt;&lt;A name=011006&gt;&lt;/A&gt;&lt;br&gt;&lt;H1&gt;&lt;br&gt;" date="01/09/23" game="品川区民大会1回戦" loc="大井埠頭F面" result="1" season="2001" team="大崎ブローズ" time="15:00">
     <batters>
       <batter name="suzuki" order="1" position="5">
         <batting raw="1-5F-O" />
@@ -1026,7 +1026,7 @@
       <team batFirst="MonStars" fieldFirst="Bermudas" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;PRE&gt;&lt;br&gt;投手成績  中島5回 失点2 (負け)&lt;br&gt;          竹本1回2/3 失点4 &lt;br&gt;          江原 1/3&lt;br&gt;&lt;br&gt; 6回、杉岡選手、牽制アウト&lt;br&gt;&lt;/PRE&gt;&lt;/BODY&gt;&lt;/HTML&gt;&lt;br&gt;" date="01/12/01" game="練習試合" loc="砧公園" result="-1" season="2001" team="エレファンツ" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;PRE&gt;&lt;br&gt;投手成績  中島5回 失点2 (負け)&lt;br&gt;          竹本1回2/3 失点4&lt;br&gt;          江原 1/3&lt;br&gt;&lt;br&gt; 6回、杉岡選手、牽制アウト&lt;br&gt;&lt;/PRE&gt;&lt;/BODY&gt;&lt;/HTML&gt;&lt;br&gt;" date="01/12/01" game="練習試合" loc="砧公園" result="-1" season="2001" team="エレファンツ" time="11:00">
     <batters>
       <batter name="machiyama" order="1" position="4">
         <batting raw="1-1G-O" />

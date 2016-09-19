@@ -1680,7 +1680,7 @@
       <team batFirst="TechMates" fieldFirst="MonStars" />
     </scoreboard>
   </game>
-  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 江原5 回 勝ち&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;＃ ４回 水谷いれかわりで塁にのこり、そのあととうるい&lt;br&gt;&lt;/BODY&gt;&lt;br&gt;&lt;/HTML&gt;&lt;br&gt;&lt;br&gt;" date="97/11/15" game="練習試合" loc="大井埠頭" result="1" season="1997" team="バミューダズ" time="11:00">
+  <game comment="&lt;/H1&gt;&lt;br&gt;&lt;PRE&gt;&lt;br&gt;投手成績 江原5 回 勝ち&lt;br&gt;&lt;/PRE&gt;&lt;br&gt;＃ ４回 水谷いれかわりで塁にのこり、そのあととうるい&lt;br&gt;&lt;/BODY&gt;&lt;br&gt;&lt;/HTML&gt;&lt;br&gt;" date="97/11/15" game="練習試合" loc="大井埠頭" result="1" season="1997" team="バミューダズ" time="11:00">
     <batters>
       <batter name="mizutani" order="1" position="6">
         <batting raw="1-K-O" />
