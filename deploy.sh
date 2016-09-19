@@ -3,4 +3,4 @@
 SERVER="pecom@pecom.sakura.ne.jp"
 HOME="/home/pecom"
 
-rsync -a -v . "$SERVER":"$HOME"/www/monstars/
+rsync -a -v --exclude ".git" --delete . "$SERVER":"$HOME"/www/monstars/
