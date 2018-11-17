@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=Shift_JIS">
+<LINK REL="Start" HREF="index.html">
+<LINK REL="Contents" HREF="toc.html">
+<LINK REL="Prev" HREF="34Imageformatsandexternalimagelibraries.html">
+<LINK REL="Next" HREF="36Troubleshootingyourinstallation.html">
+<STYLE TYPE="text/css"><!--
+BODY { font-family: serif }
+H1 { font-family: sans-serif }
+H2 { font-family: sans-serif }
+H3 { font-family: sans-serif }
+H4 { font-family: sans-serif }
+H5 { font-family: sans-serif }
+H6 { font-family: sans-serif }
+SUB { font-size: smaller }
+SUP { font-size: smaller }
+PRE { font-family: monospace }
+A { text-decoration: none }
+--></STYLE><LINK REL=STYLESHEET TYPE="text/css" HREF="jpgmanual.css">
+</HEAD>
+<BODY>
+<A HREF="toc.html">目次</A> <A HREF="34Imageformatsandexternalimagelibraries.html">前へ</A> <A HREF="36Troubleshootingyourinstallation.html">次へ</A>
+<HR NOSHADE>
+<H2><A NAME="3_5">3.5 JpGraph の詳細なインストール</A></H2>
+<P></P>
+<OL>
+<LI>JpGraph 1.xをインストールしている場合、使用している PHPのバージョンが 4.3.x で、GD ライブラリでコンパイルをサポートしているということを確認してください。 GD が完全に作動しているということは重要です。確認には、前セクションに記述されている内容を確認してください。JpGraph では GD 2.x をサポートしています。 
+<P>JpGraph 3.x、4.x をインストールしている場合、使用している PHPのバージョンが 5.1以上で、GD 2.x ライブラリでコンパイルをサポートしているということを確認してください。バージョン3.x、4.xは PHP 4.x に<B>対応していません</B>。なお、バージョン3.x はPHP 7には対応していません。</P>
+</LI>
+<LI>ファイルを解凍し、適当なディレクトリにコピーします。 </LI>
+<LI><I>jpg-config.inc.php</I> を修正し、キャッシュ ディレクトリと TTF ディレクトリを設定します。Apache がキャッシュ ディレクトリに書き込み可能であることを確認してください。 </LI>
+<LI> jpgraph.php の最上部にある、定数の定義部分を確認して、お使いの環境に合わせてください。多くの方は、デフォルトの設定で問題ないでしょう。特に、USE_GD2_LIBRARY 設定を確認してください。GD2 がインストールされている場合には true に設定する必要があります。  </LI>
+<LI>キャッシュ機能を使用する場合、PHP がキャッシュ ディレクトリに書き込み可能であることを確認してください。  </LI>
+<LI> Windows 環境においては、PHP スクリプトの最終行に改行が付加されてしまう可能性があります (Header already sent エラーが発生します)。この場合、JpGraph のすべてのファイルについて、最後にある改行を取り除いてください。</LI>
+<LI> JpGraphの<A href="https://www.asial.co.jp/jpgraph/faq.php">FAQ</A>、または本家サイトの<A href="http://www.aditus.nu/jpgraph/jpgraphfaq.php">FAQページ</A>をお読みください。 </LI>
+</OL>
+<P></P>
+<HR NOSHADE>
+<A HREF="toc.html">目次</A> <A HREF="34Imageformatsandexternalimagelibraries.html">前へ</A> <A HREF="36Troubleshootingyourinstallation.html">次へ</A>
+</BODY>
+</HTML>
