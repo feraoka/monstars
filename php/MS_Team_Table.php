@@ -57,7 +57,7 @@ final class MS_Team_Table extends MS_Table
             }
             if ($win + $lose > 0) {
                 $wRate = sprintf("%0.3f", $win / ($win + $lose));
-                $wRate = ereg_replace("^0", "", $wRate);
+                $wRate = preg_replace("/^0/", "", $wRate);
             } else {
                 $wRate = "-";
             }

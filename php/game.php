@@ -82,8 +82,8 @@ class MS_Game {
 				$n = 0;
 				foreach ($batting->bats as $bat) {
 					if ($bat->inning == $i) {
-						$r = ereg_replace("^[0-9]+-", "", $bat->raw);
-						$data = explode("-", ereg_replace("\*$", "", $r));
+						$r = preg_replace("/^[0-9]+-/", "", $bat->raw);
+						$data = explode("-", preg_replace("/\*$/", "", $r));
 						if ($data[0] == "K") {
 							$class = "sout";
 						} else if ($data[0] == "B" or $data[0] == "D") {
@@ -117,8 +117,8 @@ class MS_Game {
 		}
 
 		// removing return codes at both beginning and end of the comment
-		$this->comment = ereg_replace ("^(<br>)*", "", $this->comment);
-		$this->comment = ereg_replace ("(<br>)*$", "", $this->comment);
+		$this->comment = preg_replace("/^(<br>)*/", "", $this->comment);
+		$this->comment = preg_replace("/(<br>)*$/", "", $this->comment);
 
 		$form = "";
 

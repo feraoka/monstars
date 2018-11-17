@@ -150,7 +150,7 @@ class MS_Bat_Table extends MS_Table
 
     private function roundup($float)
     {
-        return ereg_replace("^0", "", sprintf("%0.3f", $float));
+        return preg_replace("/^0/", "", sprintf("%0.3f", $float));
     }
 }
 

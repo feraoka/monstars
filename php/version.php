@@ -10,7 +10,7 @@ function getLastDate() {
   $info = file(INFOFILE);
   $lastDate = NULL;
   foreach ($info as $line) {
-    $lastDate = ereg_replace("^Date:\S*", "", $line);
+    $lastDate = preg_replace("/^Date:\S*/", "", $line);
   }
   return $lastDate;
 }

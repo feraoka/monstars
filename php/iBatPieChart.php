@@ -27,7 +27,7 @@ function individualBattingSummaryPieChart($memberId, $cond, $db) {
     foreach ($rows as $bat) {
         $numBats++;
         $raw = $bat['raw'];
-        $raw = ereg_replace("\*$", "", $raw);
+        $raw = preg_replace("/\*$/", "", $raw);
         $data = explode("-", $raw);
         if ($data[1] == "R") {
             $numBats --;

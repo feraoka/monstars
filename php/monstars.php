@@ -555,8 +555,8 @@ final class monstars {
 
             $runAve = sprintf ("%0.3f", $runAverage);
             $ave = sprintf ("%0.3f", $average);
-            $runAve = ereg_replace("^0", "", $runAve);
-            $ave = ereg_replace("^0", "", $ave);
+            $runAve = preg_replace("/^0/", "", $runAve);
+            $ave = preg_replace("/^0/", "", $ave);
             if ($nGames * 2 >= $game['numGames']
                 or
                 ($orderBy != "average" and $orderBy != "runAverage")) {
@@ -589,8 +589,8 @@ final class monstars {
         $bg = $bgcolor[$i++ & 1];
         $runAveTotal = sprintf("%0.3f", $total['numRuns'] / $total['numBats']);
         $aveTotal = sprintf("%0.3f", $total['numHits'] / $total['numAtBats']);
-        $runAveTotal = ereg_replace("^0", "", $runAveTotal);
-        $aveTotal = ereg_replace("^0", "", $aveTotal);
+        $runAveTotal = preg_replace("/^0/", "", $runAveTotal);
+        $aveTotal = preg_replace("/^0/", "", $aveTotal);
 
         $out .= "<tr class=hdr>
         <td align=center>Total</td>
@@ -772,11 +772,11 @@ final class monstars {
             $total['numBases'] += $numBases;
 
             $runAve = sprintf ("%0.3f", $runAverage);
-            $runAve = ereg_replace("^0", "", $runAve);
+            $runAve = preg_replace("/^0/", "", $runAve);
             $ave = sprintf ("%0.3f", $average);
-            $ave = ereg_replace("^0", "", $ave);
-            $slg = ereg_replace("^0", "", sprintf ("%0.3f", $slg));
-            $ops = ereg_replace("^0", "", sprintf ("%0.3f", $ops));
+            $ave = preg_replace("/^0/", "", $ave);
+            $slg = preg_replace("/^0/", "", sprintf ("%0.3f", $slg));
+            $ops = preg_replace("/^0/", "", sprintf ("%0.3f", $ops));
             $noi = sprintf ("%4.0f", $noi);
 
             if ($nGames * 2 >= $game['numGames']
@@ -814,10 +814,10 @@ final class monstars {
         $bg = $bgcolor[$i++ & 1];
         $runAveTotal = sprintf("%0.3f", $total['numRuns'] / $total['numBats']);
         $aveTotal = sprintf("%0.3f", $total['numHits'] / $total['numAtBats']);
-        $runAveTotal = ereg_replace("^0", "", $runAveTotal);
-        $aveTotal = ereg_replace("^0", "", $aveTotal);
+        $runAveTotal = preg_replace("/^0/", "", $runAveTotal);
+        $aveTotal = preg_replace("/^0/", "", $aveTotal);
         $slgTotal = sprintf("%0.3f", $total['numBases'] / $total['numAtBats']);
-        $slgTotal = ereg_replace("^0", "", $slgTotal);
+        $slgTotal = preg_replace("/^0/", "", $slgTotal);
         $opsTotal = $runAveTotal + $slgTotal;
         $noiTotal = sprintf("%d", ($runAveTotal + $slgTotal / 3) * 1000);
 
@@ -896,7 +896,7 @@ final class monstars {
             foreach ($rows as $bat) {
                 $numBats++;
                 $raw = $bat['raw'];
-                $raw = ereg_replace("\*$", "", $raw);
+                $raw = preg_replace("/\*$/", "", $raw);
                 $data = explode("-", $raw);
                 if ($data[1] == "R") {
                     $numBats --;
@@ -1145,7 +1145,7 @@ final class monstars {
             }
             if ($win + $lose > 0) {
                 $wRate = sprintf("%0.3f", $win / ($win + $lose));
-                $wRate = ereg_replace("^0", "", $wRate);
+                $wRate = preg_replace("/^0/", "", $wRate);
             } else {
                 $wRate = "-";
             }
